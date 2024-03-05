@@ -7,17 +7,16 @@ import org.modelio.vbasic.version.Version;
 
 @objid ("45eae62e-3ca2-4147-9843-7b75b7385a28")
 public class ToscaDesignerPeerModule implements IToscaDesignerPeerModule {
+    @objid ("bf494723-b984-4e79-8900-554994e525d1")
+    private IModuleAPIConfiguration peerConfiguration;
+
     @objid ("44fa402b-3a30-4cac-819f-ea72f30a5a29")
     private ToscaDesignerModule module = null;
-
-    @objid ("62924998-b8ba-47cc-a678-12d31f36c533")
-    private IModuleAPIConfiguration peerConfiguration;
 
     @objid ("b124a821-5687-4b82-996e-370fc7729547")
     public  ToscaDesignerPeerModule(final ToscaDesignerModule module, final IModuleAPIConfiguration peerConfiguration) {
         this.module = module;
         this.peerConfiguration = peerConfiguration;
-        
     }
 
     @objid ("19af3b88-c744-4496-a320-ed4d82c56baf")

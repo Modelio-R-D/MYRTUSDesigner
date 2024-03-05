@@ -22,7 +22,6 @@ public class Messages {
         } catch (MissingResourceException e) {
             return '!' + key + '!';
         }
-        
     }
 
     @objid ("290f6cf4-411a-4712-ae3e-7f41c9605c62")
@@ -32,7 +31,6 @@ public class Messages {
         } catch (MissingResourceException e) {
             return '!' + key + '!';
         }
-        
     }
 
 }

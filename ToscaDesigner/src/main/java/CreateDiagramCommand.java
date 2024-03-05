@@ -5,7 +5,7 @@ import org.modelio.api.module.command.standard.DiagramCreationStandardHandler;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("5907998c-bfb4-4619-853a-38bfb03ae5ef")
-public class  CreateDiagramCommand extends DiagramCreationStandardHandler {
+public class CreateDiagramCommand extends DiagramCreationStandardHandler {
     @objid ("3d5304a6-ce22-4e3d-95b3-4ffa78aafc2c")
     @Override
     public boolean accept(final List<MObject> selectedElements, final IModule module) {

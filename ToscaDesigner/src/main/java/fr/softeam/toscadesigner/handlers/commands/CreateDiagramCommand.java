@@ -31,8 +31,6 @@ public class CreateDiagramCommand extends DiagramCreationStandardHandler {
         super.postConfigureElement(newDiagram, module);
         
         // TODO Add additional behavior below
-        
-        
     }
 
 }

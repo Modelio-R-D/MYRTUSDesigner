@@ -21,12 +21,12 @@ public abstract class CreateSubModelCommand extends DiagramCreationStandardHandl
         try(  IDiagramHandle handler = ds.getDiagramHandle(diagram);){
             IDiagramDG dg = handler.getDiagramNode();
         
-            for (IStyleHandle style : ds.listStyles()){
+          /*  for (IStyleHandle style : ds.listStyles()){
                 if (style.getName().equals(IToscaDesignerPeerModule.TOSCA_STYLE)){
                     dg.setStyle(style);
                     break;
                 }
-            }
+            }*/
         
             handler.save();
             handler.close();

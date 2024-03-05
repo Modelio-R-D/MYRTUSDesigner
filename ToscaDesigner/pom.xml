@@ -202,5 +202,7 @@
                 </plugins>
             </pluginManagement>
         </build>
-    <description></description>
+    <description>The TOSCA Designer module is a component within TOSCA-based cloud orchestration frameworks that facilitates the creation, editing, and visualization of TOSCA-compliant application and service templates. 
+This module typically provides a graphical user interface (GUI) or integrated development environment (IDE) where users can visually design, model, and manipulate TOSCA templates, including topology templates, node types, relationship types, policies, and plans.
+</description>
     </project>

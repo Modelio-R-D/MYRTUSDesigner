@@ -26,7 +26,7 @@ public class ToscaDesignerLifeCycleHandler extends DefaultModuleLifeCycleHandler
     }
 
     /**
-     * @param mdaPath @return
+     * @return
      */
     @objid ("3c043f01-ab0d-47c6-baea-c7fc364651b9")
     public static boolean install(final String modelioPath, final String mdaPath) throws ModuleException {

@@ -31,7 +31,6 @@ public class ToscaDesignerModule extends AbstractJavaModule {
         this.lifeCycleHandler  = new ToscaDesignerLifeCycleHandler(this);
         this.peerModule = new ToscaDesignerPeerModule(this, moduleContext.getPeerConfiguration());
         init();
-        
     }
 
     @objid ("5dfbd4a2-782f-43bc-bc16-19bd9631c95e")
@@ -57,7 +56,7 @@ public class ToscaDesignerModule extends AbstractJavaModule {
     @objid ("0e13fa12-0441-4bb9-91ee-3b33f8938251")
     @Override
     public IParameterEditionModel getParametersEditionModel() {
-           return super.getParametersEditionModel();
+        return super.getParametersEditionModel();
     }
 
     @objid ("65a211ef-2783-475b-af22-7cab6db49d25")
@@ -78,7 +77,7 @@ public class ToscaDesignerModule extends AbstractJavaModule {
         // Generated code, please do not remove it
         IMdaExpert expert = getGeneratedMdaExpert(st);
         if (expert != null) {
-        	return expert;
+            return expert;
         }// End generated code
         return null;
     }
