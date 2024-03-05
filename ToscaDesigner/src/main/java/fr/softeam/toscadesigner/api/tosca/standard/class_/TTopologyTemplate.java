@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 05/03/2024 12:38 by Modelio Studio.
+ * This file was generated on 05/03/2024 18:02 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
@@ -40,13 +40,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("085877c8-d609-41ec-a2ca-430c5e11b06a")
 public class TTopologyTemplate implements IMdaProxy {
-    @objid ("8e1ae2d0-0603-4f60-877d-74458a93f190")
+    @objid ("e960c025-4c10-443f-96e1-bbe15630e0e9")
     public static final String STEREOTYPE_NAME = "TTopologyTemplate";
 
     /**
      * The underlying {@link Class} represented by this proxy, never null.
      */
-    @objid ("b971b1ae-2978-4b62-ad39-b40aee34d4ae")
+    @objid ("fed8d07b-476c-4892-9462-5cbcdbe99b37")
     protected final Class elt;
 
     /**
@@ -56,7 +56,7 @@ public class TTopologyTemplate implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("24b094da-66a2-452d-b8f2-e0d569586d3d")
+    @objid ("f57fef57-fd30-4af7-9901-f767b59ee658")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (TTopologyTemplate.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(TTopologyTemplate.MdaTypes.STEREOTYPE_ELT));
     }
@@ -66,7 +66,7 @@ public class TTopologyTemplate implements IMdaProxy {
      * 
      * @return a {@link TTopologyTemplate} proxy on the created {@link Class}.
      */
-    @objid ("fd0d2e94-56fe-4c4c-adee-e648ee4eda0f")
+    @objid ("5f003c55-d44d-4ace-947d-c5c39c41057b")
     public static TTopologyTemplate create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(TTopologyTemplate.MdaTypes.STEREOTYPE_ELT);
@@ -80,7 +80,7 @@ public class TTopologyTemplate implements IMdaProxy {
      * @param obj a Class
      * @return a {@link TTopologyTemplate} proxy or <i>null</i>.
      */
-    @objid ("2ecc0ae2-143c-4d7f-9e56-f68144ab42d5")
+    @objid ("79384073-3bc8-435d-a358-d5a5c7f41982")
     public static TTopologyTemplate instantiate(final Class obj) {
         return TTopologyTemplate.canInstantiate(obj) ? new TTopologyTemplate(obj) : null;
     }
@@ -93,7 +93,7 @@ public class TTopologyTemplate implements IMdaProxy {
      * @return a {@link TTopologyTemplate} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("fc4715c1-908c-4bd9-bf33-d604f4ba5ed0")
+    @objid ("142bbf5c-09cc-498c-bd9b-adf60a2c9309")
     public static TTopologyTemplate safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (TTopologyTemplate.canInstantiate(obj))
         	return new TTopologyTemplate(obj);
@@ -101,7 +101,7 @@ public class TTopologyTemplate implements IMdaProxy {
         	throw new IllegalArgumentException("TTopologyTemplate: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("2c38ac72-5aaf-4824-b622-230d7b8ad82e")
+    @objid ("7242e89d-df9a-487a-99dd-6d7a041707ea")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -121,35 +121,35 @@ public class TTopologyTemplate implements IMdaProxy {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("b7323a6c-da46-4a2f-9c6c-6eb4ca6bbaed")
+    @objid ("0d24a9e8-e45f-4cbe-af06-34e6b31e0bd7")
     public Class getElement() {
         return this.elt;
     }
 
-    @objid ("3a8fe03d-1006-4dd4-973a-997d79516e4a")
+    @objid ("c2017bca-9884-4b35-a271-7c56120f7774")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
         
     }
 
-    @objid ("053ff8d5-8ecd-4169-be8c-f5bdf53fccb4")
+    @objid ("e0078369-44e7-4a9d-8f4d-d9b25d94b0fa")
     protected  TTopologyTemplate(final Class elt) {
         this.elt = elt;
     }
 
     @objid ("892da50d-f7df-4799-a912-93603d2ffc4d")
     public static final class MdaTypes {
-        @objid ("e102d840-2d78-43f6-8fda-f9267f9efc2f")
+        @objid ("c075c5ab-8b07-4860-b5b1-684621236bfc")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("b62d42aa-f4ba-4238-a1ad-ca69a5324cbc")
+        @objid ("87e9e866-a8e7-45cb-bbf7-723dc68858a7")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("c17c68e5-9ce4-4e43-8f7f-6c3b5dc4692a")
+        @objid ("067610c5-4bda-474b-882b-c0c436f3b0ad")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("854559cd-9e08-4bb8-b16c-13b4dbb18ab4")
+        @objid ("ce893080-be8a-44cd-aa5a-dd430df15c1b")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

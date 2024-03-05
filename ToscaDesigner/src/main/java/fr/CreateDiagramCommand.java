@@ -1,4 +1,4 @@
-package fr.softeam.toscadesigner.handlers.commands;
+package fr;
 
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
@@ -6,9 +6,9 @@ import org.modelio.api.module.IModule;
 import org.modelio.api.module.command.standard.DiagramCreationStandardHandler;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("145a0024-c8e4-4cbe-8bc2-fd00593017b9")
+@objid ("1ca6f8a9-f91f-447a-85ec-fe406259bc82")
 public class CreateDiagramCommand extends DiagramCreationStandardHandler {
-    @objid ("b4180092-eef9-4df1-a650-fe3a24fc3de7")
+    @objid ("06b8f51d-2b5e-486f-9b15-ce9375cf1bd1")
     @Override
     public boolean accept(final List<MObject> selectedElements, final IModule module) {
         // Generated call to the super method will check the scope conditions defined in Studio.
@@ -20,7 +20,7 @@ public class CreateDiagramCommand extends DiagramCreationStandardHandler {
         return true;
     }
 
-    @objid ("81b7693c-92ff-4d2e-bde3-00af3825b57c")
+    @objid ("be5d3271-f668-4e2a-93df-3f1544359e80")
     @Override
     protected void postConfigureElement(final MObject newDiagram, final IModule module) {
         // This method is a hook called once the element is created and configured and before the transaction is committed.

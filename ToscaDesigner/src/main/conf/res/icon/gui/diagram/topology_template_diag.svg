@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="topology_template_diag.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.72337262"
+     inkscape:cx="286.85078"
+     inkscape:cy="526.0083"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-to-guides="false"
+     inkscape:snap-grids="false"
+     showguides="false"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="217.99507,172.27464"
+       orientation="0,-1"
+       id="guide15396" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient4607"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#5465ff;stop-opacity:1;"
+         offset="0"
+         id="stop4605" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4599"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#788bff;stop-opacity:1;"
+         offset="0"
+         id="stop4597" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4460"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#e5f9e0;stop-opacity:0.66666675;"
+         offset="0"
+         id="stop4458" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4388"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#9bb1ff;stop-opacity:1;"
+         offset="0"
+         id="stop4386" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4318"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#9bb1ff;stop-opacity:1;"
+         offset="0"
+         id="stop4316" />
+    </linearGradient>
+    <marker
+       style="overflow:visible"
+       id="EmptyTriangleInL"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleInL"
+       inkscape:isstock="true">
+      <path
+         transform="scale(-0.8) translate(-6,0)"
+         style="fill-rule:evenodd;fill:context-fill;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path3103" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DotL"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="DotL"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(7.4, 1)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
+         id="path3013" />
+    </marker>
+    <linearGradient
+       id="linearGradient2902"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2900" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4460"
+       id="linearGradient4462"
+       x1="37.55149"
+       y1="165.87377"
+       x2="186.29579"
+       y2="165.87377"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0860365,0,0,1.1100393,-12.699384,-52.107982)" />
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;mix-blend-mode:normal;fill:url(#linearGradient4462);fill-opacity:1;stroke:#2f9c95;stroke-width:6.03885;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect846"
+       width="155.71516"
+       height="134.38995"
+       x="30.996195"
+       y="64.823441"
+       transform="matrix(0.99998349,0.00574711,-0.00550124,0.99998487,0,0)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\conf\res\icon\gui\diagram\topology_template_diag48.png"
+       inkscape:export-xdpi="7.2759414"
+       inkscape:export-ydpi="7.2759414" />
+    <path
+       style="opacity:1;fill:#788bff;fill-opacity:1;stroke:#788bff;stroke-width:0.538162;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d=""
+       id="path5302"
+       transform="scale(0.26458333)" />
+    <path
+       style="opacity:1;fill:#788bff;fill-opacity:1;stroke:#788bff;stroke-width:0.538162;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d=""
+       id="path5497"
+       transform="scale(0.26458333)" />
+    <path
+       d="m 128.52575,225.82012 q -4.57786,0 -7.78235,-3.24511 -3.2045,-3.24526 -3.2045,-7.88102 0,-4.6359 3.2045,-7.881 3.20449,-3.24513 7.78235,-3.24513 1.28174,0 2.38048,0.27755 1.09902,0.27753 2.10573,0.7415 l 5.21873,-6.58302 q -2.56362,-2.87422 -3.57073,-6.49024 -1.00767,-3.616 -0.45817,-7.23202 l -7.41608,-2.50331 q -1.5565,2.31787 -3.937,3.70865 -2.38047,1.39052 -5.31021,1.39052 -4.57787,0 -7.78235,-3.24513 -3.20448,-3.24512 -3.20448,-7.88102 0,-4.63589 3.20448,-7.881 3.20448,-3.24512 7.78235,-3.24512 4.57785,0 7.78234,3.24512 3.20448,3.24511 3.20448,7.881 v 0.74152 l 7.4161,2.59611 q 1.83111,-3.33791 4.89828,-5.65579 3.06718,-2.318 6.91254,-2.96702 v -8.06645 q -3.57074,-1.02044 -5.90541,-3.9405 -2.33467,-2.92063 -2.33467,-6.81474 0,-4.63588 3.20448,-7.88101 3.20449,-3.2451 7.78233,-3.2451 4.57786,0 7.78236,3.2451 3.20448,3.24513 3.20448,7.88101 0,3.89411 -2.38049,6.81474 -2.38049,2.92061 -5.85974,3.9405 v 8.06645 q 3.84549,0.64902 6.91268,2.96702 3.06701,2.31788 4.89829,5.65579 l 7.41608,-2.59611 v -0.74152 q 0,-4.63589 3.20449,-7.881 3.20448,-3.24512 7.78233,-3.24512 4.57786,0 7.78235,3.24512 3.20449,3.24511 3.20449,7.881 0,4.6359 -3.20449,7.88102 -3.20449,3.24513 -7.78235,3.24513 -2.92986,0 -5.35618,-1.39052 -2.42615,-1.39048 -3.89116,-3.70865 l -7.4161,2.50331 q 0.54953,3.61602 -0.45815,7.18564 -1.00767,3.56961 -3.57072,6.53662 l 5.21871,6.49023 q 1.00768,-0.46396 2.10588,-0.69525 1.09902,-0.23128 2.38049,-0.23128 4.57785,0 7.78234,3.2451 3.20449,3.24512 3.20449,7.88101 0,4.63578 -3.20449,7.88104 -3.20449,3.24509 -7.78234,3.24509 -4.57787,0 -7.78235,-3.24509 -3.20448,-3.24526 -3.20448,-7.88104 0,-1.85446 0.59519,-3.56975 0.59518,-1.71528 1.60231,-3.10591 l -5.21873,-6.58304 q -3.75386,2.13259 -8.01128,2.13259 -4.25742,0 -8.01129,-2.13259 l -5.12709,6.58304 q 1.00768,1.3905 1.60219,3.10591 0.59518,1.71529 0.59518,3.56975 0,4.63578 -3.20448,7.88104 -3.20449,3.24509 -7.78235,3.24509 z M 117.5389,179.46113 q 1.5565,0 2.60931,-1.06669 1.05334,-1.06671 1.05334,-2.64253 0,-1.57624 -1.05334,-2.64252 -1.05335,-1.0667 -2.60931,-1.0667 -1.55649,0 -2.60941,1.0667 -1.05336,1.06671 -1.05336,2.64252 0,1.57623 1.05336,2.64253 1.05335,1.06669 2.60941,1.06669 z m 10.98685,38.94153 q 1.55649,0 2.60928,-1.06669 1.05336,-1.06673 1.05336,-2.64239 0,-1.57623 -1.05336,-2.64253 -1.05334,-1.0667 -2.60928,-1.0667 -1.55651,0 -2.60944,1.0667 -1.05335,1.06673 -1.05335,2.64253 0,1.57607 1.05335,2.64239 1.05336,1.06669 2.60944,1.06669 z m 21.97364,-63.04812 q 1.55649,0 2.6093,-1.0667 1.05335,-1.06671 1.05335,-2.64238 0,-1.57623 -1.05335,-2.64251 -1.05336,-1.06671 -2.6093,-1.06671 -1.55649,0 -2.60943,1.06671 -1.05334,1.06669 -1.05334,2.64251 0,1.57623 1.05334,2.64238 1.05335,1.0667 2.60943,1.0667 z m 0,40.79586 q 3.84535,0 6.50047,-2.68879 2.65525,-2.6889 2.65525,-6.58303 0,-3.89409 -2.65525,-6.58287 -2.65512,-2.68892 -6.50047,-2.68892 -3.8455,0 -6.5006,2.68892 -2.65512,2.68878 -2.65512,6.58287 0,3.89413 2.65512,6.58303 2.6551,2.68879 6.5006,2.68879 z m 21.97365,22.25226 q 1.55651,0 2.6093,-1.06669 1.05335,-1.06673 1.05335,-2.64239 0,-1.57623 -1.05335,-2.64253 -1.05337,-1.0667 -2.6093,-1.0667 -1.55648,0 -2.60944,1.0667 -1.05334,1.06673 -1.05334,2.64253 0,1.57607 1.05334,2.64239 1.05336,1.06669 2.60944,1.06669 z m 10.98683,-38.94153 q 1.55651,0 2.6093,-1.06669 1.05336,-1.06671 1.05336,-2.64253 0,-1.57624 -1.05336,-2.64252 -1.05336,-1.0667 -2.6093,-1.0667 -1.55649,0 -2.60944,1.0667 -1.05335,1.06671 -1.05335,2.64252 0,1.57623 1.05335,2.64253 1.05336,1.06669 2.60944,1.06669 z m -32.96048,-27.81525 z m -32.96049,24.10658 z m 32.96049,11.12612 z m 32.96048,-11.12612 z m -54.93412,38.94153 z m 43.94729,0 z"
+       id="path15187"
+       style="fill:#40c9a2;fill-opacity:1;stroke-width:0.0921356"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\conf\res\icon\gui\diagram\topology_template_diag48.png"
+       inkscape:export-xdpi="7.2759414"
+       inkscape:export-ydpi="7.2759414" />
+  </g>
+</svg>
