@@ -125,6 +125,10 @@
                 <Icon path="res/icon/gui/service_template24.png"/>
                 <Image path="res/icon/gui/service_template48.png"/>
             </Stereotype>
+            <Stereotype name="TRelationshipType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TRelationshipType.label" uid="1b11c098-c9e5-4e5d-beca-3351909bc6ce" is-abstract="false">
+                <Icon path="res/icon/gui/relationship_type24.png"/>
+                <Image path="res/icon/gui/relationship_type48.png"/>
+            </Stereotype>
         </Profile>
         <Profile uid="72c19ac1-0189-4db1-a982-dbaa92e1cfd5" id="Automatic">
             <Stereotype name="CloudServiceArchiveDiagram" metaclass="Standard.StaticDiagram" owner-stereotype="" is-hidden="false" label="%stereotype.CloudServiceArchiveDiagram.label" uid="dddbe647-1f21-42d1-93cd-f61109a8afd3" is-abstract="false">
@@ -208,6 +212,7 @@
             <Tool id="RelationshipTypes" label="%tool.RelationshipTypes.label" tooltip="%tool.RelationshipTypes.tooltip" image="res/icon/gui/relationship_type24.png">
                 <Scope-source metaclass="Standard.Package" stereotype=""/>
                 <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#TRelationshipType"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
                     <HParameter name="name" value="RelationshipTypes"/>
                 </Handler>
