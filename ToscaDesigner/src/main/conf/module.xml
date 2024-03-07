@@ -5,6 +5,10 @@
     </ClassPath>
     <Profiles>
         <Profile uid="ad7bd07a-f96b-47fb-8f5c-d62d9086f93f" id="Tosca">
+            <Stereotype name="ArtifactTemplate" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.ArtifactTemplate.label" uid="9470b61d-47b8-455e-9d73-1119e307cdcc" is-abstract="false">
+                <Icon path="res/icon/gui/artifact_template24.png"/>
+                <Image path="res/icon/gui/artifact_template48.png"/>
+            </Stereotype>
             <Stereotype name="CapabilitiesType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.CapabilitiesType.label" uid="03d159c3-b62b-497f-9176-c5137b4cb33d" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
@@ -78,20 +82,20 @@
                 <Image path=""/>
             </Stereotype>
             <Stereotype name="TNodeTemplate" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TNodeTemplate.label" uid="1a20bf91-0a92-434a-9d1f-35c86788784e" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+                <Icon path="res/icon/gui/node_template24.png"/>
+                <Image path="res/icon/gui/node_template48.png"/>
             </Stereotype>
             <Stereotype name="TNodeType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TNodeType.label" uid="47cdd09e-013d-4670-b757-f5736d2bb48c" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+                <Icon path="res/icon/gui/node_type24.png"/>
+                <Image path="res/icon/gui/node_type48.png"/>
             </Stereotype>
             <Stereotype name="TPolicy" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TPolicy.label" uid="afe2c9ed-9fab-4a53-a2d2-b52d849d0799" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="TRelationshipTemplate" metaclass="Standard.Connector" owner-stereotype="" is-hidden="false" label="%stereotype.TRelationshipTemplate.label" uid="7f01001b-511e-4017-b6b4-729f68c85911" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+            <Stereotype name="TRelationshipTemplate" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TRelationshipTemplate.label" uid="7f01001b-511e-4017-b6b4-729f68c85911" is-abstract="false">
+                <Icon path="res/icon/gui/relationship_template24.png"/>
+                <Image path="res/icon/gui/relationship_template48.png"/>
             </Stereotype>
             <Stereotype name="TRequirement" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TRequirement.label" uid="2a38f650-7f59-41a7-a928-ac9cbe326f84" is-abstract="false">
                 <Icon path=""/>
@@ -106,8 +110,8 @@
                 <Image path=""/>
             </Stereotype>
             <Stereotype name="TTopologyTemplate" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TTopologyTemplate.label" uid="a52f433c-cf19-4033-99c2-81b4af708744" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+                <Icon path="res/icon/gui/topology_template24.png"/>
+                <Image path="res/icon/gui/topology_template48.png"/>
             </Stereotype>
             <Stereotype name="TargetElementType" metaclass="Standard.DataType" owner-stereotype="" is-hidden="false" label="%stereotype.TargetElementType.label" uid="e4524aff-a7ca-4e8c-b752-7f45c18399b6" is-abstract="false">
                 <Icon path=""/>
@@ -117,10 +121,14 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
+            <Stereotype name="TServiceTemplate" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TServiceTemplate.label" uid="09682faf-27b8-4c4b-a5e6-22fe18303161" is-abstract="false">
+                <Icon path="res/icon/gui/service_template24.png"/>
+                <Image path="res/icon/gui/service_template48.png"/>
+            </Stereotype>
         </Profile>
         <Profile uid="72c19ac1-0189-4db1-a982-dbaa92e1cfd5" id="Automatic">
             <Stereotype name="CloudServiceArchiveDiagram" metaclass="Standard.StaticDiagram" owner-stereotype="" is-hidden="false" label="%stereotype.CloudServiceArchiveDiagram.label" uid="dddbe647-1f21-42d1-93cd-f61109a8afd3" is-abstract="false">
-                <Icon path="res/icon/gui/diagram/csar_diag24.png"/>
+                <Icon path="res/icon/gui/csar_diag48.ICON.png"/>
                 <Image path=""/>
             </Stereotype>
             <Stereotype name="ServiceTemplateDiagram" metaclass="Standard.StaticDiagram" owner-stereotype="" is-hidden="false" label="%stereotype.ServiceTemplateDiagram.label" uid="f9953d92-a710-4f60-aac1-ebb34e59967c" is-abstract="false">
@@ -128,7 +136,7 @@
                 <Image path=""/>
             </Stereotype>
             <Stereotype name="TopologyTemplateDiagram" metaclass="Standard.StaticDiagram" owner-stereotype="" is-hidden="false" label="%stereotype.TopologyTemplateDiagram.label" uid="0313d7f3-dcd0-4c93-981e-705f3d4bcc82" is-abstract="false">
-                <Icon path="res/icon/gui/topology_template_diag24.ICON.png"/>
+                <Icon path="res/icon/gui/diagram/topology_template_diag24.png"/>
                 <Image path=""/>
             </Stereotype>
         </Profile>
@@ -173,14 +181,15 @@
             </Command>
         </Commands>
         <Tools>
-            <Tool id="Service Template" label="%tool.Service Template.label" tooltip="%tool.Service Template.tooltip" image="res/icon/gui/2.ICON.png">
+            <Tool id="Service Template" label="%tool.Service Template.label" tooltip="%tool.Service Template.tooltip" image="res/icon/gui/service_template24.png">
                 <Scope-source metaclass="Standard.Package" stereotype=""/>
                 <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#TServiceTemplate"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
                     <HParameter name="name" value="ServiceTemplate"/>
                 </Handler>
             </Tool>
-            <Tool id="TopologyTemplate" label="%tool.TopologyTemplate.label" tooltip="%tool.TopologyTemplate.tooltip" image="">
+            <Tool id="TopologyTemplate" label="%tool.TopologyTemplate.label" tooltip="%tool.TopologyTemplate.tooltip" image="res/icon/gui/topology_template24.png">
                 <Scope-source metaclass="Standard.Package" stereotype=""/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TTopologyTemplate"/>
@@ -188,7 +197,7 @@
                     <HParameter name="name" value="TopologyTemplate"/>
                 </Handler>
             </Tool>
-            <Tool id="NodeTypes" label="%tool.NodeTypes.label" tooltip="%tool.NodeTypes.tooltip" image="">
+            <Tool id="NodeTypes" label="%tool.NodeTypes.label" tooltip="%tool.NodeTypes.tooltip" image="res/icon/gui/node_type24.png">
                 <Scope-source metaclass="Standard.Package" stereotype=""/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TNodeType"/>
@@ -196,7 +205,7 @@
                     <HParameter name="name" value="NodeTypes"/>
                 </Handler>
             </Tool>
-            <Tool id="RelationshipTypes" label="%tool.RelationshipTypes.label" tooltip="%tool.RelationshipTypes.tooltip" image="">
+            <Tool id="RelationshipTypes" label="%tool.RelationshipTypes.label" tooltip="%tool.RelationshipTypes.tooltip" image="res/icon/gui/relationship_type24.png">
                 <Scope-source metaclass="Standard.Package" stereotype=""/>
                 <Handler class="Box">
                     <HParameter name="metaclass" value="Standard.Class"/>
@@ -210,18 +219,28 @@
                     <HParameter name="name" value="Plans"/>
                 </Handler>
             </Tool>
-            <Tool id="NodeTemplate" label="%tool.NodeTemplate.label" tooltip="%tool.NodeTemplate.tooltip" image="">
+            <Tool id="NodeTemplate" label="%tool.NodeTemplate.label" tooltip="%tool.NodeTemplate.tooltip" image="res/icon/gui/node_template24.png">
                 <Scope-source metaclass="Standard.Package" stereotype=""/>
                 <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#TNodeTemplate"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
                     <HParameter name="name" value="NodeTemplate"/>
                 </Handler>
             </Tool>
-            <Tool id="RelationshipTemplate" label="%tool.RelationshipTemplate.label" tooltip="%tool.RelationshipTemplate.tooltip" image="">
+            <Tool id="RelationshipTemplate" label="%tool.RelationshipTemplate.label" tooltip="%tool.RelationshipTemplate.tooltip" image="res/icon/gui/relationship_template24.png">
                 <Scope-source metaclass="Standard.Package" stereotype=""/>
                 <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#TRelationshipTemplate"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
                     <HParameter name="name" value="RelationshipTemplate"/>
+                </Handler>
+            </Tool>
+            <Tool id="ArtifactTemplate" label="%tool.ArtifactTemplate.label" tooltip="%tool.ArtifactTemplate.tooltip" image="res/icon/gui/artifact_template24.png">
+                <Scope-source metaclass="Standard.Package" stereotype=""/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#ArtifactTemplate"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="Artifact Template"/>
                 </Handler>
             </Tool>
         </Tools>
@@ -247,7 +266,8 @@
                     <ToolRef refid="NodeTypes" group="%group.Types.label"/>
                     <ToolRef refid="RelationshipTypes" group="%group.Types.label"/>
                     <ToolRef refid="TopologyTemplate" group="%group.Templates.label"/>
-                    <ToolRef refid="Plans" group="%group.Group3.label"/>
+                    <ToolRef refid="ArtifactTemplate" group="%group.Artifact_Template.label"/>
+                    <ToolRef refid="Plans" group="%group.Plans.label"/>
                 </Palette>
                 <Handler class="StandardCustomizer">
                     <HParameter name="stereotype" value="ToscaDesigner#ServiceTemplateDiagram"/>
