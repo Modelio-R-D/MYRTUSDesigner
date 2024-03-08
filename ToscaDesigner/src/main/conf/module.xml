@@ -155,32 +155,35 @@
                     <HParameter name="name" value="Tosca Model"/>
                 </Handler>
             </Command>
-            <Command id="Tosca_Model_Diagram" label="%command.Tosca_Model_Diagram.label" tooltip="%command.Tosca_Model_Diagram.tooltip" image="res/icon/gui/2.ICON.png" modify-model="true">
+            <Command id="Tosca_Model_Diagram" label="%command.Tosca_Model_Diagram.label" tooltip="%command.Tosca_Model_Diagram.tooltip" image="res/icon/gui/diagram/csar_diag24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="ToscaDesigner#ToscaModel"/>
                 <Handler class="fr.softeam.toscadesigner.handlers.commands.CreateDiagramCommand">
-                    <HParameter name="name" value="CloudServiceDiagram"/>
+                    <HParameter name="name" value="CloudServiceArchiveDiagram"/>
                     <HParameter name="stereotype" value="ToscaDesigner#CloudServiceArchiveDiagram"/>
                     <HParameter name="metaclass" value="Standard.StaticDiagram"/>
+                    <HParameter name="style" value="ToscaStyle"/>
                 </Handler>
             </Command>
             <Command id="Export" label="%command.Export.label" tooltip="%command.Export.tooltip" image="res/icon/gui/script24.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="ToscaDesigner#ToscaModel"/>
                 <Handler class="fr.softeam.toscadesigner.handlers.commands.CreateDiagramCommand"/>
             </Command>
-            <Command id="Service_Template_Diagram" label="%command.Service_Template_Diagram.label" tooltip="%command.Service_Template_Diagram.tooltip" image="" modify-model="true">
+            <Command id="Service_Template_Diagram" label="%command.Service_Template_Diagram.label" tooltip="%command.Service_Template_Diagram.tooltip" image="res/icon/gui/diagram/service_template_diag24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype=""/>
                 <Handler class="fr.softeam.toscadesigner.handlers.commands.CreateDiagramCommand">
                     <HParameter name="name" value="ServiceTemplateDiagram"/>
                     <HParameter name="stereotype" value="ToscaDesigner#ServiceTemplateDiagram"/>
                     <HParameter name="metaclass" value="Standard.StaticDiagram"/>
+                    <HParameter name="style" value="ToscaStyle"/>
                 </Handler>
             </Command>
-            <Command id="Topology_Template_Diagram" label="%command.Topology_Template_Diagram.label" tooltip="%command.Topology_Template_Diagram.tooltip" image="" modify-model="true">
+            <Command id="Topology_Template_Diagram" label="%command.Topology_Template_Diagram.label" tooltip="%command.Topology_Template_Diagram.tooltip" image="res/icon/gui/diagram/topology_template_diag24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype=""/>
                 <Handler class="fr.softeam.toscadesigner.handlers.commands.CreateDiagramCommand">
                     <HParameter name="name" value="TopologyTemplateDiagram"/>
                     <HParameter name="stereotype" value="ToscaDesigner#TopologyTemplateDiagram"/>
                     <HParameter name="metaclass" value="Standard.StaticDiagram"/>
+                    <HParameter name="style" value="ToscaStyle"/>
                 </Handler>
             </Command>
         </Commands>
@@ -291,4 +294,9 @@
             </DiagramType>
         </Diagrams>
     </Gui>
+    <Resources>
+        <Styles>
+            <Style id="ToscaStyle" path="res/generated/styles/ToscaStyle.style"/>
+        </Styles>
+    </Resources>
 </Module>

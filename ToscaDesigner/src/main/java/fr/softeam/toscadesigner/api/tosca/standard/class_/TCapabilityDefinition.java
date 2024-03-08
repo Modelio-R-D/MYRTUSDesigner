@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 05/03/2024 18:02 by Modelio Studio.
+ * This file was generated on 08/03/2024 09:55 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
@@ -40,7 +40,7 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("4a705232-04ac-44d1-9eac-6048652d5c1b")
 public class TCapabilityDefinition extends TExtensibleElements implements IMdaProxy {
-    @objid ("fc2ba501-5681-4bdb-82d3-2cfb3dab745c")
+    @objid ("afe6ff7d-f61f-41ef-9d2d-53bd679d07e6")
     public static final String STEREOTYPE_NAME = "TCapabilityDefinition";
 
     /**
@@ -50,7 +50,7 @@ public class TCapabilityDefinition extends TExtensibleElements implements IMdaPr
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("a54c2dea-3387-48ed-83cf-3d2638d6904e")
+    @objid ("67425ebb-66f4-48a9-8259-5d8a3fd50bab")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT));
     }
@@ -60,7 +60,7 @@ public class TCapabilityDefinition extends TExtensibleElements implements IMdaPr
      * 
      * @return a {@link TCapabilityDefinition} proxy on the created {@link Class}.
      */
-    @objid ("3aee7224-e3f7-4fe8-80f4-001c089265c2")
+    @objid ("4911e111-1af2-4806-a336-339777f410c2")
     public static TCapabilityDefinition create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT);
@@ -74,7 +74,7 @@ public class TCapabilityDefinition extends TExtensibleElements implements IMdaPr
      * @param obj a Class
      * @return a {@link TCapabilityDefinition} proxy or <i>null</i>.
      */
-    @objid ("443c7901-2def-47f4-b12e-74c92dcd3c02")
+    @objid ("db1b372c-499c-4afe-9953-f95f8f3549ba")
     public static TCapabilityDefinition instantiate(final Class obj) {
         return TCapabilityDefinition.canInstantiate(obj) ? new TCapabilityDefinition(obj) : null;
     }
@@ -87,7 +87,7 @@ public class TCapabilityDefinition extends TExtensibleElements implements IMdaPr
      * @return a {@link TCapabilityDefinition} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("fb450d94-973b-4c01-b4f4-931f2ae96a4b")
+    @objid ("da26177d-ef84-4390-af08-afc7e7fcacd8")
     public static TCapabilityDefinition safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (TCapabilityDefinition.canInstantiate(obj))
         	return new TCapabilityDefinition(obj);
@@ -95,7 +95,7 @@ public class TCapabilityDefinition extends TExtensibleElements implements IMdaPr
         	throw new IllegalArgumentException("TCapabilityDefinition: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("fb1f67d3-8139-4153-ab8f-87d275a8d4a7")
+    @objid ("5b110756-42d2-4387-8d4c-5408c4fcfb24")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -115,36 +115,36 @@ public class TCapabilityDefinition extends TExtensibleElements implements IMdaPr
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("f3da38f0-a45b-4e0e-b89f-d4879a578eb7")
+    @objid ("55940089-33f1-4b13-9709-5b6cb5d60b26")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("fd585808-7817-448c-97f2-3edce34119b7")
+    @objid ("cad85f3a-1e4a-4df4-94e0-678f98d10e34")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
         
     }
 
-    @objid ("dd535da3-4eaa-4437-88e8-214f53d858dd")
+    @objid ("774dd5a0-cf90-4169-bb57-51ca01f9ec2f")
     protected  TCapabilityDefinition(final Class elt) {
         super(elt);
     }
 
     @objid ("0fb5204c-539a-40c9-89d7-166a2071f2b9")
     public static final class MdaTypes {
-        @objid ("d3a5c010-6f23-4519-979f-d741defe367c")
+        @objid ("ea2078ca-9fb8-4d6c-88a1-8a550c8ca9d8")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("eb957a63-f3a5-4eb2-a27f-051ef7932797")
+        @objid ("0091d057-9a48-460d-bca1-5289be4c92fb")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("71fee047-5f90-48cb-8314-80edb0d0f79d")
+        @objid ("c0997b5c-3ab5-4829-bbc4-16db1410bb64")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("6d7ee049-902a-4713-b11a-14bb94f1ff69")
+        @objid ("b6993892-235b-4319-9e9d-6b13fc482b14")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

@@ -4,9 +4,11 @@ fr\softeam\toscadesigner\api\tosca\standard\class_\InterfacesType$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TExtensibleElements.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TRequirement.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\RequirementDefinitionsType.class
+fr\softeam\toscadesigner\api\tosca\standard\class_\TRelationshipType.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TDeploymentArtifact$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\connector\TRelationshipTemplate.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TCapability$MdaTypes.class
+fr\softeam\toscadesigner\api\tosca\standard\class_\ArtifactTemplate$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\ConstraintsType$MdaTypes.class
 fr\softeam\toscadesigner\api\automatic\standard\staticdiagram\CloudServiceArchiveDiagram.class
 fr\softeam\toscadesigner\api\tosca\standard\package_\ToscaModel.class
@@ -16,15 +18,18 @@ fr\softeam\toscadesigner\impl\ToscaDesignerPeerModule.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TCapabilityDefinition$MdaTypes.class
 fr\softeam\toscadesigner\api\automatic\standard\staticdiagram\ServiceTemplateDiagram$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TNodeType.class
+fr\softeam\toscadesigner\api\tosca\standard\class_\TServiceTemplate.class
 fr\softeam\toscadesigner\api\tosca\standard\connector\TRelationshipTemplate$MdaTypes.class
 fr\softeam\toscadesigner\handlers\commands\submodel\CreateToscaModelCommand.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TTopologyElementInstanceStates$MdaTypes.class
+fr\softeam\toscadesigner\api\tosca\standard\class_\TRelationshipTemplate$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\datatype\TargetElementType$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TDeploymentArtifact.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\RelationshipConstraintsType.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TDeploymentArtifacts.class
 fr\softeam\toscadesigner\i18n\Messages.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\RequirementsType.class
+fr\softeam\toscadesigner\api\tosca\standard\class_\TServiceTemplate$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TDeploymentArtifacts$MdaTypes.class
 fr\softeam\toscadesigner\api\IToscaDesignerPeerModule.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\CapabilityDefinitionsType$MdaTypes.class
@@ -50,6 +55,7 @@ fr\softeam\toscadesigner\api\automatic\standard\staticdiagram\ServiceTemplateDia
 fr\softeam\toscadesigner\api\tosca\standard\class_\PoliciesType.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TTopologyTemplate.class
 fr\softeam\toscadesigner\api\automatic\standard\staticdiagram\ToscaModelDiagram.class
+fr\softeam\toscadesigner\api\tosca\standard\class_\ArtifactTemplate.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\CapabilitiesType.class
 fr\softeam\toscadesigner\api\ToscaDesignerProxyFactory.class
 fr\softeam\toscadesigner\api\automatic\standard\staticdiagram\CloudServiceArchiveDiagram$MdaTypes.class
@@ -58,6 +64,7 @@ fr\softeam\toscadesigner\handlers\commands\CreateDiagramCommand.class
 fr\softeam\toscadesigner\api\tosca\standard\datatype\SourceElementType.class
 fr\softeam\toscadesigner\handlers\commands\CreateToscaModelCommand.class
 fr\softeam\toscadesigner\impl\ToscaDesignerLifeCycleHandler.class
+fr\softeam\toscadesigner\api\tosca\standard\class_\TRelationshipTemplate.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\CapabilitiesType$MdaTypes.class
 fr\softeam\toscadesigner\api\ToscaDesignerParameters.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TNodeType$MdaTypes.class
@@ -71,6 +78,7 @@ fr\softeam\toscadesigner\api\tosca\standard\class_\InterfacesType.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TCapabilityDefinition.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\CapabilityDefinitionsType.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\RelationshipConstraintType.class
+fr\softeam\toscadesigner\api\tosca\standard\class_\TRelationshipType$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TNodeTemplate$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\datatype\SourceElementType$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\ConstraintsType.class
