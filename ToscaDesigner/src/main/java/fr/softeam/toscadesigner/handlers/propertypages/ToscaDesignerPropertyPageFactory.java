@@ -10,6 +10,7 @@ package fr.softeam.toscadesigner.handlers.propertypages;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
+import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TNodeTemplatePropertyPage;
 
 import org.modelio.metamodel.diagrams.ClassDiagram;
 import org.modelio.metamodel.mda.ModuleComponent;
@@ -45,7 +46,6 @@ public class ToscaDesignerPropertyPageFactory {
      * @param e A model element
      * @return the right proxy or <i>null</i>.
      */
-    @objid ("421d5784-c31b-41f2-8e84-fb05df25016b")
     public static final Object instantiatePropertyPage(final ModelElement e) {
         for (Stereotype s : e.getExtension()) {
             ModuleComponent module = s.getModule();
@@ -65,18 +65,14 @@ public class ToscaDesignerPropertyPageFactory {
      * @param stName A stereotype name.
      * @return the right proxy or <i>null</i>.
      */
-    @objid ("33aeb9ea-d643-4b55-8c5b-11c7df82eec4")
     public static final Object instantiatePropertyPage(final Element e, final String stName) {
         propertyVisitor.setStereotype(stName);
         return e.accept(propertyVisitor);
     }
 
-    @objid ("18563f46-96b0-4137-bf2c-f82a64e467d9")
     private static class PropertyPageVisitor implements IDefaultModelVisitor, IDefaultInfrastructureVisitor {
-        @objid ("8bbd6a2f-ed17-4779-a468-d61617ab0386")
         private String stName;
 
-        @objid ("978eac80-3ce0-45b6-ae6f-e6916b1cd570")
         @Override
         public final Object visitGeneralClass(GeneralClass obj) {
             switch (this.stName) {
@@ -116,6 +112,8 @@ public class ToscaDesignerPropertyPageFactory {
         @Override
         public final Object visitClass(Class obj) {
             switch (this.stName) {
+            case fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate.STEREOTYPE_NAME: return new TNodeTemplatePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate.instantiate(obj));
+
             default:
                 break;
             }
@@ -171,6 +169,7 @@ public class ToscaDesignerPropertyPageFactory {
         public final Object visitClassDiagram(ClassDiagram obj) {
             switch (this.stName) {
             default:
+
                 break;
             }
             return IDefaultModelVisitor.super.visitClassDiagram(obj);
@@ -218,13 +217,12 @@ public class ToscaDesignerPropertyPageFactory {
          * 
          * @return the {@link IInfrastructureVisitor} visitor or <i>null</i>.
          */
-        @objid ("65ba04d7-dcfb-43d5-8619-e88870f03f28")
+        
         @Override
         public IInfrastructureVisitor getInfrastructureVisitor() {
             return this;
         }
 
-        @objid ("1dcbce9d-01c0-42b6-89e6-797da0dadd2c")
         public final void setStereotype(final String stName) {
             this.stName = stName;
         }

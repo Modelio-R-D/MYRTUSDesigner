@@ -5,10 +5,6 @@
     </ClassPath>
     <Profiles>
         <Profile uid="ad7bd07a-f96b-47fb-8f5c-d62d9086f93f" id="Tosca">
-            <Stereotype name="ArtifactTemplate" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.ArtifactTemplate.label" uid="9470b61d-47b8-455e-9d73-1119e307cdcc" is-abstract="false">
-                <Icon path="res/icon/gui/artifact_template24.png"/>
-                <Image path="res/icon/gui/artifact_template48.png"/>
-            </Stereotype>
             <Stereotype name="CapabilitiesType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.CapabilitiesType.label" uid="03d159c3-b62b-497f-9176-c5137b4cb33d" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
@@ -84,6 +80,9 @@
             <Stereotype name="TNodeTemplate" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TNodeTemplate.label" uid="1a20bf91-0a92-434a-9d1f-35c86788784e" is-abstract="false">
                 <Icon path="res/icon/gui/node_template24.png"/>
                 <Image path="res/icon/gui/node_template48.png"/>
+                <TagTypes>
+                    <TagType name="name" uid="39d7794d-5063-4947-87a6-f943deb91b5d" label="%tagtype.name.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
             </Stereotype>
             <Stereotype name="TNodeType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TNodeType.label" uid="47cdd09e-013d-4670-b757-f5736d2bb48c" is-abstract="false">
                 <Icon path="res/icon/gui/node_type24.png"/>
@@ -246,7 +245,6 @@
             <Tool id="ArtifactTemplate" label="%tool.ArtifactTemplate.label" tooltip="%tool.ArtifactTemplate.tooltip" image="res/icon/gui/artifact_template24.png">
                 <Scope-source metaclass="Standard.Package" stereotype=""/>
                 <Handler class="Box">
-                    <HParameter name="stereotype" value="ToscaDesigner#ArtifactTemplate"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
                     <HParameter name="name" value="Artifact Template"/>
                 </Handler>
