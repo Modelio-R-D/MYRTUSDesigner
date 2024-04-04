@@ -261,6 +261,7 @@
             <DiagramType base-diagram="Standard.StaticDiagram" stereotype="ToscaDesigner#CloudServiceArchiveDiagram">
                 <Palette keepBasePalette="false">
                     <ToolRef refid="Service Template" group="%group.Group0.label"/>
+                    <ToolRef refid="CREATE_NOTE" group="%group.Common.label"/>
                 </Palette>
                 <Handler class="StandardCustomizer">
                     <HParameter name="stereotype" value="ToscaDesigner#CloudServiceArchiveDiagram"/>

@@ -6,6 +6,7 @@ C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\T
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\class_\TNodeTemplate.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\class_\InstanceStateType.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\class_\TRelationshipType.java
+C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\handlers\commands\submodel\CreateTopologyTemplateDiagramCommand.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\ToscaDesignerProxyFactory.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\IToscaDesignerPeerModule.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\class_\TCapabilityDefinition.java
@@ -40,13 +41,12 @@ C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\T
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\class_\TPolicy.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\class_\ArtifactTemplate.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\datatype\MaxInstancesType.java
-C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\CreateDiagramCommand.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\automatic\standard\staticdiagram\TopologyTemplateDiagram.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\class_\TRelationshipTemplate.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\handlers\propertypages\IPropertyContent.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\automatic\standard\staticdiagram\CloudServiceArchiveDiagram.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\class_\RelationshipOperationType.java
-C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\CreateDiagramCommand.java
+C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\handlers\commands\submodel\CreateServiceTemplateDigramCommand.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\datatype\TargetElementType.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\class_\PoliciesType.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\class_\TDeploymentArtifacts.java

@@ -4,6 +4,8 @@ import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.module.IModule;
 import org.modelio.api.module.command.standard.DiagramCreationStandardHandler;
+import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.diagrams.AbstractDiagram;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("145a0024-c8e4-4cbe-8bc2-fd00593017b9")
@@ -29,7 +31,13 @@ public class CreateDiagramCommand extends DiagramCreationStandardHandler {
         
         // Call the super method to apply the diagram style and open the diagram if asked for.
         super.postConfigureElement(newDiagram, module);
+        if (newDiagram instanceof AbstractDiagram) {
+            AbstractDiagram diagram = (AbstractDiagram) newDiagram;
         
+            IModuleContext moduleContext = module.getModuleContext();
+            //moduleContext.getModelingSession().getModel().getDefaultNameService().setDefaultName(diagram, diagram.getOrigin().getName() + " diagram");
+            moduleContext.getModelioServices().getEditionService().openEditor(diagram);
+        }
         // TODO Add additional behavior below
         
         

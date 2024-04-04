@@ -12,7 +12,7 @@ import org.modelio.api.modelio.diagram.style.IStyleHandle;
 import org.modelio.api.module.command.standard.DiagramCreationStandardHandler;
 import org.modelio.metamodel.diagrams.AbstractDiagram;
 
-public abstract class CreateSubModelCommand extends DiagramCreationStandardHandler {
+public abstract class CreateServiceTemplateDigramCommand extends DiagramCreationStandardHandler {
 
     protected void openDiagram(AbstractDiagram diagram) {
         IModelioServices modelioServices = ToscaDesignerModule.getInstance().getModuleContext().getModelioServices();
