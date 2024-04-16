@@ -45,8 +45,9 @@ public class ArtifactTemplate implements IMdaProxy {
 
     /**
      * The underlying {@link Class} represented by this proxy, never null.
+     * 
      */
-    @objid ("c9cdbd83-a870-4d40-a0c0-1e6c7b39255c")
+    @objid ("051880a8-63f8-4532-83ea-c1da681c3f01")
     protected final Class elt;
 
     /**
@@ -63,7 +64,6 @@ public class ArtifactTemplate implements IMdaProxy {
 
     /**
      * Create a new {@link Class} stereotyped << ArtifactTemplate >> then instantiate a {@link ArtifactTemplate} proxy.
-     * 
      * @return a {@link ArtifactTemplate} proxy on the created {@link Class}.
      */
     @objid ("2460a8ba-c675-48a2-8691-3cfde002cdec")
@@ -89,16 +89,16 @@ public class ArtifactTemplate implements IMdaProxy {
      * Tries to instantiate a {@link ArtifactTemplate} proxy from a {@link Class} stereotyped << ArtifactTemplate >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link Class}
      * @return a {@link ArtifactTemplate} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("97939a49-6ba1-42c9-918b-076822b73524")
     public static ArtifactTemplate safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (ArtifactTemplate.canInstantiate(obj))
-        	return new ArtifactTemplate(obj);
+            return new ArtifactTemplate(obj);
         else
-        	throw new IllegalArgumentException("ArtifactTemplate: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ArtifactTemplate: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("91e82f99-01d9-44e9-9a5e-39e51ea648ea")
@@ -118,7 +118,7 @@ public class ArtifactTemplate implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
      * @return the Class represented by this proxy, never null.
      */
     @objid ("739ff89a-3dce-4fae-bbee-45864dfbbaf4")
@@ -130,7 +130,6 @@ public class ArtifactTemplate implements IMdaProxy {
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-        
     }
 
     @objid ("0953f20a-6761-491a-ba36-6db2898ea602")
@@ -140,13 +139,13 @@ public class ArtifactTemplate implements IMdaProxy {
 
     @objid ("b5b46625-a405-4364-a3b5-61959fa30639")
     public static final class MdaTypes {
-        @objid ("979dc3b5-0651-4dad-b6a0-51a40056f53e")
+        @objid ("fcdb2e5e-9a91-4628-a239-fe5ac47c8946")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("935de2d2-e45c-42a6-a2dd-379ac26cb917")
+        @objid ("6cd1c070-c1e8-45b7-99fa-54f1530c398e")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("296ebc8e-fbd2-45cf-bd93-5fc605c4eb11")
+        @objid ("7a57eae8-4ca0-4280-80ef-a38c97b7ca51")
         private static TagType MDAASSOCDEP_ROLE;
 
         @objid ("16acbc64-dd76-4ed9-99e7-1d44cdfc8503")
@@ -166,7 +165,6 @@ public class ArtifactTemplate implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
-            
         }
 
     }

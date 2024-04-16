@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 20/03/2024 15:20 by Modelio Studio.
+ * This file was generated on 16/04/2024 16:38 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
@@ -40,13 +40,19 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("475bec4c-c31c-4be6-91d5-fb588f7bb93c")
 public class RelationshipConstraintType implements IMdaProxy {
-    @objid ("2596bf5c-b3ef-42c1-bd18-4dcb62381d8a")
+    @objid ("35442243-7f34-475b-bd5a-875011417e18")
     public static final String STEREOTYPE_NAME = "RelationshipConstraintType";
+
+    @objid ("bcd1678c-0e58-4551-b358-55b6c45d2f2a")
+    public static final String ANY_TAGTYPE = "any";
+
+    @objid ("873f5d5a-5ad2-4b73-86b2-e1d3889b3949")
+    public static final String CONSTRAINTTYPE_TAGTYPE = "constraintType";
 
     /**
      * The underlying {@link Class} represented by this proxy, never null.
      */
-    @objid ("f66861b7-54fe-4498-a6e5-5a04579b4eff")
+    @objid ("0b388879-0eba-4d1d-9529-b260b2c7f5b6")
     protected final Class elt;
 
     /**
@@ -56,7 +62,7 @@ public class RelationshipConstraintType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("07c4c057-9bfe-4940-93f7-185c8cd4af9f")
+    @objid ("b099e5c2-778e-4319-81b9-09dab0fd7b79")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (RelationshipConstraintType.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(RelationshipConstraintType.MdaTypes.STEREOTYPE_ELT));
     }
@@ -66,7 +72,7 @@ public class RelationshipConstraintType implements IMdaProxy {
      * 
      * @return a {@link RelationshipConstraintType} proxy on the created {@link Class}.
      */
-    @objid ("641adfb7-d525-424d-9b98-09417634ee0c")
+    @objid ("221fe666-be0e-436e-84d2-8e73d744c078")
     public static RelationshipConstraintType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(RelationshipConstraintType.MdaTypes.STEREOTYPE_ELT);
@@ -80,7 +86,7 @@ public class RelationshipConstraintType implements IMdaProxy {
      * @param obj a Class
      * @return a {@link RelationshipConstraintType} proxy or <i>null</i>.
      */
-    @objid ("87a429f8-0c4f-434e-beb7-f024f072b7d8")
+    @objid ("2023307e-d810-4b48-9e3c-7fa5393b0e87")
     public static RelationshipConstraintType instantiate(final Class obj) {
         return RelationshipConstraintType.canInstantiate(obj) ? new RelationshipConstraintType(obj) : null;
     }
@@ -93,7 +99,7 @@ public class RelationshipConstraintType implements IMdaProxy {
      * @return a {@link RelationshipConstraintType} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("ec53e0d7-2ebf-497a-9dd1-5b603faa77c7")
+    @objid ("b554365f-a380-4c07-876a-f27a0e632126")
     public static RelationshipConstraintType safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (RelationshipConstraintType.canInstantiate(obj))
         	return new RelationshipConstraintType(obj);
@@ -101,7 +107,7 @@ public class RelationshipConstraintType implements IMdaProxy {
         	throw new IllegalArgumentException("RelationshipConstraintType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("ba5b7f5a-14a6-41e0-9b96-cbc84ee799f0")
+    @objid ("bef43a62-d83c-408b-8160-909e3d752264")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -118,44 +124,98 @@ public class RelationshipConstraintType implements IMdaProxy {
     }
 
     /**
+     * Getter for string property 'any'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    @objid ("22c7163c-0fc0-4048-9fa5-1539a4ae774c")
+    public String getAny() {
+        return this.elt.getTagValue(RelationshipConstraintType.MdaTypes.ANY_TAGTYPE_ELT);
+    }
+
+    /**
+     * Getter for string property 'constraintType'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    @objid ("350c6be6-0b07-4fb3-ac2b-1c82130aaf81")
+    public String getConstraintType() {
+        return this.elt.getTagValue(RelationshipConstraintType.MdaTypes.CONSTRAINTTYPE_TAGTYPE_ELT);
+    }
+
+    /**
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("90881c3c-73e6-4d23-8d79-b3ad95bea6d4")
+    @objid ("4dab149d-b48e-4fae-ad3b-7a870fccb42f")
     public Class getElement() {
         return this.elt;
     }
 
-    @objid ("feb57e72-3c50-4c8e-9d65-bdb465610587")
+    @objid ("af46a0ca-1432-4d42-ba1f-a606f45feec8")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
         
     }
 
-    @objid ("7a2b7821-61d3-4b98-a5b3-f6918210b47e")
+    /**
+     * Setter for string property 'any'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    @objid ("e8321421-b77a-4f23-9ba2-dc7c55083c54")
+    public void setAny(final String value) {
+        this.elt.putTagValue(RelationshipConstraintType.MdaTypes.ANY_TAGTYPE_ELT, value);
+    }
+
+    /**
+     * Setter for string property 'constraintType'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    @objid ("2acaca5b-108f-46e1-b7e5-d56e844a1855")
+    public void setConstraintType(final String value) {
+        this.elt.putTagValue(RelationshipConstraintType.MdaTypes.CONSTRAINTTYPE_TAGTYPE_ELT, value);
+    }
+
+    @objid ("feb80953-0448-4e46-b7f7-97b2b1931b10")
     protected  RelationshipConstraintType(final Class elt) {
         this.elt = elt;
     }
 
     @objid ("c5387001-1241-4ba3-91f3-0d158f274576")
     public static final class MdaTypes {
-        @objid ("d51624d9-eaf9-438d-9a38-f2040a6d2520")
+        @objid ("b12fde84-d4e6-4185-879d-5cad71a51a61")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("c94483e2-c8a9-47f9-a233-f62f3f97ce38")
+        @objid ("85186f69-a09b-4b96-afdf-cc85cfa3e993")
+        public static TagType CONSTRAINTTYPE_TAGTYPE_ELT;
+
+        @objid ("14c74406-e584-4faf-a18b-17fa40e5683c")
+        public static TagType ANY_TAGTYPE_ELT;
+
+        @objid ("8ab8d3b3-bfa7-465e-b3c8-2548d7de8bff")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("241ae943-2bac-4985-bde5-33218e872c07")
+        @objid ("16985d1d-7d18-4d6d-adf7-f906fa380829")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("7b6d8eb6-1059-4af9-98b0-d4da91fe4988")
+        @objid ("5a798c8b-87e4-41a0-be48-fd26ef330060")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
             mRef = new MRef(Stereotype.MQNAME, "c0831a7b-bda2-433b-9120-b18e7e871edf", "RelationshipConstraintType");
             STEREOTYPE_ELT = (Stereotype) session.findByRef(mRef);
             if (STEREOTYPE_ELT==null) missingRefs.add(mRef);
+            
+            mRef = new MRef(TagType.MQNAME, "decdf774-2815-4cd8-98da-92a22715cdf5", "constraintType");
+            CONSTRAINTTYPE_TAGTYPE_ELT = (TagType) session.findByRef(mRef);
+            if (CONSTRAINTTYPE_TAGTYPE_ELT==null) missingRefs.add(mRef);
+            
+            mRef = new MRef(TagType.MQNAME, "af827af8-e116-452d-b802-f2de41fcf61d", "any");
+            ANY_TAGTYPE_ELT = (TagType) session.findByRef(mRef);
+            if (ANY_TAGTYPE_ELT==null) missingRefs.add(mRef);
             
             mRef = new MRef(Stereotype.MQNAME, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e", "MDAAssocDep");
             MDAASSOCDEP = (Stereotype) session.findByRef(mRef);

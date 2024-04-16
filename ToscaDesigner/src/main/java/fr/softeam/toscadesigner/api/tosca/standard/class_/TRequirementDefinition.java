@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 20/03/2024 15:20 by Modelio Studio.
+ * This file was generated on 16/04/2024 16:38 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
@@ -39,9 +39,15 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  * <br/><i>null</i></p>
  */
 @objid ("22af6c94-07de-4f9d-90d7-aaded7466934")
-public class TRequirementDefinition extends TExtensibleElements implements IMdaProxy {
-    @objid ("15e23d9a-613e-4917-8716-7d4e5f11a6e1")
+public class TRequirementDefinition implements IMdaProxy {
+    @objid ("be4288bc-643f-404f-b08e-c5d66faf3fe4")
     public static final String STEREOTYPE_NAME = "TRequirementDefinition";
+
+    /**
+     * The underlying {@link Class} represented by this proxy, never null.
+     */
+    @objid ("bf8cbad2-f79e-4b4d-b33b-b957a712bd98")
+    protected final Class elt;
 
     /**
      * Tells whether a {@link TRequirementDefinition proxy} can be instantiated from a {@link MObject} checking it is a {@link Class} stereotyped << TRequirementDefinition >>.
@@ -50,7 +56,7 @@ public class TRequirementDefinition extends TExtensibleElements implements IMdaP
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("51d55628-621e-4f8a-b6a2-05a21524a684")
+    @objid ("8a4d8764-254c-4b4e-bc59-1f9de8f04986")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (TRequirementDefinition.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(TRequirementDefinition.MdaTypes.STEREOTYPE_ELT));
     }
@@ -60,7 +66,7 @@ public class TRequirementDefinition extends TExtensibleElements implements IMdaP
      * 
      * @return a {@link TRequirementDefinition} proxy on the created {@link Class}.
      */
-    @objid ("2c292a95-5612-4ca4-9198-3786fd8aa52f")
+    @objid ("7986b924-fc66-49ba-803a-3bdea7df5b84")
     public static TRequirementDefinition create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(TRequirementDefinition.MdaTypes.STEREOTYPE_ELT);
@@ -74,7 +80,7 @@ public class TRequirementDefinition extends TExtensibleElements implements IMdaP
      * @param obj a Class
      * @return a {@link TRequirementDefinition} proxy or <i>null</i>.
      */
-    @objid ("3d432adc-d0ad-4841-ab58-0248f1d1d569")
+    @objid ("f9210bdf-9d09-4701-905d-c01431c46290")
     public static TRequirementDefinition instantiate(final Class obj) {
         return TRequirementDefinition.canInstantiate(obj) ? new TRequirementDefinition(obj) : null;
     }
@@ -87,7 +93,7 @@ public class TRequirementDefinition extends TExtensibleElements implements IMdaP
      * @return a {@link TRequirementDefinition} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("11735de9-1cdc-42a4-aee8-1da5d1ba8d0a")
+    @objid ("f31acded-85a3-432b-b959-f10584781c2e")
     public static TRequirementDefinition safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (TRequirementDefinition.canInstantiate(obj))
         	return new TRequirementDefinition(obj);
@@ -95,7 +101,7 @@ public class TRequirementDefinition extends TExtensibleElements implements IMdaP
         	throw new IllegalArgumentException("TRequirementDefinition: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("6ff384db-a59c-4230-b1c1-0f74463bab2a")
+    @objid ("5c2796a9-c624-416b-a841-ce5f4d066469")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -115,36 +121,35 @@ public class TRequirementDefinition extends TExtensibleElements implements IMdaP
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("21bf9b6b-d56d-4b35-b823-68343e1e6a39")
-    @Override
+    @objid ("9841ba51-5b92-41fa-884e-3ece402a802f")
     public Class getElement() {
-        return (Class)super.getElement();
+        return this.elt;
     }
 
-    @objid ("949fc19c-55e6-48ff-b6b9-8af1a3aea7fb")
+    @objid ("f6e644f1-5153-46c5-b0c0-f2d3200c1c79")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
         
     }
 
-    @objid ("24c7349b-e055-4590-a83b-fc20e6c08f0c")
+    @objid ("ee27b161-4311-4ae5-ab1d-8e2f51dd1b6a")
     protected  TRequirementDefinition(final Class elt) {
-        super(elt);
+        this.elt = elt;
     }
 
     @objid ("0da5504c-73b1-4222-9ab6-24b2ec0cd21a")
     public static final class MdaTypes {
-        @objid ("fc2ef67b-eb3c-4611-98c3-504a194c92c8")
+        @objid ("87b8700a-5930-472c-a3ef-11751d63d258")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("a628de10-7507-43f7-a74c-89ffe7262f6d")
+        @objid ("c4d18d33-fbf3-4331-b9e6-b5604062a267")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("3d0b3cf2-1cd4-4982-a0e1-47f88731be38")
+        @objid ("b9b4fb51-46f1-49c5-ae9d-07e6cfbbf544")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("99b317ff-345b-4ab1-9de1-fa7786c95f31")
+        @objid ("b7341650-a950-4857-b7b4-a892b942db4a")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

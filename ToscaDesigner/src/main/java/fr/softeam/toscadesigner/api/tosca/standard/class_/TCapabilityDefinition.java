@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 20/03/2024 15:20 by Modelio Studio.
+ * This file was generated on 16/04/2024 16:38 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
@@ -39,9 +39,15 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  * <br/><i>null</i></p>
  */
 @objid ("4a705232-04ac-44d1-9eac-6048652d5c1b")
-public class TCapabilityDefinition extends TExtensibleElements implements IMdaProxy {
-    @objid ("1d8ee70e-b79a-444b-b6cf-a69b0c2543ea")
+public class TCapabilityDefinition implements IMdaProxy {
+    @objid ("70c221fb-4c73-4647-8c7c-a7c90539454a")
     public static final String STEREOTYPE_NAME = "TCapabilityDefinition";
+
+    /**
+     * The underlying {@link Class} represented by this proxy, never null.
+     */
+    @objid ("619268c6-510e-42e2-92de-824cd589bebd")
+    protected final Class elt;
 
     /**
      * Tells whether a {@link TCapabilityDefinition proxy} can be instantiated from a {@link MObject} checking it is a {@link Class} stereotyped << TCapabilityDefinition >>.
@@ -50,7 +56,7 @@ public class TCapabilityDefinition extends TExtensibleElements implements IMdaPr
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("94eb15a8-9898-4475-95bb-bac3773a7d89")
+    @objid ("3fc3e823-067d-4f3f-9ec0-432231007803")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT));
     }
@@ -60,7 +66,7 @@ public class TCapabilityDefinition extends TExtensibleElements implements IMdaPr
      * 
      * @return a {@link TCapabilityDefinition} proxy on the created {@link Class}.
      */
-    @objid ("e940c3bf-7dd6-460d-9081-347602425f24")
+    @objid ("fa9ac27a-2b6f-4603-84be-de125dd300cb")
     public static TCapabilityDefinition create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT);
@@ -74,7 +80,7 @@ public class TCapabilityDefinition extends TExtensibleElements implements IMdaPr
      * @param obj a Class
      * @return a {@link TCapabilityDefinition} proxy or <i>null</i>.
      */
-    @objid ("4f5358b2-a9c1-4983-9a2a-211aaf382203")
+    @objid ("96fc7737-0d0b-44ca-971f-2638f2202963")
     public static TCapabilityDefinition instantiate(final Class obj) {
         return TCapabilityDefinition.canInstantiate(obj) ? new TCapabilityDefinition(obj) : null;
     }
@@ -87,7 +93,7 @@ public class TCapabilityDefinition extends TExtensibleElements implements IMdaPr
      * @return a {@link TCapabilityDefinition} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("52248819-536d-4662-bb8d-13448c50a2d7")
+    @objid ("29d25de3-3492-41b9-9815-8a8ec1bf082f")
     public static TCapabilityDefinition safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (TCapabilityDefinition.canInstantiate(obj))
         	return new TCapabilityDefinition(obj);
@@ -95,7 +101,7 @@ public class TCapabilityDefinition extends TExtensibleElements implements IMdaPr
         	throw new IllegalArgumentException("TCapabilityDefinition: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("ad271109-f5d5-40cc-a318-7bf4825c8ad6")
+    @objid ("f36af591-5832-4cb1-b2f9-cc21fb92048c")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -112,39 +118,83 @@ public class TCapabilityDefinition extends TExtensibleElements implements IMdaPr
     }
 
     /**
+     * Get the value of the 'constraints' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    @objid ("8eb7647f-3b90-4eb7-bf1d-3212e8f68cfc")
+    public ConstraintsType getConstraints() {
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+              if (d.isStereotyped(TCapabilityDefinition.MdaTypes.MDAASSOCDEP)
+                  && Objects.equals(d.getTagValue(TCapabilityDefinition.MdaTypes.MDAASSOCDEP_ROLE), "constraints")
+                  && ConstraintsType.canInstantiate(d.getDependsOn())) {
+                     return (ConstraintsType)ToscaDesignerProxyFactory.instantiate(d.getDependsOn(), ConstraintsType.MdaTypes.STEREOTYPE_ELT.getName());
+              }
+        }
+        return null;
+    }
+
+    /**
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("8b0a0187-6d01-4c64-b266-fbd9ac66f8e2")
-    @Override
+    @objid ("66109c14-4e6c-4b27-912d-8c7eb8e36025")
     public Class getElement() {
-        return (Class)super.getElement();
+        return this.elt;
     }
 
-    @objid ("ec816da6-756d-4afd-9204-aa04617c7dff")
+    @objid ("880ff551-da48-4a3a-8b18-ad15eb0c8148")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
         
     }
 
-    @objid ("a8c48e3d-2afa-4e46-aa26-31ef87ce276d")
+    /**
+     * Set the value of the 'constraints' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    @objid ("da5cec4a-7f80-4da9-b342-a64a8071ba4f")
+    public void setConstraints(final ConstraintsType obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getDependsOnDependency())
+          if (d.isStereotyped(TCapabilityDefinition.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(TCapabilityDefinition.MdaTypes.MDAASSOCDEP_ROLE), "constraints")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if(dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
+              dep = session.getModel().createDependency(this.elt, obj.getElement(), TCapabilityDefinition.MdaTypes.MDAASSOCDEP);
+              dep.setName("constraints");      dep.putTagValue(TCapabilityDefinition.MdaTypes.MDAASSOCDEP_ROLE, "constraints");
+          }
+          dep.setDependsOn(obj.getElement());
+        }
+        
+    }
+
+    @objid ("904cfc73-251b-4176-8bbb-433a8b5624d7")
     protected  TCapabilityDefinition(final Class elt) {
-        super(elt);
+        this.elt = elt;
     }
 
     @objid ("0fb5204c-539a-40c9-89d7-166a2071f2b9")
     public static final class MdaTypes {
-        @objid ("9f5b8858-c600-48b8-89d0-2990494875a9")
+        @objid ("53992e50-1c52-4740-b154-1782a5498ed7")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("4265fa1a-96d4-4614-8140-afe31d19cdfe")
+        @objid ("b92a2b10-b2cb-4098-a85c-e9eb9e96b0a2")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("7c2e2104-9541-4da7-ba7b-f0ebaaa38119")
+        @objid ("b2a67960-0efa-4560-b365-a62b077be68c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("5025ec05-4deb-44c2-8a49-99f1e1e753ff")
+        @objid ("a1950079-6a72-47e0-b93b-d9ba06bbec68")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
