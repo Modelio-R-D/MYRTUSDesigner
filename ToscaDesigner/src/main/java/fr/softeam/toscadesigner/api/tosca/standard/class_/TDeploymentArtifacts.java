@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 16/04/2024 16:38 by Modelio Studio.
+ * This file was generated on 16/04/2024 16:51 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
@@ -40,13 +40,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("c9873468-968f-409a-9025-fd0ece221e26")
 public class TDeploymentArtifacts implements IMdaProxy {
-    @objid ("80a27365-04f3-4e74-919d-e4de1071662f")
+    @objid ("88a1077c-0ec7-4e6e-ab6a-ee9a39073f8d")
     public static final String STEREOTYPE_NAME = "TDeploymentArtifacts";
 
     /**
      * The underlying {@link Class} represented by this proxy, never null.
      */
-    @objid ("611f45fc-7a1f-442e-a02c-58675d81bf1e")
+    @objid ("ef4aa737-a907-49db-806a-3d5344b30199")
     protected final Class elt;
 
     /**
@@ -56,7 +56,7 @@ public class TDeploymentArtifacts implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("51a01024-6b7c-4054-9ab8-4e62c519a882")
+    @objid ("d8450838-a9fd-430d-8a5d-52111f2e14b0")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (TDeploymentArtifacts.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(TDeploymentArtifacts.MdaTypes.STEREOTYPE_ELT));
     }
@@ -66,7 +66,7 @@ public class TDeploymentArtifacts implements IMdaProxy {
      * 
      * @return a {@link TDeploymentArtifacts} proxy on the created {@link Class}.
      */
-    @objid ("5ac3bdbd-5d7c-4c3a-a6dc-63d081655a5a")
+    @objid ("109ac091-f1be-4f06-9261-cfa4736bb78a")
     public static TDeploymentArtifacts create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(TDeploymentArtifacts.MdaTypes.STEREOTYPE_ELT);
@@ -80,7 +80,7 @@ public class TDeploymentArtifacts implements IMdaProxy {
      * @param obj a Class
      * @return a {@link TDeploymentArtifacts} proxy or <i>null</i>.
      */
-    @objid ("633d5f5e-165c-449b-b625-ed0df0a5ecd1")
+    @objid ("a15189b7-849b-4d1f-89c6-c3ba8834f42c")
     public static TDeploymentArtifacts instantiate(final Class obj) {
         return TDeploymentArtifacts.canInstantiate(obj) ? new TDeploymentArtifacts(obj) : null;
     }
@@ -93,7 +93,7 @@ public class TDeploymentArtifacts implements IMdaProxy {
      * @return a {@link TDeploymentArtifacts} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("fc46e54c-4f36-45fd-80ec-a272eda0827c")
+    @objid ("346ceb21-46cc-418f-8735-915224e5a0ce")
     public static TDeploymentArtifacts safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (TDeploymentArtifacts.canInstantiate(obj))
         	return new TDeploymentArtifacts(obj);
@@ -107,7 +107,7 @@ public class TDeploymentArtifacts implements IMdaProxy {
      * null
      * 
      */
-    @objid ("734d2ebb-51ab-4acf-be66-b6965db2642e")
+    @objid ("b4033bdc-74ea-4623-88d3-c37f4b7e90e0")
     public void addDeploymentArtifact(final TDeploymentArtifact obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -117,7 +117,7 @@ public class TDeploymentArtifacts implements IMdaProxy {
         }
     }
 
-    @objid ("b5dc0729-d3ce-41f6-9794-99b9cea9867b")
+    @objid ("fc4e1b68-5501-40f3-8bdd-7895cb0b15bd")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -139,7 +139,7 @@ public class TDeploymentArtifacts implements IMdaProxy {
      * null
      * 
      */
-    @objid ("09afbc46-a6b8-4e58-8036-69639b7a08ff")
+    @objid ("cc9ce180-cb81-4866-b90a-7cae5fe6c994")
     public List<TDeploymentArtifact> getDeploymentArtifact() {
         List<TDeploymentArtifact> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -155,12 +155,12 @@ public class TDeploymentArtifacts implements IMdaProxy {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("278576b7-0afb-47b4-9f47-60b7dc264fd5")
+    @objid ("acb2b8a8-3c8d-4f22-9606-25fabc99abba")
     public Class getElement() {
         return this.elt;
     }
 
-    @objid ("3d38b26c-3e10-4785-af88-7dbe77dc314e")
+    @objid ("bdc2c1cb-125d-42f9-9fca-24afa9c1f910")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -173,7 +173,7 @@ public class TDeploymentArtifacts implements IMdaProxy {
      * null
      * 
      */
-    @objid ("ca514f5a-d92a-4e52-973f-b1f3b28e87d3")
+    @objid ("d06f1f16-5dc1-427e-b17b-2ce8aad0ebc7")
     public boolean removeDeploymentArtifact(final TDeploymentArtifact obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -188,23 +188,23 @@ public class TDeploymentArtifacts implements IMdaProxy {
         
     }
 
-    @objid ("a7797cf1-6af8-4cc7-8dfb-d071b627d337")
+    @objid ("a1c356b0-e91a-439e-b6fb-d4a6c3ede634")
     protected  TDeploymentArtifacts(final Class elt) {
         this.elt = elt;
     }
 
     @objid ("77f80eb6-7685-47e0-a498-ee550bc40c2b")
     public static final class MdaTypes {
-        @objid ("0f52cda4-a13a-4e1f-a101-efec0bdc9dd1")
+        @objid ("da087be1-7aaa-49c2-9977-a2631fa20756")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("5a492b03-5bf3-452f-ab2f-592fc9808afa")
+        @objid ("de8ee082-d29b-401d-a1ec-11e98ea5ed2a")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("405a85f4-e1b8-4491-ba63-99ea639831ff")
+        @objid ("eb18c150-2826-43a3-b4e7-af2b46b985b7")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("86076a20-c7d7-4dfd-baf0-b5d2428b4241")
+        @objid ("2ecc9c38-1a24-4eeb-934d-795067becdcd")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

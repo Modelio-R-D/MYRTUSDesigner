@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 16/04/2024 16:38 by Modelio Studio.
+ * This file was generated on 16/04/2024 16:51 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.association;
 
@@ -37,56 +37,56 @@ import org.modelio.vcore.smkernel.mapi.MObject;
  */
 @objid ("435b1c2d-3b24-4667-a856-17bfac15539e")
 public class TRelationshipTemplateExpert implements IMdaExpert {
-    @objid ("2826b852-3b9e-4cc4-b459-fcc2dbda6554")
+    @objid ("04e7a24b-7ffd-4251-b97d-8a596af046f8")
     @Override
     public boolean canSource(final Stereotype linkStereotype, final MClass linkMetaclass, final MClass fromMetaclass) {
         MMetamodel metamodel = linkMetaclass.getMetamodel();
         return (fromMetaclass.hasBase(metamodel.getMClass("Infrastructure.ModelElement")));
     }
 
-    @objid ("296c150b-a208-4193-884d-f89fbfea650e")
+    @objid ("6b8fba79-fb36-4df6-9f61-db16ea49b80c")
     @Override
     public boolean canSource(final Stereotype linkStereotype, final MObject linkElement, final MObject fromElement) {
         MMetamodel metamodel = linkElement.getMClass().getMetamodel();
         return (fromElement.getMClass().hasBase(metamodel.getMClass("Infrastructure.ModelElement")));
     }
 
-    @objid ("c994953a-b3c5-47a9-8e8b-009b75a154ff")
+    @objid ("dbcc18b8-0ab1-4f43-b97a-1725fe5b99df")
     @Override
     public boolean canSource(final ElementScope linkScope, final MObject fromElement) {
         MMetamodel metamodel = linkScope.getMetaclass().getMetamodel();
         return (fromElement.getMClass().hasBase(metamodel.getMClass("Infrastructure.ModelElement")));
     }
 
-    @objid ("fa0d8f22-420d-43d6-a16a-ea1990f1b849")
+    @objid ("be29e9d3-e0f8-4571-9ef1-1d8f62210ea0")
     @Override
     public boolean canTarget(final Stereotype linkStereotype, final MClass linkMetaclass, final MClass toMetaclass) {
         MMetamodel metamodel = linkMetaclass.getMetamodel();
         return (toMetaclass.hasBase(metamodel.getMClass("Infrastructure.ModelElement")));
     }
 
-    @objid ("f0f599c3-92e8-477a-988d-bb784e5d0bb6")
+    @objid ("53181c68-282a-4e06-b74e-9b6d8a5f9a03")
     @Override
     public boolean canTarget(final Stereotype linkStereotype, final MObject linkElement, final MObject toElement) {
         MMetamodel metamodel = linkElement.getMClass().getMetamodel();
         return (toElement.getMClass().hasBase(metamodel.getMClass("Infrastructure.ModelElement")));
     }
 
-    @objid ("cd9900a6-fef2-4079-aa5a-6ec9b21a5d7f")
+    @objid ("6fe58790-53c8-442d-80c7-c4eb151a426a")
     @Override
     public boolean canLink(final Stereotype linkStereotype, final MClass linkMetaclass, final MClass fromMetaclass, final MClass toMetaclass) {
         MMetamodel metamodel = linkMetaclass.getMetamodel();
         return ((fromMetaclass.hasBase(metamodel.getMClass("Infrastructure.ModelElement"))) && (toMetaclass.hasBase(metamodel.getMClass("Infrastructure.ModelElement"))));
     }
 
-    @objid ("f8e3c5cb-8f1b-493a-b5ef-79fb5411b740")
+    @objid ("8e71ed32-3fa0-426c-89cc-691433e09f57")
     @Override
     public boolean canLink(final Stereotype linkStereotype, final MClass linkMetaclass, final MObject fromElement, final MObject toElement) {
         MMetamodel metamodel = linkMetaclass.getMetamodel();
         return ((fromElement.getMClass().hasBase(metamodel.getMClass("Infrastructure.ModelElement"))) && (toElement.getMClass().hasBase(metamodel.getMClass("Infrastructure.ModelElement"))));
     }
 
-    @objid ("47ba584c-0418-41a3-8c55-bc6508f35ca4")
+    @objid ("b3f530f1-9cf4-4b44-91db-594710846828")
     @Override
     public Collection<MClass> getPossibleSourceMetaclasses(final Stereotype linkStereotype, final MClass targetMetaclass) {
         MMetamodel metamodel = linkStereotype.getMClass().getMetamodel();
@@ -99,7 +99,7 @@ public class TRelationshipTemplateExpert implements IMdaExpert {
         return metaclasses;
     }
 
-    @objid ("41380939-a580-4208-bb82-cc4d71442218")
+    @objid ("0a2f8713-257c-4636-8e7a-88a339b52243")
     @Override
     public Collection<MClass> getPossibleTargetMetaclasses(final Stereotype linkStereotype, final MClass sourceMetaclass) {
         MMetamodel metamodel = linkStereotype.getMClass().getMetamodel();
@@ -112,7 +112,7 @@ public class TRelationshipTemplateExpert implements IMdaExpert {
         return metaclasses;
     }
 
-    @objid ("0f55f497-cea0-4997-827c-fe3f98e8aaed")
+    @objid ("7f4c5cee-e746-4b29-b4e4-99b5417f8425")
     @Override
     public boolean isMultiple(final Stereotype linkStereotype) {
         return false;

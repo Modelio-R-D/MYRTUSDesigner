@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 16/04/2024 16:38 by Modelio Studio.
+ * This file was generated on 16/04/2024 16:51 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.datatype;
 
@@ -40,13 +40,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("b70845c6-0284-4f00-9e45-cb8e470c1c36")
 public class MaxInstancesType implements IMdaProxy {
-    @objid ("123deebb-0676-49a8-804c-fe51df71ae58")
+    @objid ("d094d8f7-a91f-41d5-b29a-1c86410e412e")
     public static final String STEREOTYPE_NAME = "MaxInstancesType";
 
     /**
      * The underlying {@link DataType} represented by this proxy, never null.
      */
-    @objid ("9e48d4a4-d5fc-450b-aa80-7171cbb465f3")
+    @objid ("01fb479e-b4b0-4d0b-9a6d-0bb33d91f574")
     protected final DataType elt;
 
     /**
@@ -56,7 +56,7 @@ public class MaxInstancesType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("1f183c62-4802-4196-85d9-14b970e7a3b3")
+    @objid ("6a65bcbb-17fe-4f4f-99c6-edde81ed979d")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof DataType) && (MaxInstancesType.MdaTypes.STEREOTYPE_ELT!=null) && ((DataType) elt).isStereotyped(MaxInstancesType.MdaTypes.STEREOTYPE_ELT));
     }
@@ -66,7 +66,7 @@ public class MaxInstancesType implements IMdaProxy {
      * 
      * @return a {@link MaxInstancesType} proxy on the created {@link DataType}.
      */
-    @objid ("5846cd1c-16ff-4edc-8630-6b06dc44341f")
+    @objid ("ee7a004f-d567-4e3a-9e28-843d3653c70c")
     public static MaxInstancesType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.DataType");
         e.getExtension().add(MaxInstancesType.MdaTypes.STEREOTYPE_ELT);
@@ -80,7 +80,7 @@ public class MaxInstancesType implements IMdaProxy {
      * @param obj a DataType
      * @return a {@link MaxInstancesType} proxy or <i>null</i>.
      */
-    @objid ("accaab32-d71a-453f-8ec9-85e9e53ec0df")
+    @objid ("a3ac853f-c35f-4924-b663-683cc4393616")
     public static MaxInstancesType instantiate(final DataType obj) {
         return MaxInstancesType.canInstantiate(obj) ? new MaxInstancesType(obj) : null;
     }
@@ -93,7 +93,7 @@ public class MaxInstancesType implements IMdaProxy {
      * @return a {@link MaxInstancesType} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("dc615020-3693-429b-90e3-196c3c848007")
+    @objid ("8acd7775-a7f7-4320-ad7f-286883f425a8")
     public static MaxInstancesType safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (MaxInstancesType.canInstantiate(obj))
         	return new MaxInstancesType(obj);
@@ -101,7 +101,7 @@ public class MaxInstancesType implements IMdaProxy {
         	throw new IllegalArgumentException("MaxInstancesType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("838e6a52-034f-4b48-b9b0-5e9905e937df")
+    @objid ("712dc37e-0564-4f7c-a001-c2d8804e5329")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -121,35 +121,35 @@ public class MaxInstancesType implements IMdaProxy {
      * Get the underlying {@link DataType}. 
      * @return the DataType represented by this proxy, never null.
      */
-    @objid ("49a09d33-80af-4bfd-89ee-8224102d26cf")
+    @objid ("6f9534cd-dcad-45ce-bd4b-b4d0f348276a")
     public DataType getElement() {
         return this.elt;
     }
 
-    @objid ("2dc1022e-4e99-4b6a-9351-700dcb7b215f")
+    @objid ("caf31a2f-353d-4af8-a9eb-e64e3f88db4b")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
         
     }
 
-    @objid ("4fd0f6c7-b982-4218-aa8f-2c8d33d8b8b1")
+    @objid ("5e36b203-96e7-446d-8521-3b66de26e936")
     protected  MaxInstancesType(final DataType elt) {
         this.elt = elt;
     }
 
     @objid ("da92b2d2-8b0d-40ac-b415-a712c1859213")
     public static final class MdaTypes {
-        @objid ("09743ce2-3cdc-434a-b590-4066e67d2d18")
+        @objid ("09c94012-d911-456d-b4ae-f7dfaca53081")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("bb7fcf55-ca51-4f32-bd7f-a930ab8a2701")
+        @objid ("cc93e7df-ed29-4110-8efb-dec1722d4d6d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("2197f322-1c99-46bb-a43c-460236739ca1")
+        @objid ("e603c4e0-1119-48e9-9132-be2d186a0144")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("76baecac-2e03-4fa9-91aa-26baf9bc9625")
+        @objid ("11f4fee8-20b1-43bd-8735-251d0720a0cf")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
