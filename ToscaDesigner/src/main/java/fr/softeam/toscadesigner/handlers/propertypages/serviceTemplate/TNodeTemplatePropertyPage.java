@@ -2,8 +2,6 @@ package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 

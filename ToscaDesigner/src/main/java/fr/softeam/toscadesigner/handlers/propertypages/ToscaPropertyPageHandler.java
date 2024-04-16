@@ -5,6 +5,7 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.module.IModule;
 import org.modelio.api.module.propertiesPage.AbstractModulePropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import fr.softeam.toscadesigner.handlers.propertypages.IPropertyContent;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
