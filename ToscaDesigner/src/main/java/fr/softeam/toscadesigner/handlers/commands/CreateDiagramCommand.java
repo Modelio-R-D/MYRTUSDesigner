@@ -4,11 +4,13 @@ import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.module.IModule;
 import org.modelio.api.module.command.standard.DiagramCreationStandardHandler;
+import org.modelio.api.module.context.IModuleContext;
+import org.modelio.metamodel.diagrams.AbstractDiagram;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("3f96b675-50dd-40ba-9977-16d6cf5453a6")
+@objid ("145a0024-c8e4-4cbe-8bc2-fd00593017b9")
 public class CreateDiagramCommand extends DiagramCreationStandardHandler {
-    @objid ("d2ee27d7-1314-4009-af61-a544abb14a7d")
+    @objid ("b4180092-eef9-4df1-a650-fe3a24fc3de7")
     @Override
     public boolean accept(final List<MObject> selectedElements, final IModule module) {
         // Generated call to the super method will check the scope conditions defined in Studio.
@@ -20,7 +22,7 @@ public class CreateDiagramCommand extends DiagramCreationStandardHandler {
         return true;
     }
 
-    @objid ("59754ec2-6f67-4186-8ef6-a6ab7d4e44d8")
+    @objid ("81b7693c-92ff-4d2e-bde3-00af3825b57c")
     @Override
     protected void postConfigureElement(final MObject newDiagram, final IModule module) {
         // This method is a hook called once the element is created and configured and before the transaction is committed.
@@ -29,8 +31,16 @@ public class CreateDiagramCommand extends DiagramCreationStandardHandler {
         
         // Call the super method to apply the diagram style and open the diagram if asked for.
         super.postConfigureElement(newDiagram, module);
+        if (newDiagram instanceof AbstractDiagram) {
+            AbstractDiagram diagram = (AbstractDiagram) newDiagram;
         
+            IModuleContext moduleContext = module.getModuleContext();
+            //moduleContext.getModelingSession().getModel().getDefaultNameService().setDefaultName(diagram, diagram.getOrigin().getName() + " diagram");
+            moduleContext.getModelioServices().getEditionService().openEditor(diagram);
+        }
         // TODO Add additional behavior below
+        
+        
     }
 
 }
