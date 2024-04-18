@@ -6,9 +6,9 @@ import org.modelio.api.module.IModule;
 import org.modelio.api.module.command.standard.ElementCreationStandardHandler;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("1ddcf264-d24e-4011-a808-e5d0ff2befc8")
+@objid ("749e5c6f-d3dd-4eea-a4e2-1d0eceb3e48a")
 public class CreateToscaModelCommand extends ElementCreationStandardHandler {
-    @objid ("e5b1fbd2-de8a-45a0-bd9d-a2dc94b628df")
+    @objid ("7f47fbf0-d558-4939-920d-0f5b8b0f0fb1")
     @Override
     public boolean accept(final List<MObject> selectedElements, final IModule module) {
         // Generated call to the super method will check the scope conditions defined in Studio.
@@ -20,7 +20,7 @@ public class CreateToscaModelCommand extends ElementCreationStandardHandler {
         return true;
     }
 
-    @objid ("e1a45b8b-3a1b-4d02-95d8-7fb8cf68cc4b")
+    @objid ("daf71868-77d6-408b-9813-2eed53854fe7")
     @Override
     protected void postConfigureElement(final MObject newElement, final IModule module) {
         // This method is a hook called once the element is created and configured and before the transaction is committed.
@@ -31,7 +31,6 @@ public class CreateToscaModelCommand extends ElementCreationStandardHandler {
         super.postConfigureElement(newElement, module);
         
         // TODO Add additional behavior below
-        
     }
 
 }

@@ -38,15 +38,16 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-@objid ("1b9702cd-501a-4ee5-91de-974ad67bfec1")
+@objid ("67db9af4-1f0d-4c91-a252-a98ea367076f")
 public class ToscaModelDiagram implements IMdaProxy {
-    @objid ("d7084897-f950-4ed6-8437-592183f8d102")
+    @objid ("ea66c2d7-0b12-4361-b0c5-331be2e0f418")
     public static final String STEREOTYPE_NAME = "ToscaModelDiagram";
 
     /**
      * The underlying {@link StaticDiagram} represented by this proxy, never null.
+     * 
      */
-    @objid ("f3537f14-05a1-4cfe-adc2-23c5cd69ef18")
+    @objid ("6d0ac266-77c2-4436-86ed-99ff9d8be7cb")
     protected final StaticDiagram elt;
 
     /**
@@ -56,17 +57,16 @@ public class ToscaModelDiagram implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("34bed851-f095-4e0d-947e-b1611f8597da")
+    @objid ("80369b92-bc86-4757-9ef4-e59cbd9323d6")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof StaticDiagram) && (ToscaModelDiagram.MdaTypes.STEREOTYPE_ELT!=null) && ((StaticDiagram) elt).isStereotyped(ToscaModelDiagram.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link StaticDiagram} stereotyped << ToscaModelDiagram >> then instantiate a {@link ToscaModelDiagram} proxy.
-     * 
      * @return a {@link ToscaModelDiagram} proxy on the created {@link StaticDiagram}.
      */
-    @objid ("e9a791d3-1711-4d78-a705-ccf31d4abef7")
+    @objid ("592a6e6b-fd30-422b-af07-7633359c440d")
     public static ToscaModelDiagram create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.StaticDiagram");
         e.getExtension().add(ToscaModelDiagram.MdaTypes.STEREOTYPE_ELT);
@@ -80,7 +80,7 @@ public class ToscaModelDiagram implements IMdaProxy {
      * @param obj a StaticDiagram
      * @return a {@link ToscaModelDiagram} proxy or <i>null</i>.
      */
-    @objid ("dfd053a6-5884-4f20-b2f9-e5f261404f24")
+    @objid ("ec1325ca-c278-4388-9b0c-81522f150539")
     public static ToscaModelDiagram instantiate(final StaticDiagram obj) {
         return ToscaModelDiagram.canInstantiate(obj) ? new ToscaModelDiagram(obj) : null;
     }
@@ -89,19 +89,19 @@ public class ToscaModelDiagram implements IMdaProxy {
      * Tries to instantiate a {@link ToscaModelDiagram} proxy from a {@link StaticDiagram} stereotyped << ToscaModelDiagram >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link StaticDiagram}
      * @return a {@link ToscaModelDiagram} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("a5e64c9a-d218-4e87-bacd-52fbc399927d")
+    @objid ("6b9a0d39-2860-4248-9f78-b62db32c48d5")
     public static ToscaModelDiagram safeInstantiate(final StaticDiagram obj) throws IllegalArgumentException {
         if (ToscaModelDiagram.canInstantiate(obj))
-        	return new ToscaModelDiagram(obj);
+            return new ToscaModelDiagram(obj);
         else
-        	throw new IllegalArgumentException("ToscaModelDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ToscaModelDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("9f9b36f3-9c32-41f2-8e34-020c7898c2a2")
+    @objid ("511e35b1-552e-4ba5-9c1e-3f57558d1e4e")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -118,38 +118,42 @@ public class ToscaModelDiagram implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link StaticDiagram}. 
+     * Get the underlying {@link StaticDiagram}.
      * @return the StaticDiagram represented by this proxy, never null.
      */
-    @objid ("3070ef61-068a-4209-b70b-d0dc0aabb02f")
+    @objid ("7eed9817-b693-4557-8013-7661a6a086f0")
     public StaticDiagram getElement() {
         return this.elt;
     }
 
-    @objid ("ea50f5a7-48b6-4fb3-9dfa-aae96f1e52f3")
+    @objid ("52a6a861-7a5a-459b-b342-fdfb33fc1ccb")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-        
     }
 
-    @objid ("3ff37576-5190-47f0-984e-1bf8616700f6")
+    @objid ("947a6050-9d23-4ef1-a64c-16b90233df68")
     protected  ToscaModelDiagram(final StaticDiagram elt) {
         this.elt = elt;
     }
 
-    @objid ("cea04f35-0aca-4061-9934-20437f943c1d")
+    @objid ("1bd6b089-f976-43ec-a15a-ff90ec3dfb7b")
+    public void setDefaultName(String string) {
+        // TODO Auto-generated method stub
+    }
+
+    @objid ("9828edf1-8a5a-4434-8117-fcd1a02dce67")
     public static final class MdaTypes {
-        @objid ("50543da6-ae94-48df-a893-8bb604bcdea8")
+        @objid ("3f9ad9b7-2db6-4330-a8d1-04a48e2230b3")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("d7f0a5b5-c384-4b73-9cbd-73f1bb1d123d")
+        @objid ("487628ea-3298-4250-8e84-6fc393f982ee")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("4b4ee1ef-a085-4f93-b88e-2d8bf97c3ad8")
+        @objid ("85e26258-8989-4926-b70b-6cb6bf76d62e")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("83bbc285-146e-45e9-9d89-a1aa8cb8d9e5")
+        @objid ("dba4689b-4a52-4c99-bd26-db4ec719cf68")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -166,14 +170,8 @@ public class ToscaModelDiagram implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
-            
         }
 
     }
-
-	public void setDefaultName(String string) {
-		// TODO Auto-generated method stub
-		
-	}
 
 }

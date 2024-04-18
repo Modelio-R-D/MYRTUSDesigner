@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 16/04/2024 16:51 by Modelio Studio.
+ * This file was generated on 18/04/2024 10:28 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api;
 
@@ -68,16 +68,16 @@ import org.modelio.metamodel.visitors.IInfrastructureVisitor;
  */
 @objid ("365cd17d-2d04-4020-839d-7e7bdefdf43f")
 public class ToscaDesignerProxyFactory {
-    @objid ("260e90b3-f49d-4408-8b2e-6669e99caf61")
+    @objid ("b29f8c73-e52c-4c4d-b38b-c9e3511160ff")
     private static final String ASSETNAME = "ToscaDesigner";
 
-    @objid ("fcd99806-1078-4d04-abea-5c4311d890c9")
+    @objid ("36d96e9c-c167-4e85-ac47-872daac584f4")
     private static final InstantiateVisitor instantiateVisitor = new InstantiateVisitor();
 
     /**
      * @param session The modeling session this factory is operating in.
      */
-    @objid ("ce525fcb-9c53-417b-8dbf-f43bc62ee2ef")
+    @objid ("8ff2d2f9-0629-420e-8a75-1e852839db51")
     public static final void initialize(final IModelingSession session) throws MdaProxyException {
         fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilitiesType.MdaTypes.init(session);
         fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilityDefinitionsType.MdaTypes.init(session);
@@ -116,18 +116,16 @@ public class ToscaDesignerProxyFactory {
         fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.CloudServiceArchiveDiagram.MdaTypes.init(session);
         fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.ServiceTemplateDiagram.MdaTypes.init(session);
         fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.TopologyTemplateDiagram.MdaTypes.init(session);
-        
     }
 
     /**
      * Instantiates the right proxy class the given element.
      * <br/>The model element must be stereotyped by a 'ToscaDesigner' module stereotype.
      * <br/>In the other case the method will return <i>null</i>.
-     * 
      * @param e A model element
      * @return the right proxy or <i>null</i>.
      */
-    @objid ("2a7d65cc-d0dc-4b48-8344-1558eda48e02")
+    @objid ("7fd76c98-42ef-4240-90c1-ba50640ffe53")
     public static final Object instantiate(final ModelElement e) {
         for (Stereotype s : e.getExtension()) {
               ModuleComponent module = s.getModule();
@@ -142,134 +140,127 @@ public class ToscaDesignerProxyFactory {
      * Instantiates the right proxy class the given element with a stereotype name.
      * The stereotype must be one of the 'ToscaDesigner' module stereotypes.
      * In the other case the method will return <i>null</i>.
-     * 
      * @param e A model element.
      * @param stName A stereotype name.
      * @return the right proxy or <i>null</i>.
      */
-    @objid ("0e0d409b-7e22-4f8c-b4ce-9f129d9c6d8c")
+    @objid ("087a2fe9-9ca8-4bc2-b8d4-a824e3f543f2")
     public static final Object instantiate(final Element e, final String stName) {
         instantiateVisitor.setStereotype(stName);
         return e.accept(instantiateVisitor);
     }
 
-    @objid ("d783403b-cb7b-4ec9-a2b9-c7a6b3a98432")
+    @objid ("1d18b186-91d3-44f5-ab81-e4c9ca13ae4c")
     private static class InstantiateVisitor implements IDefaultModelVisitor, IDefaultInfrastructureVisitor {
-        @objid ("2647788d-e7a5-4fca-9a62-18dd28236d31")
+        @objid ("9cbc7480-01df-4b36-b875-7e1ddeb2bb78")
         private String stName;
 
-        @objid ("4a787eff-88db-4d1d-9889-2f80a43841a4")
+        @objid ("97a8a0c7-10eb-4665-aa02-f626f984c906")
         public final void setStereotype(final String stName) {
             this.stName = stName;
         }
 
-        @objid ("b2ef7985-3de2-4db7-9143-4c8d2b9e1480")
+        @objid ("8427d151-945b-4026-91d4-1074a522eb44")
         @Override
         public final Object visitAssociation(Association obj) {
             switch (this.stName) {
-            	case fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate.instantiate(obj);
-            	default:
-            		break;
+                case fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate.instantiate(obj);
+                default:
+                    break;
             }
             
             return IDefaultModelVisitor.super.visitAssociation(obj);
-            
         }
 
-        @objid ("efbc9f0c-0441-45ce-8140-964f60828654")
+        @objid ("e89532f7-24a1-4e30-a081-c1b48493475f")
         @Override
         public final Object visitPackage(Package obj) {
             switch (this.stName) {
-            	case fr.softeam.toscadesigner.api.tosca.standard.package_.ToscaModel.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.package_.ToscaModel.instantiate(obj);
-            	default:
-            		break;
+                case fr.softeam.toscadesigner.api.tosca.standard.package_.ToscaModel.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.package_.ToscaModel.instantiate(obj);
+                default:
+                    break;
             }
             
             return IDefaultModelVisitor.super.visitPackage(obj);
-            
         }
 
-        @objid ("140b8808-acfd-41a2-88a1-855cd83d94cc")
+        @objid ("5e0f96bd-7cf2-4286-9fb4-a51de290fd58")
         @Override
         public final Object visitDataType(DataType obj) {
             switch (this.stName) {
-            	case fr.softeam.toscadesigner.api.tosca.standard.datatype.MaxInstancesType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.datatype.MaxInstancesType.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.datatype.SourceElementType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.datatype.SourceElementType.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.datatype.TargetElementType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.datatype.TargetElementType.instantiate(obj);
-            	default:
-            		break;
+                case fr.softeam.toscadesigner.api.tosca.standard.datatype.MaxInstancesType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.datatype.MaxInstancesType.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.datatype.SourceElementType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.datatype.SourceElementType.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.datatype.TargetElementType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.datatype.TargetElementType.instantiate(obj);
+                default:
+                    break;
             }
             
             return IDefaultModelVisitor.super.visitDataType(obj);
-            
         }
 
-        @objid ("d4ac1454-adf9-4239-8fb1-06048f10eaf0")
+        @objid ("36d774a6-9b5a-4ef7-a58f-0d78cf5fba78")
         @Override
         public final Object visitClass(Class obj) {
             switch (this.stName) {
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilitiesType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilitiesType.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilityDefinitionsType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilityDefinitionsType.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.ConstraintsType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.ConstraintsType.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.InstanceStateType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.InstanceStateType.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.InterfacesType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.InterfacesType.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.PoliciesType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.PoliciesType.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.RelationshipConstraintType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.RelationshipConstraintType.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.RelationshipConstraintsType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.RelationshipConstraintsType.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.RelationshipOperationType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.RelationshipOperationType.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementDefinitionsType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementDefinitionsType.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementsType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementsType.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.TCapability.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TCapability.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifact.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifact.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifacts.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifacts.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.TDocumentation.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TDocumentation.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.TPlans.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TPlans.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicy.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicy.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.TServiceTemplate.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TServiceTemplate.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyElementInstanceStates.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyElementInstanceStates.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.class_.TPlan.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TPlan.instantiate(obj);
-            	default:
-            		break;
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilitiesType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilitiesType.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilityDefinitionsType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilityDefinitionsType.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.ConstraintsType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.ConstraintsType.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.InstanceStateType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.InstanceStateType.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.InterfacesType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.InterfacesType.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.PoliciesType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.PoliciesType.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.RelationshipConstraintType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.RelationshipConstraintType.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.RelationshipConstraintsType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.RelationshipConstraintsType.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.RelationshipOperationType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.RelationshipOperationType.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementDefinitionsType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementDefinitionsType.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementsType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementsType.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.TCapability.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TCapability.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifact.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifact.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifacts.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifacts.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.TDocumentation.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TDocumentation.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.TPlans.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TPlans.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicy.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicy.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.TServiceTemplate.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TServiceTemplate.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyElementInstanceStates.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyElementInstanceStates.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.standard.class_.TPlan.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TPlan.instantiate(obj);
+                default:
+                    break;
             }
             
             return IDefaultModelVisitor.super.visitClass(obj);
-            
         }
 
-        @objid ("eac8e005-aafc-4e96-a7e3-a74729543997")
+        @objid ("97e17b65-b624-4691-8f0b-73f82f590257")
         @Override
         public final Object visitStaticDiagram(StaticDiagram obj) {
             switch (this.stName) {
-            	case fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.CloudServiceArchiveDiagram.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.CloudServiceArchiveDiagram.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.ServiceTemplateDiagram.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.ServiceTemplateDiagram.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.TopologyTemplateDiagram.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.TopologyTemplateDiagram.instantiate(obj);
-            	default:
-            		break;
+                case fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.CloudServiceArchiveDiagram.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.CloudServiceArchiveDiagram.instantiate(obj);
+                case fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.ServiceTemplateDiagram.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.ServiceTemplateDiagram.instantiate(obj);
+                case fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.TopologyTemplateDiagram.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.TopologyTemplateDiagram.instantiate(obj);
+                default:
+                    break;
             }
             
             return IDefaultModelVisitor.super.visitStaticDiagram(obj);
-            
         }
 
-        @objid ("1526f54c-fdc2-4a7e-abad-14824af2b838")
+        @objid ("586ac0e5-5914-44d2-8f0a-fafb57f1e23b")
         @Override
         public final Object visitModelElement(ModelElement obj) {
             switch (this.stName) {
-            	case fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TEntityTemplate.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TEntityTemplate.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TExtensibleElements.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TExtensibleElements.instantiate(obj);
-            	default:
-            		break;
+                case fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TEntityTemplate.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TEntityTemplate.instantiate(obj);
+                case fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TExtensibleElements.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TExtensibleElements.instantiate(obj);
+                default:
+                    break;
             }
             
             return IDefaultInfrastructureVisitor.super.visitModelElement(obj);
-            
         }
 
         /**
@@ -277,7 +268,7 @@ public class ToscaDesignerProxyFactory {
          * <p>If null is returned the caller will return null.
          * @return the {@link IInfrastructureVisitor} visitor or <i>null</i>.
          */
-        @objid ("0c0b8814-f3f7-4f9c-b5f6-06b20d241997")
+        @objid ("42d74501-6571-4fea-b4ae-c5a10a8f12f6")
         @Override
         public IInfrastructureVisitor getInfrastructureVisitor() {
             return this;

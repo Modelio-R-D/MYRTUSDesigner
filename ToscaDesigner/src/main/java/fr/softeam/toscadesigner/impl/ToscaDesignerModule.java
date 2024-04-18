@@ -90,8 +90,7 @@ public class ToscaDesignerModule extends AbstractJavaModule {
     @objid ("a46b8dae-28ae-4eba-aaed-6b65d095530f")
     private IMdaExpert getGeneratedMdaExpert(final Stereotype st) {
         switch (st.getUuid()) {
-        	case "7f01001b-511e-4017-b6b4-729f68c85911": return new fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplateExpert();
-        	default: return null;
+            default: return null;
         }
     }
 
