@@ -38,7 +38,8 @@ public abstract class CreateServiceTemplateDigramCommand extends CreateSubModelC
             subModel.getElement().getProduct().add(diagram.getElement());
         
             subModel.setDefaultName("Service Template");
-            diagram.setDefaultName(subModel.getName() + " diagram");            this.openDiagram(diagram.getElement());
+            diagram.setDefaultName(subModel.getName() + " diagram");            
+            this.openDiagram(diagram.getElement());
         
             transaction.commit();
             

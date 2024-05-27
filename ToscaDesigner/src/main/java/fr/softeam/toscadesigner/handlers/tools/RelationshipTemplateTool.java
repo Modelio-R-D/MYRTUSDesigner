@@ -1,9 +1,6 @@
 package fr.softeam.toscadesigner.handlers.tools;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
-//import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipTemplate;
-import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.widgets.Display;
 import org.modelio.api.modelio.diagram.IDiagramGraphic;
@@ -12,58 +9,27 @@ import org.modelio.api.modelio.diagram.IDiagramLink.LinkRouterKind;
 import org.modelio.api.modelio.diagram.ILinkPath;
 import org.modelio.api.modelio.diagram.ILinkRoute;
 import org.modelio.api.modelio.diagram.tools.DefaultLinkTool;
-import org.modelio.api.modelio.model.IModelingSession;
-import org.modelio.api.modelio.model.ITransaction;
-import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("1d1a3b00-63d7-41b1-a3e0-137271d640f6")
 public class RelationshipTemplateTool extends DefaultLinkTool {
-    @objid ("878d75ef-26b7-4d9a-831a-3f498007b500")
-    private TNodeTemplate nodeT1 = null;
-
-    @objid ("e9ab605f-4418-4d00-81ac-20f8849ccaac")
-    private TNodeTemplate nodeT2 = null;
-
     @objid ("d8953096-35c2-44ae-94bf-b91a29a47d82")
     @Override
-    public boolean acceptFirstElement(final IDiagramHandle diagramHandle, final IDiagramGraphic sourceNode) {
-        MObject element = sourceNode.getElement();
-        
-        if (TNodeTemplate.canInstantiate(element)) {
-            this.nodeT1 = TNodeTemplate.instantiate((org.modelio.metamodel.uml.statik.Class) element);
-            return true;
-        }
+    public boolean acceptFirstElement(final IDiagramHandle diagramHandle, final IDiagramGraphic targetNode) {
+        // TODO Auto-generated method stub
         return false;
     }
 
     @objid ("e12e06bd-fca6-45f7-a695-8c1fcd35dfb0")
     @Override
     public boolean acceptSecondElement(final IDiagramHandle diagramHandle, final IDiagramGraphic originNode, final IDiagramGraphic targetNode) {
-        MObject element = targetNode.getElement();
-        
-        if (TNodeTemplate.canInstantiate(element)) {
-            this.nodeT2 = TNodeTemplate.instantiate((org.modelio.metamodel.uml.statik.Class) element);
-            return true;
-        }
+        // TODO Auto-generated method stub
         return false;
     }
 
     @objid ("bcfa634d-4c04-40fc-a602-d2bcccc0b01b")
     public void actionPerformed(final IDiagramHandle diagramHandle, final IDiagramGraphic originNode, final IDiagramGraphic targetNode, final LinkRouterKind touterType, final ILinkPath path) {
-        IModelingSession session = ToscaDesignerModule.getInstance().getModuleContext().getModelingSession();
-        try (ITransaction transaction = session.createTransaction(" RelationshipTemplate")) {
-        /*
-            TRelationshipTemplate toscaElt = TRelationshipTemplate.create(session);
-            toscaElt.setSourceElement(this.nodeT1.getName());
-            toscaElt.setTargetElement(this.nodeT2.getName());
-        
-            diagramHandle.unmask(toscaElt.getElement(), path.getPoints().get(0).x, path.getPoints().get(1).x);
-        
-            diagramHandle.save();
-            diagramHandle.close();
-            transaction.commit();
-        */
-        }
+        // TODO implement the RelationshipTemplateTool handler. 
+        MessageDialog.openInformation(Display.getDefault().getActiveShell(), "RelationshipTemplateTool", "Tool not implemented!");
     }
 
     @objid ("8d0f7e46-2ec1-4eaf-8501-3f08d3432d6e")
