@@ -1,294 +1,201 @@
-<?xml version="1.0" encoding="UTF-8"?><Module author="Softeam" binaryversion="5.4.01" class="fr.softeam.toscadesigner.impl.ToscaDesignerModule" id="ToscaDesigner" image="" schema-level="2" uid="942db9f9-6869-472c-b269-9ca7ec36a014" url="" version="0.0.00">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Module id="ToscaDesigner" class="fr.softeam.toscadesigner.impl.ToscaDesignerModule" binaryversion="5.4.01" version="0.0.00" schema-level="2" uid="942db9f9-6869-472c-b269-9ca7ec36a014" author="Softeam" image="" url="">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
     </ClassPath>
     <Profiles>
-        <Profile id="Tosca" uid="052601e7-dbd7-42a1-9f15-ca5eaf0707f8">
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.CapabilitiesType.label" metaclass="Standard.Class" name="CapabilitiesType" owner-stereotype="" uid="03d159c3-b62b-497f-9176-c5137b4cb33d">
+        <Profile uid="052601e7-dbd7-42a1-9f15-ca5eaf0707f8" id="Tosca">
+            <Stereotype name="CapabilitiesType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.CapabilitiesType.label" uid="03d159c3-b62b-497f-9176-c5137b4cb33d" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TCapabilityDefinitionsType.label" metaclass="Standard.Class" name="CapabilityDefinitionsType" owner-stereotype="" uid="ac0418b1-a726-46e6-ac59-310f0055050f">
+            <Stereotype name="CapabilityDefinitionsType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityDefinitionsType.label" uid="ac0418b1-a726-46e6-ac59-310f0055050f" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.ConstraintsType.label" metaclass="Standard.Class" name="ConstraintsType" owner-stereotype="" uid="2404a629-b23f-4c4c-be56-f244dd2e9495">
+            <Stereotype name="ConstraintsType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.ConstraintsType.label" uid="2404a629-b23f-4c4c-be56-f244dd2e9495" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.InstanceStateType.label" metaclass="Standard.Class" name="InstanceStateType" owner-stereotype="" uid="17542f25-7d53-4414-ad44-cda8dcefd24c">
-                <Icon path=""/>
-                <Image path=""/>
-                <TagTypes>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.state.label" name="state" parameter-card="1" uid="3b1a149f-4f8f-4b4f-9e19-9b01218d74ba"/>
-                </TagTypes>
-            </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.InterfacesType.label" metaclass="Standard.Class" name="InterfacesType" owner-stereotype="" uid="52b9c42d-29c2-4a9c-a9af-c3d178e32339">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.MaxInstancesType.label" metaclass="Standard.DataType" name="MaxInstancesType" owner-stereotype="" uid="5ca26f44-8e56-452a-a303-8660f79a79fa">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.PoliciesType.label" metaclass="Standard.Class" name="PoliciesType" owner-stereotype="" uid="d4897b52-a366-4cb7-9760-2e3571815c1f">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.RelationshipConstraintType.label" metaclass="Standard.Class" name="RelationshipConstraintType" owner-stereotype="" uid="c0831a7b-bda2-433b-9120-b18e7e871edf">
+            <Stereotype name="InstanceStateType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.InstanceStateType.label" uid="17542f25-7d53-4414-ad44-cda8dcefd24c" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
                 <TagTypes>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.Tag.label" name="constraintType" parameter-card="1" uid="decdf774-2815-4cd8-98da-92a22715cdf5"/>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.any.label" name="any" parameter-card="1" uid="af827af8-e116-452d-b802-f2de41fcf61d"/>
+                    <TagType name="state" uid="3b1a149f-4f8f-4b4f-9e19-9b01218d74ba" label="%tagtype.state.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.RelationshipConstraintsType.label" metaclass="Standard.Class" name="RelationshipConstraintsType" owner-stereotype="" uid="7956674f-ca58-44ad-86e0-eb4f37747af7">
+            <Stereotype name="InterfacesType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.InterfacesType.label" uid="52b9c42d-29c2-4a9c-a9af-c3d178e32339" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.RelationshipOperationType.label" metaclass="Standard.Class" name="RelationshipOperationType" owner-stereotype="" uid="283533e7-c53c-4104-a644-9d71d040726f">
+            <Stereotype name="MaxInstancesType" metaclass="Standard.DataType" owner-stereotype="" is-hidden="false" label="%stereotype.MaxInstancesType.label" uid="5ca26f44-8e56-452a-a303-8660f79a79fa" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TRequirementDefinitionType.label" metaclass="Standard.Class" name="RequirementDefinitionsType" owner-stereotype="" uid="622c76d1-f337-471e-984a-2af659417163">
+            <Stereotype name="PoliciesType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.PoliciesType.label" uid="d4897b52-a366-4cb7-9760-2e3571815c1f" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.RequirementsType.label" metaclass="Standard.Class" name="RequirementsType" owner-stereotype="" uid="1a39bd85-e28f-4e17-b2e9-a1803359cd83">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.SourceElementType.label" metaclass="Standard.DataType" name="SourceElementType" owner-stereotype="" uid="4c7a9935-4795-4b01-bba1-4e88b3f061d6">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TCapability.label" metaclass="Standard.Class" name="TCapability" owner-stereotype="" uid="92831533-b614-4124-8961-3cd7ebcad536">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TCapabilityDefinition.label" metaclass="Standard.Class" name="TCapabilityDefinition" owner-stereotype="" uid="92f8cb40-9498-4759-9c75-6b4df72de355">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TDeploymentArtifact.label" metaclass="Standard.Class" name="TDeploymentArtifact" owner-stereotype="" uid="7c624564-a87e-4058-ab8b-8f6782b68031">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TDeploymentArtifacts.label" metaclass="Standard.Class" name="TDeploymentArtifacts" owner-stereotype="" uid="168ae3ca-0258-4eed-afa5-696caa1bab53">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="true" label="%stereotype.TDocumentation.label" metaclass="Standard.Class" name="TDocumentation" owner-stereotype="" uid="1bcf2312-727a-4971-aac1-87f1c896f928">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TEntityTemplate.label" metaclass="Infrastructure.ModelElement" name="TEntityTemplate" owner-stereotype="mref#'' {1aad84ed-4c30-40ec-a4d8-6712bb6bd018} Infrastructure.Stereotype" uid="a32cca04-f738-421e-b834-b0f13524e19e">
+            <Stereotype name="RelationshipConstraintType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.RelationshipConstraintType.label" uid="c0831a7b-bda2-433b-9120-b18e7e871edf" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
                 <TagTypes>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.Tag.label" name="properties" parameter-card="1" uid="b146297a-aa0d-4c18-a0f4-c78f69c831cf"/>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.Tag.label" name="propertyConstraints" parameter-card="1" uid="0e4aba23-900f-400f-aaa3-69b0697bf3d3"/>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.Tag.label" name="id" parameter-card="1" uid="53c84677-952b-4292-8a45-78a646366049"/>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.Tag.label" name="type" parameter-card="1" uid="be9e4c48-d3a9-452a-96ec-f5efdf1d105b"/>
+                    <TagType name="constraintType" uid="decdf774-2815-4cd8-98da-92a22715cdf5" label="%tagtype.Tag.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="any" uid="af827af8-e116-452d-b802-f2de41fcf61d" label="%tagtype.any.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TExtensibleElements.label" metaclass="Infrastructure.ModelElement" name="TExtensibleElements" owner-stereotype="" uid="1aad84ed-4c30-40ec-a4d8-6712bb6bd018">
+            <Stereotype name="RelationshipConstraintsType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.RelationshipConstraintsType.label" uid="7956674f-ca58-44ad-86e0-eb4f37747af7" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="RelationshipOperationType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.RelationshipOperationType.label" uid="283533e7-c53c-4104-a644-9d71d040726f" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="RequirementDefinitionsType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TRequirementDefinitionType.label" uid="622c76d1-f337-471e-984a-2af659417163" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="RequirementsType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.RequirementsType.label" uid="1a39bd85-e28f-4e17-b2e9-a1803359cd83" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="SourceElementType" metaclass="Standard.DataType" owner-stereotype="" is-hidden="false" label="%stereotype.SourceElementType.label" uid="4c7a9935-4795-4b01-bba1-4e88b3f061d6" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="TCapability" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TCapability.label" uid="92831533-b614-4124-8961-3cd7ebcad536" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="TCapabilityDefinition" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityDefinition.label" uid="92f8cb40-9498-4759-9c75-6b4df72de355" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="TDeploymentArtifact" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TDeploymentArtifact.label" uid="7c624564-a87e-4058-ab8b-8f6782b68031" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="TDeploymentArtifacts" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TDeploymentArtifacts.label" uid="168ae3ca-0258-4eed-afa5-696caa1bab53" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="TDocumentation" metaclass="Standard.Class" owner-stereotype="" is-hidden="true" label="%stereotype.TDocumentation.label" uid="1bcf2312-727a-4971-aac1-87f1c896f928" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+            </Stereotype>
+            <Stereotype name="TEntityTemplate" metaclass="Infrastructure.ModelElement" owner-stereotype="mref#'' {1aad84ed-4c30-40ec-a4d8-6712bb6bd018} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TEntityTemplate.label" uid="a32cca04-f738-421e-b834-b0f13524e19e" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
                 <TagTypes>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.Tag.label" name="any" parameter-card="1" uid="09873d87-439c-491e-85cc-4d44ded59ba3"/>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.Tag.label" name="anyAttribute" parameter-card="1" uid="070d869e-3813-43b0-b0cc-ee4ec09ba88f"/>
+                    <TagType name="properties" uid="b146297a-aa0d-4c18-a0f4-c78f69c831cf" label="%tagtype.Tag.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="propertyConstraints" uid="0e4aba23-900f-400f-aaa3-69b0697bf3d3" label="%tagtype.Tag.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="id" uid="53c84677-952b-4292-8a45-78a646366049" label="%tagtype.Tag.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="type" uid="be9e4c48-d3a9-452a-96ec-f5efdf1d105b" label="%tagtype.Tag.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TNodeTemplate.label" metaclass="Standard.Class" name="TNodeTemplate" owner-stereotype="" uid="1a20bf91-0a92-434a-9d1f-35c86788784e">
+            <Stereotype name="TExtensibleElements" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.TExtensibleElements.label" uid="1aad84ed-4c30-40ec-a4d8-6712bb6bd018" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
+                <TagTypes>
+                    <TagType name="any" uid="09873d87-439c-491e-85cc-4d44ded59ba3" label="%tagtype.Tag.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="anyAttribute" uid="070d869e-3813-43b0-b0cc-ee4ec09ba88f" label="%tagtype.Tag.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
+            </Stereotype>
+            <Stereotype name="TNodeTemplate" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TNodeTemplate.label" uid="1a20bf91-0a92-434a-9d1f-35c86788784e" is-abstract="false">
                 <Icon path="res/icon/gui/node_template24.png"/>
                 <Image path="res/icon/gui/node_template48.png"/>
                 <TagTypes>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.name.label" name="name" parameter-card="1" uid="39d7794d-5063-4947-87a6-f943deb91b5d"/>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.Tag.label" name="minInstances" parameter-card="1" uid="0187a7c0-8936-4be2-ae5f-f310b341e611"/>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.Tag.label" name="maxInstances" parameter-card="1" uid="44eb663e-5497-485a-864f-3911fb108301"/>
+                    <TagType name="name" uid="39d7794d-5063-4947-87a6-f943deb91b5d" label="%tagtype.name.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="minInstances" uid="0187a7c0-8936-4be2-ae5f-f310b341e611" label="%tagtype.Tag.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="maxInstances" uid="44eb663e-5497-485a-864f-3911fb108301" label="%tagtype.Tag.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TNodeType.label" metaclass="Standard.Class" name="TNodeType" owner-stereotype="" uid="47cdd09e-013d-4670-b757-f5736d2bb48c">
+            <Stereotype name="TNodeType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TNodeType.label" uid="47cdd09e-013d-4670-b757-f5736d2bb48c" is-abstract="false">
                 <Icon path="res/icon/gui/node_type24.png"/>
                 <Image path="res/icon/gui/node_type48.png"/>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="true" label="%stereotype.TPlans.label" metaclass="Standard.Class" name="TPlans" owner-stereotype="" uid="01bb24fb-fe3d-4005-9bff-68bb6b6e8520">
+            <Stereotype name="TPlans" metaclass="Standard.Class" owner-stereotype="" is-hidden="true" label="%stereotype.TPlans.label" uid="01bb24fb-fe3d-4005-9bff-68bb6b6e8520" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
                 <TagTypes>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.Tag.label" name="targetNamespace" parameter-card="1" uid="e97ddff4-a30d-47c5-89a2-fa72c3cf5f97"/>
+                    <TagType name="targetNamespace" uid="e97ddff4-a30d-47c5-89a2-fa72c3cf5f97" label="%tagtype.Tag.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TPolicy.label" metaclass="Standard.Class" name="TPolicy" owner-stereotype="" uid="afe2c9ed-9fab-4a53-a2d2-b52d849d0799">
+            <Stereotype name="TPolicy" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TPolicy.label" uid="afe2c9ed-9fab-4a53-a2d2-b52d849d0799" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TRelationshipTemplate.label" metaclass="Standard.Association" name="TRelationshipTemplate" owner-stereotype="mref#'' {a32cca04-f738-421e-b834-b0f13524e19e} Infrastructure.Stereotype" uid="7f01001b-511e-4017-b6b4-729f68c85911">
+            <Stereotype name="TRelationshipTemplate" metaclass="Standard.Association" owner-stereotype="mref#'' {a32cca04-f738-421e-b834-b0f13524e19e} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TRelationshipTemplate.label" uid="7f01001b-511e-4017-b6b4-729f68c85911" is-abstract="false">
                 <Icon path="res/icon/gui/relationship_template24.png"/>
                 <Image path="res/icon/gui/relationship_template48.png"/>
                 <TagTypes>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.Tag.label" name="name" parameter-card="1" uid="2f615bad-125a-47d7-bb05-1e78ac68cea3"/>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.Tag.label" name="sourceElement" parameter-card="1" uid="83393692-d49e-40c9-82cf-d39eca5ceadc"/>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.Tag.label" name="targetElement" parameter-card="1" uid="58a6b489-bd06-45c0-9fe9-4a7409e62986"/>
+                    <TagType name="name" uid="2f615bad-125a-47d7-bb05-1e78ac68cea3" label="%tagtype.Tag.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TRelationshipType.label" metaclass="Standard.Class" name="TRelationshipType" owner-stereotype="" uid="1b11c098-c9e5-4e5d-beca-3351909bc6ce">
+            <Stereotype name="TRelationshipType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TRelationshipType.label" uid="1b11c098-c9e5-4e5d-beca-3351909bc6ce" is-abstract="false">
                 <Icon path="res/icon/gui/relationship_type24.png"/>
                 <Image path="res/icon/gui/relationship_type48.png"/>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TRequirement.label" metaclass="Standard.Class" name="TRequirement" owner-stereotype="" uid="2a38f650-7f59-41a7-a928-ac9cbe326f84">
+            <Stereotype name="TRequirement" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TRequirement.label" uid="2a38f650-7f59-41a7-a928-ac9cbe326f84" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TRequirementDefinition.label" metaclass="Standard.Class" name="TRequirementDefinition" owner-stereotype="" uid="2637c4bd-ca93-4012-82ea-8ef2ba5ca444">
+            <Stereotype name="TRequirementDefinition" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TRequirementDefinition.label" uid="2637c4bd-ca93-4012-82ea-8ef2ba5ca444" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TServiceTemplate.label" metaclass="Standard.Class" name="TServiceTemplate" owner-stereotype="" uid="09682faf-27b8-4c4b-a5e6-22fe18303161">
+            <Stereotype name="TServiceTemplate" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TServiceTemplate.label" uid="09682faf-27b8-4c4b-a5e6-22fe18303161" is-abstract="false">
                 <Icon path="res/icon/gui/service_template24.png"/>
                 <Image path="res/icon/gui/service_template48.png"/>
                 <TagTypes>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.tags.label" name="tags" parameter-card="1" uid="ddecaa33-6336-43e5-aa39-1213b9564dc6"/>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.Tag.label" name="name" parameter-card="1" uid="6ae4660e-2bb6-436b-a91f-7f62f99aeca5"/>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.Tag.label" name="targetNamespace" parameter-card="1" uid="293beffb-ce5a-45d2-b13a-6fe3c7333967"/>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.Tag.label" name="substitutableNodeType" parameter-card="1" uid="8559129d-7391-4297-8366-1bd701a15d0b"/>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.Tag.label" name="id" parameter-card="1" uid="025fd2ff-dda0-4162-bfc0-fdd51b5af804"/>
-                    <TagType is-hidden="false" is-signed="false" label="%tagtype.Tag.label" name="boundaryDefinitions" parameter-card="1" uid="65afaab6-bc9c-437c-be88-8060c62cc14d"/>
+                    <TagType name="tags" uid="ddecaa33-6336-43e5-aa39-1213b9564dc6" label="%tagtype.tags.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="name" uid="6ae4660e-2bb6-436b-a91f-7f62f99aeca5" label="%tagtype.Tag.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="targetNamespace" uid="293beffb-ce5a-45d2-b13a-6fe3c7333967" label="%tagtype.Tag.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="substitutableNodeType" uid="8559129d-7391-4297-8366-1bd701a15d0b" label="%tagtype.Tag.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="id" uid="025fd2ff-dda0-4162-bfc0-fdd51b5af804" label="%tagtype.Tag.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="boundaryDefinitions" uid="65afaab6-bc9c-437c-be88-8060c62cc14d" label="%tagtype.Tag.label" parameter-card="1" is-hidden="false" is-signed="false"/>
                 </TagTypes>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TTopologyElementInstanceStates.label" metaclass="Standard.Class" name="TTopologyElementInstanceStates" owner-stereotype="" uid="6bc1b842-da9c-42d9-8c4b-21f98dfdd988">
+            <Stereotype name="TTopologyElementInstanceStates" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TTopologyElementInstanceStates.label" uid="6bc1b842-da9c-42d9-8c4b-21f98dfdd988" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TTopologyTemplate.label" metaclass="Standard.Class" name="TTopologyTemplate" owner-stereotype="mref#'' {1aad84ed-4c30-40ec-a4d8-6712bb6bd018} Infrastructure.Stereotype" uid="a52f433c-cf19-4033-99c2-81b4af708744">
+            <Stereotype name="TTopologyTemplate" metaclass="Standard.Class" owner-stereotype="mref#'' {1aad84ed-4c30-40ec-a4d8-6712bb6bd018} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TTopologyTemplate.label" uid="a52f433c-cf19-4033-99c2-81b4af708744" is-abstract="false">
                 <Icon path="res/icon/gui/topology_template24.png"/>
                 <Image path="res/icon/gui/topology_template48.png"/>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TargetElementType.label" metaclass="Standard.DataType" name="TargetElementType" owner-stereotype="" uid="e4524aff-a7ca-4e8c-b752-7f45c18399b6">
+            <Stereotype name="TargetElementType" metaclass="Standard.DataType" owner-stereotype="" is-hidden="false" label="%stereotype.TargetElementType.label" uid="e4524aff-a7ca-4e8c-b752-7f45c18399b6" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.ToscaModel.label" metaclass="Standard.Package" name="ToscaModel" owner-stereotype="" uid="20565008-115d-4fad-800f-134ab276f611">
+            <Stereotype name="ToscaModel" metaclass="Standard.Package" owner-stereotype="" is-hidden="false" label="%stereotype.ToscaModel.label" uid="20565008-115d-4fad-800f-134ab276f611" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TPlan.label" metaclass="Standard.Class" name="TPlan" owner-stereotype="" uid="182e3894-ba54-49ce-bfdc-c97d06294a29">
+            <Stereotype name="TPlan" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TPlan.label" uid="182e3894-ba54-49ce-bfdc-c97d06294a29" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
         </Profile>
-        <Profile id="Automatic" uid="72c19ac1-0189-4db1-a982-dbaa92e1cfd5">
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.CloudServiceArchiveDiagram.label" metaclass="Standard.StaticDiagram" name="CloudServiceArchiveDiagram" owner-stereotype="" uid="dddbe647-1f21-42d1-93cd-f61109a8afd3">
+        <Profile uid="72c19ac1-0189-4db1-a982-dbaa92e1cfd5" id="Automatic">
+            <Stereotype name="CloudServiceArchiveDiagram" metaclass="Standard.StaticDiagram" owner-stereotype="" is-hidden="false" label="%stereotype.CloudServiceArchiveDiagram.label" uid="dddbe647-1f21-42d1-93cd-f61109a8afd3" is-abstract="false">
                 <Icon path="res/icon/gui/csar_diag48.ICON.png"/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.ServiceTemplateDiagram.label" metaclass="Standard.StaticDiagram" name="ServiceTemplateDiagram" owner-stereotype="" uid="f9953d92-a710-4f60-aac1-ebb34e59967c">
+            <Stereotype name="ServiceTemplateDiagram" metaclass="Standard.StaticDiagram" owner-stereotype="" is-hidden="false" label="%stereotype.ServiceTemplateDiagram.label" uid="f9953d92-a710-4f60-aac1-ebb34e59967c" is-abstract="false">
                 <Icon path="res/icon/gui/diagram/service_template_diag24.png"/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype is-abstract="false" is-hidden="false" label="%stereotype.TopologyTemplateDiagram.label" metaclass="Standard.StaticDiagram" name="TopologyTemplateDiagram" owner-stereotype="" uid="0313d7f3-dcd0-4c93-981e-705f3d4bcc82">
+            <Stereotype name="TopologyTemplateDiagram" metaclass="Standard.StaticDiagram" owner-stereotype="" is-hidden="false" label="%stereotype.TopologyTemplateDiagram.label" uid="0313d7f3-dcd0-4c93-981e-705f3d4bcc82" is-abstract="false">
                 <Icon path="res/icon/gui/diagram/topology_template_diag24.png"/>
                 <Image path=""/>
             </Stereotype>
         </Profile>
     </Profiles>
     <Gui>
-        <ContextualMenu>
-            <CommandRef group="" group-image="" refid="Export"/>
-            <CommandRef group="" group-image="" refid="Tosca_Model"/>
-            <CommandRef group="" group-image="" refid="Tosca_Model_Diagram"/>
-            <CommandRef group="%group.Service_Template.label" group-image="" refid="Service_Template_Diagram"/>
-            <CommandRef group="%group.Topology_Template.label" group-image="" refid="Topology_Template_Diagram"/>
-        </ContextualMenu>
-        <Commands>
-            <Command id="Tosca_Model" image="" label="%command.Tosca_Model.label" modify-model="true" tooltip="%command.Tosca_Model.tooltip">
-                <Scope metaclass="Standard.Package" stereotype=""/>
-                <Handler class="">
-                    <HParameter name="stereotype" value="ToscaDesigner#ToscaModel"/>
-                    <HParameter name="metaclass" value="Standard.Package"/>
-                    <HParameter name="name" value="Tosca Model"/>
-                </Handler>
-            </Command>
-            <Command id="Tosca_Model_Diagram" image="res/icon/gui/diagram/csar_diag24.png" label="%command.Tosca_Model_Diagram.label" modify-model="true" tooltip="%command.Tosca_Model_Diagram.tooltip">
-                <Scope metaclass="Standard.Package" stereotype="ToscaDesigner#ToscaModel"/>
-                <Handler class="DiagramCreate">
-                    <HParameter name="name" value="Diagram"/>
-                    <HParameter name="stereotype" value="ToscaDesigner#CloudServiceArchiveDiagram"/>
-                    <HParameter name="metaclass" value="Standard.StaticDiagram"/>
-                    <HParameter name="style" value="ToscaStyle"/>
-                </Handler>
-            </Command>
-            <Command id="Export" image="res/icon/gui/script24.png" label="%command.Export.label" modify-model="false" tooltip="%command.Export.tooltip">
-                <Scope metaclass="Standard.Package" stereotype="ToscaDesigner#ToscaModel"/>
-                <Handler class="fr.softeam.toscadesigner.handlers.commands.CreateDiagramCommand"/>
-            </Command>
-            <Command id="Service_Template_Diagram" image="res/icon/gui/diagram/service_template_diag24.png" label="%command.Service_Template_Diagram.label" modify-model="true" tooltip="%command.Service_Template_Diagram.tooltip">
-                <Scope metaclass="Standard.Package" stereotype=""/>
-                <Handler class="DiagramCreate">
-                    <HParameter name="name" value="Diagram"/>
-                    <HParameter name="stereotype" value="ToscaDesigner#ServiceTemplateDiagram"/>
-                    <HParameter name="metaclass" value="Standard.StaticDiagram"/>
-                    <HParameter name="style" value="ToscaStyle"/>
-                </Handler>
-            </Command>
-            <Command id="Topology_Template_Diagram" image="res/icon/gui/diagram/topology_template_diag24.png" label="%command.Topology_Template_Diagram.label" modify-model="true" tooltip="%command.Topology_Template_Diagram.tooltip">
-                <Scope metaclass="Standard.Package" stereotype=""/>
-                <Handler class="DiagramCreate">
-                    <HParameter name="name" value="Diagram"/>
-                    <HParameter name="stereotype" value="ToscaDesigner#TopologyTemplateDiagram"/>
-                    <HParameter name="metaclass" value="Standard.StaticDiagram"/>
-                    <HParameter name="style" value="ToscaStyle"/>
-                </Handler>
-            </Command>
-        </Commands>
-        <Diagrams>
-            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="ToscaDesigner#CloudServiceArchiveDiagram">
-                <Palette keepBasePalette="false">
-                    <ToolRef group="%group.Group0.label" refid="Service Template"/>
-                    <ToolRef group="%group.Common.label" refid="CREATE_NOTE"/>
-                </Palette>
-                <Handler class="StandardCustomizer">
-                    <HParameter name="stereotype" value="ToscaDesigner#CloudServiceArchiveDiagram"/>
-                    <HParameter name="metaclass" value="Standard.StaticDiagram"/>
-                </Handler>
-            </DiagramType>
-            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="ToscaDesigner#ServiceTemplateDiagram">
-                <Palette keepBasePalette="false">
-                    <ToolRef group="%group.Types.label" refid="NodeTypes"/>
-                    <ToolRef group="%group.Types.label" refid="RelationshipTypes"/>
-                    <ToolRef group="%group.Templates.label" refid="TopologyTemplate"/>
-                    <ToolRef group="%group.Artifact_Template.label" refid="ArtifactTemplate"/>
-                    <ToolRef group="%group.Plans.label" refid="Plans"/>
-                </Palette>
-                <Handler class="StandardCustomizer">
-                    <HParameter name="stereotype" value="ToscaDesigner#ServiceTemplateDiagram"/>
-                    <HParameter name="metaclass" value="Standard.StaticDiagram"/>
-                </Handler>
-            </DiagramType>
-            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="ToscaDesigner#TopologyTemplateDiagram">
-                <Palette keepBasePalette="false">
-                    <ToolRef group="%group.Node_Templates.label" refid="NodeTemplate"/>
-                    <ToolRef group="%group.Relationship_Templates.label" refid="RelationshipTemplate"/>
-                    <ToolRef group="%group.Connectors.label" refid="CREATE_CONNECTOR"/>
-                    <ToolRef group="%group.Connectors.label" refid="CREATE_DELEGATELINK"/>
-                    <ToolRef group="%group.Connectors.label" refid="CREATE_GENERALIZATION"/>
-                    <ToolRef group="%group.Connectors.label" refid="CREATE_AGGREGATION"/>
-                    <ToolRef group="%group.Connectors.label" refid="CREATE_ARCHIMATE_AGGREGATION"/>
-                    <ToolRef group="%group.Connectors.label" refid="CREATE_ARCHIMATE_ASSOCIATION"/>
-                    <ToolRef group="%group.Connectors.label" refid="CREATE_ASSOCIATION"/>
-                    <ToolRef group="%group.Connectors.label" refid="CREATE_COMMUNICATIONLINK"/>
-                    <ToolRef group="%group.Connectors.label" refid="Relation"/>
-                </Palette>
-                <Handler class="StandardCustomizer">
-                    <HParameter name="stereotype" value="ToscaDesigner#TopologyTemplateDiagram"/>
-                    <HParameter name="metaclass" value="Standard.StaticDiagram"/>
-                </Handler>
-            </DiagramType>
-        </Diagrams>
         <Tools>
-            <Tool id="Service Template" image="res/icon/gui/service_template24.png" label="%tool.Service Template.label" tooltip="%tool.Service Template.tooltip">
+            <Tool id="Service Template" label="%tool.Service Template.label" tooltip="%tool.Service Template.tooltip" image="res/icon/gui/service_template24.png">
                 <Scope-source metaclass="Standard.Package" stereotype=""/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TServiceTemplate"/>
@@ -296,7 +203,7 @@
                     <HParameter name="name" value="ServiceTemplate"/>
                 </Handler>
             </Tool>
-            <Tool id="TopologyTemplate" image="res/icon/gui/topology_template24.png" label="%tool.TopologyTemplate.label" tooltip="%tool.TopologyTemplate.tooltip">
+            <Tool id="TopologyTemplate" label="%tool.TopologyTemplate.label" tooltip="%tool.TopologyTemplate.tooltip" image="res/icon/gui/topology_template24.png">
                 <Scope-source metaclass="Standard.Package" stereotype=""/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TTopologyTemplate"/>
@@ -304,7 +211,7 @@
                     <HParameter name="name" value="TopologyTemplate"/>
                 </Handler>
             </Tool>
-            <Tool id="NodeTypes" image="res/icon/gui/node_type24.png" label="%tool.NodeTypes.label" tooltip="%tool.NodeTypes.tooltip">
+            <Tool id="NodeTypes" label="%tool.NodeTypes.label" tooltip="%tool.NodeTypes.tooltip" image="res/icon/gui/node_type24.png">
                 <Scope-source metaclass="Standard.Package" stereotype=""/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TNodeType"/>
@@ -312,7 +219,7 @@
                     <HParameter name="name" value="NodeTypes"/>
                 </Handler>
             </Tool>
-            <Tool id="RelationshipTypes" image="res/icon/gui/relationship_type24.png" label="%tool.RelationshipTypes.label" tooltip="%tool.RelationshipTypes.tooltip">
+            <Tool id="RelationshipTypes" label="%tool.RelationshipTypes.label" tooltip="%tool.RelationshipTypes.tooltip" image="res/icon/gui/relationship_type24.png">
                 <Scope-source metaclass="Standard.Package" stereotype=""/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TRelationshipType"/>
@@ -320,14 +227,14 @@
                     <HParameter name="name" value="RelationshipTypes"/>
                 </Handler>
             </Tool>
-            <Tool id="Plans" image="" label="%tool.Plans.label" tooltip="%tool.Plans.tooltip">
+            <Tool id="Plans" label="%tool.Plans.label" tooltip="%tool.Plans.tooltip" image="">
                 <Scope-source metaclass="Standard.Package" stereotype=""/>
                 <Handler class="Box">
                     <HParameter name="metaclass" value="Standard.Class"/>
                     <HParameter name="name" value="Plans"/>
                 </Handler>
             </Tool>
-            <Tool id="NodeTemplate" image="res/icon/gui/node_template24.png" label="%tool.NodeTemplate.label" tooltip="%tool.NodeTemplate.tooltip">
+            <Tool id="NodeTemplate" label="%tool.NodeTemplate.label" tooltip="%tool.NodeTemplate.tooltip" image="res/icon/gui/node_template24.png">
                 <Scope-source metaclass="Standard.Package" stereotype=""/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TNodeTemplate"/>
@@ -335,7 +242,7 @@
                     <HParameter name="name" value="NodeTemplate"/>
                 </Handler>
             </Tool>
-            <Tool id="RelationshipTemplate" image="res/icon/gui/relationship_template24.png" label="%tool.RelationshipTemplate.label" tooltip="%tool.RelationshipTemplate.tooltip">
+            <Tool id="RelationshipTemplate" label="%tool.RelationshipTemplate.label" tooltip="%tool.RelationshipTemplate.tooltip" image="res/icon/gui/relationship_template24.png">
                 <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeTemplate"/>
                 <Scope-target metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeTemplate"/>
                 <Handler class="fr.softeam.toscadesigner.handlers.tools.RelationshipTemplateTool">
@@ -344,7 +251,7 @@
                     <HParameter name="name" value="RelationshipTemplate"/>
                 </Handler>
             </Tool>
-            <Tool id="ArtifactTemplate" image="res/icon/gui/artifact_template24.png" label="%tool.ArtifactTemplate.label" tooltip="%tool.ArtifactTemplate.tooltip">
+            <Tool id="ArtifactTemplate" label="%tool.ArtifactTemplate.label" tooltip="%tool.ArtifactTemplate.tooltip" image="res/icon/gui/artifact_template24.png">
                 <Scope-source metaclass="Standard.Package" stereotype=""/>
                 <Handler class="Box">
                     <HParameter name="metaclass" value="Standard.Class"/>
@@ -352,6 +259,57 @@
                 </Handler>
             </Tool>
         </Tools>
+        <ContextualMenu>
+            <CommandRef refid="Export" group="" group-image=""/>
+            <CommandRef refid="Tosca_Model" group="" group-image=""/>
+            <CommandRef refid="Tosca_Model_Diagram" group="" group-image=""/>
+            <CommandRef refid="Service_Template_Diagram" group="%group.Service_Template.label" group-image=""/>
+            <CommandRef refid="Topology_Template_Diagram" group="%group.Topology_Template.label" group-image=""/>
+        </ContextualMenu>
+        <Diagrams>
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="ToscaDesigner#CloudServiceArchiveDiagram">
+                <Palette keepBasePalette="false">
+                    <ToolRef refid="Service Template" group="%group.Group0.label"/>
+                    <ToolRef refid="CREATE_NOTE" group="%group.Common.label"/>
+                </Palette>
+                <Handler class="StandardCustomizer">
+                    <HParameter name="stereotype" value="ToscaDesigner#CloudServiceArchiveDiagram"/>
+                    <HParameter name="metaclass" value="Standard.StaticDiagram"/>
+                </Handler>
+            </DiagramType>
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="ToscaDesigner#ServiceTemplateDiagram">
+                <Palette keepBasePalette="false">
+                    <ToolRef refid="NodeTypes" group="%group.Types.label"/>
+                    <ToolRef refid="RelationshipTypes" group="%group.Types.label"/>
+                    <ToolRef refid="TopologyTemplate" group="%group.Templates.label"/>
+                    <ToolRef refid="ArtifactTemplate" group="%group.Artifact_Template.label"/>
+                    <ToolRef refid="Plans" group="%group.Plans.label"/>
+                </Palette>
+                <Handler class="StandardCustomizer">
+                    <HParameter name="stereotype" value="ToscaDesigner#ServiceTemplateDiagram"/>
+                    <HParameter name="metaclass" value="Standard.StaticDiagram"/>
+                </Handler>
+            </DiagramType>
+            <DiagramType base-diagram="Standard.StaticDiagram" stereotype="ToscaDesigner#TopologyTemplateDiagram">
+                <Palette keepBasePalette="false">
+                    <ToolRef refid="NodeTemplate" group="%group.Node_Templates.label"/>
+                    <ToolRef refid="RelationshipTemplate" group="%group.Relationship_Templates.label"/>
+                    <ToolRef refid="CREATE_CONNECTOR" group="%group.Connectors.label"/>
+                    <ToolRef refid="CREATE_DELEGATELINK" group="%group.Connectors.label"/>
+                    <ToolRef refid="CREATE_GENERALIZATION" group="%group.Connectors.label"/>
+                    <ToolRef refid="CREATE_AGGREGATION" group="%group.Connectors.label"/>
+                    <ToolRef refid="CREATE_ARCHIMATE_AGGREGATION" group="%group.Connectors.label"/>
+                    <ToolRef refid="CREATE_ARCHIMATE_ASSOCIATION" group="%group.Connectors.label"/>
+                    <ToolRef refid="CREATE_ASSOCIATION" group="%group.Connectors.label"/>
+                    <ToolRef refid="CREATE_COMMUNICATIONLINK" group="%group.Connectors.label"/>
+                    <ToolRef refid="Relation" group="%group.Connectors.label"/>
+                </Palette>
+                <Handler class="StandardCustomizer">
+                    <HParameter name="stereotype" value="ToscaDesigner#TopologyTemplateDiagram"/>
+                    <HParameter name="metaclass" value="Standard.StaticDiagram"/>
+                </Handler>
+            </DiagramType>
+        </Diagrams>
     </Gui>
     <Resources>
         <Styles>

@@ -68,16 +68,16 @@ import org.modelio.metamodel.visitors.IInfrastructureVisitor;
  */
 @objid ("365cd17d-2d04-4020-839d-7e7bdefdf43f")
 public class ToscaDesignerProxyFactory {
-    @objid ("b29f8c73-e52c-4c4d-b38b-c9e3511160ff")
+    @objid ("8785a548-ad4e-48ae-958e-a541125d116c")
     private static final String ASSETNAME = "ToscaDesigner";
 
-    @objid ("36d96e9c-c167-4e85-ac47-872daac584f4")
+    @objid ("5d45285a-6bb1-4704-9e3c-6c357f3d921d")
     private static final InstantiateVisitor instantiateVisitor = new InstantiateVisitor();
 
     /**
      * @param session The modeling session this factory is operating in.
      */
-    @objid ("8ff2d2f9-0629-420e-8a75-1e852839db51")
+    @objid ("55bffeda-0fee-4e70-b17a-5ff2bded7be2")
     public static final void initialize(final IModelingSession session) throws MdaProxyException {
         fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilitiesType.MdaTypes.init(session);
         fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilityDefinitionsType.MdaTypes.init(session);
@@ -125,7 +125,7 @@ public class ToscaDesignerProxyFactory {
      * @param e A model element
      * @return the right proxy or <i>null</i>.
      */
-    @objid ("7fd76c98-42ef-4240-90c1-ba50640ffe53")
+    @objid ("94353782-2c5f-4d2c-b616-1ee15da10387")
     public static final Object instantiate(final ModelElement e) {
         for (Stereotype s : e.getExtension()) {
               ModuleComponent module = s.getModule();
@@ -144,23 +144,23 @@ public class ToscaDesignerProxyFactory {
      * @param stName A stereotype name.
      * @return the right proxy or <i>null</i>.
      */
-    @objid ("087a2fe9-9ca8-4bc2-b8d4-a824e3f543f2")
+    @objid ("9a2bf4fb-99dc-4955-87e6-0ad956f13b58")
     public static final Object instantiate(final Element e, final String stName) {
         instantiateVisitor.setStereotype(stName);
         return e.accept(instantiateVisitor);
     }
 
-    @objid ("1d18b186-91d3-44f5-ab81-e4c9ca13ae4c")
+    @objid ("38941d83-49a6-4bb0-9ef9-63250e6113dc")
     private static class InstantiateVisitor implements IDefaultModelVisitor, IDefaultInfrastructureVisitor {
-        @objid ("9cbc7480-01df-4b36-b875-7e1ddeb2bb78")
+        @objid ("65840f5c-554b-427e-a1d3-2eab8f98ca19")
         private String stName;
 
-        @objid ("97a8a0c7-10eb-4665-aa02-f626f984c906")
+        @objid ("5c5b7f63-2b18-4de9-9870-2b4ba3fb6cfb")
         public final void setStereotype(final String stName) {
             this.stName = stName;
         }
 
-        @objid ("8427d151-945b-4026-91d4-1074a522eb44")
+        @objid ("1a449d3d-877e-47df-994f-aee560befe9b")
         @Override
         public final Object visitAssociation(Association obj) {
             switch (this.stName) {
@@ -172,7 +172,7 @@ public class ToscaDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitAssociation(obj);
         }
 
-        @objid ("e89532f7-24a1-4e30-a081-c1b48493475f")
+        @objid ("eb05faa8-7032-4459-a84c-00ce5f32fb35")
         @Override
         public final Object visitPackage(Package obj) {
             switch (this.stName) {
@@ -184,7 +184,7 @@ public class ToscaDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitPackage(obj);
         }
 
-        @objid ("5e0f96bd-7cf2-4286-9fb4-a51de290fd58")
+        @objid ("55004d1c-9c2f-4ff8-9ccd-4375aad7452b")
         @Override
         public final Object visitDataType(DataType obj) {
             switch (this.stName) {
@@ -198,7 +198,7 @@ public class ToscaDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitDataType(obj);
         }
 
-        @objid ("36d774a6-9b5a-4ef7-a58f-0d78cf5fba78")
+        @objid ("ed41c4d4-da73-494e-9bff-d555e0aa48ef")
         @Override
         public final Object visitClass(Class obj) {
             switch (this.stName) {
@@ -236,7 +236,7 @@ public class ToscaDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitClass(obj);
         }
 
-        @objid ("97e17b65-b624-4691-8f0b-73f82f590257")
+        @objid ("93dd0f83-62aa-4352-9ef1-426faf857a7a")
         @Override
         public final Object visitStaticDiagram(StaticDiagram obj) {
             switch (this.stName) {
@@ -250,7 +250,7 @@ public class ToscaDesignerProxyFactory {
             return IDefaultModelVisitor.super.visitStaticDiagram(obj);
         }
 
-        @objid ("586ac0e5-5914-44d2-8f0a-fafb57f1e23b")
+        @objid ("bf179841-bbe4-47c8-b0f7-cb1fc6b64c5b")
         @Override
         public final Object visitModelElement(ModelElement obj) {
             switch (this.stName) {
@@ -268,7 +268,7 @@ public class ToscaDesignerProxyFactory {
          * <p>If null is returned the caller will return null.
          * @return the {@link IInfrastructureVisitor} visitor or <i>null</i>.
          */
-        @objid ("42d74501-6571-4fea-b4ae-c5a10a8f12f6")
+        @objid ("b362d271-0ca0-49a6-afae-d52e7c50f5eb")
         @Override
         public IInfrastructureVisitor getInfrastructureVisitor() {
             return this;

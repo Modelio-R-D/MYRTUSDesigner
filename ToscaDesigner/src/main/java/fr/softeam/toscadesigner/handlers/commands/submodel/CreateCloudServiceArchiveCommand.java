@@ -4,7 +4,6 @@ import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.ToscaModelDiagram;
 import fr.softeam.toscadesigner.api.tosca.standard.package_.ToscaModel;
-
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.ITransaction;
 import org.modelio.api.module.IModule;
