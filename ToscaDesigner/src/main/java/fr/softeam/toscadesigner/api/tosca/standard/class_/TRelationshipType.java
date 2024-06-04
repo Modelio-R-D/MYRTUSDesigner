@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 18/04/2024 10:28 by Modelio Studio.
+ * This file was generated on 04/06/2024 15:45 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
@@ -38,16 +38,15 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-@objid ("fd24d506-9c14-4736-81ce-ebc455f7bd34")
+@objid ("68169ae9-570b-4bd2-9cd8-e946110381b2")
 public class TRelationshipType implements IMdaProxy {
-    @objid ("e00982f2-2314-4d9b-9e35-290a0680f2e3")
+    @objid ("cc7e2a5c-f63e-4af0-bad2-a8ec70ee9f60")
     public static final String STEREOTYPE_NAME = "TRelationshipType";
 
     /**
      * The underlying {@link Class} represented by this proxy, never null.
-     * 
      */
-    @objid ("9c0267fb-ae25-4b54-93f9-b5b24100bbb5")
+    @objid ("faa0d605-14f6-464a-bcca-af460a84adfa")
     protected final Class elt;
 
     /**
@@ -57,16 +56,17 @@ public class TRelationshipType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("b13ced1b-0a41-463c-827a-ffdb797facbc")
+    @objid ("32448104-2752-4f92-bd95-b01277125d6f")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (TRelationshipType.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(TRelationshipType.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link Class} stereotyped << TRelationshipType >> then instantiate a {@link TRelationshipType} proxy.
+     * 
      * @return a {@link TRelationshipType} proxy on the created {@link Class}.
      */
-    @objid ("d5e763dc-ae98-414f-b273-51ecdf8954b9")
+    @objid ("6a9264f1-3ea3-4bf6-bfc4-c022d68bd187")
     public static TRelationshipType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(TRelationshipType.MdaTypes.STEREOTYPE_ELT);
@@ -80,7 +80,7 @@ public class TRelationshipType implements IMdaProxy {
      * @param obj a Class
      * @return a {@link TRelationshipType} proxy or <i>null</i>.
      */
-    @objid ("a6041d7f-6ad2-4f17-a318-e52649342250")
+    @objid ("65b1ee90-d8d1-4fb0-a093-e3ccbb5f65b4")
     public static TRelationshipType instantiate(final Class obj) {
         return TRelationshipType.canInstantiate(obj) ? new TRelationshipType(obj) : null;
     }
@@ -89,19 +89,19 @@ public class TRelationshipType implements IMdaProxy {
      * Tries to instantiate a {@link TRelationshipType} proxy from a {@link Class} stereotyped << TRelationshipType >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link Class}
      * @return a {@link TRelationshipType} proxy.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("1c8d4539-947b-496a-82e5-2199e27f998e")
+    @objid ("89161839-3de8-4f42-a9db-41d2e90b665f")
     public static TRelationshipType safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (TRelationshipType.canInstantiate(obj))
-            return new TRelationshipType(obj);
+        	return new TRelationshipType(obj);
         else
-            throw new IllegalArgumentException("TRelationshipType: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("TRelationshipType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("0f5b184a-7056-47e6-a09f-4b80b0b5baa8")
+    @objid ("af8302f0-0173-4b48-bb95-8a33173c9056")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -118,37 +118,38 @@ public class TRelationshipType implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link Class}.
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("f7cb6d30-4608-4e6c-952a-f0b3309c06ec")
+    @objid ("65a7b589-d969-4247-b831-8c89f303d75f")
     public Class getElement() {
         return this.elt;
     }
 
-    @objid ("0e81b85c-3f5f-4729-bd20-0647e646f5dc")
+    @objid ("db84d3a2-35e0-4da6-a64c-1c7cabfba79a")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
+        
     }
 
-    @objid ("37ef8993-a0d2-458f-a461-5a7691c72acf")
+    @objid ("e6b8c796-7683-4b4c-be47-ad0cc70cffc7")
     protected  TRelationshipType(final Class elt) {
         this.elt = elt;
     }
 
-    @objid ("774bf838-52dd-4a61-ba2b-55b1550ed7f6")
+    @objid ("09d12a81-ee70-43ac-b0e2-976fa052dc8a")
     public static final class MdaTypes {
-        @objid ("5f0500bf-b09c-4a13-b0d5-7bf115fc8b14")
+        @objid ("86365ab0-8dfe-4787-b349-73ca92726a37")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("db1967b6-bc4d-44ee-93ca-f8eb9163fb18")
+        @objid ("07d32f8a-22a0-4410-ac8d-bb2ef9614654")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("d0f5079a-84dd-4931-a438-ebc6b15916bc")
+        @objid ("d71f15b5-eaf7-40dc-818e-1ededdba94d9")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("60d9c7f8-d581-4615-b083-b921bcfaeddd")
+        @objid ("a845358f-1191-4ffc-885a-4485fd2494cb")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -165,6 +166,7 @@ public class TRelationshipType implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
+            
         }
 
     }

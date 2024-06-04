@@ -3,12 +3,12 @@ package fr.softeam.toscadesigner.api;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.module.IPeerModule;
 
-@objid ("745e8552-1434-4a52-bbdb-a48099286cb1")
+@objid ("105df991-0621-4bda-aa85-b8dd3a5595d8")
 public interface IToscaDesignerPeerModule extends IPeerModule {
-    @objid ("d8c00e1c-5e3d-46d0-8c79-bb999667b16d")
+    @objid ("3a68a8c0-4049-43a0-bf59-ce7c4b348f9b")
     public static final String MODULE_NAME = "ToscaDesigner";
 
-    @objid ("4241d814-168c-43ef-8e0c-0f4c92a4d326")
+    @objid ("de1cfebb-0162-472f-a6e6-c2c50320d325")
     public static final String TOSCA_STYLE = "ToscaStyle";
 }
 

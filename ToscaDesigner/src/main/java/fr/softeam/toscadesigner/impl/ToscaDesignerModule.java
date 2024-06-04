@@ -1,6 +1,7 @@
 package fr.softeam.toscadesigner.impl;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import org.modelio.api.module.AbstractJavaModule;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.api.module.lifecycle.IModuleLifeCycleHandler;
@@ -8,7 +9,7 @@ import org.modelio.api.module.mda.IMdaExpert;
 import org.modelio.api.module.parameter.IParameterEditionModel;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 
-@objid ("942db9f9-6869-472c-b269-9ca7ec36a014")
+@objid ("76d0c540-ed36-4597-90ed-7c8f8ec4c1c5")
 public class ToscaDesignerModule extends AbstractJavaModule {
     @objid ("b3e03ba1-58e4-433b-91ff-d9eed70a9321")
     private static final String MODULE_IMAGE = "/res/icon/module.png";
@@ -35,7 +36,7 @@ public class ToscaDesignerModule extends AbstractJavaModule {
 
     @objid ("5dfbd4a2-782f-43bc-bc16-19bd9631c95e")
     @Override
-    public ToscaDesignerPeerModule getPeerModule() {
+    public IToscaDesignerPeerModule getPeerModule() {
         return this.peerModule;
     }
 
@@ -90,7 +91,6 @@ public class ToscaDesignerModule extends AbstractJavaModule {
     @objid ("a46b8dae-28ae-4eba-aaed-6b65d095530f")
     private IMdaExpert getGeneratedMdaExpert(final Stereotype st) {
         switch (st.getUuid()) {
-        	case "7f01001b-511e-4017-b6b4-729f68c85911": return new fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplateExpert();
         	default: return null;
         }
     }

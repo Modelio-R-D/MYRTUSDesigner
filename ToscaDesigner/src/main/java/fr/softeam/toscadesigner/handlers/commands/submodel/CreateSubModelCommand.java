@@ -12,7 +12,7 @@ import org.modelio.api.module.command.standard.DiagramCreationStandardHandler;
 import org.modelio.metamodel.diagrams.AbstractDiagram;
 
 @objid ("de66fbde-14be-4fdc-be62-d7862a937394")
-public abstract class CreateSubModelCommand extends DiagramCreationStandardHandler {
+public class CreateSubModelCommand extends DiagramCreationStandardHandler {
     @objid ("dbed9686-35e8-445b-9fca-043612dfefaa")
     protected void openDiagram(AbstractDiagram diagram) {
         IModelioServices modelioServices = ToscaDesignerModule.getInstance().getModuleContext().getModelioServices();
@@ -27,7 +27,6 @@ public abstract class CreateSubModelCommand extends DiagramCreationStandardHandl
                     break;
                 }
             }
-        
             handler.save();
             handler.close();
         

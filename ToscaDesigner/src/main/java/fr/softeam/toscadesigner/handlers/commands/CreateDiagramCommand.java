@@ -10,7 +10,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("3f96b675-50dd-40ba-9977-16d6cf5453a6")
 public class CreateDiagramCommand extends DiagramCreationStandardHandler {
-    @objid ("d2ee27d7-1314-4009-af61-a544abb14a7d")
+    @objid ("4eeca7f2-703f-4167-bce1-a39d8a40b41e")
     @Override
     public boolean accept(final List<MObject> selectedElements, final IModule module) {
         // Generated call to the super method will check the scope conditions defined in Studio.
