@@ -51,6 +51,11 @@
             <Stereotype name="RelationshipOperationType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.RelationshipOperationType.label" uid="283533e7-c53c-4104-a644-9d71d040726f" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
+                <TagTypes>
+                    <TagType name="interfaceName" uid="8d6c1c4c-5e1a-4857-8946-843232eea8fc" label="%tagtype.interfaceName.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="operationName" uid="eaa46eea-ea48-4149-8061-face0d75977f" label="%tagtype.operationName.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="relationshipRef" uid="1a414145-2df0-4161-9346-e7c8330aa304" label="%tagtype.relationshipRef.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
             </Stereotype>
             <Stereotype name="RequirementDefinitionsType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TRequirementDefinitionType.label" uid="622c76d1-f337-471e-984a-2af659417163" is-abstract="false">
                 <Icon path=""/>
@@ -63,18 +68,35 @@
             <Stereotype name="SourceElementType" metaclass="Standard.DataType" owner-stereotype="" is-hidden="false" label="%stereotype.SourceElementType.label" uid="4c7a9935-4795-4b01-bba1-4e88b3f061d6" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
+                <TagTypes>
+                    <TagType name="ref" uid="3bade1e4-3a43-4c6f-906c-27dca8e8590b" label="%tagtype.ref.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
             </Stereotype>
             <Stereotype name="TCapability" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TCapability.label" uid="92831533-b614-4124-8961-3cd7ebcad536" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
+                <TagTypes>
+                    <TagType name="name" uid="224dc1e1-9646-43bf-8a70-4e84323d4dde" label="%tagtype.name.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
             </Stereotype>
             <Stereotype name="TCapabilityDefinition" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityDefinition.label" uid="92f8cb40-9498-4759-9c75-6b4df72de355" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
+                <TagTypes>
+                    <TagType name="name" uid="1776853c-6947-4bf7-8a0d-0a88e1b98d50" label="%tagtype.name.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="lowerBound" uid="6bf3d39e-f355-4ae0-8e47-3d04e90a5ba4" label="%tagtype.lowerBound.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="upperBound" uid="06d9b79e-d3e3-4f07-ace2-73c6ded7a329" label="%tagtype.upperBound.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="capabilityType" uid="32bee67d-91fe-4a14-bdb8-5511402daf18" label="%tagtype.capabilityType.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
             </Stereotype>
             <Stereotype name="TDeploymentArtifact" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TDeploymentArtifact.label" uid="7c624564-a87e-4058-ab8b-8f6782b68031" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
+                <TagTypes>
+                    <TagType name="artifactRef" uid="00f224d5-08f2-42a7-af61-f6e906e8305b" label="%tagtype.artifactRef.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="artifactType" uid="22483516-011a-4784-bde3-0f4bcadf9d00" label="%tagtype.artifactType.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="name" uid="8e15fb0f-c599-408f-b15a-4c8affdd8658" label="%tagtype.name.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
             </Stereotype>
             <Stereotype name="TDeploymentArtifacts" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TDeploymentArtifacts.label" uid="168ae3ca-0258-4eed-afa5-696caa1bab53" is-abstract="false">
                 <Icon path=""/>
@@ -125,6 +147,11 @@
             <Stereotype name="TPolicy" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TPolicy.label" uid="afe2c9ed-9fab-4a53-a2d2-b52d849d0799" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
+                <TagTypes>
+                    <TagType name="name" uid="1d546042-1e4c-44fe-b635-f26b13113f65" label="%tagtype.name.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="policyRef" uid="212112e6-68cf-448e-b90b-f50bc9015821" label="%tagtype.policyRef.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="policyType" uid="1947c8eb-d89c-438c-b5c7-da2f5c82cdbc" label="%tagtype.policyType.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
             </Stereotype>
             <Stereotype name="TRelationshipTemplate" metaclass="Standard.Association" owner-stereotype="mref#'' {a32cca04-f738-421e-b834-b0f13524e19e} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TRelationshipTemplate.label" uid="7f01001b-511e-4017-b6b4-729f68c85911" is-abstract="false">
                 <Icon path="res/icon/gui/relationship_template24.png"/>
@@ -140,10 +167,19 @@
             <Stereotype name="TRequirement" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TRequirement.label" uid="2a38f650-7f59-41a7-a928-ac9cbe326f84" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
+                <TagTypes>
+                    <TagType name="name" uid="861f2d5c-8e08-4dff-a94a-530b2cf1293d" label="%tagtype.name.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
             </Stereotype>
             <Stereotype name="TRequirementDefinition" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TRequirementDefinition.label" uid="2637c4bd-ca93-4012-82ea-8ef2ba5ca444" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
+                <TagTypes>
+                    <TagType name="name" uid="1ebf9eaf-408b-4998-b9ec-fb33da299f99" label="%tagtype.name.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="lowerBound" uid="aa21a993-773c-4ca5-8ec7-ec23f8ef5bf7" label="%tagtype.lowerBound.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="upperBound" uid="ca00f259-49c6-497f-b835-c0dd99741ace" label="%tagtype.upperBound.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                    <TagType name="requirementType" uid="049ab71b-8ecb-4688-81a6-25d36a905aac" label="%tagtype.requirementType.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
             </Stereotype>
             <Stereotype name="TServiceTemplate" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TServiceTemplate.label" uid="09682faf-27b8-4c4b-a5e6-22fe18303161" is-abstract="false">
                 <Icon path="res/icon/gui/service_template24.png"/>
@@ -168,6 +204,9 @@
             <Stereotype name="TargetElementType" metaclass="Standard.DataType" owner-stereotype="" is-hidden="false" label="%stereotype.TargetElementType.label" uid="e4524aff-a7ca-4e8c-b752-7f45c18399b6" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
+                <TagTypes>
+                    <TagType name="ref" uid="bc69630b-8a23-4f1b-ae43-c59421c68e51" label="%tagtype.ref.label" parameter-card="1" is-hidden="false" is-signed="false"/>
+                </TagTypes>
             </Stereotype>
             <Stereotype name="ToscaModel" metaclass="Standard.Package" owner-stereotype="" is-hidden="false" label="%stereotype.ToscaModel.label" uid="20565008-115d-4fad-800f-134ab276f611" is-abstract="false">
                 <Icon path=""/>
