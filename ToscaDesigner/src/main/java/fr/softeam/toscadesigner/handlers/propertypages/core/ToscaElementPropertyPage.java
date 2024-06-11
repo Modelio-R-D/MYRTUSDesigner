@@ -9,10 +9,7 @@ import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("4a086c41-a7ac-4984-8917-85fb7f0be381")
-public abstract class ToscaElementPropertyPage<T> implements IPropertyContent {
-    @objid ("9f6c21b2-53b0-4eac-8fdf-a9f3d8802158")
-    protected int _currentRow;
-
+public abstract class ToscaElementPropertyPage<T extends Object> implements IPropertyContent {
     @objid ("8d49f630-4b14-44d3-8f25-5f1962392847")
     private final String _ownerSeparator = ".";
 

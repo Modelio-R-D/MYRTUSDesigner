@@ -38,7 +38,6 @@ fr\softeam\toscadesigner\api\tosca\standard\association\TRelationshipTemplate$Md
 fr\softeam\toscadesigner\api\tosca\standard\class_\TDocumentation$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\datatype\MaxInstancesType$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\package_\ToscaModel$MdaTypes.class
-fr\softeam\toscadesigner\handlers\propertypages\serviceTemplate\TNodeTemplatePropertyPage.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TDocumentation.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\RelationshipConstraintType.class
 fr\softeam\toscadesigner\api\tosca\standard\datatype\SourceElementType$MdaTypes.class

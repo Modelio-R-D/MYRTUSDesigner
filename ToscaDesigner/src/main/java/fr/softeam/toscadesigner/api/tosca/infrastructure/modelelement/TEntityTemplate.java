@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 04/06/2024 17:23 by Modelio Studio.
+ * This file was generated on 11/06/2024 17:18 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -39,20 +39,20 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("3755a2fb-589d-4ca5-9376-f62f5356aa11")
 public class TEntityTemplate extends TExtensibleElements implements IMdaProxy {
-    @objid ("c20c499e-c55f-4cd6-ac04-bfb7b7dd1d6d")
+    @objid ("80c31915-a94e-4ad3-817f-cf043e09dd9a")
     public static final String STEREOTYPE_NAME = "TEntityTemplate";
 
-    @objid ("918d286d-623a-4b45-a0ec-9b67580d01ec")
-    public static final String ID_TAGTYPE = "id";
+    @objid ("32b3212c-aa46-4a82-8b37-960f3a86c913")
+    public static final String ID_PROPERTY = "id";
 
-    @objid ("3465f75d-75f1-4691-953f-2bc6f999e06a")
-    public static final String PROPERTIES_TAGTYPE = "properties";
+    @objid ("f2949b63-0ecd-415c-9b6c-5d2eb31ebba8")
+    public static final String PROPERTIES_PROPERTY = "properties";
 
-    @objid ("fbfd47b5-a28b-4ddb-a36b-c3bee5f16a5e")
-    public static final String PROPERTYCONSTRAINTS_TAGTYPE = "propertyConstraints";
+    @objid ("2b6c94bd-3724-4a08-9936-0e395d8e4731")
+    public static final String PROPERTYCONSTRAINTS_PROPERTY = "propertyConstraints";
 
-    @objid ("4f335839-e2b5-4bd3-bd27-c2c3c903ca38")
-    public static final String TYPE_TAGTYPE = "type";
+    @objid ("ba7b7700-df6f-42fd-a642-191e5164731a")
+    public static final String TYPE_PROPERTY = "type";
 
     /**
      * Tells whether a {@link TEntityTemplate proxy} can be instantiated from a {@link MObject} checking it is a {@link ModelElement} stereotyped << TEntityTemplate >>.
@@ -61,7 +61,7 @@ public class TEntityTemplate extends TExtensibleElements implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("a3f08921-db26-4b05-b4f4-865658123e7b")
+    @objid ("ef47caa2-aeec-4ecc-9061-064d892c1135")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (TEntityTemplate.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(TEntityTemplate.MdaTypes.STEREOTYPE_ELT));
     }
@@ -71,7 +71,7 @@ public class TEntityTemplate extends TExtensibleElements implements IMdaProxy {
      * 
      * @return a {@link TEntityTemplate} proxy on the created {@link ModelElement}.
      */
-    @objid ("30f9a560-35da-4154-af8a-1053d4664777")
+    @objid ("e19cf2ca-4a92-48d8-bd9b-2be207621a22")
     public static TEntityTemplate create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(TEntityTemplate.MdaTypes.STEREOTYPE_ELT);
@@ -85,7 +85,7 @@ public class TEntityTemplate extends TExtensibleElements implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link TEntityTemplate} proxy or <i>null</i>.
      */
-    @objid ("8fc8a375-e413-4dcd-bbe9-a9367d83e18a")
+    @objid ("70a0deee-50b8-45b7-92bd-e6333955745c")
     public static TEntityTemplate instantiate(final ModelElement obj) {
         return TEntityTemplate.canInstantiate(obj) ? new TEntityTemplate(obj) : null;
     }
@@ -98,7 +98,7 @@ public class TEntityTemplate extends TExtensibleElements implements IMdaProxy {
      * @return a {@link TEntityTemplate} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("9895fa18-9acf-4079-a58e-2a58118d4584")
+    @objid ("c97fcec7-e2d9-478d-9105-35ec5636fa37")
     public static TEntityTemplate safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (TEntityTemplate.canInstantiate(obj))
         	return new TEntityTemplate(obj);
@@ -106,7 +106,7 @@ public class TEntityTemplate extends TExtensibleElements implements IMdaProxy {
         	throw new IllegalArgumentException("TEntityTemplate: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("41db776d-1d27-45b3-9dc0-5b825d48a0ff")
+    @objid ("5c8b7632-77e5-4def-9416-5ccc2810b4c7")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -126,53 +126,77 @@ public class TEntityTemplate extends TExtensibleElements implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("84f74b26-fd62-4744-a7e9-ed5b2b8f7cfd")
+    @objid ("87b7748a-9e32-4572-9cb1-77c1e4f099d7")
     @Override
     public ModelElement getElement() {
         return (ModelElement)super.getElement();
     }
 
     /**
-     * Getter for string property 'id'
+     * Getter for property 'TEntityTemplate.id'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("80fb3749-2c8a-42be-b359-88bd3c602e22")
+    @objid ("7b0fc1ac-a22c-4e89-a8df-c6e27b9cebb4")
     public String getId() {
-        return this.elt.getTagValue(TEntityTemplate.MdaTypes.ID_TAGTYPE_ELT);
+        String value = this.elt.getProperty(TEntityTemplate.MdaTypes.STEREOTYPE_ELT,
+                                            TEntityTemplate.MdaTypes.ID_PROPERTY_ELT.getName());
+        if (value == null) {
+          value = TEntityTemplate.MdaTypes.ID_PROPERTY_ELT.getDefaultValue();
+        }
+        return (String) PropertyConverter.convertToObject(TEntityTemplate.MdaTypes.ID_PROPERTY_ELT, value, this.elt);
+        
     }
 
     /**
-     * Getter for string property 'properties'
+     * Getter for property 'TEntityTemplate.properties'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a2ac6caf-97cd-4f48-8258-b29f7fc1a1d4")
+    @objid ("bcdf9e6d-be4a-45bd-a816-0dae1cb2bbe3")
     public String getProperties() {
-        return this.elt.getTagValue(TEntityTemplate.MdaTypes.PROPERTIES_TAGTYPE_ELT);
+        String value = this.elt.getProperty(TEntityTemplate.MdaTypes.STEREOTYPE_ELT,
+                                            TEntityTemplate.MdaTypes.PROPERTIES_PROPERTY_ELT.getName());
+        if (value == null) {
+          value = TEntityTemplate.MdaTypes.PROPERTIES_PROPERTY_ELT.getDefaultValue();
+        }
+        return (String) PropertyConverter.convertToObject(TEntityTemplate.MdaTypes.PROPERTIES_PROPERTY_ELT, value, this.elt);
+        
     }
 
     /**
-     * Getter for string property 'propertyConstraints'
+     * Getter for property 'TEntityTemplate.propertyConstraints'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("c53a6489-aa89-4aa5-a110-f67ff469f1ec")
+    @objid ("15524041-83f5-4de9-91ed-c8341d68642f")
     public String getPropertyConstraints() {
-        return this.elt.getTagValue(TEntityTemplate.MdaTypes.PROPERTYCONSTRAINTS_TAGTYPE_ELT);
+        String value = this.elt.getProperty(TEntityTemplate.MdaTypes.STEREOTYPE_ELT,
+                                            TEntityTemplate.MdaTypes.PROPERTYCONSTRAINTS_PROPERTY_ELT.getName());
+        if (value == null) {
+          value = TEntityTemplate.MdaTypes.PROPERTYCONSTRAINTS_PROPERTY_ELT.getDefaultValue();
+        }
+        return (String) PropertyConverter.convertToObject(TEntityTemplate.MdaTypes.PROPERTYCONSTRAINTS_PROPERTY_ELT, value, this.elt);
+        
     }
 
     /**
-     * Getter for string property 'type'
+     * Getter for property 'TEntityTemplate.type'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("34062f8f-20e4-475e-a1f0-347059a538f2")
+    @objid ("c15715a0-6bdc-41a8-8640-2a7582f26e1d")
     public String getType() {
-        return this.elt.getTagValue(TEntityTemplate.MdaTypes.TYPE_TAGTYPE_ELT);
+        String value = this.elt.getProperty(TEntityTemplate.MdaTypes.STEREOTYPE_ELT,
+                                            TEntityTemplate.MdaTypes.TYPE_PROPERTY_ELT.getName());
+        if (value == null) {
+          value = TEntityTemplate.MdaTypes.TYPE_PROPERTY_ELT.getDefaultValue();
+        }
+        return (String) PropertyConverter.convertToObject(TEntityTemplate.MdaTypes.TYPE_PROPERTY_ELT, value, this.elt);
+        
     }
 
-    @objid ("4b6e243f-6d41-45b8-a023-e1eb95a07e8a")
+    @objid ("9165fd43-cede-45bd-82db-2846805e37e7")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -180,74 +204,82 @@ public class TEntityTemplate extends TExtensibleElements implements IMdaProxy {
     }
 
     /**
-     * Setter for string property 'id'
+     * Setter for property 'TEntityTemplate.id'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("38d8cbfa-e795-4f58-a2b1-48a5d54f4ad8")
+    @objid ("56659e1f-4d5a-425a-9627-fa1c501c943d")
     public void setId(final String value) {
-        this.elt.putTagValue(TEntityTemplate.MdaTypes.ID_TAGTYPE_ELT, value);
+        this.elt.setProperty(TEntityTemplate.MdaTypes.STEREOTYPE_ELT,
+                             TEntityTemplate.MdaTypes.ID_PROPERTY_ELT.getName(),
+                             PropertyConverter.convertToString(TEntityTemplate.MdaTypes.ID_PROPERTY_ELT, value));
     }
 
     /**
-     * Setter for string property 'properties'
+     * Setter for property 'TEntityTemplate.properties'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ded988eb-ef9d-4cb3-a1c3-5d0a1d9f5e1c")
+    @objid ("40e2f302-fb8c-4052-b3c2-e4deff90feef")
     public void setProperties(final String value) {
-        this.elt.putTagValue(TEntityTemplate.MdaTypes.PROPERTIES_TAGTYPE_ELT, value);
+        this.elt.setProperty(TEntityTemplate.MdaTypes.STEREOTYPE_ELT,
+                             TEntityTemplate.MdaTypes.PROPERTIES_PROPERTY_ELT.getName(),
+                             PropertyConverter.convertToString(TEntityTemplate.MdaTypes.PROPERTIES_PROPERTY_ELT, value));
     }
 
     /**
-     * Setter for string property 'propertyConstraints'
+     * Setter for property 'TEntityTemplate.propertyConstraints'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("05dfc182-5fd8-4cf3-bb61-c5001770b3ba")
+    @objid ("5ba40f7b-28fd-426b-8f5c-6c077f8c2a5c")
     public void setPropertyConstraints(final String value) {
-        this.elt.putTagValue(TEntityTemplate.MdaTypes.PROPERTYCONSTRAINTS_TAGTYPE_ELT, value);
+        this.elt.setProperty(TEntityTemplate.MdaTypes.STEREOTYPE_ELT,
+                             TEntityTemplate.MdaTypes.PROPERTYCONSTRAINTS_PROPERTY_ELT.getName(),
+                             PropertyConverter.convertToString(TEntityTemplate.MdaTypes.PROPERTYCONSTRAINTS_PROPERTY_ELT, value));
     }
 
     /**
-     * Setter for string property 'type'
+     * Setter for property 'TEntityTemplate.type'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("bdb74305-f3d5-4714-aa68-a1d3df352007")
+    @objid ("c6a4ac54-a3ef-46f5-8c27-acc8265dec64")
     public void setType(final String value) {
-        this.elt.putTagValue(TEntityTemplate.MdaTypes.TYPE_TAGTYPE_ELT, value);
+        this.elt.setProperty(TEntityTemplate.MdaTypes.STEREOTYPE_ELT,
+                             TEntityTemplate.MdaTypes.TYPE_PROPERTY_ELT.getName(),
+                             PropertyConverter.convertToString(TEntityTemplate.MdaTypes.TYPE_PROPERTY_ELT, value));
     }
 
-    @objid ("f95ebc0d-afec-405f-82b7-34910e4215de")
+    @objid ("03f8b341-1ac4-4822-ad44-4527c0f5beba")
     protected  TEntityTemplate(final ModelElement elt) {
         super(elt);
     }
 
     @objid ("db0f453b-312f-4dc2-a9b0-7bfbeba561bb")
     public static final class MdaTypes {
-        @objid ("faa80a47-efc2-44d7-a047-dfb77c2fa031")
+        @objid ("ab5437b4-6a59-40b1-8540-77752529f679")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("5595928a-0b84-447a-a835-9f6ffd3d8b55")
-        public static TagType PROPERTIES_TAGTYPE_ELT;
+        @objid ("96533e8e-8440-4e8f-abcc-d3308caef488")
+        public static PropertyDefinition ID_PROPERTY_ELT;
 
-        @objid ("8a9a05a0-8fd1-471d-9c28-df7d4a779c2d")
-        public static TagType PROPERTYCONSTRAINTS_TAGTYPE_ELT;
+        @objid ("03eaccf5-2937-4fc9-be6a-15a176dc8736")
+        public static PropertyDefinition TYPE_PROPERTY_ELT;
 
-        @objid ("7e66fd97-84f0-457b-9f74-a0a055c597eb")
-        public static TagType ID_TAGTYPE_ELT;
+        @objid ("4300f058-d666-4285-beef-744e36c4bf72")
+        public static PropertyDefinition PROPERTIES_PROPERTY_ELT;
 
-        @objid ("21fcc3ab-50f4-4d3a-b046-129ea3723397")
-        public static TagType TYPE_TAGTYPE_ELT;
+        @objid ("d8f8a1cb-597c-48af-9e12-28696ec3fb50")
+        public static PropertyDefinition PROPERTYCONSTRAINTS_PROPERTY_ELT;
 
-        @objid ("8ba18287-ab10-4484-a4b9-d1535efb998e")
+        @objid ("9d57d18c-2c18-4e08-8bf7-afecedc8a0ca")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("8867edd2-2f8f-4fbd-8893-e30fb5ace3a9")
+        @objid ("fa57c302-9571-4801-83b4-8452c654034b")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("c4db67a3-4c1a-4941-863c-1b754cba1123")
+        @objid ("0479114e-d82f-4250-b1ad-03c3e8da117b")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -255,21 +287,21 @@ public class TEntityTemplate extends TExtensibleElements implements IMdaProxy {
             STEREOTYPE_ELT = (Stereotype) session.findByRef(mRef);
             if (STEREOTYPE_ELT==null) missingRefs.add(mRef);
             
-            mRef = new MRef(TagType.MQNAME, "b146297a-aa0d-4c18-a0f4-c78f69c831cf", "properties");
-            PROPERTIES_TAGTYPE_ELT = (TagType) session.findByRef(mRef);
-            if (PROPERTIES_TAGTYPE_ELT==null) missingRefs.add(mRef);
+            mRef = new MRef(PropertyDefinition.MQNAME, "08cf32f2-2ecf-4716-9cdc-57e005f102f4", "id");
+            ID_PROPERTY_ELT = (PropertyDefinition) session.findByRef(mRef);
+            if (ID_PROPERTY_ELT==null) missingRefs.add(mRef);
             
-            mRef = new MRef(TagType.MQNAME, "0e4aba23-900f-400f-aaa3-69b0697bf3d3", "propertyConstraints");
-            PROPERTYCONSTRAINTS_TAGTYPE_ELT = (TagType) session.findByRef(mRef);
-            if (PROPERTYCONSTRAINTS_TAGTYPE_ELT==null) missingRefs.add(mRef);
+            mRef = new MRef(PropertyDefinition.MQNAME, "81ce7b34-f210-44ca-aa8e-ea79ded8c354", "type");
+            TYPE_PROPERTY_ELT = (PropertyDefinition) session.findByRef(mRef);
+            if (TYPE_PROPERTY_ELT==null) missingRefs.add(mRef);
             
-            mRef = new MRef(TagType.MQNAME, "53c84677-952b-4292-8a45-78a646366049", "id");
-            ID_TAGTYPE_ELT = (TagType) session.findByRef(mRef);
-            if (ID_TAGTYPE_ELT==null) missingRefs.add(mRef);
+            mRef = new MRef(PropertyDefinition.MQNAME, "c002b78d-ef37-4be9-a9a3-01222916e38c", "properties");
+            PROPERTIES_PROPERTY_ELT = (PropertyDefinition) session.findByRef(mRef);
+            if (PROPERTIES_PROPERTY_ELT==null) missingRefs.add(mRef);
             
-            mRef = new MRef(TagType.MQNAME, "be9e4c48-d3a9-452a-96ec-f5efdf1d105b", "type");
-            TYPE_TAGTYPE_ELT = (TagType) session.findByRef(mRef);
-            if (TYPE_TAGTYPE_ELT==null) missingRefs.add(mRef);
+            mRef = new MRef(PropertyDefinition.MQNAME, "3f291b75-a5ed-4de1-841e-0cdf4bdc3ba7", "propertyConstraints");
+            PROPERTYCONSTRAINTS_PROPERTY_ELT = (PropertyDefinition) session.findByRef(mRef);
+            if (PROPERTYCONSTRAINTS_PROPERTY_ELT==null) missingRefs.add(mRef);
             
             mRef = new MRef(Stereotype.MQNAME, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e", "MDAAssocDep");
             MDAASSOCDEP = (Stereotype) session.findByRef(mRef);
