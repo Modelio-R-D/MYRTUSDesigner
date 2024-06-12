@@ -1,11 +1,9 @@
 fr\softeam\toscadesigner\handlers\commands\submodel\CreateTopologyTemplateDiagramCommand.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\InterfacesType$MdaTypes.class
-fr\softeam\toscadesigner\api\tosca\standard\class_\TExtensibleElements.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TRelationshipType.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TDeploymentArtifact$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\TExtensibleElements.class
 fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\TExtensibleElements$MdaTypes.class
-fr\softeam\toscadesigner\api\tosca\standard\class_\ArtifactTemplate$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TPlan$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\ConstraintsType$MdaTypes.class
 fr\softeam\toscadesigner\handlers\commands\submodel\CreateCloudServiceArchiveCommand.class
@@ -31,7 +29,6 @@ fr\softeam\toscadesigner\api\tosca\standard\class_\TTopologyElementInstanceState
 fr\softeam\toscadesigner\api\automatic\standard\staticdiagram\TopologyTemplateDiagram$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\PoliciesType$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\PoliciesType.class
-fr\softeam\toscadesigner\api\tosca\standard\class_\ArtifactTemplate.class
 fr\softeam\toscadesigner\api\tosca\standard\datatype\SourceElementType.class
 fr\softeam\toscadesigner\handlers\commands\CreateToscaModelCommand.class
 fr\softeam\toscadesigner\api\tosca\standard\association\TRelationshipTemplate$MdaTypes.class
@@ -72,7 +69,6 @@ fr\softeam\toscadesigner\api\tosca\standard\datatype\TargetElementType.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\RequirementsType$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TRequirementDefinition.class
 fr\softeam\toscadesigner\api\ToscaDesignerProxyFactory$InstantiateVisitor.class
-fr\softeam\toscadesigner\api\tosca\standard\class_\TExtensibleElements$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\datatype\MaxInstancesType.class
 fr\softeam\toscadesigner\api\automatic\standard\staticdiagram\ServiceTemplateDiagram.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TTopologyTemplate.class
@@ -84,7 +80,6 @@ fr\softeam\toscadesigner\api\tosca\standard\class_\RelationshipConstraintsType$M
 fr\softeam\toscadesigner\handlers\commands\CreateDiagramCommand.class
 fr\softeam\toscadesigner\impl\ToscaDesignerLifeCycleHandler.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\CapabilitiesType$MdaTypes.class
-fr\softeam\toscadesigner\api\ToscaDesignerParameters.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TNodeType$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\RelationshipConstraintType$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TPlans$MdaTypes.class

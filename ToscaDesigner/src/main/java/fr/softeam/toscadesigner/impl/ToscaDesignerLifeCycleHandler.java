@@ -1,12 +1,14 @@
 package fr.softeam.toscadesigner.impl;
 
 import java.util.Map;
-import com.modeliosoft.modelio.api.module.mda.MdaProxyException;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
+
 import org.modelio.api.module.lifecycle.DefaultModuleLifeCycleHandler;
 import org.modelio.api.module.lifecycle.ModuleException;
 import org.modelio.vbasic.version.Version;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
 
 @objid ("e70ed160-3df8-403b-9c56-82de62675ef2")
 public class ToscaDesignerLifeCycleHandler extends DefaultModuleLifeCycleHandler {

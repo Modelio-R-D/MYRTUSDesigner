@@ -1,13 +1,14 @@
 package fr.softeam.toscadesigner.handlers.propertypages;
 
 import java.util.List;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
+
 import org.modelio.api.module.IModule;
 import org.modelio.api.module.propertiesPage.AbstractModulePropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.smkernel.mapi.MObject;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("5635dc32-d607-44ef-bf38-78a08ccba98b")
 public class ToscaPropertyPageHandler extends AbstractModulePropertyPage {

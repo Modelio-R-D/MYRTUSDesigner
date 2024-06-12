@@ -1,13 +1,14 @@
 package fr.softeam.toscadesigner.impl;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import org.modelio.api.module.AbstractJavaModule;
+import org.modelio.api.module.IPeerModule;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.api.module.lifecycle.IModuleLifeCycleHandler;
 import org.modelio.api.module.mda.IMdaExpert;
 import org.modelio.api.module.parameter.IParameterEditionModel;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("76d0c540-ed36-4597-90ed-7c8f8ec4c1c5")
 public class ToscaDesignerModule extends AbstractJavaModule {
@@ -36,7 +37,7 @@ public class ToscaDesignerModule extends AbstractJavaModule {
 
     @objid ("5dfbd4a2-782f-43bc-bc16-19bd9631c95e")
     @Override
-    public IToscaDesignerPeerModule getPeerModule() {
+    public IPeerModule getPeerModule() {
         return this.peerModule;
     }
 

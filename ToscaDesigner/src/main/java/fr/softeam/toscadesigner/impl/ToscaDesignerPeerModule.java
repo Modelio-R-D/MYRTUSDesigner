@@ -1,12 +1,13 @@
 package fr.softeam.toscadesigner.impl;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
+
+import org.modelio.api.module.IPeerModule;
 import org.modelio.api.module.context.configuration.IModuleAPIConfiguration;
 import org.modelio.vbasic.version.Version;
 
 @objid ("45eae62e-3ca2-4147-9843-7b75b7385a28")
-public class ToscaDesignerPeerModule implements IToscaDesignerPeerModule {
+public class ToscaDesignerPeerModule implements IPeerModule {
     @objid ("bf494723-b984-4e79-8900-554994e525d1")
     private IModuleAPIConfiguration peerConfiguration;
 
