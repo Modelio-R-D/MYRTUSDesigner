@@ -2,6 +2,16 @@
 <Module id="ToscaDesigner" class="fr.softeam.toscadesigner.impl.ToscaDesignerModule" binaryversion="5.4.01" version="0.0.2" schema-level="2" uid="942db9f9-6869-472c-b269-9ca7ec36a014" author="Softeam" image="" url="">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
+        <PathEntry path="lib/handlebars-4.4.0.jar"/>
+        <PathEntry path="lib/commons-lang3-3.14.0.jar"/>
+        <PathEntry path="lib/commons-text-1.11.0.jar"/>
+        <PathEntry path="lib/slf4j-api-2.0.12.jar"/>
+        <PathEntry path="lib/nashorn-core-15.4.jar"/>
+        <PathEntry path="lib/asm-7.3.1.jar"/>
+        <PathEntry path="lib/asm-commons-7.3.1.jar"/>
+        <PathEntry path="lib/asm-analysis-7.3.1.jar"/>
+        <PathEntry path="lib/asm-tree-7.3.1.jar"/>
+        <PathEntry path="lib/asm-util-7.3.1.jar"/>
     </ClassPath>
     <Profiles>
         <Profile uid="052601e7-dbd7-42a1-9f15-ca5eaf0707f8" id="Tosca">
