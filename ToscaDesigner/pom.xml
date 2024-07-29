@@ -5,7 +5,7 @@
   <!-- definition -->
   <groupId>fr.softeam</groupId>
   <artifactId>toscadesigner</artifactId>
-  <version>0.0.2</version>
+  <version>0.0.6</version>
   <name>ToscaDesigner</name>
   <repositories>
       <repository>
@@ -42,7 +42,7 @@
     	<dependency>
             <groupId>com.github.jknack</groupId>
             <artifactId>handlebars</artifactId>
-            <version>4.4.0</version>
+            <version>4.3.1</version>
             <type>jar</type>
         </dependency>
     </dependencies>
