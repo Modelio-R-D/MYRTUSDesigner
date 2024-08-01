@@ -5,40 +5,59 @@ import java.io.IOException;
 import java.io.StringWriter;
 import java.util.List;
 
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.FileDialog;
 import org.modelio.api.module.IModule;
 import org.modelio.api.module.command.DefaultModuleCommandHandler;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 import com.github.jknack.handlebars.Handlebars;
+import com.github.jknack.handlebars.Helper;
+import com.github.jknack.handlebars.Options;
 import com.github.jknack.handlebars.Template;
+import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
 
 public class ExportToscaModelCommand extends DefaultModuleCommandHandler {
 
+    private final String templatesPath = "/fr/softeam/templates/";
+
     @Override
     public void actionPerformed(List<MObject> selectedObjects, IModule module) {
-        Handlebars handlebars = new Handlebars();
-        MyObject data = new MyObject("John Doe", 30);
-        String templateContent = "{{name}} is {{age}} years old.";
+        Handlebars handlebars = new Handlebars(new ClassPathTemplateLoader(templatesPath, ".hbs"));
+       // handlebars.setInfiniteLoops(true);
+        handlebars.setPrettyPrint(true);
+        handlebars.registerHelper("getDerivedFrom", new Helper<ModelElement>() {
+            @Override
+            public Object apply(ModelElement context, Options options) throws IOException {
+                Stereotype stereotype = context.getExtension().get(0).getParent();
+                String derivedFrom = context.getProperty(stereotype, "derivedFrom");
+                return derivedFrom;
+            }
+        });
         try (StringWriter writer = new StringWriter()) {
-            Template template = handlebars.compileInline(templateContent);
+            Template mainTemplate = handlebars.compile("_mainTemplate");
 
-            template.apply(selectedObjects.get(0), writer);
-            
+            mainTemplate.apply(selectedObjects.get(0), writer);
+
             FileDialog fileDialog = new FileDialog(Display.getCurrent().getActiveShell(), SWT.SAVE);
             fileDialog.setFilterExtensions(new String[]{"*.tosca"}); // Optional filter
-            
+
             String filePath = fileDialog.open();
             if (filePath != null) {
-                
-                    try (FileWriter fileWriter = new FileWriter(filePath)) {
-            fileWriter.write(writer.toString());
-        
+
+                try (FileWriter fileWriter = new FileWriter(filePath)) {
+                    fileWriter.write(writer.toString());
+
                     // Handle success or show a message dialog
                 } catch (IOException ex) {
-                    // Handle error or show an error message dialog
+                    ex.printStackTrace();
+                    MessageDialog.openError(Display.getCurrent().getActiveShell(), "TOSCA export error", ex.getLocalizedMessage() + '\n' + ex.toString());
+
                 }
             }
         } catch (IOException e) {
@@ -65,23 +84,24 @@ public class ExportToscaModelCommand extends DefaultModuleCommandHandler {
 
         String result = renderTemplate(data, templateContent);
         System.out.println(result); // Output: John Doe is 30 years old.
-        
+
     }
-    
+
     static class MyObject {
+
         String name;
         int age;
-    
+
         public MyObject(String name, int age) {
             this.name = name;
             this.age = age;
         }
-    
-        public String getName(){
+
+        public String getName() {
             return name;
         }
-    
-        public Integer getAge(){
+
+        public Integer getAge() {
             return age;
         }
     }
