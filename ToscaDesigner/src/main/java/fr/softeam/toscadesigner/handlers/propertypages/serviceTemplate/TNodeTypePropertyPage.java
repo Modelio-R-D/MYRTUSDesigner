@@ -1,10 +1,8 @@
 package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("8e6ae627-578f-422f-8de0-77c04824219b")
 public class TNodeTypePropertyPage<T extends TNodeType> extends TEntityTypePropertyPage<T> {
@@ -28,7 +26,7 @@ public class TNodeTypePropertyPage<T extends TNodeType> extends TEntityTypePrope
              this._element.setInstanceStates(null);
              break;
          case 5:
-             this._element.setInterfaces(null);
+             //this._element.setInterfaces(null);
              break;
          
          }
@@ -41,7 +39,7 @@ public class TNodeTypePropertyPage<T extends TNodeType> extends TEntityTypePrope
         table.addProperty("Requirement Definitions", getNotNull((String.valueOf(this._element.getRequirementDefinitions()))));
         table.addProperty("Capabilities Definitions", getNotNull((String.valueOf(this._element.getCapabilityDefinitions()))));
         table.addProperty("Instance States", getNotNull((String.valueOf(this._element.getInstanceStates()))));
-        table.addProperty("Intefaces", getNotNull((String.valueOf(this._element.getInterfaces()))));
+        //table.addProperty("Intefaces", getNotNull((String.valueOf(this._element.getInterfaces()))));
     }
 
 }

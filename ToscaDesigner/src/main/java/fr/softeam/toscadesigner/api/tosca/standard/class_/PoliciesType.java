@@ -8,7 +8,9 @@ package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.impl.IMdaProxy;
+import fr.softeam.toscadesigner.impl.MdaProxyException;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
@@ -16,11 +18,6 @@ import org.modelio.metamodel.uml.infrastructure.TagType;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.smkernel.mapi.MObject;
 import org.modelio.vcore.smkernel.mapi.MRef;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.toscadesigner.impl.IMdaProxy;
-import fr.softeam.toscadesigner.impl.MdaProxyException;
 
 /**
  * Proxy class to handle a {@link Class} with << PoliciesType >> stereotype.
@@ -34,8 +31,9 @@ public class PoliciesType implements IMdaProxy {
 
     /**
      * The underlying {@link Class} represented by this proxy, never null.
+     * 
      */
-    @objid ("0831c2d0-b366-4599-a15c-cb84896b355c")
+    @objid ("7b7eddc1-37f9-4574-9f60-5c53bb3972f2")
     protected final Class elt;
 
     /**
@@ -52,7 +50,6 @@ public class PoliciesType implements IMdaProxy {
 
     /**
      * Create a new {@link Class} stereotyped << PoliciesType >> then instantiate a {@link PoliciesType} proxy.
-     * 
      * @return a {@link PoliciesType} proxy on the created {@link Class}.
      */
     @objid ("b266ddc9-7639-4078-8313-9562c817975e")
@@ -78,16 +75,16 @@ public class PoliciesType implements IMdaProxy {
      * Tries to instantiate a {@link PoliciesType} proxy from a {@link Class} stereotyped << PoliciesType >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link Class}
      * @return a {@link PoliciesType} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("c8b9b817-1dd5-4c5e-884a-49b049c4115f")
     public static PoliciesType safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (PoliciesType.canInstantiate(obj))
-        	return new PoliciesType(obj);
+            return new PoliciesType(obj);
         else
-        	throw new IllegalArgumentException("PoliciesType: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("PoliciesType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("c0b1cd39-68d2-4c1e-9e31-3c3be07e4090")
@@ -107,7 +104,7 @@ public class PoliciesType implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
      * @return the Class represented by this proxy, never null.
      */
     @objid ("a3e35f43-90f0-441f-8cd9-63c5b4939446")
@@ -119,7 +116,6 @@ public class PoliciesType implements IMdaProxy {
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-        
     }
 
     @objid ("9ad691a4-e857-4c06-8e3b-e6bd9ee1dc27")
@@ -129,13 +125,13 @@ public class PoliciesType implements IMdaProxy {
 
     @objid ("3d02256f-9e60-4abb-a38b-34b82c7390f3")
     public static final class MdaTypes {
-        @objid ("b329a283-97c0-4e64-8c55-3ddb33f1a0f5")
+        @objid ("3f6dc425-244c-4198-b700-c6682b20fdf9")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("4237b76a-cd5f-4ccf-91f8-b00b56045e75")
+        @objid ("24ae6cee-058e-45c4-b3f7-cdc87e8bccb9")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("a07a3201-4553-4c5e-9f88-83ede499bde0")
+        @objid ("1b3ece9a-c9ce-4980-be97-8c4855285997")
         private static TagType MDAASSOCDEP_ROLE;
 
         @objid ("7ebfe938-db82-417f-a909-eaf6bd1098e6")
@@ -155,7 +151,6 @@ public class PoliciesType implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
-            
         }
 
     }

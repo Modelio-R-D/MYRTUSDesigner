@@ -1,16 +1,13 @@
 package fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate;
 
 import java.util.List;
-
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilitiesType;
+import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.CapabilitiesType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("83e83f25-36df-4af3-a9ec-d48f34eb1aec")
 public class TNodeTemplatePropertyPage<T extends TNodeTemplate> extends ToscaElementPropertyPage<T> {
@@ -39,7 +36,7 @@ public class TNodeTemplatePropertyPage<T extends TNodeTemplate> extends ToscaEle
          case 4:
              ModelElement elt = getModelElt(this._capabilities, value);
         if (elt.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, CapabilitiesType.STEREOTYPE_NAME)) {
-        this._element.setCapabilities((CapabilitiesType) elt);
+        //this._element.setCapabilities((CapabilitiesType) elt);
         }
              
              break;
@@ -47,7 +44,7 @@ public class TNodeTemplatePropertyPage<T extends TNodeTemplate> extends ToscaEle
              this._element.setDeploymentArtifacts(null);
              break;
          case 6:
-             this._element.setPolicies(null);
+             //this._element.setPolicies(null);
              break;
          case 7:
              this._element.setRequirements(null);
@@ -67,9 +64,9 @@ public class TNodeTemplatePropertyPage<T extends TNodeTemplate> extends ToscaEle
         //table.addProperty("Capabilities0", getCamelName(this._element.getCapabilities()()), getCamelNames(this._c));
         
         
-        table.addProperty("Capabilities", getNotNull((String.valueOf(this._element.getCapabilities()))));
+        // table.addProperty("Capabilities", getNotNull((String.valueOf(this._element.getCapabilities()))));
         table.addProperty("Deployment Artifacts", getNotNull((String.valueOf(this._element.getDeploymentArtifacts()))));
-        table.addProperty("Policies", getNotNull((String.valueOf(this._element.getPolicies()))));
+        // table.addProperty("Policies", getNotNull((String.valueOf(this._element.getPolicies()))));
         table.addProperty("Requirements", getNotNull((String.valueOf(this._element.getRequirements()))));
     }
 
