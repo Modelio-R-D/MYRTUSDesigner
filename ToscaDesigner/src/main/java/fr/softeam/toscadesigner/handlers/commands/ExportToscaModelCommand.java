@@ -3,6 +3,7 @@ package fr.softeam.toscadesigner.handlers.commands;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.StringWriter;
+import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.jface.dialogs.MessageDialog;
@@ -13,7 +14,6 @@ import org.modelio.api.module.IModule;
 import org.modelio.api.module.command.DefaultModuleCommandHandler;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 import com.github.jknack.handlebars.Handlebars;
@@ -31,14 +31,15 @@ public class ExportToscaModelCommand extends DefaultModuleCommandHandler {
         Handlebars handlebars = new Handlebars(new ClassPathTemplateLoader(templatesPath, ".hbs"));
        // handlebars.setInfiniteLoops(true);
         handlebars.setPrettyPrint(true);
-        handlebars.registerHelper("getDerivedFrom", new Helper<ModelElement>() {
+        handlebars.registerHelper("getProperty", new Helper<ModelElement>() {
             @Override
             public Object apply(ModelElement context, Options options) throws IOException {
-                Stereotype stereotype = context.getExtension().get(0).getParent();
-                String derivedFrom = context.getProperty(stereotype, "derivedFrom");
+                Stereotype tEntityTypeStereotype = context.getExtension().get(0).getParent();
+                String derivedFrom = context.getProperty(tEntityTypeStereotype, (String) options.params[0]);
                 return derivedFrom;
             }
         });
+
         try (StringWriter writer = new StringWriter()) {
             Template mainTemplate = handlebars.compile("_mainTemplate");
 
