@@ -1,11 +1,11 @@
 node_types:
-  {{#with extendedElement}}
+  {{#each extendedElement}}
   {{owner.name}}.{{name}}:
     description: {{description}}
-    derived_from: {{#each .}}{{getDerivedFrom}}{{/each}}
+    derived_from: {{getProperty this "derivedFrom"}}
     metadata:
-      targetNamespace: "{{properties.targetNamespace}}"
-      abstract: "{{abstract}}"
-      final: "{{final}}"
-  {{/with}}
+      targetNamespace: "{{getProperty this "targetNamespace"}}"
+      abstract: "{{getProperty this "abstract"}}"
+      final: "{{getProperty this "final"}}"
+  {{/each}}
 

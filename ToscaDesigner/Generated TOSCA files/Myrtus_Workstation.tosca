@@ -5,7 +5,7 @@ node_types:
     description: 
     derived_from: tosca.nodes.Compute
     metadata:
-      targetNamespace: ""
-      abstract: ""
-      final: ""
+      targetNamespace: "example.eu.myrtus.nodetypes"
+      abstract: "false"
+      final: "false"
 
