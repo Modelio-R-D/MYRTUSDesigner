@@ -388,7 +388,7 @@
                 </Handler>
             </Command>
             <Command id="Export" label="%command.Export.label" tooltip="%command.Export.tooltip" image="res/icon/gui/script24.png" modify-model="false">
-                <Scope metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeType"/>
+                <Scope metaclass="Infrastructure.ModelElement" stereotype="ToscaDesigner#TNodeType"/>
                 <Handler class="fr.softeam.toscadesigner.handlers.commands.ExportToscaModelCommand">
                     <HParameter name="name" value=""/>
                 </Handler>
