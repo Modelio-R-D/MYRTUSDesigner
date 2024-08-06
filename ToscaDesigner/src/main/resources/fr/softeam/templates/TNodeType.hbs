@@ -1,5 +1,4 @@
 node_types:
-  {{#each extendedElement}}
   {{owner.name}}.{{name}}:
     description: {{description}}
     derived_from: {{getProperty this "derivedFrom"}}
@@ -7,5 +6,4 @@ node_types:
       targetNamespace: "{{getProperty this "targetNamespace"}}"
       abstract: "{{getProperty this "abstract"}}"
       final: "{{getProperty this "final"}}"
-  {{/each}}
 
