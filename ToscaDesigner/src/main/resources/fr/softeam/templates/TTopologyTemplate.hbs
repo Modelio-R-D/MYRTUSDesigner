@@ -1,0 +1,40 @@
+metadata:
+  targetNamespace: "{{targetNamespace}}"
+  name: "{{name}}"
+imports:
+{{#imports}}
+  - file: {{importFileName}}
+    namespace_uri: {{importNamespaceUri}}
+    namespace_prefix: {{importNamespacePrefix}}
+{{/imports}}
+topology_template:
+  node_templates:
+{{#ownedElement}}  
+    {{name}}:
+      type: {{type.name}}
+      metadata:
+        displayName: "{{displayName}}"
+      properties:
+      {{#type-properties}}
+        {{name}}: "{{getProperty nodeTemplate (lookup name)}}"
+      {{/type-properties}}
+      requirements:
+      {{#requirements}}
+        - {{name}}:
+            node: {{node}}
+            relationship: {{relationship}}
+            capability: {{capability}}
+      {{/requirements}}
+      artifacts:
+      {{#artifacts}}
+        {{name}}:
+          type: {{type}}
+          deploy_path: {{deployPath}}
+          file: {{file}}
+      {{/artifacts}}
+{{/ownedElement}}
+  relationship_templates:
+{{#relationshipTemplates}}
+    {{ownedEnd-name}}:
+      type: {{toscaRelationshipType}}
+{{/relationshipTemplates}}

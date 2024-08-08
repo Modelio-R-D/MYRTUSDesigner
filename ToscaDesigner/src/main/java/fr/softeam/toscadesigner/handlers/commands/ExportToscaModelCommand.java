@@ -24,6 +24,7 @@ import org.modelio.vcore.smkernel.mapi.MObject;
 import com.github.jknack.handlebars.Handlebars;
 import com.github.jknack.handlebars.Options;
 import com.github.jknack.handlebars.Template;
+import com.github.jknack.handlebars.helper.ConditionalHelpers;
 import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
 
 public class ExportToscaModelCommand extends DefaultModuleCommandHandler {
@@ -47,7 +48,7 @@ public class ExportToscaModelCommand extends DefaultModuleCommandHandler {
 
 		MObject selectedObject = selectedObjects.get(0);
 
-		if (isNodeType(selectedObject)) {
+		if (isToscaNodeType(selectedObject) || isToscaTopologyTemplate(selectedObject)) {
 			generateToscaFile(selectedObject);
 		} else if (isToscaModel(selectedObject)) {
 			generateCsarFile(selectedObject);
@@ -57,10 +58,14 @@ public class ExportToscaModelCommand extends DefaultModuleCommandHandler {
 		}
 	}
 
-	private boolean isNodeType(MObject object) {
+	private boolean isToscaTopologyTemplate(MObject object) {
+		Stereotype nodeTypeStereotype = moduleContext.getModelingSession().getMetamodelExtensions()
+				.getStereotype("TTopologyTemplate", object.getMClass());
+		ModelElement element = (ModelElement) object;
+		return (nodeTypeStereotype != null && element.isStereotyped(nodeTypeStereotype));
+	}
 
-		// Implement logic to determine if the object is a Node Type
-		// This might involve checking for specific stereotypes or properties
+	private boolean isToscaNodeType(MObject object) {
 		Stereotype nodeTypeStereotype = moduleContext.getModelingSession().getMetamodelExtensions()
 				.getStereotype("TNodeType", object.getMClass());
 		ModelElement element = (ModelElement) object;
@@ -146,6 +151,10 @@ public class ExportToscaModelCommand extends DefaultModuleCommandHandler {
 			Stereotype entityTypeStereotype = context.getExtension().get(0).getParent();
 			return context.getProperty(entityTypeStereotype, (String) options.params[0]);
 		});
+//		handlebars.registerHelper("equals", (Object context, Options options) -> {
+//			return options.context.equals( options.params[0]);
+//		});
+		handlebars.registerHelpers(ConditionalHelpers.class);
 		return handlebars;
 	}
 
@@ -185,7 +194,7 @@ public class ExportToscaModelCommand extends DefaultModuleCommandHandler {
 		ModelTree modelPackage = (ModelTree) toscaModel;
 
 		for (ModelTree element : modelPackage.getOwnedElement()) {
-			if (isNodeType(element)) {
+			if (isToscaNodeType(element) || isToscaTopologyTemplate(element)) {
 				String toscaContent = renderTemplate(handlebars, element);
 				String fileName = element.getName() + ".tosca";
 
