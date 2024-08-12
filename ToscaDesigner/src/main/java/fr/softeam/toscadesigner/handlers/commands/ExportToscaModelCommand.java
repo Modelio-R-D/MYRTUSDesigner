@@ -151,9 +151,6 @@ public class ExportToscaModelCommand extends DefaultModuleCommandHandler {
 			Stereotype entityTypeStereotype = context.getExtension().get(0).getParent();
 			return context.getProperty(entityTypeStereotype, (String) options.params[0]);
 		});
-//		handlebars.registerHelper("equals", (Object context, Options options) -> {
-//			return options.context.equals( options.params[0]);
-//		});
 		handlebars.registerHelpers(ConditionalHelpers.class);
 		return handlebars;
 	}
@@ -193,7 +190,7 @@ public class ExportToscaModelCommand extends DefaultModuleCommandHandler {
 
 		ModelTree modelPackage = (ModelTree) toscaModel;
 
-		for (ModelTree element : modelPackage.getOwnedElement()) {
+		for (MObject element : modelPackage.getCompositionChildren()) {
 			if (isToscaNodeType(element) || isToscaTopologyTemplate(element)) {
 				String toscaContent = renderTemplate(handlebars, element);
 				String fileName = element.getName() + ".tosca";
