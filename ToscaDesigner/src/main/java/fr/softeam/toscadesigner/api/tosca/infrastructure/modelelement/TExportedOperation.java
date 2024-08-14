@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 02/08/2024 16:15 by Modelio Studio.
+ * This file was generated on 13/08/2024 17:47 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -39,22 +39,22 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("dea0b4e7-dfa3-46aa-a733-3f728879a76b")
 public class TExportedOperation implements IMdaProxy {
-    @objid ("f007f1d6-e74a-4e15-9450-d3f6b05994b2")
+    @objid ("96841deb-f17d-4a9f-8772-5d240dc0ae3f")
     public static final String STEREOTYPE_NAME = "TExportedOperation";
 
-    @objid ("b8609305-302d-4831-b15a-2140cf684392")
+    @objid ("f411db5c-835d-4aa8-a942-8149c001991b")
     public static final String NODEOPERATION_PROPERTY = "nodeOperation";
 
-    @objid ("2305edfd-7e52-416a-9551-e61782d8fdde")
+    @objid ("ee9d13f3-362b-4496-9fd6-cdc61be3a3dc")
     public static final String PLAN_PROPERTY = "plan";
 
-    @objid ("425aa330-3ee3-4348-af98-a6e0a771a39f")
+    @objid ("2229aab3-15c1-4608-9d28-2ef8e0ace091")
     public static final String RELATIONSHIPOPERATION_PROPERTY = "relationshipOperation";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
      */
-    @objid ("3119d6fc-4dfd-4d23-8fe6-ce80931417ee")
+    @objid ("45c76188-79b9-4c15-b63d-c22e0279c30b")
     protected final ModelElement elt;
 
     /**
@@ -64,7 +64,7 @@ public class TExportedOperation implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("5668c3bb-ec26-432c-9b48-6e79d8c50655")
+    @objid ("14a3efdc-54e6-47db-8359-31753a7d9289")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (TExportedOperation.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(TExportedOperation.MdaTypes.STEREOTYPE_ELT));
     }
@@ -74,7 +74,7 @@ public class TExportedOperation implements IMdaProxy {
      * 
      * @return a {@link TExportedOperation} proxy on the created {@link ModelElement}.
      */
-    @objid ("448a1ae7-3ebf-4e9b-9c8c-c964d164d9a4")
+    @objid ("a1814799-a4fc-4128-b79d-7e63406187f7")
     public static TExportedOperation create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(TExportedOperation.MdaTypes.STEREOTYPE_ELT);
@@ -88,7 +88,7 @@ public class TExportedOperation implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link TExportedOperation} proxy or <i>null</i>.
      */
-    @objid ("1ef75224-77a0-4b33-a478-d9d7bda7713f")
+    @objid ("244636cf-9979-4934-8c66-7009a169522a")
     public static TExportedOperation instantiate(final ModelElement obj) {
         return TExportedOperation.canInstantiate(obj) ? new TExportedOperation(obj) : null;
     }
@@ -101,7 +101,7 @@ public class TExportedOperation implements IMdaProxy {
      * @return a {@link TExportedOperation} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("1095ddd9-2a24-4553-91fc-5fde221a92a8")
+    @objid ("15789e17-021d-4ada-857f-8b1765a3bf04")
     public static TExportedOperation safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (TExportedOperation.canInstantiate(obj))
         	return new TExportedOperation(obj);
@@ -109,7 +109,7 @@ public class TExportedOperation implements IMdaProxy {
         	throw new IllegalArgumentException("TExportedOperation: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("29776db2-a121-4daa-9ed1-10b691742d02")
+    @objid ("5a857882-2818-4831-9907-1183bbc7e131")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -129,7 +129,7 @@ public class TExportedOperation implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("5365f184-fa21-45e0-ac1d-4d73f67b62fe")
+    @objid ("33d9df2e-de46-4230-a95a-30cdce2db232")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -139,7 +139,7 @@ public class TExportedOperation implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("feca0803-976e-4e7b-87a9-9f141a2c2c2b")
+    @objid ("b2e4fba8-5572-4dbc-97a5-1afb2d7f92ff")
     public String getNodeOperation() {
         String value = this.elt.getProperty(TExportedOperation.MdaTypes.STEREOTYPE_ELT,
                                             TExportedOperation.MdaTypes.NODEOPERATION_PROPERTY_ELT.getName());
@@ -155,7 +155,7 @@ public class TExportedOperation implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3f6f1a8c-cfcd-4e27-a541-e9e2956ced9e")
+    @objid ("195ef6a2-d879-4ed6-9123-c46dbe61338e")
     public String getPlan() {
         String value = this.elt.getProperty(TExportedOperation.MdaTypes.STEREOTYPE_ELT,
                                             TExportedOperation.MdaTypes.PLAN_PROPERTY_ELT.getName());
@@ -171,7 +171,7 @@ public class TExportedOperation implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("472f9f57-00fa-4e97-b714-fd238baff29f")
+    @objid ("0dbc405e-923a-4501-9f25-f230538364ef")
     public String getRelationshipOperation() {
         String value = this.elt.getProperty(TExportedOperation.MdaTypes.STEREOTYPE_ELT,
                                             TExportedOperation.MdaTypes.RELATIONSHIPOPERATION_PROPERTY_ELT.getName());
@@ -182,7 +182,7 @@ public class TExportedOperation implements IMdaProxy {
         
     }
 
-    @objid ("f070d551-e6a7-46ee-afe5-5d8bdfc94085")
+    @objid ("465e3fd2-3543-4d8c-ba43-66716b027e0e")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -194,7 +194,7 @@ public class TExportedOperation implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("fcd40f46-a8bf-45d6-a8af-49470ad0a215")
+    @objid ("18f3f410-4406-402e-b216-970673273eff")
     public void setNodeOperation(final String value) {
         this.elt.setProperty(TExportedOperation.MdaTypes.STEREOTYPE_ELT,
                              TExportedOperation.MdaTypes.NODEOPERATION_PROPERTY_ELT.getName(),
@@ -206,7 +206,7 @@ public class TExportedOperation implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ee32f6e0-db71-4a8f-94bd-92242265737b")
+    @objid ("0392dc2f-4025-4f8c-9673-065e3ae2c869")
     public void setPlan(final String value) {
         this.elt.setProperty(TExportedOperation.MdaTypes.STEREOTYPE_ELT,
                              TExportedOperation.MdaTypes.PLAN_PROPERTY_ELT.getName(),
@@ -218,39 +218,39 @@ public class TExportedOperation implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d70f5ae9-de7d-4178-bc90-04c1efed4446")
+    @objid ("fe2375f0-4dca-45ae-aa95-227eba05e621")
     public void setRelationshipOperation(final String value) {
         this.elt.setProperty(TExportedOperation.MdaTypes.STEREOTYPE_ELT,
                              TExportedOperation.MdaTypes.RELATIONSHIPOPERATION_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(TExportedOperation.MdaTypes.RELATIONSHIPOPERATION_PROPERTY_ELT, value));
     }
 
-    @objid ("879349c8-dd52-4a52-b0d5-e43e35f36f26")
+    @objid ("482a80c3-d883-4742-8828-c9a401c636c1")
     protected  TExportedOperation(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("d72e331b-cd58-40bc-bf6e-910c244f6261")
     public static final class MdaTypes {
-        @objid ("ed1ea05c-5e7d-4083-b8b3-4b3475817686")
+        @objid ("a2f675e2-8a97-4ae8-9c48-ac9afb6ad972")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("b93c0266-25c0-4548-839f-90705f5730c1")
+        @objid ("46a080ff-3e3d-4b9e-a98b-703ef2a62d0b")
         public static PropertyDefinition NODEOPERATION_PROPERTY_ELT;
 
-        @objid ("80d7fc47-4078-449c-90ad-f5216b5552bf")
+        @objid ("78a3eb1f-1298-4b6b-9e12-3f83d377f0b8")
         public static PropertyDefinition RELATIONSHIPOPERATION_PROPERTY_ELT;
 
-        @objid ("f3900624-6753-4673-b49b-95b276f8080e")
+        @objid ("acee01c5-4419-4364-95c3-d96d61a1ca98")
         public static PropertyDefinition PLAN_PROPERTY_ELT;
 
-        @objid ("aa7a7313-a2d1-415e-9430-fa04cc37c4bd")
+        @objid ("fa8c89f7-cb83-4446-8962-ff02884fd8b9")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("90041706-922a-4bbf-b989-e8a505ac0c82")
+        @objid ("2f9624db-1d4b-4563-93b6-29deab56d90d")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("dfd969ad-bec0-4bf8-85bd-ccb438b6f99e")
+        @objid ("88edbb8a-37e3-4193-b5a8-7737fd2e7ce4")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
