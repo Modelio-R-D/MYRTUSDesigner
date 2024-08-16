@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 14/08/2024 17:44 by Modelio Studio.
+ * This file was generated on 16/08/2024 12:30 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.automatic.standard.staticdiagram;
 
@@ -40,14 +40,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("5359af4a-ee3a-41bd-b442-8a2d88a31098")
 public class CloudServiceArchiveDiagram implements IMdaProxy {
-    @objid ("e6e6b735-09e0-4db4-816c-a31b089a3e38")
+    @objid ("cfdb7ec2-7a29-4656-ac03-109a5ea22fc9")
     public static final String STEREOTYPE_NAME = "CloudServiceArchiveDiagram";
 
     /**
      * The underlying {@link StaticDiagram} represented by this proxy, never null.
-     * 
      */
-    @objid ("739fc333-4e16-4528-963f-6bb56f6f1d40")
+    @objid ("8b6c58d7-b8a5-470b-9098-5325cdf4dd11")
     protected final StaticDiagram elt;
 
     /**
@@ -57,16 +56,17 @@ public class CloudServiceArchiveDiagram implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("d9c8f6d7-845c-43d4-8f4c-7d2832c62c79")
+    @objid ("2b36d16e-f8cb-44c8-b50e-105fd1cdbdbd")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof StaticDiagram) && (CloudServiceArchiveDiagram.MdaTypes.STEREOTYPE_ELT!=null) && ((StaticDiagram) elt).isStereotyped(CloudServiceArchiveDiagram.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link StaticDiagram} stereotyped << CloudServiceArchiveDiagram >> then instantiate a {@link CloudServiceArchiveDiagram} proxy.
+     * 
      * @return a {@link CloudServiceArchiveDiagram} proxy on the created {@link StaticDiagram}.
      */
-    @objid ("8c574287-87d4-4370-b075-8e72209f2323")
+    @objid ("5d0f6c33-327c-4f87-8ccb-9180b64d4b7b")
     public static CloudServiceArchiveDiagram create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.StaticDiagram");
         e.getExtension().add(CloudServiceArchiveDiagram.MdaTypes.STEREOTYPE_ELT);
@@ -80,7 +80,7 @@ public class CloudServiceArchiveDiagram implements IMdaProxy {
      * @param obj a StaticDiagram
      * @return a {@link CloudServiceArchiveDiagram} proxy or <i>null</i>.
      */
-    @objid ("7736271f-73bf-4de2-a5ae-2311983c5304")
+    @objid ("2905db78-189a-48e4-be9f-7977ed8ec95b")
     public static CloudServiceArchiveDiagram instantiate(final StaticDiagram obj) {
         return CloudServiceArchiveDiagram.canInstantiate(obj) ? new CloudServiceArchiveDiagram(obj) : null;
     }
@@ -89,19 +89,19 @@ public class CloudServiceArchiveDiagram implements IMdaProxy {
      * Tries to instantiate a {@link CloudServiceArchiveDiagram} proxy from a {@link StaticDiagram} stereotyped << CloudServiceArchiveDiagram >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link StaticDiagram}
      * @return a {@link CloudServiceArchiveDiagram} proxy.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("7218c806-cf0b-44bf-bba5-ae53260ef98a")
+    @objid ("1d0dcb9a-f37d-4a8c-8c20-044d20982539")
     public static CloudServiceArchiveDiagram safeInstantiate(final StaticDiagram obj) throws IllegalArgumentException {
         if (CloudServiceArchiveDiagram.canInstantiate(obj))
-            return new CloudServiceArchiveDiagram(obj);
+        	return new CloudServiceArchiveDiagram(obj);
         else
-            throw new IllegalArgumentException("CloudServiceArchiveDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("CloudServiceArchiveDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("da193522-cbe2-4f61-9988-4790d73b8ece")
+    @objid ("86cbac81-364c-408c-a81c-57bc527661ec")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -118,37 +118,38 @@ public class CloudServiceArchiveDiagram implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link StaticDiagram}.
+     * Get the underlying {@link StaticDiagram}. 
      * @return the StaticDiagram represented by this proxy, never null.
      */
-    @objid ("2067e45b-6733-499c-861a-4b41a7e056a3")
+    @objid ("ba17715b-99f5-4e2a-a135-505b319921d8")
     public StaticDiagram getElement() {
         return this.elt;
     }
 
-    @objid ("61f02ea2-ab6b-41b9-ad88-99da703325cf")
+    @objid ("6d75f65f-2c6a-4c19-97ad-f67edf413f31")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
+        
     }
 
-    @objid ("238436c2-3984-4e84-b88e-dc535d8824e5")
+    @objid ("bd9acfb7-c270-4273-a89b-c40f17f64668")
     protected  CloudServiceArchiveDiagram(final StaticDiagram elt) {
         this.elt = elt;
     }
 
     @objid ("1557c17b-bdbb-4f49-b0e6-52d1ac52369d")
     public static final class MdaTypes {
-        @objid ("3862da0a-26d3-4523-babb-c3ceacc797c0")
+        @objid ("0ccd9c95-572c-49e6-9009-25daeb055cfa")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("c6fbadb5-b43e-4d69-b72e-b4f7fbd03ce2")
+        @objid ("a9fac621-2462-402c-bd6c-720b7af6712b")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("e1d60270-efa9-4ad0-a61d-2dccf8fb4ed0")
+        @objid ("a5440564-f74a-4d8f-a8e5-38b5a9936db2")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("63cce386-cce9-4dad-a69e-eea0a0e317f0")
+        @objid ("f24fab64-29c7-4283-85ad-d83ff453ff65")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -165,6 +166,7 @@ public class CloudServiceArchiveDiagram implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
+            
         }
 
     }

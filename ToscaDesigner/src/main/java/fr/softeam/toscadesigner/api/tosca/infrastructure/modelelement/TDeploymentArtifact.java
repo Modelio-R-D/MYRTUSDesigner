@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 14/08/2024 17:44 by Modelio Studio.
+ * This file was generated on 16/08/2024 12:30 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -39,19 +39,19 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("102eb1f1-1465-4fd6-8ee2-0415f2690123")
 public class TDeploymentArtifact extends TExtensibleElements implements IMdaProxy {
-    @objid ("74af9fb2-0b7f-4e27-8e7b-0522404993fd")
+    @objid ("44a2e7ca-65b0-4430-ba9f-5bd39e82c265")
     public static final String STEREOTYPE_NAME = "TDeploymentArtifact";
 
-    @objid ("5b828709-6240-41df-893a-e1a64dea3950")
+    @objid ("a0f26758-d6b8-4bad-8932-0a5a114da14b")
     public static final String DEPLOY_PATH_PROPERTY = "Deploy_path";
 
-    @objid ("b32ce636-4954-4df9-a7d5-dc0ab5956bc9")
+    @objid ("8161ab0b-8be0-488d-9aba-a3cdc4cb361e")
     public static final String FILE_PROPERTY = "File";
 
-    @objid ("e2127027-4dac-4f28-8741-a859035e5194")
+    @objid ("b95a4370-61a9-4c1b-b4bf-22c39e0c27a0")
     public static final String ARTIFACTTYPE_PROPERTY = "artifactType";
 
-    @objid ("16f3bdf5-c30b-4aae-aa1f-fb25568e9de5")
+    @objid ("98fb4e78-66ef-4b28-9445-cf80829e4081")
     public static final String ARTIFACTREF_PROPERTY = "artifactref";
 
     /**
@@ -61,16 +61,17 @@ public class TDeploymentArtifact extends TExtensibleElements implements IMdaProx
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("96d7d381-725d-4fe3-aa76-75e04f07e259")
+    @objid ("ae833aac-ff23-411c-92f4-4cd9e43338aa")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link ModelElement} stereotyped << TDeploymentArtifact >> then instantiate a {@link TDeploymentArtifact} proxy.
+     * 
      * @return a {@link TDeploymentArtifact} proxy on the created {@link ModelElement}.
      */
-    @objid ("b6104377-aaf8-489a-b4b8-17057c7ed297")
+    @objid ("0640e7c4-6776-411f-8fb9-979bf0d4012a")
     public static TDeploymentArtifact create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT);
@@ -84,7 +85,7 @@ public class TDeploymentArtifact extends TExtensibleElements implements IMdaProx
      * @param obj a ModelElement
      * @return a {@link TDeploymentArtifact} proxy or <i>null</i>.
      */
-    @objid ("0a36c4e3-07a4-4674-bb4e-9c67bcf5cc33")
+    @objid ("f4388280-124a-4c49-b7f7-cf0c7aceec68")
     public static TDeploymentArtifact instantiate(final ModelElement obj) {
         return TDeploymentArtifact.canInstantiate(obj) ? new TDeploymentArtifact(obj) : null;
     }
@@ -93,19 +94,19 @@ public class TDeploymentArtifact extends TExtensibleElements implements IMdaProx
      * Tries to instantiate a {@link TDeploymentArtifact} proxy from a {@link ModelElement} stereotyped << TDeploymentArtifact >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link ModelElement}
      * @return a {@link TDeploymentArtifact} proxy.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("9cb69e12-1db3-4775-9d24-186103f9d156")
+    @objid ("20f851c5-4be5-43b0-a134-48f6c82cbace")
     public static TDeploymentArtifact safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (TDeploymentArtifact.canInstantiate(obj))
-            return new TDeploymentArtifact(obj);
+        	return new TDeploymentArtifact(obj);
         else
-            throw new IllegalArgumentException("TDeploymentArtifact: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("TDeploymentArtifact: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("740f37f0-0fa9-4d9b-9b80-4dc401a05fe0")
+    @objid ("044f93e8-3472-4263-989a-55c6dfda3a1a")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -126,7 +127,7 @@ public class TDeploymentArtifact extends TExtensibleElements implements IMdaProx
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("f4e1ee02-73c1-46b4-8dfd-eaf313b4c6da")
+    @objid ("1a3c9a52-25c3-4bb8-add4-994852ee6d2f")
     public String getArtifactType() {
         String value = this.elt.getProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
                                             TDeploymentArtifact.MdaTypes.ARTIFACTTYPE_PROPERTY_ELT.getName());
@@ -134,6 +135,7 @@ public class TDeploymentArtifact extends TExtensibleElements implements IMdaProx
           value = TDeploymentArtifact.MdaTypes.ARTIFACTTYPE_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(TDeploymentArtifact.MdaTypes.ARTIFACTTYPE_PROPERTY_ELT, value, this.elt);
+        
     }
 
     /**
@@ -141,7 +143,7 @@ public class TDeploymentArtifact extends TExtensibleElements implements IMdaProx
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3a27faf5-8fee-4bc6-bd0e-95b16b8ca269")
+    @objid ("6f1f873b-3f66-4922-b685-a481cd8d7c53")
     public String getArtifactref() {
         String value = this.elt.getProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
                                             TDeploymentArtifact.MdaTypes.ARTIFACTREF_PROPERTY_ELT.getName());
@@ -149,6 +151,7 @@ public class TDeploymentArtifact extends TExtensibleElements implements IMdaProx
           value = TDeploymentArtifact.MdaTypes.ARTIFACTREF_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(TDeploymentArtifact.MdaTypes.ARTIFACTREF_PROPERTY_ELT, value, this.elt);
+        
     }
 
     /**
@@ -156,7 +159,7 @@ public class TDeploymentArtifact extends TExtensibleElements implements IMdaProx
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d08e09a3-324e-44d4-b8f8-442797d05372")
+    @objid ("692fccd0-9b2e-480b-809e-5faf3712ab3a")
     public String getDeploy_path() {
         String value = this.elt.getProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
                                             TDeploymentArtifact.MdaTypes.DEPLOY_PATH_PROPERTY_ELT.getName());
@@ -164,13 +167,14 @@ public class TDeploymentArtifact extends TExtensibleElements implements IMdaProx
           value = TDeploymentArtifact.MdaTypes.DEPLOY_PATH_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(TDeploymentArtifact.MdaTypes.DEPLOY_PATH_PROPERTY_ELT, value, this.elt);
+        
     }
 
     /**
-     * Get the underlying {@link ModelElement}.
+     * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("dc583c1c-10c3-47a9-8302-15c55b8784f0")
+    @objid ("a2d4a2bc-5b2c-41d9-ba74-ad8f11383503")
     @Override
     public ModelElement getElement() {
         return (ModelElement)super.getElement();
@@ -181,7 +185,7 @@ public class TDeploymentArtifact extends TExtensibleElements implements IMdaProx
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("c5313835-86d2-4c8a-8338-6eb5e5a8c70f")
+    @objid ("9c50e311-e91c-482c-a35d-d11042e40fba")
     public String getFile() {
         String value = this.elt.getProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
                                             TDeploymentArtifact.MdaTypes.FILE_PROPERTY_ELT.getName());
@@ -189,12 +193,14 @@ public class TDeploymentArtifact extends TExtensibleElements implements IMdaProx
           value = TDeploymentArtifact.MdaTypes.FILE_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(TDeploymentArtifact.MdaTypes.FILE_PROPERTY_ELT, value, this.elt);
+        
     }
 
-    @objid ("e8ff0db9-117a-437c-8b0a-e6da8f9383ec")
+    @objid ("ca495b81-5605-425f-8f50-28d36b7a7c02")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
+        
     }
 
     /**
@@ -202,7 +208,7 @@ public class TDeploymentArtifact extends TExtensibleElements implements IMdaProx
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("09097a32-1e06-4505-ab7d-dbe60bef6056")
+    @objid ("a5f7d5b4-c420-4dc7-bca4-7de31cafce70")
     public void setArtifactType(final String value) {
         this.elt.setProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
                              TDeploymentArtifact.MdaTypes.ARTIFACTTYPE_PROPERTY_ELT.getName(),
@@ -214,7 +220,7 @@ public class TDeploymentArtifact extends TExtensibleElements implements IMdaProx
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("cca2a5fd-76d5-44af-bfa2-e1ded66a4996")
+    @objid ("7b2c34cc-180b-486f-8301-411b463b1296")
     public void setArtifactref(final String value) {
         this.elt.setProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
                              TDeploymentArtifact.MdaTypes.ARTIFACTREF_PROPERTY_ELT.getName(),
@@ -226,7 +232,7 @@ public class TDeploymentArtifact extends TExtensibleElements implements IMdaProx
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("15b11999-2daf-4084-9548-d219b3c30454")
+    @objid ("f18141d4-b9f0-496e-b2b3-4f413a991b51")
     public void setDeploy_path(final String value) {
         this.elt.setProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
                              TDeploymentArtifact.MdaTypes.DEPLOY_PATH_PROPERTY_ELT.getName(),
@@ -238,42 +244,42 @@ public class TDeploymentArtifact extends TExtensibleElements implements IMdaProx
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("7409ed62-f292-4c3a-a5cd-b48543330b2f")
+    @objid ("74c0fef3-3535-4148-9f32-a7d46dad4cbd")
     public void setFile(final String value) {
         this.elt.setProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
                              TDeploymentArtifact.MdaTypes.FILE_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(TDeploymentArtifact.MdaTypes.FILE_PROPERTY_ELT, value));
     }
 
-    @objid ("974cdb3a-62e7-4dea-ad58-0c79b9fef72d")
+    @objid ("a37e2510-5a7a-4e08-9f38-ae8269b717ef")
     protected  TDeploymentArtifact(final ModelElement elt) {
         super(elt);
     }
 
     @objid ("430ed3fc-240f-45ff-a143-01f60fe0039f")
     public static final class MdaTypes {
-        @objid ("79b0f100-65b9-49db-a34c-33489098c718")
+        @objid ("1fde844b-7bca-46f4-aa1f-ce4f9d095266")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("4debfd5b-25c4-4a6f-a757-161873682309")
+        @objid ("c2807817-cbdc-4a61-81fe-ee16253a6ffe")
         public static PropertyDefinition ARTIFACTTYPE_PROPERTY_ELT;
 
-        @objid ("f0e7a336-fb29-4fae-becf-eb3814bc6968")
+        @objid ("6efbbfdc-181d-4477-996e-40fbd0e1cd94")
         public static PropertyDefinition ARTIFACTREF_PROPERTY_ELT;
 
-        @objid ("9ec4fa45-27bc-445c-9f57-b7e289876fc3")
+        @objid ("9394cfff-3b8d-4ce9-b8c6-4e2d4bb96526")
         public static PropertyDefinition FILE_PROPERTY_ELT;
 
-        @objid ("5bb61351-4a2e-4df3-b24f-db9d0925fb6d")
+        @objid ("0c2bfd79-c07e-4f78-8d6f-9430fd562b32")
         public static PropertyDefinition DEPLOY_PATH_PROPERTY_ELT;
 
-        @objid ("8a547962-e536-44e9-b225-5bffa692c945")
+        @objid ("eaf907ed-5f6a-4162-b646-8534deea8548")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("4b0e65c0-705c-4bd3-b3cb-6fed4b323cb9")
+        @objid ("3cf81541-45d0-4fdb-90e5-157bb94f8b02")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("f504402f-77f4-4f9b-a168-1785b5b12329")
+        @objid ("416a93b4-23fe-4938-a4b2-071556eb3df0")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -306,6 +312,7 @@ public class TDeploymentArtifact extends TExtensibleElements implements IMdaProx
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
+            
         }
 
     }

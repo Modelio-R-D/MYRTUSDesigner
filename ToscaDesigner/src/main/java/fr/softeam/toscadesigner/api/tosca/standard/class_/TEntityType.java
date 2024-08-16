@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 14/08/2024 17:44 by Modelio Studio.
+ * This file was generated on 16/08/2024 12:30 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
@@ -40,38 +40,37 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("b00154ae-28bb-48d9-8528-b8c9b16945f8")
 public class TEntityType implements IMdaProxy {
-    @objid ("0b94f114-5297-4715-880e-d29a06f54755")
+    @objid ("6e2250e1-d4d2-4db2-8016-04e71b6fabbe")
     public static final String STEREOTYPE_NAME = "TEntityType";
 
-    @objid ("166872c5-6d37-41fd-a34e-c65fe27d006d")
+    @objid ("36c08d26-fb05-4642-9ee2-34ae5bf43f7e")
     public static final String ABSTRACT_PROPERTY = "abstract";
 
-    @objid ("acf3d90f-5400-4383-9135-141f9872f49b")
+    @objid ("e1dd64bb-7a7a-4fad-afff-1fd9825238f4")
     public static final String DERIVEDFROM_PROPERTY = "derivedFrom";
 
-    @objid ("5d830c39-938d-42ca-8034-d8e2310ff936")
+    @objid ("f65bdc1f-5d89-48c0-8934-3a707a08db30")
     public static final String DESCRIPTION_PROPERTY = "description";
 
-    @objid ("7254b168-1ae3-40fb-9e61-c4504cb69d82")
+    @objid ("97f66017-aa4b-49e1-b0cd-40f83e65d3d1")
     public static final String FINAL_PROPERTY = "final";
 
-    @objid ("b90c623e-5967-47ff-9eb7-8a7996a789f6")
+    @objid ("c3c33afe-d89c-4b08-9ac8-74f42cb309e3")
     public static final String NAME_PROPERTY = "name";
 
-    @objid ("7398fb26-2476-4970-be7d-38a4814f5bc8")
+    @objid ("4df96c3b-3602-4190-9933-c713db74049b")
     public static final String PROPERTIESDEFINITION_PROPERTY = "propertiesDefinition";
 
-    @objid ("d6a6a163-edff-4767-a726-aaabb71d5f72")
+    @objid ("aaeb5726-aa0d-41a4-afd9-3170e2d5524f")
     public static final String TAGS_PROPERTY = "tags";
 
-    @objid ("afacf53a-e57f-4759-b87c-803c0c831ea1")
+    @objid ("2c16427d-f62a-40d0-80ef-de9d9c8290db")
     public static final String TARGETNAMESPACE_PROPERTY = "targetNamespace";
 
     /**
      * The underlying {@link Class} represented by this proxy, never null.
-     * 
      */
-    @objid ("11e507fc-b1dd-4c71-ae42-e7afc36ccafd")
+    @objid ("dce3e077-cd23-4ec5-96e2-8b3a1caa2ff3")
     protected final Class elt;
 
     /**
@@ -81,16 +80,17 @@ public class TEntityType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("21349547-eec0-4925-bc83-c8db4307ca85")
+    @objid ("9de5bbbc-23e5-400a-ab0c-f1a78fa29ed4")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (TEntityType.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(TEntityType.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link Class} stereotyped << TEntityType >> then instantiate a {@link TEntityType} proxy.
+     * 
      * @return a {@link TEntityType} proxy on the created {@link Class}.
      */
-    @objid ("6f157288-bcff-4b63-9088-4e4f617f52c4")
+    @objid ("f75b584e-6f57-4d26-8dec-aae8cd2e9ecf")
     public static TEntityType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(TEntityType.MdaTypes.STEREOTYPE_ELT);
@@ -104,7 +104,7 @@ public class TEntityType implements IMdaProxy {
      * @param obj a Class
      * @return a {@link TEntityType} proxy or <i>null</i>.
      */
-    @objid ("db2912d6-097e-4d81-94f2-e5a43c634bcd")
+    @objid ("9f297563-c052-4a56-b665-446820652af4")
     public static TEntityType instantiate(final Class obj) {
         return TEntityType.canInstantiate(obj) ? new TEntityType(obj) : null;
     }
@@ -113,19 +113,19 @@ public class TEntityType implements IMdaProxy {
      * Tries to instantiate a {@link TEntityType} proxy from a {@link Class} stereotyped << TEntityType >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link Class}
      * @return a {@link TEntityType} proxy.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("ea91629c-827e-4d23-9fb9-22143b34b112")
+    @objid ("a8789cd6-bb80-4cac-a32c-d39a0c7e13dd")
     public static TEntityType safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (TEntityType.canInstantiate(obj))
-            return new TEntityType(obj);
+        	return new TEntityType(obj);
         else
-            throw new IllegalArgumentException("TEntityType: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("TEntityType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("6c7fe424-b818-4f2f-9a0f-5faa6966054c")
+    @objid ("21b61e86-7a14-4ac2-ad39-2b673776f986")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -146,7 +146,7 @@ public class TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("1c5e4ca6-5035-4eb8-8460-0f30cae11797")
+    @objid ("31a9897e-3d01-4b70-91c2-4be494f93919")
     public Boolean getAbstract() {
         String value = this.elt.getProperty(TEntityType.MdaTypes.STEREOTYPE_ELT,
                                             TEntityType.MdaTypes.ABSTRACT_PROPERTY_ELT.getName());
@@ -154,6 +154,7 @@ public class TEntityType implements IMdaProxy {
           value = TEntityType.MdaTypes.ABSTRACT_PROPERTY_ELT.getDefaultValue();
         }
         return (Boolean) PropertyConverter.convertToObject(TEntityType.MdaTypes.ABSTRACT_PROPERTY_ELT, value, this.elt);
+        
     }
 
     /**
@@ -161,7 +162,7 @@ public class TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("e859dcfb-4317-431a-9c94-12c6c39e5d2b")
+    @objid ("a0338f85-7f9c-4906-9968-751b4c9abc53")
     public String getDerivedFrom() {
         String value = this.elt.getProperty(TEntityType.MdaTypes.STEREOTYPE_ELT,
                                             TEntityType.MdaTypes.DERIVEDFROM_PROPERTY_ELT.getName());
@@ -169,6 +170,7 @@ public class TEntityType implements IMdaProxy {
           value = TEntityType.MdaTypes.DERIVEDFROM_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(TEntityType.MdaTypes.DERIVEDFROM_PROPERTY_ELT, value, this.elt);
+        
     }
 
     /**
@@ -176,7 +178,7 @@ public class TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("51b3d656-0b5d-4ee1-9f01-d3a940b3aaca")
+    @objid ("4fd834cc-7eba-4c70-b846-a5d44440633e")
     public String getDescription() {
         String value = this.elt.getProperty(TEntityType.MdaTypes.STEREOTYPE_ELT,
                                             TEntityType.MdaTypes.DESCRIPTION_PROPERTY_ELT.getName());
@@ -184,13 +186,14 @@ public class TEntityType implements IMdaProxy {
           value = TEntityType.MdaTypes.DESCRIPTION_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(TEntityType.MdaTypes.DESCRIPTION_PROPERTY_ELT, value, this.elt);
+        
     }
 
     /**
-     * Get the underlying {@link Class}.
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("0edd8b25-0e4f-4e66-9409-100558612824")
+    @objid ("891d1f9d-d73e-4960-8481-98c5657ce7e8")
     public Class getElement() {
         return this.elt;
     }
@@ -200,7 +203,7 @@ public class TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("0fc9f342-da00-4827-96ce-8dabe3604aeb")
+    @objid ("a1105e04-42d5-42c8-a6e0-a75d17619c17")
     public Boolean getFinal() {
         String value = this.elt.getProperty(TEntityType.MdaTypes.STEREOTYPE_ELT,
                                             TEntityType.MdaTypes.FINAL_PROPERTY_ELT.getName());
@@ -208,6 +211,7 @@ public class TEntityType implements IMdaProxy {
           value = TEntityType.MdaTypes.FINAL_PROPERTY_ELT.getDefaultValue();
         }
         return (Boolean) PropertyConverter.convertToObject(TEntityType.MdaTypes.FINAL_PROPERTY_ELT, value, this.elt);
+        
     }
 
     /**
@@ -215,7 +219,7 @@ public class TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("4f73e960-1ad2-45ac-b695-63856377fd87")
+    @objid ("ea9680f9-0154-4b55-8e93-b71582361839")
     public String getName() {
         String value = this.elt.getProperty(TEntityType.MdaTypes.STEREOTYPE_ELT,
                                             TEntityType.MdaTypes.NAME_PROPERTY_ELT.getName());
@@ -223,6 +227,7 @@ public class TEntityType implements IMdaProxy {
           value = TEntityType.MdaTypes.NAME_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(TEntityType.MdaTypes.NAME_PROPERTY_ELT, value, this.elt);
+        
     }
 
     /**
@@ -230,7 +235,7 @@ public class TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("cbaf9a75-5dd9-485a-8b53-549e7f2d839f")
+    @objid ("1d3b01d2-164a-4ec6-a6f2-2c85e2b0aa6e")
     public String getPropertiesDefinition() {
         String value = this.elt.getProperty(TEntityType.MdaTypes.STEREOTYPE_ELT,
                                             TEntityType.MdaTypes.PROPERTIESDEFINITION_PROPERTY_ELT.getName());
@@ -238,6 +243,7 @@ public class TEntityType implements IMdaProxy {
           value = TEntityType.MdaTypes.PROPERTIESDEFINITION_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(TEntityType.MdaTypes.PROPERTIESDEFINITION_PROPERTY_ELT, value, this.elt);
+        
     }
 
     /**
@@ -245,7 +251,7 @@ public class TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d4f8cf41-f934-4fd4-9862-0104982830a0")
+    @objid ("4c550579-e8bb-47d5-bf18-f4ed1e6a935b")
     public String getTags() {
         String value = this.elt.getProperty(TEntityType.MdaTypes.STEREOTYPE_ELT,
                                             TEntityType.MdaTypes.TAGS_PROPERTY_ELT.getName());
@@ -253,6 +259,7 @@ public class TEntityType implements IMdaProxy {
           value = TEntityType.MdaTypes.TAGS_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(TEntityType.MdaTypes.TAGS_PROPERTY_ELT, value, this.elt);
+        
     }
 
     /**
@@ -260,7 +267,7 @@ public class TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("17576088-5563-4103-9a4c-e56ba1615483")
+    @objid ("76b42d05-86c5-45c7-a41e-8ec8d6aac2e6")
     public String getTargetNamespace() {
         String value = this.elt.getProperty(TEntityType.MdaTypes.STEREOTYPE_ELT,
                                             TEntityType.MdaTypes.TARGETNAMESPACE_PROPERTY_ELT.getName());
@@ -268,12 +275,14 @@ public class TEntityType implements IMdaProxy {
           value = TEntityType.MdaTypes.TARGETNAMESPACE_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(TEntityType.MdaTypes.TARGETNAMESPACE_PROPERTY_ELT, value, this.elt);
+        
     }
 
-    @objid ("36c9586c-4eda-4869-ae53-3cb3ae0b562b")
+    @objid ("e31fe0ce-44b4-4497-81b2-0e1ca43ed358")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
+        
     }
 
     /**
@@ -281,7 +290,7 @@ public class TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b20a5b5e-6878-4135-a3fb-d045e13fc610")
+    @objid ("6906709f-61df-42fc-9970-28e7fc14512f")
     public void setAbstract(final Boolean value) {
         this.elt.setProperty(TEntityType.MdaTypes.STEREOTYPE_ELT,
                              TEntityType.MdaTypes.ABSTRACT_PROPERTY_ELT.getName(),
@@ -293,7 +302,7 @@ public class TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3f0aa539-cbc5-424c-bf01-4e496f889c63")
+    @objid ("23fff469-4b0c-4178-b399-eba964d18169")
     public void setDerivedFrom(final String value) {
         this.elt.setProperty(TEntityType.MdaTypes.STEREOTYPE_ELT,
                              TEntityType.MdaTypes.DERIVEDFROM_PROPERTY_ELT.getName(),
@@ -305,7 +314,7 @@ public class TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("7b4751b6-ebc1-4f2e-8643-28a99ff6e29d")
+    @objid ("be812f74-b603-45e6-9195-0d2261eed805")
     public void setDescription(final String value) {
         this.elt.setProperty(TEntityType.MdaTypes.STEREOTYPE_ELT,
                              TEntityType.MdaTypes.DESCRIPTION_PROPERTY_ELT.getName(),
@@ -317,7 +326,7 @@ public class TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("5ee1d554-d3f1-4108-a79a-873e3142ab22")
+    @objid ("b23c4149-2b3c-497b-a08b-a4225c2f5d5f")
     public void setFinal(final Boolean value) {
         this.elt.setProperty(TEntityType.MdaTypes.STEREOTYPE_ELT,
                              TEntityType.MdaTypes.FINAL_PROPERTY_ELT.getName(),
@@ -329,7 +338,7 @@ public class TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("e761104f-1e65-4ebc-a204-b89c54786dd0")
+    @objid ("455b5d5c-dfbb-41ff-9d38-cc22363e6218")
     public void setName(final String value) {
         this.elt.setProperty(TEntityType.MdaTypes.STEREOTYPE_ELT,
                              TEntityType.MdaTypes.NAME_PROPERTY_ELT.getName(),
@@ -341,7 +350,7 @@ public class TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("8bbc56d1-062b-47a9-8ede-f06543168d04")
+    @objid ("ca29a3d5-ff67-4f1a-9109-ad6ecf1162c5")
     public void setPropertiesDefinition(final String value) {
         this.elt.setProperty(TEntityType.MdaTypes.STEREOTYPE_ELT,
                              TEntityType.MdaTypes.PROPERTIESDEFINITION_PROPERTY_ELT.getName(),
@@ -353,7 +362,7 @@ public class TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("4914c937-1b59-4717-b2b5-44a374b2c939")
+    @objid ("649da774-81b2-43a2-aeb5-3f8565975147")
     public void setTags(final String value) {
         this.elt.setProperty(TEntityType.MdaTypes.STEREOTYPE_ELT,
                              TEntityType.MdaTypes.TAGS_PROPERTY_ELT.getName(),
@@ -365,54 +374,54 @@ public class TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("7bbeff2f-af73-4b6e-b87c-e8ec2cae37f1")
+    @objid ("5c55e860-8af6-4752-9b55-6947fb8426f1")
     public void setTargetNamespace(final String value) {
         this.elt.setProperty(TEntityType.MdaTypes.STEREOTYPE_ELT,
                              TEntityType.MdaTypes.TARGETNAMESPACE_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(TEntityType.MdaTypes.TARGETNAMESPACE_PROPERTY_ELT, value));
     }
 
-    @objid ("9d786448-76d9-4324-9b63-4d182fb26e0d")
+    @objid ("64901c50-9746-4344-8d85-d4185d7732b5")
     protected  TEntityType(final Class elt) {
         this.elt = elt;
     }
 
     @objid ("d707f767-b870-4f9a-be45-970745c8fb50")
     public static final class MdaTypes {
-        @objid ("e2034cdb-fe56-48c8-9fde-79213d34eca6")
+        @objid ("dfe56eea-2c34-4ec3-b52e-1b16589dd04a")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("9092a89e-2323-4198-aa8a-a0628aaa26b9")
+        @objid ("9a0bff9b-803e-4c05-9556-4742287b3e8d")
         public static PropertyDefinition TAGS_PROPERTY_ELT;
 
-        @objid ("9f7fd5ad-d015-4ea7-85e4-19095baadda2")
+        @objid ("ccd0b1bd-6eec-446b-96ae-e9dc71c2b93c")
         public static PropertyDefinition DERIVEDFROM_PROPERTY_ELT;
 
-        @objid ("3bbb3027-b60e-458c-82bb-b74239be8ff2")
+        @objid ("ca917b4c-23ff-40de-865b-178031553740")
         public static PropertyDefinition PROPERTIESDEFINITION_PROPERTY_ELT;
 
-        @objid ("5a273017-a167-458c-937c-a7a865448e42")
+        @objid ("cad52f46-de58-4be3-b5c0-cbdd584b767e")
         public static PropertyDefinition ABSTRACT_PROPERTY_ELT;
 
-        @objid ("74416f67-0e67-4dfb-a199-26ccf21da71b")
+        @objid ("f7f587d3-5656-4661-ab79-c39e2905cf35")
         public static PropertyDefinition FINAL_PROPERTY_ELT;
 
-        @objid ("d3b066b2-bdf9-4601-bd37-7b3d6fd28d3e")
+        @objid ("69bbcdc9-3d7f-4a32-b3d1-049929f67cfe")
         public static PropertyDefinition NAME_PROPERTY_ELT;
 
-        @objid ("7868f9e3-d975-4a4a-87fa-9afe235d6dac")
+        @objid ("24af39f4-9e84-40f5-9c0c-c09b25897c98")
         public static PropertyDefinition TARGETNAMESPACE_PROPERTY_ELT;
 
-        @objid ("a88d539c-2ee4-4e29-8931-32e21251282e")
+        @objid ("27c5d077-41fc-4f5e-9b82-08ff45485dbd")
         public static PropertyDefinition DESCRIPTION_PROPERTY_ELT;
 
-        @objid ("8c57367f-5ec5-4c47-8e99-d8d72870295a")
+        @objid ("ed362354-38a0-445c-9ffa-98e52da3bdc6")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("85786938-f0e7-41fd-b2db-f653dc951b00")
+        @objid ("53c1e9b8-fd7e-49a6-aa84-5dbaa5fa6e5e")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("5d5d501d-a813-49d8-b6f0-c86e95bc88ad")
+        @objid ("8389e720-0841-47bb-9dbe-439a7b0191ab")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -461,6 +470,7 @@ public class TEntityType implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
+            
         }
 
     }
