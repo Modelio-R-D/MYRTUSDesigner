@@ -8,7 +8,9 @@ package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.impl.IMdaProxy;
+import fr.softeam.toscadesigner.impl.MdaProxyException;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
@@ -16,11 +18,6 @@ import org.modelio.metamodel.uml.infrastructure.TagType;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.smkernel.mapi.MObject;
 import org.modelio.vcore.smkernel.mapi.MRef;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.toscadesigner.impl.IMdaProxy;
-import fr.softeam.toscadesigner.impl.MdaProxyException;
 
 /**
  * Proxy class to handle a {@link Class} with << InterfacesType >> stereotype.
@@ -34,8 +31,9 @@ public class InterfacesType implements IMdaProxy {
 
     /**
      * The underlying {@link Class} represented by this proxy, never null.
+     * 
      */
-    @objid ("58b9abf8-7581-48ce-b9bd-a7e93f4b7839")
+    @objid ("00dfce70-52b4-4752-a926-621a24f7d551")
     protected final Class elt;
 
     /**
@@ -52,7 +50,6 @@ public class InterfacesType implements IMdaProxy {
 
     /**
      * Create a new {@link Class} stereotyped << InterfacesType >> then instantiate a {@link InterfacesType} proxy.
-     * 
      * @return a {@link InterfacesType} proxy on the created {@link Class}.
      */
     @objid ("25827ef9-0fd0-43de-b4a4-44d5f7cc0005")
@@ -78,16 +75,16 @@ public class InterfacesType implements IMdaProxy {
      * Tries to instantiate a {@link InterfacesType} proxy from a {@link Class} stereotyped << InterfacesType >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link Class}
      * @return a {@link InterfacesType} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("67261d90-53a5-46d5-8f98-c646a327b52a")
     public static InterfacesType safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (InterfacesType.canInstantiate(obj))
-        	return new InterfacesType(obj);
+            return new InterfacesType(obj);
         else
-        	throw new IllegalArgumentException("InterfacesType: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("InterfacesType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("27c73233-cedc-4883-a652-f64e3d028fb2")
@@ -107,7 +104,7 @@ public class InterfacesType implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
      * @return the Class represented by this proxy, never null.
      */
     @objid ("c2b20f47-5b94-4eed-bdfd-26a1fe06ef45")
@@ -119,7 +116,6 @@ public class InterfacesType implements IMdaProxy {
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-        
     }
 
     @objid ("1e3ac730-bd78-484a-aa64-1a93a41977b8")
@@ -129,13 +125,13 @@ public class InterfacesType implements IMdaProxy {
 
     @objid ("055fa065-c411-45d9-b639-2e4d7275454d")
     public static final class MdaTypes {
-        @objid ("a0d835df-083c-424d-9350-8fa324152f37")
+        @objid ("c98c093d-26db-4704-9850-ec663f3c80e0")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("bf6e1dba-82e9-4176-8da7-c5b6d9ade6fe")
+        @objid ("14609917-0d4f-407a-a5c4-429aeb3e4741")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("90d08afd-e2d2-44f0-bb22-c774bdeffcfc")
+        @objid ("ba2b38e1-7082-4be9-baea-40259d65d556")
         private static TagType MDAASSOCDEP_ROLE;
 
         @objid ("63e61e66-854d-4afb-af7f-79d237faac23")
@@ -155,7 +151,6 @@ public class InterfacesType implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
-            
         }
 
     }

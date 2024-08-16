@@ -8,7 +8,9 @@ package fr.softeam.toscadesigner.api.tosca.standard.datatype;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.impl.IMdaProxy;
+import fr.softeam.toscadesigner.impl.MdaProxyException;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
@@ -16,11 +18,6 @@ import org.modelio.metamodel.uml.infrastructure.TagType;
 import org.modelio.metamodel.uml.statik.DataType;
 import org.modelio.vcore.smkernel.mapi.MObject;
 import org.modelio.vcore.smkernel.mapi.MRef;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.toscadesigner.impl.IMdaProxy;
-import fr.softeam.toscadesigner.impl.MdaProxyException;
 
 /**
  * Proxy class to handle a {@link DataType} with << MaxInstancesType >> stereotype.
@@ -34,6 +31,7 @@ public class MaxInstancesType implements IMdaProxy {
 
     /**
      * The underlying {@link DataType} represented by this proxy, never null.
+     * 
      */
     @objid ("1e6cece0-4c7d-44ed-8b7e-3dcb89079e7a")
     protected final DataType elt;
@@ -52,7 +50,6 @@ public class MaxInstancesType implements IMdaProxy {
 
     /**
      * Create a new {@link DataType} stereotyped << MaxInstancesType >> then instantiate a {@link MaxInstancesType} proxy.
-     * 
      * @return a {@link MaxInstancesType} proxy on the created {@link DataType}.
      */
     @objid ("01c37c8f-1c4b-4b53-86c8-5984a5979f5d")
@@ -78,16 +75,16 @@ public class MaxInstancesType implements IMdaProxy {
      * Tries to instantiate a {@link MaxInstancesType} proxy from a {@link DataType} stereotyped << MaxInstancesType >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link DataType}
      * @return a {@link MaxInstancesType} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
     @objid ("ab9bc23a-d373-42f7-ba8f-f670b88d9a2b")
     public static MaxInstancesType safeInstantiate(final DataType obj) throws IllegalArgumentException {
         if (MaxInstancesType.canInstantiate(obj))
-        	return new MaxInstancesType(obj);
+            return new MaxInstancesType(obj);
         else
-        	throw new IllegalArgumentException("MaxInstancesType: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("MaxInstancesType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     @objid ("07cac1ea-d4f5-4ae1-a309-00e2060f4f35")
@@ -107,7 +104,7 @@ public class MaxInstancesType implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link DataType}. 
+     * Get the underlying {@link DataType}.
      * @return the DataType represented by this proxy, never null.
      */
     @objid ("5e9ded7d-a363-46a8-81e7-9cf9c10b391a")
@@ -119,7 +116,6 @@ public class MaxInstancesType implements IMdaProxy {
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-        
     }
 
     @objid ("c8605e1f-cbf8-431b-9f24-b589c2a8acbf")
@@ -129,13 +125,13 @@ public class MaxInstancesType implements IMdaProxy {
 
     @objid ("b2afe135-c084-4684-a08e-4913ad089e92")
     public static final class MdaTypes {
-        @objid ("9d3d0833-a95e-4cdd-a175-8d13e23d8473")
+        @objid ("bb51b088-0db2-49d2-840d-835d9a6b28f5")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("8ae53e2e-c18e-40b8-bc69-f57de46f000c")
+        @objid ("9059760d-4589-4d62-88f4-c2a1af1ff271")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("2b399f73-5a63-4ab4-9418-b94c144dfc26")
+        @objid ("8adcaccf-7613-4ffc-a788-1fe1c005ee80")
         private static TagType MDAASSOCDEP_ROLE;
 
         @objid ("f67ffaf8-83c2-45f4-bff7-dcc693f9f3d8")
@@ -155,7 +151,6 @@ public class MaxInstancesType implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
-            
         }
 
     }

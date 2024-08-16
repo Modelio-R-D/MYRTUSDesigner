@@ -1,10 +1,8 @@
 package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("76375cca-ef3c-403b-9da3-a87a7dbf0475")
 public class TRelationshipTypePropertyPage<T extends TRelationshipType> extends TEntityTypePropertyPage<T> {
