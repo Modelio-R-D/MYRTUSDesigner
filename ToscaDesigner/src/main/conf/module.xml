@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<<<<<<< HEAD
-<Module id="ToscaDesigner" class="fr.softeam.toscadesigner.impl.ToscaDesignerModule" binaryversion="5.4.01" version="0.0.12" schema-level="2" uid="942db9f9-6869-472c-b269-9ca7ec36a014" author="Softeam" image="" url="">
-=======
 <Module id="ToscaDesigner" class="fr.softeam.toscadesigner.impl.ToscaDesignerModule" binaryversion="5.4.01" version="0.0.00" schema-level="2" uid="942db9f9-6869-472c-b269-9ca7ec36a014" author="Softeam" image="" url="">
->>>>>>> refs/remotes/origin/ToscaProfile
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
         <PathEntry path="lib/commons-text-1.11.0.jar"/>
@@ -1080,15 +1076,12 @@
                     <HParameter name="style" value="ToscaStyle"/>
                 </Handler>
             </Command>
-<<<<<<< HEAD
             <Command id="Export" label="%command.Export.label" tooltip="%command.Export.tooltip" image="res/icon/gui/script24.png" modify-model="false">
                 <Scope metaclass="Infrastructure.ModelElement" stereotype="ToscaDesigner#TNodeType"/>
                 <Handler class="fr.softeam.toscadesigner.handlers.commands.ExportToscaModelCommand">
                     <HParameter name="name" value=""/>
                 </Handler>
             </Command>
-=======
->>>>>>> refs/remotes/origin/ToscaProfile
             <Command id="Service_Template_Diagram" label="%command.Service_Template_Diagram.label" tooltip="%command.Service_Template_Diagram.tooltip" image="res/icon/gui/diagram/service_template_diag24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="ToscaDesigner#ToscaModel"/>
                 <Handler class="DiagramCreate">

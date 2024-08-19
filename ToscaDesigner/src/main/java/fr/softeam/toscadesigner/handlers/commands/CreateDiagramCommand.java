@@ -1,12 +1,14 @@
 package fr.softeam.toscadesigner.handlers.commands;
 
 import java.util.List;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 import org.modelio.api.module.IModule;
 import org.modelio.api.module.command.standard.DiagramCreationStandardHandler;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.diagrams.AbstractDiagram;
 import org.modelio.vcore.smkernel.mapi.MObject;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("3f96b675-50dd-40ba-9977-16d6cf5453a6")
 public class CreateDiagramCommand extends DiagramCreationStandardHandler {

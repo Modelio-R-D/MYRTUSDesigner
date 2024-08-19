@@ -1,13 +1,16 @@
 package fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate;
 
 import java.util.List;
+
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.CapabilitiesType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("83e83f25-36df-4af3-a9ec-d48f34eb1aec")
 public class TNodeTemplatePropertyPage<T extends TNodeTemplate> extends ToscaElementPropertyPage<T> {

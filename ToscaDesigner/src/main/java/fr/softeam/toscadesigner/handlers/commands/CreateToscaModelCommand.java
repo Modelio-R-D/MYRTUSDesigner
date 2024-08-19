@@ -1,10 +1,12 @@
 package fr.softeam.toscadesigner.handlers.commands;
 
 import java.util.List;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 import org.modelio.api.module.IModule;
 import org.modelio.api.module.command.standard.ElementCreationStandardHandler;
 import org.modelio.vcore.smkernel.mapi.MObject;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("749e5c6f-d3dd-4eea-a4e2-1d0eceb3e48a")
 public class CreateToscaModelCommand extends ElementCreationStandardHandler {
