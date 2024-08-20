@@ -55,7 +55,8 @@ public class TNodeTemplatePropertyPage<T extends TNodeTemplate> extends ToscaEle
     @objid ("378c8d16-1a0a-413b-b142-e267468c87c4")
     @Override
     public void update(IModulePropertyTable table) {
-        table.addProperty("Name",_element.getElement().getName());
+		super.update(table);
+    	table.addProperty("Name",_element.getElement().getName());
         table.addProperty("Min Instance",String.valueOf(_element.getMinInstances()));
         table.addProperty("Max Instance",String.valueOf(_element.getMaxInstances()));
         

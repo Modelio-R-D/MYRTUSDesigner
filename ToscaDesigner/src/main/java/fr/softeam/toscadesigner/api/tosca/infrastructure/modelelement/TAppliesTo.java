@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 16/08/2024 12:30 by Modelio Studio.
+ * This file was generated on 20/08/2024 17:06 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -39,13 +39,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("58def4a1-3c30-4c13-8f07-e9d39974ddd0")
 public class TAppliesTo implements IMdaProxy {
-    @objid ("ed1a5606-1a45-4680-88ea-6b7228895117")
+    @objid ("be769b86-df9c-46e6-8fb0-b4f5baea5647")
     public static final String STEREOTYPE_NAME = "TAppliesTo";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
      */
-    @objid ("8e430ed6-5b6f-40a4-96cb-1b9e6c346278")
+    @objid ("46b0bc53-7ae8-46f6-a3ec-4778da2e9af9")
     protected final ModelElement elt;
 
     /**
@@ -55,7 +55,7 @@ public class TAppliesTo implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("050fc803-f0e4-4a3f-96f2-0e96140cdb8c")
+    @objid ("11de3f52-ff85-4cd0-94b9-99eb2a1da513")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (TAppliesTo.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(TAppliesTo.MdaTypes.STEREOTYPE_ELT));
     }
@@ -65,7 +65,7 @@ public class TAppliesTo implements IMdaProxy {
      * 
      * @return a {@link TAppliesTo} proxy on the created {@link ModelElement}.
      */
-    @objid ("ae2403de-a1c5-4896-849c-a7ad2e3ec9ec")
+    @objid ("180554e6-5f02-4047-a350-19eb3a2823cf")
     public static TAppliesTo create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(TAppliesTo.MdaTypes.STEREOTYPE_ELT);
@@ -79,7 +79,7 @@ public class TAppliesTo implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link TAppliesTo} proxy or <i>null</i>.
      */
-    @objid ("a11ea83b-42d9-415e-9603-971fc14fd444")
+    @objid ("3b2ef31a-3dd1-47a6-8d22-209eb52215e9")
     public static TAppliesTo instantiate(final ModelElement obj) {
         return TAppliesTo.canInstantiate(obj) ? new TAppliesTo(obj) : null;
     }
@@ -92,7 +92,7 @@ public class TAppliesTo implements IMdaProxy {
      * @return a {@link TAppliesTo} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("6cdd7de0-5b8c-4ad0-921a-02e23da7599e")
+    @objid ("10d8838a-eb21-4542-8da4-b86f70379aac")
     public static TAppliesTo safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (TAppliesTo.canInstantiate(obj))
         	return new TAppliesTo(obj);
@@ -106,7 +106,7 @@ public class TAppliesTo implements IMdaProxy {
      * null
      * 
      */
-    @objid ("e2cc1d8c-4dd5-46db-9fc7-f4891dc27b97")
+    @objid ("f3cf47ed-d07c-4a6e-a75f-13d76350c7aa")
     public void addNodeTypeReference(final NodeTypeReferenceType obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -116,7 +116,7 @@ public class TAppliesTo implements IMdaProxy {
         }
     }
 
-    @objid ("fdc056a2-b414-4471-8f10-074e37f7714f")
+    @objid ("987576ad-e42c-4e15-9d25-f5e68ab50671")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -136,7 +136,7 @@ public class TAppliesTo implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("c28a4e84-898e-42fd-9f00-7376896bf320")
+    @objid ("789cf564-233b-4d7b-bfbb-f6fb9f4b5d81")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -147,7 +147,7 @@ public class TAppliesTo implements IMdaProxy {
      * null
      * 
      */
-    @objid ("76da50c1-d2a1-4b11-bfc1-2eb924ea6fc5")
+    @objid ("df47f673-a77e-4a04-bd2e-c7757f180a05")
     public List<NodeTypeReferenceType> getNodeTypeReference() {
         List<NodeTypeReferenceType> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -159,7 +159,7 @@ public class TAppliesTo implements IMdaProxy {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("c0c4fae1-ecfe-4f4c-8def-04fcb0bd5f9c")
+    @objid ("a1f38243-1635-426e-b753-3fe6f6a5f321")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -172,7 +172,7 @@ public class TAppliesTo implements IMdaProxy {
      * null
      * 
      */
-    @objid ("56031e27-c98b-4130-b232-cb712adc5ae5")
+    @objid ("3b3485ba-e0df-4195-805e-20cbb8a48899")
     public boolean removeNodeTypeReference(final NodeTypeReferenceType obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -187,23 +187,23 @@ public class TAppliesTo implements IMdaProxy {
         
     }
 
-    @objid ("fe5d8cc6-ce4e-49df-87eb-5c5b8b5cdb6c")
+    @objid ("c3776f9e-715f-4eb7-81c2-5abaf479cafa")
     protected  TAppliesTo(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("ac13f9ca-02f3-4721-ac9d-45ca0354482f")
     public static final class MdaTypes {
-        @objid ("c825117d-0f23-426b-a45b-ad13f686028b")
+        @objid ("3b10b721-ea4b-4d5d-af25-82e612d2a73d")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("f9c1d182-3fda-4744-9c57-555c61b1ca2c")
+        @objid ("65a9c010-c29c-413c-adbe-55efbba1fb42")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("27f2f28a-331a-4e21-b618-5769a9940c8f")
+        @objid ("e6dc7fc4-a85e-4410-be19-c1bab1cb4e5e")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("34876b78-23d2-4c54-9e25-314144b2ea24")
+        @objid ("eafa1846-c2c5-432f-926e-e4ad6fc36eeb")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
