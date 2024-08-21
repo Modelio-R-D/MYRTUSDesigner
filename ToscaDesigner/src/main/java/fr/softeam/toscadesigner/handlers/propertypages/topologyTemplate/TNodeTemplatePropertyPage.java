@@ -49,6 +49,9 @@ public class TNodeTemplatePropertyPage<T extends TNodeTemplate> extends ToscaEle
          case 7:
              this._element.setRequirements(null);
              break;
+         case 8:
+             this._element.setNodeType(null);
+             break;
          }
     }
 
@@ -69,6 +72,7 @@ public class TNodeTemplatePropertyPage<T extends TNodeTemplate> extends ToscaEle
               table.addProperty("Deployment Artifacts", getNotNull((String.valueOf(this._element.getDeploymentArtifacts()))));
               // table.addProperty("Policies", getNotNull((String.valueOf(this._element.getPolicies()))));
               table.addProperty("Requirements", getNotNull((String.valueOf(this._element.getRequirements()))));
+              table.addProperty("Node Type", getNotNull((String.valueOf(this._element.getNodeType()))));
     }
 
 }
