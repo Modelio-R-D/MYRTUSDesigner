@@ -37,16 +37,16 @@ public class RelationshipTemplateTool extends DefaultLinkTool {
         IModelingSession session = ToscaDesignerModule.getInstance().getModuleContext().getModelingSession();
         try (ITransaction transaction = session.createTransaction(" RelationshipTemplate")) {
         /*
-                                                                                                            TRelationshipTemplate toscaElt = TRelationshipTemplate.create(session);
-                                                                                                            toscaElt.setSourceElement(this.nodeT1.getName());
-                                                                                                            toscaElt.setTargetElement(this.nodeT2.getName());
-                                                                                                        
-                                                                                                            diagramHandle.unmask(toscaElt.getElement(), path.getPoints().get(0).x, path.getPoints().get(1).x);
-                                                                                                        
-                                                                                                            diagramHandle.save();
-                                                                                                            diagramHandle.close();
-                                                                                                            transaction.commit();
-                                                                                                        */
+                                                                                                                            TRelationshipTemplate toscaElt = TRelationshipTemplate.create(session);
+                                                                                                                            toscaElt.setSourceElement(this.nodeT1.getName());
+                                                                                                                            toscaElt.setTargetElement(this.nodeT2.getName());
+                                                                                                                        
+                                                                                                                            diagramHandle.unmask(toscaElt.getElement(), path.getPoints().get(0).x, path.getPoints().get(1).x);
+                                                                                                                        
+                                                                                                                            diagramHandle.save();
+                                                                                                                            diagramHandle.close();
+                                                                                                                            transaction.commit();
+                                                                                                                        */
         }
     }
 

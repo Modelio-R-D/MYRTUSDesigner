@@ -8,11 +8,11 @@ import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("83e83f25-36df-4af3-a9ec-d48f34eb1aec")
 public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> extends ToscaElementPropertyPage<T> {
-    public TRelationshipTemplatePropertyPage(T elt) {
-		super(elt);
-		// TODO Auto-generated constructor stub
-	}
-
+    @objid ("516ad25d-88af-4232-80e0-26878e2e7032")
+    public  TRelationshipTemplatePropertyPage(T elt) {
+        super(elt);
+        // TODO Auto-generated constructor stub
+    }
 
     @objid ("b6b3ca49-8857-4993-b798-1c8328089c4d")
     @Override
@@ -24,7 +24,7 @@ public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> 
          case 2:
              this._element.setType(value);
              break;
-  
+        
          }
     }
 
@@ -33,6 +33,6 @@ public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> 
     public void update(IModulePropertyTable table) {
         table.addProperty("Name",_element.getElement().getName());
         table.addProperty("Type",_element.getType());
-          }
+    }
 
 }

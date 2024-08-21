@@ -11,10 +11,10 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
 @objid ("83e83f25-36df-4af3-a9ec-d48f34eb1aec")
 public class TNodeTemplatePropertyPage<T extends TNodeTemplate> extends ToscaElementPropertyPage<T> {
-    @objid ("62694fb2-d122-48b7-9d11-9e1cadafa694")
+    @objid ("898ecaff-ee89-4c76-83cc-7f6018621c6c")
     private List<ModelElement> _capabilities = null;
 
-    @objid ("d26b318d-f388-4ba5-9cbb-09ef9da59be7")
+    @objid ("338228d8-6128-4d9f-a132-3b5adf4f2ddd")
     public  TNodeTemplatePropertyPage(T elt) {
         super(elt);
         // TODO Auto-generated constructor stub
@@ -55,20 +55,20 @@ public class TNodeTemplatePropertyPage<T extends TNodeTemplate> extends ToscaEle
     @objid ("378c8d16-1a0a-413b-b142-e267468c87c4")
     @Override
     public void update(IModulePropertyTable table) {
-		super.update(table);
-    	table.addProperty("Name",_element.getElement().getName());
-        table.addProperty("Min Instance",String.valueOf(_element.getMinInstances()));
-        table.addProperty("Max Instance",String.valueOf(_element.getMaxInstances()));
-        
-        //capabilities
-        this._capabilities = CapabilitiesType.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
-        //table.addProperty("Capabilities0", getCamelName(this._element.getCapabilities()()), getCamelNames(this._c));
-        
-        
-        // table.addProperty("Capabilities", getNotNull((String.valueOf(this._element.getCapabilities()))));
-        table.addProperty("Deployment Artifacts", getNotNull((String.valueOf(this._element.getDeploymentArtifacts()))));
-        // table.addProperty("Policies", getNotNull((String.valueOf(this._element.getPolicies()))));
-        table.addProperty("Requirements", getNotNull((String.valueOf(this._element.getRequirements()))));
+        super.update(table);
+              table.addProperty("Name",_element.getElement().getName());
+              table.addProperty("Min Instance",String.valueOf(_element.getMinInstances()));
+              table.addProperty("Max Instance",String.valueOf(_element.getMaxInstances()));
+              
+              //capabilities
+              this._capabilities = CapabilitiesType.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
+              //table.addProperty("Capabilities0", getCamelName(this._element.getCapabilities()()), getCamelNames(this._c));
+              
+              
+              // table.addProperty("Capabilities", getNotNull((String.valueOf(this._element.getCapabilities()))));
+              table.addProperty("Deployment Artifacts", getNotNull((String.valueOf(this._element.getDeploymentArtifacts()))));
+              // table.addProperty("Policies", getNotNull((String.valueOf(this._element.getPolicies()))));
+              table.addProperty("Requirements", getNotNull((String.valueOf(this._element.getRequirements()))));
     }
 
 }
