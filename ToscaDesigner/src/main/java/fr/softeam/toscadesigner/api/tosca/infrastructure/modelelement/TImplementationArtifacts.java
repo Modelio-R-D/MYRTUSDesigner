@@ -39,13 +39,14 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("d47910fb-8e1a-4333-8d0b-350a7593a9d7")
 public class TImplementationArtifacts implements IMdaProxy {
-    @objid ("268e11a5-6c93-4f97-8671-56f5ba49cd82")
+    @objid ("0b468753-32e3-464e-b2b0-389b9b4b0766")
     public static final String STEREOTYPE_NAME = "TImplementationArtifacts";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
+     * 
      */
-    @objid ("c52f7e3e-e8a5-4f91-b196-47220d8251d4")
+    @objid ("4a5f325e-90e1-40c7-889b-12dabfafe501")
     protected final ModelElement elt;
 
     /**
@@ -55,17 +56,16 @@ public class TImplementationArtifacts implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("36efdd65-f0e5-424f-aea5-e2850bf334f8")
+    @objid ("cfcc4611-c0cc-4dbb-87bc-bf9b270e2e3a")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (TImplementationArtifacts.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(TImplementationArtifacts.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link ModelElement} stereotyped << TImplementationArtifacts >> then instantiate a {@link TImplementationArtifacts} proxy.
-     * 
      * @return a {@link TImplementationArtifacts} proxy on the created {@link ModelElement}.
      */
-    @objid ("57f11aa7-43a1-47db-82ef-b0e282184d89")
+    @objid ("fcd2dd82-1923-4f2c-93db-876aacfeae7b")
     public static TImplementationArtifacts create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(TImplementationArtifacts.MdaTypes.STEREOTYPE_ELT);
@@ -79,7 +79,7 @@ public class TImplementationArtifacts implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link TImplementationArtifacts} proxy or <i>null</i>.
      */
-    @objid ("6d0ab55d-bfdd-4749-a8cf-6b6559247428")
+    @objid ("e5eb1cbb-00e0-4ac9-b6d6-3f749d2ca066")
     public static TImplementationArtifacts instantiate(final ModelElement obj) {
         return TImplementationArtifacts.canInstantiate(obj) ? new TImplementationArtifacts(obj) : null;
     }
@@ -88,19 +88,19 @@ public class TImplementationArtifacts implements IMdaProxy {
      * Tries to instantiate a {@link TImplementationArtifacts} proxy from a {@link ModelElement} stereotyped << TImplementationArtifacts >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link ModelElement}
      * @return a {@link TImplementationArtifacts} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("f2f949c4-aeb9-48d6-b157-6f6df5beac40")
+    @objid ("ef7f8ce2-991f-4c7e-a557-a41dbab61b01")
     public static TImplementationArtifacts safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (TImplementationArtifacts.canInstantiate(obj))
-        	return new TImplementationArtifacts(obj);
+            return new TImplementationArtifacts(obj);
         else
-        	throw new IllegalArgumentException("TImplementationArtifacts: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("TImplementationArtifacts: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("a37e1a53-4804-4693-8f9d-f02970e897ba")
+    @objid ("620c9b4d-0b4f-4f79-8ef0-d9ba35b9a879")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -117,38 +117,37 @@ public class TImplementationArtifacts implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link ModelElement}. 
+     * Get the underlying {@link ModelElement}.
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("84ef4f34-e584-414c-907e-e5028dac0317")
+    @objid ("84e6f085-c01d-4678-a36d-73ea82dcbdc2")
     public ModelElement getElement() {
         return this.elt;
     }
 
-    @objid ("23edc8d0-b638-4a68-8bd2-a8eb19f370c7")
+    @objid ("74c65387-5a14-406a-99d1-7c91ed2e3194")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-        
     }
 
-    @objid ("90d2b604-70b6-4637-bb5c-e113d43b570b")
+    @objid ("20d506f4-867a-4def-9ab9-ff9b67db6edb")
     protected  TImplementationArtifacts(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("1693d6d0-c556-4b66-9904-15ec1126619e")
     public static final class MdaTypes {
-        @objid ("201c2f57-a4cd-4bcb-99ba-f47cabce3bc2")
+        @objid ("2437933d-2f45-434d-b3c0-ad2308520baf")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("aa269b70-958c-4264-8edc-6dcc6168d251")
+        @objid ("2329da57-c290-41d3-955f-93277399f2f2")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("9ab23e29-a565-4fe7-9939-e33e1c36ca64")
+        @objid ("8a1a4d11-6da2-4a6f-91d5-5badbcf14d7c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("1c32e6f2-18a9-4f05-8c45-ab4a7fbff771")
+        @objid ("43d9d6a7-644a-48c3-b206-010c9c62a4a9")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -165,7 +164,6 @@ public class TImplementationArtifacts implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
-            
         }
 
     }

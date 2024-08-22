@@ -31,6 +31,7 @@ public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> 
     @objid ("378c8d16-1a0a-413b-b142-e267468c87c4")
     @Override
     public void update(IModulePropertyTable table) {
+		super.update(table);
         table.addProperty("Name",_element.getElement().getName());
         table.addProperty("Type",_element.getType());
     }

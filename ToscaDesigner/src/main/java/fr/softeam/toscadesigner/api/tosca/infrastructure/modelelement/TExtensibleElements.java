@@ -40,19 +40,20 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("eb4887ad-684d-4883-9afb-610ab5bff5d1")
 public class TExtensibleElements implements IMdaProxy {
-    @objid ("4995c14d-adb2-4c94-aa2c-4702b64f1e61")
+    @objid ("a8dfe7f5-4602-4c00-b95b-02ce4feeff57")
     public static final String STEREOTYPE_NAME = "TExtensibleElements";
 
-    @objid ("f3f73db8-0d2e-4a58-901a-a98463f7abfc")
+    @objid ("f9284c81-cbf3-47f3-8502-180efc114ea7")
     public static final String ANYATTRIBUTE_TAGTYPE = "anyAttribute";
 
-    @objid ("db8c89cd-ea14-4199-9f4a-1d6ff5fafe64")
+    @objid ("5a5aa884-9ce6-497b-863f-1deacd12b991")
     public static final String METADATA_PROPERTY = "metadata";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
+     * 
      */
-    @objid ("9f63f680-13f3-4538-b3d3-eb4e0ba87a69")
+    @objid ("b88a8f57-426c-475c-8107-e70defc72046")
     protected final ModelElement elt;
 
     /**
@@ -62,17 +63,16 @@ public class TExtensibleElements implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("b9da0fb6-2ef5-44dc-9ba1-b0e634e9b19c")
+    @objid ("b8f86225-28d1-4277-bd0b-bc806ce7ff33")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (TExtensibleElements.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(TExtensibleElements.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link ModelElement} stereotyped << TExtensibleElements >> then instantiate a {@link TExtensibleElements} proxy.
-     * 
      * @return a {@link TExtensibleElements} proxy on the created {@link ModelElement}.
      */
-    @objid ("5f04425f-0e4e-46fa-a565-c40d20e00c0e")
+    @objid ("45e61bd2-f978-4d47-90b0-9c493498975d")
     public static TExtensibleElements create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(TExtensibleElements.MdaTypes.STEREOTYPE_ELT);
@@ -86,7 +86,7 @@ public class TExtensibleElements implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link TExtensibleElements} proxy or <i>null</i>.
      */
-    @objid ("2c44f8bf-88d0-4170-b529-14859b001cc1")
+    @objid ("78a3aadb-8635-4fe8-a408-cfe5269d940a")
     public static TExtensibleElements instantiate(final ModelElement obj) {
         return TExtensibleElements.canInstantiate(obj) ? new TExtensibleElements(obj) : null;
     }
@@ -95,25 +95,24 @@ public class TExtensibleElements implements IMdaProxy {
      * Tries to instantiate a {@link TExtensibleElements} proxy from a {@link ModelElement} stereotyped << TExtensibleElements >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link ModelElement}
      * @return a {@link TExtensibleElements} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("64e39cc4-87df-4da8-a109-ee0fea922bb6")
+    @objid ("ea199c00-fe43-4a03-9268-6d8647fc3608")
     public static TExtensibleElements safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (TExtensibleElements.canInstantiate(obj))
-        	return new TExtensibleElements(obj);
+            return new TExtensibleElements(obj);
         else
-        	throw new IllegalArgumentException("TExtensibleElements: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("TExtensibleElements: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'documentation' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("74b9c4b5-26ec-4023-a406-d7c81682e791")
+    @objid ("6240386d-201d-4b5d-9bd4-a21b8b81c53d")
     public void addDocumentation(final TDocumentation obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -123,7 +122,7 @@ public class TExtensibleElements implements IMdaProxy {
         }
     }
 
-    @objid ("a5d47956-2798-4122-86e7-fe90dc0e3387")
+    @objid ("0e48dea1-7741-43bc-b0ee-e7d43ae6c18f")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -144,7 +143,7 @@ public class TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("0316dbd4-96f7-4fda-8224-7fbda144bbf4")
+    @objid ("4ad406f1-00db-451e-a4c6-12ae75281420")
     public String getAnyAttribute() {
         return this.elt.getTagValue(TExtensibleElements.MdaTypes.ANYATTRIBUTE_TAGTYPE_ELT);
     }
@@ -153,9 +152,8 @@ public class TExtensibleElements implements IMdaProxy {
      * Get the values of the 'documentation' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("047ff0b3-0594-4de4-83af-6a9e9c227af9")
+    @objid ("3847e809-a729-430e-8692-d839cf43c4fa")
     public List<TDocumentation> getDocumentation() {
         List<TDocumentation> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -168,10 +166,10 @@ public class TExtensibleElements implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link ModelElement}. 
+     * Get the underlying {@link ModelElement}.
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("fcb8abb1-b106-4a78-b93a-244434a8ffb9")
+    @objid ("2ef8ece3-b587-40aa-a765-f03cc8264704")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -181,7 +179,7 @@ public class TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("057073dd-3fcc-415f-a297-7e2a992f30fe")
+    @objid ("7ce4346b-62df-4f70-b86f-236e61da6c50")
     public String getMetadata() {
         String value = this.elt.getProperty(TExtensibleElements.MdaTypes.STEREOTYPE_ELT,
                                             TExtensibleElements.MdaTypes.METADATA_PROPERTY_ELT.getName());
@@ -189,23 +187,20 @@ public class TExtensibleElements implements IMdaProxy {
           value = TExtensibleElements.MdaTypes.METADATA_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(TExtensibleElements.MdaTypes.METADATA_PROPERTY_ELT, value, this.elt);
-        
     }
 
-    @objid ("342d6e8f-ec53-4474-9375-dc5d7181a86a")
+    @objid ("e97a0a5c-a586-4f30-9e57-af9077ac987b")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-        
     }
 
     /**
      * Remove a value from the 'documentation' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("df151695-0f79-44d1-82f1-0cd506831ab0")
+    @objid ("5dd8ce0a-262d-42a5-bcc7-096984b21680")
     public boolean removeDocumentation(final TDocumentation obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -217,7 +212,6 @@ public class TExtensibleElements implements IMdaProxy {
           }
         }
         return false;
-        
     }
 
     /**
@@ -225,7 +219,7 @@ public class TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("48cd5772-f8c5-40ad-a851-6162b894a206")
+    @objid ("1a7ffabf-8f6f-49a5-8f7b-ce4d92884385")
     public void setAnyAttribute(final String value) {
         this.elt.putTagValue(TExtensibleElements.MdaTypes.ANYATTRIBUTE_TAGTYPE_ELT, value);
     }
@@ -235,36 +229,36 @@ public class TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("6a514ebf-f236-449e-8b0d-12313077f333")
+    @objid ("ebdede70-8b79-4953-8a94-748f35e207b6")
     public void setMetadata(final String value) {
         this.elt.setProperty(TExtensibleElements.MdaTypes.STEREOTYPE_ELT,
                              TExtensibleElements.MdaTypes.METADATA_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(TExtensibleElements.MdaTypes.METADATA_PROPERTY_ELT, value));
     }
 
-    @objid ("4de4f401-cc40-48bc-90a6-7b92448ba9e4")
+    @objid ("b36e7e9b-070d-4737-9ff9-dfc39ab55779")
     protected  TExtensibleElements(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("68a62128-b7e3-47b1-9df0-8246ca95e037")
     public static final class MdaTypes {
-        @objid ("e60aeada-b21a-475d-a421-bd4bfa738205")
+        @objid ("7f730c69-54af-40fc-be95-d94fb209679e")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("c2c24acf-fcbc-4c81-8e7f-33f44fd85ab9")
+        @objid ("458b3288-20e1-4117-b29c-7a7443e6c25d")
         public static TagType ANYATTRIBUTE_TAGTYPE_ELT;
 
-        @objid ("6fd7bd90-44ea-4de2-a7d9-41372d6d962a")
+        @objid ("ac7ddace-2ba9-4f18-b3eb-43faf1acd76c")
         public static PropertyDefinition METADATA_PROPERTY_ELT;
 
-        @objid ("a15f5f4a-82fc-4014-be9e-8a670a8f266a")
+        @objid ("21945439-aa3b-4fd6-8c6f-7ba6a7343923")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("7db84aae-7c35-4905-8410-a5f34d5107ec")
+        @objid ("39f13df0-1af2-449d-a600-4cecb3ba1858")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("9245bbe9-cf1b-49c5-b8c2-53374b975582")
+        @objid ("c28b325f-9643-42fd-ad62-6c350fe1e2f8")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -289,7 +283,6 @@ public class TExtensibleElements implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
-            
         }
 
     }

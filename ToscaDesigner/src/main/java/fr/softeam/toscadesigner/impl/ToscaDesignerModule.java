@@ -91,7 +91,7 @@ public class ToscaDesignerModule extends AbstractJavaModule {
     @objid ("a46b8dae-28ae-4eba-aaed-6b65d095530f")
     private IMdaExpert getGeneratedMdaExpert(final Stereotype st) {
         switch (st.getUuid()) {
-        	default: return null;
+            default: return null;
         }
     }
 

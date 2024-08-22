@@ -39,13 +39,14 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("24fcdbc0-90a3-4436-8852-029897e4d36c")
 public class OutputParametersType implements IMdaProxy {
-    @objid ("9aa8914f-476d-4a3b-ac67-716cdf4b4cd1")
+    @objid ("103eb27c-e80e-4b1f-a673-a3eff09eaeda")
     public static final String STEREOTYPE_NAME = "OutputParametersType";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
+     * 
      */
-    @objid ("289a496b-2013-489d-8b11-7ae84e0a7d83")
+    @objid ("70263424-b3d6-4475-be32-f6c4d960487e")
     protected final ModelElement elt;
 
     /**
@@ -55,17 +56,16 @@ public class OutputParametersType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("a67df124-eb6e-435a-a8c9-e4c9bdfcce92")
+    @objid ("b27bba99-af9c-468f-8091-90d9d5b4739a")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (OutputParametersType.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(OutputParametersType.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link ModelElement} stereotyped << OutputParametersType >> then instantiate a {@link OutputParametersType} proxy.
-     * 
      * @return a {@link OutputParametersType} proxy on the created {@link ModelElement}.
      */
-    @objid ("fbdb848b-9784-4ccf-8bda-91c7f5dfded3")
+    @objid ("10e31cc7-f5fa-4ea8-b2b8-0d030cb560b1")
     public static OutputParametersType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(OutputParametersType.MdaTypes.STEREOTYPE_ELT);
@@ -79,7 +79,7 @@ public class OutputParametersType implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link OutputParametersType} proxy or <i>null</i>.
      */
-    @objid ("cb55b76d-5640-4e45-97b1-8374f1974cc6")
+    @objid ("672f4b68-5c0f-4405-9385-5dd68790c7e8")
     public static OutputParametersType instantiate(final ModelElement obj) {
         return OutputParametersType.canInstantiate(obj) ? new OutputParametersType(obj) : null;
     }
@@ -88,25 +88,24 @@ public class OutputParametersType implements IMdaProxy {
      * Tries to instantiate a {@link OutputParametersType} proxy from a {@link ModelElement} stereotyped << OutputParametersType >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link ModelElement}
      * @return a {@link OutputParametersType} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("68be580e-60f6-4d6a-8f4d-c8b23bcb9379")
+    @objid ("b243287d-3a84-41f4-9170-bde02c070c9e")
     public static OutputParametersType safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (OutputParametersType.canInstantiate(obj))
-        	return new OutputParametersType(obj);
+            return new OutputParametersType(obj);
         else
-        	throw new IllegalArgumentException("OutputParametersType: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("OutputParametersType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'outputParameter' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("6a8c54fc-9fb0-42fe-a691-8acb68adb680")
+    @objid ("9bfadcf7-fef2-4a9a-9b12-fc9602a2762a")
     public void addOutputParameter(final TParameter obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -116,7 +115,7 @@ public class OutputParametersType implements IMdaProxy {
         }
     }
 
-    @objid ("0117fe70-59cd-4f37-aa6e-639991f6ea08")
+    @objid ("e140c1a6-a9f7-4163-adf2-ce471ad0bef6")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -133,10 +132,10 @@ public class OutputParametersType implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link ModelElement}. 
+     * Get the underlying {@link ModelElement}.
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("7df5f553-5856-463f-84b1-0739e7b3e022")
+    @objid ("0b3331e9-f2a3-495c-b513-5a2e18589e2a")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -145,9 +144,8 @@ public class OutputParametersType implements IMdaProxy {
      * Get the values of the 'outputParameter' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("aa970ab0-d866-4560-b741-0d8443a28c09")
+    @objid ("b94b55a8-22cd-49cd-ae40-cd4a7aa7c6f1")
     public List<TParameter> getOutputParameter() {
         List<TParameter> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -159,20 +157,18 @@ public class OutputParametersType implements IMdaProxy {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("d563f08f-45e2-4870-8297-11301f86f80c")
+    @objid ("4cf130c6-caaa-49a6-a98c-768ca3585355")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-        
     }
 
     /**
      * Remove a value from the 'outputParameter' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("37861753-44ac-4477-832d-6fb960b6d52c")
+    @objid ("58b91149-4ac2-430a-a3f8-26dde16243a0")
     public boolean removeOutputParameter(final TParameter obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -184,26 +180,25 @@ public class OutputParametersType implements IMdaProxy {
           }
         }
         return false;
-        
     }
 
-    @objid ("444b7085-a973-42c1-9159-56135d80eb0a")
+    @objid ("d39a6f4e-37d6-487c-bc01-7584d9facd48")
     protected  OutputParametersType(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("ca00e84f-6348-4928-90db-7ea8e672f5ef")
     public static final class MdaTypes {
-        @objid ("e7be56af-c4cd-4df0-b6a5-bf9a84cd5f02")
+        @objid ("b85be2fd-04c3-4712-919b-d6c43db65a74")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("982f4851-2886-4db8-86ad-2e43c31e999b")
+        @objid ("efeaf75d-4657-49f5-8d66-64b954fe5c4d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("d374c001-be6e-4b6a-986e-04a7e5ab23b7")
+        @objid ("b2062338-661a-4082-96ea-e3091dd4fc22")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("185c2ea6-7657-4f8e-8282-170913224fdf")
+        @objid ("60cfab98-6481-4461-8495-ff504142236c")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -220,7 +215,6 @@ public class OutputParametersType implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
-            
         }
 
     }
