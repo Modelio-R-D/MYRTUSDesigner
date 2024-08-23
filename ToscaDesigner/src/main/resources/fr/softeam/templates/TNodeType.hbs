@@ -1,9 +1,7 @@
-{{#imports}}
-It works?
-{{/imports}}
+{{imports this}}
 node_types:
   {{owner.name}}.{{name}}:
-    description: {{description}}
+    description: {{getProperty this "description"}}
     derived_from: {{getProperty this "derivedFrom"}}
     metadata:
       targetNamespace: "{{getProperty this "targetNamespace"}}"

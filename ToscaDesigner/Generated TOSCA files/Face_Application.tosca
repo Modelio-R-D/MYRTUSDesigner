@@ -3,7 +3,7 @@ tosca_definitions_version: tosca_simple_yaml_1_3
 metadata:
   targetNamespace: ""
   name: "Face_Application"
-imports:
+
 topology_template:
   node_templates:
     Myrtus_Workstation_1:
@@ -11,27 +11,63 @@ topology_template:
       metadata:
         displayName: ""
       properties:
-      requirements:
-      artifacts:
+
+
     MyrtusFaceDetectionService_0:
       type: 
       metadata:
         displayName: ""
       properties:
+        dockerImage: "thebigpotatoe/face-recognition-docker"
       requirements:
-      artifacts:
+        - «TRequirement» host:
+            node: Myrtus_Workstation_1
+            relationship: 
+            capability: «TCapabilityDefinition» host
+
     MyrtusCameraFeed_0:
       type: 
       metadata:
         displayName: ""
       properties:
+        dockerImage: "ci.hesi.energy:5000/myrtus/examples/myrtusface/camera_feed:web"
       requirements:
-      artifacts:
+        - «TRequirement» host:
+            node: Myrtus_Proxy_0
+            relationship: 
+            capability: «TCapabilityDefinition» host
+
     Myrtus_Proxy_0:
       type: 
       metadata:
         displayName: ""
       properties:
+        dockerImage: "nginx:alpine"
+        port: "443"
       requirements:
-      artifacts:
+        - «TRequirement» host:
+            node: Myrtus_Workstation_1
+            relationship: 
+            capability: «TCapabilityDefinition» host      
+        - «TRequirement» egress1:
+            node: MyrtusCameraFeed_0
+            relationship: 
+            capability: «TCapabilityDefinition» WebService      
+        - «TRequirement» egress2:
+            node: MyrtusFaceDetectionService_0
+            relationship: 
+            capability: «TCapabilityDefinition» FaceDetectionService
+      
+        «TDeploymentArtifact» nginx.conf:
+          type: tosca.artifacts.File
+          deploy_path: /etc/nginx/conf.d/default.conf
+          file: /servicetemplates/example.eu.myrtus.servicetemplates/MyrtusFace_Application_w1-wip2/files/MyrtusProxy_w1-wip1_0/nginx.conf/nginx.conf      
+        «TDeploymentArtifact» fullchain.pem:
+          type: tosca.artifacts.File
+          deploy_path: /certs/fullchain.pem
+          file: /home/hesi/cert/fullchain.pem      
+        «TDeploymentArtifact» key:
+          type: tosca.artifacts.File
+          deploy_path: /certs/privkey.pem
+          file: /home/hesi/cert/privkey.pem
   relationship_templates:

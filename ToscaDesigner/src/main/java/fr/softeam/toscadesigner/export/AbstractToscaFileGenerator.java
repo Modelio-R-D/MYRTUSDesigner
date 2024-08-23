@@ -9,9 +9,12 @@ import java.util.Set;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.FileDialog;
+import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.smkernel.mapi.MObject;
+import org.modelio.vcore.smkernel.mapi.MRef;
 
 import com.github.jknack.handlebars.Handlebars;
 import com.github.jknack.handlebars.Options;
@@ -19,7 +22,10 @@ import com.github.jknack.handlebars.Template;
 import com.github.jknack.handlebars.helper.ConditionalHelpers;
 import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
 
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TEntityType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement;
 import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
 
 public abstract class AbstractToscaFileGenerator {
@@ -46,8 +52,36 @@ public abstract class AbstractToscaFileGenerator {
 		Handlebars handlebars = new Handlebars(new ClassPathTemplateLoader(TEMPLATE_PATH, ".hbs"));
 		handlebars.setPrettyPrint(true);
 		handlebars.registerHelper("getProperty", (ModelElement context, Options options) -> {
-			Stereotype entityTypeStereotype = context.getExtension().get(0).getParent();
-			return context.getProperty(entityTypeStereotype, (String) options.params[0]);
+			String searchedPropertyName = (String) options.params[0];
+			for (Stereotype stereotype : context.getExtension()) {
+				String propertyStringValue;
+				propertyStringValue = context.getProperty(stereotype, searchedPropertyName);
+
+				// if it didn't find the property with this stereotype, look for the parent
+				// stereotypes
+				while (propertyStringValue == null && stereotype.getParent() != null) {
+					stereotype = stereotype.getParent();
+					propertyStringValue = context.getProperty(stereotype, (String) searchedPropertyName);
+				}
+
+				if (stereotype.getName().equals("TRequirement")) {
+					if (searchedPropertyName.equals("node")) {
+						MRef ref = (MRef) PropertyConverter.convertToObject(TRequirement.MdaTypes.NODE_PROPERTY_ELT,
+								propertyStringValue, context);
+						ModelElement tNodeType = (ModelElement) ToscaDesignerModule.getInstance().getModuleContext()
+								.getModelingSession().findByRef(ref);
+						propertyStringValue = tNodeType.getName();
+					} else if (searchedPropertyName.equals("capability")) {
+						MRef ref = (MRef) PropertyConverter.convertToObject(TRequirement.MdaTypes.CAPABILITY_PROPERTY_ELT,
+								propertyStringValue, context);
+						ModelElement tCapability = (ModelElement) ToscaDesignerModule.getInstance().getModuleContext()
+								.getModelingSession().findByRef(ref);
+						propertyStringValue = tCapability.getName();
+					}
+				}
+				return propertyStringValue;
+			}
+			throw new RuntimeException("Stereotype property " + searchedPropertyName + " not found in " + context);
 		});
 		handlebars.registerHelper("imports", (ModelElement context, Options options) -> {
 
@@ -58,7 +92,6 @@ public abstract class AbstractToscaFileGenerator {
 				// 1. Check for non-tosca derived type
 				Stereotype stereotype = ToscaDesignerModule.getInstance().getModuleContext().getModelingSession()
 						.getMetamodelExtensions().getStereotype("TEntityType", context.getMClass());
-//	            .getStereotype("TNodeTemplate", object.getMClass())
 				String derivedFromValue = context.getProperty(stereotype, TEntityType.DERIVEDFROM_PROPERTY);
 				String targetNamespace = context.getProperty(stereotype, TEntityType.TARGETNAMESPACE_PROPERTY);
 
@@ -94,7 +127,8 @@ public abstract class AbstractToscaFileGenerator {
 			}
 
 			// Generate the import statements based on the imports list
-			return generateImportString(imports);
+			String importString = generateImportString(imports);
+			return importString;
 
 		});
 		handlebars.registerHelpers(ConditionalHelpers.class);
@@ -146,7 +180,7 @@ public abstract class AbstractToscaFileGenerator {
 
 	private String generateImportString(Set<Import> imports) {
 		StringBuilder importString = new StringBuilder();
-		if(!imports.isEmpty())
+		if (!imports.isEmpty())
 			importString.append("imports:\n");
 		for (Import anImport : imports) {
 			importString.append("  - file: ").append(anImport.getFile()).append("\n").append("    namespace_uri: ")

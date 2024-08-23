@@ -1,5 +1,7 @@
 package fr.softeam.toscadesigner.handlers.tools;
 
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.widgets.Display;
 import org.modelio.api.modelio.diagram.IDiagramGraphic;
@@ -10,10 +12,6 @@ import org.modelio.api.modelio.diagram.ILinkRoute;
 import org.modelio.api.modelio.diagram.tools.DefaultLinkTool;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.ITransaction;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
 
 @objid ("1d1a3b00-63d7-41b1-a3e0-137271d640f6")
 public class RelationshipTemplateTool extends DefaultLinkTool {
@@ -39,16 +37,16 @@ public class RelationshipTemplateTool extends DefaultLinkTool {
         IModelingSession session = ToscaDesignerModule.getInstance().getModuleContext().getModelingSession();
         try (ITransaction transaction = session.createTransaction(" RelationshipTemplate")) {
         /*
-                                                                                            TRelationshipTemplate toscaElt = TRelationshipTemplate.create(session);
-                                                                                            toscaElt.setSourceElement(this.nodeT1.getName());
-                                                                                            toscaElt.setTargetElement(this.nodeT2.getName());
-                                                                                        
-                                                                                            diagramHandle.unmask(toscaElt.getElement(), path.getPoints().get(0).x, path.getPoints().get(1).x);
-                                                                                        
-                                                                                            diagramHandle.save();
-                                                                                            diagramHandle.close();
-                                                                                            transaction.commit();
-                                                                                        */
+                                                                                                    TRelationshipTemplate toscaElt = TRelationshipTemplate.create(session);
+                                                                                                    toscaElt.setSourceElement(this.nodeT1.getName());
+                                                                                                    toscaElt.setTargetElement(this.nodeT2.getName());
+                                                                                                
+                                                                                                    diagramHandle.unmask(toscaElt.getElement(), path.getPoints().get(0).x, path.getPoints().get(1).x);
+                                                                                                
+                                                                                                    diagramHandle.save();
+                                                                                                    diagramHandle.close();
+                                                                                                    transaction.commit();
+                                                                                                */
         }
     }
 

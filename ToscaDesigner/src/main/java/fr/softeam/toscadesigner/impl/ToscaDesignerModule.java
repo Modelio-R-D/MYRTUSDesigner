@@ -1,5 +1,6 @@
 package fr.softeam.toscadesigner.impl;
 
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.module.AbstractJavaModule;
 import org.modelio.api.module.IPeerModule;
 import org.modelio.api.module.context.IModuleContext;
@@ -7,8 +8,6 @@ import org.modelio.api.module.lifecycle.IModuleLifeCycleHandler;
 import org.modelio.api.module.mda.IMdaExpert;
 import org.modelio.api.module.parameter.IParameterEditionModel;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("76d0c540-ed36-4597-90ed-7c8f8ec4c1c5")
 public class ToscaDesignerModule extends AbstractJavaModule {

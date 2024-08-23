@@ -2,18 +2,12 @@ package fr.softeam.toscadesigner.impl;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
-import org.modelio.vcore.smkernel.mapi.MRef;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.modelio.vcore.smkernel.mapi.MRef;
 
 @objid ("cbcd3805-8de1-4b5f-9c96-29ac61cf377d")
 public class MdaProxyException extends Exception {
-
-	private static final long serialVersionUID = 1L;
-
-
-	@objid ("673ef56a-e5ff-4258-b2e1-c16139a912af")
+    @objid ("673ef56a-e5ff-4258-b2e1-c16139a912af")
     public  MdaProxyException(MdaProxyExceptionReason reason, List<MRef> missingRefs) {
         super(missingRefs.stream().map((r) -> r.toString())
                 .collect(Collectors.joining(" ", MdaProxyExceptionReason.MISSING_MDA_ELEMENT.toString(), "")));

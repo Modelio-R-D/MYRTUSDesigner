@@ -1,12 +1,7 @@
 metadata:
-  targetNamespace: "{{targetNamespace}}"
+  targetNamespace: "{{getProperty this "targetNamespace"}}"
   name: "{{name}}"
-imports:
-{{#imports}}
-  - file: {{importFileName}}
-    namespace_uri: {{importNamespaceUri}}
-    namespace_prefix: {{importNamespacePrefix}}
-{{/imports}}
+{{imports this}}
 topology_template:
   node_templates:
 {{#ownedElement}}  
@@ -15,23 +10,21 @@ topology_template:
       metadata:
         displayName: "{{displayName}}"
       properties:
-      {{#type-properties}}
-        {{name}}: "{{getProperty nodeTemplate (lookup name)}}"
-      {{/type-properties}}
-      requirements:
-      {{#requirements}}
-        - {{name}}:
-            node: {{node}}
+      {{#ownedAttribute}}
+        {{name}}: "{{value}}"
+      {{/ownedAttribute}}
+      {{#each ownedElement}}{{#extension}}{{#eq name "TRequirement"}}
+      {{#if ../@first}}requirements:{{/if}}
+        - {{../name}}:
+            node: {{getProperty ../this "node"}}
             relationship: {{relationship}}
-            capability: {{capability}}
-      {{/requirements}}
-      artifacts:
-      {{#artifacts}}
-        {{name}}:
-          type: {{type}}
-          deploy_path: {{deployPath}}
-          file: {{file}}
-      {{/artifacts}}
+            capability: {{getProperty ../this "capability"}}{{/eq}}{{/extension}}{{/each}}
+      {{#each ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifact"}}
+      {{#if ../@first}}artifacts:{{/if}}
+        {{../name}}:
+          type: {{getProperty ../this "artifactType"}}
+          deploy_path: {{getProperty ../this "Deploy_path"}}
+          file: {{getProperty ../this "File"}}{{/eq}}{{/extension}}{{/each}}
 {{/ownedElement}}
   relationship_templates:
 {{#relationshipTemplates}}
