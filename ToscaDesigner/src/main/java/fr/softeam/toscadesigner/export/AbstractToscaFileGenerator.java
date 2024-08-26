@@ -2,15 +2,19 @@ package fr.softeam.toscadesigner.export;
 
 import java.io.IOException;
 import java.io.StringWriter;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.FileDialog;
 import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.infrastructure.ModelTree;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.smkernel.mapi.MObject;
@@ -22,9 +26,8 @@ import com.github.jknack.handlebars.Template;
 import com.github.jknack.handlebars.helper.ConditionalHelpers;
 import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
 
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition;
+import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TDeploymentArtifact;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TEntityType;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement;
 import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
 
@@ -72,8 +75,8 @@ public abstract class AbstractToscaFileGenerator {
 								.getModelingSession().findByRef(ref);
 						propertyStringValue = tNodeType.getName();
 					} else if (searchedPropertyName.equals("capability")) {
-						MRef ref = (MRef) PropertyConverter.convertToObject(TRequirement.MdaTypes.CAPABILITY_PROPERTY_ELT,
-								propertyStringValue, context);
+						MRef ref = (MRef) PropertyConverter.convertToObject(
+								TRequirement.MdaTypes.CAPABILITY_PROPERTY_ELT, propertyStringValue, context);
 						ModelElement tCapability = (ModelElement) ToscaDesignerModule.getInstance().getModuleContext()
 								.getModelingSession().findByRef(ref);
 						propertyStringValue = tCapability.getName();
@@ -82,6 +85,13 @@ public abstract class AbstractToscaFileGenerator {
 				return propertyStringValue;
 			}
 			throw new RuntimeException("Stereotype property " + searchedPropertyName + " not found in " + context);
+		});
+		handlebars.registerHelper("noStereotypeApplications", (Class context, Options options) -> {
+			List<ModelTree> artifacts = context.getOwnedElement().stream()
+					.filter(element -> element.getExtension().stream()
+							.anyMatch(stereotype -> stereotype.getName().equals(options.params[0])))
+					.collect(Collectors.toList());
+			return artifacts.isEmpty();
 		});
 		handlebars.registerHelper("imports", (ModelElement context, Options options) -> {
 

@@ -13,18 +13,20 @@ topology_template:
       {{#ownedAttribute}}
         {{name}}: "{{value}}"
       {{/ownedAttribute}}
+      {{#unless (noStereotypeApplications this "TRequirement")}}requirements:{{/unless}}
       {{#each ownedElement}}{{#extension}}{{#eq name "TRequirement"}}
-      {{#if ../@first}}requirements:{{/if}}
         - {{../name}}:
             node: {{getProperty ../this "node"}}
             relationship: {{relationship}}
-            capability: {{getProperty ../this "capability"}}{{/eq}}{{/extension}}{{/each}}
+            capability: {{getProperty ../this "capability"}}
+       	{{/eq}}{{/extension}}{{/each}}
+      {{#unless (noStereotypeApplications this "TDeploymentArtifact")}}artifacts:{{/unless}}
       {{#each ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifact"}}
-      {{#if ../@first}}artifacts:{{/if}}
         {{../name}}:
           type: {{getProperty ../this "artifactType"}}
           deploy_path: {{getProperty ../this "Deploy_path"}}
-          file: {{getProperty ../this "File"}}{{/eq}}{{/extension}}{{/each}}
+          file: {{getProperty ../this "File"}}
+        {{/eq}}{{/extension}}{{/each}}
 {{/ownedElement}}
   relationship_templates:
 {{#relationshipTemplates}}
