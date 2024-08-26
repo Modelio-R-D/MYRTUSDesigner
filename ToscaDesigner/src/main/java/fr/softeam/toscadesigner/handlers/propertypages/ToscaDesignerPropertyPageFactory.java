@@ -6,6 +6,11 @@
  */
 package fr.softeam.toscadesigner.handlers.propertypages;
 
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
+import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TNodeTypePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRelationshipTypePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TNodeTemplatePropertyPage;
 import org.modelio.metamodel.diagrams.ClassDiagram;
 import org.modelio.metamodel.mda.ModuleComponent;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
@@ -27,13 +32,6 @@ import org.modelio.metamodel.uml.statik.Port;
 import org.modelio.metamodel.visitors.IDefaultInfrastructureVisitor;
 import org.modelio.metamodel.visitors.IDefaultModelVisitor;
 import org.modelio.metamodel.visitors.IInfrastructureVisitor;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
-import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TNodeTypePropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRelationshipTypePropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TNodeTemplatePropertyPage;
 
 @objid ("548a9154-c8a7-486f-9adb-ba13d312251a")
 public class ToscaDesignerPropertyPageFactory {

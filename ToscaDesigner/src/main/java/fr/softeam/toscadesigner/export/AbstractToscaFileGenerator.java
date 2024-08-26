@@ -2,7 +2,6 @@ package fr.softeam.toscadesigner.export;
 
 import java.io.IOException;
 import java.io.StringWriter;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +25,7 @@ import com.github.jknack.handlebars.Template;
 import com.github.jknack.handlebars.helper.ConditionalHelpers;
 import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
 
-import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TDeploymentArtifact;
+import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TEntityType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement;
 import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
@@ -80,6 +79,15 @@ public abstract class AbstractToscaFileGenerator {
 						ModelElement tCapability = (ModelElement) ToscaDesignerModule.getInstance().getModuleContext()
 								.getModelingSession().findByRef(ref);
 						propertyStringValue = tCapability.getName();
+					}
+				}
+				if (stereotype.getName().equals("TRelationshipTemplate")) {
+					if (searchedPropertyName.equals("type")) {
+						MRef ref = (MRef) PropertyConverter.convertToObject(TRelationshipTemplate.MdaTypes.TYPE_PROPERTY_ELT,
+								propertyStringValue, context);
+						ModelElement tRelationshipType = (ModelElement) ToscaDesignerModule.getInstance().getModuleContext()
+								.getModelingSession().findByRef(ref);
+						propertyStringValue = tRelationshipType.getName();
 					}
 				}
 				return propertyStringValue;

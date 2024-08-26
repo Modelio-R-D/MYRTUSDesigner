@@ -3,7 +3,6 @@ package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TEntityTypePropertyPage;
-
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("8e6ae627-578f-422f-8de0-77c04824219b")

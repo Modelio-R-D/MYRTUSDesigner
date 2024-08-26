@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 16/08/2024 12:30 by Modelio Studio.
+ * This file was generated on 21/08/2024 16:27 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -16,7 +16,7 @@ import com.modeliosoft.modelio.api.module.MManualClass;
 import com.modeliosoft.modelio.api.module.MManualImport;
 import com.modeliosoft.modelio.api.module.MManualOperation;
 import com.modeliosoft.modelio.api.module.mda.IMdaProxy;
-import fr.softeam.toscadesigner.impl.MdaProxyException;
+import com.modeliosoft.modelio.api.module.mda.MdaProxyException;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -39,13 +39,14 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("36bbca75-14c1-4ec4-b515-6d50ce057853")
 public class InputParametersType implements IMdaProxy {
-    @objid ("f48d053f-01e2-4275-be9a-2c394ddc050c")
+    @objid ("196390e0-6361-4d6e-b163-aef79d03cd40")
     public static final String STEREOTYPE_NAME = "InputParametersType";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
+     * 
      */
-    @objid ("5cf42442-d571-4021-89c1-09554c254bd9")
+    @objid ("d6c4866a-ed0b-4ad7-9b4f-79c07e21d0f4")
     protected final ModelElement elt;
 
     /**
@@ -55,17 +56,16 @@ public class InputParametersType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("ee1f56a5-c49b-4cf3-954a-7ff32f8fb6b0")
+    @objid ("b6d656ad-7a27-4bec-b86b-9a21e076f578")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (InputParametersType.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(InputParametersType.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link ModelElement} stereotyped << InputParametersType >> then instantiate a {@link InputParametersType} proxy.
-     * 
      * @return a {@link InputParametersType} proxy on the created {@link ModelElement}.
      */
-    @objid ("52f4d07c-6b59-46a1-a212-df054c853218")
+    @objid ("8343c1de-36a3-4b76-b74d-fda3bbd8ce56")
     public static InputParametersType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(InputParametersType.MdaTypes.STEREOTYPE_ELT);
@@ -79,7 +79,7 @@ public class InputParametersType implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link InputParametersType} proxy or <i>null</i>.
      */
-    @objid ("304becda-19da-46a0-a3f7-51441e869503")
+    @objid ("739a39b7-44f3-46f9-a1c8-ef21cc3bd417")
     public static InputParametersType instantiate(final ModelElement obj) {
         return InputParametersType.canInstantiate(obj) ? new InputParametersType(obj) : null;
     }
@@ -88,25 +88,24 @@ public class InputParametersType implements IMdaProxy {
      * Tries to instantiate a {@link InputParametersType} proxy from a {@link ModelElement} stereotyped << InputParametersType >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link ModelElement}
      * @return a {@link InputParametersType} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("e6acf96c-559b-4472-b23a-a631e3170ccf")
+    @objid ("e75c3c03-a1d9-4fcf-896c-e77c7d292974")
     public static InputParametersType safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (InputParametersType.canInstantiate(obj))
-        	return new InputParametersType(obj);
+            return new InputParametersType(obj);
         else
-        	throw new IllegalArgumentException("InputParametersType: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("InputParametersType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'inputParameter' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("b041d92d-a266-4539-a9cb-4198fe8d5690")
+    @objid ("b3f985c8-d345-46e6-9395-9457894d2886")
     public void addInputParameter(final TParameter obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -116,7 +115,7 @@ public class InputParametersType implements IMdaProxy {
         }
     }
 
-    @objid ("5de96ca3-0086-4360-a0f3-d1287b9292d3")
+    @objid ("c9b96e7e-6f90-419a-8042-74ab7c10d212")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -133,10 +132,10 @@ public class InputParametersType implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link ModelElement}. 
+     * Get the underlying {@link ModelElement}.
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("541cc24a-8d48-4d36-92ea-ba6720471383")
+    @objid ("f7f1d0a6-8219-4b93-a503-360f38cd25a3")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -145,9 +144,8 @@ public class InputParametersType implements IMdaProxy {
      * Get the values of the 'inputParameter' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("244bcb4b-714a-4945-a2e9-e24a7892b261")
+    @objid ("c8294e14-9e4a-4104-a0f3-c6b490c44838")
     public List<TParameter> getInputParameter() {
         List<TParameter> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -159,20 +157,18 @@ public class InputParametersType implements IMdaProxy {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("7148879e-eb8b-4a6b-9103-c03bb922de34")
+    @objid ("c6f4ee43-ce2b-4290-b602-807fb896eb06")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-        
     }
 
     /**
      * Remove a value from the 'inputParameter' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("ca6f4f15-27f1-4e8f-adda-d007a90f5891")
+    @objid ("9048b40c-18ea-4f6a-ba22-60c3db34d6a8")
     public boolean removeInputParameter(final TParameter obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -184,26 +180,25 @@ public class InputParametersType implements IMdaProxy {
           }
         }
         return false;
-        
     }
 
-    @objid ("916d6359-0748-4b52-abb5-eeac75a42623")
+    @objid ("3f444346-5ebd-47b8-ba6c-a599714e8ca1")
     protected  InputParametersType(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("8bf600ba-ef41-477f-927b-6810cea27c90")
     public static final class MdaTypes {
-        @objid ("ac02de10-73bc-4b83-9779-b6419524823b")
+        @objid ("9e8cd94e-973b-4ac6-8f1e-2e97272aae2e")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("3d36b698-7d93-4289-85ea-04edbc7f6d8e")
+        @objid ("337c6f95-c091-4faa-9f20-4b45cc0e39bf")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("207a9fd0-e542-4372-a3e0-dcc0bb62d942")
+        @objid ("964b2190-2f49-43a2-b989-2f8f2ad58244")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("762f40f9-946f-44cc-8170-7106ff286d13")
+        @objid ("0b561521-f6fc-48b8-8801-8c1458aec427")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -220,7 +215,6 @@ public class InputParametersType implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
-            
         }
 
     }

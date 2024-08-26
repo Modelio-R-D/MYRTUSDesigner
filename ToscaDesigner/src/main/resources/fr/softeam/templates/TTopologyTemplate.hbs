@@ -9,7 +9,7 @@ topology_template:
       type: {{type.name}}
       metadata:
         displayName: "{{displayName}}"
-      properties:
+      {{#if ownedAttributes}}properties:{{/if}}
       {{#ownedAttribute}}
         {{name}}: "{{value}}"
       {{/ownedAttribute}}
@@ -29,7 +29,7 @@ topology_template:
         {{/eq}}{{/extension}}{{/each}}
 {{/ownedElement}}
   relationship_templates:
-{{#relationshipTemplates}}
-    {{ownedEnd-name}}:
-      type: {{toscaRelationshipType}}
-{{/relationshipTemplates}}
+{{#ownedElement}}{{#targetingEnd}}{{#association}}{{#extension}}{{#eq name "TRelationshipTemplate"}}
+    {{name}}:
+      type: {{getProperty ../this "type"}}
+{{/eq}}{{/extension}}{{/association}}{{/targetingEnd}}{{/ownedElement}}

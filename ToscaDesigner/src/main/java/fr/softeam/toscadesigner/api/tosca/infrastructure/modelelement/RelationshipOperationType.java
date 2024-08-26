@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 16/08/2024 12:30 by Modelio Studio.
+ * This file was generated on 21/08/2024 16:27 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -16,7 +16,7 @@ import com.modeliosoft.modelio.api.module.MManualClass;
 import com.modeliosoft.modelio.api.module.MManualImport;
 import com.modeliosoft.modelio.api.module.MManualOperation;
 import com.modeliosoft.modelio.api.module.mda.IMdaProxy;
-import fr.softeam.toscadesigner.impl.MdaProxyException;
+import com.modeliosoft.modelio.api.module.mda.MdaProxyException;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -39,22 +39,23 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("c593d8cf-2c02-4c17-911c-a654d10bae62")
 public class RelationshipOperationType implements IMdaProxy {
-    @objid ("e29fd9fd-dd85-4347-a0aa-abfa7d435491")
+    @objid ("32467e9f-7b09-4a00-b860-4109c7f94a75")
     public static final String STEREOTYPE_NAME = "RelationshipOperationType";
 
-    @objid ("bbeaf277-f10d-461b-a4cc-594ba0b8f96b")
+    @objid ("70e4bf41-f7f9-4b64-9188-0cd02021c9e9")
     public static final String INTERFACENAME_PROPERTY = "interfaceName";
 
-    @objid ("7d555028-d674-4923-a2ce-b4d3e8f74ee5")
+    @objid ("2ff11f0a-f6c9-41fe-b5da-f20643c4a8ec")
     public static final String OPERATIONNAME_PROPERTY = "operationName";
 
-    @objid ("30e38710-21e6-43cc-8684-a9cd1a88472c")
+    @objid ("0dcff0cd-7f5d-462e-b12d-086063febab2")
     public static final String RELATIONSHIPREF_PROPERTY = "relationshipRef";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
+     * 
      */
-    @objid ("2b1ab329-6aa9-4b65-a1fc-1efede41c477")
+    @objid ("780bcc68-5b01-4d8d-afce-44d721a8286d")
     protected final ModelElement elt;
 
     /**
@@ -64,17 +65,16 @@ public class RelationshipOperationType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("f5cd2f27-1e0e-4ce2-8cd5-b13d7d8559e4")
+    @objid ("ebf6a6bc-a2de-4cbe-b628-d5e93b86702c")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (RelationshipOperationType.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(RelationshipOperationType.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link ModelElement} stereotyped << RelationshipOperationType >> then instantiate a {@link RelationshipOperationType} proxy.
-     * 
      * @return a {@link RelationshipOperationType} proxy on the created {@link ModelElement}.
      */
-    @objid ("07a088ef-6db7-450f-87df-1661f35d4260")
+    @objid ("ef8735fc-c9ef-49f2-83a0-945bce4a59e5")
     public static RelationshipOperationType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(RelationshipOperationType.MdaTypes.STEREOTYPE_ELT);
@@ -88,7 +88,7 @@ public class RelationshipOperationType implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link RelationshipOperationType} proxy or <i>null</i>.
      */
-    @objid ("b60ff50a-512d-438f-942a-45e0ff1a3012")
+    @objid ("a679726f-4b48-4277-b03b-c75395d177a8")
     public static RelationshipOperationType instantiate(final ModelElement obj) {
         return RelationshipOperationType.canInstantiate(obj) ? new RelationshipOperationType(obj) : null;
     }
@@ -97,19 +97,19 @@ public class RelationshipOperationType implements IMdaProxy {
      * Tries to instantiate a {@link RelationshipOperationType} proxy from a {@link ModelElement} stereotyped << RelationshipOperationType >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link ModelElement}
      * @return a {@link RelationshipOperationType} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("43a342e8-c16f-4e59-b343-f9a3d5571c6e")
+    @objid ("9b1d5734-eac6-4ad9-af7f-70e20e10912a")
     public static RelationshipOperationType safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (RelationshipOperationType.canInstantiate(obj))
-        	return new RelationshipOperationType(obj);
+            return new RelationshipOperationType(obj);
         else
-        	throw new IllegalArgumentException("RelationshipOperationType: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("RelationshipOperationType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("6534ed8f-8636-41f7-a9fc-07c32c799822")
+    @objid ("073fc5e0-6596-4689-9837-ee8842ab42db")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -126,10 +126,10 @@ public class RelationshipOperationType implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link ModelElement}. 
+     * Get the underlying {@link ModelElement}.
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("3c547350-05f1-4dc3-8cb5-89ab8360f92a")
+    @objid ("faf88358-0d5d-4aa7-a863-a9f88405a7be")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -139,7 +139,7 @@ public class RelationshipOperationType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("7396c0f2-7cde-4dd6-83d3-f854fa3975ca")
+    @objid ("eeb4fd3c-5a95-482f-8e97-73c2187f3234")
     public String getInterfaceName() {
         String value = this.elt.getProperty(RelationshipOperationType.MdaTypes.STEREOTYPE_ELT,
                                             RelationshipOperationType.MdaTypes.INTERFACENAME_PROPERTY_ELT.getName());
@@ -147,7 +147,6 @@ public class RelationshipOperationType implements IMdaProxy {
           value = RelationshipOperationType.MdaTypes.INTERFACENAME_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(RelationshipOperationType.MdaTypes.INTERFACENAME_PROPERTY_ELT, value, this.elt);
-        
     }
 
     /**
@@ -155,7 +154,7 @@ public class RelationshipOperationType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("9e6898a7-77f7-4b5b-895d-a6d79adb9626")
+    @objid ("4b8ba11f-0adb-4e94-a47e-f01f6c1339ad")
     public String getOperationName() {
         String value = this.elt.getProperty(RelationshipOperationType.MdaTypes.STEREOTYPE_ELT,
                                             RelationshipOperationType.MdaTypes.OPERATIONNAME_PROPERTY_ELT.getName());
@@ -163,7 +162,6 @@ public class RelationshipOperationType implements IMdaProxy {
           value = RelationshipOperationType.MdaTypes.OPERATIONNAME_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(RelationshipOperationType.MdaTypes.OPERATIONNAME_PROPERTY_ELT, value, this.elt);
-        
     }
 
     /**
@@ -171,7 +169,7 @@ public class RelationshipOperationType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("e025c9f4-b60e-4567-8298-39c24d738619")
+    @objid ("9134c2ce-d2c2-4dbb-bf91-c35d94607083")
     public String getRelationshipRef() {
         String value = this.elt.getProperty(RelationshipOperationType.MdaTypes.STEREOTYPE_ELT,
                                             RelationshipOperationType.MdaTypes.RELATIONSHIPREF_PROPERTY_ELT.getName());
@@ -179,14 +177,12 @@ public class RelationshipOperationType implements IMdaProxy {
           value = RelationshipOperationType.MdaTypes.RELATIONSHIPREF_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(RelationshipOperationType.MdaTypes.RELATIONSHIPREF_PROPERTY_ELT, value, this.elt);
-        
     }
 
-    @objid ("f4898627-03f3-49ce-80f8-bb2e00e4c966")
+    @objid ("b5fbd472-6266-45ce-944e-e792503d384a")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-        
     }
 
     /**
@@ -194,7 +190,7 @@ public class RelationshipOperationType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3eefcfb4-50fe-419a-8cae-1b8ce66977fa")
+    @objid ("3d2d74e2-74d7-4ef4-9d70-5309d17c334c")
     public void setInterfaceName(final String value) {
         this.elt.setProperty(RelationshipOperationType.MdaTypes.STEREOTYPE_ELT,
                              RelationshipOperationType.MdaTypes.INTERFACENAME_PROPERTY_ELT.getName(),
@@ -206,7 +202,7 @@ public class RelationshipOperationType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("cb292562-4024-4771-83f0-1dd70f57c165")
+    @objid ("86ebe76b-f165-4a3f-ba2f-c8cd7cce3a97")
     public void setOperationName(final String value) {
         this.elt.setProperty(RelationshipOperationType.MdaTypes.STEREOTYPE_ELT,
                              RelationshipOperationType.MdaTypes.OPERATIONNAME_PROPERTY_ELT.getName(),
@@ -218,39 +214,39 @@ public class RelationshipOperationType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("8ff51c6e-3df4-4132-8cbc-8f6efa8a1fc1")
+    @objid ("32f76d23-cf7a-4872-8d0c-14c88308caf7")
     public void setRelationshipRef(final String value) {
         this.elt.setProperty(RelationshipOperationType.MdaTypes.STEREOTYPE_ELT,
                              RelationshipOperationType.MdaTypes.RELATIONSHIPREF_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(RelationshipOperationType.MdaTypes.RELATIONSHIPREF_PROPERTY_ELT, value));
     }
 
-    @objid ("2902a8ed-835e-4ea0-b915-8ace0b8206c6")
+    @objid ("cd8d65c8-2e54-4e3b-8ff3-28c89d511589")
     protected  RelationshipOperationType(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("4567fb10-6ffb-48e5-8556-e19b7866bdda")
     public static final class MdaTypes {
-        @objid ("0fcb4e0c-e524-4782-8c75-b9cecb189adb")
+        @objid ("54312139-382e-4c9b-bd71-e1ad975e54c0")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("ba296982-e124-4c7b-873f-669f4da091c2")
+        @objid ("51d30e88-d64a-4764-bd15-19b9cc554888")
         public static PropertyDefinition INTERFACENAME_PROPERTY_ELT;
 
-        @objid ("ecefae2e-e091-4f65-889f-1d892c06dec3")
+        @objid ("c628558d-f14f-4fd8-bcd7-d1b9102d9b86")
         public static PropertyDefinition OPERATIONNAME_PROPERTY_ELT;
 
-        @objid ("397de29b-faf9-4ced-b5c8-a3593b11a642")
+        @objid ("e08bfe87-6a29-4341-bfd9-069907a23b18")
         public static PropertyDefinition RELATIONSHIPREF_PROPERTY_ELT;
 
-        @objid ("827a9a61-3d2c-4ca1-b712-f7654da069cc")
+        @objid ("4042882e-dcef-43f9-87f9-284676ca01fc")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("ffed2b26-dd13-4def-923f-1519832daaa8")
+        @objid ("3d991935-1ae4-4109-a5ce-dcd0f4d863ca")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("28f0768e-192d-4645-92bc-f1b9f2963365")
+        @objid ("2eab123e-0c7b-46b1-80d0-40263d83cd66")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -279,7 +275,6 @@ public class RelationshipOperationType implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
-            
         }
 
     }

@@ -10,14 +10,14 @@ topology_template:
       type: 
       metadata:
         displayName: ""
-      properties:
+      
       
       
     MyrtusFaceDetectionService_0:
       type: 
       metadata:
         displayName: ""
-      properties:
+      
         dockerImage: "thebigpotatoe/face-recognition-docker"
       requirements:
         - «TRequirement» host:
@@ -29,7 +29,7 @@ topology_template:
       type: 
       metadata:
         displayName: ""
-      properties:
+      
         dockerImage: "ci.hesi.energy:5000/myrtus/examples/myrtusface/camera_feed:web"
       requirements:
         - «TRequirement» host:
@@ -41,7 +41,7 @@ topology_template:
       type: 
       metadata:
         displayName: ""
-      properties:
+      
         dockerImage: "nginx:alpine"
         port: "443"
       requirements:
@@ -71,3 +71,13 @@ topology_template:
           deploy_path: /certs/privkey.pem
           file: /home/hesi/cert/privkey.pem
   relationship_templates:
+    TRelationshipTemplate:
+      type: tosca.relationships.hostedOn
+    TRelationshipTemplate:
+      type: tosca.relationships.hostedOn
+    TRelationshipTemplate:
+      type: tosca.relationships.hostedOn
+    TRelationshipTemplate:
+      type: tosca.relationships.ConnectsTo
+    TRelationshipTemplate:
+      type: tosca.relationships.ConnectsTo

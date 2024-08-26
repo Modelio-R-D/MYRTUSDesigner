@@ -133,11 +133,11 @@ fr\softeam\toscadesigner\api\tosca\standard\class_\TPlans.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\TNodeTemplate.class
 fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\ExtensionType$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\class_\PoliciesType$MdaTypes.class
+fr\softeam\toscadesigner\handlers\propertypages\topologyTemplate\TRequirementPropertyPage.class
 fr\softeam\toscadesigner\handlers\propertypages\core\TPropertyDefPropertyPage.class
 fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\TExtensions.class
 fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\InputParametersType$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\TDeploymentArtifact$MdaTypes.class
-fr\softeam\toscadesigner\handlers\propertypages\serviceTemplate\TEntityTypePropertyPage.class
 fr\softeam\toscadesigner\handlers\propertypages\serviceTemplate\TRelationshipTypePropertyPage.class
 fr\softeam\toscadesigner\handlers\propertypages\serviceTemplate\TRequirementDefinitionPropertyPage.class
 fr\softeam\toscadesigner\api\tosca\standard\association\TRelationshipTemplate$MdaTypes.class
