@@ -26,7 +26,10 @@ import com.github.jknack.handlebars.helper.ConditionalHelpers;
 import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
 
 import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilityDefinitionsType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TEntityType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement;
 import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
 
@@ -68,6 +71,7 @@ public abstract class AbstractToscaFileGenerator {
 
 				if (stereotype.getName().equals("TRequirement")) {
 					if (searchedPropertyName.equals("node")) {
+						
 						MRef ref = (MRef) PropertyConverter.convertToObject(TRequirement.MdaTypes.NODE_PROPERTY_ELT,
 								propertyStringValue, context);
 						ModelElement tNodeType = (ModelElement) ToscaDesignerModule.getInstance().getModuleContext()
@@ -83,10 +87,10 @@ public abstract class AbstractToscaFileGenerator {
 				}
 				if (stereotype.getName().equals("TRelationshipTemplate")) {
 					if (searchedPropertyName.equals("type")) {
-						MRef ref = (MRef) PropertyConverter.convertToObject(TRelationshipTemplate.MdaTypes.TYPE_PROPERTY_ELT,
-								propertyStringValue, context);
-						ModelElement tRelationshipType = (ModelElement) ToscaDesignerModule.getInstance().getModuleContext()
-								.getModelingSession().findByRef(ref);
+						MRef ref = (MRef) PropertyConverter.convertToObject(
+								TRelationshipTemplate.MdaTypes.TYPE_PROPERTY_ELT, propertyStringValue, context);
+						ModelElement tRelationshipType = (ModelElement) ToscaDesignerModule.getInstance()
+								.getModuleContext().getModelingSession().findByRef(ref);
 						propertyStringValue = tRelationshipType.getName();
 					}
 				}
@@ -107,19 +111,24 @@ public abstract class AbstractToscaFileGenerator {
 
 			// Check if the context is a Node Type
 			if (new NodeTypeChecker().isTypeOf(context)) {
+
+				TNodeType tNodeType = TNodeType.safeInstantiate((Class) context);
+
 				// 1. Check for non-tosca derived type
-				Stereotype stereotype = ToscaDesignerModule.getInstance().getModuleContext().getModelingSession()
-						.getMetamodelExtensions().getStereotype("TEntityType", context.getMClass());
-				String derivedFromValue = context.getProperty(stereotype, TEntityType.DERIVEDFROM_PROPERTY);
-				String targetNamespace = context.getProperty(stereotype, TEntityType.TARGETNAMESPACE_PROPERTY);
+//				Stereotype stereotype = ToscaDesignerModule.getInstance().getModuleContext().getModelingSession()
+//						.getMetamodelExtensions().getStereotype("TEntityType", context.getMClass());
+				String derivedFromValue = tNodeType.getDerivedFrom(); //.getProperty(stereotype, TEntityType.DERIVEDFROM_PROPERTY);
+				String targetNamespace = tNodeType.getTargetNamespace(); //.getProperty(stereotype, TEntityType.TARGETNAMESPACE_PROPERTY);
 
 				if (derivedFromValue != null && !derivedFromValue.startsWith("tosca")) {
 					imports.add(new Import(derivedFromValue + ".tosca", targetNamespace, "MYRTUS-"));
 				}
 
 				// 2. Check for non-tosca valid source types in capabilities
+//				CapabilityDefinitionsType capabilityDefinitionsTypeInstance = tNodeType.getCapabilityDefinitions();
+//				List<TCapabilityDefinition> capabilityDefinitions = capabilityDefinitionsTypeInstance.getCapabilityDefinition();
 				// To develop when capabilities will be supported
-//				for (Capability capability : context.getCapabilities()) {
+//				for (TCapabilityDefinition tCapabilityDefinition : capabilityDefinitions) {
 //					if (hasNonToscaValidSourceType(capability)) {
 //						imports.add(/* import statement */);
 //					}
@@ -148,52 +157,51 @@ public abstract class AbstractToscaFileGenerator {
 			String importString = generateImportString(imports);
 			return importString;
 
-		});
-		handlebars.registerHelpers(ConditionalHelpers.class);
-		return handlebars;
+		});handlebars.registerHelpers(ConditionalHelpers.class);return handlebars;
+}
+
+final class Import {
+	private String file;
+	private String namespaceUri;
+	private String namespacePrefix;
+
+	public Import(String file, String namespaceUri, String namespacePrefix) {
+		this.file = file;
+		this.namespaceUri = namespaceUri;
+		this.namespacePrefix = namespacePrefix;
 	}
 
-	final class Import {
-		private String file;
-		private String namespaceUri;
-		private String namespacePrefix;
+	// Getters and setters for each field
 
-		public Import(String file, String namespaceUri, String namespacePrefix) {
-			this.file = file;
-			this.namespaceUri = namespaceUri;
-			this.namespacePrefix = namespacePrefix;
-		}
+	@Override
+	public boolean equals(Object o) {
+		if (this == o)
+			return true;
+		if (o == null || getClass() != o.getClass())
+			return false;
+		Import anImport = (Import) o;
 
-		// Getters and setters for each field
+		return file.equals(anImport.file) && namespaceUri.equals(anImport.namespaceUri)
+				&& namespacePrefix.equals(anImport.namespacePrefix);
+	}
 
-		@Override
-		public boolean equals(Object o) {
-			if (this == o)
-				return true;
-			if (o == null || getClass() != o.getClass())
-				return false;
-			Import anImport = (Import) o;
+	public String getFile() {
+		return file;
+	}
 
-			return file.equals(anImport.file) && namespaceUri.equals(anImport.namespaceUri)
-					&& namespacePrefix.equals(anImport.namespacePrefix);
-		}
+	public String getNamespaceUri() {
+		return namespaceUri;
+	}
 
-		public String getFile() {
-			return file;
-		}
+	public String getNamespacePrefix() {
+		return namespacePrefix;
+	}
 
-		public String getNamespaceUri() {
-			return namespaceUri;
-		}
+	@Override
+	public int hashCode() {
+		return Objects.hash(file, namespaceUri, namespacePrefix);
+	}
 
-		public String getNamespacePrefix() {
-			return namespacePrefix;
-		}
-
-		@Override
-		public int hashCode() {
-			return Objects.hash(file, namespaceUri, namespacePrefix);
-		}
 	}
 
 	private String generateImportString(Set<Import> imports) {

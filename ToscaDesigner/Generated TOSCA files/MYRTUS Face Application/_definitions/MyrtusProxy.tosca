@@ -7,8 +7,7 @@ imports:
 
 node_types:
   example.eu.myrtus.nodetypes.MyrtusProxy:
-    description: 
-    derived_from: example.eu.myrtus.nodetypes.MyrtusSWComponent
+        derived_from: example.eu.myrtus.nodetypes.MyrtusSWComponent
     metadata:
       targetNamespace: "example.eu.myrtus.nodetypes"
       abstract: "false"

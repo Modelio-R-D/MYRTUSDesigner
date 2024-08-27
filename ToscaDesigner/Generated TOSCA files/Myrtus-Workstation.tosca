@@ -1,11 +1,11 @@
 tosca_definitions_version: tosca_simple_yaml_1_3
 
+
 node_types:
   example.eu.myrtus.nodetypes.Myrtus-Workstation:
-    description: 
+   description: Representation of a computing node in the Myrtus systems.
     derived_from: tosca.nodes.Compute
-    metadata:
+metadata:
       targetNamespace: "example.eu.myrtus.nodetypes"
       abstract: "false"
       final: "false"
-

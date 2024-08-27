@@ -30,6 +30,6 @@ topology_template:
 {{/ownedElement}}
   relationship_templates:
 {{#ownedElement}}{{#targetingEnd}}{{#association}}{{#extension}}{{#eq name "TRelationshipTemplate"}}
-    {{name}}:
+    {{../name}}:
       type: {{getProperty ../this "type"}}
 {{/eq}}{{/extension}}{{/association}}{{/targetingEnd}}{{/ownedElement}}

@@ -1,10 +1,9 @@
 {{imports this}}
 node_types:
   {{owner.name}}.{{name}}:
-    description: {{getProperty this "description"}}
-    derived_from: {{getProperty this "derivedFrom"}}
-    metadata:
+{{#if (getProperty this "description")}}   description: {{getProperty this "description"}}
+{{/if}}{{#if (getProperty this "derivedFrom")}}    derived_from: {{getProperty this "derivedFrom"}}
+{{/if}}metadata:
       targetNamespace: "{{getProperty this "targetNamespace"}}"
       abstract: "{{getProperty this "abstract"}}"
       final: "{{getProperty this "final"}}"
-

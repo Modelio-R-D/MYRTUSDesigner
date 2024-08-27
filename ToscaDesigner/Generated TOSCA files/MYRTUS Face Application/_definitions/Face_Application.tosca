@@ -71,13 +71,13 @@ topology_template:
           deploy_path: /certs/privkey.pem
           file: /home/hesi/cert/privkey.pem
   relationship_templates:
-    TRelationshipTemplate:
+    con_HostedOn_2:
       type: tosca.relationships.hostedOn
-    TRelationshipTemplate:
+    con_HostedOn_1:
       type: tosca.relationships.hostedOn
-    TRelationshipTemplate:
+    con_HostedOn_0:
       type: tosca.relationships.hostedOn
-    TRelationshipTemplate:
+    con_ConnectsTo_1:
       type: tosca.relationships.ConnectsTo
-    TRelationshipTemplate:
+    con_ConnectsTo_0:
       type: tosca.relationships.ConnectsTo
