@@ -1,6 +1,5 @@
 package fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate;
 
-import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
@@ -8,7 +7,7 @@ import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("83e83f25-36df-4af3-a9ec-d48f34eb1aec")
 public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> extends ToscaElementPropertyPage<T> {
-    @objid ("516ad25d-88af-4232-80e0-26878e2e7032")
+    @objid ("8b38e548-70ca-4080-ab98-d6e2374fc90e")
     public  TRelationshipTemplatePropertyPage(T elt) {
         super(elt);
         // TODO Auto-generated constructor stub
@@ -31,9 +30,9 @@ public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> 
     @objid ("378c8d16-1a0a-413b-b142-e267468c87c4")
     @Override
     public void update(IModulePropertyTable table) {
-		super.update(table);
-        table.addProperty("Name",_element.getElement().getName());
-        table.addProperty("Type",_element.getType());
+        super.update(table);
+              table.addProperty("Name",_element.getElement().getName());
+              table.addProperty("Type",_element.getType());
     }
 
 }

@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 21/08/2024 16:27 by Modelio Studio.
+ * This file was generated on 27/08/2024 15:42 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -10,25 +10,16 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
-import com.modeliosoft.modelio.api.module.MManualAssociationRole;
-import com.modeliosoft.modelio.api.module.MManualAttribute;
-import com.modeliosoft.modelio.api.module.MManualClass;
-import com.modeliosoft.modelio.api.module.MManualImport;
-import com.modeliosoft.modelio.api.module.MManualOperation;
 import com.modeliosoft.modelio.api.module.mda.IMdaProxy;
 import com.modeliosoft.modelio.api.module.mda.MdaProxyException;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.ModelingSessionRegistry;
-import org.modelio.api.modelio.model.PropertyConverter;
-import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
-import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.vcore.smkernel.mapi.MObject;
 import org.modelio.vcore.smkernel.mapi.MRef;
 
@@ -37,16 +28,16 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-@objid ("36bbca75-14c1-4ec4-b515-6d50ce057853")
+@objid ("890f9145-5e35-4511-b57c-e01136007244")
 public class InputParametersType implements IMdaProxy {
-    @objid ("196390e0-6361-4d6e-b163-aef79d03cd40")
+    @objid ("469c5a3f-8ff9-4287-ba2f-3e7e787b1fd7")
     public static final String STEREOTYPE_NAME = "InputParametersType";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
      * 
      */
-    @objid ("d6c4866a-ed0b-4ad7-9b4f-79c07e21d0f4")
+    @objid ("c9c85436-745f-4c07-944c-5f2778fb60c7")
     protected final ModelElement elt;
 
     /**
@@ -56,7 +47,7 @@ public class InputParametersType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("b6d656ad-7a27-4bec-b86b-9a21e076f578")
+    @objid ("7f6a7811-07e6-40c5-9a46-c4d325f024e7")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (InputParametersType.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(InputParametersType.MdaTypes.STEREOTYPE_ELT));
     }
@@ -65,7 +56,7 @@ public class InputParametersType implements IMdaProxy {
      * Create a new {@link ModelElement} stereotyped << InputParametersType >> then instantiate a {@link InputParametersType} proxy.
      * @return a {@link InputParametersType} proxy on the created {@link ModelElement}.
      */
-    @objid ("8343c1de-36a3-4b76-b74d-fda3bbd8ce56")
+    @objid ("4ec278d2-1168-4739-bb11-1b7f8699e027")
     public static InputParametersType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(InputParametersType.MdaTypes.STEREOTYPE_ELT);
@@ -79,7 +70,7 @@ public class InputParametersType implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link InputParametersType} proxy or <i>null</i>.
      */
-    @objid ("739a39b7-44f3-46f9-a1c8-ef21cc3bd417")
+    @objid ("6c890d22-6a2f-4bef-8868-ae0b87139e0f")
     public static InputParametersType instantiate(final ModelElement obj) {
         return InputParametersType.canInstantiate(obj) ? new InputParametersType(obj) : null;
     }
@@ -92,7 +83,7 @@ public class InputParametersType implements IMdaProxy {
      * @param obj a {@link ModelElement}
      * @return a {@link InputParametersType} proxy.
      */
-    @objid ("e75c3c03-a1d9-4fcf-896c-e77c7d292974")
+    @objid ("a546cae4-b420-4d49-8d78-20fa0608473b")
     public static InputParametersType safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (InputParametersType.canInstantiate(obj))
             return new InputParametersType(obj);
@@ -105,7 +96,7 @@ public class InputParametersType implements IMdaProxy {
      * Role description:
      * null
      */
-    @objid ("b3f985c8-d345-46e6-9395-9457894d2886")
+    @objid ("ab2c6926-f6bb-4fdf-babf-dc1670d45f96")
     public void addInputParameter(final TParameter obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -115,7 +106,7 @@ public class InputParametersType implements IMdaProxy {
         }
     }
 
-    @objid ("c9b96e7e-6f90-419a-8042-74ab7c10d212")
+    @objid ("342a0a06-1667-44b6-aa34-40bab3175388")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -135,7 +126,7 @@ public class InputParametersType implements IMdaProxy {
      * Get the underlying {@link ModelElement}.
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("f7f1d0a6-8219-4b93-a503-360f38cd25a3")
+    @objid ("d28973d1-716e-4a64-86ca-56e619da48b7")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -145,7 +136,7 @@ public class InputParametersType implements IMdaProxy {
      * Role description:
      * null
      */
-    @objid ("c8294e14-9e4a-4104-a0f3-c6b490c44838")
+    @objid ("1a3b4318-f56b-4574-bd65-140264d9bfdf")
     public List<TParameter> getInputParameter() {
         List<TParameter> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -157,7 +148,7 @@ public class InputParametersType implements IMdaProxy {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("c6f4ee43-ce2b-4290-b602-807fb896eb06")
+    @objid ("bf5012d0-d802-438e-97ea-7434d0c03bde")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -168,7 +159,7 @@ public class InputParametersType implements IMdaProxy {
      * Role description:
      * null
      */
-    @objid ("9048b40c-18ea-4f6a-ba22-60c3db34d6a8")
+    @objid ("bd88b48d-bb1b-453f-a823-1a1d192f0008")
     public boolean removeInputParameter(final TParameter obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -182,23 +173,23 @@ public class InputParametersType implements IMdaProxy {
         return false;
     }
 
-    @objid ("3f444346-5ebd-47b8-ba6c-a599714e8ca1")
+    @objid ("0dea9924-94e0-4cff-a174-cebc06d5e8fe")
     protected  InputParametersType(final ModelElement elt) {
         this.elt = elt;
     }
 
-    @objid ("8bf600ba-ef41-477f-927b-6810cea27c90")
+    @objid ("4eb4c3dc-e93f-4bbd-9f1d-0a9fdc5d967f")
     public static final class MdaTypes {
-        @objid ("9e8cd94e-973b-4ac6-8f1e-2e97272aae2e")
+        @objid ("50235a2a-2e97-44b0-8370-3a076994d076")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("337c6f95-c091-4faa-9f20-4b45cc0e39bf")
+        @objid ("1653567c-1d09-4061-955e-262bf8b20fac")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("964b2190-2f49-43a2-b989-2f8f2ad58244")
+        @objid ("b825d7a1-9dae-459c-a339-aa88f3bf1fcd")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("0b561521-f6fc-48b8-8801-8c1458aec427")
+        @objid ("35e9f973-2bcc-4fce-88ea-9974fe8f5b75")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

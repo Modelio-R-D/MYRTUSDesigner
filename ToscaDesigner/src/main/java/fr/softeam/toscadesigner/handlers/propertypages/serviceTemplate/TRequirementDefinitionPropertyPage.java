@@ -1,21 +1,19 @@
 package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition;
-import fr.softeam.toscadesigner.handlers.propertypages.core.TEntityTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
-@objid ("8e6ae627-578f-422f-8de0-77c04824219b")
+@objid ("c757eb57-dab6-4fc3-8fd8-6f094926a62c")
 public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition> extends ToscaElementPropertyPage<T> {
-    @objid ("b129e2d0-20bf-4b53-9bdf-8b625ba37529")
+    @objid ("bad7c543-2275-4aee-900e-1c4e6306da6f")
     public  TRequirementDefinitionPropertyPage(T elt) {
         super(elt);
         // TODO Auto-generated constructor stub
     }
 
-    @objid ("f7311659-e3b9-43bb-b939-e143682cce9f")
+    @objid ("a8259c89-4113-4860-873d-5c3b6326d46f")
     @Override
     public void changeProperty(int row, String value) {
         switch (row) {
@@ -45,7 +43,7 @@ public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition
         }
     }
 
-    @objid ("3df2e3b9-f8a2-4c5c-9a5b-60799c369b20")
+    @objid ("db9508e4-992d-4a0b-85e1-98545455c3df")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
