@@ -30,7 +30,7 @@ public class CreateCloudServiceArchiveCommand extends CreateSubModelCommand {
             packageOwner.getOwnedElement().add(subModel.getElement());
             subModel.getElement().getProduct().add(diagram.getElement());
             
-            //subModel.setDefaultName("Cloud Service Archive");
+            subModel.getElement().setName("Tosca model");
             diagram.getElement().setName(subModel.getElement().getName() + " diagram");
             this.openDiagram(diagram.getElement());
             transaction.commit();
