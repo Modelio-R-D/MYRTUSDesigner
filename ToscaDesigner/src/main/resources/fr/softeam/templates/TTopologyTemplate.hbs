@@ -1,33 +1,38 @@
-metadata:
-  targetNamespace: "{{getProperty this "targetNamespace"}}"
-  name: "{{name}}"
+{{#unless (noStereotypeApplications this "MetadataElement")}}metadata:{{/unless}}
+{{#each ownedElement}}{{#extension}}{{#eq name "MetadataElement"}}{{#each ../ownedAttribute}}{{#extension}}{{#eq name "TPropertyDef"}}
+  {{../name}}: "{{getProperty ../this "value"}}"
+{{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
 {{imports this}}
 topology_template:
   node_templates:
-{{#ownedElement}}  
-    {{name}}:
-      type: {{type.name}}
-      metadata:
-        displayName: "{{displayName}}"
-      {{#if ownedAttributes}}properties:{{/if}}
-      {{#ownedAttribute}}
+{{#ownedElement}}{{#extension}}{{#eq name "TNodeTemplate"}}  
+    {{../name}}:
+      type: {{getProperty ../this "nodeType"}}
+      {{#unless (noStereotypeApplications ../this "MetadataElement")}}metadata:{{/unless}}
+      	{{#each ../ownedElement}}{{#extension}}{{#eq name "MetadataElement"}}
+        {{#each ../ownedAttribute}}{{#extension}}{{#eq name "TPropertyDef"}}
+        {{../name}}: "{{getProperty ../this "value"}}"
+        {{/eq}}{{/extension}}{{/each}}
+        {{/eq}}{{/extension}}{{/each}}
+      {{#if ../ownedAttribute}}properties:{{/if}}
+      {{#each ../ownedAttribute}}
         {{name}}: "{{value}}"
-      {{/ownedAttribute}}
-      {{#unless (noStereotypeApplications this "TRequirement")}}requirements:{{/unless}}
-      {{#each ownedElement}}{{#extension}}{{#eq name "TRequirement"}}
+      {{/each}}
+      {{#unless (noStereotypeApplications ../this "TRequirement")}}requirements:{{/unless}}
+      {{#each ../ownedElement}}{{#extension}}{{#eq name "TRequirement"}}
         - {{../name}}:
             node: {{getProperty ../this "node"}}
             relationship: {{relationship}}
             capability: {{getProperty ../this "capability"}}
        	{{/eq}}{{/extension}}{{/each}}
-      {{#unless (noStereotypeApplications this "TDeploymentArtifact")}}artifacts:{{/unless}}
-      {{#each ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifact"}}
+      {{#unless (noStereotypeApplications ../this "TDeploymentArtifact")}}artifacts:{{/unless}}
+      {{#each ../ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifact"}}
         {{../name}}:
           type: {{getProperty ../this "artifactType"}}
           deploy_path: {{getProperty ../this "Deploy_path"}}
           file: {{getProperty ../this "File"}}
         {{/eq}}{{/extension}}{{/each}}
-{{/ownedElement}}
+{{/eq}}{{/extension}}{{/ownedElement}}
   relationship_templates:
 {{#ownedElement}}{{#targetingEnd}}{{#association}}{{#extension}}{{#eq name "TRelationshipTemplate"}}
     {{../name}}:

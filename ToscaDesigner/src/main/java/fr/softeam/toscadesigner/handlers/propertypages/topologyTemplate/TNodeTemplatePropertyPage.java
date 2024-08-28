@@ -1,26 +1,36 @@
 package fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate;
 
+import java.util.Arrays;
 import java.util.List;
+
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.Metamodel;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.vcore.session.api.model.IMObjectFilter;
+import org.modelio.vcore.smkernel.mapi.MObject;
+
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.CapabilitiesType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementsType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifacts;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
-@objid("83e83f25-36df-4af3-a9ec-d48f34eb1aec")
+@objid("e048fc6c-d270-4303-ad58-e0ce53629c36")
 public class TNodeTemplatePropertyPage<T extends TNodeTemplate> extends ToscaElementPropertyPage<T> {
-	@objid("898ecaff-ee89-4c76-83cc-7f6018621c6c")
+	@objid("b9c761de-9327-4f7c-b753-83885d625b7f")
 	private List<ModelElement> _capabilities = null;
 
-	@objid("338228d8-6128-4d9f-a132-3b5adf4f2ddd")
+	@objid("63860325-314c-41b3-8585-72012af82d21")
 	public TNodeTemplatePropertyPage(T elt) {
 		super(elt);
 		// TODO Auto-generated constructor stub
 	}
 
-	@objid("b6b3ca49-8857-4993-b798-1c8328089c4d")
+	@objid("03104839-a70b-4c28-92b3-7407202c97d0")
 	@Override
 	public void changeProperty(int row, String value) {
 		switch (row) {
@@ -33,29 +43,39 @@ public class TNodeTemplatePropertyPage<T extends TNodeTemplate> extends ToscaEle
 		case 3:
 			this._element.setMaxInstances(Integer.valueOf(value));
 			break;
+
 		case 4:
-			ModelElement elt = getModelElt(this._capabilities, value);
-			if (elt.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, CapabilitiesType.STEREOTYPE_NAME)) {
-				// this._element.setCapabilities((CapabilitiesType) elt);
+			for (ModelElement dep : TDeploymentArtifacts.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+				if (value.contains(dep.getUuid())) {
+					this._element.setDeploymentArtifacts(
+							TDeploymentArtifacts.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
+				}
+			}
+			break;
+
+		case 5:
+			for (ModelElement req : RequirementsType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+				if (value.contains(req.getUuid())) {
+					this._element.setRequirements(
+							RequirementsType.instantiate((org.modelio.metamodel.uml.statik.Class) req));
+				}
 			}
 
 			break;
-		case 5:
-			this._element.setDeploymentArtifacts(null);
-			break;
 		case 6:
-			// this._element.setPolicies(null);
+			for (ModelElement nodet : TNodeType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+				if (value.contains(nodet.getUuid())) {
+					this._element.setNodeType(
+							TNodeType.instantiate((org.modelio.metamodel.uml.statik.Class) nodet));
+				}
+			}
 			break;
-		case 7:
-			this._element.setRequirements(null);
-			break;
-		case 8:
-			this._element.setNodeType(null);
-			break;
+
 		}
 	}
 
-	@objid("378c8d16-1a0a-413b-b142-e267468c87c4")
+	@SuppressWarnings("deprecation")
+	@objid("c4b4d021-91ff-4ee1-b543-8f75ebc7642e")
 	@Override
 	public void update(IModulePropertyTable table) {
 		super.update(table);
@@ -63,18 +83,37 @@ public class TNodeTemplatePropertyPage<T extends TNodeTemplate> extends ToscaEle
 		table.addProperty("Min Instance", String.valueOf(_element.getMinInstances()));
 		table.addProperty("Max Instance", String.valueOf(_element.getMaxInstances()));
 
-		// capabilities
-		this._capabilities = CapabilitiesType.MdaTypes.STEREOTYPE_ELT.getExtendedElement();
-		// table.addProperty("Capabilities0",
-		// getCamelName(this._element.getCapabilities()()), getCamelNames(this._c));
+		// DeploymentArtifacts
+		table.addProperty("Deployment Artifacts",
+				this._element.getDeploymentArtifacts() != null ? this._element.getDeploymentArtifacts().getElement()
+						: null,
+				Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+					@Override
+					public boolean accept(MObject element) {
+						return TDeploymentArtifacts.canInstantiate(element);
+					}
+				});
 
-		// table.addProperty("Capabilities",
-		// getNotNull((String.valueOf(this._element.getCapabilities()))));
-		table.addProperty("Deployment Artifacts", getNotNull((String.valueOf(this._element.getDeploymentArtifacts()))));
-		// table.addProperty("Policies",
-		// getNotNull((String.valueOf(this._element.getPolicies()))));
-		table.addProperty("Requirements", getNotNull((String.valueOf(this._element.getRequirements()))));
-		table.addProperty("Node Type", getNotNull((String.valueOf(this._element.getNodeType()))));
+		// Requirements
+		table.addProperty("Requirements",
+				this._element.getRequirements() != null ? this._element.getRequirements().getElement() : null,
+				Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+					@Override
+					public boolean accept(MObject element) {
+						return RequirementsType.canInstantiate(element);
+					}
+				});
+
+		// Node Type
+		table.addProperty("Node Type",
+				this._element.getNodeType() != null ? this._element.getNodeType().getElement() : null,
+				Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+					@Override
+					public boolean accept(MObject element) {
+						return TNodeType.canInstantiate(element);
+					}
+				});
+
 	}
 
 }

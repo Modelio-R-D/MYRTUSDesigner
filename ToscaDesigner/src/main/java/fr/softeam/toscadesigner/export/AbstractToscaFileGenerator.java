@@ -29,6 +29,7 @@ import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemp
 import fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilityDefinitionsType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TEntityType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement;
 import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
@@ -71,7 +72,7 @@ public abstract class AbstractToscaFileGenerator {
 
 				if (stereotype.getName().equals("TRequirement")) {
 					if (searchedPropertyName.equals("node")) {
-						
+
 						MRef ref = (MRef) PropertyConverter.convertToObject(TRequirement.MdaTypes.NODE_PROPERTY_ELT,
 								propertyStringValue, context);
 						ModelElement tNodeType = (ModelElement) ToscaDesignerModule.getInstance().getModuleContext()
@@ -84,14 +85,19 @@ public abstract class AbstractToscaFileGenerator {
 								.getModelingSession().findByRef(ref);
 						propertyStringValue = tCapability.getName();
 					}
-				}
-				if (stereotype.getName().equals("TRelationshipTemplate")) {
+				} else if (stereotype.getName().equals("TRelationshipTemplate")) {
 					if (searchedPropertyName.equals("type")) {
 						MRef ref = (MRef) PropertyConverter.convertToObject(
 								TRelationshipTemplate.MdaTypes.TYPE_PROPERTY_ELT, propertyStringValue, context);
 						ModelElement tRelationshipType = (ModelElement) ToscaDesignerModule.getInstance()
 								.getModuleContext().getModelingSession().findByRef(ref);
 						propertyStringValue = tRelationshipType.getName();
+					}
+				} else if (stereotype.getName().equals("TNodeTemplate")) {
+					TNodeTemplate tNodeTemplate = TNodeTemplate.safeInstantiate((Class)context);
+					if (searchedPropertyName.equals("nodeType")) {
+						TNodeType nodeType = tNodeTemplate.getNodeType();
+						propertyStringValue = nodeType.getTargetNamespace() + "." + nodeType.getElement().getName();
 					}
 				}
 				return propertyStringValue;
@@ -117,8 +123,10 @@ public abstract class AbstractToscaFileGenerator {
 				// 1. Check for non-tosca derived type
 //				Stereotype stereotype = ToscaDesignerModule.getInstance().getModuleContext().getModelingSession()
 //						.getMetamodelExtensions().getStereotype("TEntityType", context.getMClass());
-				String derivedFromValue = tNodeType.getDerivedFrom(); //.getProperty(stereotype, TEntityType.DERIVEDFROM_PROPERTY);
-				String targetNamespace = tNodeType.getTargetNamespace(); //.getProperty(stereotype, TEntityType.TARGETNAMESPACE_PROPERTY);
+				String derivedFromValue = tNodeType.getDerivedFrom(); // .getProperty(stereotype,
+																		// TEntityType.DERIVEDFROM_PROPERTY);
+				String targetNamespace = tNodeType.getTargetNamespace(); // .getProperty(stereotype,
+																			// TEntityType.TARGETNAMESPACE_PROPERTY);
 
 				if (derivedFromValue != null && !derivedFromValue.startsWith("tosca")) {
 					imports.add(new Import(derivedFromValue + ".tosca", targetNamespace, "MYRTUS-"));
@@ -157,50 +165,52 @@ public abstract class AbstractToscaFileGenerator {
 			String importString = generateImportString(imports);
 			return importString;
 
-		});handlebars.registerHelpers(ConditionalHelpers.class);return handlebars;
-}
-
-final class Import {
-	private String file;
-	private String namespaceUri;
-	private String namespacePrefix;
-
-	public Import(String file, String namespaceUri, String namespacePrefix) {
-		this.file = file;
-		this.namespaceUri = namespaceUri;
-		this.namespacePrefix = namespacePrefix;
+		});
+		handlebars.registerHelpers(ConditionalHelpers.class);
+		return handlebars;
 	}
 
-	// Getters and setters for each field
+	final class Import {
+		private String file;
+		private String namespaceUri;
+		private String namespacePrefix;
 
-	@Override
-	public boolean equals(Object o) {
-		if (this == o)
-			return true;
-		if (o == null || getClass() != o.getClass())
-			return false;
-		Import anImport = (Import) o;
+		public Import(String file, String namespaceUri, String namespacePrefix) {
+			this.file = file;
+			this.namespaceUri = namespaceUri;
+			this.namespacePrefix = namespacePrefix;
+		}
 
-		return file.equals(anImport.file) && namespaceUri.equals(anImport.namespaceUri)
-				&& namespacePrefix.equals(anImport.namespacePrefix);
-	}
+		// Getters and setters for each field
 
-	public String getFile() {
-		return file;
-	}
+		@Override
+		public boolean equals(Object o) {
+			if (this == o)
+				return true;
+			if (o == null || getClass() != o.getClass())
+				return false;
+			Import anImport = (Import) o;
 
-	public String getNamespaceUri() {
-		return namespaceUri;
-	}
+			return file.equals(anImport.file) && namespaceUri.equals(anImport.namespaceUri)
+					&& namespacePrefix.equals(anImport.namespacePrefix);
+		}
 
-	public String getNamespacePrefix() {
-		return namespacePrefix;
-	}
+		public String getFile() {
+			return file;
+		}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(file, namespaceUri, namespacePrefix);
-	}
+		public String getNamespaceUri() {
+			return namespaceUri;
+		}
+
+		public String getNamespacePrefix() {
+			return namespacePrefix;
+		}
+
+		@Override
+		public int hashCode() {
+			return Objects.hash(file, namespaceUri, namespacePrefix);
+		}
 
 	}
 
