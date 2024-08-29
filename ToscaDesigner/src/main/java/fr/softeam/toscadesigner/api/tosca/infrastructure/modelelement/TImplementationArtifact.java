@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 28/08/2024 17:14 by Modelio Studio.
+ * This file was generated on 29/08/2024 14:48 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -39,19 +39,19 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("465f4c54-d174-411c-91e0-1b049cb74875")
 public class TImplementationArtifact extends TExtensibleElements implements IMdaProxy {
-    @objid ("9d858b72-3d66-481d-8efd-3c6707c14021")
+    @objid ("80ae2a9e-cfda-4b9e-b02f-5e293c5d5f28")
     public static final String STEREOTYPE_NAME = "TImplementationArtifact";
 
-    @objid ("c18eca3f-79da-45eb-9256-d31201fa3266")
+    @objid ("0b9350af-2000-46cf-9967-3dfd550474e3")
     public static final String ARTIFACTREF_PROPERTY = "artifactRef";
 
-    @objid ("c420f1e3-17bc-4065-9e25-20c3ce6dd12c")
+    @objid ("e8c0843a-b344-48ef-9c6a-f3f8a14f06a8")
     public static final String ARTIFACTTYPE_PROPERTY = "artifactType";
 
-    @objid ("28918e42-cfdc-4c5f-9298-96470f9c45d5")
+    @objid ("4de4c299-f690-419d-a98c-a1e122082ba2")
     public static final String INTERFACENAME_PROPERTY = "interfaceName";
 
-    @objid ("7af7a9f7-dd18-481c-adc4-d9ad7a10f0de")
+    @objid ("8cf475be-d568-4a21-aab4-5f95a2ee0467")
     public static final String OPERATIONNAME_PROPERTY = "operationName";
 
     /**
@@ -61,7 +61,7 @@ public class TImplementationArtifact extends TExtensibleElements implements IMda
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("49ecbd49-3dba-454f-8045-141234b236ff")
+    @objid ("6c51f84c-a71e-46bc-964a-76f5ac564b58")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (TImplementationArtifact.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(TImplementationArtifact.MdaTypes.STEREOTYPE_ELT));
     }
@@ -71,7 +71,7 @@ public class TImplementationArtifact extends TExtensibleElements implements IMda
      * 
      * @return a {@link TImplementationArtifact} proxy on the created {@link ModelElement}.
      */
-    @objid ("115783ee-f8b8-4f50-aaac-3e20b6bb0dd1")
+    @objid ("c128ef13-9d56-4e11-8d8d-a9e90541be4a")
     public static TImplementationArtifact create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(TImplementationArtifact.MdaTypes.STEREOTYPE_ELT);
@@ -85,7 +85,7 @@ public class TImplementationArtifact extends TExtensibleElements implements IMda
      * @param obj a ModelElement
      * @return a {@link TImplementationArtifact} proxy or <i>null</i>.
      */
-    @objid ("74e028d2-4b36-4738-9a1e-7ce2f4d85fd3")
+    @objid ("3c3db6f8-8c69-4778-99f0-6a5a3d3c9ae1")
     public static TImplementationArtifact instantiate(final ModelElement obj) {
         return TImplementationArtifact.canInstantiate(obj) ? new TImplementationArtifact(obj) : null;
     }
@@ -98,7 +98,7 @@ public class TImplementationArtifact extends TExtensibleElements implements IMda
      * @return a {@link TImplementationArtifact} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("b72deebd-2b16-4daa-936c-5eafa29f6aaf")
+    @objid ("d39565d4-ba1b-4fa0-bebf-45d67f757d21")
     public static TImplementationArtifact safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (TImplementationArtifact.canInstantiate(obj))
         	return new TImplementationArtifact(obj);
@@ -106,7 +106,7 @@ public class TImplementationArtifact extends TExtensibleElements implements IMda
         	throw new IllegalArgumentException("TImplementationArtifact: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("0822c5bf-4ae0-439b-916f-262d6e128995")
+    @objid ("f92625a6-22ec-4fb7-9bc8-c1549e557376")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -127,7 +127,7 @@ public class TImplementationArtifact extends TExtensibleElements implements IMda
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("c5dcff43-2a2c-4a25-80c2-f8733a55442a")
+    @objid ("91b807bf-f938-4608-8f6b-892a38e63347")
     public String getArtifactRef() {
         String value = this.elt.getProperty(TImplementationArtifact.MdaTypes.STEREOTYPE_ELT,
                                             TImplementationArtifact.MdaTypes.ARTIFACTREF_PROPERTY_ELT.getName());
@@ -143,7 +143,7 @@ public class TImplementationArtifact extends TExtensibleElements implements IMda
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("632def6e-1abb-41d4-b8fc-49416b2b60d3")
+    @objid ("240954b6-73f5-45e4-94f2-830f43d3f7f5")
     public String getArtifactType() {
         String value = this.elt.getProperty(TImplementationArtifact.MdaTypes.STEREOTYPE_ELT,
                                             TImplementationArtifact.MdaTypes.ARTIFACTTYPE_PROPERTY_ELT.getName());
@@ -158,7 +158,7 @@ public class TImplementationArtifact extends TExtensibleElements implements IMda
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("f38f4b47-e7e4-4ece-a98f-8e160d9eeb7e")
+    @objid ("8c431024-1928-4a90-aee1-271df224bcd5")
     @Override
     public ModelElement getElement() {
         return (ModelElement)super.getElement();
@@ -169,7 +169,7 @@ public class TImplementationArtifact extends TExtensibleElements implements IMda
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("dc9fbb17-7e50-4344-bcfc-42dc7388fa2b")
+    @objid ("96889f3d-dd3c-4d6f-9b16-371032c590e0")
     public String getInterfaceName() {
         String value = this.elt.getProperty(TImplementationArtifact.MdaTypes.STEREOTYPE_ELT,
                                             TImplementationArtifact.MdaTypes.INTERFACENAME_PROPERTY_ELT.getName());
@@ -185,7 +185,7 @@ public class TImplementationArtifact extends TExtensibleElements implements IMda
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("6e28611a-1cb6-4134-b403-c5078ae47986")
+    @objid ("89998128-df6a-44f4-ba6b-19e382a2e765")
     public String getOperationName() {
         String value = this.elt.getProperty(TImplementationArtifact.MdaTypes.STEREOTYPE_ELT,
                                             TImplementationArtifact.MdaTypes.OPERATIONNAME_PROPERTY_ELT.getName());
@@ -196,7 +196,7 @@ public class TImplementationArtifact extends TExtensibleElements implements IMda
         
     }
 
-    @objid ("8f1908ce-d5f8-4c4b-924e-ac76f02b5b01")
+    @objid ("16ddd1e6-74d6-4c5c-9a7a-4b5a6a928b3a")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -208,7 +208,7 @@ public class TImplementationArtifact extends TExtensibleElements implements IMda
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("43bd45cc-fe90-4c9c-a1dd-db78b95ab111")
+    @objid ("7c453771-b0af-40e7-a172-cfbc732fe663")
     public void setArtifactRef(final String value) {
         this.elt.setProperty(TImplementationArtifact.MdaTypes.STEREOTYPE_ELT,
                              TImplementationArtifact.MdaTypes.ARTIFACTREF_PROPERTY_ELT.getName(),
@@ -220,7 +220,7 @@ public class TImplementationArtifact extends TExtensibleElements implements IMda
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d1281be6-a52c-432a-88f0-62016e523666")
+    @objid ("ffc444d1-dc8c-49e4-b824-97535731aa79")
     public void setArtifactType(final String value) {
         this.elt.setProperty(TImplementationArtifact.MdaTypes.STEREOTYPE_ELT,
                              TImplementationArtifact.MdaTypes.ARTIFACTTYPE_PROPERTY_ELT.getName(),
@@ -232,7 +232,7 @@ public class TImplementationArtifact extends TExtensibleElements implements IMda
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a403bdbb-6ae0-437f-b4e9-69bb53a8c6ec")
+    @objid ("96018011-1f27-42d9-9ad8-daa85e7bb09a")
     public void setInterfaceName(final String value) {
         this.elt.setProperty(TImplementationArtifact.MdaTypes.STEREOTYPE_ELT,
                              TImplementationArtifact.MdaTypes.INTERFACENAME_PROPERTY_ELT.getName(),
@@ -244,42 +244,42 @@ public class TImplementationArtifact extends TExtensibleElements implements IMda
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("debc8a47-757e-49fa-a5bc-14ed4ae61932")
+    @objid ("6b8a7829-6e83-4945-b36e-a206acf4132f")
     public void setOperationName(final String value) {
         this.elt.setProperty(TImplementationArtifact.MdaTypes.STEREOTYPE_ELT,
                              TImplementationArtifact.MdaTypes.OPERATIONNAME_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(TImplementationArtifact.MdaTypes.OPERATIONNAME_PROPERTY_ELT, value));
     }
 
-    @objid ("aea8435c-0faf-4da4-8aa4-36b9f733d7d1")
+    @objid ("693e7c20-b083-4a8a-8967-da583bb0f908")
     protected  TImplementationArtifact(final ModelElement elt) {
         super(elt);
     }
 
     @objid ("28066f07-9793-4376-bac1-d55aa03a584c")
     public static final class MdaTypes {
-        @objid ("fc87242f-a95e-4f75-a6c0-a32a341ba5c5")
+        @objid ("3837e100-fb58-4657-abca-ed49f382cff4")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("45073ef5-3906-45ec-b9d4-481b438d1249")
+        @objid ("9ebdf616-48b8-4524-861f-13bdb61e7a44")
         public static PropertyDefinition ARTIFACTREF_PROPERTY_ELT;
 
-        @objid ("3186d9dc-9287-4e02-bb78-c48680c1dd7b")
+        @objid ("2006dea5-9c30-4560-85fb-cdf9ec9b28bf")
         public static PropertyDefinition ARTIFACTTYPE_PROPERTY_ELT;
 
-        @objid ("f601bab1-0765-42e2-8d96-b02192f4a67f")
+        @objid ("5d4cd6f4-c754-4cc8-8cc0-a9ea33f8e58a")
         public static PropertyDefinition INTERFACENAME_PROPERTY_ELT;
 
-        @objid ("b2d51735-921a-4bec-8768-ce2f01dce1e6")
+        @objid ("07650beb-633b-4d3c-91b7-fc1e9e9e994c")
         public static PropertyDefinition OPERATIONNAME_PROPERTY_ELT;
 
-        @objid ("0ebd4fc7-b3aa-4551-bd59-0502cba4f742")
+        @objid ("071db9b6-f13e-42ed-88e3-1d3efbb02c1e")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("fdac68f3-06ed-44b4-9b5a-f32938ecbc47")
+        @objid ("60532e9b-80a8-47e9-8afa-e8db37acd66c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("61522e44-4d97-4933-883f-576301beec3a")
+        @objid ("2de988ea-7ee3-4b4c-92b6-7af1273ccb55")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

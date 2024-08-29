@@ -18,7 +18,6 @@ import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("e048fc6c-d270-4303-ad58-e0ce53629c36")
 public class TNodeTemplatePropertyPage<T extends TNodeTemplate> extends ToscaElementPropertyPage<T> {
-
     @objid ("63860325-314c-41b3-8585-72012af82d21")
     public  TNodeTemplatePropertyPage(T elt) {
         super(elt);

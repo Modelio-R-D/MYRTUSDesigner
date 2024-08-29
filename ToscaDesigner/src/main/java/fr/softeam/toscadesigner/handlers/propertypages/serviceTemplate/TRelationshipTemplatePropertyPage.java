@@ -1,9 +1,11 @@
-package fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate;
+package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
 import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.RelationshipConstraintsType;
 import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementsType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
@@ -12,15 +14,15 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("83e83f25-36df-4af3-a9ec-d48f34eb1aec")
+@objid ("15b7bd83-3aed-434a-8ff1-4f61ab9d6360")
 public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> extends ToscaElementPropertyPage<T> {
-    @objid ("8b38e548-70ca-4080-ab98-d6e2374fc90e")
+    @objid ("5a0ad181-2aa4-4ad3-a889-94e3ee7e7875")
     public  TRelationshipTemplatePropertyPage(T elt) {
         super(elt);
         // TODO Auto-generated constructor stub
     }
 
-    @objid ("b6b3ca49-8857-4993-b798-1c8328089c4d")
+    @objid ("ecaf7d2d-dca2-4947-8e42-14f8b4736be6")
     @Override
     public void changeProperty(int row, String value) {
         switch (row) {
@@ -47,7 +49,7 @@ public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> 
         }
     }
 
-    @objid ("378c8d16-1a0a-413b-b142-e267468c87c4")
+    @objid ("84d0ce8f-8a60-4f35-bcfd-35ab46b5532a")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);

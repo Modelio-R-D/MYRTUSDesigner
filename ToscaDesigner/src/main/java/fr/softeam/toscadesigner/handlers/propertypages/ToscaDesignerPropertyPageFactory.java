@@ -8,6 +8,7 @@ package fr.softeam.toscadesigner.handlers.propertypages;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
+import fr.softeam.toscadesigner.handlers.propertypages.cloudServiceArchive.TServiceTemplatePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.MetadataElementPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TNodeTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRelationshipTypePropertyPage;
@@ -126,6 +127,7 @@ public class ToscaDesignerPropertyPageFactory {
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType.STEREOTYPE_NAME: return new TNodeTypePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType.STEREOTYPE_NAME: return new TRelationshipTypePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate.STEREOTYPE_NAME: return new TTopologyTemplatePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate.instantiate(obj));
+            case fr.softeam.toscadesigner.api.tosca.standard.class_.TServiceTemplate.STEREOTYPE_NAME: return new TServiceTemplatePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TServiceTemplate.instantiate(obj));
             
             default:
                 break;
@@ -180,7 +182,7 @@ public class ToscaDesignerPropertyPageFactory {
         public final Object visitAttribute(Attribute obj) {
             switch (this.stName) {
             case fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.MetadataElement.STEREOTYPE_NAME: return new MetadataElementPropertyPage<>(fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.MetadataElement.instantiate(obj));
-
+            
             default:
                 break;
             }

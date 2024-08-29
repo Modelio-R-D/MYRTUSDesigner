@@ -1,18 +1,18 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.MetadataElement;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
+@objid ("daed0c47-9098-44e5-8818-b0edc0798342")
+public class MetadataElementPropertyPage<T extends MetadataElement> extends ToscaElementPropertyPage<T> {
+    @objid ("99e1297d-9d84-4961-8ed3-eb570b26f595")
+    public  MetadataElementPropertyPage(T elt) {
+        super(elt);
+        // TODO Auto-generated constructor stub
+    }
 
-import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.MetadataElement;
-
-public class MetadataElementPropertyPage <T extends MetadataElement> extends ToscaElementPropertyPage<T> {
-    public MetadataElementPropertyPage(T elt) {
-		super(elt);
-		// TODO Auto-generated constructor stub
-	}
-
-	
+    @objid ("68738775-cb8a-4888-b13c-3fc51bebdb41")
     @Override
     public void changeProperty(int row, String value) {
         switch (row) {
@@ -22,10 +22,11 @@ public class MetadataElementPropertyPage <T extends MetadataElement> extends Tos
         case 2:
             this._element.setElements(null);
             break;
-
+        
         }
     }
 
+    @objid ("fc930dd6-9b36-4aa8-a092-b0d6400ca528")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
