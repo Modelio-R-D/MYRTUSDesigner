@@ -22,6 +22,7 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.statik.Artifact;
 import org.modelio.metamodel.uml.statik.Association;
+import org.modelio.metamodel.uml.statik.AssociationEnd;
 import org.modelio.metamodel.uml.statik.Attribute;
 import org.modelio.metamodel.uml.statik.AttributeLink;
 import org.modelio.metamodel.uml.statik.Class;
@@ -137,14 +138,14 @@ public class ToscaDesignerPropertyPageFactory {
 
         @objid ("158dcd2e-88fb-4446-9789-ca1183691f56")
         @Override
-        public final Object visitAssociation(Association obj) {
+        public final Object visitAssociationEnd(AssociationEnd obj) {
             switch (this.stName) {
-            case fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate.STEREOTYPE_NAME: return new fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TRelationshipTemplatePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate.instantiate(obj));
+            case fr.softeam.toscadesigner.api.tosca.standard.associationend.TRelationshipTemplateEnd.STEREOTYPE_NAME: return new fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TRelationshipTemplatePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate.instantiate(obj.getAssociation()));
             
             default:
                 break;
             }
-            return IDefaultModelVisitor.super.visitAssociation(obj);
+            return IDefaultModelVisitor.super.visitAssociationEnd(obj);
         }
 
         @objid ("378ea0c8-e23f-46da-a392-c4924f2c9623")

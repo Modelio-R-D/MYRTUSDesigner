@@ -3,6 +3,7 @@ package fr.softeam.toscadesigner.handlers.tools;
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
+import fr.softeam.toscadesigner.api.tosca.standard.associationend.TRelationshipTemplateEnd;
 import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
 import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
@@ -13,6 +14,7 @@ import org.modelio.api.modelio.diagram.tools.DefaultLinkTool;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.ITransaction;
 import org.modelio.metamodel.uml.statik.Association;
+import org.modelio.metamodel.uml.statik.AssociationEnd;
 import org.modelio.metamodel.uml.statik.Classifier;
 
 @objid ("1d1a3b00-63d7-41b1-a3e0-137271d640f6")
@@ -36,6 +38,10 @@ public class RelationshipTemplateTool extends DefaultLinkTool {
         try (ITransaction transaction = session.createTransaction(" RelationshipTemplate")) {
             Association newAssoc = session.getModel().createAssociation((Classifier) source.getElement(),(Classifier) target.getElement(), "");
             newAssoc.getExtension().add(TRelationshipTemplate.MdaTypes.STEREOTYPE_ELT);
+            
+            for(AssociationEnd end : newAssoc.getEnd()) {
+                end.getExtension().add(TRelationshipTemplateEnd.MdaTypes.STEREOTYPE_ELT);
+            }
              
             List<IDiagramGraphic> graphics = diagramHandle.unmask(newAssoc, 0,0);
             if(graphics.size() > 0 && graphics.get(0) instanceof IDiagramLink) {
