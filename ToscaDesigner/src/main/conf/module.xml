@@ -816,12 +816,7 @@
             <Stereotype name="TRelationshipTemplate" metaclass="Standard.Association" owner-stereotype="mref#'' {a32cca04-f738-421e-b834-b0f13524e19e} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TRelationshipTemplate.label" uid="7f01001b-511e-4017-b6b4-729f68c85911" is-abstract="false">
                 <Icon path="res/icon/gui/relationship_template24.png"/>
                 <Image path="res/icon/gui/relationship_template48.png"/>
-                <PropertyTable id="TRelationshipTemplateTable" label="%propertytable.TRelationshipTemplateTable.label" uid="e2ad1d70-bed4-4804-a352-276aae3de6dd">
-                    <PropertyDefinition id="type" label="%propertydefinition.TRelationshipTemplateTable.type.label" default-value="" is-editable="true" uid="4e1f88bb-9f2a-4519-b54b-e03d31184991">
-                        <TypeRef id="mref#'Element' {b58969db-144e-4a1f-b946-cd6deacca9bd} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TRelationshipTemplateTable.type.description</Description>
-                    </PropertyDefinition>
-                </PropertyTable>
+                <PropertyTable id="TRelationshipTemplateTable" label="%propertytable.TRelationshipTemplateTable.label" uid="573a70fa-fd48-483c-9511-d4439b65378c"/>
             </Stereotype>
             <Stereotype name="TRelationshipType" metaclass="Standard.Class" owner-stereotype="mref#'' {fecd81a5-da41-4a07-a507-6bfaf5bbadd2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TRelationshipType.label" uid="1b11c098-c9e5-4e5d-beca-3351909bc6ce" is-abstract="false">
                 <Icon path="res/icon/gui/relationship_type24.png"/>

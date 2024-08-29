@@ -8,6 +8,7 @@ package fr.softeam.toscadesigner.handlers.propertypages;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
+import fr.softeam.toscadesigner.handlers.propertypages.core.MetadataElementPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TNodeTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRelationshipTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TNodeTemplatePropertyPage;
@@ -18,6 +19,7 @@ import org.modelio.metamodel.uml.infrastructure.Element;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.statik.Artifact;
+import org.modelio.metamodel.uml.statik.Association;
 import org.modelio.metamodel.uml.statik.Attribute;
 import org.modelio.metamodel.uml.statik.AttributeLink;
 import org.modelio.metamodel.uml.statik.Class;
@@ -129,6 +131,18 @@ public class ToscaDesignerPropertyPageFactory {
             return IDefaultModelVisitor.super.visitClass(obj);
         }
 
+        @objid ("158dcd2e-88fb-4446-9789-ca1183691f56")
+        @Override
+        public final Object visitAssociation(Association obj) {
+            switch (this.stName) {
+            case fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate.STEREOTYPE_NAME: return new fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TRelationshipTemplatePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate.instantiate(obj));
+            
+            default:
+                break;
+            }
+            return IDefaultModelVisitor.super.visitAssociation(obj);
+        }
+
         @objid ("378ea0c8-e23f-46da-a392-c4924f2c9623")
         @Override
         public final Object visitEnumeration(Enumeration obj) {
@@ -163,6 +177,8 @@ public class ToscaDesignerPropertyPageFactory {
         @Override
         public final Object visitAttribute(Attribute obj) {
             switch (this.stName) {
+            case fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.MetadataElement.STEREOTYPE_NAME: return new MetadataElementPropertyPage<>(fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.MetadataElement.instantiate(obj));
+
             default:
                 break;
             }
