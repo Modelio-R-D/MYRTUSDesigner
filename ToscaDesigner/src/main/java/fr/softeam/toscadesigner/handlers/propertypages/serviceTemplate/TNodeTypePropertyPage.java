@@ -5,6 +5,7 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.InterfacesType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilityDefinitionsType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementsType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifacts;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyElementInstanceStates;
@@ -47,10 +48,10 @@ public class TNodeTypePropertyPage<T extends TNodeType> extends TEntityTypePrope
             break;
         
         case 5:
-            for (ModelElement dep : CapabilityDefinitionsType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+            for (ModelElement dep : TCapabilityDefinitionsType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
-                    this._element.setCapabilityDefinitions(
-                            CapabilityDefinitionsType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
+                   this._element.setCapabilityDefinitions(
+                           TCapabilityDefinitionsType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
                 }
             }
             break;
