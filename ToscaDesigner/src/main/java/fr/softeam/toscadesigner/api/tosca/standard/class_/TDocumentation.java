@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 29/08/2024 17:58 by Modelio Studio.
+ * This file was generated on 30/08/2024 17:26 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
@@ -40,25 +40,25 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("fc432028-6145-49f9-a197-5029d966e42d")
 public class TDocumentation implements IMdaProxy {
-    @objid ("fe71fc31-fe7d-4383-8598-48781a922420")
+    @objid ("85d8c89b-ab81-4a1f-b7cf-23309e7d5242")
     public static final String STEREOTYPE_NAME = "TDocumentation";
 
-    @objid ("82f1d6f8-ebec-43ca-9a76-38901852a39f")
+    @objid ("82f5cdb1-7851-4202-9beb-180f25fdbf31")
     public static final String ANY_PROPERTY = "any";
 
-    @objid ("abc7ea1b-977b-438b-9eeb-0e4ac6a184b6")
+    @objid ("089252c4-2e90-4820-94e6-68a6bd125590")
     public static final String LANG_PROPERTY = "lang";
 
-    @objid ("35ffea39-caba-4f75-9b2b-ff96d797c501")
+    @objid ("c213c516-083e-41ca-a5c7-9a847519f0b8")
     public static final String MIXED_PROPERTY = "mixed";
 
-    @objid ("9ad1f1fa-19b1-4d53-90b4-848a18ed1176")
+    @objid ("5ea4b9ca-988b-46ba-bf04-6329cfadebe0")
     public static final String SOURCE_PROPERTY = "source";
 
     /**
      * The underlying {@link Class} represented by this proxy, never null.
      */
-    @objid ("8e8a5bd0-6369-4c95-be36-66c335b8d170")
+    @objid ("adda3d45-bd41-4b7f-9091-72adf1e2b7e8")
     protected final Class elt;
 
     /**
@@ -68,7 +68,7 @@ public class TDocumentation implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("5d3b717c-3aca-4ec2-b0b7-0947d4bccce1")
+    @objid ("ef7e3b95-deac-48ab-8e7b-3620ad38efa5")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (TDocumentation.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(TDocumentation.MdaTypes.STEREOTYPE_ELT));
     }
@@ -78,7 +78,7 @@ public class TDocumentation implements IMdaProxy {
      * 
      * @return a {@link TDocumentation} proxy on the created {@link Class}.
      */
-    @objid ("6b966aad-be00-407f-b12e-0cb988e2f922")
+    @objid ("d78cc0e5-3838-4894-a868-146cbd20044b")
     public static TDocumentation create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(TDocumentation.MdaTypes.STEREOTYPE_ELT);
@@ -92,7 +92,7 @@ public class TDocumentation implements IMdaProxy {
      * @param obj a Class
      * @return a {@link TDocumentation} proxy or <i>null</i>.
      */
-    @objid ("2b234a05-33fd-425c-813d-c108bf09f9b3")
+    @objid ("4c4c266e-8983-45a4-aaf8-742513c64cd5")
     public static TDocumentation instantiate(final Class obj) {
         return TDocumentation.canInstantiate(obj) ? new TDocumentation(obj) : null;
     }
@@ -105,7 +105,7 @@ public class TDocumentation implements IMdaProxy {
      * @return a {@link TDocumentation} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("ab7877dd-2ed0-4a99-a5cc-d1fac744505b")
+    @objid ("e6cb7fe7-da4e-4f83-bf27-b3a86f37be90")
     public static TDocumentation safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (TDocumentation.canInstantiate(obj))
         	return new TDocumentation(obj);
@@ -113,7 +113,7 @@ public class TDocumentation implements IMdaProxy {
         	throw new IllegalArgumentException("TDocumentation: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("09847441-7177-4c3a-8672-6b01bf4c2a01")
+    @objid ("11fd4b52-6676-490a-ae10-29891b7bd50b")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -134,7 +134,7 @@ public class TDocumentation implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("486b8817-a47c-4f9a-8a33-b5dd4a394f75")
+    @objid ("10f4faed-545a-4672-a7e1-0e8518fb1d1b")
     public String getAny() {
         String value = this.elt.getProperty(TDocumentation.MdaTypes.STEREOTYPE_ELT,
                                             TDocumentation.MdaTypes.ANY_PROPERTY_ELT.getName());
@@ -149,7 +149,7 @@ public class TDocumentation implements IMdaProxy {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("353e36d7-1bbe-497d-a7eb-925cad3e3d4e")
+    @objid ("75206219-d3ca-4c81-a08e-1bc752edaa7d")
     public Class getElement() {
         return this.elt;
     }
@@ -159,7 +159,7 @@ public class TDocumentation implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("05644419-9cf4-42b7-a909-c4f9e6c6ab5f")
+    @objid ("bb494672-e6df-473a-922d-b13357831d21")
     public String getLang() {
         String value = this.elt.getProperty(TDocumentation.MdaTypes.STEREOTYPE_ELT,
                                             TDocumentation.MdaTypes.LANG_PROPERTY_ELT.getName());
@@ -175,7 +175,7 @@ public class TDocumentation implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("9439014a-3fe3-4f01-81fc-aab5ec3a2605")
+    @objid ("d3e6936f-7f65-43e1-b635-162322ef6269")
     public String getMixed() {
         String value = this.elt.getProperty(TDocumentation.MdaTypes.STEREOTYPE_ELT,
                                             TDocumentation.MdaTypes.MIXED_PROPERTY_ELT.getName());
@@ -191,7 +191,7 @@ public class TDocumentation implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("0f6c3b1e-5041-4d41-ab6e-00f3e5e45b75")
+    @objid ("16ca4f3e-e1d6-42ab-b108-317ece3794a9")
     public String getSource() {
         String value = this.elt.getProperty(TDocumentation.MdaTypes.STEREOTYPE_ELT,
                                             TDocumentation.MdaTypes.SOURCE_PROPERTY_ELT.getName());
@@ -202,7 +202,7 @@ public class TDocumentation implements IMdaProxy {
         
     }
 
-    @objid ("f0dfcc9e-03ec-4ef2-8690-f6466f24ed1b")
+    @objid ("218da7b8-8523-4eaa-b0ce-a84ff825a16e")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -214,7 +214,7 @@ public class TDocumentation implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("49842362-aee5-49dd-b3c8-bc5f119bf1b1")
+    @objid ("7e637c7e-51e1-40fd-8073-bb2b0892542f")
     public void setAny(final String value) {
         this.elt.setProperty(TDocumentation.MdaTypes.STEREOTYPE_ELT,
                              TDocumentation.MdaTypes.ANY_PROPERTY_ELT.getName(),
@@ -226,7 +226,7 @@ public class TDocumentation implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("2b8adee0-a30d-4859-a2f6-96fac6709ab0")
+    @objid ("c1c952ba-dd39-49dd-8d97-6dfddbcf1b18")
     public void setLang(final String value) {
         this.elt.setProperty(TDocumentation.MdaTypes.STEREOTYPE_ELT,
                              TDocumentation.MdaTypes.LANG_PROPERTY_ELT.getName(),
@@ -238,7 +238,7 @@ public class TDocumentation implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("f57d5978-1459-4ef0-9fe1-09d9132c9843")
+    @objid ("5fd9d73a-f41a-4e47-bbd3-044e5b1c4df7")
     public void setMixed(final String value) {
         this.elt.setProperty(TDocumentation.MdaTypes.STEREOTYPE_ELT,
                              TDocumentation.MdaTypes.MIXED_PROPERTY_ELT.getName(),
@@ -250,42 +250,42 @@ public class TDocumentation implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a59a61e8-b06a-4214-86d0-704966916336")
+    @objid ("d9190249-27df-41f3-a6e7-9ac682840fb2")
     public void setSource(final String value) {
         this.elt.setProperty(TDocumentation.MdaTypes.STEREOTYPE_ELT,
                              TDocumentation.MdaTypes.SOURCE_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(TDocumentation.MdaTypes.SOURCE_PROPERTY_ELT, value));
     }
 
-    @objid ("ff3edc53-dc97-41ff-8df5-b237ad7e9274")
+    @objid ("35bc03d8-4818-43b8-a420-c1736acd4a50")
     protected  TDocumentation(final Class elt) {
         this.elt = elt;
     }
 
     @objid ("5ae13f3a-42f0-44ca-9e12-4410bbd4d79e")
     public static final class MdaTypes {
-        @objid ("d1132333-9f5c-43cd-b043-e06a60d4c488")
+        @objid ("df41fc09-973e-4cac-8b7d-890f03c68db4")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("93d8fdc3-88c1-499f-a501-f5adf9bb4738")
+        @objid ("6a70c140-899e-44ca-9d89-482200bb154f")
         public static PropertyDefinition MIXED_PROPERTY_ELT;
 
-        @objid ("29f79666-5640-4c0b-a7a9-d87010336e8a")
+        @objid ("305c7feb-269f-4753-bc3e-0fe4962dbc6a")
         public static PropertyDefinition ANY_PROPERTY_ELT;
 
-        @objid ("3106939b-adde-42cf-b0b5-3fc7c107d46d")
+        @objid ("d1a7f4b1-8576-4b37-a722-0a5e4da12c52")
         public static PropertyDefinition LANG_PROPERTY_ELT;
 
-        @objid ("72175d8f-7ff5-4d20-a211-4cd9b6dcab6b")
+        @objid ("1e434d24-c2d0-4ba2-a99e-822a7d7398e1")
         public static PropertyDefinition SOURCE_PROPERTY_ELT;
 
-        @objid ("4efaf552-0875-4ac6-937b-6da633a3ed21")
+        @objid ("1c5fd2ed-cdc0-4062-a084-2639f042aec3")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("fa3d6f88-0857-460a-b27e-542cba07e705")
+        @objid ("5c3f8865-27a4-4a4c-aaa4-a8dfdf3b1a75")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("65c0799d-36de-4f5c-aab3-b1e3d7664cd8")
+        @objid ("6037b7e1-b261-4ca7-a8ec-692713e2f43d")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

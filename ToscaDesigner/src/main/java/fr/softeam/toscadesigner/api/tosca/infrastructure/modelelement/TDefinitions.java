@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 29/08/2024 17:58 by Modelio Studio.
+ * This file was generated on 30/08/2024 17:26 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -39,61 +39,61 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("b300f648-32a7-4b1b-8fcc-154307a32bdd")
 public class TDefinitions extends TExtensibleElements implements IMdaProxy {
-    @objid ("7d467a0a-bd43-43f0-b0b2-680d95391497")
+    @objid ("76d5459e-fde8-4f09-bf5c-ff202f12f379")
     public static final String STEREOTYPE_NAME = "TDefinitions";
 
-    @objid ("f3e11d6d-2ba5-4a82-a33b-7d576b9ca4df")
+    @objid ("81e41164-04b3-4b74-b008-807be403c862")
     public static final String ARTIFACTTEMPLATE_PROPERTY = "artifactTemplate";
 
-    @objid ("5aa4f7f9-e124-4886-9de4-830911c985cb")
+    @objid ("63262da6-2b31-4223-a197-5f8046fc2e8e")
     public static final String ARTIFACTTYPE_PROPERTY = "artifactType";
 
-    @objid ("f4c4838f-c16b-455a-96bb-9b0a7fdb8a9e")
+    @objid ("d35712e3-ec70-494e-a562-56f7b96e0c03")
     public static final String CAPABILITYTYPE_PROPERTY = "capabilityType";
 
-    @objid ("0ef4421e-2879-4620-8613-3ab055fb2348")
+    @objid ("6e46d223-7b8a-443a-b99c-d2252a328ba7")
     public static final String EXTENSIONS_PROPERTY = "extensions";
 
-    @objid ("dc8bb006-b6e2-4f52-9f6a-6969fbee751c")
+    @objid ("6adf7133-d6dd-4988-81e9-7480d890f69f")
     public static final String GROUP_PROPERTY = "group";
 
-    @objid ("319d88e8-930f-49ad-9833-26a2c9c92835")
+    @objid ("757b9718-01a6-4c7a-b539-13c4e28d176a")
     public static final String ID_PROPERTY = "id";
 
-    @objid ("cc05a658-f085-45e0-bbc8-6833d8624ab6")
+    @objid ("761ac0e6-37be-4f2f-92a8-b648e2354bee")
     public static final String IMPORT_PROPERTY = "import";
 
-    @objid ("7853fc70-2f12-4230-a5e9-15e686c2621a")
+    @objid ("0e3385b6-c022-496c-9777-c29ad9f8b64f")
     public static final String NAME_PROPERTY = "name";
 
-    @objid ("2b6bdfdd-53bf-43bc-8740-b4b5c9335244")
+    @objid ("76d649fb-f70c-4906-a07c-85dfd01d7aca")
     public static final String NODETYPE_PROPERTY = "nodeType";
 
-    @objid ("54c8b056-9b6c-44df-8703-488a7fe85812")
+    @objid ("cf1a0042-fbbd-4e2a-8812-e957557d4bc6")
     public static final String NODETYPEIMPLEMENTATION_PROPERTY = "nodeTypeImplementation";
 
-    @objid ("82de5edd-4093-4e08-bc8a-455207f721a5")
+    @objid ("953a6aca-b24d-4820-98cb-9175edbf9484")
     public static final String POLICYTEMPLATE_PROPERTY = "policyTemplate";
 
-    @objid ("5cfc6f27-02ea-4b27-9465-4fbe2d430e31")
+    @objid ("cdb4f8db-bb67-4a2a-af8f-1d7a22f3e7ac")
     public static final String POLICYTYPE_PROPERTY = "policyType";
 
-    @objid ("8b62d058-c8d3-4cad-a0e5-a7dc28d92bfc")
+    @objid ("f2b7df2a-dd57-4f44-88b4-349e69853409")
     public static final String RELATIONSHIPTYPE_PROPERTY = "relationshipType";
 
-    @objid ("cfa7b2a8-fe4e-4324-8f41-4d15e476724e")
+    @objid ("8cbaca80-d6f4-4e78-9101-297656f39e24")
     public static final String RELATIONSHIPTYPEIMPLEMENTATION_PROPERTY = "relationshipTypeImplementation";
 
-    @objid ("1c20e029-1dcd-4cf6-9136-161e41b9aaaa")
+    @objid ("615f12ec-314c-4c5a-8883-bfa4ad044cb1")
     public static final String REQUIREMENTTYPE_PROPERTY = "requirementType";
 
-    @objid ("6bedb607-7834-49cc-930a-74f8f47939f5")
+    @objid ("ebf8efaf-8e2f-42d8-8162-f476a77453ec")
     public static final String SERVICETEMPLATE_PROPERTY = "serviceTemplate";
 
-    @objid ("f5d40d63-2fbe-4eba-9029-f104e71f1e09")
+    @objid ("1ea03bdb-65fe-4d9b-9316-5df9ee085e47")
     public static final String TARGETNAMESPACE_PROPERTY = "targetNamespace";
 
-    @objid ("b6554aa1-ff80-4ee1-b0a5-d088d2d0897e")
+    @objid ("4337517f-62bd-4bee-8291-629f0dbb505c")
     public static final String TYPES_PROPERTY = "types";
 
     /**
@@ -103,7 +103,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("56ddec8c-9637-48da-9895-b6e6a37f46b1")
+    @objid ("fb7ed65d-5329-45d1-971b-97b139642f40")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (TDefinitions.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(TDefinitions.MdaTypes.STEREOTYPE_ELT));
     }
@@ -113,7 +113,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * 
      * @return a {@link TDefinitions} proxy on the created {@link ModelElement}.
      */
-    @objid ("eb04c1c4-17ab-481c-9da6-7d6eff2fb8ab")
+    @objid ("d5cb680e-5668-4006-9ef0-ddf114c8f3d9")
     public static TDefinitions create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(TDefinitions.MdaTypes.STEREOTYPE_ELT);
@@ -127,7 +127,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link TDefinitions} proxy or <i>null</i>.
      */
-    @objid ("0a7bf7d7-e6da-4cdd-bcea-99f74e627fc3")
+    @objid ("196cacd7-9157-49fb-8f1b-ad2110263216")
     public static TDefinitions instantiate(final ModelElement obj) {
         return TDefinitions.canInstantiate(obj) ? new TDefinitions(obj) : null;
     }
@@ -140,7 +140,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * @return a {@link TDefinitions} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("6199f427-4f17-4fd1-b748-b06edb9b692c")
+    @objid ("a90840ef-f1ec-446e-94c1-2f1cd0d3ef08")
     public static TDefinitions safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (TDefinitions.canInstantiate(obj))
         	return new TDefinitions(obj);
@@ -148,7 +148,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
         	throw new IllegalArgumentException("TDefinitions: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("e9028b1c-e280-41a0-8d86-bf039e9f279d")
+    @objid ("df204d9a-fa64-4d04-a8a5-8ed74e975cc6")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -169,7 +169,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("85201e17-a75a-4cd9-8304-7a2abb34ade4")
+    @objid ("9f63df8c-cf18-47dc-85b6-017c1b674767")
     public String getArtifactTemplate() {
         String value = this.elt.getProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                                             TDefinitions.MdaTypes.ARTIFACTTEMPLATE_PROPERTY_ELT.getName());
@@ -185,7 +185,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("65730808-0bab-4023-b461-09510983d5a4")
+    @objid ("de1bacdf-8778-4e95-b594-875f11c10712")
     public String getArtifactType() {
         String value = this.elt.getProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                                             TDefinitions.MdaTypes.ARTIFACTTYPE_PROPERTY_ELT.getName());
@@ -201,7 +201,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("c88550ee-706c-43a5-956d-81fafc811a26")
+    @objid ("80f307d9-8845-4b39-9af1-e6d284eb5914")
     public String getCapabilityType() {
         String value = this.elt.getProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                                             TDefinitions.MdaTypes.CAPABILITYTYPE_PROPERTY_ELT.getName());
@@ -216,7 +216,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("0f2c44aa-f922-4ea2-be49-f8e1f885795b")
+    @objid ("6e7c35e1-a044-4fc1-a9e9-9120eb77b07b")
     @Override
     public ModelElement getElement() {
         return (ModelElement)super.getElement();
@@ -227,7 +227,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d06bbb42-e533-4fad-8372-c3336a40fe3f")
+    @objid ("2abb8a3a-015f-453c-9425-8824f53cc103")
     public String getExtensions() {
         String value = this.elt.getProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                                             TDefinitions.MdaTypes.EXTENSIONS_PROPERTY_ELT.getName());
@@ -243,7 +243,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a7183cef-7f27-4488-a716-807d87557ad5")
+    @objid ("f2dc9e7c-6881-4dfe-9122-848979182bb1")
     public String getGroup() {
         String value = this.elt.getProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                                             TDefinitions.MdaTypes.GROUP_PROPERTY_ELT.getName());
@@ -259,7 +259,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("eaa272ad-2f9c-4f9e-a996-befdf5929486")
+    @objid ("151d0ce3-d22e-4c51-8bd0-129d2cd105e5")
     public String getId() {
         String value = this.elt.getProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                                             TDefinitions.MdaTypes.ID_PROPERTY_ELT.getName());
@@ -275,7 +275,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ae563090-73f9-44c1-bf12-5b2ce196eb8e")
+    @objid ("dfd8a1c6-2e81-4dc4-8d7c-e0d9099bf502")
     public String getImport() {
         String value = this.elt.getProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                                             TDefinitions.MdaTypes.IMPORT_PROPERTY_ELT.getName());
@@ -291,7 +291,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("f97cd5e0-886d-45be-9bd8-ca304facdfba")
+    @objid ("47ad0d97-262d-4eb2-b20f-d628a0eee4f3")
     public String getName() {
         String value = this.elt.getProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                                             TDefinitions.MdaTypes.NAME_PROPERTY_ELT.getName());
@@ -307,7 +307,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d27dfde9-68b6-4d13-bbee-bfa9c849381e")
+    @objid ("2e381314-51e5-4160-9616-9d923fa6e4ed")
     public String getNodeType() {
         String value = this.elt.getProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                                             TDefinitions.MdaTypes.NODETYPE_PROPERTY_ELT.getName());
@@ -323,7 +323,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("1be74a04-4150-46ed-ab6c-c6b5e7979417")
+    @objid ("709bbe9e-0a34-4292-a92a-609891581eb0")
     public String getNodeTypeImplementation() {
         String value = this.elt.getProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                                             TDefinitions.MdaTypes.NODETYPEIMPLEMENTATION_PROPERTY_ELT.getName());
@@ -339,7 +339,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a22e7f31-90ab-41c2-9701-0559579ccd57")
+    @objid ("f7cbc391-e3d9-4296-8aa4-70222efdc1cb")
     public String getPolicyTemplate() {
         String value = this.elt.getProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                                             TDefinitions.MdaTypes.POLICYTEMPLATE_PROPERTY_ELT.getName());
@@ -355,7 +355,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3eb7896d-0c19-4147-9c7a-9fe9cbc5b1b5")
+    @objid ("c787dc2a-f076-46cf-8d38-3e2ac5a123f7")
     public String getPolicyType() {
         String value = this.elt.getProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                                             TDefinitions.MdaTypes.POLICYTYPE_PROPERTY_ELT.getName());
@@ -371,7 +371,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("f0e2eac0-edac-4054-92c5-3629921607e9")
+    @objid ("a903291f-bf3a-4075-a4f7-a53f26382a55")
     public String getRelationshipType() {
         String value = this.elt.getProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                                             TDefinitions.MdaTypes.RELATIONSHIPTYPE_PROPERTY_ELT.getName());
@@ -387,7 +387,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("1d24d9f0-6580-455c-98d9-7e683f20c79b")
+    @objid ("0c8a1d19-df78-4f0b-9915-de6b5cb70a60")
     public String getRelationshipTypeImplementation() {
         String value = this.elt.getProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                                             TDefinitions.MdaTypes.RELATIONSHIPTYPEIMPLEMENTATION_PROPERTY_ELT.getName());
@@ -403,7 +403,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("fc7925ee-7cbe-473a-8449-bc507f56ae2c")
+    @objid ("2be102e7-00e7-452e-a417-854d155fa191")
     public String getRequirementType() {
         String value = this.elt.getProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                                             TDefinitions.MdaTypes.REQUIREMENTTYPE_PROPERTY_ELT.getName());
@@ -419,7 +419,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("5e63dc37-6e23-4896-9ab9-b466bab45b97")
+    @objid ("a71246cf-d4d4-4095-9ae1-71e26b4d90a7")
     public String getServiceTemplate() {
         String value = this.elt.getProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                                             TDefinitions.MdaTypes.SERVICETEMPLATE_PROPERTY_ELT.getName());
@@ -435,7 +435,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a62efe12-d06f-4bcb-9395-20489c2952ff")
+    @objid ("428f3e2d-7234-49bd-9b26-4f1bec14e37f")
     public String getTargetNamespace() {
         String value = this.elt.getProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                                             TDefinitions.MdaTypes.TARGETNAMESPACE_PROPERTY_ELT.getName());
@@ -451,7 +451,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ebdf67e7-1bc9-4308-91ce-7ab873b3b3c3")
+    @objid ("4f9b2684-5d0e-4d47-bb1f-ea4ab492c539")
     public String getTypes() {
         String value = this.elt.getProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                                             TDefinitions.MdaTypes.TYPES_PROPERTY_ELT.getName());
@@ -462,7 +462,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
         
     }
 
-    @objid ("d2f0cd1c-9162-4bff-b561-42964fa95b6c")
+    @objid ("8a33e98a-4335-4dc2-b7b8-504b298eec90")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -474,7 +474,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("bd8d1cce-e474-409c-a8c3-b1da0c608c0d")
+    @objid ("0a322455-5de9-4849-88df-d2825c7be50f")
     public void setArtifactTemplate(final String value) {
         this.elt.setProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                              TDefinitions.MdaTypes.ARTIFACTTEMPLATE_PROPERTY_ELT.getName(),
@@ -486,7 +486,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b226d31d-672e-4fae-be99-886b290e6fd0")
+    @objid ("17d2e636-7b88-439e-876a-b20d4c0b76fb")
     public void setArtifactType(final String value) {
         this.elt.setProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                              TDefinitions.MdaTypes.ARTIFACTTYPE_PROPERTY_ELT.getName(),
@@ -498,7 +498,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("6b5dfb90-8a2c-4e4b-be7e-7fc2f0bb0e27")
+    @objid ("890d22c7-5276-4b98-9cf1-7a763cef73e5")
     public void setCapabilityType(final String value) {
         this.elt.setProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                              TDefinitions.MdaTypes.CAPABILITYTYPE_PROPERTY_ELT.getName(),
@@ -510,7 +510,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("1662b2ea-f821-4360-9791-49f26f8495bb")
+    @objid ("118f8bcf-685b-4098-98bd-5cb1194349a1")
     public void setExtensions(final String value) {
         this.elt.setProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                              TDefinitions.MdaTypes.EXTENSIONS_PROPERTY_ELT.getName(),
@@ -522,7 +522,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("569a3004-b79b-40e0-b634-d4eb478294b3")
+    @objid ("0640dd97-9b65-4334-b5c3-b6ea5a20290c")
     public void setGroup(final String value) {
         this.elt.setProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                              TDefinitions.MdaTypes.GROUP_PROPERTY_ELT.getName(),
@@ -534,7 +534,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("f37e56e9-97ac-4885-8e2b-3d51cc126127")
+    @objid ("ae5dd09a-4f17-45ee-98a5-4d8753009dd5")
     public void setId(final String value) {
         this.elt.setProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                              TDefinitions.MdaTypes.ID_PROPERTY_ELT.getName(),
@@ -546,7 +546,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("c3b7d7fa-f96e-4e52-bd8f-e874525dacf4")
+    @objid ("24fb9254-593b-4a5e-ae11-d25ddc196a17")
     public void setImport(final String value) {
         this.elt.setProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                              TDefinitions.MdaTypes.IMPORT_PROPERTY_ELT.getName(),
@@ -558,7 +558,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("31579cc1-9391-4f53-bdb6-72e84558d734")
+    @objid ("b191664f-6052-442f-9ea0-3abdbe3c5781")
     public void setName(final String value) {
         this.elt.setProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                              TDefinitions.MdaTypes.NAME_PROPERTY_ELT.getName(),
@@ -570,7 +570,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("f23a5256-4975-40b9-a06b-2b72249ba2f6")
+    @objid ("40f3678e-b33b-43dc-9976-47217e2f9d43")
     public void setNodeType(final String value) {
         this.elt.setProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                              TDefinitions.MdaTypes.NODETYPE_PROPERTY_ELT.getName(),
@@ -582,7 +582,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("442005b3-d71a-426e-85a9-384182d75a28")
+    @objid ("b9e2a548-ef88-4195-8c4d-8ac8214a20e9")
     public void setNodeTypeImplementation(final String value) {
         this.elt.setProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                              TDefinitions.MdaTypes.NODETYPEIMPLEMENTATION_PROPERTY_ELT.getName(),
@@ -594,7 +594,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("cbae8af3-c3db-46da-a86b-167b97b5f568")
+    @objid ("c6493da9-3fe0-4810-8a8f-517fe6063a56")
     public void setPolicyTemplate(final String value) {
         this.elt.setProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                              TDefinitions.MdaTypes.POLICYTEMPLATE_PROPERTY_ELT.getName(),
@@ -606,7 +606,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("2f699f10-e670-4829-8b6c-bd70ad80abd2")
+    @objid ("4cd148c5-14a5-47bc-8bbb-b6dd8735b24c")
     public void setPolicyType(final String value) {
         this.elt.setProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                              TDefinitions.MdaTypes.POLICYTYPE_PROPERTY_ELT.getName(),
@@ -618,7 +618,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b6d5386f-01be-4330-8d41-831361530bb3")
+    @objid ("c4c046e9-487a-4da5-9859-237d11523db1")
     public void setRelationshipType(final String value) {
         this.elt.setProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                              TDefinitions.MdaTypes.RELATIONSHIPTYPE_PROPERTY_ELT.getName(),
@@ -630,7 +630,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a636c22f-0be8-4bd7-96a6-12a059c9c195")
+    @objid ("968f85a3-916f-45eb-ac60-fb0f6cc4d6ca")
     public void setRelationshipTypeImplementation(final String value) {
         this.elt.setProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                              TDefinitions.MdaTypes.RELATIONSHIPTYPEIMPLEMENTATION_PROPERTY_ELT.getName(),
@@ -642,7 +642,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("30469794-9e13-4a0e-81c7-14f508acff48")
+    @objid ("4d3d17d0-1a1e-408d-9678-fa3492f0bd1f")
     public void setRequirementType(final String value) {
         this.elt.setProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                              TDefinitions.MdaTypes.REQUIREMENTTYPE_PROPERTY_ELT.getName(),
@@ -654,7 +654,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("cfcf0110-e5b8-47fc-aa5e-50f6d3668e40")
+    @objid ("71a4a9ae-2525-49bb-8bab-bfa63498f973")
     public void setServiceTemplate(final String value) {
         this.elt.setProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                              TDefinitions.MdaTypes.SERVICETEMPLATE_PROPERTY_ELT.getName(),
@@ -666,7 +666,7 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("bfd16b32-61ae-453f-9162-6af1127a6c9b")
+    @objid ("3478188c-5176-4340-b261-e012bc8ce8f5")
     public void setTargetNamespace(final String value) {
         this.elt.setProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                              TDefinitions.MdaTypes.TARGETNAMESPACE_PROPERTY_ELT.getName(),
@@ -678,84 +678,84 @@ public class TDefinitions extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("8900e4dd-9aba-4e45-8664-a342d25faf19")
+    @objid ("c47c0132-db9e-4096-9082-f1a812195d4f")
     public void setTypes(final String value) {
         this.elt.setProperty(TDefinitions.MdaTypes.STEREOTYPE_ELT,
                              TDefinitions.MdaTypes.TYPES_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(TDefinitions.MdaTypes.TYPES_PROPERTY_ELT, value));
     }
 
-    @objid ("47952469-8c10-4233-b0d0-183b40a88ee3")
+    @objid ("41d78a38-2bca-46c1-97b6-0a4a74817a82")
     protected  TDefinitions(final ModelElement elt) {
         super(elt);
     }
 
     @objid ("3f27cdf7-1d3e-465b-93da-e9b74e8276e7")
     public static final class MdaTypes {
-        @objid ("1872cc72-7aa0-4415-a3d7-9baa19644546")
+        @objid ("5c92f27c-bd07-492f-8f19-d8308ca34b2d")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("e92a6417-7ddd-42f2-80e2-14bd18853449")
+        @objid ("1b339d04-0a95-48d1-8d83-c2d6ad9d3197")
         public static PropertyDefinition ARTIFACTTEMPLATE_PROPERTY_ELT;
 
-        @objid ("08cce2fa-3070-4c16-a430-726658a07600")
+        @objid ("58ea174c-4469-4ffa-8f52-8378e50d439e")
         public static PropertyDefinition ARTIFACTTYPE_PROPERTY_ELT;
 
-        @objid ("b29f3dc8-659f-461b-a4f7-9a93ee89b1ab")
+        @objid ("29d5e031-b40b-4e39-832a-c2ead4524e8e")
         public static PropertyDefinition CAPABILITYTYPE_PROPERTY_ELT;
 
-        @objid ("9a506105-69e4-45f8-9e62-6d9301ce6de3")
+        @objid ("13e8b65b-ad07-42b6-9140-b43c950591a6")
         public static PropertyDefinition EXTENSIONS_PROPERTY_ELT;
 
-        @objid ("44e31b5f-ba24-4d5f-b680-c37d286cc71b")
+        @objid ("d22757bd-eb9c-4e98-90a1-456cbe93ec2d")
         public static PropertyDefinition GROUP_PROPERTY_ELT;
 
-        @objid ("25ebc1b2-5738-4d95-b9d7-b2e214b77de9")
+        @objid ("b21f242a-49df-4677-b063-0745283c8335")
         public static PropertyDefinition ID_PROPERTY_ELT;
 
-        @objid ("76f5a7e9-06ef-4407-ad22-337ebd13463a")
+        @objid ("9cd3f995-9e32-4b8d-bb3b-d7db7c438a1f")
         public static PropertyDefinition IMPORT_PROPERTY_ELT;
 
-        @objid ("676d3eab-ae66-4d3b-92f2-5a8af2ca38ee")
+        @objid ("ca970dd4-952f-4c4a-becf-4d9c450d0e54")
         public static PropertyDefinition NAME_PROPERTY_ELT;
 
-        @objid ("b6c4016a-4a49-40d4-a206-590039a5d22f")
+        @objid ("5653baca-2679-44c4-b2ce-b30f528b54e8")
         public static PropertyDefinition NODETYPE_PROPERTY_ELT;
 
-        @objid ("d15537fd-4f66-4b30-a10d-736b25beb654")
+        @objid ("5e1c95c4-89fc-4e62-916a-09e3016f8bc4")
         public static PropertyDefinition NODETYPEIMPLEMENTATION_PROPERTY_ELT;
 
-        @objid ("55981023-dfd6-47a4-9a81-81cbe323662e")
+        @objid ("36fef850-247a-47c2-a104-9a2f7145d6ab")
         public static PropertyDefinition POLICYTEMPLATE_PROPERTY_ELT;
 
-        @objid ("d6035b86-88b3-41d6-8823-dba36cd5258e")
+        @objid ("d1940b2c-4a27-42ac-9ebe-45e646de5d94")
         public static PropertyDefinition POLICYTYPE_PROPERTY_ELT;
 
-        @objid ("3bf97606-520b-42f6-b1f1-35413918c571")
+        @objid ("b6fe7546-6237-41aa-a60b-0da2e300da90")
         public static PropertyDefinition RELATIONSHIPTYPE_PROPERTY_ELT;
 
-        @objid ("fe751c4c-1077-49b7-b70c-67d36224b0bb")
+        @objid ("21efde54-bd45-46f5-bfb8-1c1cbb9da3d7")
         public static PropertyDefinition RELATIONSHIPTYPEIMPLEMENTATION_PROPERTY_ELT;
 
-        @objid ("d4062926-ac82-427c-a850-5466b5af3eea")
+        @objid ("54ee9851-2931-4399-99c7-55e7e0f382ac")
         public static PropertyDefinition REQUIREMENTTYPE_PROPERTY_ELT;
 
-        @objid ("a5580e0f-8942-48f8-8148-c89fbaf32b87")
+        @objid ("e578b559-0318-4624-9c00-65d73881678b")
         public static PropertyDefinition SERVICETEMPLATE_PROPERTY_ELT;
 
-        @objid ("7d308186-8578-4008-8af8-400be9cd9987")
+        @objid ("98136dcb-85e3-4c03-b505-305d0dd73fcd")
         public static PropertyDefinition TARGETNAMESPACE_PROPERTY_ELT;
 
-        @objid ("a76a5b4c-2ab0-4823-8e33-228bac203576")
+        @objid ("bb1a793a-8b16-4c0e-9bf8-321d08380312")
         public static PropertyDefinition TYPES_PROPERTY_ELT;
 
-        @objid ("821a0403-79a1-41d1-bb0b-c54776288df8")
+        @objid ("426b29a8-559c-4499-b891-4875abf13b76")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("fa51552d-d722-44e6-8e75-eea3ef0456ef")
+        @objid ("a93de9cc-b0ed-490e-803f-1d26a867d49c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("149000f9-8ea0-48f6-a45f-64771ed7bc9f")
+        @objid ("33d9e887-d4f8-4729-bf35-98634fdb34ef")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
