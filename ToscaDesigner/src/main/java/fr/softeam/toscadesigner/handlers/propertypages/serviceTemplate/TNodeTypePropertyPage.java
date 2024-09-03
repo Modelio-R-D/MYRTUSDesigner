@@ -2,7 +2,6 @@ package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
 import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.CapabilitiesType;
 import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.InterfacesType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementsType;
