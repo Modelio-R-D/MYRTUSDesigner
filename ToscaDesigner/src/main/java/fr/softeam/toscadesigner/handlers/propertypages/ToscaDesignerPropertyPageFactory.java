@@ -13,6 +13,7 @@ import fr.softeam.toscadesigner.handlers.propertypages.core.MetadataPropertyPage
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TNodeTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRelationshipTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TTopologyTemplatePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TDeploymentArtifactPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TNodeTemplatePropertyPage;
 import org.modelio.metamodel.diagrams.ClassDiagram;
 import org.modelio.metamodel.mda.ModuleComponent;
@@ -183,6 +184,7 @@ public class ToscaDesignerPropertyPageFactory {
         public final Object visitAttribute(Attribute obj) {
             switch (this.stName) {
             case fr.softeam.toscadesigner.api.tosca.standard.attribute.Metadata.STEREOTYPE_NAME: return new MetadataPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.attribute.Metadata.instantiate(obj));
+            case fr.softeam.toscadesigner.api.tosca.standard.attribute.TDeploymentArtifact.STEREOTYPE_NAME: return new TDeploymentArtifactPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.attribute.TDeploymentArtifact.instantiate(obj));
             
             default:
                 break;

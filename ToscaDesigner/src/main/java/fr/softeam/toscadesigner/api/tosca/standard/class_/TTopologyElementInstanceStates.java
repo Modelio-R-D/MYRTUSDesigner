@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 30/08/2024 18:12 by Modelio Studio.
+ * This file was generated on 03/09/2024 15:34 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
@@ -40,13 +40,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("6bd058f9-40fa-4498-9ed8-b4f7f6a18a8a")
 public class TTopologyElementInstanceStates implements IMdaProxy {
-    @objid ("77a297dd-25b0-41bf-8aa7-e5a6fe219b3c")
+    @objid ("941eb919-9e16-4824-8fec-3ff854e44d7b")
     public static final String STEREOTYPE_NAME = "TTopologyElementInstanceStates";
 
     /**
      * The underlying {@link Class} represented by this proxy, never null.
      */
-    @objid ("3aeade50-c8e5-458b-a253-9e8cae9f7c7f")
+    @objid ("fb1944db-5558-4353-8524-f63a2553dbd6")
     protected final Class elt;
 
     /**
@@ -56,7 +56,7 @@ public class TTopologyElementInstanceStates implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("f44c4433-a92a-409f-9918-b83cc7374a40")
+    @objid ("fd22fa34-218b-48c4-ad47-8d3bab034ccb")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (TTopologyElementInstanceStates.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(TTopologyElementInstanceStates.MdaTypes.STEREOTYPE_ELT));
     }
@@ -66,7 +66,7 @@ public class TTopologyElementInstanceStates implements IMdaProxy {
      * 
      * @return a {@link TTopologyElementInstanceStates} proxy on the created {@link Class}.
      */
-    @objid ("26a3a97b-b8c1-42c8-8ca3-1c16d6ddf09b")
+    @objid ("47152f91-5ad6-42ff-8871-9af31cdd7d6d")
     public static TTopologyElementInstanceStates create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(TTopologyElementInstanceStates.MdaTypes.STEREOTYPE_ELT);
@@ -80,7 +80,7 @@ public class TTopologyElementInstanceStates implements IMdaProxy {
      * @param obj a Class
      * @return a {@link TTopologyElementInstanceStates} proxy or <i>null</i>.
      */
-    @objid ("743e337d-3766-4a49-93da-d8c437e9c6cd")
+    @objid ("5aa51a0f-5a8c-41e1-8eac-375bd321245b")
     public static TTopologyElementInstanceStates instantiate(final Class obj) {
         return TTopologyElementInstanceStates.canInstantiate(obj) ? new TTopologyElementInstanceStates(obj) : null;
     }
@@ -93,7 +93,7 @@ public class TTopologyElementInstanceStates implements IMdaProxy {
      * @return a {@link TTopologyElementInstanceStates} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("188677a7-5f03-4c80-9bf5-764181796a3f")
+    @objid ("76703e80-37dc-4038-9f19-2301a931d980")
     public static TTopologyElementInstanceStates safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (TTopologyElementInstanceStates.canInstantiate(obj))
         	return new TTopologyElementInstanceStates(obj);
@@ -107,7 +107,7 @@ public class TTopologyElementInstanceStates implements IMdaProxy {
      * null
      * 
      */
-    @objid ("48020f2a-ddf8-49f5-9efa-7d98a57dd10a")
+    @objid ("47cd4a57-3438-4291-9c7b-523f68b0a893")
     public void addInstanceState(final InstanceStateType obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -117,7 +117,7 @@ public class TTopologyElementInstanceStates implements IMdaProxy {
         }
     }
 
-    @objid ("97fa40bd-1791-4c34-83dc-ff5eb0d05504")
+    @objid ("3ef78b77-7fa1-46ce-8c3a-1b42363c585a")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -137,7 +137,7 @@ public class TTopologyElementInstanceStates implements IMdaProxy {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("d1fd1f3c-8b00-4eed-bce9-886b7a5f7098")
+    @objid ("12083f46-950e-485b-ad0b-fa1534709b59")
     public Class getElement() {
         return this.elt;
     }
@@ -148,7 +148,7 @@ public class TTopologyElementInstanceStates implements IMdaProxy {
      * null
      * 
      */
-    @objid ("24a2012f-bbf6-4ad0-9fbe-da3b17d6cc76")
+    @objid ("3abfc6b8-8449-41ee-bd8a-e218f27edde6")
     public List<InstanceStateType> getInstanceState() {
         List<InstanceStateType> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -160,7 +160,7 @@ public class TTopologyElementInstanceStates implements IMdaProxy {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("cd7cd044-0c32-4e33-873c-d638291d140a")
+    @objid ("c44e2daf-1c8f-4f24-91ea-105c2b0adeda")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -173,7 +173,7 @@ public class TTopologyElementInstanceStates implements IMdaProxy {
      * null
      * 
      */
-    @objid ("7202ca04-84ee-482a-8635-8739265aa229")
+    @objid ("ac3ff53d-cbfd-4c9b-841a-8a8588ff9645")
     public boolean removeInstanceState(final InstanceStateType obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -188,23 +188,23 @@ public class TTopologyElementInstanceStates implements IMdaProxy {
         
     }
 
-    @objid ("8f5020e6-9b98-4e7b-866c-666b6170ac08")
+    @objid ("b4daaf6b-95b1-461d-aeea-40123c2aafaa")
     protected  TTopologyElementInstanceStates(final Class elt) {
         this.elt = elt;
     }
 
     @objid ("24cf07a4-b37f-4d9b-9b3f-b32f26363e24")
     public static final class MdaTypes {
-        @objid ("ae4acb21-d132-4fc0-9479-0090e6a46e72")
+        @objid ("a836c4f8-7367-43ff-9d6a-395410f3ce82")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("bb94e9c1-c1cd-45fd-8ab2-3dd6a840c21d")
+        @objid ("b7a44987-99bc-439e-b986-0dff694eed6f")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("2a941b26-4930-47f9-a2d0-3a166c697617")
+        @objid ("1abbd1b8-725f-4e3f-9836-1b66236cba51")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("1003e976-16eb-4dad-9875-ddf5a3b1204b")
+        @objid ("db1f1640-7108-4336-af7f-5bd730842c42")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
