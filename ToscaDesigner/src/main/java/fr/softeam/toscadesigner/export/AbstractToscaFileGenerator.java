@@ -25,13 +25,9 @@ import com.github.jknack.handlebars.Template;
 import com.github.jknack.handlebars.helper.ConditionalHelpers;
 import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
 
-import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilityDefinitionsType;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TEntityType;
+import fr.softeam.toscadesigner.api.tosca.standard.attribute.TRequirement;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
-import fr.softeam.toscadesigner.api.tosca.standard.attribute.TRequirement;
 import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
 
 public abstract class AbstractToscaFileGenerator {

@@ -68,8 +68,8 @@
                 <Image path=""/>
             </Stereotype>
             <Stereotype name="ImportElement" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.ImportElement.label" uid="938d9c3a-7446-4262-985d-cd583a7613b4" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+                <Icon path="res/icon/gui/import24.ICON.png"/>
+                <Image path="res/icon/gui/import48.png"/>
                 <PropertyTable id="ImportElementPropertyTable" label="%propertytable.ImportElementPropertyTable.label" uid="b1566f06-e64c-4e30-961f-4407e2e050e2">
                     <PropertyDefinition id="File" label="%propertydefinition.ImportElementPropertyTable.File.label" default-value="" is-editable="true" uid="f86ceca7-f290-4766-a466-bb5376c467be">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
@@ -789,20 +789,6 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="TPropertyDef" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.TPropertyDef.label" uid="e6fb3511-fe1d-4f8d-b0d0-ef92595660a5" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
-                <PropertyTable id="TPropertyDefTable" label="%propertytable.TPropertyDefTable.label" uid="619fb093-aeee-4284-ad74-e331bb3b7c0a">
-                    <PropertyDefinition id="property" label="%propertydefinition.TPropertyDefTable.property.label" default-value="" is-editable="true" uid="b3526409-254e-4ae3-8d08-1cb28df5cec8">
-                        <TypeRef id="mref#'Element' {b58969db-144e-4a1f-b946-cd6deacca9bd} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TPropertyDefTable.property.description</Description>
-                    </PropertyDefinition>
-                    <PropertyDefinition id="value" label="%propertydefinition.TPropertyDefTable.value.label" default-value="" is-editable="true" uid="d2597f19-ad2e-4972-8fa0-94aa8d0230a6">
-                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TPropertyDefTable.value.description</Description>
-                    </PropertyDefinition>
-                </PropertyTable>
-            </Stereotype>
             <Stereotype name="TPropertyMapping" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.TPropertyMapping.label" uid="b0f69853-92ba-4a8f-85d9-d3956f9b8b16" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
@@ -821,7 +807,7 @@
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
-                        <Stereotype name="TRelationshipTemplate" metaclass="Standard.Association" owner-stereotype="mref#'' {a32cca04-f738-421e-b834-b0f13524e19e} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TRelationshipTemplate.label" uid="7f01001b-511e-4017-b6b4-729f68c85911" is-abstract="false">
+            <Stereotype name="TRelationshipTemplate" metaclass="Standard.Association" owner-stereotype="mref#'' {a32cca04-f738-421e-b834-b0f13524e19e} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TRelationshipTemplate.label" uid="7f01001b-511e-4017-b6b4-729f68c85911" is-abstract="false">
                 <Icon path="res/icon/gui/relationship_template24.png"/>
                 <Image path="res/icon/gui/relationship_template48.png"/>
                 <PropertyTable id="TRelationshipTemplateTable" label="%propertytable.TRelationshipTemplateTable.label" uid="573a70fa-fd48-483c-9511-d4439b65378c"/>
@@ -967,10 +953,6 @@
                 <Image path=""/>
             </Stereotype>
             <Stereotype name="ToscaModel" metaclass="Standard.Package" owner-stereotype="" is-hidden="false" label="%stereotype.ToscaModel.label" uid="20565008-115d-4fad-800f-134ab276f611" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
-            </Stereotype>
-            <Stereotype name="MetadataElement" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.MetadataElement.label" uid="2c20f655-d501-4dde-b82b-ddc16c6d0c0f" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
