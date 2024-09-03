@@ -28,8 +28,8 @@ public class CreateServiceTemplateDigramCommand extends CreateSubModelCommand {
         
             packageOwner.getOwnedElement().add(subModel.getElement());
             subModel.getElement().getProduct().add(diagram.getElement());
-        
-            //subModel.setDefaultName("Service Template");
+            
+            subModel.getElement().setName("Service Template");
             diagram.getElement().setName(subModel.getElement().getName() + " diagram");            
             this.openDiagram(diagram.getElement());
         

@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 27/08/2024 15:42 by Modelio Studio.
+ * This file was generated on 03/09/2024 15:34 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -10,16 +10,25 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
+import com.modeliosoft.modelio.api.module.MManualAssociationRole;
+import com.modeliosoft.modelio.api.module.MManualAttribute;
+import com.modeliosoft.modelio.api.module.MManualClass;
+import com.modeliosoft.modelio.api.module.MManualImport;
+import com.modeliosoft.modelio.api.module.MManualOperation;
 import com.modeliosoft.modelio.api.module.mda.IMdaProxy;
 import com.modeliosoft.modelio.api.module.mda.MdaProxyException;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.ModelingSessionRegistry;
+import org.modelio.api.modelio.model.PropertyConverter;
+import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.vcore.smkernel.mapi.MObject;
 import org.modelio.vcore.smkernel.mapi.MRef;
 
@@ -30,14 +39,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("6ad7e1cf-45a6-4e7f-b37c-c15bbcd51f66")
 public class PropertyConstraintsType1 implements IMdaProxy {
-    @objid ("5d455607-798a-4c01-a70e-f05f362013a7")
+    @objid ("eb9da016-1f76-409e-a8c9-5a1269455b8a")
     public static final String STEREOTYPE_NAME = "PropertyConstraintsType1";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
-     * 
      */
-    @objid ("6457441b-369b-4dcf-a51c-552ae0bee159")
+    @objid ("2d7653bc-7a83-4d45-bd1b-670d9a35cf8a")
     protected final ModelElement elt;
 
     /**
@@ -47,16 +55,17 @@ public class PropertyConstraintsType1 implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("747dc550-38aa-4878-9bb6-c7b994ae1f9e")
+    @objid ("d70facac-59af-478b-a4d9-94b2a5925710")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (PropertyConstraintsType1.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(PropertyConstraintsType1.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link ModelElement} stereotyped << PropertyConstraintsType1 >> then instantiate a {@link PropertyConstraintsType1} proxy.
+     * 
      * @return a {@link PropertyConstraintsType1} proxy on the created {@link ModelElement}.
      */
-    @objid ("5a2913ad-3653-4fd2-a382-3fe279d16f5a")
+    @objid ("bf503c7c-72d6-462c-95a5-3f1e6b41286e")
     public static PropertyConstraintsType1 create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(PropertyConstraintsType1.MdaTypes.STEREOTYPE_ELT);
@@ -70,7 +79,7 @@ public class PropertyConstraintsType1 implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link PropertyConstraintsType1} proxy or <i>null</i>.
      */
-    @objid ("443bfd73-04e5-4a2b-9a8a-44807bc5fd06")
+    @objid ("adef2b43-6ec5-422d-b4dc-4e3b1efabc86")
     public static PropertyConstraintsType1 instantiate(final ModelElement obj) {
         return PropertyConstraintsType1.canInstantiate(obj) ? new PropertyConstraintsType1(obj) : null;
     }
@@ -79,24 +88,25 @@ public class PropertyConstraintsType1 implements IMdaProxy {
      * Tries to instantiate a {@link PropertyConstraintsType1} proxy from a {@link ModelElement} stereotyped << PropertyConstraintsType1 >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link ModelElement}
      * @return a {@link PropertyConstraintsType1} proxy.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("fc20cd82-b6a8-421e-b390-4c198b2a4b5c")
+    @objid ("706d4c6c-6e68-4cd3-86a5-888bc6d2aeaa")
     public static PropertyConstraintsType1 safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (PropertyConstraintsType1.canInstantiate(obj))
-            return new PropertyConstraintsType1(obj);
+        	return new PropertyConstraintsType1(obj);
         else
-            throw new IllegalArgumentException("PropertyConstraintsType1: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("PropertyConstraintsType1: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'propertyConstraint' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("490b21c7-0630-41f5-85ea-55856dc9128d")
+    @objid ("5c67c12d-025a-4cb7-a37f-99eae7d4ddd4")
     public void addPropertyConstraint(final TPropertyConstraint obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -106,7 +116,7 @@ public class PropertyConstraintsType1 implements IMdaProxy {
         }
     }
 
-    @objid ("0e9d08b0-5bb9-44fb-a97d-d34dc71f3590")
+    @objid ("52da7a5c-d9ef-4adc-aa68-638a68e05595")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -123,10 +133,10 @@ public class PropertyConstraintsType1 implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link ModelElement}.
+     * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("6040d7cc-2938-4bc4-b4c3-81db8af26ba3")
+    @objid ("a76a7fb2-1d92-48b2-a3a8-3cf118e3257b")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -135,8 +145,9 @@ public class PropertyConstraintsType1 implements IMdaProxy {
      * Get the values of the 'propertyConstraint' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("8e505f42-c46a-44f8-849c-e77645092d26")
+    @objid ("070dc6b3-f713-4cfe-825d-cff4c18e9e9b")
     public List<TPropertyConstraint> getPropertyConstraint() {
         List<TPropertyConstraint> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -148,18 +159,20 @@ public class PropertyConstraintsType1 implements IMdaProxy {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("9b7ed949-07b4-4f18-afa5-58e3691d0b4a")
+    @objid ("3a3d128b-7e73-4aed-8325-892673f3ee0e")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
+        
     }
 
     /**
      * Remove a value from the 'propertyConstraint' role.<p>
      * Role description:
      * null
+     * 
      */
-    @objid ("ee759c1d-42c3-4481-b8dd-5025abde40a5")
+    @objid ("a3864902-d956-4302-8a6b-1b36f0d1916b")
     public boolean removePropertyConstraint(final TPropertyConstraint obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -171,25 +184,26 @@ public class PropertyConstraintsType1 implements IMdaProxy {
           }
         }
         return false;
+        
     }
 
-    @objid ("0d6a877f-b5fd-4e55-bb32-3435ec4a68b6")
+    @objid ("5acec099-7b26-4139-afe4-6e1215ca9f0c")
     protected  PropertyConstraintsType1(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("d87b2e53-9cea-4cf4-9be3-cecb964c78ef")
     public static final class MdaTypes {
-        @objid ("7d8c21a2-cd99-4690-a929-de5ad0e29759")
+        @objid ("bd2d8725-b7d6-4acb-ac36-211dc3350383")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("e7a1e407-a18e-4f42-af1c-6970e3fcfea6")
+        @objid ("712bff43-1d89-412a-bd2f-2c70dbfcb5cf")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("98e58d69-efde-4561-a559-eed5c5ab3422")
+        @objid ("250272e1-c1f3-4ee1-aa26-0366cee7b1e2")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("ddf0d167-4474-4946-8a30-9f8e0c3656ee")
+        @objid ("02a3fb8f-321d-4248-8e2b-d113ae3cf8d5")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -206,6 +220,7 @@ public class PropertyConstraintsType1 implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
+            
         }
 
     }

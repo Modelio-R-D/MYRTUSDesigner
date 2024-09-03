@@ -8,8 +8,11 @@ package fr.softeam.toscadesigner.handlers.propertypages;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
+import fr.softeam.toscadesigner.handlers.propertypages.cloudServiceArchive.TServiceTemplatePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.core.MetadataElementPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TNodeTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRelationshipTypePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TTopologyTemplatePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TNodeTemplatePropertyPage;
 import org.modelio.metamodel.diagrams.ClassDiagram;
 import org.modelio.metamodel.mda.ModuleComponent;
@@ -18,6 +21,8 @@ import org.modelio.metamodel.uml.infrastructure.Element;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.statik.Artifact;
+import org.modelio.metamodel.uml.statik.Association;
+import org.modelio.metamodel.uml.statik.AssociationEnd;
 import org.modelio.metamodel.uml.statik.Attribute;
 import org.modelio.metamodel.uml.statik.AttributeLink;
 import org.modelio.metamodel.uml.statik.Class;
@@ -122,11 +127,25 @@ public class ToscaDesignerPropertyPageFactory {
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate.STEREOTYPE_NAME: return new TNodeTemplatePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType.STEREOTYPE_NAME: return new TNodeTypePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType.STEREOTYPE_NAME: return new TRelationshipTypePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType.instantiate(obj));
+            case fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate.STEREOTYPE_NAME: return new TTopologyTemplatePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate.instantiate(obj));
+            case fr.softeam.toscadesigner.api.tosca.standard.class_.TServiceTemplate.STEREOTYPE_NAME: return new TServiceTemplatePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TServiceTemplate.instantiate(obj));
             
             default:
                 break;
             }
             return IDefaultModelVisitor.super.visitClass(obj);
+        }
+
+        @objid ("158dcd2e-88fb-4446-9789-ca1183691f56")
+        @Override
+        public final Object visitAssociationEnd(AssociationEnd obj) {
+            switch (this.stName) {
+            case fr.softeam.toscadesigner.api.tosca.standard.associationend.TRelationshipTemplateEnd.STEREOTYPE_NAME: return new fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TRelationshipTemplatePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate.instantiate(obj.getAssociation()));
+            
+            default:
+                break;
+            }
+            return IDefaultModelVisitor.super.visitAssociationEnd(obj);
         }
 
         @objid ("378ea0c8-e23f-46da-a392-c4924f2c9623")
@@ -163,6 +182,8 @@ public class ToscaDesignerPropertyPageFactory {
         @Override
         public final Object visitAttribute(Attribute obj) {
             switch (this.stName) {
+            case fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.MetadataElement.STEREOTYPE_NAME: return new MetadataElementPropertyPage<>(fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.MetadataElement.instantiate(obj));
+            
             default:
                 break;
             }
