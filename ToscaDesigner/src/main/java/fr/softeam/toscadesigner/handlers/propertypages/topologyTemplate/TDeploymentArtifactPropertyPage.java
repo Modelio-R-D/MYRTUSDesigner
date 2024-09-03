@@ -1,7 +1,7 @@
 package fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TDeploymentArtifact;
+import fr.softeam.toscadesigner.api.tosca.standard.attribute.TDeploymentArtifact;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 

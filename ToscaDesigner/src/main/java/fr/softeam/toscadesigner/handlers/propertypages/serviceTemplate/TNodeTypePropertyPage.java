@@ -2,8 +2,9 @@ package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
 import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.CapabilitiesType;
 import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.InterfacesType;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilityDefinitionsType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementsType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifacts;
@@ -91,7 +92,7 @@ public class TNodeTypePropertyPage<T extends TNodeType> extends TEntityTypePrope
                 Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
                     @Override
                     public boolean accept(MObject element) {
-                        return CapabilityDefinitionsType.canInstantiate(element);
+                        return CapabilitiesType.canInstantiate(element);
                     }
                 });
     }
