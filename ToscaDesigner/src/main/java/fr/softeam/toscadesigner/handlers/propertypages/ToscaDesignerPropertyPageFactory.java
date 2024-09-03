@@ -14,6 +14,7 @@ import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TNodeType
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRelationshipTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TTopologyTemplatePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TDeploymentArtifactPropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TDeploymentArtifactsPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TNodeTemplatePropertyPage;
 import org.modelio.metamodel.diagrams.ClassDiagram;
 import org.modelio.metamodel.mda.ModuleComponent;
@@ -129,7 +130,7 @@ public class ToscaDesignerPropertyPageFactory {
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType.STEREOTYPE_NAME: return new TNodeTypePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType.STEREOTYPE_NAME: return new TRelationshipTypePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate.STEREOTYPE_NAME: return new TTopologyTemplatePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate.instantiate(obj));
-            case fr.softeam.toscadesigner.api.tosca.standard.class_.TServiceTemplate.STEREOTYPE_NAME: return new TServiceTemplatePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TServiceTemplate.instantiate(obj));
+            case fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifacts.STEREOTYPE_NAME: return new TDeploymentArtifactsPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifacts.instantiate(obj));
             
             default:
                 break;
