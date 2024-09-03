@@ -7,6 +7,9 @@
    id="svg2290"
    sodipodi:docname="deployment.svg"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\deploymentArtifacts24.png"
+   inkscape:export-xdpi="193.13625"
+   inkscape:export-ydpi="193.13625"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -32,10 +35,24 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2290" />
   <path
-     d="M 440,-252.45463 V -499.15109 L 200,-624.30002 v 246.69645 z m 80,0 240,-125.14894 V -624.30002 L 520,-499.15109 Z M 480,-561.27538 717,-684.62361 480,-807.97184 243,-684.62361 Z m -320,246.69646 q -19,-9.90388 -29.5,-26.11021 -10.5,-16.20634 -10.5,-36.01408 v -286.31195 q 0,-19.80774 10.5,-36.01408 10.5,-16.20634 29.5,-26.11021 L 440,-870.09613 Q 459,-880 480,-880 q 21,0 40,9.90387 l 280,144.95668 q 19,9.90387 29.5,26.11021 10.5,16.20634 10.5,36.01408 v 286.31195 q 0,19.80774 -10.5,36.01408 -10.5,16.20633 -29.5,26.11021 l -280,144.95667 q -19,9.90388 -40,9.90388 -21,0 -40,-9.90388 z m 320,-205.28027 z"
-     id="path2288"
-     style="fill:#9bb1ff;fill-opacity:1;stroke-width:0.948869"
-     inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\svg\deploymentArtifact48.png"
-     inkscape:export-xdpi="255.89992"
-     inkscape:export-ydpi="255.89992" />
+     d="m 378.87808,-516.49085 v -76.58019 l -73.99166,-38.84907 v 76.58018 z m 24.66388,0 73.99166,-38.84908 v -76.58018 l -73.99166,38.84907 z m -12.33194,-95.86498 73.06676,-38.29009 -73.06676,-38.29009 -73.06676,38.29009 z m -98.65554,76.58019 q -5.85767,-3.07439 -9.09481,-8.10521 -3.23713,-5.03081 -3.23713,-11.17959 v -88.87773 q 0,-6.14877 3.23713,-11.17959 3.23714,-5.03081 9.09481,-8.1052 l 86.3236,-44.99784 q 5.85767,-3.07439 12.33194,-3.07439 6.47427,0 12.33194,3.07439 l 86.3236,44.99784 q 5.85767,3.07439 9.0948,8.1052 3.23714,5.03082 3.23714,11.17959 v 88.87773 q 0,6.14878 -3.23714,11.17959 -3.23713,5.03082 -9.0948,8.10521 l -86.3236,44.99784 q -5.85767,3.07439 -12.33194,3.07439 -6.47427,0 -12.33194,-3.07439 z m 98.65554,-63.72366 z"
+     id="path2288-1"
+     style="fill:#9bb1ff;fill-opacity:1;stroke-width:0.293541"
+     inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\svg\deploymentArtifacts48.png"
+     inkscape:export-xdpi="394.66971"
+     inkscape:export-ydpi="394.66971" />
+  <path
+     d="m 408.76913,-282.78885 v -76.58019 l -73.99166,-38.84907 v 76.58018 z m 24.66388,0 73.99166,-38.84908 v -76.58018 l -73.99166,38.84907 z m -12.33194,-95.86498 73.06676,-38.29009 -73.06676,-38.29009 -73.06676,38.29009 z m -98.65554,76.58019 q -5.85767,-3.07439 -9.09481,-8.10521 -3.23713,-5.03081 -3.23713,-11.17959 v -88.87773 q 0,-6.14877 3.23713,-11.17959 3.23714,-5.03081 9.09481,-8.1052 l 86.3236,-44.99784 q 5.85767,-3.07439 12.33194,-3.07439 6.47427,0 12.33194,3.07439 l 86.3236,44.99784 q 5.85767,3.07439 9.0948,8.1052 3.23714,5.03082 3.23714,11.17959 v 88.87773 q 0,6.14878 -3.23714,11.17959 -3.23713,5.03082 -9.0948,8.10521 l -86.3236,44.99784 q -5.85767,3.07439 -12.33194,3.07439 -6.47427,0 -12.33194,-3.07439 z m 98.65554,-63.72366 z"
+     id="path2288-6"
+     style="fill:#9bb1ff;fill-opacity:1;stroke-width:0.293541"
+     inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\svg\deploymentArtifacts48.png"
+     inkscape:export-xdpi="394.66971"
+     inkscape:export-ydpi="394.66971" />
+  <path
+     d="m 627.223,-405.67026 v -76.58019 l -73.99166,-38.84907 v 76.58018 z m 24.66388,0 73.99166,-38.84908 v -76.58018 l -73.99166,38.84907 z m -12.33194,-95.86498 73.06676,-38.29009 -73.06676,-38.29009 -73.06676,38.29009 z m -98.65554,76.58019 q -5.85767,-3.07439 -9.09481,-8.10521 -3.23713,-5.03081 -3.23713,-11.17959 v -88.87773 q 0,-6.14877 3.23713,-11.17959 3.23714,-5.03081 9.09481,-8.1052 l 86.3236,-44.99784 q 5.85767,-3.07439 12.33194,-3.07439 6.47427,0 12.33194,3.07439 l 86.3236,44.99784 q 5.85767,3.07439 9.0948,8.1052 3.23714,5.03082 3.23714,11.17959 v 88.87773 q 0,6.14878 -3.23714,11.17959 -3.23713,5.03082 -9.0948,8.10521 l -86.3236,44.99784 q -5.85767,3.07439 -12.33194,3.07439 -6.47427,0 -12.33194,-3.07439 z m 98.65554,-63.72366 z"
+     id="path2288-2"
+     style="fill:#9bb1ff;fill-opacity:1;stroke-width:0.293541"
+     inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\svg\deploymentArtifacts48.png"
+     inkscape:export-xdpi="394.66971"
+     inkscape:export-ydpi="394.66971" />
 </svg>

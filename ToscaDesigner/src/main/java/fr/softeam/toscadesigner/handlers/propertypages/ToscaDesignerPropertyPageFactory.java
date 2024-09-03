@@ -9,7 +9,7 @@ package fr.softeam.toscadesigner.handlers.propertypages;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import fr.softeam.toscadesigner.handlers.propertypages.cloudServiceArchive.TServiceTemplatePropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.core.MetadataElementPropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.core.MetadataPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TNodeTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRelationshipTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TTopologyTemplatePropertyPage;
@@ -182,7 +182,7 @@ public class ToscaDesignerPropertyPageFactory {
         @Override
         public final Object visitAttribute(Attribute obj) {
             switch (this.stName) {
-            case fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.MetadataElement.STEREOTYPE_NAME: return new MetadataElementPropertyPage<>(fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.MetadataElement.instantiate(obj));
+            case fr.softeam.toscadesigner.api.tosca.standard.attribute.Metadata.STEREOTYPE_NAME: return new MetadataPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.attribute.Metadata.instantiate(obj));
             
             default:
                 break;

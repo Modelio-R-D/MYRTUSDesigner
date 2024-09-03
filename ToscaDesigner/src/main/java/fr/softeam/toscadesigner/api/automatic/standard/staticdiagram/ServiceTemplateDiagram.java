@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 30/08/2024 17:54 by Modelio Studio.
+ * This file was generated on 30/08/2024 18:12 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.automatic.standard.staticdiagram;
 
@@ -40,13 +40,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("c7317d81-ba45-4637-a9c4-43b8411ee28b")
 public class ServiceTemplateDiagram implements IMdaProxy {
-    @objid ("fac7aa98-721a-4163-b9af-7093694eaf50")
+    @objid ("8d07412c-7b4e-46ba-a628-bca54acd42e3")
     public static final String STEREOTYPE_NAME = "ServiceTemplateDiagram";
 
     /**
      * The underlying {@link StaticDiagram} represented by this proxy, never null.
      */
-    @objid ("93883f6c-e0b2-4bbb-9e8a-89303a4339a6")
+    @objid ("265b30aa-456c-4ed3-bf97-d3ad3866e5d7")
     protected final StaticDiagram elt;
 
     /**
@@ -56,7 +56,7 @@ public class ServiceTemplateDiagram implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("f9a7d2ee-5528-4f78-b2a9-5c4a462e4b47")
+    @objid ("2431ff54-d69a-4012-89d2-c4b6676aa941")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof StaticDiagram) && (ServiceTemplateDiagram.MdaTypes.STEREOTYPE_ELT!=null) && ((StaticDiagram) elt).isStereotyped(ServiceTemplateDiagram.MdaTypes.STEREOTYPE_ELT));
     }
@@ -66,7 +66,7 @@ public class ServiceTemplateDiagram implements IMdaProxy {
      * 
      * @return a {@link ServiceTemplateDiagram} proxy on the created {@link StaticDiagram}.
      */
-    @objid ("a5abe633-2748-4849-b611-3274e1899743")
+    @objid ("d0bba09f-268e-449c-9a1b-2c28ba4f496a")
     public static ServiceTemplateDiagram create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.StaticDiagram");
         e.getExtension().add(ServiceTemplateDiagram.MdaTypes.STEREOTYPE_ELT);
@@ -80,7 +80,7 @@ public class ServiceTemplateDiagram implements IMdaProxy {
      * @param obj a StaticDiagram
      * @return a {@link ServiceTemplateDiagram} proxy or <i>null</i>.
      */
-    @objid ("f39cde9c-1de4-4e04-a414-9b0abfd5cef0")
+    @objid ("9b71c13a-56af-47a9-98f5-c0e68c5e671e")
     public static ServiceTemplateDiagram instantiate(final StaticDiagram obj) {
         return ServiceTemplateDiagram.canInstantiate(obj) ? new ServiceTemplateDiagram(obj) : null;
     }
@@ -93,7 +93,7 @@ public class ServiceTemplateDiagram implements IMdaProxy {
      * @return a {@link ServiceTemplateDiagram} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("2b3f6888-8fe5-4942-b5e6-d001748f61bf")
+    @objid ("758944f7-31f8-4f14-8dea-923bc6ff9398")
     public static ServiceTemplateDiagram safeInstantiate(final StaticDiagram obj) throws IllegalArgumentException {
         if (ServiceTemplateDiagram.canInstantiate(obj))
         	return new ServiceTemplateDiagram(obj);
@@ -101,7 +101,7 @@ public class ServiceTemplateDiagram implements IMdaProxy {
         	throw new IllegalArgumentException("ServiceTemplateDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("e82c3c67-d6b0-4e2c-950d-51d412c5e3cc")
+    @objid ("0b16a861-2420-4e78-83b7-f9201039f96c")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -121,35 +121,35 @@ public class ServiceTemplateDiagram implements IMdaProxy {
      * Get the underlying {@link StaticDiagram}. 
      * @return the StaticDiagram represented by this proxy, never null.
      */
-    @objid ("b06a8e53-7770-4f79-a46e-005e23a7c3f4")
+    @objid ("971d6b22-544e-40b3-aff4-73f5b23ae6b0")
     public StaticDiagram getElement() {
         return this.elt;
     }
 
-    @objid ("8fc0b648-128d-426f-a2da-551cfb4515e2")
+    @objid ("62961f28-8be2-4a73-8d8c-f7976060486d")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
         
     }
 
-    @objid ("b71642fb-3a8a-4d5d-b0db-e1d1986980f3")
+    @objid ("fd4193b7-3081-49f0-bff2-33ffdcf2cfb2")
     protected  ServiceTemplateDiagram(final StaticDiagram elt) {
         this.elt = elt;
     }
 
     @objid ("8085af26-e47b-41dc-86cf-6f77e85556cc")
     public static final class MdaTypes {
-        @objid ("ffafee68-3dfd-42d9-9b7f-87bf6fac8807")
+        @objid ("9676902f-5613-4cf6-83c2-55bb2a042955")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("2249410d-2fa0-41f4-8e0a-0ede7fc53ea0")
+        @objid ("f99f326b-29bf-4793-a2ca-c63da03e84ee")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("7359fe3d-26b6-46c6-8336-c1cbf28fdec7")
+        @objid ("7fb5a50b-5a22-4a21-81de-b28a37b31935")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("10d0c1bd-1264-4f92-941c-077431e23e64")
+        @objid ("0ef3b97e-6702-4be8-87bb-c3e7af6f0fce")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
