@@ -1,7 +1,7 @@
 package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition;
+import fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityDefinition;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 

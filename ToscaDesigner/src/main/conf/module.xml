@@ -328,9 +328,9 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="TCapabilityDefinition" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityDefinition.label" uid="92f8cb40-9498-4759-9c75-6b4df72de355" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+            <Stereotype name="TCapabilityDefinition" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityDefinition.label" uid="92f8cb40-9498-4759-9c75-6b4df72de355" is-abstract="false">
+                <Icon path="res/icon/gui/capabilityDefinition24.png"/>
+                <Image path="res/icon/gui/capabilityDefinition48.png"/>
                 <PropertyTable id="TCapabilityDefinitionTable" label="%propertytable.TCapabilityDefinitionTable.label" uid="e2b2d181-f6b2-4a51-81dc-df962e137ef2">
                     <PropertyDefinition id="constraints" label="%propertydefinition.TCapabilityDefinitionTable.constraints.label" default-value="" is-editable="true" uid="21aae7e2-a2bd-418d-8df8-70c4fa8d4d13">
                         <TypeRef id="mref#'Element' {b58969db-144e-4a1f-b946-cd6deacca9bd} Infrastructure.PropertyType"/>
@@ -355,8 +355,8 @@
                 </PropertyTable>
             </Stereotype>
             <Stereotype name="TCapabilityDefinitionsType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityDefinitionsType.label" uid="ac0418b1-a726-46e6-ac59-310f0055050f" is-abstract="false">
-                <Icon path="res/icon/gui/capabilityDefinition24.png"/>
-                <Image path="res/icon/gui/capabilityDefinition48.png"/>
+                <Icon path="res/icon/gui/capabilityDefinitions24.png"/>
+                <Image path="res/icon/gui/capabilityDefinitions48.png"/>
             </Stereotype>
             <Stereotype name="TCapabilityRef" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityRef.label" uid="ca7c07e5-454b-4d20-8f3d-6949dc4be7fd" is-abstract="false">
                 <Icon path=""/>
@@ -1027,11 +1027,27 @@
                 </Handler>
             </Tool>
             <Tool id="CapabilityDefinition" label="%tool.CapabilityDefinition.label" tooltip="%tool.CapabilityDefinition.tooltip" image="res/icon/gui/capabilityDefinition24.png">
+                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TCapabilityDefinitionsType"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#TCapabilityDefinition"/>
+                    <HParameter name="metaclass" value="Standard.Attribute"/>
+                    <HParameter name="name" value="Capability"/>
+                </Handler>
+            </Tool>
+            <Tool id="CapabilityDefinitions" label="%tool.CapabilityDefinitions.label" tooltip="%tool.CapabilityDefinitions.tooltip" image="res/icon/gui/capabilityDefinitions24.png">
                 <Scope-source metaclass="Infrastructure.ModelElement" stereotype=""/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TCapabilityDefinitionsType"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Capability"/>
+                    <HParameter name="name" value="Capabilities"/>
+                </Handler>
+            </Tool>
+            <Tool id="DeploymentArtifact" label="%tool.DeploymentArtifact.label" tooltip="%tool.DeploymentArtifact.tooltip" image="res/icon/gui/deploymentArtifact24.png">
+                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TDeploymentArtifacts"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#TDeploymentArtifact"/>
+                    <HParameter name="metaclass" value="Standard.Attribute"/>
+                    <HParameter name="name" value="DeploymentArtifact"/>
                 </Handler>
             </Tool>
             <Tool id="DeploymentArtifacts" label="%tool.DeploymentArtifacts.label" tooltip="%tool.DeploymentArtifacts.tooltip" image="res/icon/gui/deploymentArtifacts24.png">
@@ -1155,14 +1171,6 @@
                     <HParameter name="name" value="TopologyTemplate"/>
                 </Handler>
             </Tool>
-            <Tool id="DeploymentArtifact" label="%tool.DeploymentArtifact.label" tooltip="%tool.DeploymentArtifact.tooltip" image="res/icon/gui/deploymentArtifact24.png">
-                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TDeploymentArtifacts"/>
-                <Handler class="Box">
-                    <HParameter name="stereotype" value="ToscaDesigner#TDeploymentArtifact"/>
-                    <HParameter name="metaclass" value="Standard.Attribute"/>
-                    <HParameter name="name" value="DeploymentArtifact"/>
-                </Handler>
-            </Tool>
         </Tools>
         <ContextualMenu>
             <CommandRef refid="Export" group="" group-image=""/>
@@ -1192,6 +1200,7 @@
                     <ToolRef refid="Plans" group="%group.Plans.label"/>
                     <ToolRef refid="Requirements_NodeType" group="%group.Requirements.label"/>
                     <ToolRef refid="Requirement_NodeType" group="%group.Requirements.label"/>
+                    <ToolRef refid="CapabilityDefinitions" group="%group.Others.label"/>
                     <ToolRef refid="CapabilityDefinition" group="%group.Others.label"/>
                 </Palette>
                 <Handler class="StandardCustomizer">
