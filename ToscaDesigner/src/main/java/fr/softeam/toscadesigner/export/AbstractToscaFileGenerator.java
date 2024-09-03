@@ -31,7 +31,7 @@ import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TEntityType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement;
+import fr.softeam.toscadesigner.api.tosca.standard.attribute.TRequirement;
 import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
 
 public abstract class AbstractToscaFileGenerator {
@@ -87,11 +87,11 @@ public abstract class AbstractToscaFileGenerator {
 					}
 				} else if (stereotype.getName().equals("TRelationshipTemplate")) {
 					if (searchedPropertyName.equals("type")) {
-						MRef ref = (MRef) PropertyConverter.convertToObject(
-								TRelationshipTemplate.MdaTypes.TYPE_PROPERTY_ELT, propertyStringValue, context);
-						ModelElement tRelationshipType = (ModelElement) ToscaDesignerModule.getInstance()
-								.getModuleContext().getModelingSession().findByRef(ref);
-						propertyStringValue = tRelationshipType.getName();
+//						MRef ref = (MRef) PropertyConverter.convertToObject(
+//								TRelationshipTemplate.MdaTypes.TYPE_PROPERTY_ELT, propertyStringValue, context);
+//						ModelElement tRelationshipType = (ModelElement) ToscaDesignerModule.getInstance()
+//								.getModuleContext().getModelingSession().findByRef(ref);
+//						propertyStringValue = tRelationshipType.getName();
 					}
 				} else if (stereotype.getName().equals("TNodeTemplate")) {
 					TNodeTemplate tNodeTemplate = TNodeTemplate.safeInstantiate((Class)context);
