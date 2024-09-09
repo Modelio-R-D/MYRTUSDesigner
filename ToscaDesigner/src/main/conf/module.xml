@@ -944,6 +944,14 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
+            <Stereotype name="TPropertyDef" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TPropertyDef.label" uid="a5792de9-2c94-4367-970b-d370cf7c1555" is-abstract="false">
+                <Icon path="res/icon/gui/TPropertyDef24.png"/>
+                <Image path="res/icon/gui/TPropertyDef48.png"/>
+            </Stereotype>
+            <Stereotype name="PropertyDefinitionType" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.PropertyDefinitionType.label" uid="34943474-c962-4064-b5f1-c6008ebb3c9d" is-abstract="false">
+                <Icon path="res/icon/gui/PropertyDefinitionType24.png"/>
+                <Image path="res/icon/gui/PropertyDefinitionType48.png"/>
+            </Stereotype>
         </Profile>
     </Profiles>
     <PropertyTypes>
@@ -1171,6 +1179,22 @@
                     <HParameter name="name" value="TopologyTemplate"/>
                 </Handler>
             </Tool>
+            <Tool id="Property_(Node_Type)" label="%tool.Property_(Node_Type).label" tooltip="%tool.Property_(Node_Type).tooltip" image="res/icon/gui/PropertyDefinitionType24.png">
+                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeType"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#PropertyDefinitionType"/>
+                    <HParameter name="metaclass" value="Standard.Attribute"/>
+                    <HParameter name="name" value="Element"/>
+                </Handler>
+            </Tool>
+            <Tool id="Property_(Node_Template)" label="%tool.Property_(Node_Template).label" tooltip="%tool.Property_(Node_Template).tooltip" image="res/icon/gui/TPropertyDef24.png">
+                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeTemplate"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#TPropertyDef"/>
+                    <HParameter name="metaclass" value="Standard.Attribute"/>
+                    <HParameter name="name" value="Element"/>
+                </Handler>
+            </Tool>
         </Tools>
         <ContextualMenu>
             <CommandRef refid="Export" group="" group-image=""/>
@@ -1197,6 +1221,7 @@
                     <ToolRef refid="TopologyTemplate" group="%group.Templates.label"/>
                     <ToolRef refid="ArtifactTemplate" group="%group.Templates.label"/>
                     <ToolRef refid="Metadata" group="%group.Attributes.label"/>
+                    <ToolRef refid="Property_(Node_Type)" group="%group.Attributes.label"/>
                     <ToolRef refid="Plans" group="%group.Plans.label"/>
                     <ToolRef refid="Requirements_NodeType" group="%group.Requirements.label"/>
                     <ToolRef refid="Requirement_NodeType" group="%group.Requirements.label"/>
@@ -1226,6 +1251,7 @@
                     <ToolRef refid="Requirement_NodeTemplate" group="%group.Requirement.label"/>
                     <ToolRef refid="Requirements_NodeTemplate" group="%group.Requirement.label"/>
                     <ToolRef refid="Metadata" group="%group.Attributes.label"/>
+                    <ToolRef refid="Property_(Node_Template)" group="%group.Attributes.label"/>
                 </Palette>
                 <Handler class="StandardCustomizer">
                     <HParameter name="stereotype" value="ToscaDesigner#TopologyTemplateDiagram"/>
