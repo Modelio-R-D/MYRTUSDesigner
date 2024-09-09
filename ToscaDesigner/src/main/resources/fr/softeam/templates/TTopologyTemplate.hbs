@@ -1,23 +1,21 @@
-{{#unless (noStereotypeApplications this "MetadataElement")}}metadata:{{/unless}}
-{{#each ownedElement}}{{#extension}}{{#eq name "MetadataElement"}}{{#each ../ownedAttribute}}{{#extension}}{{#eq name "TPropertyDef"}}
-  {{../name}}: "{{getProperty ../this "value"}}"
-{{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
+{{#unless (noStereotypeApplications this "Metadata")}}metadata:{{/unless}}
+{{#each ownedAttribute}}{{#extension}}{{#eq name "Metadata"}}
+  {{../name}}: "{{../value}}"
+{{/eq}}{{/extension}}{{/each}}
 {{imports this}}
 topology_template:
   node_templates:
 {{#ownedElement}}{{#extension}}{{#eq name "TNodeTemplate"}}  
     {{../name}}:
       type: {{getProperty ../this "nodeType"}}
-      {{#unless (noStereotypeApplications ../this "MetadataElement")}}metadata:{{/unless}}
-      	{{#each ../ownedElement}}{{#extension}}{{#eq name "MetadataElement"}}
-        {{#each ../ownedAttribute}}{{#extension}}{{#eq name "TPropertyDef"}}
-        {{../name}}: "{{getProperty ../this "value"}}"
-        {{/eq}}{{/extension}}{{/each}}
-        {{/eq}}{{/extension}}{{/each}}
+      {{#unless (noStereotypeApplications ../this "Metadata")}}metadata:{{/unless}}
+      {{#each ../ownedAttribute}}{{#extension}}{{#eq name "Metadata"}}
+        {{../name}}: "{{../value}}"
+      {{/eq}}{{/extension}}{{/each}}
       {{#if ../ownedAttribute}}properties:{{/if}}
-      {{#each ../ownedAttribute}}
-        {{name}}: "{{value}}"
-      {{/each}}
+      {{#each ../ownedAttribute}}{{#extension}}{{#unless name "Metadata"}}
+        {{../name}}: "{{../value}}"
+      {{/unless}}{{/extension}}{{/each}}
       {{#unless (noStereotypeApplications ../this "TRequirement")}}requirements:{{/unless}}
       {{#each ../ownedElement}}{{#extension}}{{#eq name "TRequirement"}}
         - {{../name}}:

@@ -1,0 +1,46 @@
+tosca_definitions_version: tosca_simple_yaml_1_3
+
+metadata:
+  targetNamespace: "example.eu.myrtus.servicetemplates"
+
+topology_template:
+  node_templates:
+    Myrtus_Workstation_1:
+      type: example.eu.myrtus.nodetypes.Myrtus-Workstation
+      metadata:
+        displayName: "Myrtus-Workstation"
+      properties:
+      
+      
+    MyrtusFaceDetectionService_0:
+      type: example.eu.myrtus.nodetypes.MyrtusFaceDetectionService
+      metadata:
+        displayName: "FaceDetection"
+      properties:
+      
+      
+    MyrtusCameraFeed_0:
+      type: example.eu.myrtus.nodetypes.MyrtusCameraFeed
+      metadata:
+        displayName: "CameraFeed"
+      properties:
+      
+      
+    Myrtus_Proxy_0:
+      type: example.eu.myrtus.nodetypes.MyrtusProxy
+      metadata:
+        displayName: "Proxy"
+      properties:
+      
+      
+  relationship_templates:
+    con_HostedOn_2:
+      type: tosca.relationships.hostedOn
+    con_HostedOn_0:
+      type: tosca.relationships.hostedOn
+    con_HostedOn_1:
+      type: tosca.relationships.hostedOn
+    con_ConnectsTo_1:
+      type: tosca.relationships.ConnectsTo
+    con_ConnectsTo_0:
+      type: tosca.relationships.ConnectsTo

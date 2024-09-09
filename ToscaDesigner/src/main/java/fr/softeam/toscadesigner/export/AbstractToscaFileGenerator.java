@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
@@ -15,6 +16,7 @@ import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.ModelTree;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.statik.Association;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.smkernel.mapi.MObject;
 import org.modelio.vcore.smkernel.mapi.MRef;
@@ -25,9 +27,11 @@ import com.github.jknack.handlebars.Template;
 import com.github.jknack.handlebars.helper.ConditionalHelpers;
 import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
 
+import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TRequirement;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
 import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
 
 public abstract class AbstractToscaFileGenerator {
@@ -59,13 +63,6 @@ public abstract class AbstractToscaFileGenerator {
 				String propertyStringValue;
 				propertyStringValue = context.getProperty(stereotype, searchedPropertyName);
 
-				// if it didn't find the property with this stereotype, look for the parent
-				// stereotypes
-				while (propertyStringValue == null && stereotype.getParent() != null) {
-					stereotype = stereotype.getParent();
-					propertyStringValue = context.getProperty(stereotype, (String) searchedPropertyName);
-				}
-
 				if (stereotype.getName().equals("TRequirement")) {
 					if (searchedPropertyName.equals("node")) {
 
@@ -83,6 +80,10 @@ public abstract class AbstractToscaFileGenerator {
 					}
 				} else if (stereotype.getName().equals("TRelationshipTemplate")) {
 					if (searchedPropertyName.equals("type")) {
+						TRelationshipTemplate tRelationshipTemplate = TRelationshipTemplate.safeInstantiate((Association) context);
+						TRelationshipType relationshipType = tRelationshipTemplate.getRelationshipType();
+						Class element = relationshipType.getElement();
+						propertyStringValue = element.getName();
 //						MRef ref = (MRef) PropertyConverter.convertToObject(
 //								TRelationshipTemplate.MdaTypes.TYPE_PROPERTY_ELT, propertyStringValue, context);
 //						ModelElement tRelationshipType = (ModelElement) ToscaDesignerModule.getInstance()
@@ -96,12 +97,18 @@ public abstract class AbstractToscaFileGenerator {
 						propertyStringValue = nodeType.getTargetNamespace() + "." + nodeType.getElement().getName();
 					}
 				}
+				// if it didn't find the property with this stereotype, look for the parent
+				// stereotypes
+				while (propertyStringValue == null && stereotype.getParent() != null) {
+					stereotype = stereotype.getParent();
+					propertyStringValue = context.getProperty(stereotype, (String) searchedPropertyName);
+				}
 				return propertyStringValue;
 			}
 			throw new RuntimeException("Stereotype property " + searchedPropertyName + " not found in " + context);
 		});
 		handlebars.registerHelper("noStereotypeApplications", (Class context, Options options) -> {
-			List<ModelTree> artifacts = context.getOwnedElement().stream()
+			List<? extends MObject> artifacts = Stream.concat(context.getOwnedElement().stream(), context.getOwnedAttribute().stream())
 					.filter(element -> element.getExtension().stream()
 							.anyMatch(stereotype -> stereotype.getName().equals(options.params[0])))
 					.collect(Collectors.toList());
