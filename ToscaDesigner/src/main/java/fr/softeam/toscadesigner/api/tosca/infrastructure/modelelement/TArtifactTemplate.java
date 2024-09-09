@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 03/09/2024 17:56 by Modelio Studio.
+ * This file was generated on 09/09/2024 18:07 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -39,13 +39,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("9c7b0cf9-04bf-443f-aa95-0d1d80d1cc73")
 public class TArtifactTemplate extends TEntityTemplate implements IMdaProxy {
-    @objid ("76cd63b5-a6c8-462d-91ee-d738ad8d519b")
+    @objid ("22a9b613-69a7-4749-8340-2277508392f8")
     public static final String STEREOTYPE_NAME = "TArtifactTemplate";
 
-    @objid ("e2fba898-ade4-49fd-b648-01a84e1245e5")
+    @objid ("e783b3fe-c10c-46c8-9e3f-22b83fe2f33e")
     public static final String ARTIFACTREFERENCES_PROPERTY = "artifactReferences";
 
-    @objid ("3a6079cd-ae5d-4473-8004-bb4aad0cd1d0")
+    @objid ("057408eb-893b-4942-8466-b1d98bc3b3df")
     public static final String NAME_PROPERTY = "name";
 
     /**
@@ -55,7 +55,7 @@ public class TArtifactTemplate extends TEntityTemplate implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("51e053f9-1da9-4e49-a2fd-bb8e13c454ba")
+    @objid ("8db25836-08a4-41ca-9cfe-fcc1da9efcc1")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (TArtifactTemplate.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(TArtifactTemplate.MdaTypes.STEREOTYPE_ELT));
     }
@@ -65,7 +65,7 @@ public class TArtifactTemplate extends TEntityTemplate implements IMdaProxy {
      * 
      * @return a {@link TArtifactTemplate} proxy on the created {@link ModelElement}.
      */
-    @objid ("b3258efb-8050-4ac4-99f0-517d28194654")
+    @objid ("511e7e5c-7313-42c4-a5ec-c9bd75d1d727")
     public static TArtifactTemplate create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(TArtifactTemplate.MdaTypes.STEREOTYPE_ELT);
@@ -79,7 +79,7 @@ public class TArtifactTemplate extends TEntityTemplate implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link TArtifactTemplate} proxy or <i>null</i>.
      */
-    @objid ("84379843-870e-4d51-91b5-46023154122e")
+    @objid ("0d1b7bdf-0a45-49b6-9043-0f238fe768a8")
     public static TArtifactTemplate instantiate(final ModelElement obj) {
         return TArtifactTemplate.canInstantiate(obj) ? new TArtifactTemplate(obj) : null;
     }
@@ -92,7 +92,7 @@ public class TArtifactTemplate extends TEntityTemplate implements IMdaProxy {
      * @return a {@link TArtifactTemplate} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("9fcf920c-b38f-4a87-9a0d-3b4c19901a70")
+    @objid ("d898e2e5-5f8c-4935-ac4e-47a822595a95")
     public static TArtifactTemplate safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (TArtifactTemplate.canInstantiate(obj))
         	return new TArtifactTemplate(obj);
@@ -100,7 +100,7 @@ public class TArtifactTemplate extends TEntityTemplate implements IMdaProxy {
         	throw new IllegalArgumentException("TArtifactTemplate: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("aba60fdf-fb4e-4ef9-afa5-ffe757d89e2d")
+    @objid ("1ad0ec8a-e41a-463a-8604-bfbc9b54c00a")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -121,7 +121,7 @@ public class TArtifactTemplate extends TEntityTemplate implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("029358f3-9e94-4004-a97c-7199dce6c65a")
+    @objid ("90d17e8c-ca2d-46d8-b110-dc614c64b331")
     public String getArtifactReferences() {
         String value = this.elt.getProperty(TArtifactTemplate.MdaTypes.STEREOTYPE_ELT,
                                             TArtifactTemplate.MdaTypes.ARTIFACTREFERENCES_PROPERTY_ELT.getName());
@@ -136,7 +136,7 @@ public class TArtifactTemplate extends TEntityTemplate implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("9a5f3ea2-fdc3-45ac-a48a-199bd7c2fcce")
+    @objid ("763afe3b-b991-4048-92d4-bd2d096626c5")
     @Override
     public ModelElement getElement() {
         return (ModelElement)super.getElement();
@@ -147,7 +147,7 @@ public class TArtifactTemplate extends TEntityTemplate implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a8b3846c-9266-433b-98bf-ca8da7d4e0d8")
+    @objid ("2eccaf44-e0b6-45c0-8650-8f5a9dd4c047")
     public String getName() {
         String value = this.elt.getProperty(TArtifactTemplate.MdaTypes.STEREOTYPE_ELT,
                                             TArtifactTemplate.MdaTypes.NAME_PROPERTY_ELT.getName());
@@ -158,7 +158,7 @@ public class TArtifactTemplate extends TEntityTemplate implements IMdaProxy {
         
     }
 
-    @objid ("de9243bc-61a3-4a6f-81df-40bbaa8a0447")
+    @objid ("618c322b-ecd6-47cb-bb59-b54afbb0c411")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -170,7 +170,7 @@ public class TArtifactTemplate extends TEntityTemplate implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("23120b01-56ea-4a04-8c3e-0a1142daa83a")
+    @objid ("e166b41b-0c75-4940-a202-142db8a59910")
     public void setArtifactReferences(final String value) {
         this.elt.setProperty(TArtifactTemplate.MdaTypes.STEREOTYPE_ELT,
                              TArtifactTemplate.MdaTypes.ARTIFACTREFERENCES_PROPERTY_ELT.getName(),
@@ -182,36 +182,36 @@ public class TArtifactTemplate extends TEntityTemplate implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("bbce0757-c48f-4339-9c27-125a896462ce")
+    @objid ("ea7302c7-8b47-4e9d-b62f-647cc6adfced")
     public void setName(final String value) {
         this.elt.setProperty(TArtifactTemplate.MdaTypes.STEREOTYPE_ELT,
                              TArtifactTemplate.MdaTypes.NAME_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(TArtifactTemplate.MdaTypes.NAME_PROPERTY_ELT, value));
     }
 
-    @objid ("47936e67-fa65-4c78-b20e-2e45964bacbc")
+    @objid ("0b344477-7755-4413-9cb5-6272a54ce225")
     protected  TArtifactTemplate(final ModelElement elt) {
         super(elt);
     }
 
     @objid ("57faa8ce-355b-4d50-b168-84b7284d367a")
     public static final class MdaTypes {
-        @objid ("0aa57ab8-949f-447f-9422-c7f573e4d822")
+        @objid ("9749532c-faba-4e1f-8350-ce74b0694606")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("e2490e76-7e8a-4edf-bd57-b87c51a7da9a")
+        @objid ("f313a256-f786-4594-964e-ef7c9e5a15ce")
         public static PropertyDefinition NAME_PROPERTY_ELT;
 
-        @objid ("536c1df3-d30f-4d12-9c9f-ebec0d510bca")
+        @objid ("aa7ab558-e413-4cc6-b344-fac75234bab7")
         public static PropertyDefinition ARTIFACTREFERENCES_PROPERTY_ELT;
 
-        @objid ("6edab7b4-2bc4-4fc5-9983-c54683aa49e3")
+        @objid ("d63c2b5a-b11b-4c83-aa40-ba14f5327bea")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("b499e34b-e870-44ed-a48f-8cc2bf5fdb30")
+        @objid ("b3cc5f46-3b0f-4a02-bdb2-909811b0cc35")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("3289a610-bc27-48f2-85af-e966aff71463")
+        @objid ("caa77541-3514-4058-bff3-5156f0f5633b")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
