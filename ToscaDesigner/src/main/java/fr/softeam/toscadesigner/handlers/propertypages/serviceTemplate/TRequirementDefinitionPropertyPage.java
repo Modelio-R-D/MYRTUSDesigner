@@ -1,9 +1,17 @@
 package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
+import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TRequirementDefinition;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.Metamodel;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.vcore.session.api.model.IMObjectFilter;
+import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("c757eb57-dab6-4fc3-8fd8-6f094926a62c")
 public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition> extends ToscaElementPropertyPage<T> {
@@ -22,22 +30,36 @@ public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition
             break;
         
         case 2:
-            this._element.setCapability(value);//capability
+            for (ModelElement dep : TCapabilityDefinitionsType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+                if (value.contains(dep.getUuid())) {
+                    this._element.setCapability(
+                            TCapabilityDefinitionsType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
+                }
+            }
             break;
         
         case 3:
-            this._element.setNode(value); //nodetype
+            for (ModelElement dep : TNodeType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+                if (value.contains(dep.getUuid())) {
+                    this._element.setNodeType(TNodeType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
+                }
+            }
             break;
         
         case 4:
-            this._element.setRelationshipType(value);//relationship type
+            for (ModelElement dep : TRelationshipType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+                if (value.contains(dep.getUuid())) {
+                    this._element.setRelationshipType(
+                            TRelationshipType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
+                }
+            }
             break;
         case 5:
-            this._element.setLowerBound(value);
+            this._element.setUpperBound(value);
             break;
         
         case 6:
-            this._element.setUpperBound(value);
+            this._element.setLowerBound(value);
             break;
         
         }
@@ -48,9 +70,34 @@ public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition
     public void update(IModulePropertyTable table) {
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
-        //Capability
-        //Node
-        //Relationship type
+        // Capability
+        table.addProperty("Capability", this._element.getCapability() != null ? this._element.getCapability().getElement() : null,
+                Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+                    @Override
+                    public boolean accept(MObject element) {
+                        return TCapabilityDefinitionsType.canInstantiate(element);
+                    }
+                });
+        
+        // Node
+        table.addProperty("Node", this._element.getNodeType() != null ? this._element.getNodeType().getElement() : null,
+                Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+                    @Override
+                    public boolean accept(MObject element) {
+                        return TNodeType.canInstantiate(element);
+                    }
+                });
+        
+        // Relationship type
+        table.addProperty("Relationship type",
+                this._element.getRelationshipType() != null ? this._element.getRelationshipType().getElement() : null,
+                Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+                    @Override
+                    public boolean accept(MObject element) {
+                        return TRelationshipType.canInstantiate(element);
+                    }
+                });
+        
         table.addProperty("Upper Bound", _element.getUpperBound());
         table.addProperty("Lower Bound", _element.getLowerBound());
     }

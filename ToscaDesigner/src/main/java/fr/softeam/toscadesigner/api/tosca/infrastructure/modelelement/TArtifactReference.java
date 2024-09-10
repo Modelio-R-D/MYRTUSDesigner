@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 10/09/2024 12:00 by Modelio Studio.
+ * This file was generated on 10/09/2024 16:32 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -37,27 +37,27 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-@objid ("dbc9d0cf-2c7d-43b5-8a72-3fe89b971e54")
+@objid ("ade7041c-8bd5-4b95-9fed-82b770d7e5b1")
 public class TArtifactReference implements IMdaProxy {
-    @objid ("e056e5eb-1a37-44c5-b757-038d072be49d")
+    @objid ("cb281f8e-277e-4902-9294-4d1d2bb284fb")
     public static final String STEREOTYPE_NAME = "TArtifactReference";
 
-    @objid ("466445e6-6fb0-4149-9e58-2b0af9b77bdd")
+    @objid ("5777b12b-667b-4765-87bc-b72347de2795")
     public static final String EXCLUDE_PROPERTY = "exclude";
 
-    @objid ("08cd2db8-06b6-4922-b81e-7172ca781a0b")
+    @objid ("539c5c0b-1bfe-4f72-b017-e622c16916cf")
     public static final String GROUP_PROPERTY = "group";
 
-    @objid ("6bdf0bcd-4f81-4625-be61-3002e7801523")
+    @objid ("e22d7a5a-cdbe-46f0-a7c7-7aed88aecd07")
     public static final String INCLUDE_PROPERTY = "include";
 
-    @objid ("22b08207-edc0-4d56-b799-e7d95136186c")
+    @objid ("3d26f6b1-a1f2-4a44-94df-c84f144f92f1")
     public static final String REFERENCE_PROPERTY = "reference";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
      */
-    @objid ("ac25fac5-a4d8-447f-9e87-bd8b7377d824")
+    @objid ("e9ab936c-834f-43a4-b5bd-3bc265faf3d4")
     protected final ModelElement elt;
 
     /**
@@ -67,7 +67,7 @@ public class TArtifactReference implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("882a0229-e201-40fa-b676-c26397a1ebbd")
+    @objid ("e64fd2ac-9840-42bd-bd9d-adf029fe5e5e")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (TArtifactReference.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(TArtifactReference.MdaTypes.STEREOTYPE_ELT));
     }
@@ -77,7 +77,7 @@ public class TArtifactReference implements IMdaProxy {
      * 
      * @return a {@link TArtifactReference} proxy on the created {@link ModelElement}.
      */
-    @objid ("ab4cb3c2-f385-4a30-b178-ef558cdd2922")
+    @objid ("e0d39faa-b217-450a-a088-1c1f21f67c68")
     public static TArtifactReference create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(TArtifactReference.MdaTypes.STEREOTYPE_ELT);
@@ -91,7 +91,7 @@ public class TArtifactReference implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link TArtifactReference} proxy or <i>null</i>.
      */
-    @objid ("ae1e5173-a031-4ad8-b63c-eeb3616d367b")
+    @objid ("a17ae4f8-2faa-4af7-ab7c-26d86127e06c")
     public static TArtifactReference instantiate(final ModelElement obj) {
         return TArtifactReference.canInstantiate(obj) ? new TArtifactReference(obj) : null;
     }
@@ -104,7 +104,7 @@ public class TArtifactReference implements IMdaProxy {
      * @return a {@link TArtifactReference} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("032b6817-6eb5-407f-832f-f489f157413c")
+    @objid ("e1211285-32df-41d9-b8bc-c41f25319ab2")
     public static TArtifactReference safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (TArtifactReference.canInstantiate(obj))
         	return new TArtifactReference(obj);
@@ -112,7 +112,7 @@ public class TArtifactReference implements IMdaProxy {
         	throw new IllegalArgumentException("TArtifactReference: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("0c817532-24c3-4e2d-8a99-1e208d096066")
+    @objid ("4a188ba7-9409-439c-86f7-95ef60e7dbda")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -132,7 +132,7 @@ public class TArtifactReference implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("cfa3fec6-0cc3-482f-8374-fe4b1904993f")
+    @objid ("676d866d-d267-41c4-ad64-49006da8014a")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -142,7 +142,7 @@ public class TArtifactReference implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("05c3f530-ca1d-497a-b460-362fa17ac3a9")
+    @objid ("35f4ee83-18fd-4e96-bf6c-87f643b880ad")
     public String getExclude() {
         String value = this.elt.getProperty(TArtifactReference.MdaTypes.STEREOTYPE_ELT,
                                             TArtifactReference.MdaTypes.EXCLUDE_PROPERTY_ELT.getName());
@@ -158,7 +158,7 @@ public class TArtifactReference implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("0058d597-e978-4977-a3a8-bc1536042492")
+    @objid ("09364017-4218-4a86-8e6c-2bb4e1d171e1")
     public String getGroup() {
         String value = this.elt.getProperty(TArtifactReference.MdaTypes.STEREOTYPE_ELT,
                                             TArtifactReference.MdaTypes.GROUP_PROPERTY_ELT.getName());
@@ -174,7 +174,7 @@ public class TArtifactReference implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("1cfa0226-6042-4f1e-92f4-8e60460bcb94")
+    @objid ("1585fe91-04b4-4fbb-9b0b-51d1663bf0f8")
     public String getInclude() {
         String value = this.elt.getProperty(TArtifactReference.MdaTypes.STEREOTYPE_ELT,
                                             TArtifactReference.MdaTypes.INCLUDE_PROPERTY_ELT.getName());
@@ -190,7 +190,7 @@ public class TArtifactReference implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b113e1f9-8500-44ec-821b-abd8bf778d46")
+    @objid ("96fa2fb5-d2d1-4cce-a983-89380102018a")
     public String getReference() {
         String value = this.elt.getProperty(TArtifactReference.MdaTypes.STEREOTYPE_ELT,
                                             TArtifactReference.MdaTypes.REFERENCE_PROPERTY_ELT.getName());
@@ -201,7 +201,7 @@ public class TArtifactReference implements IMdaProxy {
         
     }
 
-    @objid ("97793ea3-a7da-421a-a37c-11f3ceaa0498")
+    @objid ("9b46f27b-c43b-42ea-a353-b70f19d628d9")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -213,7 +213,7 @@ public class TArtifactReference implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3ad28e09-e341-493f-a46b-c94e64c54d21")
+    @objid ("7ac8c9c1-5e27-4033-a447-0615d36dcc45")
     public void setExclude(final String value) {
         this.elt.setProperty(TArtifactReference.MdaTypes.STEREOTYPE_ELT,
                              TArtifactReference.MdaTypes.EXCLUDE_PROPERTY_ELT.getName(),
@@ -225,7 +225,7 @@ public class TArtifactReference implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("421ed8da-0bf4-4156-9196-bb89eb6a27bd")
+    @objid ("4ba3d711-dd9e-4cb8-8255-9ce4edfbdf3d")
     public void setGroup(final String value) {
         this.elt.setProperty(TArtifactReference.MdaTypes.STEREOTYPE_ELT,
                              TArtifactReference.MdaTypes.GROUP_PROPERTY_ELT.getName(),
@@ -237,7 +237,7 @@ public class TArtifactReference implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("740ac426-5deb-47b1-b0df-6aec2d10e877")
+    @objid ("f60f12c6-dfe6-4187-b89f-f539f976babc")
     public void setInclude(final String value) {
         this.elt.setProperty(TArtifactReference.MdaTypes.STEREOTYPE_ELT,
                              TArtifactReference.MdaTypes.INCLUDE_PROPERTY_ELT.getName(),
@@ -249,42 +249,42 @@ public class TArtifactReference implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("c7d68f0a-d341-448a-9bd0-d6c0ebf93eac")
+    @objid ("dea33ded-c39b-4fa5-b315-d38f3a3b8b3a")
     public void setReference(final String value) {
         this.elt.setProperty(TArtifactReference.MdaTypes.STEREOTYPE_ELT,
                              TArtifactReference.MdaTypes.REFERENCE_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(TArtifactReference.MdaTypes.REFERENCE_PROPERTY_ELT, value));
     }
 
-    @objid ("4566e346-db8d-4db0-bb87-82c5f5184914")
+    @objid ("923b9590-198e-4801-87b0-7891756edc4c")
     protected  TArtifactReference(final ModelElement elt) {
         this.elt = elt;
     }
 
-    @objid ("d8ee8718-cdd6-420a-9941-3b9f8ced11c5")
+    @objid ("0a7cfc21-11fd-4a0d-9c2d-1136690e339c")
     public static final class MdaTypes {
-        @objid ("83c415d9-309c-4b40-bc11-8a339b85a022")
+        @objid ("827b4dc1-bf7e-4d67-9680-1849f2535e2f")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("5177690f-1ca2-4e45-84ed-daaf0d279e7d")
+        @objid ("dd426ce0-fda6-4991-8172-faf63cf29ef6")
         public static PropertyDefinition REFERENCE_PROPERTY_ELT;
 
-        @objid ("3fc0abe9-dbb9-4fc8-9033-37f89f12d7d3")
+        @objid ("d4757fd7-292f-492e-bd60-ed51e29e7c18")
         public static PropertyDefinition GROUP_PROPERTY_ELT;
 
-        @objid ("faec753a-2cf3-4709-84d6-e4764693ec99")
+        @objid ("94717e69-d22a-42d0-bb11-6e7a46784e43")
         public static PropertyDefinition INCLUDE_PROPERTY_ELT;
 
-        @objid ("6a8611a5-9d0a-4fb2-8421-1f0a945b50b8")
+        @objid ("96b57bdc-c8f7-46b7-a748-c43b1777ad83")
         public static PropertyDefinition EXCLUDE_PROPERTY_ELT;
 
-        @objid ("a0d932ca-00a7-4474-a70e-7f39e99fe4cd")
+        @objid ("9f1a42bd-528d-423c-8eab-103cee582139")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("24c06fb8-f79d-4636-ba35-b5dd490fbff4")
+        @objid ("111b8ee5-5af6-470d-8d49-c1e9e9a9e417")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("6e1eedd8-29d5-482c-970b-e594ba4c9163")
+        @objid ("1f5160e0-c442-4e22-9658-429d078746de")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

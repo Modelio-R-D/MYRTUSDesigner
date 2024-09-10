@@ -62,8 +62,6 @@ C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\jav
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\attribute\TRequirement.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\handlers\propertypages\ToscaPropertyPageHandler.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\ArtifactReferencesType.java
-C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\MetadataElement.java
-C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\TPropertyDef.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\TExtension.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\DocumentRoot.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\association\TRelationshipTemplate.java
@@ -125,6 +123,5 @@ C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\jav
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\TEntityTemplate.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\attribute\TRequirementDefinition.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\handlers\propertypages\core\TEntityTypePropertyPage.java
-C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\handlers\propertypages\core\PropertiesDefinitionPropertyPage.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\class_\TDocumentation.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\class_\InstanceStateType.java

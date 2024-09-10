@@ -1,10 +1,7 @@
 package fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate;
 
 import java.util.Arrays;
-import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
-import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.CapabilitiesType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementsType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifacts;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;

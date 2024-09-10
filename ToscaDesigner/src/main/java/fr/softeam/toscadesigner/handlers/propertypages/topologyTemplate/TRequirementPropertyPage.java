@@ -2,15 +2,11 @@ package fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate;
 
 import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.InterfacesType;
 import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TRequirement;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapability;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyElementInstanceStates;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
-import fr.softeam.toscadesigner.handlers.tools.RelationshipTemplateTool;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;

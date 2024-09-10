@@ -1,10 +1,11 @@
 package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.standard.attribute.TRequirementDefinition;
+
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinitionType;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("c757eb57-dab6-4fc3-8fd8-6f094926a62c")
 public class TRequirementDefinitionTypePropertyPage<T extends TRequirementDefinitionType> extends ToscaElementPropertyPage<T> {

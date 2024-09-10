@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 10/09/2024 12:00 by Modelio Studio.
+ * This file was generated on 10/09/2024 16:32 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -37,18 +37,18 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-@objid ("98070637-3eca-45a7-ab85-820c9a719a3f")
+@objid ("919a3e0c-5b53-423f-bde3-34fbdd3b5348")
 public class NodeTypeReferenceType implements IMdaProxy {
-    @objid ("52e7ed6e-5f1b-4866-af07-a40f82eeed78")
+    @objid ("f7244a9c-6fe0-414c-8880-e7dc3d8c395e")
     public static final String STEREOTYPE_NAME = "NodeTypeReferenceType";
 
-    @objid ("a7cc8a9f-ab26-4e2d-b722-4e4118f6eba7")
+    @objid ("804ceeea-7899-4635-89e8-4a55879d15eb")
     public static final String TYPEREF_PROPERTY = "typeRef";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
      */
-    @objid ("427dddaf-d14d-43a9-9e42-634014260daf")
+    @objid ("31eb902d-15ba-4030-8f26-20d67080025d")
     protected final ModelElement elt;
 
     /**
@@ -58,7 +58,7 @@ public class NodeTypeReferenceType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("7367dc7e-6045-448b-82cd-7c03e7f2eb67")
+    @objid ("2d9b3543-c9c2-4643-80e0-40a863c1d180")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (NodeTypeReferenceType.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(NodeTypeReferenceType.MdaTypes.STEREOTYPE_ELT));
     }
@@ -68,7 +68,7 @@ public class NodeTypeReferenceType implements IMdaProxy {
      * 
      * @return a {@link NodeTypeReferenceType} proxy on the created {@link ModelElement}.
      */
-    @objid ("a5bd676e-07f6-4080-b9cb-dc13a2df9ba5")
+    @objid ("e41839a6-6677-4c28-8057-1e6a823f4e83")
     public static NodeTypeReferenceType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(NodeTypeReferenceType.MdaTypes.STEREOTYPE_ELT);
@@ -82,7 +82,7 @@ public class NodeTypeReferenceType implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link NodeTypeReferenceType} proxy or <i>null</i>.
      */
-    @objid ("32e535f6-173c-4c2c-8abf-abe43f4118d0")
+    @objid ("fd06d63e-285a-4697-a4a2-ec636f4e3122")
     public static NodeTypeReferenceType instantiate(final ModelElement obj) {
         return NodeTypeReferenceType.canInstantiate(obj) ? new NodeTypeReferenceType(obj) : null;
     }
@@ -95,7 +95,7 @@ public class NodeTypeReferenceType implements IMdaProxy {
      * @return a {@link NodeTypeReferenceType} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("4f4e077a-862c-4b43-9204-f855aa83cf90")
+    @objid ("aac8ec0c-fb36-4c1b-9423-cd9ab74f5061")
     public static NodeTypeReferenceType safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (NodeTypeReferenceType.canInstantiate(obj))
         	return new NodeTypeReferenceType(obj);
@@ -103,7 +103,7 @@ public class NodeTypeReferenceType implements IMdaProxy {
         	throw new IllegalArgumentException("NodeTypeReferenceType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("75506549-0592-4801-b883-e8a6686e46e0")
+    @objid ("5ae6407a-e753-4db6-a13b-fd0ee70fde73")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -123,7 +123,7 @@ public class NodeTypeReferenceType implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("9f1c1c8a-2eb4-4fb7-b145-9e914f17ab48")
+    @objid ("48003dfb-9f95-4f70-9bb9-131ae8a74a1f")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -133,7 +133,7 @@ public class NodeTypeReferenceType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b5638102-2871-4909-9a18-3f3fff443bf5")
+    @objid ("a8b98d36-3475-419c-bcd5-9076b6a8c5db")
     public String getTypeRef() {
         String value = this.elt.getProperty(NodeTypeReferenceType.MdaTypes.STEREOTYPE_ELT,
                                             NodeTypeReferenceType.MdaTypes.TYPEREF_PROPERTY_ELT.getName());
@@ -144,7 +144,7 @@ public class NodeTypeReferenceType implements IMdaProxy {
         
     }
 
-    @objid ("6ad95cdf-b602-47db-91e5-e394e43796d2")
+    @objid ("3bd1a746-13d7-44a9-93c6-1c98ff54d7fb")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -156,33 +156,33 @@ public class NodeTypeReferenceType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("4f3deb83-c99e-4d2b-abfe-e17022bdc3b6")
+    @objid ("76117a7b-1251-42d2-9fd7-28dbf02609cc")
     public void setTypeRef(final String value) {
         this.elt.setProperty(NodeTypeReferenceType.MdaTypes.STEREOTYPE_ELT,
                              NodeTypeReferenceType.MdaTypes.TYPEREF_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(NodeTypeReferenceType.MdaTypes.TYPEREF_PROPERTY_ELT, value));
     }
 
-    @objid ("4d85c1ea-ad68-4690-bc1e-66e2f0a87947")
+    @objid ("39346e19-2bad-4863-90b0-c3ecb08a6ffa")
     protected  NodeTypeReferenceType(final ModelElement elt) {
         this.elt = elt;
     }
 
-    @objid ("e4097d73-42dd-44af-84c8-7ef258e16b5f")
+    @objid ("c10f4de9-e80d-4ef2-bd6f-2962dc7797e5")
     public static final class MdaTypes {
-        @objid ("3690d025-f2b9-488c-a6c7-3b5ebc745d17")
+        @objid ("7271d055-8145-4d4e-bf01-c5e91e5b99e1")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("a50622eb-136e-4210-8a62-a10cf1ca964f")
+        @objid ("fd3879e1-80aa-4620-b93b-acd2f20af16a")
         public static PropertyDefinition TYPEREF_PROPERTY_ELT;
 
-        @objid ("748bcf9f-a620-461c-b351-eea951d5fef5")
+        @objid ("960c185e-414c-4872-b7ae-65bd3fb67c10")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("11c7ab80-a5b9-480c-a6c2-e59ba54bee1f")
+        @objid ("92e48b9b-a5b2-4f00-bb10-fbde11d8894b")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e8da4897-6f94-40d5-a524-2e5578ad173b")
+        @objid ("ecd4349d-21c2-43d8-8943-a7cd8987cdda")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

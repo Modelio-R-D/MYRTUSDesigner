@@ -1,6 +1,2 @@
-fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\TPropertyDef.class
-fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\MetadataElement$MdaTypes.class
 fr\softeam\toscadesigner\api\tosca\standard\attribute\TPropertyDef.class
 fr\softeam\toscadesigner\api\tosca\standard\attribute\TPropertyDef$MdaTypes.class
-fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\MetadataElement.class
-fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\TPropertyDef$MdaTypes.class
