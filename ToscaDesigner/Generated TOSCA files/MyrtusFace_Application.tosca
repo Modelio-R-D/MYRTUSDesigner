@@ -9,7 +9,7 @@ topology_template:
       type: example.eu.myrtus.nodetypes.Myrtus-Workstation
       metadata:
         displayName: "Myrtus-Workstation"
-      properties:
+      
       
       
     MyrtusFaceDetectionService_0:
@@ -17,6 +17,7 @@ topology_template:
       metadata:
         displayName: "FaceDetection"
       properties:
+        dockerImage: "thebigpotatoe/face-recognition-docker"
       
       
     MyrtusCameraFeed_0:
@@ -24,6 +25,7 @@ topology_template:
       metadata:
         displayName: "CameraFeed"
       properties:
+        dockerImage: "ci.hesi.energy:5000/myrtus/examples/myrtusface/camera_feed:web"
       
       
     Myrtus_Proxy_0:
@@ -31,6 +33,8 @@ topology_template:
       metadata:
         displayName: "Proxy"
       properties:
+        dockerImage: "nginx:alpine"
+        port: "443"
       
       
   relationship_templates:

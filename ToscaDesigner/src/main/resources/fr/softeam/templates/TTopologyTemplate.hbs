@@ -12,24 +12,24 @@ topology_template:
       {{#each ../ownedAttribute}}{{#extension}}{{#eq name "Metadata"}}
         {{../name}}: "{{../value}}"
       {{/eq}}{{/extension}}{{/each}}
-      {{#if ../ownedAttribute}}properties:{{/if}}
-      {{#each ../ownedAttribute}}{{#extension}}{{#unless name "Metadata"}}
+      {{#unless (noStereotypeApplications ../this "PropertyDefinitionType")}}properties:{{/unless}}
+      {{#each ../ownedAttribute}}{{#extension}}{{#eq name "PropertyDefinitionType"}}
         {{../name}}: "{{../value}}"
-      {{/unless}}{{/extension}}{{/each}}
-      {{#unless (noStereotypeApplications ../this "TRequirement")}}requirements:{{/unless}}
-      {{#each ../ownedElement}}{{#extension}}{{#eq name "TRequirement"}}
+      {{/eq}}{{/extension}}{{/each}}
+      {{#unless (noStereotypeApplications ../this "RequirementsType")}}requirements:{{/unless}}
+      {{#each ../ownedElement}}{{#extension}}{{#eq name "RequirementsType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TRequirement"}}
         - {{../name}}:
             node: {{getProperty ../this "node"}}
             relationship: {{relationship}}
             capability: {{getProperty ../this "capability"}}
-       	{{/eq}}{{/extension}}{{/each}}
-      {{#unless (noStereotypeApplications ../this "TDeploymentArtifact")}}artifacts:{{/unless}}
-      {{#each ../ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifact"}}
+       	{{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
+      {{#unless (noStereotypeApplications ../this "TDeploymentArtifacts")}}artifacts:{{/unless}}
+      {{#each ../ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifacts"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifact"}}
         {{../name}}:
           type: {{getProperty ../this "artifactType"}}
           deploy_path: {{getProperty ../this "Deploy_path"}}
           file: {{getProperty ../this "File"}}
-        {{/eq}}{{/extension}}{{/each}}
+        {{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
 {{/eq}}{{/extension}}{{/ownedElement}}
   relationship_templates:
 {{#ownedElement}}{{#targetingEnd}}{{#association}}{{#extension}}{{#eq name "TRelationshipTemplate"}}
