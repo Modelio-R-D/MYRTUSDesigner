@@ -16,7 +16,6 @@ C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\jav
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\OutputParametersType1.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\class_\TPlan.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\associationend\TRelationshipTemplateEnd.java
-C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\handlers\propertypages\core\MetadataElementPropertyPage.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\handlers\commands\submodel\CreateServiceTemplateDigramCommand.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\TArtifactReference.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\impl\ToscaDesignerModule.java
@@ -63,8 +62,6 @@ C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\jav
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\attribute\TRequirement.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\handlers\propertypages\ToscaPropertyPageHandler.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\ArtifactReferencesType.java
-C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\MetadataElement.java
-C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\TPropertyDef.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\TExtension.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\DocumentRoot.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\association\TRelationshipTemplate.java
@@ -85,6 +82,7 @@ C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\jav
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\SourceInterfacesType.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\ConstraintType1.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\handlers\propertypages\core\ImportElementPropertyPage.java
+C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\handlers\propertypages\core\PropertyDefinitionTypePropertyPage.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\infrastructure\modelelement\TExportedInterface.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\handlers\propertypages\topologyTemplate\TRequirementPropertyPage.java
 C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\java\fr\softeam\toscadesigner\api\tosca\standard\class_\TTopologyElementInstanceStates.java
