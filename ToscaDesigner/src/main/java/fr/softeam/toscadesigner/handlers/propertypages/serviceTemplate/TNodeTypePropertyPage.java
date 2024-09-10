@@ -91,7 +91,7 @@ public class TNodeTypePropertyPage<T extends TNodeType> extends TEntityTypePrope
                 Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
                     @Override
                     public boolean accept(MObject element) {
-                        return CapabilitiesType.canInstantiate(element);
+                        return TCapabilityDefinitionsType .canInstantiate(element);
                     }
                 });
     }
