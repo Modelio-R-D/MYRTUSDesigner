@@ -17,7 +17,7 @@ topology_template:
         {{../name}}: "{{../value}}"
       {{/eq}}{{/extension}}{{/each}}
       {{#unless (noStereotypeApplications ../this "RequirementsType")}}requirements:{{/unless}}
-      {{#each ../ownedElement}}{{#extension}}{{#eq name "RequirementsType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TRequirement"}}
+      {{#each ../ownedElement}}{{#extension}}{{#eq name "RequirementsType"}}{{#each ../ownedAttribute}}{{#extension}}{{#eq name "TRequirement"}}
         - {{../name}}:
             node: {{getProperty ../this "node"}}
             relationship: {{relationship}}

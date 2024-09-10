@@ -14,9 +14,9 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.FileDialog;
 import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.infrastructure.ModelTree;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.statik.Association;
+import org.modelio.metamodel.uml.statik.Attribute;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.smkernel.mapi.MObject;
 import org.modelio.vcore.smkernel.mapi.MRef;
@@ -64,19 +64,12 @@ public abstract class AbstractToscaFileGenerator {
 				propertyStringValue = context.getProperty(stereotype, searchedPropertyName);
 
 				if (stereotype.getName().equals("TRequirement")) {
+					
+					TRequirement tRequirement = TRequirement.safeInstantiate((Attribute) context);
 					if (searchedPropertyName.equals("node")) {
-
-						MRef ref = (MRef) PropertyConverter.convertToObject(TRequirement.MdaTypes.NODE_PROPERTY_ELT,
-								propertyStringValue, context);
-						ModelElement tNodeType = (ModelElement) ToscaDesignerModule.getInstance().getModuleContext()
-								.getModelingSession().findByRef(ref);
-						propertyStringValue = tNodeType.getName();
+						propertyStringValue = tRequirement.getNode();
 					} else if (searchedPropertyName.equals("capability")) {
-						MRef ref = (MRef) PropertyConverter.convertToObject(
-								TRequirement.MdaTypes.CAPABILITY_PROPERTY_ELT, propertyStringValue, context);
-						ModelElement tCapability = (ModelElement) ToscaDesignerModule.getInstance().getModuleContext()
-								.getModelingSession().findByRef(ref);
-						propertyStringValue = tCapability.getName();
+						propertyStringValue = tRequirement.getCapability();
 					}
 				} else if (stereotype.getName().equals("TRelationshipTemplate")) {
 					if (searchedPropertyName.equals("type")) {
@@ -84,11 +77,6 @@ public abstract class AbstractToscaFileGenerator {
 						TRelationshipType relationshipType = tRelationshipTemplate.getRelationshipType();
 						Class element = relationshipType.getElement();
 						propertyStringValue = element.getName();
-//						MRef ref = (MRef) PropertyConverter.convertToObject(
-//								TRelationshipTemplate.MdaTypes.TYPE_PROPERTY_ELT, propertyStringValue, context);
-//						ModelElement tRelationshipType = (ModelElement) ToscaDesignerModule.getInstance()
-//								.getModuleContext().getModelingSession().findByRef(ref);
-//						propertyStringValue = tRelationshipType.getName();
 					}
 				} else if (stereotype.getName().equals("TNodeTemplate")) {
 					TNodeTemplate tNodeTemplate = TNodeTemplate.safeInstantiate((Class)context);
