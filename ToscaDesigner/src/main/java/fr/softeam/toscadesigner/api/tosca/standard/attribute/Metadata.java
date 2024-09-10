@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 09/09/2024 18:07 by Modelio Studio.
+ * This file was generated on 10/09/2024 10:28 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.attribute;
 
@@ -40,13 +40,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("3f0b4190-b10a-4ac9-8c38-6bcb8f707fbe")
 public class Metadata implements IMdaProxy {
-    @objid ("592dc4fa-f0dc-4d6b-a482-1a80217407bf")
+    @objid ("1dc8a3bf-4337-4578-b061-315ebd84223d")
     public static final String STEREOTYPE_NAME = "Metadata";
 
     /**
      * The underlying {@link Attribute} represented by this proxy, never null.
      */
-    @objid ("a8e983f1-0d60-491b-8ae5-dc16ca4c69f5")
+    @objid ("cc5a3a5c-57d5-448f-af81-d52f5f3f05e0")
     protected final Attribute elt;
 
     /**
@@ -56,7 +56,7 @@ public class Metadata implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("1feb702d-0bfa-4398-b16b-cd623772f058")
+    @objid ("808d1fc3-f868-493e-a3a7-fb81e6a164a5")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Attribute) && (Metadata.MdaTypes.STEREOTYPE_ELT!=null) && ((Attribute) elt).isStereotyped(Metadata.MdaTypes.STEREOTYPE_ELT));
     }
@@ -66,7 +66,7 @@ public class Metadata implements IMdaProxy {
      * 
      * @return a {@link Metadata} proxy on the created {@link Attribute}.
      */
-    @objid ("fd73b846-374c-4996-a89c-78f45a88660c")
+    @objid ("8fe6a034-fe37-4901-ab71-42f759d44475")
     public static Metadata create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Attribute");
         e.getExtension().add(Metadata.MdaTypes.STEREOTYPE_ELT);
@@ -80,7 +80,7 @@ public class Metadata implements IMdaProxy {
      * @param obj a Attribute
      * @return a {@link Metadata} proxy or <i>null</i>.
      */
-    @objid ("9f9bdf41-e8de-4dff-a058-746ad584c9bd")
+    @objid ("d72b0934-29c7-4b51-9b22-1037249bf8fb")
     public static Metadata instantiate(final Attribute obj) {
         return Metadata.canInstantiate(obj) ? new Metadata(obj) : null;
     }
@@ -93,7 +93,7 @@ public class Metadata implements IMdaProxy {
      * @return a {@link Metadata} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("0c629d3a-9a69-4b48-ae1b-275f644cf3fb")
+    @objid ("87c31d1d-5252-46f0-b46a-fd11bc995afb")
     public static Metadata safeInstantiate(final Attribute obj) throws IllegalArgumentException {
         if (Metadata.canInstantiate(obj))
         	return new Metadata(obj);
@@ -101,7 +101,7 @@ public class Metadata implements IMdaProxy {
         	throw new IllegalArgumentException("Metadata: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("08670e26-369a-4386-9b25-f083eb43bf8a")
+    @objid ("e9797ce6-8e4e-425b-9f16-650957a83856")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -121,35 +121,35 @@ public class Metadata implements IMdaProxy {
      * Get the underlying {@link Attribute}. 
      * @return the Attribute represented by this proxy, never null.
      */
-    @objid ("83bdf3b1-04d0-4e4f-a56d-01d69e98a026")
+    @objid ("98a49a6e-0f4f-4e97-8874-2ed6386d483f")
     public Attribute getElement() {
         return this.elt;
     }
 
-    @objid ("f61ceeff-1ba2-4db2-a6cf-5dd11fbf9289")
+    @objid ("7236f5ea-3b64-4219-a8b3-c9c646616e0d")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
         
     }
 
-    @objid ("6627c1b2-ebd2-42f9-88c4-bef996b7d8c8")
+    @objid ("c6a0531e-bd4a-4380-82e6-107cb5577e30")
     protected  Metadata(final Attribute elt) {
         this.elt = elt;
     }
 
     @objid ("8fdaccbc-dcda-4810-821b-5f4384df5854")
     public static final class MdaTypes {
-        @objid ("8793421e-85a7-42ac-b474-83e5c36644ee")
+        @objid ("a2c06cde-dd82-41fc-8e33-218c4317ee90")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("90f2d035-c819-4f3c-bfbd-f95e35e74b5f")
+        @objid ("b0c334e1-caf4-4448-9f3f-046444e78128")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("7f370d21-d49a-4979-bd45-44ce3525bccb")
+        @objid ("4413b735-f2b0-45ed-ae2c-7285f5a40e11")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("00014ad9-96a7-48d5-ad74-5660f8b3dfe3")
+        @objid ("83041e18-4ad5-4354-ac01-4e373d2b33b9")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

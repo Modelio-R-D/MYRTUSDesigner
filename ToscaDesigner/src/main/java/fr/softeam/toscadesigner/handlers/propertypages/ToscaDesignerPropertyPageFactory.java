@@ -9,6 +9,8 @@ package fr.softeam.toscadesigner.handlers.propertypages;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import fr.softeam.toscadesigner.handlers.propertypages.core.MetadataPropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.core.PropertyDefinitionTypePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.core.TPropertyDefPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TCapabilityDefinitionPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TCapabilityDefinitionsTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TNodeTypePropertyPage;
@@ -193,6 +195,8 @@ public class ToscaDesignerPropertyPageFactory {
             case fr.softeam.toscadesigner.api.tosca.standard.attribute.TDeploymentArtifact.STEREOTYPE_NAME: return new TDeploymentArtifactPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.attribute.TDeploymentArtifact.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.attribute.TRequirement.STEREOTYPE_NAME: return new TRequirementPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.attribute.TRequirement.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityDefinition.STEREOTYPE_NAME: return new TCapabilityDefinitionPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityDefinition.instantiate(obj));
+            case fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef.STEREOTYPE_NAME: return new TPropertyDefPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef.instantiate(obj));
+            case fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType.STEREOTYPE_NAME: return new PropertyDefinitionTypePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType.instantiate(obj));
             
             default:
                 break;
