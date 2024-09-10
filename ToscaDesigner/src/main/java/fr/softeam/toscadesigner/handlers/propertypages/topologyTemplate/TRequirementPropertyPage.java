@@ -1,9 +1,17 @@
 package fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate;
 
+import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TRequirement;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.Metamodel;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.vcore.session.api.model.IMObjectFilter;
+import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("2f77160e-23d4-4fae-b3e2-c6bbee980d2e")
 public class TRequirementPropertyPage<T extends TRequirement> extends ToscaElementPropertyPage<T> {
@@ -21,13 +29,25 @@ public class TRequirementPropertyPage<T extends TRequirement> extends ToscaEleme
             this._element.getElement().setName(value);
             break;
         case 2:
-            this._element.setRequirementDef(value);
+            for (ModelElement dep : TRelationshipTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+                if (value.contains(dep.getUuid())) {
+                    this._element.setRelationship(TRelationshipTemplate.instantiate((org.modelio.metamodel.uml.statik.Association) dep));
+                }
+            }
             break;
         case 3:
-            this._element.setNode(value);
+            for (ModelElement dep : TNodeTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+                if (value.contains(dep.getUuid())) {
+                    this._element.setNode(TNodeTemplate.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
+                }
+            }
             break;
         case 4:
-            this._element.setCapability(value);
+            for (ModelElement dep : TCapabilityDefinitionsType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+                if (value.contains(dep.getUuid())) {
+                    this._element.setCapability(TCapabilityDefinitionsType .instantiate((org.modelio.metamodel.uml.statik.Class) dep));
+                }
+            }
             break;
         }
     }
@@ -37,9 +57,32 @@ public class TRequirementPropertyPage<T extends TRequirement> extends ToscaEleme
     public void update(IModulePropertyTable table) {
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
-        table.addProperty("Requirement Def", _element.getRequirementDef());
-        table.addProperty("Node", _element.getNode());
-        table.addProperty("Capability", _element.getCapability());
+        // relationship template
+        table.addProperty("Relationship",
+                this._element.getRelationship() != null ? this._element.getRelationship().getElement() : null,
+                Arrays.asList(Metamodel.getMClass("Association")), new IMObjectFilter() {
+                    @Override
+                    public boolean accept(MObject element) {
+                        return TRelationshipTemplate.canInstantiate(element);
+                    }
+                });
+        // node template
+        table.addProperty("Node", this._element.getNode() != null ? this._element.getNode().getElement() : null,
+                Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+                    @Override
+                    public boolean accept(MObject element) {
+                        return TNodeTemplate.canInstantiate(element);
+                    }
+                });
+        // Capability
+        table.addProperty("Capability",
+                this._element.getCapability() != null ? this._element.getCapability().getElement() : null,
+                Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+                    @Override
+                    public boolean accept(MObject element) {
+                        return TCapabilityDefinitionsType.canInstantiate(element);
+                    }
+                });
     }
 
 }
