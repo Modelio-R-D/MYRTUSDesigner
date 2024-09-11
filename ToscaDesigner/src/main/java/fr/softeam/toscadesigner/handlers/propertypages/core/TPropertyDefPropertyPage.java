@@ -1,13 +1,9 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
+import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifacts;
-
-import java.util.Arrays;
-
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
@@ -31,7 +27,7 @@ public class TPropertyDefPropertyPage<T extends TPropertyDef> extends ToscaEleme
             for (ModelElement el : PropertyDefinitionType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(el.getUuid())) {
                     this._element.setName(
-                    		PropertyDefinitionType.instantiate((org.modelio.metamodel.uml.statik.Attribute) el));
+                            PropertyDefinitionType.instantiate((org.modelio.metamodel.uml.statik.Attribute) el));
                 }
             }
             break;

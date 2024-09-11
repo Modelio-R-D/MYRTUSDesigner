@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 11/09/2024 11:45 by Modelio Studio.
+ * This file was generated on 11/09/2024 14:25 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
@@ -40,22 +40,22 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("c6151804-ffa2-41b1-a19f-75a3542d7e94")
 public class TPolicy implements IMdaProxy {
-    @objid ("11e08beb-549a-4b57-981b-32bdd19b7fdd")
+    @objid ("dfb242a4-b260-4fdb-810b-fc7d01a9c189")
     public static final String STEREOTYPE_NAME = "TPolicy";
 
-    @objid ("0e8a6f14-c6f8-4bb4-a576-ce72bfc5c93b")
+    @objid ("a7f022ac-c029-4f37-a2e5-bd52b6890942")
     public static final String NAME_PROPERTY = "name";
 
-    @objid ("05101675-9e96-4d82-a4cc-18907683dc73")
+    @objid ("49fb9672-ad4f-436f-b91e-fe723d5145bc")
     public static final String POLICYREF_PROPERTY = "policyRef";
 
-    @objid ("1e71752d-1fc7-4054-8c96-a5fc16530aa6")
+    @objid ("99f9b08b-8924-4f92-96b0-2b4ce37b18da")
     public static final String POLICYTYPE_PROPERTY = "policyType";
 
     /**
      * The underlying {@link Class} represented by this proxy, never null.
      */
-    @objid ("34cda0ca-3584-47aa-a432-e4d08fd54bb6")
+    @objid ("d1f1bc5a-5a64-47c4-8ed2-3425c916069a")
     protected final Class elt;
 
     /**
@@ -65,7 +65,7 @@ public class TPolicy implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("bc8bd46f-335d-4481-a90e-ccfb1f410b6b")
+    @objid ("b7819024-b06f-4374-8ddd-fae499924b0c")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (TPolicy.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(TPolicy.MdaTypes.STEREOTYPE_ELT));
     }
@@ -75,7 +75,7 @@ public class TPolicy implements IMdaProxy {
      * 
      * @return a {@link TPolicy} proxy on the created {@link Class}.
      */
-    @objid ("a7ff247f-6aee-4090-86eb-518b87d6992f")
+    @objid ("0ac1066e-7d0b-477b-9be6-7f932230d2d7")
     public static TPolicy create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(TPolicy.MdaTypes.STEREOTYPE_ELT);
@@ -89,7 +89,7 @@ public class TPolicy implements IMdaProxy {
      * @param obj a Class
      * @return a {@link TPolicy} proxy or <i>null</i>.
      */
-    @objid ("41327e92-3469-4e53-be7d-8b6cba62d278")
+    @objid ("15cfc2e7-6ddd-49ba-8a5d-4ddb2e75c53e")
     public static TPolicy instantiate(final Class obj) {
         return TPolicy.canInstantiate(obj) ? new TPolicy(obj) : null;
     }
@@ -102,7 +102,7 @@ public class TPolicy implements IMdaProxy {
      * @return a {@link TPolicy} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("fd7e4055-a9b9-46f9-a529-46aa28da320b")
+    @objid ("b87410c5-c2fe-49d6-8980-a591565e4470")
     public static TPolicy safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (TPolicy.canInstantiate(obj))
         	return new TPolicy(obj);
@@ -110,7 +110,7 @@ public class TPolicy implements IMdaProxy {
         	throw new IllegalArgumentException("TPolicy: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("3b10f269-029a-4e46-abc0-a6cc3a6b2911")
+    @objid ("58b5e5f0-99bf-42a4-bce9-c7f20faf3e89")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -130,7 +130,7 @@ public class TPolicy implements IMdaProxy {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("f5ab9b62-5eff-4780-909a-ff3da191ce65")
+    @objid ("49d81734-a0f6-44c2-be3c-bf2e5647051a")
     public Class getElement() {
         return this.elt;
     }
@@ -140,7 +140,7 @@ public class TPolicy implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("570a8980-9041-4b4b-9a7e-f9f4fc1ed9ff")
+    @objid ("353327ee-1d33-42fe-a60e-1576fae9dd84")
     public String getName() {
         String value = this.elt.getProperty(TPolicy.MdaTypes.STEREOTYPE_ELT,
                                             TPolicy.MdaTypes.NAME_PROPERTY_ELT.getName());
@@ -156,7 +156,7 @@ public class TPolicy implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("c592738e-de4e-48f6-bdac-e227edc357c6")
+    @objid ("ff6aa65b-3282-43eb-8ce1-0fe04c076ceb")
     public String getPolicyRef() {
         String value = this.elt.getProperty(TPolicy.MdaTypes.STEREOTYPE_ELT,
                                             TPolicy.MdaTypes.POLICYREF_PROPERTY_ELT.getName());
@@ -172,7 +172,7 @@ public class TPolicy implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("5cb42402-d076-4007-aa2a-c1a8e00ea99a")
+    @objid ("91c4e7a6-0789-495f-badb-68c4b9d0589b")
     public String getPolicyType() {
         String value = this.elt.getProperty(TPolicy.MdaTypes.STEREOTYPE_ELT,
                                             TPolicy.MdaTypes.POLICYTYPE_PROPERTY_ELT.getName());
@@ -183,7 +183,7 @@ public class TPolicy implements IMdaProxy {
         
     }
 
-    @objid ("92eb9fe4-d973-424e-b271-a9cb7ed43f42")
+    @objid ("426f7b6c-f8a4-47a7-aca5-21494a1ce432")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -195,7 +195,7 @@ public class TPolicy implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("55c9fbf7-f060-4ee5-b57e-ed21c267964a")
+    @objid ("e6e11d08-e719-4a12-b73b-4cba10d854d4")
     public void setName(final String value) {
         this.elt.setProperty(TPolicy.MdaTypes.STEREOTYPE_ELT,
                              TPolicy.MdaTypes.NAME_PROPERTY_ELT.getName(),
@@ -207,7 +207,7 @@ public class TPolicy implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("282571f5-261e-4238-bb83-dd0c19721ff4")
+    @objid ("cf41bc2f-f82f-4716-ae3d-78fbe0f7256b")
     public void setPolicyRef(final String value) {
         this.elt.setProperty(TPolicy.MdaTypes.STEREOTYPE_ELT,
                              TPolicy.MdaTypes.POLICYREF_PROPERTY_ELT.getName(),
@@ -219,39 +219,39 @@ public class TPolicy implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b187c8e9-1b1c-421c-aec0-6b1f373988bb")
+    @objid ("c6bf174f-2e8a-443d-9e9e-f78a7b29dc26")
     public void setPolicyType(final String value) {
         this.elt.setProperty(TPolicy.MdaTypes.STEREOTYPE_ELT,
                              TPolicy.MdaTypes.POLICYTYPE_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(TPolicy.MdaTypes.POLICYTYPE_PROPERTY_ELT, value));
     }
 
-    @objid ("c7d6ad3c-778f-4105-8df0-e5d2c13367d3")
+    @objid ("bbe79333-613a-48e1-8fb8-8d7448f48a13")
     protected  TPolicy(final Class elt) {
         this.elt = elt;
     }
 
     @objid ("9cdabba3-5ee3-4167-9304-34532fa22246")
     public static final class MdaTypes {
-        @objid ("177d1e4d-977b-4fba-ad6a-1cd30d5679de")
+        @objid ("20443813-357f-41f9-8158-a18d9d493dcd")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("004b39cc-4f00-4cd2-b68a-d3d3de611e22")
+        @objid ("8c5de964-734b-4175-b23c-06359a62b5a2")
         public static PropertyDefinition NAME_PROPERTY_ELT;
 
-        @objid ("8a1d72b8-0000-48de-9a43-eb5fe606b9d1")
+        @objid ("570794be-fa81-4f06-8a13-97072ba86ae4")
         public static PropertyDefinition POLICYREF_PROPERTY_ELT;
 
-        @objid ("bd3f9abb-e710-4cb5-b776-79cf044e43ec")
+        @objid ("6ab5e74c-3760-46a4-9da9-682f621d7fd3")
         public static PropertyDefinition POLICYTYPE_PROPERTY_ELT;
 
-        @objid ("6c21bd1f-cde6-42b2-b948-053b627d353a")
+        @objid ("295e07f0-a295-4b0c-9afc-e6f738c4d56e")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("ca8f16f5-c233-4212-a479-43ce44f0320c")
+        @objid ("e8411590-3325-4526-9ff0-82bca7243f4d")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("22cc7b19-39d3-4d49-8555-be91dca2c65b")
+        @objid ("bdc712e1-e0d9-4c26-844b-ae257ee7aebb")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

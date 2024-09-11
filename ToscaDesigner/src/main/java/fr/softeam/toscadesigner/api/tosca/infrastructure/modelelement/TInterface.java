@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 11/09/2024 11:45 by Modelio Studio.
+ * This file was generated on 11/09/2024 14:25 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -39,19 +39,19 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("e775c97f-3522-4560-8548-f46367ef065f")
 public class TInterface implements IMdaProxy {
-    @objid ("24015bdb-03d6-494e-b53e-b4aafd28bd69")
+    @objid ("d3fac260-414a-4335-bcba-1193ce0847b5")
     public static final String STEREOTYPE_NAME = "TInterface";
 
-    @objid ("b71ca957-5c9c-452d-a46b-053c128321b7")
+    @objid ("6c2cf538-82cf-47e5-b3ca-e5afe122c844")
     public static final String PROPERTYTYPEDEFINITION2_PROPERTY = "PropertyTypeDefinition2";
 
-    @objid ("ebcd4b84-6c81-47e8-bef0-9d8bc41d349f")
+    @objid ("e2aede4b-48e1-4ba5-8b95-b20241be1c61")
     public static final String NAME_PROPERTY = "name";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
      */
-    @objid ("b5f69409-f3ad-4127-9da5-822e0c93f7fe")
+    @objid ("38c2d0b1-7e44-4c2d-b535-98a2de264563")
     protected final ModelElement elt;
 
     /**
@@ -61,7 +61,7 @@ public class TInterface implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("0f78bf1f-98cf-4bbb-8559-82a82182d570")
+    @objid ("087806d2-b312-4fec-beee-b9ade2d8b873")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (TInterface.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(TInterface.MdaTypes.STEREOTYPE_ELT));
     }
@@ -71,7 +71,7 @@ public class TInterface implements IMdaProxy {
      * 
      * @return a {@link TInterface} proxy on the created {@link ModelElement}.
      */
-    @objid ("3a39f319-d909-45ab-898c-cfc83e98e341")
+    @objid ("658e67d3-2982-408a-bb64-8b50b90219ca")
     public static TInterface create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(TInterface.MdaTypes.STEREOTYPE_ELT);
@@ -85,7 +85,7 @@ public class TInterface implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link TInterface} proxy or <i>null</i>.
      */
-    @objid ("0a0eac2f-ff6b-4e9a-a281-7547001f391d")
+    @objid ("e8eaec89-cf13-49d1-821b-0c198f408cc2")
     public static TInterface instantiate(final ModelElement obj) {
         return TInterface.canInstantiate(obj) ? new TInterface(obj) : null;
     }
@@ -98,7 +98,7 @@ public class TInterface implements IMdaProxy {
      * @return a {@link TInterface} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("c05f36e1-cc7f-4c02-9770-386767bb9bf5")
+    @objid ("d9d25c28-cd1d-4df2-abb4-b445c6373edf")
     public static TInterface safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (TInterface.canInstantiate(obj))
         	return new TInterface(obj);
@@ -112,7 +112,7 @@ public class TInterface implements IMdaProxy {
      * null
      * 
      */
-    @objid ("7a9fbc0e-bae4-4503-ab23-8ccbe1e46f7f")
+    @objid ("7ce9fd73-c261-4b97-b2c1-f1e80feffb9c")
     public void addOperation(final TOperation obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -122,7 +122,7 @@ public class TInterface implements IMdaProxy {
         }
     }
 
-    @objid ("bd38e903-b84d-4e99-a001-f1ca7810406f")
+    @objid ("956aeb19-63a8-4d94-88d9-d0a9a5e67aca")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -142,7 +142,7 @@ public class TInterface implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("7f2f5e04-f3c4-48b9-b9d8-0f65577724c0")
+    @objid ("153cc003-ea33-4303-8509-a5040c74f0b0")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -152,7 +152,7 @@ public class TInterface implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("abd9353d-3d27-411b-87c0-6d9582541f4a")
+    @objid ("e1e234bc-7c27-4536-bd83-fef370a3c4b9")
     public String getName() {
         String value = this.elt.getProperty(TInterface.MdaTypes.STEREOTYPE_ELT,
                                             TInterface.MdaTypes.NAME_PROPERTY_ELT.getName());
@@ -169,7 +169,7 @@ public class TInterface implements IMdaProxy {
      * null
      * 
      */
-    @objid ("e57e1de8-c9ed-45f6-a2ed-629af612c995")
+    @objid ("8b23c5ab-4ca0-4fac-af25-2dbf6eb57c7b")
     public List<TOperation> getOperation() {
         List<TOperation> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -186,7 +186,7 @@ public class TInterface implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("fa026cfb-ddfa-4576-abe6-913d2e1fa0d2")
+    @objid ("eb9b51ef-e6f4-4494-af31-d2a185af6113")
     public String getPropertyTypeDefinition2() {
         String value = this.elt.getProperty(TInterface.MdaTypes.STEREOTYPE_ELT,
                                             TInterface.MdaTypes.PROPERTYTYPEDEFINITION2_PROPERTY_ELT.getName());
@@ -197,7 +197,7 @@ public class TInterface implements IMdaProxy {
         
     }
 
-    @objid ("78e50e1b-9475-40b3-8e4a-fc12419efd33")
+    @objid ("497882d8-623a-4c42-8cbb-b17cb8198ed0")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -210,7 +210,7 @@ public class TInterface implements IMdaProxy {
      * null
      * 
      */
-    @objid ("a8dfbc05-7109-4c2b-823f-7da202d861ee")
+    @objid ("518f747f-eb03-4918-97de-e67f9db82fdd")
     public boolean removeOperation(final TOperation obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -230,7 +230,7 @@ public class TInterface implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("1176566c-fb11-449e-9e24-e2f92dc521c1")
+    @objid ("afcfd590-8d7f-4f53-9a3d-b058293f85d2")
     public void setName(final String value) {
         this.elt.setProperty(TInterface.MdaTypes.STEREOTYPE_ELT,
                              TInterface.MdaTypes.NAME_PROPERTY_ELT.getName(),
@@ -242,36 +242,36 @@ public class TInterface implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("b87c6df2-b075-4fc7-84da-8e7312874113")
+    @objid ("76bb62f7-dcd9-46fc-9b4a-f66dcf30e992")
     public void setPropertyTypeDefinition2(final String value) {
         this.elt.setProperty(TInterface.MdaTypes.STEREOTYPE_ELT,
                              TInterface.MdaTypes.PROPERTYTYPEDEFINITION2_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(TInterface.MdaTypes.PROPERTYTYPEDEFINITION2_PROPERTY_ELT, value));
     }
 
-    @objid ("f401b05c-d1d4-4490-86f4-6e24dc62c6f4")
+    @objid ("77322112-6cbe-4ae2-aa24-5be39343ddad")
     protected  TInterface(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("cd2be280-cf56-491a-9c2f-c8d7562f9181")
     public static final class MdaTypes {
-        @objid ("64763d5a-b206-4063-81a3-3cae877046ca")
+        @objid ("bff40b7d-9944-40c0-b568-b8d43d6726cb")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("b6629e63-f36d-471a-a064-9a538b169fd2")
+        @objid ("176d3ada-f277-4c7d-af90-b771c129de5a")
         public static PropertyDefinition NAME_PROPERTY_ELT;
 
-        @objid ("332dbe92-29be-4af6-9b65-2cfcf57a4cf3")
+        @objid ("c7473929-73b6-4dd3-8ecf-4071a7f03e26")
         public static PropertyDefinition PROPERTYTYPEDEFINITION2_PROPERTY_ELT;
 
-        @objid ("ca324082-8cb7-4b1c-859a-17e937cc1eb2")
+        @objid ("8c1e4b5d-a7a8-4fae-9d94-acad1e1e6d71")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("298d48d6-7e3b-4e57-93c4-7a16910f24bd")
+        @objid ("038f2e3f-0f57-4ad2-92f3-a81df8927f7a")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("696fdc57-9b98-419d-bcdd-649a28a5352c")
+        @objid ("79418de7-0b63-47aa-8ab0-63d20daf7272")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

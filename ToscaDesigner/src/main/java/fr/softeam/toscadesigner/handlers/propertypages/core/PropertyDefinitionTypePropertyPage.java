@@ -1,11 +1,12 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
+import java.util.ArrayList;
+import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifacts;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.GeneralClass;
+import org.modelio.metamodel.uml.statik.DataType;
 
 @objid ("1c6a520c-04ce-41e5-9556-bd2f87af180b")
 public class PropertyDefinitionTypePropertyPage<T extends PropertyDefinitionType> extends ToscaElementPropertyPage<T> {
@@ -23,9 +24,8 @@ public class PropertyDefinitionTypePropertyPage<T extends PropertyDefinitionType
             this._element.getElement().setName(value);
             break;
         
-        case 2:    
-            
-        this._element.getElement().setValue(value);
+        case 2:
+            this._element.getElement().setValue(value);
             break;
         }
     }
@@ -35,7 +35,23 @@ public class PropertyDefinitionTypePropertyPage<T extends PropertyDefinitionType
     public void update(IModulePropertyTable table) {
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
+        
         table.addProperty("Type", _element.getElement().getValue());
+    }
+
+    @objid ("90c3a132-16c6-44c3-ae50-3e281c0450d7")
+    enum PrimitiveType {
+        @objid ("08936dad-7000-4dc8-ab16-4fa6729bb43b")
+        IntType,
+        @objid ("d55c4fcd-797a-439a-90ce-974df702743f")
+        StringType,
+        @objid ("ac478852-3be6-46b4-94f3-9b3b9966499e")
+        BooleanType,
+        @objid ("5c991fdf-d3a0-4017-ad51-6b33ede83067")
+        FloatType,
+        @objid ("dd011c2d-7afc-44a8-83c7-6bf5c6ea783b")
+        DoubleType;
+
     }
 
 }
