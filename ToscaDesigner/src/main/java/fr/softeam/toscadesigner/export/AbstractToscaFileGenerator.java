@@ -12,14 +12,12 @@ import java.util.stream.Stream;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.FileDialog;
-import org.modelio.api.modelio.model.PropertyConverter;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.statik.Association;
 import org.modelio.metamodel.uml.statik.Attribute;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.smkernel.mapi.MObject;
-import org.modelio.vcore.smkernel.mapi.MRef;
 
 import com.github.jknack.handlebars.Handlebars;
 import com.github.jknack.handlebars.Options;
@@ -29,10 +27,10 @@ import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
 
 import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TRequirement;
+import fr.softeam.toscadesigner.api.tosca.standard.attribute.TRequirementDefinition;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
-import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
 
 public abstract class AbstractToscaFileGenerator {
 	protected Handlebars handlebars = setupHandlebars();
@@ -67,9 +65,17 @@ public abstract class AbstractToscaFileGenerator {
 					
 					TRequirement tRequirement = TRequirement.safeInstantiate((Attribute) context);
 					if (searchedPropertyName.equals("node")) {
-						propertyStringValue = tRequirement.getNode();
+						propertyStringValue = tRequirement.getNode().getName();
 					} else if (searchedPropertyName.equals("capability")) {
-						propertyStringValue = tRequirement.getCapability();
+						propertyStringValue = tRequirement.getCapability().getElement().getName();
+					}
+				} else if (stereotype.getName().equals("TRequirementDefinition")) {
+					
+					TRequirementDefinition tRequirementDefinition = TRequirementDefinition.safeInstantiate((Attribute) context);
+					if (searchedPropertyName.equals("node")) {
+						propertyStringValue = tRequirementDefinition.getNodeType().getName();
+					} else if (searchedPropertyName.equals("capability")) {
+						propertyStringValue = tRequirementDefinition.getCapability().getElement().getName();
 					}
 				} else if (stereotype.getName().equals("TRelationshipTemplate")) {
 					if (searchedPropertyName.equals("type")) {

@@ -2,8 +2,16 @@
 node_types:
   {{owner.name}}.{{name}}:
 {{#if (getProperty this "description")}}   description: {{getProperty this "description"}}
-{{/if}}{{#if (getProperty this "derivedFrom")}}    derived_from: {{getProperty this "derivedFrom"}}
-{{/if}}metadata:
+{{/if}}{{#if (getProperty this "derivedFrom")}}    derived_from: {{getProperty this "derivedFrom"}}{{/if}}
+    metadata:
       targetNamespace: "{{getProperty this "targetNamespace"}}"
       abstract: "{{getProperty this "abstract"}}"
       final: "{{getProperty this "final"}}"
+    {{#unless (noStereotypeApplications this "TRequirementDefinitionType")}}requirements:{{/unless}}
+	{{#each ownedElement}}{{#extension}}{{#eq name "TRequirementDefinitionType"}}{{#each ../ownedAttribute}}{{#extension}}{{#eq name "TRequirementDefinition"}}
+      - {{../name}}:
+          capability: {{getProperty ../this "capability"}}
+          relationship: {{getProperty ../this "relationshipType"}}
+          occurrences: [{{getProperty ../this "lowerBound"}}, {{getProperty ../this "upperBound"}}]
+    {{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
+	  

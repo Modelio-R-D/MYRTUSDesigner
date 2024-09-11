@@ -933,7 +933,6 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-
             <Stereotype name="TRequirement" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TRequirement.label" uid="f0ddd3c2-c7ec-4156-84b0-d31b76098b17" is-abstract="false">
                 <Icon path="res/icon/gui/requirements2-24.png"/>
                 <Image path="res/icon/gui/requirements2-48.png"/>
@@ -1165,7 +1164,6 @@
                     <HParameter name="name" value="TopologyTemplate"/>
                 </Handler>
             </Tool>
-
             <Tool id="Property_(Node_Type)" label="%tool.Property_(Node_Type).label" tooltip="%tool.Property_(Node_Type).tooltip" image="res/icon/gui/PropertyDefinitionType24.png">
                 <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeType"/>
                 <Handler class="Box">
