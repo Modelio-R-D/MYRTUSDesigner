@@ -1,8 +1,14 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
+import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.Metamodel;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.vcore.session.api.model.IMObjectFilter;
+import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("fe907769-1d75-4335-8f0c-89260a0dca54")
 public class TPropertyDefPropertyPage<T extends TPropertyDef> extends ToscaElementPropertyPage<T> {
@@ -16,8 +22,14 @@ public class TPropertyDefPropertyPage<T extends TPropertyDef> extends ToscaEleme
     @Override
     public void changeProperty(int row, String value) {
         switch (row) {
+        
         case 1:
-            this._element.getElement().setName(value);
+            for (ModelElement el : PropertyDefinitionType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+                if (value.contains(el.getUuid())) {
+                    this._element.setName(
+                            PropertyDefinitionType.instantiate((org.modelio.metamodel.uml.statik.Attribute) el));
+                }
+            }
             break;
         
         case 2:
@@ -30,7 +42,15 @@ public class TPropertyDefPropertyPage<T extends TPropertyDef> extends ToscaEleme
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
-        table.addProperty("Name", _element.getElement().getName());
+        table.addProperty("Name",
+                this._element.getName() != null ? this._element.getName().getElement()
+                        : null,
+                Arrays.asList(Metamodel.getMClass("Attribute")), new IMObjectFilter() {
+                    @Override
+                    public boolean accept(MObject element) {
+                        return PropertyDefinitionType.canInstantiate(element);
+                    }
+                });
         table.addProperty("Value", _element.getElement().getValue());
     }
 

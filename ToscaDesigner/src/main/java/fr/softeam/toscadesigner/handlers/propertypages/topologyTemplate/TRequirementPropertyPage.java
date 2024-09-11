@@ -1,17 +1,21 @@
 package fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate;
 
 import java.util.Arrays;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.attribute.TRequirement;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
-import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
+
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
+import fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityDefinition;
+import fr.softeam.toscadesigner.api.tosca.standard.attribute.TRequirement;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
+import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 
 @objid ("2f77160e-23d4-4fae-b3e2-c6bbee980d2e")
 public class TRequirementPropertyPage<T extends TRequirement> extends ToscaElementPropertyPage<T> {
@@ -43,9 +47,9 @@ public class TRequirementPropertyPage<T extends TRequirement> extends ToscaEleme
             }
             break;
         case 4:
-            for (ModelElement dep : TCapabilityDefinitionsType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+            for (ModelElement dep : TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
-                    this._element.setCapability(TCapabilityDefinitionsType .instantiate((org.modelio.metamodel.uml.statik.Class) dep));
+                    this._element.setCapability(TCapabilityDefinition .instantiate((org.modelio.metamodel.uml.statik.Attribute) dep));
                 }
             }
             break;
@@ -77,10 +81,10 @@ public class TRequirementPropertyPage<T extends TRequirement> extends ToscaEleme
         // Capability
         table.addProperty("Capability",
                 this._element.getCapability() != null ? this._element.getCapability().getElement() : null,
-                Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+                Arrays.asList(Metamodel.getMClass("Attribute")), new IMObjectFilter() {
                     @Override
                     public boolean accept(MObject element) {
-                        return TCapabilityDefinitionsType.canInstantiate(element);
+                        return TCapabilityDefinition.canInstantiate(element);
                     }
                 });
     }
