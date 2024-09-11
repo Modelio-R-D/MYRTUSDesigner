@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 10/09/2024 16:32 by Modelio Studio.
+ * This file was generated on 11/09/2024 11:45 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.attribute;
 
@@ -40,13 +40,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("852b71fd-c5a6-4ed8-a584-41151572f10f")
 public class TPropertyDef implements IMdaProxy {
-    @objid ("05904854-66a0-4476-804c-c8f7a494167e")
+    @objid ("164f3206-f298-4f8a-8242-d731f496e079")
     public static final String STEREOTYPE_NAME = "TPropertyDef";
 
     /**
      * The underlying {@link Attribute} represented by this proxy, never null.
      */
-    @objid ("40928941-3443-4949-b440-402a70efdfc8")
+    @objid ("c52e16e8-314b-4d86-8631-9a79ff8c4132")
     protected final Attribute elt;
 
     /**
@@ -56,7 +56,7 @@ public class TPropertyDef implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("750a34e0-5ebf-4b0b-8c06-cfef3bb373aa")
+    @objid ("244a3fba-457f-42ff-ac29-3d29cee852fe")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Attribute) && (TPropertyDef.MdaTypes.STEREOTYPE_ELT!=null) && ((Attribute) elt).isStereotyped(TPropertyDef.MdaTypes.STEREOTYPE_ELT));
     }
@@ -66,7 +66,7 @@ public class TPropertyDef implements IMdaProxy {
      * 
      * @return a {@link TPropertyDef} proxy on the created {@link Attribute}.
      */
-    @objid ("362c2e25-a922-4d79-ac70-e27a6d811310")
+    @objid ("1d945493-fb81-40ac-bff5-da78cf4230cf")
     public static TPropertyDef create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Attribute");
         e.getExtension().add(TPropertyDef.MdaTypes.STEREOTYPE_ELT);
@@ -80,7 +80,7 @@ public class TPropertyDef implements IMdaProxy {
      * @param obj a Attribute
      * @return a {@link TPropertyDef} proxy or <i>null</i>.
      */
-    @objid ("ce521f9f-3853-4bf5-9791-12c5b271d33a")
+    @objid ("1b8fcd8a-d0be-454b-9242-bc820e654f72")
     public static TPropertyDef instantiate(final Attribute obj) {
         return TPropertyDef.canInstantiate(obj) ? new TPropertyDef(obj) : null;
     }
@@ -93,7 +93,7 @@ public class TPropertyDef implements IMdaProxy {
      * @return a {@link TPropertyDef} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("520bff24-6e0c-4016-895d-073865fc1667")
+    @objid ("4b7df755-0175-4f7c-b9ff-d202f9813407")
     public static TPropertyDef safeInstantiate(final Attribute obj) throws IllegalArgumentException {
         if (TPropertyDef.canInstantiate(obj))
         	return new TPropertyDef(obj);
@@ -101,7 +101,7 @@ public class TPropertyDef implements IMdaProxy {
         	throw new IllegalArgumentException("TPropertyDef: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("0cdf81f1-eb92-4adb-bda4-1f68e94ed9bd")
+    @objid ("7753041d-1297-46d0-bd47-380639de955c")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -121,35 +121,80 @@ public class TPropertyDef implements IMdaProxy {
      * Get the underlying {@link Attribute}. 
      * @return the Attribute represented by this proxy, never null.
      */
-    @objid ("ee3d0ee5-0f42-4286-9bd1-f579a7bd4431")
+    @objid ("94049690-c2a7-4d73-a83c-108488373db8")
     public Attribute getElement() {
         return this.elt;
     }
 
-    @objid ("2c8b4b8b-7a08-4bfb-9ed0-070df8d3ffc2")
+    /**
+     * Get the value of the 'name' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    @objid ("8618a311-9135-4262-a098-9a84a4f838aa")
+    public PropertyDefinitionType getName() {
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+              if (d.isStereotyped(TPropertyDef.MdaTypes.MDAASSOCDEP)
+                  && Objects.equals(d.getTagValue(TPropertyDef.MdaTypes.MDAASSOCDEP_ROLE), "name")
+                  && PropertyDefinitionType.canInstantiate(d.getDependsOn())) {
+                     return (PropertyDefinitionType)ToscaDesignerProxyFactory.instantiate(d.getDependsOn(), PropertyDefinitionType.MdaTypes.STEREOTYPE_ELT.getName());
+              }
+        }
+        return null;
+    }
+
+    @objid ("970caf90-09df-48da-817c-e8e7bc331376")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
         
     }
 
-    @objid ("2a980456-190b-4ddc-88f1-92d83475a62a")
+    /**
+     * Set the value of the 'name' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    @objid ("0c0b3631-c1e2-4155-a273-296c70656df1")
+    public void setName(final PropertyDefinitionType obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getDependsOnDependency())
+          if (d.isStereotyped(TPropertyDef.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(TPropertyDef.MdaTypes.MDAASSOCDEP_ROLE), "name")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if(dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
+              dep = session.getModel().createDependency(this.elt, obj.getElement(), TPropertyDef.MdaTypes.MDAASSOCDEP);
+              dep.setName("name");      dep.putTagValue(TPropertyDef.MdaTypes.MDAASSOCDEP_ROLE, "name");
+          }
+          dep.setDependsOn(obj.getElement());
+        }
+        
+    }
+
+    @objid ("d5ba8849-98fa-45f4-91f9-b00513f4e9f9")
     protected  TPropertyDef(final Attribute elt) {
         this.elt = elt;
     }
 
     @objid ("38033de9-5f63-44ad-9149-ce0ea1c852b5")
     public static final class MdaTypes {
-        @objid ("00e6aace-a42e-4855-889b-b6d495a6d041")
+        @objid ("1eca91f4-faaf-404d-92b8-ffefeb70f9f1")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("eb460c80-5c86-49d3-b84f-6279f369b23f")
+        @objid ("8787faf4-5752-409f-ad11-4c2c1250100d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("a80de2f2-d981-40fb-b374-b8d2fee9cfc2")
+        @objid ("fb278c55-b236-4dc5-85bf-a85f33e0dd17")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("213ce995-ff72-425b-8e78-9f941da2f9f4")
+        @objid ("47d70584-342a-4b03-a564-6174030c83d4")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
