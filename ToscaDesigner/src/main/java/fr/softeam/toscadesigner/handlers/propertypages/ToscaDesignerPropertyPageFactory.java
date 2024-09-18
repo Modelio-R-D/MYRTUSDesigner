@@ -11,6 +11,7 @@ import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import fr.softeam.toscadesigner.handlers.propertypages.core.MetadataPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.PropertyDefinitionTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TPolicyPropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.core.TPolicyTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TPropertyDefPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TCapabilityDefinitionPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TCapabilityDefinitionsTypePropertyPage;
@@ -174,6 +175,8 @@ public class ToscaDesignerPropertyPageFactory {
         @Override
         public final Object visitModelElement(ModelElement obj) {
             switch (this.stName) {
+            case fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TPolicyType.STEREOTYPE_NAME: return new TPolicyTypePropertyPage<>(fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TPolicyType.instantiate(obj));
+            
             default:
                 break;
             }

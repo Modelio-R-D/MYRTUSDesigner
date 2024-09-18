@@ -1,11 +1,9 @@
 package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinitionType;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("c757eb57-dab6-4fc3-8fd8-6f094926a62c")
 public class TRequirementDefinitionTypePropertyPage<T extends TRequirementDefinitionType> extends ToscaElementPropertyPage<T> {
@@ -26,12 +24,12 @@ public class TRequirementDefinitionTypePropertyPage<T extends TRequirementDefini
         
         }
     }
-    
+
+    @objid ("600d81b9-9625-4ce5-9cd8-1b4e5ed141cd")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
-
     }
 
 }
