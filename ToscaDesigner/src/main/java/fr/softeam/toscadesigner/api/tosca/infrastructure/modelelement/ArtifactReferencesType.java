@@ -39,13 +39,14 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("53e27f1e-e444-4ed5-aae5-359402233ee6")
 public class ArtifactReferencesType implements IMdaProxy {
-    @objid ("6055a64f-8013-474d-bdae-204143d3e2f7")
+    @objid ("707bf013-48ba-43c9-97c5-8df871adbd71")
     public static final String STEREOTYPE_NAME = "ArtifactReferencesType";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
+     * 
      */
-    @objid ("0b963af3-3b9e-47bd-b33a-306a7481ac67")
+    @objid ("dd8783fa-9ed7-45ba-a5de-bdf39ba57a80")
     protected final ModelElement elt;
 
     /**
@@ -55,17 +56,16 @@ public class ArtifactReferencesType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("fe5f35c3-d80b-439e-9071-667eca41309f")
+    @objid ("912bf877-6a51-4b06-bd88-c76b65819fab")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (ArtifactReferencesType.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(ArtifactReferencesType.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link ModelElement} stereotyped << ArtifactReferencesType >> then instantiate a {@link ArtifactReferencesType} proxy.
-     * 
      * @return a {@link ArtifactReferencesType} proxy on the created {@link ModelElement}.
      */
-    @objid ("5a653267-f2b1-4045-a11c-b1d9c62e72a4")
+    @objid ("0f253c13-37ee-4aa5-b31a-2c282c4a2864")
     public static ArtifactReferencesType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(ArtifactReferencesType.MdaTypes.STEREOTYPE_ELT);
@@ -79,7 +79,7 @@ public class ArtifactReferencesType implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link ArtifactReferencesType} proxy or <i>null</i>.
      */
-    @objid ("d7f81483-b76b-45d2-9aab-7139fe501b46")
+    @objid ("40184b94-d92a-4bda-8692-2bcc06329024")
     public static ArtifactReferencesType instantiate(final ModelElement obj) {
         return ArtifactReferencesType.canInstantiate(obj) ? new ArtifactReferencesType(obj) : null;
     }
@@ -88,25 +88,24 @@ public class ArtifactReferencesType implements IMdaProxy {
      * Tries to instantiate a {@link ArtifactReferencesType} proxy from a {@link ModelElement} stereotyped << ArtifactReferencesType >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link ModelElement}
      * @return a {@link ArtifactReferencesType} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("8e95386d-4957-4173-b482-0c904b239dfe")
+    @objid ("3592cc14-7eda-4aa3-9d6b-b8fb69c31074")
     public static ArtifactReferencesType safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (ArtifactReferencesType.canInstantiate(obj))
-        	return new ArtifactReferencesType(obj);
+            return new ArtifactReferencesType(obj);
         else
-        	throw new IllegalArgumentException("ArtifactReferencesType: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ArtifactReferencesType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value of the 'artifactReference' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("0cea0e7f-2354-4c45-9477-ff54f0b6ecf9")
+    @objid ("a1e028f3-c3da-4815-9cd1-667bc7112264")
     public void addArtifactReference(final TArtifactReference obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -116,7 +115,7 @@ public class ArtifactReferencesType implements IMdaProxy {
         }
     }
 
-    @objid ("d3d43eca-c51d-4477-88e1-c9a14f9069e3")
+    @objid ("d230dace-4a62-4d25-a916-f28ced4d90b5")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -136,9 +135,8 @@ public class ArtifactReferencesType implements IMdaProxy {
      * Get the values of the 'artifactReference' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("811985c3-8300-49f2-94e8-000d521b022a")
+    @objid ("6e1d5ffc-12b3-404f-b09f-69329677535d")
     public List<TArtifactReference> getArtifactReference() {
         List<TArtifactReference> results = new ArrayList<>();
         for (Dependency d : this.elt.getImpactedDependency()) {
@@ -152,28 +150,26 @@ public class ArtifactReferencesType implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link ModelElement}. 
+     * Get the underlying {@link ModelElement}.
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("54e18c23-61e2-450d-8dc4-e4fd53dd2af0")
+    @objid ("0e5ff936-40af-4df3-91fc-d2313b034f99")
     public ModelElement getElement() {
         return this.elt;
     }
 
-    @objid ("86472c34-931d-4e55-bcc0-0df12332453f")
+    @objid ("ba935d70-cbbb-4328-9500-c3698c208e19")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-        
     }
 
     /**
      * Remove a value from 'artifactReference' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("6368e582-bc24-4884-b346-ee3eabdb63ef")
+    @objid ("58cda5ee-51a5-4f64-9853-f2e8d2df0905")
     public boolean removeArtifactReference(final TArtifactReference obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getImpactedDependency())) {
@@ -185,26 +181,25 @@ public class ArtifactReferencesType implements IMdaProxy {
           }
         }
         return false;
-        
     }
 
-    @objid ("5830885d-43e6-4fcd-9e4e-795f3181a141")
+    @objid ("3b8e1010-90a4-4b92-9896-ea94695f5091")
     protected  ArtifactReferencesType(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("9db11b9e-3143-466c-9c40-39a3d3a73230")
     public static final class MdaTypes {
-        @objid ("17752e47-cb0e-43e1-927c-8884508c260e")
+        @objid ("7a367b7a-d69d-4687-b849-7c4c7ecf7768")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("22124d4c-31c6-437e-9e09-2a743e9cc030")
+        @objid ("b4ce70f6-cb9b-48db-b247-a4a2ae825300")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("b4a1b1c3-e4b9-458c-bd4c-3763591b938e")
+        @objid ("92828129-174a-49b6-a172-4d60f1af4abb")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("5e04fc86-ba42-48e9-acc7-3acc2c704dd7")
+        @objid ("b28102f0-7168-4b6c-b2b4-2de4c176756b")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -221,7 +216,6 @@ public class ArtifactReferencesType implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
-            
         }
 
     }

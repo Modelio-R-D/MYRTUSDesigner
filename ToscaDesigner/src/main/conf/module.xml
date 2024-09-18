@@ -772,12 +772,12 @@
             <Stereotype name="TPolicyType" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.TPolicyType.label" uid="b76dbc7d-8b6f-46f8-89d4-f0ea8eea40d2" is-abstract="false">
                 <Icon path="res/icon/gui/tpolicytype24.ICON.png"/>
                 <Image path="res/icon/gui/tpolicytype48.IMAGE.png"/>
-                <PropertyTable id="TPolicyTypePropertyTable" label="%propertytable.TPolicyTypePropertyTable.label" uid="8b63b4bf-4185-48af-a337-faa6a3a19337">
-                    <PropertyDefinition id="description" label="%propertydefinition.TPolicyTypePropertyTable.description.label" default-value="" is-editable="true" uid="eb0df9aa-0b7c-4235-a8a1-f7498491e32d">
+                <PropertyTable id="TPolicyTypePropertyTable" label="%propertytable.TPolicyTypePropertyTable.label" uid="98fa2d7e-8453-4cbc-9224-3dc54fc12503">
+                    <PropertyDefinition id="description" label="%propertydefinition.TPolicyTypePropertyTable.description.label" default-value="" is-editable="true" uid="bd925b2d-cb4e-4667-86d4-feaeda676f4b">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.TPolicyTypePropertyTable.description.description</Description>
                     </PropertyDefinition>
-                    <PropertyDefinition id="policyLanguage" label="%propertydefinition.TPolicyTypePropertyTable.policyLanguage.label" default-value="" is-editable="true" uid="d2f2bc40-5d08-4ac9-a826-094f3fe2974a">
+                    <PropertyDefinition id="policyLanguage" label="%propertydefinition.TPolicyTypePropertyTable.policyLanguage.label" default-value="" is-editable="true" uid="a844e99e-6efe-4626-b992-ff0f50c5d6ff">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.TPolicyTypePropertyTable.policyLanguage.description</Description>
                     </PropertyDefinition>
@@ -1174,7 +1174,7 @@
                     <HParameter name="name" value="Property"/>
                 </Handler>
             </Tool>
-            <Tool id="Policy" label="%tool.Policy.label" tooltip="%tool.Policy.tooltip" image="res/icon/gui/tpolicy48.ICON.png">
+            <Tool id="Policy" label="%tool.Policy.label" tooltip="%tool.Policy.tooltip" image="res/icon/gui/tpolicy24.ICON.png">
                 <Scope-source metaclass="Infrastructure.ModelElement" stereotype=""/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TPolicy"/>

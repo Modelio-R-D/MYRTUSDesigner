@@ -39,13 +39,14 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("291fadd2-5ae1-4fe1-92aa-eff52c5e8aec")
 public class TargetInterfacesType implements IMdaProxy {
-    @objid ("591ea8b4-941d-4d4f-a874-636c0895da73")
+    @objid ("b3f9d95e-74e3-4c0c-8dd2-7ddaed928729")
     public static final String STEREOTYPE_NAME = "TargetInterfacesType";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
+     * 
      */
-    @objid ("1838ef4f-d151-460b-a188-5205bf827ea3")
+    @objid ("573dbb20-9920-4f20-9d76-872ac2c5a093")
     protected final ModelElement elt;
 
     /**
@@ -55,17 +56,16 @@ public class TargetInterfacesType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("f42d3ad2-2377-44cc-bf90-4431fde8928f")
+    @objid ("11abeb53-1ea0-4acb-b3ff-ed0d3064f1a3")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (TargetInterfacesType.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(TargetInterfacesType.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link ModelElement} stereotyped << TargetInterfacesType >> then instantiate a {@link TargetInterfacesType} proxy.
-     * 
      * @return a {@link TargetInterfacesType} proxy on the created {@link ModelElement}.
      */
-    @objid ("b8f183f5-279d-4762-8ca8-3d1be8bef7b2")
+    @objid ("82b7d3db-fc4c-48ad-8780-80d04eaf20b0")
     public static TargetInterfacesType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(TargetInterfacesType.MdaTypes.STEREOTYPE_ELT);
@@ -79,7 +79,7 @@ public class TargetInterfacesType implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link TargetInterfacesType} proxy or <i>null</i>.
      */
-    @objid ("679d9e7a-7211-4d7c-a698-ada881bf350b")
+    @objid ("8bd7a80a-4e4e-4740-8360-fc2535b16c95")
     public static TargetInterfacesType instantiate(final ModelElement obj) {
         return TargetInterfacesType.canInstantiate(obj) ? new TargetInterfacesType(obj) : null;
     }
@@ -88,25 +88,24 @@ public class TargetInterfacesType implements IMdaProxy {
      * Tries to instantiate a {@link TargetInterfacesType} proxy from a {@link ModelElement} stereotyped << TargetInterfacesType >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link ModelElement}
      * @return a {@link TargetInterfacesType} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("1ef13142-e3c9-41a6-b293-fbdb659e8720")
+    @objid ("e85cedfe-14bc-4d73-8f2a-97f8d3040cf1")
     public static TargetInterfacesType safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (TargetInterfacesType.canInstantiate(obj))
-        	return new TargetInterfacesType(obj);
+            return new TargetInterfacesType(obj);
         else
-        	throw new IllegalArgumentException("TargetInterfacesType: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("TargetInterfacesType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'interface' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("e0104d70-f1ed-4d1e-8fb6-24c63ea75d1e")
+    @objid ("caeea49d-2e53-4214-940c-bcef35c0c35d")
     public void addInterface(final TInterface obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -116,7 +115,7 @@ public class TargetInterfacesType implements IMdaProxy {
         }
     }
 
-    @objid ("92057f74-176c-4b1a-bfa5-0238e1a04440")
+    @objid ("fb75bd89-b881-4a9f-86c7-1605638e296a")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -133,10 +132,10 @@ public class TargetInterfacesType implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link ModelElement}. 
+     * Get the underlying {@link ModelElement}.
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("7a14c834-02d9-4d07-9cd1-be631cb4ce94")
+    @objid ("fe5683b3-25cd-405c-817f-7e1e6132c5d8")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -145,9 +144,8 @@ public class TargetInterfacesType implements IMdaProxy {
      * Get the values of the 'interface' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("005c2804-189a-418c-9465-5a778642c0ee")
+    @objid ("9dcc5b8d-ed43-40ee-9c0a-66334cab4cc0")
     public List<TInterface> getInterface() {
         List<TInterface> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -159,20 +157,18 @@ public class TargetInterfacesType implements IMdaProxy {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("bbc95c49-a1fe-4543-8c25-7898eb32b464")
+    @objid ("5630a3c0-04e1-4972-a94d-f5a5efbd4f4a")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-        
     }
 
     /**
      * Remove a value from the 'interface' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("f5678212-2d7f-4a19-8fd8-7abb843740a7")
+    @objid ("de3632df-f6c6-4821-b8a0-3115ea557c21")
     public boolean removeInterface(final TInterface obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -184,26 +180,25 @@ public class TargetInterfacesType implements IMdaProxy {
           }
         }
         return false;
-        
     }
 
-    @objid ("4adb3fc1-3c2c-4de4-bb19-4f91fd273b0d")
+    @objid ("c8b25a40-f4cf-400c-a24d-230c597e4eb8")
     protected  TargetInterfacesType(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("22fea610-eb65-4706-a736-f2fc2df391ce")
     public static final class MdaTypes {
-        @objid ("9b8ab9b1-f81d-4ec1-86ef-5e09293050da")
+        @objid ("a063d684-2f93-4275-8b94-25b3e11d236e")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("04b1621a-f44a-404d-8bc1-7810fdd0ead8")
+        @objid ("c3ae2467-eada-4a7c-8318-4a01a6737443")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("434a6efa-865c-4238-89b9-8b57923424dd")
+        @objid ("2bf95347-0f70-4816-9604-b3eafd88bcc4")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("15f8ca2d-0b01-4993-a956-a7b7007c6206")
+        @objid ("2fcba817-2d8b-4b26-944a-73c711fb1451")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -220,7 +215,6 @@ public class TargetInterfacesType implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
-            
         }
 
     }
