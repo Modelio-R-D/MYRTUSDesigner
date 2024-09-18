@@ -26,6 +26,7 @@ import com.github.jknack.handlebars.helper.ConditionalHelpers;
 import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
 
 import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
+import fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityDefinition;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TRequirement;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TRequirementDefinition;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
@@ -76,6 +77,12 @@ public abstract class AbstractToscaFileGenerator {
 						propertyStringValue = tRequirementDefinition.getNodeType().getName();
 					} else if (searchedPropertyName.equals("capability")) {
 						propertyStringValue = tRequirementDefinition.getCapability().getElement().getName();
+					} else if (searchedPropertyName.equals("relationshipType")) {
+						propertyStringValue = tRequirementDefinition.getRelationshipType().getElement().getName();
+					} else if (searchedPropertyName.equals("lowerBound")) {
+						propertyStringValue = tRequirementDefinition.getLowerBound();
+					} else if (searchedPropertyName.equals("upperBound")) {
+						propertyStringValue = tRequirementDefinition.getUpperBound();
 					}
 				} else if (stereotype.getName().equals("TRelationshipTemplate")) {
 					if (searchedPropertyName.equals("type")) {
@@ -89,6 +96,11 @@ public abstract class AbstractToscaFileGenerator {
 					if (searchedPropertyName.equals("nodeType")) {
 						TNodeType nodeType = tNodeTemplate.getNodeType();
 						propertyStringValue = nodeType.getTargetNamespace() + "." + nodeType.getElement().getName();
+					}
+				} else if (stereotype.getName().equals("TCapabilityDefinition")) {
+					TCapabilityDefinition tCapabilityDefinition = TCapabilityDefinition.safeInstantiate((Attribute)context);
+					if (searchedPropertyName.equals("capabilityType")) {
+						propertyStringValue = tCapabilityDefinition.getCapabilityType();
 					}
 				}
 				// if it didn't find the property with this stereotype, look for the parent
@@ -118,13 +130,9 @@ public abstract class AbstractToscaFileGenerator {
 				TNodeType tNodeType = TNodeType.safeInstantiate((Class) context);
 
 				// 1. Check for non-tosca derived type
-//				Stereotype stereotype = ToscaDesignerModule.getInstance().getModuleContext().getModelingSession()
-//						.getMetamodelExtensions().getStereotype("TEntityType", context.getMClass());
-				String derivedFromValue = tNodeType.getDerivedFrom(); // .getProperty(stereotype,
-																		// TEntityType.DERIVEDFROM_PROPERTY);
-				String targetNamespace = tNodeType.getTargetNamespace(); // .getProperty(stereotype,
-																			// TEntityType.TARGETNAMESPACE_PROPERTY);
 
+				String derivedFromValue = tNodeType.getDerivedFrom(); 
+				String targetNamespace = tNodeType.getTargetNamespace(); 
 				if (derivedFromValue != null && !derivedFromValue.startsWith("tosca")) {
 					imports.add(new Import(derivedFromValue + ".tosca", targetNamespace, "MYRTUS-"));
 				}

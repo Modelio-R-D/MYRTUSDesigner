@@ -12,6 +12,11 @@ node_types:
       - {{../name}}:
           capability: {{getProperty ../this "capability"}}
           relationship: {{getProperty ../this "relationshipType"}}
-          occurrences: [{{getProperty ../this "lowerBound"}}, {{getProperty ../this "upperBound"}}]
+          occurrences: [{{../multiplicityMin}}, {{../multiplicityMax}}]
     {{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
-	  
+	{{#unless (noStereotypeApplications this "CapabilityDefinitionsType")}}capabilities:{{/unless}}
+    {{#each ownedElement}}{{#extension}}{{#eq name "CapabilityDefinitionsType"}}{{#each ../ownedAttribute}}{{#extension}}{{#eq name "TCapabilityDefinition"}}
+      {{../name}}:
+        occurrences: [{{../multiplicityMin}}, {{../multiplicityMax}}]
+        type: tosca.capabilities.Endpoint
+    {{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
