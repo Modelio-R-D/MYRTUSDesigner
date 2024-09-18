@@ -33,68 +33,74 @@ import org.modelio.vcore.smkernel.mapi.MObject;
 import org.modelio.vcore.smkernel.mapi.MRef;
 
 /**
- * Proxy class to handle a {@link ModelElement} with << TExtensions >> stereotype.
+ * Proxy class to handle a {@link ModelElement} with << TPolicyType >> stereotype.
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-@objid ("ef04280f-fd40-44fc-bfd3-b4336434c298")
-public class TExtensions extends TExtensibleElements implements IMdaProxy {
-    @objid ("79a1941a-e9c2-4d92-9b2c-3a37a03433ce")
-    public static final String STEREOTYPE_NAME = "TExtensions";
+@objid ("d8f6bcbc-5d73-47fd-bdcb-e62323e3b646")
+public class TPolicyType implements IMdaProxy {
+    @objid ("fe990083-7f41-4c54-a56c-6ff23667ed9f")
+    public static final String STEREOTYPE_NAME = "TPolicyType";
 
     /**
-     * Tells whether a {@link TExtensions proxy} can be instantiated from a {@link MObject} checking it is a {@link ModelElement} stereotyped << TExtensions >>.
+     * The underlying {@link ModelElement} represented by this proxy, never null.
+     */
+    @objid ("990ae03a-7ea1-49c2-a977-77d2d6aab6ce")
+    protected final ModelElement elt;
+
+    /**
+     * Tells whether a {@link TPolicyType proxy} can be instantiated from a {@link MObject} checking it is a {@link ModelElement} stereotyped << TPolicyType >>.
      * <p>
      * The method returns <code>false</code> if the instantiation cannot be carried out.
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("7abba728-f591-4902-a27e-1e6fd02bc858")
+    @objid ("e8d2934d-a84b-4c29-ab02-1678e1968070")
     public static boolean canInstantiate(final MObject elt) {
-        return ((elt instanceof ModelElement) && (TExtensions.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(TExtensions.MdaTypes.STEREOTYPE_ELT));
+        return ((elt instanceof ModelElement) && (TPolicyType.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(TPolicyType.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
-     * Create a new {@link ModelElement} stereotyped << TExtensions >> then instantiate a {@link TExtensions} proxy.
+     * Create a new {@link ModelElement} stereotyped << TPolicyType >> then instantiate a {@link TPolicyType} proxy.
      * 
-     * @return a {@link TExtensions} proxy on the created {@link ModelElement}.
+     * @return a {@link TPolicyType} proxy on the created {@link ModelElement}.
      */
-    @objid ("adfe59e3-2235-4a9f-9814-005be09f0532")
-    public static TExtensions create(final IModelingSession session) {
+    @objid ("89ae45f5-abb0-4d22-9184-3ae44ff188ed")
+    public static TPolicyType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
-        e.getExtension().add(TExtensions.MdaTypes.STEREOTYPE_ELT);
-        return TExtensions.instantiate((ModelElement)e);
+        e.getExtension().add(TPolicyType.MdaTypes.STEREOTYPE_ELT);
+        return TPolicyType.instantiate((ModelElement)e);
     }
 
     /**
-     * Tries to instantiate a {@link TExtensions} proxy from a {@link ModelElement} stereotyped << TExtensions >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link TPolicyType} proxy from a {@link ModelElement} stereotyped << TPolicyType >> checking its metaclass and its stereotype. 
      * <p>
      * The method returns <i>null</i> if the instantiation cannot be carried out.
      * @param obj a ModelElement
-     * @return a {@link TExtensions} proxy or <i>null</i>.
+     * @return a {@link TPolicyType} proxy or <i>null</i>.
      */
-    @objid ("0a8f4bda-8836-4544-bf3d-19655913013a")
-    public static TExtensions instantiate(final ModelElement obj) {
-        return TExtensions.canInstantiate(obj) ? new TExtensions(obj) : null;
+    @objid ("e8ec164e-3d7a-4a00-ae4c-a0610bffb1c0")
+    public static TPolicyType instantiate(final ModelElement obj) {
+        return TPolicyType.canInstantiate(obj) ? new TPolicyType(obj) : null;
     }
 
     /**
-     * Tries to instantiate a {@link TExtensions} proxy from a {@link ModelElement} stereotyped << TExtensions >> checking its metaclass and its stereotype. 
+     * Tries to instantiate a {@link TPolicyType} proxy from a {@link ModelElement} stereotyped << TPolicyType >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
      * @param obj a {@link ModelElement}
-     * @return a {@link TExtensions} proxy.
+     * @return a {@link TPolicyType} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("df52d591-80ce-4474-8710-8aa77f1297a4")
-    public static TExtensions safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
-        if (TExtensions.canInstantiate(obj))
-        	return new TExtensions(obj);
+    @objid ("2d35f4fb-0b7d-490d-a847-a2a7302066ea")
+    public static TPolicyType safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
+        if (TPolicyType.canInstantiate(obj))
+        	return new TPolicyType(obj);
         else
-        	throw new IllegalArgumentException("TExtensions: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("TPolicyType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("e5173703-7161-449e-a5a9-54f9d9b7e50a")
+    @objid ("2ea8c5bd-392e-4b36-87e8-dc3ba8799d79")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -106,7 +112,7 @@ public class TExtensions extends TExtensibleElements implements IMdaProxy {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        TExtensions other = (TExtensions) obj;
+        TPolicyType other = (TPolicyType) obj;
         return java.util.Objects.equals(getElement(), other.getElement());
     }
 
@@ -114,40 +120,39 @@ public class TExtensions extends TExtensibleElements implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("3f75c772-d017-4efe-894f-9ca6c20e896f")
-    @Override
+    @objid ("9ab2f859-117f-450a-a657-286b5fe51b92")
     public ModelElement getElement() {
-        return (ModelElement)super.getElement();
+        return this.elt;
     }
 
-    @objid ("cbc794fc-26f1-4f80-90ab-84e23241b6d7")
+    @objid ("112da822-ad07-4fec-9ee5-dbcaf64ceacc")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
         
     }
 
-    @objid ("a8870ad4-e00f-4f41-9ac1-2243c1834d77")
-    protected  TExtensions(final ModelElement elt) {
-        super(elt);
+    @objid ("fac94ef3-f6d8-409f-a97a-540d358177cf")
+    protected  TPolicyType(final ModelElement elt) {
+        this.elt = elt;
     }
 
-    @objid ("1fa0b1e4-f027-4d15-b558-81147ab0f197")
+    @objid ("1f01f3f5-4dca-4580-8f96-331b8fbcf9b7")
     public static final class MdaTypes {
-        @objid ("e030d5c4-9474-4b7c-8555-686bd0236026")
+        @objid ("f8cb35c6-e49c-4826-9453-632201c3d4ac")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("28362093-b1a7-428d-8179-201a94d404a5")
+        @objid ("6e40dc79-6804-4839-be55-0ecb0f882545")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("8af3024f-82fc-4896-ac06-ffd7df3e295f")
+        @objid ("554fd188-1795-480d-adf3-0fc0c7c7899b")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("4e2bb32c-b5b0-4862-a1e3-944afbfa749e")
+        @objid ("7d65f530-4196-4eb0-bbbe-9c6d8763c9e3")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
-            mRef = new MRef(Stereotype.MQNAME, "b4e0c420-7fe8-4cd6-ade7-67b1d8957c5a", "TExtensions");
+            mRef = new MRef(Stereotype.MQNAME, "b76dbc7d-8b6f-46f8-89d4-f0ea8eea40d2", "TPolicyType");
             STEREOTYPE_ELT = (Stereotype) session.findByRef(mRef);
             if (STEREOTYPE_ELT==null) missingRefs.add(mRef);
             

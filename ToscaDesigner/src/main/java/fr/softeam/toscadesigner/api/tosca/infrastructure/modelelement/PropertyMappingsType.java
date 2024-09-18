@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 18/09/2024 12:01 by Modelio Studio.
+ * This file was generated on 18/09/2024 12:38 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -39,13 +39,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("8477852b-e430-4ae8-ace4-0bdb34de6b52")
 public class PropertyMappingsType implements IMdaProxy {
-    @objid ("29351b09-4938-42d0-bb42-2fd22be46094")
+    @objid ("f14a2e43-e23b-4e8b-9cbc-b10370f0c5d8")
     public static final String STEREOTYPE_NAME = "PropertyMappingsType";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
      */
-    @objid ("6b9aa0e3-41c3-438d-818e-f1575f992446")
+    @objid ("da2dc6f9-378d-4769-a840-987b4086d83e")
     protected final ModelElement elt;
 
     /**
@@ -55,7 +55,7 @@ public class PropertyMappingsType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("45de5e9d-a049-44c3-bb27-608e872e8a30")
+    @objid ("a7844270-541f-4c5a-855f-cd14aa3bf978")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (PropertyMappingsType.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(PropertyMappingsType.MdaTypes.STEREOTYPE_ELT));
     }
@@ -65,7 +65,7 @@ public class PropertyMappingsType implements IMdaProxy {
      * 
      * @return a {@link PropertyMappingsType} proxy on the created {@link ModelElement}.
      */
-    @objid ("370a572d-772a-47be-90f6-e19a0c6a32c3")
+    @objid ("8a9206d3-4997-44f6-8ead-41df704bb1cf")
     public static PropertyMappingsType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(PropertyMappingsType.MdaTypes.STEREOTYPE_ELT);
@@ -79,7 +79,7 @@ public class PropertyMappingsType implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link PropertyMappingsType} proxy or <i>null</i>.
      */
-    @objid ("d56fec4c-9e73-4c38-9f9f-ea6a6886e21c")
+    @objid ("72f83ca5-4dd3-401c-829d-96d80336fd68")
     public static PropertyMappingsType instantiate(final ModelElement obj) {
         return PropertyMappingsType.canInstantiate(obj) ? new PropertyMappingsType(obj) : null;
     }
@@ -92,7 +92,7 @@ public class PropertyMappingsType implements IMdaProxy {
      * @return a {@link PropertyMappingsType} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("65f6f7fa-7e88-439d-8511-3f9a57e021fc")
+    @objid ("fe5845d9-cf74-40da-bbd4-1219abde3938")
     public static PropertyMappingsType safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (PropertyMappingsType.canInstantiate(obj))
         	return new PropertyMappingsType(obj);
@@ -106,7 +106,7 @@ public class PropertyMappingsType implements IMdaProxy {
      * null
      * 
      */
-    @objid ("c763740c-3720-4f1a-8f78-eea4abc9e2ca")
+    @objid ("22ab90d8-caf9-47bd-9a51-194655d19e45")
     public void addPropertyMapping(final TPropertyMapping obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -116,7 +116,7 @@ public class PropertyMappingsType implements IMdaProxy {
         }
     }
 
-    @objid ("dac4c4ef-b63d-447b-a992-5432fb8e6b6e")
+    @objid ("dae41c68-27fa-4ade-a944-0201916d6cb6")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -136,7 +136,7 @@ public class PropertyMappingsType implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("a9c5d0c6-18e8-4a1c-bc32-6afefc72d4e2")
+    @objid ("86a5671f-7f5c-4e8f-8f07-2ef6020ebff7")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -147,7 +147,7 @@ public class PropertyMappingsType implements IMdaProxy {
      * null
      * 
      */
-    @objid ("f9bd35ba-e591-432f-afb3-e7a12b8bc5b2")
+    @objid ("737ad97b-a7ee-4bb0-b7ce-5f1f5113278d")
     public List<TPropertyMapping> getPropertyMapping() {
         List<TPropertyMapping> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -159,7 +159,7 @@ public class PropertyMappingsType implements IMdaProxy {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("a486b477-0201-4ef7-b820-1c87156c6242")
+    @objid ("6ed428d4-0d23-44aa-a462-f3d53b31c1e0")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -172,7 +172,7 @@ public class PropertyMappingsType implements IMdaProxy {
      * null
      * 
      */
-    @objid ("6adc2449-f8ca-4e05-8454-59b067e26a95")
+    @objid ("9f7c5eba-3c64-4006-87ba-05fec4a5bd76")
     public boolean removePropertyMapping(final TPropertyMapping obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -187,23 +187,23 @@ public class PropertyMappingsType implements IMdaProxy {
         
     }
 
-    @objid ("d2aa391b-4a52-4112-955c-e007224569f9")
+    @objid ("67da5957-8252-4e24-9be2-bc7ee94e1f30")
     protected  PropertyMappingsType(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("a1e454df-2f23-42b0-9c69-20eb90258431")
     public static final class MdaTypes {
-        @objid ("52ed2fe4-0863-4f63-b84b-f922b74b34b7")
+        @objid ("0e0ebf79-0c3a-4f59-9b5b-b9b6f85d755e")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("7fff41e4-d3a8-4f8f-9533-431225a783b5")
+        @objid ("81a781b3-6b6d-4654-a43b-b1de650d6157")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("c4f805c7-dc9a-4323-b0e4-b50dace2e334")
+        @objid ("bbe14fb6-7c1c-480e-88a4-13b978ae0093")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("c9005130-0b5a-4a22-a554-a5ffb33f11d8")
+        @objid ("3fefacf1-ccae-47c5-9d17-f3abfcc56a98")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

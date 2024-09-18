@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 18/09/2024 12:01 by Modelio Studio.
+ * This file was generated on 18/09/2024 12:38 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -39,22 +39,22 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("063c0e1a-45bf-44f9-aad6-3e60ef4f5efc")
 public class ImportElement implements IMdaProxy {
-    @objid ("017f8b71-b254-4705-9f35-8ff187e68c6a")
+    @objid ("4d25ab62-0fe2-45f2-b23a-88746f7bbe1c")
     public static final String STEREOTYPE_NAME = "ImportElement";
 
-    @objid ("c108a4e3-8bd9-40cf-9dad-9932766573c8")
+    @objid ("b82d1dd5-8db6-41ea-ac20-6cb0e14def91")
     public static final String FILE_PROPERTY = "File";
 
-    @objid ("5c9edde7-b060-4158-a805-78c4de521559")
+    @objid ("5438e273-9eeb-4e1d-937c-da46d716a06b")
     public static final String NAMESPACE_PREFIX_PROPERTY = "Namespace_prefix";
 
-    @objid ("04551050-031b-4f62-bc32-ac55a2f4fdb0")
+    @objid ("e3a73658-8f1c-4255-b8d0-bc1cecedda00")
     public static final String NAMESPACE_URI_PROPERTY = "Namespace_uri";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
      */
-    @objid ("49ac7265-03fb-4404-a5eb-de0ad8bdbff6")
+    @objid ("a76b5b8c-858d-40fc-af9c-6681c1fa81a1")
     protected final ModelElement elt;
 
     /**
@@ -64,7 +64,7 @@ public class ImportElement implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("94e24c88-9d00-406b-8d16-ca2dac049f02")
+    @objid ("6e10030f-8130-4c53-a14e-334f1749e862")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (ImportElement.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(ImportElement.MdaTypes.STEREOTYPE_ELT));
     }
@@ -74,7 +74,7 @@ public class ImportElement implements IMdaProxy {
      * 
      * @return a {@link ImportElement} proxy on the created {@link ModelElement}.
      */
-    @objid ("7f985010-fe9c-48e9-abda-3e74913ecd6c")
+    @objid ("de9e5ce6-d711-41e8-96c1-aecb611b62f7")
     public static ImportElement create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(ImportElement.MdaTypes.STEREOTYPE_ELT);
@@ -88,7 +88,7 @@ public class ImportElement implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link ImportElement} proxy or <i>null</i>.
      */
-    @objid ("9b651b61-9670-46ea-83ae-f56998f7ea3f")
+    @objid ("46582da3-9c71-4928-9f90-826d34cd5483")
     public static ImportElement instantiate(final ModelElement obj) {
         return ImportElement.canInstantiate(obj) ? new ImportElement(obj) : null;
     }
@@ -101,7 +101,7 @@ public class ImportElement implements IMdaProxy {
      * @return a {@link ImportElement} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("e698a698-1db6-4bc5-94c1-f2556139bd43")
+    @objid ("92fc7c20-476d-464a-adb7-978b45b5c11e")
     public static ImportElement safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (ImportElement.canInstantiate(obj))
         	return new ImportElement(obj);
@@ -109,7 +109,7 @@ public class ImportElement implements IMdaProxy {
         	throw new IllegalArgumentException("ImportElement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("1817980f-1d41-4afb-bb48-e5043937d208")
+    @objid ("d4498ae5-535b-43b5-b685-485e36501579")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -129,7 +129,7 @@ public class ImportElement implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("cb80f40a-ca5d-4ed4-a80b-3651e460b684")
+    @objid ("27048742-6000-4604-afd7-dd1b3a554cae")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -139,7 +139,7 @@ public class ImportElement implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("69732660-d170-4441-a992-4fd2bbb87731")
+    @objid ("940a32e0-073b-4c50-9d86-068011bd62c6")
     public String getFile() {
         String value = this.elt.getProperty(ImportElement.MdaTypes.STEREOTYPE_ELT,
                                             ImportElement.MdaTypes.FILE_PROPERTY_ELT.getName());
@@ -155,7 +155,7 @@ public class ImportElement implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("0982ed86-efc3-44a9-ad06-38a5e021cbd8")
+    @objid ("228346bd-26a9-4897-b957-b65b7e171369")
     public String getNamespace_prefix() {
         String value = this.elt.getProperty(ImportElement.MdaTypes.STEREOTYPE_ELT,
                                             ImportElement.MdaTypes.NAMESPACE_PREFIX_PROPERTY_ELT.getName());
@@ -171,7 +171,7 @@ public class ImportElement implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("5c457c29-d77e-4763-b990-e019b5c89632")
+    @objid ("1eecd82f-687d-4a54-88c3-3d95510d23dc")
     public String getNamespace_uri() {
         String value = this.elt.getProperty(ImportElement.MdaTypes.STEREOTYPE_ELT,
                                             ImportElement.MdaTypes.NAMESPACE_URI_PROPERTY_ELT.getName());
@@ -182,7 +182,7 @@ public class ImportElement implements IMdaProxy {
         
     }
 
-    @objid ("5fd1e020-4a4f-4f16-9251-02c012a6a533")
+    @objid ("9afc1164-7d1b-429d-b113-60d4a44269ec")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -194,7 +194,7 @@ public class ImportElement implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ee487d31-f316-4516-917d-f8f8d58f80cd")
+    @objid ("4c773413-81ec-4535-9a23-b0261af2e364")
     public void setFile(final String value) {
         this.elt.setProperty(ImportElement.MdaTypes.STEREOTYPE_ELT,
                              ImportElement.MdaTypes.FILE_PROPERTY_ELT.getName(),
@@ -206,7 +206,7 @@ public class ImportElement implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("1f2ef1c4-77b7-447d-8a3f-619a41e71d03")
+    @objid ("7a480528-2c74-4aba-84cf-d516325adb72")
     public void setNamespace_prefix(final String value) {
         this.elt.setProperty(ImportElement.MdaTypes.STEREOTYPE_ELT,
                              ImportElement.MdaTypes.NAMESPACE_PREFIX_PROPERTY_ELT.getName(),
@@ -218,39 +218,39 @@ public class ImportElement implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3488244b-f35f-4d0e-98d9-02e8de9cc7a9")
+    @objid ("169da0ce-80de-4e50-83f3-b4bbaebb644e")
     public void setNamespace_uri(final String value) {
         this.elt.setProperty(ImportElement.MdaTypes.STEREOTYPE_ELT,
                              ImportElement.MdaTypes.NAMESPACE_URI_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(ImportElement.MdaTypes.NAMESPACE_URI_PROPERTY_ELT, value));
     }
 
-    @objid ("9cdc61d0-2cd4-49cd-877e-8579202ca36a")
+    @objid ("70e516bf-837d-43cf-aa86-aa56dd400f93")
     protected  ImportElement(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("6d787fc4-0d8a-4d24-a606-8ebbf10d004b")
     public static final class MdaTypes {
-        @objid ("c835f530-293d-4a8f-abe5-f61f75df0729")
+        @objid ("2439c947-1686-4047-9e21-da23155d1fc5")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("044371b8-7886-41a5-aef6-1440c1268b8c")
+        @objid ("a3745056-11cf-489a-94d3-25c3b00965af")
         public static PropertyDefinition FILE_PROPERTY_ELT;
 
-        @objid ("ecc9e24f-b054-49d4-b3ed-e752086d37f3")
+        @objid ("f0bf1eda-cbfd-486a-a196-98976215b698")
         public static PropertyDefinition NAMESPACE_URI_PROPERTY_ELT;
 
-        @objid ("2837802c-51cd-4bc0-894a-1de807f4b205")
+        @objid ("8bde5233-a9a0-43fc-997c-2129d58b661a")
         public static PropertyDefinition NAMESPACE_PREFIX_PROPERTY_ELT;
 
-        @objid ("008a3d5f-30d3-4133-b2e6-891e85a0184f")
+        @objid ("39126bcc-a9da-4718-8359-0465dd4ff5bc")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("af96ca84-9c4c-4b96-8947-82bad480461d")
+        @objid ("6ff106d2-30c7-424d-8146-fed350c80868")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("82a23a7c-47bb-496e-8e3c-65c17d30e150")
+        @objid ("593476b9-29fb-422e-86db-3c164721507a")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

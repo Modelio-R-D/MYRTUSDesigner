@@ -763,19 +763,15 @@
                 <Icon path="res/icon/gui/tpolicy24.ICON.png"/>
                 <Image path="res/icon/gui/tpolicy48.IMAGE.png"/>
                 <PropertyTable id="TPolicyTable" label="%propertytable.TPolicyTable.label" uid="ca3978f9-9ac6-4b7b-8785-a9d502a40e86">
-                    <PropertyDefinition id="name" label="%propertydefinition.TPolicyTable.name.label" default-value="" is-editable="true" uid="3e41c1cd-e584-47d0-bae4-e8fc07eeefaa">
-                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TPolicyTable.name.description</Description>
-                    </PropertyDefinition>
                     <PropertyDefinition id="policyRef" label="%propertydefinition.TPolicyTable.policyRef.label" default-value="" is-editable="true" uid="874eaba3-7da2-496d-b724-a3f411e15532">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.TPolicyTable.policyRef.description</Description>
                     </PropertyDefinition>
-                    <PropertyDefinition id="policyType" label="%propertydefinition.TPolicyTable.policyType.label" default-value="" is-editable="true" uid="78876039-26c1-4105-aaab-0c4759def911">
-                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TPolicyTable.policyType.description</Description>
-                    </PropertyDefinition>
                 </PropertyTable>
+            </Stereotype>
+            <Stereotype name="TPolicyType" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.TPolicyType.label" uid="b76dbc7d-8b6f-46f8-89d4-f0ea8eea40d2" is-abstract="false">
+                <Icon path="res/icon/gui/tpolicytype24.ICON.png"/>
+                <Image path="res/icon/gui/tpolicytype48.IMAGE.png"/>
             </Stereotype>
             <Stereotype name="TPropertyConstraint" metaclass="Infrastructure.ModelElement" owner-stereotype="mref#'' {78fc63ae-0ad0-45f4-840f-4dbadc0922cb} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TPropertyConstraint.label" uid="85f116c1-fe2c-435b-a801-c3389c84beef" is-abstract="false">
                 <Icon path=""/>
@@ -824,6 +820,10 @@
                         <Description>%propertydefinition.TRelationshipTypePropertyTable.validTarget.description</Description>
                     </PropertyDefinition>
                 </PropertyTable>
+            </Stereotype>
+            <Stereotype name="TRequirement" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TRequirement.label" uid="f0ddd3c2-c7ec-4156-84b0-d31b76098b17" is-abstract="false">
+                <Icon path="res/icon/gui/requirements2-24.png"/>
+                <Image path="res/icon/gui/requirements2-48.png"/>
             </Stereotype>
             <Stereotype name="TRequirementDefinition" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TRequirementDefinition.label" uid="2637c4bd-ca93-4012-82ea-8ef2ba5ca444" is-abstract="false">
                 <Icon path="res/icon/gui/requirement24.png"/>
@@ -920,10 +920,6 @@
             <Stereotype name="ToscaModel" metaclass="Standard.Package" owner-stereotype="" is-hidden="false" label="%stereotype.ToscaModel.label" uid="20565008-115d-4fad-800f-134ab276f611" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
-            </Stereotype>
-            <Stereotype name="TRequirement" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TRequirement.label" uid="f0ddd3c2-c7ec-4156-84b0-d31b76098b17" is-abstract="false">
-                <Icon path="res/icon/gui/requirements2-24.png"/>
-                <Image path="res/icon/gui/requirements2-48.png"/>
             </Stereotype>
         </Profile>
     </Profiles>
