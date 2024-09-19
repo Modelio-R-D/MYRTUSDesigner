@@ -340,10 +340,6 @@
                         <TypeRef id="mref#'Element' {b58969db-144e-4a1f-b946-cd6deacca9bd} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.TCapabilityDefinitionTable.constraints.description</Description>
                     </PropertyDefinition>
-                    <PropertyDefinition id="capabilityType" label="%propertydefinition.TCapabilityDefinitionTable.capabilityType.label" default-value="" is-editable="true" uid="d92d0b5f-92dc-4ece-8007-afd0ea307098">
-                        <TypeRef id="mref#'Element' {b58969db-144e-4a1f-b946-cd6deacca9bd} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TCapabilityDefinitionTable.capabilityType.description</Description>
-                    </PropertyDefinition>
                     <PropertyDefinition id="lowerBound" label="%propertydefinition.TCapabilityDefinitionTable.lowerBound.label" default-value="" is-editable="true" uid="2a352928-d0d5-4e77-bbb4-9f69dc69b952">
                         <TypeRef id="mref#'Integer' {01a40888-0000-002d-0000-000000000000} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.TCapabilityDefinitionTable.lowerBound.description</Description>
@@ -375,6 +371,10 @@
                         <Description>%propertydefinition.TCapabilityRefTable.ref.description</Description>
                     </PropertyDefinition>
                 </PropertyTable>
+            </Stereotype>
+            <Stereotype name="TCapabilityType" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityType.label" uid="42438c96-0721-406a-a8b9-c4a85931cc60" is-abstract="false">
+                <Icon path="res/icon/gui/capabilityType24.ICON.png"/>
+                <Image path="res/icon/gui/capabilityType48.IMAGE.png"/>
             </Stereotype>
             <Stereotype name="TCondition" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.TCondition.label" uid="23173eee-1647-44eb-8aad-825b079ed69f" is-abstract="false">
                 <Icon path=""/>
@@ -772,14 +772,14 @@
             <Stereotype name="TPolicyType" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.TPolicyType.label" uid="b76dbc7d-8b6f-46f8-89d4-f0ea8eea40d2" is-abstract="false">
                 <Icon path="res/icon/gui/tpolicytype24.ICON.png"/>
                 <Image path="res/icon/gui/tpolicytype48.IMAGE.png"/>
-                <PropertyTable id="TPolicyTypePropertyTable" label="%propertytable.TPolicyTypePropertyTable.label" uid="98fa2d7e-8453-4cbc-9224-3dc54fc12503">
-                    <PropertyDefinition id="description" label="%propertydefinition.TPolicyTypePropertyTable.description.label" default-value="" is-editable="true" uid="bd925b2d-cb4e-4667-86d4-feaeda676f4b">
+                <PropertyTable id="TPolicyTypePropertyPage" label="%propertytable.TPolicyTypePropertyPage.label" uid="89cd71c7-7594-4686-a240-f8226a802249">
+                    <PropertyDefinition id="policyLanguage" label="%propertydefinition.TPolicyTypePropertyPage.policyLanguage.label" default-value="" is-editable="true" uid="97ff5a65-420b-4f0b-bc9e-dcb36130f88e">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TPolicyTypePropertyTable.description.description</Description>
+                        <Description>%propertydefinition.TPolicyTypePropertyPage.policyLanguage.description</Description>
                     </PropertyDefinition>
-                    <PropertyDefinition id="policyLanguage" label="%propertydefinition.TPolicyTypePropertyTable.policyLanguage.label" default-value="" is-editable="true" uid="a844e99e-6efe-4626-b992-ff0f50c5d6ff">
+                    <PropertyDefinition id="description" label="%propertydefinition.TPolicyTypePropertyPage.description.label" default-value="" is-editable="true" uid="cb984791-bc72-4469-91fa-ff5a2259f1a2">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TPolicyTypePropertyTable.policyLanguage.description</Description>
+                        <Description>%propertydefinition.TPolicyTypePropertyPage.description.description</Description>
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>

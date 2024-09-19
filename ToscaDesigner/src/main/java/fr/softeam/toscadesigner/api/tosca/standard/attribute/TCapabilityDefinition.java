@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 18/09/2024 13:03 by Modelio Studio.
+ * This file was generated on 19/09/2024 15:04 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.attribute;
 
@@ -40,29 +40,25 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("870f10be-a1c4-4e87-9b32-e9343bb60b53")
 public class TCapabilityDefinition implements IMdaProxy {
-    @objid ("0053306b-ee8b-4c12-bd36-b778f303a91a")
+    @objid ("c3375b80-e2bf-45a1-b680-c547a4e277c5")
     public static final String STEREOTYPE_NAME = "TCapabilityDefinition";
 
-    @objid ("bb634441-452d-4c30-a532-82b9f1bd543b")
-    public static final String CAPABILITYTYPE_PROPERTY = "capabilityType";
-
-    @objid ("339f2121-02d0-4de5-8d83-3678391ffc9f")
+    @objid ("152c3e96-f844-448e-b50c-f38fd34e16c0")
     public static final String CONSTRAINTS_PROPERTY = "constraints";
 
-    @objid ("3ec7444e-0b34-4f9d-9284-6aae661c9ec6")
+    @objid ("fcf61af5-f54e-49f3-81bc-97902b5ccace")
     public static final String LOWERBOUND_PROPERTY = "lowerBound";
 
-    @objid ("e2881f8f-bf10-47ae-8380-44c6661159ef")
+    @objid ("976d9307-bfe0-4760-a7d9-927691e591e2")
     public static final String UPPERBOUND_PROPERTY = "upperBound";
 
-    @objid ("868932eb-950c-4a96-96fa-d4beb6995a98")
+    @objid ("93b8d5b6-a4c2-4e59-9437-c37e275c6089")
     public static final String VALID_SOURCE_TYOES_PROPERTY = "valid_source_tyoes";
 
     /**
      * The underlying {@link Attribute} represented by this proxy, never null.
-     * 
      */
-    @objid ("9407054a-1e46-4f93-beab-0d2267cdbe22")
+    @objid ("ccc71454-8bc6-4485-a0fd-d05cc572cea8")
     protected final Attribute elt;
 
     /**
@@ -72,16 +68,17 @@ public class TCapabilityDefinition implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("7695fa33-797b-4ed7-b6dd-3a1da2bc51e5")
+    @objid ("59f09602-5e97-4ddd-890e-2a4bc5c23359")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Attribute) && (TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT!=null) && ((Attribute) elt).isStereotyped(TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link Attribute} stereotyped << TCapabilityDefinition >> then instantiate a {@link TCapabilityDefinition} proxy.
+     * 
      * @return a {@link TCapabilityDefinition} proxy on the created {@link Attribute}.
      */
-    @objid ("3a80e503-7277-4670-be92-869fd4b1f46f")
+    @objid ("b250c83a-6c5b-453b-9140-0d405df4ebf3")
     public static TCapabilityDefinition create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Attribute");
         e.getExtension().add(TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT);
@@ -95,7 +92,7 @@ public class TCapabilityDefinition implements IMdaProxy {
      * @param obj a Attribute
      * @return a {@link TCapabilityDefinition} proxy or <i>null</i>.
      */
-    @objid ("7aefbafe-79f9-423c-83c5-1795336cdc76")
+    @objid ("53c413b5-4c61-457a-b2d4-673d191bd2af")
     public static TCapabilityDefinition instantiate(final Attribute obj) {
         return TCapabilityDefinition.canInstantiate(obj) ? new TCapabilityDefinition(obj) : null;
     }
@@ -104,19 +101,19 @@ public class TCapabilityDefinition implements IMdaProxy {
      * Tries to instantiate a {@link TCapabilityDefinition} proxy from a {@link Attribute} stereotyped << TCapabilityDefinition >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link Attribute}
      * @return a {@link TCapabilityDefinition} proxy.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("de41618a-40a0-4a77-8c06-db78af6571ca")
+    @objid ("29f11503-4483-4f78-930d-201767817129")
     public static TCapabilityDefinition safeInstantiate(final Attribute obj) throws IllegalArgumentException {
         if (TCapabilityDefinition.canInstantiate(obj))
-            return new TCapabilityDefinition(obj);
+        	return new TCapabilityDefinition(obj);
         else
-            throw new IllegalArgumentException("TCapabilityDefinition: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("TCapabilityDefinition: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("356b2cce-58ca-4e6c-bd79-59b8960f9a04")
+    @objid ("c9c978be-c7cf-434e-bd26-4849c5e0f5e0")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -133,18 +130,21 @@ public class TCapabilityDefinition implements IMdaProxy {
     }
 
     /**
-     * Getter for property 'TCapabilityDefinition.capabilityType'
-     * <p>Property description:
-     * <br/><i>null</i></p>
+     * Get the value of the 'capabilityType' role.<p>
+     * Role description:
+     * null
+     * 
      */
-    @objid ("c7484a53-4d59-45f6-8306-d1198152655a")
-    public String getCapabilityType() {
-        String value = this.elt.getProperty(TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT,
-                                            TCapabilityDefinition.MdaTypes.CAPABILITYTYPE_PROPERTY_ELT.getName());
-        if (value == null) {
-          value = TCapabilityDefinition.MdaTypes.CAPABILITYTYPE_PROPERTY_ELT.getDefaultValue();
+    @objid ("9c1c3354-98c6-488c-a608-dc9c0925d068")
+    public TCapabilityType getCapabilityType() {
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+              if (d.isStereotyped(TCapabilityDefinition.MdaTypes.MDAASSOCDEP)
+                  && Objects.equals(d.getTagValue(TCapabilityDefinition.MdaTypes.MDAASSOCDEP_ROLE), "capabilityType")
+                  && TCapabilityType.canInstantiate(d.getDependsOn())) {
+                     return (TCapabilityType)ToscaDesignerProxyFactory.instantiate(d.getDependsOn(), TCapabilityType.MdaTypes.STEREOTYPE_ELT.getName());
+              }
         }
-        return (String) PropertyConverter.convertToObject(TCapabilityDefinition.MdaTypes.CAPABILITYTYPE_PROPERTY_ELT, value, this.elt);
+        return null;
     }
 
     /**
@@ -152,7 +152,7 @@ public class TCapabilityDefinition implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a43375f1-e8fb-43e2-bc40-83a869979453")
+    @objid ("f0fc9380-626f-47f9-bbf4-a3bd0be8b8f8")
     public String getConstraints() {
         String value = this.elt.getProperty(TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT,
                                             TCapabilityDefinition.MdaTypes.CONSTRAINTS_PROPERTY_ELT.getName());
@@ -160,13 +160,14 @@ public class TCapabilityDefinition implements IMdaProxy {
           value = TCapabilityDefinition.MdaTypes.CONSTRAINTS_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(TCapabilityDefinition.MdaTypes.CONSTRAINTS_PROPERTY_ELT, value, this.elt);
+        
     }
 
     /**
-     * Get the underlying {@link Attribute}.
+     * Get the underlying {@link Attribute}. 
      * @return the Attribute represented by this proxy, never null.
      */
-    @objid ("ce8a4c18-4cbc-4606-9f68-c3f0fe2f4c61")
+    @objid ("4c884085-5a5c-411f-adbe-a4f44aa8efdf")
     public Attribute getElement() {
         return this.elt;
     }
@@ -176,7 +177,7 @@ public class TCapabilityDefinition implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d34ba04d-8bb2-472e-9c34-bf9f6010cdbd")
+    @objid ("bafc0108-b65a-4bc8-8a4d-2d542c063847")
     public Integer getLowerBound() {
         String value = this.elt.getProperty(TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT,
                                             TCapabilityDefinition.MdaTypes.LOWERBOUND_PROPERTY_ELT.getName());
@@ -184,6 +185,7 @@ public class TCapabilityDefinition implements IMdaProxy {
           value = TCapabilityDefinition.MdaTypes.LOWERBOUND_PROPERTY_ELT.getDefaultValue();
         }
         return (Integer) PropertyConverter.convertToObject(TCapabilityDefinition.MdaTypes.LOWERBOUND_PROPERTY_ELT, value, this.elt);
+        
     }
 
     /**
@@ -191,7 +193,7 @@ public class TCapabilityDefinition implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ab274ef3-dd6b-404d-ab03-619974216c13")
+    @objid ("02152b76-c18d-4ee6-88e3-ea93e4c330c1")
     public Integer getUpperBound() {
         String value = this.elt.getProperty(TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT,
                                             TCapabilityDefinition.MdaTypes.UPPERBOUND_PROPERTY_ELT.getName());
@@ -199,6 +201,7 @@ public class TCapabilityDefinition implements IMdaProxy {
           value = TCapabilityDefinition.MdaTypes.UPPERBOUND_PROPERTY_ELT.getDefaultValue();
         }
         return (Integer) PropertyConverter.convertToObject(TCapabilityDefinition.MdaTypes.UPPERBOUND_PROPERTY_ELT, value, this.elt);
+        
     }
 
     /**
@@ -206,7 +209,7 @@ public class TCapabilityDefinition implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("f18a3af0-599b-4051-a24e-431d9a8f8f15")
+    @objid ("0693a55a-e213-4823-adc5-4a3e20c30756")
     public String getValid_source_tyoes() {
         String value = this.elt.getProperty(TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT,
                                             TCapabilityDefinition.MdaTypes.VALID_SOURCE_TYOES_PROPERTY_ELT.getName());
@@ -214,24 +217,41 @@ public class TCapabilityDefinition implements IMdaProxy {
           value = TCapabilityDefinition.MdaTypes.VALID_SOURCE_TYOES_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(TCapabilityDefinition.MdaTypes.VALID_SOURCE_TYOES_PROPERTY_ELT, value, this.elt);
+        
     }
 
-    @objid ("9d4364d7-eb9f-467f-b4b9-113aa19053e4")
+    @objid ("44f3483c-4e1d-4648-899d-0264efa91e3a")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
+        
     }
 
     /**
-     * Setter for property 'TCapabilityDefinition.capabilityType'
-     * <p>Property description:
-     * <br/><i>null</i></p>
+     * Set the value of the 'capabilityType' role.<p>
+     * Role description:
+     * null
+     * 
      */
-    @objid ("f833f04e-b6b4-48e9-8cde-fc94b488407d")
-    public void setCapabilityType(final String value) {
-        this.elt.setProperty(TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT,
-                             TCapabilityDefinition.MdaTypes.CAPABILITYTYPE_PROPERTY_ELT.getName(),
-                             PropertyConverter.convertToString(TCapabilityDefinition.MdaTypes.CAPABILITYTYPE_PROPERTY_ELT, value));
+    @objid ("4f150924-30e4-4dbe-af7d-d1981a1a0cd6")
+    public void setCapabilityType(final TCapabilityType obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getDependsOnDependency())
+          if (d.isStereotyped(TCapabilityDefinition.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(TCapabilityDefinition.MdaTypes.MDAASSOCDEP_ROLE), "capabilityType")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if(dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
+              dep = session.getModel().createDependency(this.elt, obj.getElement(), TCapabilityDefinition.MdaTypes.MDAASSOCDEP);
+              dep.setName("capabilityType");      dep.putTagValue(TCapabilityDefinition.MdaTypes.MDAASSOCDEP_ROLE, "capabilityType");
+          }
+          dep.setDependsOn(obj.getElement());
+        }
+        
     }
 
     /**
@@ -239,7 +259,7 @@ public class TCapabilityDefinition implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ec321b30-8e2c-4cb0-baf8-06087ea67a34")
+    @objid ("675e0b2d-c998-466c-a8e9-8cf5ff8835b0")
     public void setConstraints(final String value) {
         this.elt.setProperty(TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT,
                              TCapabilityDefinition.MdaTypes.CONSTRAINTS_PROPERTY_ELT.getName(),
@@ -251,7 +271,7 @@ public class TCapabilityDefinition implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("6fb64ea5-e608-41c9-8c06-10a11cfab487")
+    @objid ("b8c2ad36-2add-4da8-bbb3-11661478d6c4")
     public void setLowerBound(final Integer value) {
         this.elt.setProperty(TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT,
                              TCapabilityDefinition.MdaTypes.LOWERBOUND_PROPERTY_ELT.getName(),
@@ -263,7 +283,7 @@ public class TCapabilityDefinition implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("42ca3d36-e3fe-4641-8962-da7dad4108f4")
+    @objid ("b6c537df-8608-44b2-affa-9e4be9695d90")
     public void setUpperBound(final Integer value) {
         this.elt.setProperty(TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT,
                              TCapabilityDefinition.MdaTypes.UPPERBOUND_PROPERTY_ELT.getName(),
@@ -275,45 +295,42 @@ public class TCapabilityDefinition implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a93a06d7-1991-4feb-95cf-8f4aee0a3b27")
+    @objid ("04a67685-45ba-4aa7-a571-23aad889072d")
     public void setValid_source_tyoes(final String value) {
         this.elt.setProperty(TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT,
                              TCapabilityDefinition.MdaTypes.VALID_SOURCE_TYOES_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(TCapabilityDefinition.MdaTypes.VALID_SOURCE_TYOES_PROPERTY_ELT, value));
     }
 
-    @objid ("8fb518f1-a9ce-4659-8939-bc3be9c1d3b2")
+    @objid ("f970e20e-2969-4840-9a03-a5b9903889ba")
     protected  TCapabilityDefinition(final Attribute elt) {
         this.elt = elt;
     }
 
     @objid ("0f3cb708-ee88-43dc-a5bb-d3d03831178e")
     public static final class MdaTypes {
-        @objid ("bdcd7744-9f71-4216-8428-92c98644d4d4")
+        @objid ("4905bae8-38a3-4a72-84bc-89cfb7fa3551")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("2714b936-72a4-40d2-9101-6ade54be35df")
+        @objid ("70a9b862-cdf4-4d8e-b886-322d12bc9861")
         public static PropertyDefinition CONSTRAINTS_PROPERTY_ELT;
 
-        @objid ("e51f7f5d-23c8-4068-9294-4ade8d7dcf13")
-        public static PropertyDefinition CAPABILITYTYPE_PROPERTY_ELT;
-
-        @objid ("3d3994dc-26ec-46e6-8cbd-61cc578c721e")
+        @objid ("6ff7ace8-d9b4-482b-9c0f-a05dcbd5d055")
         public static PropertyDefinition LOWERBOUND_PROPERTY_ELT;
 
-        @objid ("e505d615-6754-4aab-b278-f2a2166fb804")
+        @objid ("32f1073f-1832-4b76-b431-bd53b0f02e6f")
         public static PropertyDefinition UPPERBOUND_PROPERTY_ELT;
 
-        @objid ("fae40c67-55ef-439d-a4b2-c14860f8d2a8")
+        @objid ("e25e81d8-9d52-4afe-a25b-87f5008f1e0c")
         public static PropertyDefinition VALID_SOURCE_TYOES_PROPERTY_ELT;
 
-        @objid ("9bd1dc94-7ec1-4a33-87e9-299c8155a0de")
+        @objid ("426debad-deb2-415f-b9f8-82b4f42f659d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("3ac4f6dd-f18e-43b7-8837-5c99fac741cf")
+        @objid ("aa678845-f9f3-4492-8d3d-7cbaedb89844")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("b5ad6267-dc74-49ed-92ce-04b0db230dc2")
+        @objid ("765653a5-a206-4006-870d-224e09350a5d")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -324,10 +341,6 @@ public class TCapabilityDefinition implements IMdaProxy {
             mRef = new MRef(PropertyDefinition.MQNAME, "21aae7e2-a2bd-418d-8df8-70c4fa8d4d13", "constraints");
             CONSTRAINTS_PROPERTY_ELT = (PropertyDefinition) session.findByRef(mRef);
             if (CONSTRAINTS_PROPERTY_ELT==null) missingRefs.add(mRef);
-            
-            mRef = new MRef(PropertyDefinition.MQNAME, "d92d0b5f-92dc-4ece-8007-afd0ea307098", "capabilityType");
-            CAPABILITYTYPE_PROPERTY_ELT = (PropertyDefinition) session.findByRef(mRef);
-            if (CAPABILITYTYPE_PROPERTY_ELT==null) missingRefs.add(mRef);
             
             mRef = new MRef(PropertyDefinition.MQNAME, "2a352928-d0d5-4e77-bbb4-9f69dc69b952", "lowerBound");
             LOWERBOUND_PROPERTY_ELT = (PropertyDefinition) session.findByRef(mRef);
@@ -350,6 +363,7 @@ public class TCapabilityDefinition implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
+            
         }
 
     }

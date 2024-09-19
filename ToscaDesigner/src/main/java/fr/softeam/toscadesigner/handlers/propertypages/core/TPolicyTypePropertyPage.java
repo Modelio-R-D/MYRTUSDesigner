@@ -27,7 +27,7 @@ public class TPolicyTypePropertyPage<T extends TPolicyType> extends ToscaElement
               case 2:
                   for (ModelElement el : TPolicyType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                       if (value.contains(el.getUuid())) {
-                          this._element.setAssociation(
+                          this._element.setDerivedFrom(
                                   TPolicyType.instantiate((org.modelio.metamodel.uml.statik.Attribute) el));
                       }
                   }
@@ -44,8 +44,9 @@ public class TPolicyTypePropertyPage<T extends TPolicyType> extends ToscaElement
     public void update(IModulePropertyTable table) {
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
+        table.addProperty("Description", _element.getDescription());
               table.addProperty("Derived From",
-                      this._element.getAssociation() != null ? this._element.getAssociation().getElement()
+                      this._element.getDerivedFrom() != null ? this._element.getDerivedFrom().getElement()
                               : null,
                       Arrays.asList(Metamodel.getMClass("Attribute")), new IMObjectFilter() {
                           @Override
