@@ -1,9 +1,16 @@
 package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
+import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityDefinition;
+import fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.Metamodel;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.vcore.session.api.model.IMObjectFilter;
+import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("ec2ef9e0-9596-4d0f-87cc-8d95236ec72a")
 public class TCapabilityDefinitionPropertyPage<T extends TCapabilityDefinition> extends ToscaElementPropertyPage<T> {
@@ -26,8 +33,12 @@ public class TCapabilityDefinitionPropertyPage<T extends TCapabilityDefinition> 
             break;
         
         case 3:
-            this._element.setCapabilityType(value);
-        
+            for (ModelElement dep :TCapabilityType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+                if (value.contains(dep.getUuid())) {
+                    this._element.setCapabilityType(
+                            TCapabilityType.instantiate((org.modelio.metamodel.uml.statik.Attribute) dep));
+                }
+            }        
             break;
             
         case 4:
@@ -50,7 +61,16 @@ public class TCapabilityDefinitionPropertyPage<T extends TCapabilityDefinition> 
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
         table.addProperty("Constraints", _element.getConstraints());
-        table.addProperty("Capability Type", _element.getCapabilityType());
+        
+        table.addProperty("Capability type",
+                this._element.getCapabilityType() != null ? this._element.getCapabilityType().getElement() : null,
+                Arrays.asList(Metamodel.getMClass("Attribute")), new IMObjectFilter() {
+                    @Override
+                    public boolean accept(MObject element) {
+                        return TCapabilityType.canInstantiate(element);
+                    }
+                });
+        
         table.addProperty("Lower Bound", _element.getLowerBound());
         table.addProperty("Upper Bound", _element.getUpperBound());
         table.addProperty("Valid Source Types", _element.getValid_source_tyoes());

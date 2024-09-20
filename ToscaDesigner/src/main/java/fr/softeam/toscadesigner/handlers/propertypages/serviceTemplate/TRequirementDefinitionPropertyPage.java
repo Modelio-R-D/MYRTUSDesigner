@@ -1,21 +1,18 @@
 package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
 import java.util.Arrays;
-
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-import org.modelio.metamodel.Metamodel;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.vcore.session.api.model.IMObjectFilter;
-import org.modelio.vcore.smkernel.mapi.MObject;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityDefinition;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TRequirementDefinition;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.Metamodel;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.vcore.session.api.model.IMObjectFilter;
+import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("c757eb57-dab6-4fc3-8fd8-6f094926a62c")
 public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition> extends ToscaElementPropertyPage<T> {
@@ -37,7 +34,7 @@ public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition
             for (ModelElement dep : TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
                     this._element.setCapability(
-                    		TCapabilityDefinition.instantiate((org.modelio.metamodel.uml.statik.Attribute) dep));
+                            TCapabilityDefinition.instantiate((org.modelio.metamodel.uml.statik.Attribute) dep));
                 }
             }
             break;

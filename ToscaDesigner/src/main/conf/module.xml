@@ -352,10 +352,6 @@
                         <TypeRef id="mref#'Element' {b58969db-144e-4a1f-b946-cd6deacca9bd} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.TCapabilityDefinitionTable.constraints.description</Description>
                     </PropertyDefinition>
-                    <PropertyDefinition id="capabilityType" label="%propertydefinition.TCapabilityDefinitionTable.capabilityType.label" default-value="" is-editable="true" uid="d92d0b5f-92dc-4ece-8007-afd0ea307098">
-                        <TypeRef id="mref#'Element' {b58969db-144e-4a1f-b946-cd6deacca9bd} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TCapabilityDefinitionTable.capabilityType.description</Description>
-                    </PropertyDefinition>
                     <PropertyDefinition id="lowerBound" label="%propertydefinition.TCapabilityDefinitionTable.lowerBound.label" default-value="" is-editable="true" uid="2a352928-d0d5-4e77-bbb4-9f69dc69b952">
                         <TypeRef id="mref#'Integer' {01a40888-0000-002d-0000-000000000000} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.TCapabilityDefinitionTable.lowerBound.description</Description>
@@ -387,6 +383,10 @@
                         <Description>%propertydefinition.TCapabilityRefTable.ref.description</Description>
                     </PropertyDefinition>
                 </PropertyTable>
+            </Stereotype>
+            <Stereotype name="TCapabilityType" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityType.label" uid="42438c96-0721-406a-a8b9-c4a85931cc60" is-abstract="false">
+                <Icon path="res/icon/gui/capabilityType24.ICON.png"/>
+                <Image path="res/icon/gui/capabilityType48.IMAGE.png"/>
             </Stereotype>
             <Stereotype name="TCondition" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.TCondition.label" uid="23173eee-1647-44eb-8aad-825b079ed69f" is-abstract="false">
                 <Icon path=""/>
@@ -771,21 +771,27 @@
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
-            <Stereotype name="TPolicy" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TPolicy.label" uid="afe2c9ed-9fab-4a53-a2d2-b52d849d0799" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+            <Stereotype name="TPolicy" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TPolicy.label" uid="afe2c9ed-9fab-4a53-a2d2-b52d849d0799" is-abstract="false">
+                <Icon path="res/icon/gui/tpolicy24.ICON.png"/>
+                <Image path="res/icon/gui/tpolicy48.IMAGE.png"/>
                 <PropertyTable id="TPolicyTable" label="%propertytable.TPolicyTable.label" uid="ca3978f9-9ac6-4b7b-8785-a9d502a40e86">
-                    <PropertyDefinition id="name" label="%propertydefinition.TPolicyTable.name.label" default-value="" is-editable="true" uid="3e41c1cd-e584-47d0-bae4-e8fc07eeefaa">
-                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TPolicyTable.name.description</Description>
-                    </PropertyDefinition>
                     <PropertyDefinition id="policyRef" label="%propertydefinition.TPolicyTable.policyRef.label" default-value="" is-editable="true" uid="874eaba3-7da2-496d-b724-a3f411e15532">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.TPolicyTable.policyRef.description</Description>
                     </PropertyDefinition>
-                    <PropertyDefinition id="policyType" label="%propertydefinition.TPolicyTable.policyType.label" default-value="" is-editable="true" uid="78876039-26c1-4105-aaab-0c4759def911">
+                </PropertyTable>
+            </Stereotype>
+            <Stereotype name="TPolicyType" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.TPolicyType.label" uid="b76dbc7d-8b6f-46f8-89d4-f0ea8eea40d2" is-abstract="false">
+                <Icon path="res/icon/gui/tpolicytype24.ICON.png"/>
+                <Image path="res/icon/gui/tpolicytype48.IMAGE.png"/>
+                <PropertyTable id="TPolicyTypePropertyPage" label="%propertytable.TPolicyTypePropertyPage.label" uid="89cd71c7-7594-4686-a240-f8226a802249">
+                    <PropertyDefinition id="policyLanguage" label="%propertydefinition.TPolicyTypePropertyPage.policyLanguage.label" default-value="" is-editable="true" uid="97ff5a65-420b-4f0b-bc9e-dcb36130f88e">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TPolicyTable.policyType.description</Description>
+                        <Description>%propertydefinition.TPolicyTypePropertyPage.policyLanguage.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="description" label="%propertydefinition.TPolicyTypePropertyPage.description.label" default-value="" is-editable="true" uid="cb984791-bc72-4469-91fa-ff5a2259f1a2">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TPolicyTypePropertyPage.description.description</Description>
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
@@ -836,6 +842,10 @@
                         <Description>%propertydefinition.TRelationshipTypePropertyTable.validTarget.description</Description>
                     </PropertyDefinition>
                 </PropertyTable>
+            </Stereotype>
+            <Stereotype name="TRequirement" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TRequirement.label" uid="f0ddd3c2-c7ec-4156-84b0-d31b76098b17" is-abstract="false">
+                <Icon path="res/icon/gui/requirements2-24.png"/>
+                <Image path="res/icon/gui/requirements2-48.png"/>
             </Stereotype>
             <Stereotype name="TRequirementDefinition" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TRequirementDefinition.label" uid="2637c4bd-ca93-4012-82ea-8ef2ba5ca444" is-abstract="false">
                 <Icon path="res/icon/gui/requirement24.png"/>
@@ -932,10 +942,6 @@
             <Stereotype name="ToscaModel" metaclass="Standard.Package" owner-stereotype="" is-hidden="false" label="%stereotype.ToscaModel.label" uid="20565008-115d-4fad-800f-134ab276f611" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
-            </Stereotype>
-            <Stereotype name="TRequirement" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TRequirement.label" uid="f0ddd3c2-c7ec-4156-84b0-d31b76098b17" is-abstract="false">
-                <Icon path="res/icon/gui/requirements2-24.png"/>
-                <Image path="res/icon/gui/requirements2-48.png"/>
             </Stereotype>
         </Profile>
     </Profiles>
@@ -1180,6 +1186,14 @@
                     <HParameter name="name" value="Property"/>
                 </Handler>
             </Tool>
+            <Tool id="Policy" label="%tool.Policy.label" tooltip="%tool.Policy.tooltip" image="res/icon/gui/tpolicy24.ICON.png">
+                <Scope-source metaclass="Infrastructure.ModelElement" stereotype=""/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#TPolicy"/>
+                    <HParameter name="metaclass" value="Standard.Attribute"/>
+                    <HParameter name="name" value="Policy"/>
+                </Handler>
+            </Tool>
         </Tools>
         <ContextualMenu>
             <CommandRef refid="Export" group="" group-image=""/>
@@ -1192,7 +1206,7 @@
             <DiagramType base-diagram="Standard.StaticDiagram" stereotype="ToscaDesigner#ToscaDiagram">
                 <Palette keepBasePalette="false">
                     <ToolRef refid="Service Template" group="%group.Services.label"/>
-                    <ToolRef refid="CREATE_NOTE" group="%group.Common.label"/>
+                    <ToolRef refid="Policy" group="%group.Policy.label"/>
                 </Palette>
                 <Handler class="StandardCustomizer">
                     <HParameter name="stereotype" value="ToscaDesigner#ToscaDiagram"/>
@@ -1207,6 +1221,7 @@
                     <ToolRef refid="ArtifactTemplate" group="%group.Templates.label"/>
                     <ToolRef refid="Metadata" group="%group.Attributes.label"/>
                     <ToolRef refid="Property_(Node_Type)" group="%group.Attributes.label"/>
+                    <ToolRef refid="Policy" group="%group.Attributes.label"/>
                     <ToolRef refid="Plans" group="%group.Plans.label"/>
                     <ToolRef refid="Requirements_NodeType" group="%group.Requirements.label"/>
                     <ToolRef refid="Requirement_NodeType" group="%group.Requirements.label"/>
@@ -1237,6 +1252,7 @@
                     <ToolRef refid="Requirements_NodeTemplate" group="%group.Requirement.label"/>
                     <ToolRef refid="Metadata" group="%group.Attributes.label"/>
                     <ToolRef refid="Property_(Node_Template)" group="%group.Attributes.label"/>
+                    <ToolRef refid="Policy" group="%group.Attributes.label"/>
                 </Palette>
                 <Handler class="StandardCustomizer">
                     <HParameter name="stereotype" value="ToscaDesigner#TopologyTemplateDiagram"/>
