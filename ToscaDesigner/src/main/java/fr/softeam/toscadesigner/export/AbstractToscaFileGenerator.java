@@ -100,7 +100,7 @@ public abstract class AbstractToscaFileGenerator {
 				} else if (stereotype.getName().equals("TCapabilityDefinition")) {
 					TCapabilityDefinition tCapabilityDefinition = TCapabilityDefinition.safeInstantiate((Attribute)context);
 					if (searchedPropertyName.equals("capabilityType")) {
-						propertyStringValue = tCapabilityDefinition.getCapabilityType();
+						propertyStringValue = tCapabilityDefinition.getCapabilityType().getElement().getName();
 					}
 				}
 				// if it didn't find the property with this stereotype, look for the parent
