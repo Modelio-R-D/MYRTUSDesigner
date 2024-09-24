@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 23/09/2024 12:50 by Modelio Studio.
+ * This file was generated on 24/09/2024 16:22 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -39,13 +39,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("82da0f2a-c3e3-4215-98f5-63497f7d26c3")
 public class TExtension extends TExtensibleElements implements IMdaProxy {
-    @objid ("6c9ae365-b114-4301-be45-8ff6045cb84c")
+    @objid ("2893908a-d99e-4099-931d-f70ac7474ce0")
     public static final String STEREOTYPE_NAME = "TExtension";
 
-    @objid ("f67fdbea-60b6-4fed-aca6-72fc86fc5726")
+    @objid ("7d533288-277d-4bdc-843a-1239e1647dc9")
     public static final String MUSTUNDERSTAND_PROPERTY = "mustUnderstand";
 
-    @objid ("e028e766-e030-44ba-9897-12af54416883")
+    @objid ("fef2d598-0b85-4ad1-a166-875feee043e6")
     public static final String NAMESPACE_PROPERTY = "namespace";
 
     /**
@@ -55,7 +55,7 @@ public class TExtension extends TExtensibleElements implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("6d7da8ad-a036-4735-a67b-626e1a35a20f")
+    @objid ("b8de4c1f-dddf-4f78-b548-caff92220848")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (TExtension.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(TExtension.MdaTypes.STEREOTYPE_ELT));
     }
@@ -65,7 +65,7 @@ public class TExtension extends TExtensibleElements implements IMdaProxy {
      * 
      * @return a {@link TExtension} proxy on the created {@link ModelElement}.
      */
-    @objid ("d901a7d5-1527-4eff-93f2-9770f1fa6174")
+    @objid ("20ca5679-11e1-4c82-9d8d-98bc096b96fc")
     public static TExtension create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(TExtension.MdaTypes.STEREOTYPE_ELT);
@@ -79,7 +79,7 @@ public class TExtension extends TExtensibleElements implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link TExtension} proxy or <i>null</i>.
      */
-    @objid ("b0b3fe74-7964-4591-96c6-2cf52dd0c022")
+    @objid ("84612cfb-fef7-4043-9153-510bae99f22a")
     public static TExtension instantiate(final ModelElement obj) {
         return TExtension.canInstantiate(obj) ? new TExtension(obj) : null;
     }
@@ -92,7 +92,7 @@ public class TExtension extends TExtensibleElements implements IMdaProxy {
      * @return a {@link TExtension} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("400225bc-2b7e-4e55-ada9-1c545b8e3692")
+    @objid ("396cdee7-f4ee-40d1-952b-fcd3f209e7e9")
     public static TExtension safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (TExtension.canInstantiate(obj))
         	return new TExtension(obj);
@@ -100,7 +100,7 @@ public class TExtension extends TExtensibleElements implements IMdaProxy {
         	throw new IllegalArgumentException("TExtension: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("1e38df2c-07e5-4817-880c-bc2f6196d737")
+    @objid ("ddadb164-83bf-4f39-8c9c-76b2ff9d4057")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -120,7 +120,7 @@ public class TExtension extends TExtensibleElements implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("935ee4fc-c494-4d3b-9830-ad1ba9a018a1")
+    @objid ("2596133c-d4ed-4bf7-8433-fba59347c66d")
     @Override
     public ModelElement getElement() {
         return (ModelElement)super.getElement();
@@ -131,7 +131,7 @@ public class TExtension extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3056385b-e2fc-465a-99e0-a2234312c18b")
+    @objid ("5a61476f-bfd7-46e2-8bca-dd0f35792fee")
     public Boolean getMustUnderstand() {
         String value = this.elt.getProperty(TExtension.MdaTypes.STEREOTYPE_ELT,
                                             TExtension.MdaTypes.MUSTUNDERSTAND_PROPERTY_ELT.getName());
@@ -147,7 +147,7 @@ public class TExtension extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("6cafd0c4-b430-4146-93b0-a59139d7c116")
+    @objid ("4f217a3d-57b3-4b36-88a3-4f7cc93e9094")
     public String getNamespace() {
         String value = this.elt.getProperty(TExtension.MdaTypes.STEREOTYPE_ELT,
                                             TExtension.MdaTypes.NAMESPACE_PROPERTY_ELT.getName());
@@ -158,7 +158,7 @@ public class TExtension extends TExtensibleElements implements IMdaProxy {
         
     }
 
-    @objid ("a0523ee0-5641-4431-b4a7-747645c12cb3")
+    @objid ("c1a1b4bc-3020-44dd-a261-358677d9c66b")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -170,7 +170,7 @@ public class TExtension extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("8ba53de2-5711-4f24-86f5-f9ee7184d5f0")
+    @objid ("cf4e9511-d259-48d4-816a-1cbb167bf3f1")
     public void setMustUnderstand(final Boolean value) {
         this.elt.setProperty(TExtension.MdaTypes.STEREOTYPE_ELT,
                              TExtension.MdaTypes.MUSTUNDERSTAND_PROPERTY_ELT.getName(),
@@ -182,36 +182,36 @@ public class TExtension extends TExtensibleElements implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("0e1ba358-1c5e-4ef9-9290-09eb9a389ce2")
+    @objid ("25244510-677d-45c5-b90f-e70802f8d24c")
     public void setNamespace(final String value) {
         this.elt.setProperty(TExtension.MdaTypes.STEREOTYPE_ELT,
                              TExtension.MdaTypes.NAMESPACE_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(TExtension.MdaTypes.NAMESPACE_PROPERTY_ELT, value));
     }
 
-    @objid ("eed53621-8562-41db-a4f8-9781ceed207a")
+    @objid ("0ebedb5b-bddd-438d-87f8-e47c60c3fa75")
     protected  TExtension(final ModelElement elt) {
         super(elt);
     }
 
     @objid ("dc6314de-3141-41ac-9d01-c85250c4d2f6")
     public static final class MdaTypes {
-        @objid ("83373ec7-bf3c-49db-90cd-47dfabced79d")
+        @objid ("705909ae-6391-4e66-8d4f-4915e767de5f")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("8a9d030c-d182-43da-a375-647bd6ead310")
+        @objid ("de11de78-fd11-4c52-b18b-a59911932fbe")
         public static PropertyDefinition MUSTUNDERSTAND_PROPERTY_ELT;
 
-        @objid ("27d6a85b-19a4-4b1a-bf44-f6a01987d427")
+        @objid ("f602289d-123d-4577-b9f6-f92a26f9e88e")
         public static PropertyDefinition NAMESPACE_PROPERTY_ELT;
 
-        @objid ("402d225c-85d7-477c-adc4-dfe0cfa4b061")
+        @objid ("bf715d93-2305-4497-bc92-36664c006b59")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("efc2f411-4ffe-470a-a271-34823d8fb6bd")
+        @objid ("27a81fec-474c-4193-a9a2-617752d6cdf9")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("54162ed7-dea2-40f3-adbc-b4043f8adaa1")
+        @objid ("bd19fa61-b33e-4c0e-accb-fccf017f4ef9")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

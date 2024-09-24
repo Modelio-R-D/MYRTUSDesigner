@@ -295,8 +295,8 @@
                 </PropertyTable>
             </Stereotype>
             <Stereotype name="TArtifactType" metaclass="Standard.Class" owner-stereotype="mref#'' {fecd81a5-da41-4a07-a507-6bfaf5bbadd2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TArtifactType.label" uid="08c1d0af-1987-4d3f-8dda-3b28c1aadcb9" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+                <Icon path="res/icon/gui/TartifactType24.ICON.png"/>
+                <Image path="res/icon/gui/TartifactType48.IMAGE.png"/>
             </Stereotype>
             <Stereotype name="TBoundaryDefinitions" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TBoundaryDefinitions.label" uid="58396175-2147-4077-9121-3076b97cc177" is-abstract="false">
                 <Icon path=""/>
@@ -687,7 +687,7 @@
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
-            <Stereotype name="TNodeTemplate" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TNodeTemplate.label" uid="1a20bf91-0a92-434a-9d1f-35c86788784e" is-abstract="false">
+            <Stereotype name="TNodeTemplate" metaclass="Standard.Class" owner-stereotype="mref#'' {11eac153-1560-420f-a4f6-f5387b6c8a98} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.TNodeTemplate.label" uid="1a20bf91-0a92-434a-9d1f-35c86788784e" is-abstract="false">
                 <Icon path="res/icon/gui/node_template24.png"/>
                 <Image path="res/icon/gui/node_template48.png"/>
                 <PropertyTable id="TNodeTemplatePropertyTable" label="%propertytable.TNodeTemplateProperty.label" uid="de74defe-d419-4c01-9b11-563b796c0e6c">
@@ -927,13 +927,21 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
+            <Stereotype name="Tgroup" metaclass="Standard.Package" owner-stereotype="" is-hidden="false" label="%stereotype.Tgroup.label" uid="572d5cb4-54c7-45d0-a9c8-3dc3677f9ef3" is-abstract="false">
+                <Icon path="res/icon/gui/Tgroup48.ICON.png"/>
+                <Image path="res/icon/gui/Tgroup48.png"/>
+            </Stereotype>
             <Stereotype name="ToscaModel" metaclass="Standard.Package" owner-stereotype="" is-hidden="false" label="%stereotype.ToscaModel.label" uid="20565008-115d-4fad-800f-134ab276f611" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="Tgroup" metaclass="Standard.Package" owner-stereotype="" is-hidden="false" label="%stereotype.Tgroup.label" uid="572d5cb4-54c7-45d0-a9c8-3dc3677f9ef3" is-abstract="false">
-                <Icon path="res/icon/gui/Tgroup48.ICON.png"/>
-                <Image path="res/icon/gui/Tgroup48.png"/>
+            <Stereotype name="TgroupType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TgroupType.label" uid="94a5619a-6aed-4b34-a0d8-03e85419ad55" is-abstract="false">
+                <Icon path="res/icon/gui/TgroupType24.ICON.png"/>
+                <Image path="res/icon/gui/TgroupType48.png"/>
+            </Stereotype>
+            <Stereotype name="ToscaElement" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.ToscaElement.label" uid="11eac153-1560-420f-a4f6-f5387b6c8a98" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
             </Stereotype>
         </Profile>
     </Profiles>
