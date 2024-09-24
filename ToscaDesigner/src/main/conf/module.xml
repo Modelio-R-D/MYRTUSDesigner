@@ -247,7 +247,7 @@
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
-            <Stereotype name="RequirementsType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.RequirementsType.label" uid="1a39bd85-e28f-4e17-b2e9-a1803359cd83" is-abstract="false">
+            <Stereotype name="RequirementsType" metaclass="Standard.Class" owner-stereotype="mref#'' {fecd81a5-da41-4a07-a507-6bfaf5bbadd2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.RequirementsType.label" uid="1a39bd85-e28f-4e17-b2e9-a1803359cd83" is-abstract="false">
                 <Icon path="res/icon/gui/requirements2.ICON.png"/>
                 <Image path="res/icon/gui/requirements2.IMAGE.png"/>
             </Stereotype>
@@ -307,7 +307,7 @@
                 </PropertyTable>
             </Stereotype>
             <Stereotype name="TArtifactType" metaclass="Standard.Class" owner-stereotype="mref#'' {fecd81a5-da41-4a07-a507-6bfaf5bbadd2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TArtifactType.label" uid="08c1d0af-1987-4d3f-8dda-3b28c1aadcb9" is-abstract="false">
-                <Icon path="res/icon/gui/TartifactType24.ICON.png"/>
+                <Icon path="res/icon/gui/TartifactType24 .png"/>
                 <Image path="res/icon/gui/TartifactType48.IMAGE.png"/>
             </Stereotype>
             <Stereotype name="TBoundaryDefinitions" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TBoundaryDefinitions.label" uid="58396175-2147-4077-9121-3076b97cc177" is-abstract="false">
@@ -366,7 +366,7 @@
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
-            <Stereotype name="TCapabilityDefinitionsType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityDefinitionsType.label" uid="ac0418b1-a726-46e6-ac59-310f0055050f" is-abstract="false">
+            <Stereotype name="TCapabilityDefinitionsType" metaclass="Standard.Class" owner-stereotype="mref#'' {fecd81a5-da41-4a07-a507-6bfaf5bbadd2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TCapabilityDefinitionsType.label" uid="ac0418b1-a726-46e6-ac59-310f0055050f" is-abstract="false">
                 <Icon path="res/icon/gui/capabilityDefinitions24.png"/>
                 <Image path="res/icon/gui/capabilityDefinitions48.png"/>
             </Stereotype>
@@ -568,17 +568,13 @@
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
-            <Stereotype name="TEntityType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TEntityType.label" uid="fecd81a5-da41-4a07-a507-6bfaf5bbadd2" is-abstract="false">
+            <Stereotype name="TEntityType" metaclass="Standard.Class" owner-stereotype="mref#'' {fecd81a5-da41-4a07-a507-6bfaf5bbadd2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TEntityType.label" uid="fecd81a5-da41-4a07-a507-6bfaf5bbadd2" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
                 <PropertyTable id="TEntityTypePropertyTable" label="%propertytable.TEntityTypePropertyTable.label" uid="e8f30f06-d953-4192-a783-d2a57c96564c">
                     <PropertyDefinition id="tags" label="%propertydefinition.TEntityTypePropertyTable.tags.label" default-value="" is-editable="true" uid="9d69d99b-499b-4753-be0a-7267d4a368ec">
                         <TypeRef id="mref#'MultiElement' {1bdf9f87-e9ad-4849-ab22-c25147e8d00c} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.TEntityTypePropertyTable.tags.description</Description>
-                    </PropertyDefinition>
-                    <PropertyDefinition id="derivedFrom" label="%propertydefinition.TEntityTypePropertyTable.derivedFrom.label" default-value="" is-editable="true" uid="1bb27208-5a4c-4ef2-a52e-94718a97c61c">
-                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TEntityTypePropertyTable.derivedFrom.description</Description>
                     </PropertyDefinition>
                     <PropertyDefinition id="propertiesDefinition" label="%propertydefinition.TEntityTypePropertyTable.propertiesDefinition.label" default-value="" is-editable="true" uid="8e60acb6-8df2-4d2b-bb91-d0b944eb9d28">
                         <TypeRef id="mref#'MultiElement' {1bdf9f87-e9ad-4849-ab22-c25147e8d00c} Infrastructure.PropertyType"/>
@@ -659,6 +655,14 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
+            <Stereotype name="TGroup" metaclass="Standard.Package" owner-stereotype="" is-hidden="false" label="%stereotype.Tgroup.label" uid="572d5cb4-54c7-45d0-a9c8-3dc3677f9ef3" is-abstract="false">
+                <Icon path="res/icon/gui/Tgroup48.ICON.png"/>
+                <Image path="res/icon/gui/Tgroup48.png"/>
+            </Stereotype>
+            <Stereotype name="TGroupType" metaclass="Standard.Class" owner-stereotype="mref#'' {fecd81a5-da41-4a07-a507-6bfaf5bbadd2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TGroupType.label" uid="94a5619a-6aed-4b34-a0d8-03e85419ad55" is-abstract="false">
+                <Icon path="res/icon/gui/TgroupType24.ICON.png"/>
+                <Image path="res/icon/gui/TgroupType48.png"/>
+            </Stereotype>
             <Stereotype name="TImplementationArtifact" metaclass="Infrastructure.ModelElement" owner-stereotype="mref#'' {1aad84ed-4c30-40ec-a4d8-6712bb6bd018} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TImplementationArtifact.label" uid="0b27c72d-e3eb-4877-a3ab-c3c962ec28b1" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
@@ -685,7 +689,7 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="TInterface" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.TInterface.label" uid="7a56a78f-21b0-463d-b927-b9a3a461b565" is-abstract="false">
+            <Stereotype name="TInterface" metaclass="Standard.Class" owner-stereotype="mref#'' {fecd81a5-da41-4a07-a507-6bfaf5bbadd2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TInterface.label" uid="7a56a78f-21b0-463d-b927-b9a3a461b565" is-abstract="false">
                 <Icon path="res/icon/gui/TInterface24.png"/>
                 <Image path="res/icon/gui/TInterface48.IMAGE.png"/>
                 <PropertyTable id="TInterfaceTable" label="%propertytable.TInterfaceTable.label" uid="204ebc96-ec6b-46d3-9f88-bcec349cadc7">
@@ -699,7 +703,7 @@
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
-            <Stereotype name="TNodeTemplate" metaclass="Standard.Class" owner-stereotype="mref#'' {11eac153-1560-420f-a4f6-f5387b6c8a98} Infrastructure.Stereotype" is-hidden="true" label="%stereotype.TNodeTemplate.label" uid="1a20bf91-0a92-434a-9d1f-35c86788784e" is-abstract="false">
+            <Stereotype name="TNodeTemplate" metaclass="Standard.Class" owner-stereotype="" is-hidden="true" label="%stereotype.TNodeTemplate.label" uid="1a20bf91-0a92-434a-9d1f-35c86788784e" is-abstract="false">
                 <Icon path="res/icon/gui/node_template24.png"/>
                 <Image path="res/icon/gui/node_template48.png"/>
                 <PropertyTable id="TNodeTemplatePropertyTable" label="%propertytable.TNodeTemplateProperty.label" uid="de74defe-d419-4c01-9b11-563b796c0e6c">
@@ -781,7 +785,7 @@
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
-            <Stereotype name="TPolicyType" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.TPolicyType.label" uid="b76dbc7d-8b6f-46f8-89d4-f0ea8eea40d2" is-abstract="false">
+            <Stereotype name="TPolicyType" metaclass="Standard.Class" owner-stereotype="mref#'' {fecd81a5-da41-4a07-a507-6bfaf5bbadd2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TPolicyType.label" uid="b76dbc7d-8b6f-46f8-89d4-f0ea8eea40d2" is-abstract="false">
                 <Icon path="res/icon/gui/tpolicytype24.ICON.png"/>
                 <Image path="res/icon/gui/tpolicytype48.IMAGE.png"/>
                 <PropertyTable id="TPolicyTypePropertyPage" label="%propertytable.TPolicyTypePropertyPage.label" uid="89cd71c7-7594-4686-a240-f8226a802249">
@@ -869,7 +873,7 @@
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
-            <Stereotype name="TRequirementDefinitionType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TRequirementDefinitionType.label" uid="622c76d1-f337-471e-984a-2af659417163" is-abstract="false">
+            <Stereotype name="TRequirementDefinitionType" metaclass="Standard.Class" owner-stereotype="mref#'' {fecd81a5-da41-4a07-a507-6bfaf5bbadd2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TRequirementDefinitionType.label" uid="622c76d1-f337-471e-984a-2af659417163" is-abstract="false">
                 <Icon path="res/icon/gui/RequirementDefinitionsType48.ICON.png"/>
                 <Image path="res/icon/gui/RequirementDefinitionsType48.IMAGE.png"/>
             </Stereotype>
@@ -939,19 +943,11 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="Tgroup" metaclass="Standard.Package" owner-stereotype="" is-hidden="false" label="%stereotype.Tgroup.label" uid="572d5cb4-54c7-45d0-a9c8-3dc3677f9ef3" is-abstract="false">
-                <Icon path="res/icon/gui/Tgroup48.ICON.png"/>
-                <Image path="res/icon/gui/Tgroup48.png"/>
-            </Stereotype>
-            <Stereotype name="ToscaModel" metaclass="Standard.Package" owner-stereotype="" is-hidden="false" label="%stereotype.ToscaModel.label" uid="20565008-115d-4fad-800f-134ab276f611" is-abstract="false">
+            <Stereotype name="ToscaElement" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.ToscaElement.label" uid="11eac153-1560-420f-a4f6-f5387b6c8a98" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="TgroupType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TgroupType.label" uid="94a5619a-6aed-4b34-a0d8-03e85419ad55" is-abstract="false">
-                <Icon path="res/icon/gui/TgroupType24.ICON.png"/>
-                <Image path="res/icon/gui/TgroupType48.png"/>
-            </Stereotype>
-            <Stereotype name="ToscaElement" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.ToscaElement.label" uid="11eac153-1560-420f-a4f6-f5387b6c8a98" is-abstract="false">
+            <Stereotype name="ToscaModel" metaclass="Standard.Package" owner-stereotype="" is-hidden="false" label="%stereotype.ToscaModel.label" uid="20565008-115d-4fad-800f-134ab276f611" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
