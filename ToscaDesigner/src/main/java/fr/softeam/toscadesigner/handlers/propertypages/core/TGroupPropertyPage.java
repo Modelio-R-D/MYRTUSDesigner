@@ -14,10 +14,10 @@ import org.modelio.vcore.smkernel.mapi.MObject;
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TgroupType;
-import fr.softeam.toscadesigner.api.tosca.standard.package_.Tgroup;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TGroupType;
+import fr.softeam.toscadesigner.api.tosca.standard.package_.TGroup;
 
-public class TGroupPropertyPage<T extends Tgroup> extends ToscaElementPropertyPage<T> {
+public class TGroupPropertyPage<T extends TGroup> extends ToscaElementPropertyPage<T> {
 	public TGroupPropertyPage(T elt) {
 		super(elt);
 		// TODO Auto-generated constructor stub
@@ -31,9 +31,9 @@ public class TGroupPropertyPage<T extends Tgroup> extends ToscaElementPropertyPa
 			break;
 
 		case 2:
-			for (ModelElement dep : TgroupType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+			for (ModelElement dep : TGroupType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
 				if (value.contains(dep.getUuid())) {
-					this._element.setType(TgroupType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
+					this._element.setType(TGroupType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
 				}
 			}
 			break;
@@ -61,7 +61,7 @@ public class TGroupPropertyPage<T extends Tgroup> extends ToscaElementPropertyPa
                 Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
                     @Override
                     public boolean accept(MObject element) {
-                        return TgroupType.canInstantiate(element);
+                        return TGroupType.canInstantiate(element);
                     }
                 });
         

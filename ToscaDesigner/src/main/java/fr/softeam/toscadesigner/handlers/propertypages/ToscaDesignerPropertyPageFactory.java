@@ -8,7 +8,7 @@ package fr.softeam.toscadesigner.handlers.propertypages;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
-import fr.softeam.toscadesigner.api.tosca.standard.package_.Tgroup;
+import fr.softeam.toscadesigner.api.tosca.standard.package_.TGroup;
 import fr.softeam.toscadesigner.handlers.propertypages.core.MetadataPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.PropertyDefinitionTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TGroupPropertyPage;
@@ -144,8 +144,9 @@ public class ToscaDesignerPropertyPageFactory {
             case fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementsType.STEREOTYPE_NAME: return new RequirementsTypePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementsType.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType.STEREOTYPE_NAME: return new TCapabilityDefinitionsTypePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinitionType.STEREOTYPE_NAME: return new TRequirementDefinitionTypePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinitionType.instantiate(obj));
-            case fr.softeam.toscadesigner.api.tosca.standard.class_.TgroupType.STEREOTYPE_NAME: return new TGroupTypePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TgroupType.instantiate(obj));
+            case fr.softeam.toscadesigner.api.tosca.standard.class_.TGroupType.STEREOTYPE_NAME: return new TGroupTypePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TGroupType.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate.STEREOTYPE_NAME: return new TNodeTemplatePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate.instantiate(obj));
+            case fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicyType.STEREOTYPE_NAME: return new TPolicyTypePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicyType.instantiate(obj));
 
             default:
                 break;
@@ -179,7 +180,6 @@ public class ToscaDesignerPropertyPageFactory {
         @Override
         public final Object visitModelElement(ModelElement obj) {
             switch (this.stName) {
-            case fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TPolicyType.STEREOTYPE_NAME: return new TPolicyTypePropertyPage<>(fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TPolicyType.instantiate(obj));
             
             default:
                 break;
@@ -241,7 +241,7 @@ public class ToscaDesignerPropertyPageFactory {
         @Override
         public final Object visitPackage(Package obj) {
             switch (this.stName) {
-            case fr.softeam.toscadesigner.api.tosca.standard.package_.Tgroup.STEREOTYPE_NAME: return new TGroupPropertyPage<>(Tgroup.instantiate(obj));
+            case fr.softeam.toscadesigner.api.tosca.standard.package_.TGroup.STEREOTYPE_NAME: return new TGroupPropertyPage<>(TGroup.instantiate(obj));
             default:
                 break;
             }

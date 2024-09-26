@@ -2,9 +2,10 @@ package fr.softeam.toscadesigner.handlers.propertypages.core;
 
 import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TPolicyType;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TPolicy;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicyType;
+
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
@@ -32,7 +33,7 @@ public class TPolicyPropertyPage<T extends TPolicy> extends ToscaElementProperty
                   for (ModelElement el : TPolicyType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                       if (value.contains(el.getUuid())) {
                           this._element.setPolicyType(
-                                  TPolicyType.instantiate((org.modelio.metamodel.uml.statik.Attribute) el));
+                                  TPolicyType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
                       }
                   }
                   break;
