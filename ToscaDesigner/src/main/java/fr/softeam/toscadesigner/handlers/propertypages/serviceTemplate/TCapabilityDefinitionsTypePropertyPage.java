@@ -1,13 +1,10 @@
 package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
+import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TPolicyType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicyType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
-
-import java.util.Arrays;
-
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
@@ -38,15 +35,15 @@ public class TCapabilityDefinitionsTypePropertyPage<T extends TCapabilityDefinit
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
         /*
-		table.addProperty("Derived From",
-				this._element.getElement().getDerivedFrom() != null ? this._element.getElement().getDerivedFrom() : null,
-				Arrays.asList(Metamodel.getMClass("Attribute")), new IMObjectFilter() {
-					@Override
-					public boolean accept(MObject element) {
-						return TPolicyType.canInstantiate(element);
-					}
-				});
-				*/
+                table.addProperty("Derived From",
+                        this._element.getElement().getDerivedFrom() != null ? this._element.getElement().getDerivedFrom() : null,
+                        Arrays.asList(Metamodel.getMClass("Attribute")), new IMObjectFilter() {
+                            @Override
+                            public boolean accept(MObject element) {
+                                return TPolicyType.canInstantiate(element);
+                            }
+                        });
+                        */
     }
 
 }

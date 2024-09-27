@@ -1,11 +1,12 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TgroupType;
+
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TGroupType;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 
-public class TGroupTypePropertyPage<T extends TgroupType> extends ToscaElementPropertyPage<T> {
+public class TGroupTypePropertyPage<T extends TGroupType> extends ToscaElementPropertyPage<T> {
     public TGroupTypePropertyPage(T elt) {
 		super(elt);
 		// TODO Auto-generated constructor stub

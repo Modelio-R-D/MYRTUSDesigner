@@ -152,8 +152,8 @@
                 <Image path=""/>
             </Stereotype>
             <Stereotype name="PoliciesType" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.PoliciesType.label" uid="205759e2-44bb-4cb3-b19e-8cfbed4f9435" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+                <Icon path="res/icon/gui/policiesType24.ICON.png"/>
+                <Image path="res/icon/gui/policiesType.png"/>
             </Stereotype>
             <Stereotype name="PoliciesType1" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.PoliciesType1.label" uid="941ef924-e37d-4b4b-ba3d-ded20d4c3ccd" is-abstract="false">
                 <Icon path=""/>
@@ -568,7 +568,7 @@
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
-            <Stereotype name="TEntityType" metaclass="Standard.Class" owner-stereotype="mref#'' {fecd81a5-da41-4a07-a507-6bfaf5bbadd2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TEntityType.label" uid="fecd81a5-da41-4a07-a507-6bfaf5bbadd2" is-abstract="false">
+            <Stereotype name="TEntityType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TEntityType.label" uid="fecd81a5-da41-4a07-a507-6bfaf5bbadd2" is-abstract="false">
                 <Icon path=""/>
                 <Image path=""/>
                 <PropertyTable id="TEntityTypePropertyTable" label="%propertytable.TEntityTypePropertyTable.label" uid="e8f30f06-d953-4192-a783-d2a57c96564c">
@@ -1108,10 +1108,42 @@
                     <HParameter name="name" value="Plans"/>
                 </Handler>
             </Tool>
+            <Tool id="Policies_Type" label="%tool.Policies_Type.label" tooltip="%tool.Policies_Type.tooltip" image="res/icon/gui/policiesType24.ICON.png">
+                <Scope-source metaclass="Infrastructure.ModelElement" stereotype=""/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#PoliciesType"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="Element"/>
+                </Handler>
+            </Tool>
+            <Tool id="Policy" label="%tool.Policy.label" tooltip="%tool.Policy.tooltip" image="res/icon/gui/tpolicy24.ICON.png">
+                <Scope-source metaclass="Infrastructure.ModelElement" stereotype=""/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#TPolicy"/>
+                    <HParameter name="metaclass" value="Standard.Attribute"/>
+                    <HParameter name="name" value="Policy"/>
+                </Handler>
+            </Tool>
             <Tool id="PropertyDefinition" label="%tool.PropertyDefinition.label" tooltip="%tool.PropertyDefinition.tooltip" image="res/icon/gui/attribute24.png">
                 <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeType"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#PropertiesDefinitionType"/>
+                    <HParameter name="metaclass" value="Standard.Attribute"/>
+                    <HParameter name="name" value="Property"/>
+                </Handler>
+            </Tool>
+            <Tool id="Property_(Node_Template)" label="%tool.Property_(Node_Template).label" tooltip="%tool.Property_(Node_Template).tooltip" image="res/icon/gui/TPropertyDef24.png">
+                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeTemplate"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#TPropertyDef"/>
+                    <HParameter name="metaclass" value="Standard.Attribute"/>
+                    <HParameter name="name" value="Property"/>
+                </Handler>
+            </Tool>
+            <Tool id="Property_(Node_Type)" label="%tool.Property_(Node_Type).label" tooltip="%tool.Property_(Node_Type).tooltip" image="res/icon/gui/PropertyDefinitionType24.png">
+                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeType"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#PropertyDefinitionType"/>
                     <HParameter name="metaclass" value="Standard.Attribute"/>
                     <HParameter name="name" value="Property"/>
                 </Handler>
@@ -1180,30 +1212,6 @@
                     <HParameter name="name" value="TopologyTemplate"/>
                 </Handler>
             </Tool>
-            <Tool id="Property_(Node_Type)" label="%tool.Property_(Node_Type).label" tooltip="%tool.Property_(Node_Type).tooltip" image="res/icon/gui/PropertyDefinitionType24.png">
-                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeType"/>
-                <Handler class="Box">
-                    <HParameter name="stereotype" value="ToscaDesigner#PropertyDefinitionType"/>
-                    <HParameter name="metaclass" value="Standard.Attribute"/>
-                    <HParameter name="name" value="Property"/>
-                </Handler>
-            </Tool>
-            <Tool id="Property_(Node_Template)" label="%tool.Property_(Node_Template).label" tooltip="%tool.Property_(Node_Template).tooltip" image="res/icon/gui/TPropertyDef24.png">
-                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeTemplate"/>
-                <Handler class="Box">
-                    <HParameter name="stereotype" value="ToscaDesigner#TPropertyDef"/>
-                    <HParameter name="metaclass" value="Standard.Attribute"/>
-                    <HParameter name="name" value="Property"/>
-                </Handler>
-            </Tool>
-            <Tool id="Policy" label="%tool.Policy.label" tooltip="%tool.Policy.tooltip" image="res/icon/gui/tpolicy24.ICON.png">
-                <Scope-source metaclass="Infrastructure.ModelElement" stereotype=""/>
-                <Handler class="Box">
-                    <HParameter name="stereotype" value="ToscaDesigner#TPolicy"/>
-                    <HParameter name="metaclass" value="Standard.Attribute"/>
-                    <HParameter name="name" value="Policy"/>
-                </Handler>
-            </Tool>
         </Tools>
         <ContextualMenu>
             <CommandRef refid="Export" group="" group-image=""/>
@@ -1216,6 +1224,7 @@
             <DiagramType base-diagram="Standard.StaticDiagram" stereotype="ToscaDesigner#ToscaDiagram">
                 <Palette keepBasePalette="false">
                     <ToolRef refid="Service Template" group="%group.Services.label"/>
+                    <ToolRef refid="Policies_Type" group="%group.Policy.label"/>
                     <ToolRef refid="Policy" group="%group.Policy.label"/>
                 </Palette>
                 <Handler class="StandardCustomizer">
@@ -1232,6 +1241,7 @@
                     <ToolRef refid="Metadata" group="%group.Attributes.label"/>
                     <ToolRef refid="Property_(Node_Type)" group="%group.Attributes.label"/>
                     <ToolRef refid="Policy" group="%group.Attributes.label"/>
+                    <ToolRef refid="Policies_Type" group="%group.Attributes.label"/>
                     <ToolRef refid="Plans" group="%group.Plans.label"/>
                     <ToolRef refid="Requirements_NodeType" group="%group.Requirements.label"/>
                     <ToolRef refid="Requirement_NodeType" group="%group.Requirements.label"/>
@@ -1263,6 +1273,7 @@
                     <ToolRef refid="Metadata" group="%group.Attributes.label"/>
                     <ToolRef refid="Property_(Node_Template)" group="%group.Attributes.label"/>
                     <ToolRef refid="Policy" group="%group.Attributes.label"/>
+                    <ToolRef refid="Policies_Type" group="%group.Attributes.label"/>
                 </Palette>
                 <Handler class="StandardCustomizer">
                     <HParameter name="stereotype" value="ToscaDesigner#TopologyTemplateDiagram"/>
