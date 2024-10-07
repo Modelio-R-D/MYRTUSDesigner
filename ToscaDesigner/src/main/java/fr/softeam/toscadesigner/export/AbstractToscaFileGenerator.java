@@ -131,7 +131,7 @@ public abstract class AbstractToscaFileGenerator {
 
 				// 1. Check for non-tosca derived type
 
-				String derivedFromValue = tNodeType.getDerivedFrom(); 
+				String derivedFromValue = tNodeType.getDerivedFrom().getName(); 
 				String targetNamespace = tNodeType.getTargetNamespace(); 
 				if (derivedFromValue != null && !derivedFromValue.startsWith("tosca")) {
 					imports.add(new Import(derivedFromValue + ".tosca", targetNamespace, "MYRTUS-"));
