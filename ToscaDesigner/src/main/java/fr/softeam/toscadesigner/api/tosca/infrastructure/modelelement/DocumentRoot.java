@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 25/09/2024 11:42 by Modelio Studio.
+ * This file was generated on 10/10/2024 11:39 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -39,13 +39,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("e1f528ef-b16e-4401-916a-a3dd942e9a2d")
 public class DocumentRoot implements IMdaProxy {
-    @objid ("8e717d6b-ef2b-4ff9-a011-4a02f1aae0f8")
+    @objid ("6d18c773-1a34-4d2e-95db-e1a9f803802e")
     public static final String STEREOTYPE_NAME = "DocumentRoot";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
      */
-    @objid ("0e893101-1426-484d-8878-274385e19d3e")
+    @objid ("f94000b7-2409-4414-bff8-56da31c09b08")
     protected final ModelElement elt;
 
     /**
@@ -55,7 +55,7 @@ public class DocumentRoot implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("2d587689-4ef4-46fe-a66a-fa8ee1ead928")
+    @objid ("3c763501-954e-4eb9-bc96-ff9e397abac0")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (DocumentRoot.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(DocumentRoot.MdaTypes.STEREOTYPE_ELT));
     }
@@ -65,7 +65,7 @@ public class DocumentRoot implements IMdaProxy {
      * 
      * @return a {@link DocumentRoot} proxy on the created {@link ModelElement}.
      */
-    @objid ("90b4660c-c826-46f1-a017-a97a6118904b")
+    @objid ("d120afd0-452f-40aa-acf1-1a48b27e5a38")
     public static DocumentRoot create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(DocumentRoot.MdaTypes.STEREOTYPE_ELT);
@@ -79,7 +79,7 @@ public class DocumentRoot implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link DocumentRoot} proxy or <i>null</i>.
      */
-    @objid ("f89b0467-f54b-4f61-878a-1b8a3f312c5e")
+    @objid ("f2237154-9991-43f4-920a-9bf2db41336e")
     public static DocumentRoot instantiate(final ModelElement obj) {
         return DocumentRoot.canInstantiate(obj) ? new DocumentRoot(obj) : null;
     }
@@ -92,7 +92,7 @@ public class DocumentRoot implements IMdaProxy {
      * @return a {@link DocumentRoot} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("67c4399b-33f5-49e1-9642-54550376a66d")
+    @objid ("59a71925-7241-4145-860e-be56bfd4d685")
     public static DocumentRoot safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (DocumentRoot.canInstantiate(obj))
         	return new DocumentRoot(obj);
@@ -100,7 +100,7 @@ public class DocumentRoot implements IMdaProxy {
         	throw new IllegalArgumentException("DocumentRoot: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("2f4abc96-724b-406e-86e5-8ef26e3bb07a")
+    @objid ("50b0e855-ffe6-4a48-a307-5abe5e58204d")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -120,35 +120,35 @@ public class DocumentRoot implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("e6d86883-f649-44a7-abb3-dc8a61189321")
+    @objid ("dee4fb47-0f3f-40a7-96c2-fe681d77f2d4")
     public ModelElement getElement() {
         return this.elt;
     }
 
-    @objid ("178c6d58-4cbb-45ac-88db-8090a109f776")
+    @objid ("7f5228f4-a3cb-4cf1-b969-e979002cbe69")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
         
     }
 
-    @objid ("915276d5-d0df-40e4-a8a6-c8b2c87015b5")
+    @objid ("21c60986-1474-4225-b04e-3a2a4c420ce1")
     protected  DocumentRoot(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("f4e51eb0-488c-484f-96e1-e2b5225d87f7")
     public static final class MdaTypes {
-        @objid ("96fe87d5-6117-4a9c-9a93-b4745e74f73d")
+        @objid ("ff431eef-cbf6-43c3-bd5d-ad7dc4ddec64")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("f550750a-85f4-4f9a-a658-82b4a07b4ff2")
+        @objid ("d9e70320-8fcc-424e-ae98-9e49ca26a11d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("361395e4-3747-40c3-8e01-0a30392c21f6")
+        @objid ("ccb3f888-4273-4080-b34a-4fd47722d5be")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("cc16cda5-923e-464b-a546-a4adec95d4d1")
+        @objid ("6125b46b-16aa-400c-9e1c-258adb05e85d")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

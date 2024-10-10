@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 25/09/2024 11:42 by Modelio Studio.
+ * This file was generated on 10/10/2024 11:39 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -39,13 +39,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("53e27f1e-e444-4ed5-aae5-359402233ee6")
 public class ArtifactReferencesType implements IMdaProxy {
-    @objid ("583a2583-28c5-465d-8d8e-47b9e76ca5be")
+    @objid ("94a111ba-84bf-42a6-b9e8-7b12dd2ce7f5")
     public static final String STEREOTYPE_NAME = "ArtifactReferencesType";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
      */
-    @objid ("a9ec5330-1560-48db-b222-d4319b351502")
+    @objid ("0de9baaf-7537-440c-8a27-72891ba49fa4")
     protected final ModelElement elt;
 
     /**
@@ -55,7 +55,7 @@ public class ArtifactReferencesType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("6b25d551-3c3f-4ee9-98d9-9189347e2641")
+    @objid ("a17a686c-b65d-49cb-91f7-c6790b54056b")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (ArtifactReferencesType.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(ArtifactReferencesType.MdaTypes.STEREOTYPE_ELT));
     }
@@ -65,7 +65,7 @@ public class ArtifactReferencesType implements IMdaProxy {
      * 
      * @return a {@link ArtifactReferencesType} proxy on the created {@link ModelElement}.
      */
-    @objid ("adcfff1e-8b0a-4869-b99d-4c8260d6addb")
+    @objid ("eba0d71b-3762-4f5e-983d-434a4cc81400")
     public static ArtifactReferencesType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(ArtifactReferencesType.MdaTypes.STEREOTYPE_ELT);
@@ -79,7 +79,7 @@ public class ArtifactReferencesType implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link ArtifactReferencesType} proxy or <i>null</i>.
      */
-    @objid ("361e20a5-b401-44e9-9e4d-913db4a369d5")
+    @objid ("7b5d24a5-0cf1-4562-9f08-322ddc82f68b")
     public static ArtifactReferencesType instantiate(final ModelElement obj) {
         return ArtifactReferencesType.canInstantiate(obj) ? new ArtifactReferencesType(obj) : null;
     }
@@ -92,7 +92,7 @@ public class ArtifactReferencesType implements IMdaProxy {
      * @return a {@link ArtifactReferencesType} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("f1314877-0bfc-47b7-921e-95f889cbcdb5")
+    @objid ("d26a2c4b-3d10-4af4-9840-75404644ad6a")
     public static ArtifactReferencesType safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (ArtifactReferencesType.canInstantiate(obj))
         	return new ArtifactReferencesType(obj);
@@ -106,7 +106,7 @@ public class ArtifactReferencesType implements IMdaProxy {
      * null
      * 
      */
-    @objid ("305b6395-929a-4139-9f5f-61a782c91a24")
+    @objid ("b34a66cf-e0e1-443c-a5cd-62a87c5716c7")
     public void addArtifactReference(final TArtifactReference obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -116,7 +116,7 @@ public class ArtifactReferencesType implements IMdaProxy {
         }
     }
 
-    @objid ("2a2ca5a1-2073-4bf9-963c-a50291be005a")
+    @objid ("d103d0f5-9b96-4ae6-8d94-2d93b98ca5fd")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -138,7 +138,7 @@ public class ArtifactReferencesType implements IMdaProxy {
      * null
      * 
      */
-    @objid ("c8bc7b21-a2ae-47d0-accc-5b86c9bcb59b")
+    @objid ("cfa095a6-4a42-41de-9db6-d605c6f5f7aa")
     public List<TArtifactReference> getArtifactReference() {
         List<TArtifactReference> results = new ArrayList<>();
         for (Dependency d : this.elt.getImpactedDependency()) {
@@ -155,12 +155,12 @@ public class ArtifactReferencesType implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("a133a488-137c-4e90-b126-77cb74b6c430")
+    @objid ("962acf35-e335-47b3-ae91-411b58598a61")
     public ModelElement getElement() {
         return this.elt;
     }
 
-    @objid ("37e75efe-1f0b-4a49-9f99-a4547d3f37ff")
+    @objid ("20d51d96-eebe-4d1f-bbfd-af28242fa454")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -173,7 +173,7 @@ public class ArtifactReferencesType implements IMdaProxy {
      * null
      * 
      */
-    @objid ("cf1c1624-14a8-4b6d-b8f7-e72315894f25")
+    @objid ("41535ae4-2628-4f3f-9e04-a71ffd883c62")
     public boolean removeArtifactReference(final TArtifactReference obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getImpactedDependency())) {
@@ -188,23 +188,23 @@ public class ArtifactReferencesType implements IMdaProxy {
         
     }
 
-    @objid ("9a69a05e-02f3-4e96-bc65-c866516c8cef")
+    @objid ("b329c03d-5def-4f15-8314-21eefd5622d7")
     protected  ArtifactReferencesType(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("9db11b9e-3143-466c-9c40-39a3d3a73230")
     public static final class MdaTypes {
-        @objid ("b992f71e-dd49-4106-bb97-d08e583f9c56")
+        @objid ("befe412d-5105-4d63-bf76-232e4e5576b5")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("6c7b76b8-d3fc-4945-b0a5-bfbbaa501860")
+        @objid ("4982814d-ce09-4849-81b2-07af2c950dbc")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("706d010b-bc1d-451a-8a39-ec2296b7d2b9")
+        @objid ("6f363e65-f35a-4d50-bf6f-65ab5c1f3f66")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("f0174f41-0e9e-416c-8604-10018003c22c")
+        @objid ("2d696a09-3415-4c73-ada7-a5fd5d6b25b0")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

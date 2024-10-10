@@ -3,9 +3,8 @@ package fr.softeam.toscadesigner.handlers.propertypages.core;
 import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType;
-import fr.softeam.toscadesigner.api.tosca.standard.attribute.TPolicy;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicy;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicyType;
-
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;

@@ -1,8 +1,14 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
+import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TEntityType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicyType;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.Metamodel;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.vcore.session.api.model.IMObjectFilter;
+import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("2838ec68-e4d6-477b-9ba1-a3596be3ed41")
 public abstract class TEntityTypePropertyPage<T extends TEntityType> extends ToscaElementPropertyPage<T> {
@@ -23,6 +29,15 @@ public abstract class TEntityTypePropertyPage<T extends TEntityType> extends Tos
         case 2:
             this._element.setDescription(value);
             break;
+            
+        case 3:
+        for (ModelElement el : TEntityType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+        if (value.contains(el.getUuid())) {
+        this._element
+        .setDerivedFrom(TEntityType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
+        }
+        }
+        break;
         }
     }
 
@@ -32,6 +47,14 @@ public abstract class TEntityTypePropertyPage<T extends TEntityType> extends Tos
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
         table.addProperty("Description", _element.getDescription());
+        table.addProperty("Derived From",
+        this._element.getDerivedFrom() != null ? this._element.getDerivedFrom().getElement() : null,
+        Arrays.asList(Metamodel.getMClass("Attribute")), new IMObjectFilter() {
+        @Override
+        public boolean accept(MObject element) {
+        return TEntityType.canInstantiate(element);
+        }
+        });
     }
 
 }

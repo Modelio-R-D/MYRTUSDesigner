@@ -763,7 +763,7 @@
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
-            <Stereotype name="TPolicy" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TPolicy.label" uid="afe2c9ed-9fab-4a53-a2d2-b52d849d0799" is-abstract="false">
+            <Stereotype name="TPolicy" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TPolicy.label" uid="afe2c9ed-9fab-4a53-a2d2-b52d849d0799" is-abstract="false">
                 <Icon path="res/icon/gui/tpolicy24.ICON.png"/>
                 <Image path="res/icon/gui/tpolicy48.IMAGE.png"/>
                 <PropertyTable id="TPolicyTable" label="%propertytable.TPolicyTable.label" uid="ca3978f9-9ac6-4b7b-8785-a9d502a40e86">
@@ -835,11 +835,11 @@
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
-            <Stereotype name="TRequirement" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TRequirement.label" uid="f0ddd3c2-c7ec-4156-84b0-d31b76098b17" is-abstract="false">
+            <Stereotype name="TRequirement" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TRequirement.label" uid="f0ddd3c2-c7ec-4156-84b0-d31b76098b17" is-abstract="false">
                 <Icon path="res/icon/gui/requirements2-24.png"/>
                 <Image path="res/icon/gui/requirements2-48.png"/>
             </Stereotype>
-            <Stereotype name="TRequirementDefinition" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TRequirementDefinition.label" uid="2637c4bd-ca93-4012-82ea-8ef2ba5ca444" is-abstract="false">
+            <Stereotype name="TRequirementDefinition" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TRequirementDefinition.label" uid="2637c4bd-ca93-4012-82ea-8ef2ba5ca444" is-abstract="false">
                 <Icon path="res/icon/gui/requirement24.png"/>
                 <Image path="res/icon/gui/requirement48.png"/>
                 <PropertyTable id="TRequirementDefinitionTable" label="%propertytable.TRequirementDefinitionTable.label" uid="620d9ee4-1487-4477-9f9c-f46321456d98">
@@ -1106,7 +1106,7 @@
                 <Scope-source metaclass="Infrastructure.ModelElement" stereotype=""/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TPolicy"/>
-                    <HParameter name="metaclass" value="Standard.Attribute"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
                     <HParameter name="name" value="Policy"/>
                 </Handler>
             </Tool>
@@ -1154,15 +1154,15 @@
                 <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#RequirementsType"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TRequirement"/>
-                    <HParameter name="metaclass" value="Standard.Attribute"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
                     <HParameter name="name" value="Requirement"/>
                 </Handler>
             </Tool>
             <Tool id="Requirement_NodeType" label="%tool.Requirement_NodeType.label" tooltip="%tool.Requirement_NodeType.tooltip" image="res/icon/gui/requirement24.png">
-                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TRequirementDefinitionType"/>
+                <Scope-source metaclass="Infrastructure.ModelElement" stereotype=""/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TRequirementDefinition"/>
-                    <HParameter name="metaclass" value="Standard.Attribute"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
                     <HParameter name="name" value="Requirement"/>
                 </Handler>
             </Tool>
