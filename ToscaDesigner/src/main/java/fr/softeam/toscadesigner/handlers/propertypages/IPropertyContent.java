@@ -28,8 +28,9 @@
  */
 package fr.softeam.toscadesigner.handlers.propertypages;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 /**
  * This interface defines the contract of all property pages

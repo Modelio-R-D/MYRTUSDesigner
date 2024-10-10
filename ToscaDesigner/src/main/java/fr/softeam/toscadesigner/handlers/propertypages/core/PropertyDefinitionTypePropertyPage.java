@@ -1,12 +1,10 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
-import java.util.ArrayList;
-import java.util.List;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.DataType;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType;
 
 @objid ("1c6a520c-04ce-41e5-9556-bd2f87af180b")
 public class PropertyDefinitionTypePropertyPage<T extends PropertyDefinitionType> extends ToscaElementPropertyPage<T> {

@@ -2,8 +2,16 @@ package fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementsType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicyType;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
+
+import java.util.Arrays;
+
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.Metamodel;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.vcore.session.api.model.IMObjectFilter;
+import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("b4f929d9-ab9c-4870-977d-832ebfb5d57e")
 public class RequirementsTypePropertyPage<T extends RequirementsType> extends ToscaElementPropertyPage<T> {
@@ -20,7 +28,14 @@ public class RequirementsTypePropertyPage<T extends RequirementsType> extends To
         case 1:
             this._element.getElement().setName(value);
             break;
-        
+		case 2:
+			for (ModelElement el : RequirementsType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+				if (value.contains(el.getUuid())) {
+					this._element
+							.setDerivedFrom(RequirementsType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
+				}
+			}
+			break;
         }
     }
 
@@ -29,6 +44,14 @@ public class RequirementsTypePropertyPage<T extends RequirementsType> extends To
     public void update(IModulePropertyTable table) {
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
+		table.addProperty("Derived From",
+				this._element.getDerivedFrom() != null ? this._element.getDerivedFrom().getElement() : null,
+				Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+					@Override
+					public boolean accept(MObject element) {
+						return RequirementsType.canInstantiate(element);
+					}
+				});
     }
 
 }

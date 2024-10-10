@@ -6,28 +6,6 @@
  */
 package fr.softeam.toscadesigner.handlers.propertypages;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
-import fr.softeam.toscadesigner.api.tosca.standard.package_.TGroup;
-import fr.softeam.toscadesigner.handlers.propertypages.core.MetadataPropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.core.PropertyDefinitionTypePropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.core.TGroupPropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.core.TGroupTypePropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.core.TPolicyPropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.core.TPolicyTypePropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.core.TPropertyDefPropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TCapabilityDefinitionPropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TCapabilityDefinitionsTypePropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TNodeTypePropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRelationshipTypePropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRequirementDefinitionPropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRequirementDefinitionTypePropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TTopologyTemplatePropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.RequirementsTypePropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TDeploymentArtifactPropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TDeploymentArtifactsPropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TNodeTemplatePropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TRequirementPropertyPage;
 import org.modelio.metamodel.diagrams.ClassDiagram;
 import org.modelio.metamodel.mda.ModuleComponent;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
@@ -50,6 +28,30 @@ import org.modelio.metamodel.uml.statik.Port;
 import org.modelio.metamodel.visitors.IDefaultInfrastructureVisitor;
 import org.modelio.metamodel.visitors.IDefaultModelVisitor;
 import org.modelio.metamodel.visitors.IInfrastructureVisitor;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
+import fr.softeam.toscadesigner.api.tosca.standard.package_.TGroup;
+import fr.softeam.toscadesigner.handlers.propertypages.core.MetadataPropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.core.PropertyDefinitionTypePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.core.TGroupPropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.core.TGroupTypePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.core.TPolicyPropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.core.TPolicyTypePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.core.TPropertyDefPropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TCapabilityDefinitionPropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TCapabilityDefinitionsTypePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TNodeTypePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRelationshipTypePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRequirementDefinitionPropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRequirementDefinitionTypePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TTopologyTemplatePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.RequirementsTypePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TDeploymentArtifactPropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TDeploymentArtifactsPropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TNodeTemplatePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TRequirementPropertyPage;
 
 @objid ("548a9154-c8a7-486f-9adb-ba13d312251a")
 public class ToscaDesignerPropertyPageFactory {
