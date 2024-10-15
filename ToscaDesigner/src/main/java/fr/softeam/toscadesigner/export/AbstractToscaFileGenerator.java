@@ -27,8 +27,8 @@ import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
 
 import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityDefinition;
-import fr.softeam.toscadesigner.api.tosca.standard.attribute.TRequirement;
-import fr.softeam.toscadesigner.api.tosca.standard.attribute.TRequirementDefinition;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
@@ -64,7 +64,7 @@ public abstract class AbstractToscaFileGenerator {
 
 				if (stereotype.getName().equals("TRequirement")) {
 					
-					TRequirement tRequirement = TRequirement.safeInstantiate((Attribute) context);
+					TRequirement tRequirement = TRequirement.safeInstantiate((Class) context);
 					if (searchedPropertyName.equals("node")) {
 						propertyStringValue = tRequirement.getNode().getName();
 					} else if (searchedPropertyName.equals("capability")) {
@@ -72,7 +72,7 @@ public abstract class AbstractToscaFileGenerator {
 					}
 				} else if (stereotype.getName().equals("TRequirementDefinition")) {
 					
-					TRequirementDefinition tRequirementDefinition = TRequirementDefinition.safeInstantiate((Attribute) context);
+					TRequirementDefinition tRequirementDefinition = TRequirementDefinition.safeInstantiate((Class) context);
 					if (searchedPropertyName.equals("node")) {
 						propertyStringValue = tRequirementDefinition.getNodeType().getName();
 					} else if (searchedPropertyName.equals("capability")) {

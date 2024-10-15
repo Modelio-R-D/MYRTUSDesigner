@@ -2,11 +2,12 @@ package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
 import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicyType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicyType;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
@@ -25,8 +26,16 @@ public class TCapabilityDefinitionsTypePropertyPage<T extends TCapabilityDefinit
         case 1:
             this._element.getElement().setName(value);
             break;
-        
+		case 2:
+			for (ModelElement el : TCapabilityDefinitionsType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+				if (value.contains(el.getUuid())) {
+					this._element
+							.setDerivedFrom(TCapabilityDefinitionsType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
+				}
+			}
+			break;
         }
+        
     }
 
     @objid ("f71fd3f0-3856-459c-9320-a64b3b1aaf0f")
@@ -34,16 +43,14 @@ public class TCapabilityDefinitionsTypePropertyPage<T extends TCapabilityDefinit
     public void update(IModulePropertyTable table) {
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
-        /*
-                table.addProperty("Derived From",
-                        this._element.getElement().getDerivedFrom() != null ? this._element.getElement().getDerivedFrom() : null,
-                        Arrays.asList(Metamodel.getMClass("Attribute")), new IMObjectFilter() {
-                            @Override
-                            public boolean accept(MObject element) {
-                                return TPolicyType.canInstantiate(element);
-                            }
-                        });
-                        */
+		table.addProperty("Derived From",
+				this._element.getDerivedFrom() != null ? this._element.getDerivedFrom().getElement() : null,
+				Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+					@Override
+					public boolean accept(MObject element) {
+						return TCapabilityDefinitionsType.canInstantiate(element);
+					}
+				});
     }
 
 }

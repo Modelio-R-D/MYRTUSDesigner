@@ -1,15 +1,16 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
 import java.util.Arrays;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicyType;
 
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicyType;
 
 public class TPolicyTypePropertyPage<T extends TPolicyType> extends ToscaElementPropertyPage<T> {
 	public TPolicyTypePropertyPage(T elt) {

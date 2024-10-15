@@ -1,9 +1,17 @@
 package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinitionType;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
+
+import java.util.Arrays;
+
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.Metamodel;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.vcore.session.api.model.IMObjectFilter;
+import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("c757eb57-dab6-4fc3-8fd8-6f094926a62c")
 public class TRequirementDefinitionTypePropertyPage<T extends TRequirementDefinitionType> extends ToscaElementPropertyPage<T> {
@@ -20,7 +28,14 @@ public class TRequirementDefinitionTypePropertyPage<T extends TRequirementDefini
         case 1:
             this._element.getElement().setName(value);
             break;
-        
+		case 2:
+			for (ModelElement el : TRequirementDefinitionType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+				if (value.contains(el.getUuid())) {
+					this._element
+							.setDerivedFrom(TRequirementDefinitionType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
+				}
+			}
+			break;
         
         }
     }
@@ -30,6 +45,14 @@ public class TRequirementDefinitionTypePropertyPage<T extends TRequirementDefini
     public void update(IModulePropertyTable table) {
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
+		table.addProperty("Derived From",
+				this._element.getDerivedFrom() != null ? this._element.getDerivedFrom().getElement() : null,
+				Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+					@Override
+					public boolean accept(MObject element) {
+						return TRequirementDefinitionType.canInstantiate(element);
+					}
+				});
     }
 
 }

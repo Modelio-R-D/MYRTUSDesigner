@@ -1,7 +1,6 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
@@ -13,8 +12,8 @@ import org.modelio.vcore.smkernel.mapi.MObject;
 
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TGroupType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.package_.TGroup;
 
 public class TGroupPropertyPage<T extends TGroup> extends ToscaElementPropertyPage<T> {
