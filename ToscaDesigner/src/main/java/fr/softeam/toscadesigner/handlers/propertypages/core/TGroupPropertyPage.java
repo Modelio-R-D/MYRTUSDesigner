@@ -64,7 +64,7 @@ public class TGroupPropertyPage<T extends TGroup> extends ToscaElementPropertyPa
                     }
                 });
         
-        List<? extends ModelElement> members = (List<? extends ModelElement>) this._element.getMembers();
+        //List<? extends ModelElement> members = (List<? extends ModelElement>) this._element.getMembers();
 		/*
         table.addProperty(
         	    "Members", 
