@@ -3,13 +3,10 @@ package fr.softeam.toscadesigner.handlers.propertypages.core;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.handlers.propertypages.IPropertyContent;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.toscadesigner.handlers.propertypages.IPropertyContent;
 
 @objid ("4a086c41-a7ac-4984-8917-85fb7f0be381")
 public abstract class ToscaElementPropertyPage<T extends Object> implements IPropertyContent {

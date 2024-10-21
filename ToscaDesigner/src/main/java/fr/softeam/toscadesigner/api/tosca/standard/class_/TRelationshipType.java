@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 10/10/2024 11:39 by Modelio Studio.
+ * This file was generated on 17/10/2024 12:15 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
@@ -40,13 +40,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("e0f3bc58-bf56-45c6-bfbf-a7927d06aac3")
 public class TRelationshipType extends TEntityType implements IMdaProxy {
-    @objid ("ea108deb-ca82-4950-b300-11e66f048036")
+    @objid ("396498c3-4827-4042-821b-30a184701d6c")
     public static final String STEREOTYPE_NAME = "TRelationshipType";
 
-    @objid ("a60c79d5-ec5e-4884-89e0-12bbffa7fed0")
+    @objid ("e9e9e700-083b-444c-9197-cd5af6a64d3e")
     public static final String VALIDSOURCE_PROPERTY = "validSource";
 
-    @objid ("8f5a9bdc-1c3c-401d-ac03-75f0ed100a3a")
+    @objid ("42ed9d3a-f344-4f64-be63-ea4cccc248ac")
     public static final String VALIDTARGET_PROPERTY = "validTarget";
 
     /**
@@ -56,17 +56,16 @@ public class TRelationshipType extends TEntityType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("640f1bba-1612-4b12-b167-97b8d105a3bb")
+    @objid ("d9ece465-1838-4f5a-8423-47ddc3bbfdc3")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (TRelationshipType.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(TRelationshipType.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link Class} stereotyped << TRelationshipType >> then instantiate a {@link TRelationshipType} proxy.
-     * 
      * @return a {@link TRelationshipType} proxy on the created {@link Class}.
      */
-    @objid ("73c485e1-654e-42f2-b8e0-837a33dfe88c")
+    @objid ("5f5de24c-de86-426e-92f0-68fabbeb8e1a")
     public static TRelationshipType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(TRelationshipType.MdaTypes.STEREOTYPE_ELT);
@@ -80,7 +79,7 @@ public class TRelationshipType extends TEntityType implements IMdaProxy {
      * @param obj a Class
      * @return a {@link TRelationshipType} proxy or <i>null</i>.
      */
-    @objid ("9bde2540-24b8-4874-9b2c-bd57e119c658")
+    @objid ("b55f592d-133d-4c69-90b5-977656cd04a0")
     public static TRelationshipType instantiate(final Class obj) {
         return TRelationshipType.canInstantiate(obj) ? new TRelationshipType(obj) : null;
     }
@@ -89,19 +88,19 @@ public class TRelationshipType extends TEntityType implements IMdaProxy {
      * Tries to instantiate a {@link TRelationshipType} proxy from a {@link Class} stereotyped << TRelationshipType >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link Class}
      * @return a {@link TRelationshipType} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("5e935da1-9743-4de9-94b7-0bbb47ac985d")
+    @objid ("3220c3c7-feb7-4793-910d-a5d2fa11c5d6")
     public static TRelationshipType safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (TRelationshipType.canInstantiate(obj))
-        	return new TRelationshipType(obj);
+            return new TRelationshipType(obj);
         else
-        	throw new IllegalArgumentException("TRelationshipType: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("TRelationshipType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("c75cd736-3bf0-497b-a22a-67be59e9d414")
+    @objid ("b829c2ec-71b6-46e0-b2f4-733b3633039f")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -118,10 +117,10 @@ public class TRelationshipType extends TEntityType implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("ed08addd-d084-4208-adb5-c400ffc52faa")
+    @objid ("92e96d5f-2bff-4a36-9692-24308eb97484")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
@@ -132,7 +131,7 @@ public class TRelationshipType extends TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("7f48e598-d17c-4293-845e-5a103a619be5")
+    @objid ("c3fffe64-aaab-456f-934c-24736d95f435")
     public String getValidSource() {
         String value = this.elt.getProperty(TRelationshipType.MdaTypes.STEREOTYPE_ELT,
                                             TRelationshipType.MdaTypes.VALIDSOURCE_PROPERTY_ELT.getName());
@@ -140,7 +139,6 @@ public class TRelationshipType extends TEntityType implements IMdaProxy {
           value = TRelationshipType.MdaTypes.VALIDSOURCE_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(TRelationshipType.MdaTypes.VALIDSOURCE_PROPERTY_ELT, value, this.elt);
-        
     }
 
     /**
@@ -148,7 +146,7 @@ public class TRelationshipType extends TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("593f6449-18a7-43ef-bf07-c625add1a239")
+    @objid ("577ca9b6-37c1-42ea-b6e2-7decef39bfa7")
     public String getValidTarget() {
         String value = this.elt.getProperty(TRelationshipType.MdaTypes.STEREOTYPE_ELT,
                                             TRelationshipType.MdaTypes.VALIDTARGET_PROPERTY_ELT.getName());
@@ -156,14 +154,12 @@ public class TRelationshipType extends TEntityType implements IMdaProxy {
           value = TRelationshipType.MdaTypes.VALIDTARGET_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(TRelationshipType.MdaTypes.VALIDTARGET_PROPERTY_ELT, value, this.elt);
-        
     }
 
-    @objid ("25c2ee71-e48f-4085-bb19-b0ee5f0e965a")
+    @objid ("ebaa3f26-176f-47f1-b1ff-005f9602e9d7")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-        
     }
 
     /**
@@ -171,7 +167,7 @@ public class TRelationshipType extends TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("1318afc1-d734-4aa6-8d2d-66d60c8f107c")
+    @objid ("c630178a-3ffe-4aa2-a0ca-10d767599503")
     public void setValidSource(final String value) {
         this.elt.setProperty(TRelationshipType.MdaTypes.STEREOTYPE_ELT,
                              TRelationshipType.MdaTypes.VALIDSOURCE_PROPERTY_ELT.getName(),
@@ -183,36 +179,36 @@ public class TRelationshipType extends TEntityType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("549746ee-dbff-4313-b9ac-34e23987c74a")
+    @objid ("a5e6d492-cb76-445e-8e19-512f55bfca15")
     public void setValidTarget(final String value) {
         this.elt.setProperty(TRelationshipType.MdaTypes.STEREOTYPE_ELT,
                              TRelationshipType.MdaTypes.VALIDTARGET_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(TRelationshipType.MdaTypes.VALIDTARGET_PROPERTY_ELT, value));
     }
 
-    @objid ("fd588f9c-3fbe-44a8-bb45-051abcca7b36")
+    @objid ("7afccb4a-fa05-45f1-93b4-58be84a56fed")
     protected  TRelationshipType(final Class elt) {
         super(elt);
     }
 
     @objid ("efc2caa7-56ae-4dd3-b10d-f655db155c94")
     public static final class MdaTypes {
-        @objid ("779a57f7-ba3b-44ec-9292-c6bb34814cb7")
+        @objid ("4c495beb-19d3-4aae-ad9a-6532feb6892a")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("e08bceb2-07c9-4504-be64-e2f4c785095a")
+        @objid ("54b5c9e9-edb1-4911-9c37-6f5611766e2e")
         public static PropertyDefinition VALIDSOURCE_PROPERTY_ELT;
 
-        @objid ("74641dd7-e730-4020-bde1-3b599a41d9d6")
+        @objid ("9e086231-a31a-41e5-9229-62a7a742bae1")
         public static PropertyDefinition VALIDTARGET_PROPERTY_ELT;
 
-        @objid ("2c317c42-f0b0-4df9-ab27-247934b0a367")
+        @objid ("5dcc7d13-809b-4aac-9c82-5b483ec6787f")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("7e1f1d40-3077-4bf0-be36-979400bf1687")
+        @objid ("330d7e1b-c225-4000-bdb2-e77daa2e76a5")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("695402d8-6fa3-474b-8f55-5b8fd13b52f7")
+        @objid ("a37fbd63-da95-439d-9d61-a8e218eb82e7")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -237,7 +233,6 @@ public class TRelationshipType extends TEntityType implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
-            
         }
 
     }
