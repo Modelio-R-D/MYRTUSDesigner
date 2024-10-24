@@ -26,12 +26,12 @@ import com.github.jknack.handlebars.helper.ConditionalHelpers;
 import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
 
 import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityDefinition;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition;
 
 public abstract class AbstractToscaFileGenerator {
 	protected Handlebars handlebars = setupHandlebars();
@@ -98,7 +98,7 @@ public abstract class AbstractToscaFileGenerator {
 						propertyStringValue = nodeType.getTargetNamespace() + "." + nodeType.getElement().getName();
 					}
 				} else if (stereotype.getName().equals("TCapabilityDefinition")) {
-					TCapabilityDefinition tCapabilityDefinition = TCapabilityDefinition.safeInstantiate((Attribute)context);
+					TCapabilityDefinition tCapabilityDefinition = TCapabilityDefinition.safeInstantiate((Class)context);
 					if (searchedPropertyName.equals("capabilityType")) {
 						propertyStringValue = tCapabilityDefinition.getCapabilityType().getElement().getName();
 					}
