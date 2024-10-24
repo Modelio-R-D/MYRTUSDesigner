@@ -68,17 +68,11 @@ public class TGroupPropertyPage<T extends TGroup> extends ToscaElementPropertyPa
                         return TGroupType.canInstantiate(element);
                     }
                 });
-        /*
-                 * table.addProperty("Software Components",
-                 * getCamelValue(this._element.getSoftwareComponents()),
-                 * getAddRemove(SoftwareComponent.MdaTypes.STEREOTYPE_ELT.getExtendedElement(),
-                 * this._element.getSoftwareComponents()));
-                 */
         
         
         List <ModelElement> members_elt = extractModelElements(this._element.getMembers());
         List<ModelElement> nodeTemplateList = (TNodeTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement() != null) 
-            ? TNodeTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement() // Ensure T is compatible with TNodeTemplate
+            ? TNodeTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement()
             : Collections.emptyList();
         
         table.addProperty(
@@ -89,7 +83,7 @@ public class TGroupPropertyPage<T extends TGroup> extends ToscaElementPropertyPa
     }
 
     @objid ("805e83a0-7a3b-4978-bc22-f5bcc9e60aa5")
-    public static List<ModelElement> extractModelElements(List<TNodeTemplate> members) {
+    public static List<ModelElement> extractModelElements1(List<TNodeTemplate> members) {
         List<ModelElement> members_elt = new ArrayList<>();
         for (int i = 0; i < members.size(); i++) {
             members_elt.add(members.get(i).getElement());

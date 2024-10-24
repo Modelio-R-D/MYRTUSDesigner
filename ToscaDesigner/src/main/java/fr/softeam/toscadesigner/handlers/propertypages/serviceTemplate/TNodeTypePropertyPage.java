@@ -26,16 +26,6 @@ public class TNodeTypePropertyPage<T extends TNodeType> extends TEntityTypePrope
     @Override
     public void changeProperty(int row, String value) {
         switch (row) {
-        case 1:
-            this._element.getElement().setName(value);
-            break;
-        case 2:
-            for (ModelElement el : TNodeType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
-                if (value.contains(el.getUuid())) {
-                    this._element.setDerivedFrom(TNodeType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
-                }
-            }
-            break;
         case 3:
             for (ModelElement dep : InterfacesType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
@@ -70,15 +60,7 @@ public class TNodeTypePropertyPage<T extends TNodeType> extends TEntityTypePrope
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
-        table.addProperty("Name", _element.getElement().getName());
-        table.addProperty("Derived From",
-                this._element.getDerivedFrom() != null ? this._element.getDerivedFrom().getElement() : null,
-                Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
-                    @Override
-                    public boolean accept(MObject element) {
-                        return TNodeType.canInstantiate(element);
-                    }
-                });
+
         // Interfaces Type
         table.addProperty("Interfaces Type",
                 this._element.getInterfaces() != null ? this._element.getInterfaces().getElement() : null,

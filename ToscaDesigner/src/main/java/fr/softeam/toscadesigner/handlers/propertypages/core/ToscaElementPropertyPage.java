@@ -3,7 +3,11 @@ package fr.softeam.toscadesigner.handlers.propertypages.core;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
+import com.modeliosoft.modelio.api.module.mda.IMdaProxy;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.handlers.propertypages.IPropertyContent;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
@@ -153,6 +157,14 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
         if (value == null)
             return "";
         return value;
+    }
+    
+    public static < T extends IMdaProxy> List<ModelElement> extractModelElements(List<T> members) {
+        List<ModelElement> members_elt = new ArrayList<>();
+        for (int i = 0; i < members.size(); i++) {
+            members_elt.add((ModelElement) ((IMdaProxy) members.get(i)).getElement());
+        }
+        return members_elt;
     }
 
 }
