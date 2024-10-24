@@ -40,14 +40,14 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("852b71fd-c5a6-4ed8-a584-41151572f10f")
 public class TPropertyDef implements IMdaProxy {
-    @objid ("9006ff09-79d0-4124-b72f-dbca6b757bf8")
+    @objid ("524f1d30-1d4f-4ecd-8187-94df1b942272")
     public static final String STEREOTYPE_NAME = "TPropertyDef";
 
     /**
      * The underlying {@link Attribute} represented by this proxy, never null.
      * 
      */
-    @objid ("91730269-2740-4df9-97ec-a84e2df8dd31")
+    @objid ("4e1da3bf-fabe-440e-b54c-ca78e809198f")
     protected final Attribute elt;
 
     /**
@@ -57,7 +57,7 @@ public class TPropertyDef implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("3638b84e-85fe-4c81-8d44-2d34ad7308ee")
+    @objid ("24e2a2b5-988e-451d-bd9c-e6d5835e7d24")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Attribute) && (TPropertyDef.MdaTypes.STEREOTYPE_ELT!=null) && ((Attribute) elt).isStereotyped(TPropertyDef.MdaTypes.STEREOTYPE_ELT));
     }
@@ -66,7 +66,7 @@ public class TPropertyDef implements IMdaProxy {
      * Create a new {@link Attribute} stereotyped << TPropertyDef >> then instantiate a {@link TPropertyDef} proxy.
      * @return a {@link TPropertyDef} proxy on the created {@link Attribute}.
      */
-    @objid ("e6616bb8-8287-4ff4-8f65-9f2baffadb9a")
+    @objid ("c333e72b-fe3d-4717-a95b-3b6b1f60a288")
     public static TPropertyDef create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Attribute");
         e.getExtension().add(TPropertyDef.MdaTypes.STEREOTYPE_ELT);
@@ -80,7 +80,7 @@ public class TPropertyDef implements IMdaProxy {
      * @param obj a Attribute
      * @return a {@link TPropertyDef} proxy or <i>null</i>.
      */
-    @objid ("51ead172-4ae6-4ee8-b3f4-7e8ad480035b")
+    @objid ("6c06ab80-32c3-40cc-b189-640d3ab6ee0d")
     public static TPropertyDef instantiate(final Attribute obj) {
         return TPropertyDef.canInstantiate(obj) ? new TPropertyDef(obj) : null;
     }
@@ -93,7 +93,7 @@ public class TPropertyDef implements IMdaProxy {
      * @param obj a {@link Attribute}
      * @return a {@link TPropertyDef} proxy.
      */
-    @objid ("6ce0f474-16f8-4e3f-a570-06a84660bd03")
+    @objid ("9b2fb6e2-075e-4b72-a1d1-70c859417cdb")
     public static TPropertyDef safeInstantiate(final Attribute obj) throws IllegalArgumentException {
         if (TPropertyDef.canInstantiate(obj))
             return new TPropertyDef(obj);
@@ -101,7 +101,7 @@ public class TPropertyDef implements IMdaProxy {
             throw new IllegalArgumentException("TPropertyDef: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("d56acf2b-436b-4e40-9bfd-778cc09d2f6f")
+    @objid ("73b96240-461f-403f-9657-17ad64444905")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -121,7 +121,7 @@ public class TPropertyDef implements IMdaProxy {
      * Get the underlying {@link Attribute}.
      * @return the Attribute represented by this proxy, never null.
      */
-    @objid ("4a9cf274-ae9b-4b0b-946f-317989b04e78")
+    @objid ("1ce429c5-d922-4100-a139-4efb6632476b")
     public Attribute getElement() {
         return this.elt;
     }
@@ -131,7 +131,7 @@ public class TPropertyDef implements IMdaProxy {
      * Role description:
      * null
      */
-    @objid ("37fd88da-3b87-4e8f-b883-6e737467c79d")
+    @objid ("f1ec43fc-5267-4cc0-982f-72eac81cf599")
     public PropertyDefinitionType getName() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(TPropertyDef.MdaTypes.MDAASSOCDEP)
@@ -143,7 +143,7 @@ public class TPropertyDef implements IMdaProxy {
         return null;
     }
 
-    @objid ("6fb0da80-e09e-44e2-8f70-5c23e13339d0")
+    @objid ("381c6892-dd90-4a02-ad89-daf109e6a8e8")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -154,7 +154,7 @@ public class TPropertyDef implements IMdaProxy {
      * Role description:
      * null
      */
-    @objid ("7b84230b-d37e-4d30-b691-f3380d50102e")
+    @objid ("bcc85896-4c94-455e-bccf-d1497cb13f80")
     public void setName(final PropertyDefinitionType obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -174,23 +174,23 @@ public class TPropertyDef implements IMdaProxy {
         }
     }
 
-    @objid ("3b42ea8f-a769-42aa-98d1-4273201c80be")
+    @objid ("bb6ec3d1-5e1a-4d66-b768-8a90c2fa7bfe")
     protected  TPropertyDef(final Attribute elt) {
         this.elt = elt;
     }
 
     @objid ("38033de9-5f63-44ad-9149-ce0ea1c852b5")
     public static final class MdaTypes {
-        @objid ("a22f23db-483d-441b-8b55-3393c7fc2675")
+        @objid ("d2a96103-3f69-49a1-b14b-7e914ce183e3")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("3d5fc887-5241-4597-9480-7e09d94aac44")
+        @objid ("92bf8d39-afa3-435d-934b-29ebd244b31c")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("0ea3c063-4cef-4bb3-ba6e-bba409256c0f")
+        @objid ("df85f41c-0b18-4cd3-b698-040a4bc5b2d6")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("7ec188bd-7a5f-49d9-8404-2e9389b4ae6c")
+        @objid ("2ec6af6b-a698-4ff6-8e65-ef63db2d7fde")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

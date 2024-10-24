@@ -40,7 +40,7 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("c8bb4135-3f08-4d6f-9858-b26ac8816f7c")
 public class TArtifactType extends TEntityType implements IMdaProxy {
-    @objid ("c24fd642-191a-4382-8cef-722e323f7d57")
+    @objid ("b76ddb2d-8015-48f9-afff-96465c66f615")
     public static final String STEREOTYPE_NAME = "TArtifactType";
 
     /**
@@ -50,7 +50,7 @@ public class TArtifactType extends TEntityType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("9fa2aa61-ad6b-4d68-a0a3-4c942b65d215")
+    @objid ("1850adb7-7ea3-438a-bcdf-e330b028a70e")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (TArtifactType.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(TArtifactType.MdaTypes.STEREOTYPE_ELT));
     }
@@ -59,7 +59,7 @@ public class TArtifactType extends TEntityType implements IMdaProxy {
      * Create a new {@link Class} stereotyped << TArtifactType >> then instantiate a {@link TArtifactType} proxy.
      * @return a {@link TArtifactType} proxy on the created {@link Class}.
      */
-    @objid ("6ddb68de-cc73-4871-98de-33349b6d9c54")
+    @objid ("e8dde65c-987c-47b6-ac35-9f9f12f2a2f3")
     public static TArtifactType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(TArtifactType.MdaTypes.STEREOTYPE_ELT);
@@ -73,7 +73,7 @@ public class TArtifactType extends TEntityType implements IMdaProxy {
      * @param obj a Class
      * @return a {@link TArtifactType} proxy or <i>null</i>.
      */
-    @objid ("3eb5f22d-17bf-45e1-a32a-0c3489e50e2b")
+    @objid ("5794a16a-4000-434b-88c3-1789dd1807f4")
     public static TArtifactType instantiate(final Class obj) {
         return TArtifactType.canInstantiate(obj) ? new TArtifactType(obj) : null;
     }
@@ -86,7 +86,7 @@ public class TArtifactType extends TEntityType implements IMdaProxy {
      * @param obj a {@link Class}
      * @return a {@link TArtifactType} proxy.
      */
-    @objid ("55164f21-e48e-4fe8-9b5c-bc2455dc8959")
+    @objid ("8d70b146-c475-4651-a7f1-434fd2f6de38")
     public static TArtifactType safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (TArtifactType.canInstantiate(obj))
             return new TArtifactType(obj);
@@ -94,7 +94,7 @@ public class TArtifactType extends TEntityType implements IMdaProxy {
             throw new IllegalArgumentException("TArtifactType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("bddb9a02-a1b3-4031-9cba-02e9a9d21eec")
+    @objid ("47521edf-86bb-4352-8af7-293e033158ff")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -114,35 +114,35 @@ public class TArtifactType extends TEntityType implements IMdaProxy {
      * Get the underlying {@link Class}.
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("7f6582cc-1dc5-4bee-9076-ed2f188227ce")
+    @objid ("ad7e9b6e-cd15-4edb-9975-45b15e00a405")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("360a2c46-2f59-4505-97cf-1d779fdd0c0a")
+    @objid ("73e95d26-5deb-4239-8dff-6f4d8fffae7b")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
     }
 
-    @objid ("a2e95cea-e788-49b3-8ea4-8d78ee7dfef7")
+    @objid ("71876ae3-1712-44fb-bad5-462bf1af37fe")
     protected  TArtifactType(final Class elt) {
         super(elt);
     }
 
     @objid ("6997d70c-4755-49ef-b28a-e3397b4b558b")
     public static final class MdaTypes {
-        @objid ("c2964d4c-88f6-483e-a417-f174b4fc5904")
+        @objid ("f7a410cc-d107-4876-87f4-f340cb5c4e2d")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("9f9c7617-c493-4558-9849-ca510d7281d4")
+        @objid ("6dc15d62-c709-4f03-8da2-8167f1f6e90d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("b35b6fa3-3b40-48c7-8653-27fb8f6c88e6")
+        @objid ("d1faf7c3-95fe-450a-b4d9-5149b31ad050")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("a0d55a0e-6332-4a24-bbea-c875f3ff1847")
+        @objid ("6f944a04-fe9b-42af-be08-3f78c1ce51cb")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
