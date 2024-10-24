@@ -48,8 +48,8 @@
                 <Image path=""/>
             </Stereotype>
             <Stereotype name="ConstraintsType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.ConstraintsType.label" uid="2404a629-b23f-4c4c-be56-f244dd2e9495" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+                <Icon path="res/icon/gui/ConstraintsType48.ICON.png"/>
+                <Image path="res/icon/gui/ConstraintsType48.IMAGE.png"/>
             </Stereotype>
             <Stereotype name="DefinitionType" metaclass="Infrastructure.ModelElement" owner-stereotype="mref#'' {a3041a84-a279-4c05-9425-1f7249f6cf24} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.DefinitionType.label" uid="acfbb136-0cbf-4fc9-9da7-edeb0b51e9d7" is-abstract="false">
                 <Icon path=""/>
@@ -344,7 +344,7 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="TCapabilityDefinition" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityDefinition.label" uid="92f8cb40-9498-4759-9c75-6b4df72de355" is-abstract="false">
+            <Stereotype name="TCapabilityDefinition" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityDefinition.label" uid="92f8cb40-9498-4759-9c75-6b4df72de355" is-abstract="false">
                 <Icon path="res/icon/gui/capabilityDefinition24.png"/>
                 <Image path="res/icon/gui/capabilityDefinition48.png"/>
                 <PropertyTable id="TCapabilityDefinitionTable" label="%propertytable.TCapabilityDefinitionTable.label" uid="e2b2d181-f6b2-4a51-81dc-df962e137ef2">
@@ -403,8 +403,8 @@
                 </PropertyTable>
             </Stereotype>
             <Stereotype name="TConstraint" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.TConstraint.label" uid="78fc63ae-0ad0-45f4-840f-4dbadc0922cb" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+                <Icon path="res/icon/gui/TConstraint24.ICON.png"/>
+                <Image path="res/icon/gui/TConstraint48.IMAGE.png"/>
                 <PropertyTable id="TConstraintTable" label="%propertytable.TConstraintTable.label" uid="a551336a-7d44-4b8b-a840-e369e91ca42d">
                     <PropertyDefinition id="any" label="%propertydefinition.TConstraintTable.any.label" default-value="" is-editable="true" uid="919faa40-beb7-4c4d-81e3-95ffcaf681a3">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
@@ -1039,7 +1039,7 @@
                 <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TCapabilityDefinitionsType"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TCapabilityDefinition"/>
-                    <HParameter name="metaclass" value="Standard.Attribute"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
                     <HParameter name="name" value="Capability"/>
                 </Handler>
             </Tool>
@@ -1212,6 +1212,22 @@
                     <HParameter name="name" value="TopologyTemplate"/>
                 </Handler>
             </Tool>
+            <Tool id="Constraint" label="%tool.Constraint.label" tooltip="%tool.Constraint.tooltip" image="res/icon/gui/TConstraint.ICON.png">
+                <Scope-source metaclass="Infrastructure.ModelElement" stereotype=""/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#TConstraint"/>
+                    <HParameter name="metaclass" value="Standard.Attribute"/>
+                    <HParameter name="name" value="Element"/>
+                </Handler>
+            </Tool>
+            <Tool id="Constraints" label="%tool.Constraints.label" tooltip="%tool.Constraints.tooltip" image="res/icon/gui/ConstraintsType48.IMAGE.ICON.png">
+                <Scope-source metaclass="Infrastructure.ModelElement" stereotype=""/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#ConstraintsType"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="Element"/>
+                </Handler>
+            </Tool>
         </Tools>
         <ContextualMenu>
             <CommandRef refid="Export" group="" group-image=""/>
@@ -1226,6 +1242,8 @@
                     <ToolRef refid="Service Template" group="%group.Services.label"/>
                     <ToolRef refid="Policies_Type" group="%group.Policy.label"/>
                     <ToolRef refid="Policy" group="%group.Policy.label"/>
+                    <ToolRef refid="Constraint" group="%group.Constraints.label"/>
+                    <ToolRef refid="Constraints" group="%group.Constraints.label"/>
                 </Palette>
                 <Handler class="StandardCustomizer">
                     <HParameter name="stereotype" value="ToscaDesigner#ToscaDiagram"/>
@@ -1242,6 +1260,8 @@
                     <ToolRef refid="Property_(Node_Type)" group="%group.Attributes.label"/>
                     <ToolRef refid="Policy" group="%group.Attributes.label"/>
                     <ToolRef refid="Policies_Type" group="%group.Attributes.label"/>
+                    <ToolRef refid="Constraint" group="%group.Attributes.label"/>
+                    <ToolRef refid="Constraints" group="%group.Attributes.label"/>
                     <ToolRef refid="Plans" group="%group.Plans.label"/>
                     <ToolRef refid="Requirements_NodeType" group="%group.Requirements.label"/>
                     <ToolRef refid="Requirement_NodeType" group="%group.Requirements.label"/>
@@ -1274,6 +1294,8 @@
                     <ToolRef refid="Property_(Node_Template)" group="%group.Attributes.label"/>
                     <ToolRef refid="Policy" group="%group.Attributes.label"/>
                     <ToolRef refid="Policies_Type" group="%group.Attributes.label"/>
+                    <ToolRef refid="Constraint" group="%group.Attributes.label"/>
+                    <ToolRef refid="Constraints" group="%group.Attributes.label"/>
                 </Palette>
                 <Handler class="StandardCustomizer">
                     <HParameter name="stereotype" value="ToscaDesigner#TopologyTemplateDiagram"/>

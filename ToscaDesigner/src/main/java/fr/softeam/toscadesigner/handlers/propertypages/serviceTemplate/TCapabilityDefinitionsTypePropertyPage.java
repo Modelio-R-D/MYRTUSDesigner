@@ -26,16 +26,15 @@ public class TCapabilityDefinitionsTypePropertyPage<T extends TCapabilityDefinit
         case 1:
             this._element.getElement().setName(value);
             break;
-		case 2:
-			for (ModelElement el : TCapabilityDefinitionsType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
-				if (value.contains(el.getUuid())) {
-					this._element
-							.setDerivedFrom(TCapabilityDefinitionsType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
-				}
-			}
-			break;
+        case 2:
+        for (ModelElement el : TCapabilityDefinitionsType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+        if (value.contains(el.getUuid())) {
+        this._element
+        .setDerivedFrom(TCapabilityDefinitionsType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
         }
-        
+        }
+        break;
+        }
     }
 
     @objid ("f71fd3f0-3856-459c-9320-a64b3b1aaf0f")
@@ -43,14 +42,14 @@ public class TCapabilityDefinitionsTypePropertyPage<T extends TCapabilityDefinit
     public void update(IModulePropertyTable table) {
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
-		table.addProperty("Derived From",
-				this._element.getDerivedFrom() != null ? this._element.getDerivedFrom().getElement() : null,
-				Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
-					@Override
-					public boolean accept(MObject element) {
-						return TCapabilityDefinitionsType.canInstantiate(element);
-					}
-				});
+        table.addProperty("Derived From",
+        this._element.getDerivedFrom() != null ? this._element.getDerivedFrom().getElement() : null,
+        Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+        @Override
+        public boolean accept(MObject element) {
+        return TCapabilityDefinitionsType.canInstantiate(element);
+        }
+        });
     }
 
 }

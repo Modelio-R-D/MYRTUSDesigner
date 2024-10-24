@@ -41,7 +41,10 @@
     <g
        style="fill:#f55536;fill-opacity:1"
        id="g841-1"
-       transform="matrix(0.26012113,0,0,0.32657433,-21.316674,308.45875)">
+       transform="matrix(0.26012113,0,0,0.32657433,-21.316674,308.45875)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\TConstraint24.png"
+       inkscape:export-xdpi="3.3787813"
+       inkscape:export-ydpi="3.3787813">
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:992.717px;line-height:1.25;font-family:'Book Antiqua';-inkscape-font-specification:'Book Antiqua, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#f55536;fill-opacity:1;stroke:none;stroke-width:24.8179"
@@ -58,7 +61,10 @@
     <g
        style="fill:#ff773d;fill-opacity:1"
        id="g895"
-       transform="matrix(0.10213788,0,0,0.1254616,99.462881,258.051)">
+       transform="matrix(0.10213788,0,0,0.1254616,99.462881,258.051)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\TConstraint24.png"
+       inkscape:export-xdpi="3.3787813"
+       inkscape:export-ydpi="3.3787813">
       <path
          d="m 576,-160 -56,-56 104,-104 -104,-104 56,-56 104,104 104,-104 56,56 -104,104 104,104 -56,56 -104,-104 z m 79,-360 -142,-142 56,-56 85,85 170,-170 56,57 z M 80,-280 v -80 h 360 v 80 z m 0,-320 v -80 h 360 v 80 z"
          id="path886"
