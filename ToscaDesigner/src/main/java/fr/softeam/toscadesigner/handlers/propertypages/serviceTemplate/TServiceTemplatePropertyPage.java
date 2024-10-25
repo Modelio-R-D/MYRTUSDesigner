@@ -1,14 +1,15 @@
 package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.standard.package_.TTopologyTemplate;
+
+import fr.softeam.toscadesigner.api.tosca.standard.package_.TServiceTemplate;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("a7f33f74-8435-4a95-a221-94a56c5f4cfd")
-public class TTopologyTemplatePropertyPage<T extends TTopologyTemplate> extends ToscaElementPropertyPage<T> {
+public class TServiceTemplatePropertyPage<T extends TServiceTemplate> extends ToscaElementPropertyPage<T> {
     @objid ("6b40406a-9893-459b-872a-046f069c5b49")
-    public  TTopologyTemplatePropertyPage(T elt) {
+    public  TServiceTemplatePropertyPage(T elt) {
         super(elt);
         // TODO Auto-generated constructor stub
     }
@@ -29,6 +30,10 @@ public class TTopologyTemplatePropertyPage<T extends TTopologyTemplate> extends 
     public void update(IModulePropertyTable table) {
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
+        //topology
+        //nodetypes
+        // relationship types
+        // groups
     }
 
 }

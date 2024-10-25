@@ -3,6 +3,7 @@ package fr.softeam.toscadesigner.handlers.commands.submodel;
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.ServiceTemplateDiagram;
+import fr.softeam.toscadesigner.api.tosca.standard.package_.TServiceTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.package_.ToscaModel;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.ITransaction;
@@ -22,7 +23,7 @@ public class CreateServiceTemplateDigramCommand extends CreateSubModelCommand {
         
         try( ITransaction transaction = session.createTransaction("Create Service Template")){
         
-            ToscaModel subModel = ToscaModel.create(session);
+            TServiceTemplate subModel = TServiceTemplate.create(session);
             ServiceTemplateDiagram diagram = ServiceTemplateDiagram.create(session);
         
             packageOwner.getOwnedElement().add(subModel.getElement());

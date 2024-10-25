@@ -60,7 +60,7 @@ public class TNodeTypePropertyPage<T extends TNodeType> extends TEntityTypePrope
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
-
+        
         // Interfaces Type
         table.addProperty("Interfaces Type",
                 this._element.getInterfaces() != null ? this._element.getInterfaces().getElement() : null,

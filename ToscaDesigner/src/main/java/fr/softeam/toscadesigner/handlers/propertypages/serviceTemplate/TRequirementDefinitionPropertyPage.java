@@ -2,7 +2,7 @@ package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
 import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition;
+import fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityDefinition;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition;
@@ -33,7 +33,7 @@ public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition
             for (ModelElement dep : TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
                     this._element.setCapability(
-                            TCapabilityDefinition.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
+                            TCapabilityDefinition.instantiate((org.modelio.metamodel.uml.statik.Attribute) dep));
                 }
             }
             break;
