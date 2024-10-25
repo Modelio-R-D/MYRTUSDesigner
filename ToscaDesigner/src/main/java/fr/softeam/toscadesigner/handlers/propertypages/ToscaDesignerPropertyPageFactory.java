@@ -22,6 +22,7 @@ import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TNodeType
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRelationshipTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRequirementDefinitionPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRequirementDefinitionTypePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TServiceTemplatePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TTopologyTemplatePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.RequirementsTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TDeploymentArtifactPropertyPage;
@@ -242,6 +243,7 @@ public class ToscaDesignerPropertyPageFactory {
             switch (this.stName) {
             case fr.softeam.toscadesigner.api.tosca.standard.package_.TGroup.STEREOTYPE_NAME: return new TGroupPropertyPage<>(TGroup.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.package_.TTopologyTemplate.STEREOTYPE_NAME: return new TTopologyTemplatePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.package_.TTopologyTemplate.instantiate(obj));
+            case fr.softeam.toscadesigner.api.tosca.standard.package_.TServiceTemplate.STEREOTYPE_NAME: return new TServiceTemplatePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.package_.TServiceTemplate.instantiate(obj));
             
             default:
                 break;

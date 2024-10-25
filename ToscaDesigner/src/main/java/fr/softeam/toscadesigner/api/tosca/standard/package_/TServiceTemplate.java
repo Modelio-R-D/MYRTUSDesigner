@@ -398,7 +398,7 @@ public class TServiceTemplate implements IMdaProxy {
     public boolean removeGroups(final TGroup obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(TServiceTemplate.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(TServiceTemplate.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(TServiceTemplate.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(TServiceTemplate.MdaTypes.MDAASSOCDEP_ROLE), "groups")) 
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -419,7 +419,7 @@ public class TServiceTemplate implements IMdaProxy {
     public boolean removeNodeTypes(final TNodeType obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(TServiceTemplate.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(TServiceTemplate.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(TServiceTemplate.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(TServiceTemplate.MdaTypes.MDAASSOCDEP_ROLE), "nodeTypes")) 
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
@@ -440,7 +440,7 @@ public class TServiceTemplate implements IMdaProxy {
     public boolean removeRelationships(final TRelationshipType obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
-            if (d.isStereotyped(TServiceTemplate.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(TServiceTemplate.MdaTypes.MDAASSOCDEP_ROLE), "")) 
+            if (d.isStereotyped(TServiceTemplate.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(TServiceTemplate.MdaTypes.MDAASSOCDEP_ROLE), "relationships")) 
               if (Objects.equals(d.getDependsOn(), obj.getElement())) {
                 d.delete();
                 return true;
