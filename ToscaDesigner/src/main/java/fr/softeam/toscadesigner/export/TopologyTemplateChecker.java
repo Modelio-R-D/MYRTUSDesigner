@@ -5,7 +5,7 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate;
+import fr.softeam.toscadesigner.api.tosca.standard.package_.TTopologyTemplate;
 
 public class TopologyTemplateChecker implements ToscaObjectTypeChecker {
 

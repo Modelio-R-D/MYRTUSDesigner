@@ -13,6 +13,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.FileDialog;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.infrastructure.ModelTree;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.statik.Association;
 import org.modelio.metamodel.uml.statik.Attribute;
@@ -26,7 +27,7 @@ import com.github.jknack.handlebars.helper.ConditionalHelpers;
 import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
 
 import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition;
+import fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityDefinition;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
@@ -63,7 +64,7 @@ public abstract class AbstractToscaFileGenerator {
 				propertyStringValue = context.getProperty(stereotype, searchedPropertyName);
 
 				if (stereotype.getName().equals("TRequirement")) {
-					
+
 					TRequirement tRequirement = TRequirement.safeInstantiate((Class) context);
 					if (searchedPropertyName.equals("node")) {
 						propertyStringValue = tRequirement.getNode().getName();
@@ -71,8 +72,9 @@ public abstract class AbstractToscaFileGenerator {
 						propertyStringValue = tRequirement.getCapability().getElement().getName();
 					}
 				} else if (stereotype.getName().equals("TRequirementDefinition")) {
-					
-					TRequirementDefinition tRequirementDefinition = TRequirementDefinition.safeInstantiate((Class) context);
+
+					TRequirementDefinition tRequirementDefinition = TRequirementDefinition
+							.safeInstantiate((Class) context);
 					if (searchedPropertyName.equals("node")) {
 						propertyStringValue = tRequirementDefinition.getNodeType().getName();
 					} else if (searchedPropertyName.equals("capability")) {
@@ -86,19 +88,21 @@ public abstract class AbstractToscaFileGenerator {
 					}
 				} else if (stereotype.getName().equals("TRelationshipTemplate")) {
 					if (searchedPropertyName.equals("type")) {
-						TRelationshipTemplate tRelationshipTemplate = TRelationshipTemplate.safeInstantiate((Association) context);
+						TRelationshipTemplate tRelationshipTemplate = TRelationshipTemplate
+								.safeInstantiate((Association) context);
 						TRelationshipType relationshipType = tRelationshipTemplate.getRelationshipType();
 						Class element = relationshipType.getElement();
 						propertyStringValue = element.getName();
 					}
 				} else if (stereotype.getName().equals("TNodeTemplate")) {
-					TNodeTemplate tNodeTemplate = TNodeTemplate.safeInstantiate((Class)context);
+					TNodeTemplate tNodeTemplate = TNodeTemplate.safeInstantiate((Class) context);
 					if (searchedPropertyName.equals("nodeType")) {
 						TNodeType nodeType = tNodeTemplate.getNodeType();
 						propertyStringValue = nodeType.getTargetNamespace() + "." + nodeType.getElement().getName();
 					}
 				} else if (stereotype.getName().equals("TCapabilityDefinition")) {
-					TCapabilityDefinition tCapabilityDefinition = TCapabilityDefinition.safeInstantiate((Class)context);
+					TCapabilityDefinition tCapabilityDefinition = TCapabilityDefinition
+							.safeInstantiate((Attribute) context);
 					if (searchedPropertyName.equals("capabilityType")) {
 						propertyStringValue = tCapabilityDefinition.getCapabilityType().getElement().getName();
 					}
@@ -113,13 +117,15 @@ public abstract class AbstractToscaFileGenerator {
 			}
 			throw new RuntimeException("Stereotype property " + searchedPropertyName + " not found in " + context);
 		});
-		handlebars.registerHelper("noStereotypeApplications", (Class context, Options options) -> {
-			List<? extends MObject> artifacts = Stream.concat(context.getOwnedElement().stream(), context.getOwnedAttribute().stream())
-					.filter(element -> element.getExtension().stream()
-							.anyMatch(stereotype -> stereotype.getName().equals(options.params[0])))
-					.collect(Collectors.toList());
-			return artifacts.isEmpty();
-		});
+		handlebars.registerHelper("noStereotypeApplications", (ModelTree context, Options options) -> 
+		    Stream.concat(
+		        context.getOwnedElement().stream(), 
+		        context instanceof Class ? ((Class) context).getOwnedAttribute().stream() : Stream.empty()
+		    )
+		    .noneMatch(element -> element.getExtension().stream()
+		        .anyMatch(stereotype -> stereotype.getName().equals(options.params[0]))
+		    )
+		);
 		handlebars.registerHelper("imports", (ModelElement context, Options options) -> {
 
 			Set<Import> imports = new HashSet<>();
@@ -131,8 +137,8 @@ public abstract class AbstractToscaFileGenerator {
 
 				// 1. Check for non-tosca derived type
 
-				String derivedFromValue = tNodeType.getDerivedFrom().getName(); 
-				String targetNamespace = tNodeType.getTargetNamespace(); 
+				String derivedFromValue = tNodeType.getDerivedFrom().getName();
+				String targetNamespace = tNodeType.getTargetNamespace();
 				if (derivedFromValue != null && !derivedFromValue.startsWith("tosca")) {
 					imports.add(new Import(derivedFromValue + ".tosca", targetNamespace, "MYRTUS-"));
 				}
