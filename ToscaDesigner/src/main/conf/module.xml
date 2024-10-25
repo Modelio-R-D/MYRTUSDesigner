@@ -344,7 +344,7 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="TCapabilityDefinition" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityDefinition.label" uid="92f8cb40-9498-4759-9c75-6b4df72de355" is-abstract="false">
+            <Stereotype name="TCapabilityDefinition" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityDefinition.label" uid="92f8cb40-9498-4759-9c75-6b4df72de355" is-abstract="false">
                 <Icon path="res/icon/gui/capabilityDefinition24.png"/>
                 <Image path="res/icon/gui/capabilityDefinition48.png"/>
                 <PropertyTable id="TCapabilityDefinitionTable" label="%propertytable.TCapabilityDefinitionTable.label" uid="e2b2d181-f6b2-4a51-81dc-df962e137ef2">
@@ -1039,7 +1039,7 @@
                 <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TCapabilityDefinitionsType"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TCapabilityDefinition"/>
-                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="metaclass" value="Standard.Attribute"/>
                     <HParameter name="name" value="Capability"/>
                 </Handler>
             </Tool>

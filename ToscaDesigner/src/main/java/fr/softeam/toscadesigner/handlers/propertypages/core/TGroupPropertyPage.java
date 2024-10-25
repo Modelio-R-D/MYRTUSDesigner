@@ -1,6 +1,8 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
@@ -41,7 +43,8 @@ public class TGroupPropertyPage<T extends TGroup> extends ToscaElementPropertyPa
         
         case 3:
             Class elt1 = (Class) getModelElt(TNodeTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
-            if ((elt1 != null)&& (elt1.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, TNodeTemplate.STEREOTYPE_NAME))) {
+            if ((elt1 != null)
+                    && (elt1.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, TNodeTemplate.STEREOTYPE_NAME))) {
                 Object pc = ToscaDesignerProxyFactory.instantiate(elt1);
                 if (value.startsWith(this._add)) {
                     this._element.addMembers((TNodeTemplate) pc);
@@ -58,8 +61,7 @@ public class TGroupPropertyPage<T extends TGroup> extends ToscaElementPropertyPa
     public void update(IModulePropertyTable table) {
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
-        table.addProperty("Type",
-                this._element.getType() != null ? this._element.getType().getElement() : null,
+        table.addProperty("Type", this._element.getType() != null ? this._element.getType().getElement() : null,
                 Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
                     @Override
                     public boolean accept(MObject element) {
@@ -67,18 +69,26 @@ public class TGroupPropertyPage<T extends TGroup> extends ToscaElementPropertyPa
                     }
                 });
         
-        //List<? extends ModelElement> members = (List<? extends ModelElement>) this._element.getMembers();
-        /*
-                        table.addProperty(
-                                "Members", 
-                                getToscaValue(members), 
-                                getAddRemove(
-                                    (TNodeTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement() != null) 
-                                        ? TNodeTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement() : Collections.emptyList(), 
-                                    members
-                                )
-                            );
-                            */
+        
+        List <ModelElement> members_elt = extractModelElements(this._element.getMembers());
+        List<ModelElement> nodeTemplateList = (TNodeTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement() != null) 
+            ? TNodeTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement()
+            : Collections.emptyList();
+        
+        table.addProperty(
+            "Members", 
+            getToscaValue(members_elt), 
+            getAddRemove(nodeTemplateList, extractModelElements(this._element.getMembers()))
+        );
+    }
+
+    @objid ("805e83a0-7a3b-4978-bc22-f5bcc9e60aa5")
+    public static List<ModelElement> extractModelElements1(List<TNodeTemplate> members) {
+        List<ModelElement> members_elt = new ArrayList<>();
+        for (int i = 0; i < members.size(); i++) {
+            members_elt.add(members.get(i).getElement());
+        }
+        return members_elt;
     }
 
 }
