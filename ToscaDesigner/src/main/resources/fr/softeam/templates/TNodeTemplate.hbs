@@ -1,21 +1,21 @@
-    {{../name}}:
-      type: {{getProperty ../this "nodeType"}}
-      {{#unless (noStereotypeApplications ../this "Metadata")}}metadata:{{/unless}}
+    {{name}}:
+      type: {{getProperty this "nodeType"}}
+      {{#unless (noStereotypeApplications this "Metadata")}}metadata:{{/unless}}
       {{#each ../ownedAttribute}}{{#extension}}{{#eq name "Metadata"}}
         {{../name}}: "{{../value}}"
       {{/eq}}{{/extension}}{{/each}}
-      {{#unless (noStereotypeApplications ../this "PropertyDefinitionType")}}properties:{{/unless}}
+      {{#unless (noStereotypeApplications this "PropertyDefinitionType")}}properties:{{/unless}}
       {{#each ../ownedAttribute}}{{#extension}}{{#eq name "PropertyDefinitionType"}}
         {{../name}}: "{{../value}}"
       {{/eq}}{{/extension}}{{/each}}
-      {{#unless (noStereotypeApplications ../this "RequirementsType")}}requirements:{{/unless}}
+      {{#unless (noStereotypeApplications this "RequirementsType")}}requirements:{{/unless}}
       {{#each ../ownedElement}}{{#extension}}{{#eq name "RequirementsType"}}{{#each ../ownedAttribute}}{{#extension}}{{#eq name "TRequirement"}}
         - {{../name}}:
             node: {{getProperty ../this "node"}}
             relationship: {{relationship}}
             capability: {{getProperty ../this "capability"}}
        	{{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
-      {{#unless (noStereotypeApplications ../this "TDeploymentArtifacts")}}artifacts:{{/unless}}
+      {{#unless (noStereotypeApplications this "TDeploymentArtifacts")}}artifacts:{{/unless}}
       {{#each ../ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifacts"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifact"}}
         {{../name}}:
           type: {{getProperty ../this "artifactType"}}
