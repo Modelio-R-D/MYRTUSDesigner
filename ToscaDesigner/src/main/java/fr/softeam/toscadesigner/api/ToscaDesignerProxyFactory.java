@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 25/10/2024 11:40 by Modelio Studio.
+ * This file was generated on 28/10/2024 10:11 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api;
 
@@ -73,7 +73,7 @@ import org.modelio.metamodel.visitors.IInfrastructureVisitor;
  * <li><< TArtifactType >> on a {@link org.modelio.metamodel.uml.statik.Class}: instantiates a {@link TArtifactType}
  * <li><< TBoundaryDefinitions >> on a {@link org.modelio.metamodel.uml.statik.Class}: instantiates a {@link TBoundaryDefinitions}
  * <li><< TCapability >> on a {@link org.modelio.metamodel.uml.statik.Class}: instantiates a {@link TCapability}
- * <li><< TCapabilityDefinition >> on a {@link org.modelio.metamodel.uml.statik.Attribute}: instantiates a {@link TCapabilityDefinition}
+ * <li><< TCapabilityDefinition >> on a {@link org.modelio.metamodel.uml.statik.Class}: instantiates a {@link TCapabilityDefinition}
  * <li><< TCapabilityDefinitionsType >> on a {@link org.modelio.metamodel.uml.statik.Class}: instantiates a {@link TCapabilityDefinitionsType}
  * <li><< TCapabilityRef >> on a {@link org.modelio.metamodel.uml.infrastructure.ModelElement}: instantiates a {@link TCapabilityRef}
  * <li><< TCapabilityType >> on a {@link org.modelio.metamodel.uml.statik.Attribute}: instantiates a {@link TCapabilityType}
@@ -113,7 +113,7 @@ import org.modelio.metamodel.visitors.IInfrastructureVisitor;
  * <li><< TRequirementDefinition >> on a {@link org.modelio.metamodel.uml.statik.Class}: instantiates a {@link TRequirementDefinition}
  * <li><< TRequirementDefinitionType >> on a {@link org.modelio.metamodel.uml.statik.Class}: instantiates a {@link TRequirementDefinitionType}
  * <li><< TRequirementRef >> on a {@link org.modelio.metamodel.uml.infrastructure.ModelElement}: instantiates a {@link TRequirementRef}
- * <li><< TServiceTemplate >> on a {@link org.modelio.metamodel.uml.statik.Class}: instantiates a {@link TServiceTemplate}
+ * <li><< TServiceTemplate >> on a {@link org.modelio.metamodel.uml.statik.Package}: instantiates a {@link TServiceTemplate}
  * <li><< TTopologyElementInstanceStates >> on a {@link org.modelio.metamodel.uml.statik.Class}: instantiates a {@link TTopologyElementInstanceStates}
  * <li><< TTopologyTemplate >> on a {@link org.modelio.metamodel.uml.statik.Package}: instantiates a {@link TTopologyTemplate}
  * <li><< TargetElementType >> on a {@link org.modelio.metamodel.uml.statik.DataType}: instantiates a {@link TargetElementType}
@@ -124,16 +124,16 @@ import org.modelio.metamodel.visitors.IInfrastructureVisitor;
  */
 @objid ("f96166f4-8706-4930-8397-6424c7b3f767")
 public class ToscaDesignerProxyFactory {
-    @objid ("f4c1472d-f66a-43bb-95ed-b7300f28ef6b")
+    @objid ("407ecce1-8261-465d-afb5-8ad0a0a0545a")
     private static final String ASSETNAME = "ToscaDesigner";
 
-    @objid ("3d1b28a0-49de-4050-9c57-0b2369f34715")
+    @objid ("8bf46791-5ee5-4922-a89b-52f71005b512")
     private static final InstantiateVisitor instantiateVisitor = new InstantiateVisitor();
 
     /**
      * @param session The modeling session this factory is operating in.
      */
-    @objid ("dfc18136-9d40-43c6-9a04-6a9a87e08067")
+    @objid ("13b765a3-18ec-40d7-abc6-4f3df8be05f0")
     public static final void initialize(final IModelingSession session) throws MdaProxyException {
         fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.ToscaDiagram.MdaTypes.init(session);
         fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.ServiceTemplateDiagram.MdaTypes.init(session);
@@ -179,7 +179,7 @@ public class ToscaDesignerProxyFactory {
         fr.softeam.toscadesigner.api.tosca.standard.class_.TArtifactType.MdaTypes.init(session);
         fr.softeam.toscadesigner.api.tosca.standard.class_.TBoundaryDefinitions.MdaTypes.init(session);
         fr.softeam.toscadesigner.api.tosca.standard.class_.TCapability.MdaTypes.init(session);
-        fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityDefinition.MdaTypes.init(session);
+        fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition.MdaTypes.init(session);
         fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType.MdaTypes.init(session);
         fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TCapabilityRef.MdaTypes.init(session);
         fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityType.MdaTypes.init(session);
@@ -237,7 +237,7 @@ public class ToscaDesignerProxyFactory {
      * @param e A model element
      * @return the right proxy or <i>null</i>.
      */
-    @objid ("e8b05ffa-b9af-4295-90f8-cfd6b3848b4a")
+    @objid ("e41f7067-a7e3-481c-b541-e9d7c9ef12c3")
     public static final Object instantiate(final ModelElement e) {
         for (Stereotype s : e.getExtension()) {
               ModuleComponent module = s.getModule();
@@ -257,23 +257,23 @@ public class ToscaDesignerProxyFactory {
      * @param stName A stereotype name.
      * @return the right proxy or <i>null</i>.
      */
-    @objid ("4ea7c545-0d58-44b6-bda0-2c0cdf5fcc24")
+    @objid ("88e39145-e5d2-4e83-b05a-11949ca42492")
     public static final Object instantiate(final Element e, final String stName) {
         instantiateVisitor.setStereotype(stName);
         return e.accept(instantiateVisitor);
     }
 
-    @objid ("bfd61713-c49b-4b3d-9ba7-6989ecc59be2")
+    @objid ("1b79efbf-c144-428b-b97b-e0c632f68efb")
     private static class InstantiateVisitor implements IDefaultModelVisitor, IDefaultInfrastructureVisitor {
-        @objid ("e7b6396c-4662-4f47-8f66-df94aee78c88")
+        @objid ("97ddf818-5352-4171-92e9-c63ca7dafc45")
         private String stName;
 
-        @objid ("3435e479-b3d8-47fe-a6a5-be22e15ae8f1")
+        @objid ("a3652293-b48a-4b42-820a-849b8d29d6fd")
         public final void setStereotype(final String stName) {
             this.stName = stName;
         }
 
-        @objid ("7ad9a16a-45d5-4a09-abc6-4c41c4149915")
+        @objid ("ea6f3c6a-bc20-4926-998d-ee438818f177")
         @Override
         public final Object visitAssociation(Association obj) {
             switch (this.stName) {
@@ -286,13 +286,12 @@ public class ToscaDesignerProxyFactory {
             
         }
 
-        @objid ("03e7440c-ab7c-465a-87e8-df3bc38c5900")
+        @objid ("6a50a47b-cc58-4944-a124-5150d8e8b9be")
         @Override
         public final Object visitAttribute(Attribute obj) {
             switch (this.stName) {
             	case fr.softeam.toscadesigner.api.tosca.standard.attribute.Metadata.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.attribute.Metadata.instantiate(obj);
             	case fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityDefinition.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityDefinition.instantiate(obj);
             	case fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityType.instantiate(obj);
             	case fr.softeam.toscadesigner.api.tosca.standard.attribute.TDeploymentArtifact.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.attribute.TDeploymentArtifact.instantiate(obj);
             	case fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef.instantiate(obj);
@@ -304,14 +303,14 @@ public class ToscaDesignerProxyFactory {
             
         }
 
-        @objid ("10d3e95c-3602-4de0-a090-4d486d28eefa")
+        @objid ("a2f907c4-d87e-4686-9c54-03630b70902a")
         @Override
         public final Object visitPackage(Package obj) {
             switch (this.stName) {
             	case fr.softeam.toscadesigner.api.tosca.standard.package_.TGroup.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.package_.TGroup.instantiate(obj);
+            	case fr.softeam.toscadesigner.api.tosca.standard.package_.TServiceTemplate.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.package_.TServiceTemplate.instantiate(obj);
             	case fr.softeam.toscadesigner.api.tosca.standard.package_.TTopologyTemplate.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.package_.TTopologyTemplate.instantiate(obj);
             	case fr.softeam.toscadesigner.api.tosca.standard.package_.ToscaModel.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.package_.ToscaModel.instantiate(obj);
-            	case fr.softeam.toscadesigner.api.tosca.standard.package_.TServiceTemplate.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.package_.TServiceTemplate.instantiate(obj);
             	default:
             		break;
             }
@@ -320,7 +319,7 @@ public class ToscaDesignerProxyFactory {
             
         }
 
-        @objid ("b7662963-1d6f-4e49-93a0-9cff5b429265")
+        @objid ("1d9cdd23-f8db-4c55-86cb-7f95412cf85d")
         @Override
         public final Object visitAssociationEnd(AssociationEnd obj) {
             switch (this.stName) {
@@ -333,7 +332,7 @@ public class ToscaDesignerProxyFactory {
             
         }
 
-        @objid ("b862d01b-e0f8-49f7-9a25-acf70e8b1a95")
+        @objid ("9145d2c4-d3bd-408c-ba6d-a793d6b666de")
         @Override
         public final Object visitDataType(DataType obj) {
             switch (this.stName) {
@@ -347,7 +346,7 @@ public class ToscaDesignerProxyFactory {
             
         }
 
-        @objid ("966d7fc4-0458-4127-8f9f-e5af84028de0")
+        @objid ("ca6d5329-7b43-4bd3-91f3-594cbfc538f6")
         @Override
         public final Object visitClass(Class obj) {
             switch (this.stName) {
@@ -357,6 +356,7 @@ public class ToscaDesignerProxyFactory {
             	case fr.softeam.toscadesigner.api.tosca.standard.class_.TArtifactType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TArtifactType.instantiate(obj);
             	case fr.softeam.toscadesigner.api.tosca.standard.class_.TBoundaryDefinitions.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TBoundaryDefinitions.instantiate(obj);
             	case fr.softeam.toscadesigner.api.tosca.standard.class_.TCapability.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TCapability.instantiate(obj);
+            	case fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition.instantiate(obj);
             	case fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType.instantiate(obj);
             	case fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifacts.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifacts.instantiate(obj);
             	case fr.softeam.toscadesigner.api.tosca.standard.class_.TDocumentation.STEREOTYPE_NAME: return fr.softeam.toscadesigner.api.tosca.standard.class_.TDocumentation.instantiate(obj);
@@ -382,7 +382,7 @@ public class ToscaDesignerProxyFactory {
             
         }
 
-        @objid ("0e373302-96c6-422c-b1f7-12e9cbdd09c0")
+        @objid ("f7a2d565-efc9-4a76-89ce-3f7e4343b98f")
         @Override
         public final Object visitStaticDiagram(StaticDiagram obj) {
             switch (this.stName) {
@@ -397,7 +397,7 @@ public class ToscaDesignerProxyFactory {
             
         }
 
-        @objid ("b8cabca0-8eb7-414d-9c0f-188956b5b51c")
+        @objid ("e76c3f6a-7b21-41fc-a01b-29c1c22cf5dc")
         @Override
         public final Object visitModelElement(ModelElement obj) {
             switch (this.stName) {
@@ -465,7 +465,7 @@ public class ToscaDesignerProxyFactory {
          * <p>If null is returned the caller will return null.
          * @return the {@link IInfrastructureVisitor} visitor or <i>null</i>.
          */
-        @objid ("68c7b411-e6d8-4d47-a111-889446ef824f")
+        @objid ("5f645094-c5e4-41cd-938c-63c0782e58cd")
         @Override
         public IInfrastructureVisitor getInfrastructureVisitor() {
             return this;

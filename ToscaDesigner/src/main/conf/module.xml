@@ -344,7 +344,7 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="TCapabilityDefinition" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityDefinition.label" uid="92f8cb40-9498-4759-9c75-6b4df72de355" is-abstract="false">
+            <Stereotype name="TCapabilityDefinition" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityDefinition.label" uid="92f8cb40-9498-4759-9c75-6b4df72de355" is-abstract="false">
                 <Icon path="res/icon/gui/capabilityDefinition24.png"/>
                 <Image path="res/icon/gui/capabilityDefinition48.png"/>
                 <PropertyTable id="TCapabilityDefinitionTable" label="%propertytable.TCapabilityDefinitionTable.label" uid="e2b2d181-f6b2-4a51-81dc-df962e137ef2">
@@ -1043,7 +1043,7 @@
                 <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TCapabilityDefinitionsType"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TCapabilityDefinition"/>
-                    <HParameter name="metaclass" value="Standard.Attribute"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
                     <HParameter name="name" value="Capability"/>
                 </Handler>
             </Tool>
@@ -1117,7 +1117,7 @@
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#PoliciesType"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
-                    <HParameter name="name" value="Element"/>
+                    <HParameter name="name" value="Policies"/>
                 </Handler>
             </Tool>
             <Tool id="Policy" label="%tool.Policy.label" tooltip="%tool.Policy.tooltip" image="res/icon/gui/tpolicy24.ICON.png">
@@ -1202,7 +1202,7 @@
             </Tool>
             <Tool id="Service Template" label="%tool.Service Template.label" tooltip="%tool.Service Template.tooltip" image="res/icon/gui/tservicetemplate48.ICON.png">
                 <Scope-source metaclass="Standard.Package" stereotype="ToscaDesigner#ToscaModel"/>
-                <Handler class="fr.softeam.toscadesigner.handlers.commands.submodel.CreateServiceTemplateDigramCommand">
+                <Handler class="fr.softeam.toscadesigner.handlers.tools.CreateServiceTemplateTool">
                     <HParameter name="stereotype" value="ToscaDesigner#TServiceTemplate"/>
                     <HParameter name="metaclass" value="Standard.Package"/>
                     <HParameter name="name" value="ServiceTemplate"/>
@@ -1210,7 +1210,7 @@
             </Tool>
             <Tool id="TopologyTemplate" label="%tool.TopologyTemplate.label" tooltip="%tool.TopologyTemplate.tooltip" image="res/icon/gui/topology_template24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="ToscaDesigner#TServiceTemplate"/>
-                <Handler class="fr.softeam.toscadesigner.handlers.commands.submodel.CreateTopologyTemplateDiagramCommand">
+                <Handler class="fr.softeam.toscadesigner.handlers.tools.CreateTopologyTemplateTool">
                     <HParameter name="stereotype" value="ToscaDesigner#TTopologyTemplate"/>
                     <HParameter name="metaclass" value="Standard.Package"/>
                     <HParameter name="name" value="TopologyTemplate"/>
