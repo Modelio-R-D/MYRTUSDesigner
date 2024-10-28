@@ -23,12 +23,13 @@ import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRelation
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRequirementDefinitionPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TRequirementDefinitionTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TServiceTemplatePropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TTopologyTemplatePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.RequirementsTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TDeploymentArtifactPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TDeploymentArtifactsPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TNodeTemplatePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TRequirementPropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TTopologyTemplatePropertyPage;
+
 import org.modelio.metamodel.diagrams.ClassDiagram;
 import org.modelio.metamodel.mda.ModuleComponent;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
@@ -150,7 +151,8 @@ public class ToscaDesignerPropertyPageFactory {
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicy.STEREOTYPE_NAME: return new TPolicyPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicy.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement.STEREOTYPE_NAME: return new TRequirementPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition.STEREOTYPE_NAME: return new TRequirementDefinitionPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition.instantiate(obj));
-            
+            case fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition.STEREOTYPE_NAME: return new TCapabilityDefinitionPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition.instantiate(obj));
+
             default:
                 break;
             }
@@ -208,7 +210,6 @@ public class ToscaDesignerPropertyPageFactory {
             case fr.softeam.toscadesigner.api.tosca.standard.attribute.TDeploymentArtifact.STEREOTYPE_NAME: return new TDeploymentArtifactPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.attribute.TDeploymentArtifact.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef.STEREOTYPE_NAME: return new TPropertyDefPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType.STEREOTYPE_NAME: return new PropertyDefinitionTypePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType.instantiate(obj));
-            case fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityDefinition.STEREOTYPE_NAME: return new TCapabilityDefinitionPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityDefinition.instantiate(obj));
             
             default:
                 break;

@@ -82,6 +82,4 @@ public class TGroupPropertyPage<T extends TGroup> extends ToscaElementPropertyPa
         );
     }
 
-
-
 }
