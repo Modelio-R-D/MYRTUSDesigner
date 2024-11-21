@@ -4,8 +4,8 @@
       {{#each ../ownedAttribute}}{{#extension}}{{#eq name "Metadata"}}
         {{../name}}: "{{../value}}"
       {{/eq}}{{/extension}}{{/each}}
-      {{#unless (noStereotypeApplications this "PropertyDefinitionType")}}properties:{{/unless}}
-      {{#each ../ownedAttribute}}{{#extension}}{{#eq name "PropertyDefinitionType"}}
+      {{#unless (noStereotypeApplications this "TPropertyDef")}}properties:{{/unless}}
+      {{#each ../ownedAttribute}}{{#extension}}{{#eq name "TPropertyDef"}}
         {{../name}}: "{{../value}}"
       {{/eq}}{{/extension}}{{/each}}
       {{#unless (noStereotypeApplications this "RequirementsType")}}requirements:{{/unless}}
@@ -14,6 +14,10 @@
             node: {{getProperty ../this "node"}}
             relationship: {{relationship}}
             capability: {{getProperty ../this "capability"}}
+            {{#unless (noStereotypeApplications this "TPropertyDef")}}properties:{{/unless}}
+		    {{#each ../ownedAttribute}}{{#extension}}{{#eq name "TPropertyDef"}}
+		      {{../name}}: "{{../value}}"
+		    {{/eq}}{{/extension}}{{/each}}
        	{{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
       {{#unless (noStereotypeApplications this "TDeploymentArtifacts")}}artifacts:{{/unless}}
       {{#each ../ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifacts"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifact"}}
