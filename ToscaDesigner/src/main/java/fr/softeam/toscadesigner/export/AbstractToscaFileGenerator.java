@@ -67,7 +67,8 @@ public abstract class AbstractToscaFileGenerator {
 
 					TRequirement tRequirement = TRequirement.safeInstantiate((Class) context);
 					if (searchedPropertyName.equals("node")) {
-						propertyStringValue = tRequirement.getNode().getName();
+						TNodeTemplate node = tRequirement.getNode();
+						propertyStringValue = node != null ? node.getName() : "''";
 					} else if (searchedPropertyName.equals("capability")) {
 						propertyStringValue = tRequirement.getCapability().getElement().getName();
 					}

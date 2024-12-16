@@ -9,9 +9,9 @@
         {{../name}}: "{{../value}}"
       {{/eq}}{{/extension}}{{/each}}
       {{#unless (noStereotypeApplications this "RequirementsType")}}requirements:{{/unless}}
-      {{#each ../ownedElement}}{{#extension}}{{#eq name "RequirementsType"}}{{#each ../ownedAttribute}}{{#extension}}{{#eq name "TRequirement"}}
+      {{#each ../ownedElement}}{{#extension}}{{#eq name "RequirementsType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TRequirement"}}
         - {{../name}}:
-            node: {{getProperty ../this "node"}}
+            node: {{getProperty ../this "node"}}{{/if}}
             relationship: {{relationship}}
             capability: {{getProperty ../this "capability"}}
             {{#unless (noStereotypeApplications this "TPropertyDef")}}properties:{{/unless}}

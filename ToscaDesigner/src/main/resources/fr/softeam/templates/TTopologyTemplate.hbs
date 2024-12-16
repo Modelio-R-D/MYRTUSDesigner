@@ -4,13 +4,17 @@
 {{/eq}}{{/extension}}{{/each}}
 {{imports this}}
 topology_template:
+  {{#unless (noStereotypeApplications this "InputParameterType")}}inputs:{{/unless}}  
+  {{#ownedElement}}{{#extension}}{{#eq name "InputParameterType"}}{{#ownedAttribute}}{{#extension}}{{#eq name "TParameter"}}
+    {{> (lookup this.name) ../this}}
+  {{/eq}}{{/extension}}{{/ownedAttribute}}{{/eq}}{{/extension}}{{/ownedElement}}
   {{#unless (noStereotypeApplications this "TNodeTemplate")}}node_templates:{{/unless}}  
   {{#ownedElement}}{{#extension}}{{#eq name "TNodeTemplate"}}
   {{> (lookup this.name) ../this}}
   {{/eq}}{{/extension}}{{/ownedElement}}
   {{#unless (noStereotypeApplications this "TGroup")}}groups:{{/unless}}  
   {{#ownedElement}}{{#extension}}{{#eq name "TGroup"}}
-  {{> (lookup this.name) ../this}}
+    {{> (lookup this.name) ../this}}
   {{/eq}}{{/extension}}{{/ownedElement}}
   relationship_templates:
 {{#ownedElement}}{{#targetingEnd}}{{#association}}{{#extension}}{{#eq name "TRelationshipTemplate"}}
