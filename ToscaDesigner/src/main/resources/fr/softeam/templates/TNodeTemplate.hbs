@@ -11,7 +11,7 @@
       {{#unless (noStereotypeApplications this "RequirementsType")}}requirements:{{/unless}}
       {{#each ../ownedElement}}{{#extension}}{{#eq name "RequirementsType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TRequirement"}}
         - {{../name}}:
-            node: {{getProperty ../this "node"}}{{/if}}
+            node: {{getProperty ../this "node"}}
             relationship: {{relationship}}
             capability: {{getProperty ../this "capability"}}
             {{#unless (noStereotypeApplications this "TPropertyDef")}}properties:{{/unless}}
