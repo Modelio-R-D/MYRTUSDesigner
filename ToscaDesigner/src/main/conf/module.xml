@@ -372,7 +372,7 @@
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
-            <Stereotype name="TCapabilityType" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityType.label" uid="42438c96-0721-406a-a8b9-c4a85931cc60" is-abstract="false">
+            <Stereotype name="TCapabilityType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityType.label" uid="42438c96-0721-406a-a8b9-c4a85931cc60" is-abstract="false">
                 <Icon path="res/icon/gui/capabilityType24.ICON.png"/>
                 <Image path="res/icon/gui/capabilityType48.IMAGE.png"/>
             </Stereotype>
@@ -992,10 +992,10 @@
                     <HParameter name="name" value="Element"/>
                 </Handler>
             </Command>
-            <Command id="Export" label="%command.Export.label" tooltip="%command.Export.tooltip" image="" modify-model="false">
+            <Command id="Export" label="%command.Export.label" tooltip="%command.Export.tooltip" image="res/icon/gui/export.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="ToscaDesigner#ToscaModel"/>
                 <Handler class="fr.softeam.toscadesigner.handlers.commands.ToacaModelExport">
-                    <HParameter name="name" value="Element"/>
+                    <HParameter name="name" value=""/>
                 </Handler>
             </Command>
             <Command id="Service_Template_Diagram" label="%command.Service_Template_Diagram.label" tooltip="%command.Service_Template_Diagram.tooltip" image="res/icon/gui/diagram/service_template_diag24.png" modify-model="true">
