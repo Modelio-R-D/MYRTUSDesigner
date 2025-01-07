@@ -3,9 +3,9 @@ package fr.softeam.toscadesigner.impl;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
-import org.modelio.metamodel.uml.statik.Package;
-import org.modelio.metamodel.uml.statik.Class;
-
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
+import fr.softeam.toscadesigner.api.ToscaDesignerStereotypes;
 import org.modelio.api.modelio.mc.AbstractModelComponentContributor;
 import org.modelio.api.modelio.model.IMetamodelExtensions;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -14,48 +14,41 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.NoteType;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.statik.Class;
+import org.modelio.metamodel.uml.statik.Package;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
-import fr.softeam.toscadesigner.api.ToscaDesignerStereotypes;
-
+@objid ("fd5a3fbb-8b37-47ee-94bc-8089b2e25505")
 public class ToscaDesignerComponentContributor extends AbstractModelComponentContributor {
-
+    @objid ("51023e26-aebc-438e-bb61-2e581567000c")
     private IModelingSession session = ToscaDesignerModule.getInstance().getModuleContext().getModelingSession();
 
-	public ToscaDesignerComponentContributor(IModule module) {
-		super(module);
-	}
-
-	  /**
-     * Get a TagType from the metamodel extensions.
-     */
-    
-    private TagType getTagType(java.lang.Class<? extends MObject> metaclass, String tagTypeName) {
-        IMetamodelExtensions metamodel = this.session.getMetamodelExtensions();
-        return metamodel.getTagType(IToscaDesignerPeerModule.MODULE_NAME, tagTypeName, 	ToscaDesignerModule.getInstance().getModuleContext().getModelioServices().getMetamodelService().getMetamodel().getMClass(metaclass));
+    @objid ("be7cd68f-c576-493e-8964-ac019d3b1584")
+    public  ToscaDesignerComponentContributor(IModule module) {
+        super(module);
     }
 
-    /**
-     * Get a Steretotype from the metamodel extensions.
-     */
-    
+    @objid ("66541882-990a-4278-95b2-bc0219065505")
+    private TagType getTagType(java.lang.Class<? extends MObject> metaclass, String tagTypeName) {
+        IMetamodelExtensions metamodel = this.session.getMetamodelExtensions();
+        return metamodel.getTagType(IToscaDesignerPeerModule.MODULE_NAME, tagTypeName,     ToscaDesignerModule.getInstance().getModuleContext().getModelioServices().getMetamodelService().getMetamodel().getMClass(metaclass));
+    }
+
+    @objid ("3fc7a120-1f7e-4874-b624-1860dc9aa69d")
     private Stereotype getStereotype(java.lang.Class<? extends MObject> metaclass, String stereotypeName) {
         IMetamodelExtensions metamodel = this.session.getMetamodelExtensions();
         return metamodel.getStereotype(IToscaDesignerPeerModule.MODULE_NAME, stereotypeName, ToscaDesignerModule.getInstance().getModuleContext().getModelioServices().getMetamodelService().getMetamodel().getMClass(metaclass));
     }
 
-    /**
-     * Get a NoteType from the metamodel extensions.
-     */
-    
+    @objid ("c23d7165-5790-46c8-a95a-a7aa5761b55e")
     private NoteType getNoteType(java.lang.Class<? extends MObject> metaclass, String noteTypeName) {
         IMetamodelExtensions metamodel = this.session.getMetamodelExtensions();
         return metamodel.getNoteType(IToscaDesignerPeerModule.MODULE_NAME, noteTypeName, ToscaDesignerModule.getInstance().getModuleContext().getModelioServices().getMetamodelService().getMetamodel().getMClass(metaclass));
     }
-	@Override
-	
-public Set<Stereotype> getDependencyStereotypes() {
+
+    @objid ("84216a74-05a6-43e9-acda-21cd6ebd2ad2")
+    @Override
+    public Set<Stereotype> getDependencyStereotypes() {
         Set<Stereotype> stereotypes = new HashSet<>();
         stereotypes.add(getStereotype(Class.class, ToscaDesignerStereotypes.TNODETYPE));
         stereotypes.add(getStereotype(Class.class, ToscaDesignerStereotypes.TRELATIONSHIPTYPE));
@@ -68,29 +61,32 @@ public Set<Stereotype> getDependencyStereotypes() {
         stereotypes.add(getStereotype(Class.class, ToscaDesignerStereotypes.CAPABILITY_DEFINITIONS_TYPE));
         
         return stereotypes;
-	}
+    }
 
-	@Override
-	public Set<MObject> getElements() {
-
+    @objid ("d5a56d23-f7d8-47dc-ac26-bb7c53e413f6")
+    @Override
+    public Set<MObject> getElements() {
         return Collections.emptySet();
-	}
+    }
 
-	@Override
-	public Set<ExportedFileEntry> getFiles() {
+    @objid ("6e599c26-c29d-4f74-8967-3ca62218732b")
+    @Override
+    public Set<ExportedFileEntry> getFiles() {
         return Collections.emptySet();
-	}
+    }
 
-	@Override
-	public Set<NoteType> getNoteTypes() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    @objid ("d96e28a4-fddb-44d5-a9da-59ef300604c9")
+    @Override
+    public Set<NoteType> getNoteTypes() {
+        // TODO Auto-generated method stub
+        return null;
+    }
 
-	@Override
-	public Set<TagType> getTagTypes() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    @objid ("5a2b758b-0512-4363-936f-a8be8caf56de")
+    @Override
+    public Set<TagType> getTagTypes() {
+        // TODO Auto-generated method stub
+        return null;
+    }
 
 }

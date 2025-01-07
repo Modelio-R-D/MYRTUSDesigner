@@ -28,11 +28,11 @@ public class CreateServiceTemplateTool extends CreateSubModelTool {
     @Override
     public void actionPerformed(IDiagramHandle diagramHandle, IDiagramGraphic parent, Rectangle rect) {
         /*
-                 * System.out.print(parent);
-                ClassDiagram diag = (ClassDiagram) parent.getElement().getCompositionOwner();
-                org.modelio.metamodel.uml.statik.Package packageOwner = (org.modelio.metamodel.uml.statik.Package) diag
-                        .getOrigin();
-                */
+                         * System.out.print(parent);
+                        ClassDiagram diag = (ClassDiagram) parent.getElement().getCompositionOwner();
+                        org.modelio.metamodel.uml.statik.Package packageOwner = (org.modelio.metamodel.uml.statik.Package) diag
+                                .getOrigin();
+                        */
         Package packageOwner = (Package) parent.getElement().getCompositionOwner();
         
         IModuleContext moduleContext = ToscaDesignerModule.getInstance().getModuleContext();

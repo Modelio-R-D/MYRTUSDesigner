@@ -8,16 +8,16 @@ import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.diagram.tools.DefaultBoxTool;
 
-@objid ("10047190-fed6-4d4c-80ee-d7479ff6dcf5")
+@objid ("7f9a6eeb-631a-42b2-a905-818a2d2404f7")
 public class CreateTopologyTemplateDigramCommand extends DefaultBoxTool {
-    @objid ("d2098c21-de33-4b3e-bf54-bdc8718fc955")
+    @objid ("24330cea-b48d-423b-b111-c6f4be006e30")
     @Override
     public boolean acceptElement(final IDiagramHandle diagramHandle, final IDiagramGraphic targetNode) {
         // TODO Auto-generated method stub
         return false;
     }
 
-    @objid ("66f3e2bc-d65f-4cc7-9622-9b5ac8169c55")
+    @objid ("6a2178b6-2d54-45ec-b61d-2b4381b00893")
     @Override
     public void actionPerformed(final IDiagramHandle diagramHandle, final IDiagramGraphic parent, final Rectangle rect) {
         // TODO implement the CreateTopologyTemplateDigramCommand handler. 

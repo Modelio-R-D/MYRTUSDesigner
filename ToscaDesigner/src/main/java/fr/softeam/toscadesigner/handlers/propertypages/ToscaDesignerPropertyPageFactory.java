@@ -29,7 +29,6 @@ import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TDeploym
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TNodeTemplatePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TRequirementPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TTopologyTemplatePropertyPage;
-
 import org.modelio.metamodel.diagrams.ClassDiagram;
 import org.modelio.metamodel.mda.ModuleComponent;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
@@ -152,7 +151,7 @@ public class ToscaDesignerPropertyPageFactory {
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement.STEREOTYPE_NAME: return new TRequirementPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition.STEREOTYPE_NAME: return new TRequirementDefinitionPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition.STEREOTYPE_NAME: return new TCapabilityDefinitionPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition.instantiate(obj));
-
+            
             default:
                 break;
             }

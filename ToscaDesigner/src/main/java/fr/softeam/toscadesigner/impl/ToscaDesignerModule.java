@@ -96,11 +96,11 @@ public class ToscaDesignerModule extends AbstractJavaModule {
         	default: return null;
         }
     }
-    
+
+    @objid ("2f71777c-4aee-4ba6-8ebb-0662e7f9f48e")
     @Override
     public IModelComponentContributor getModelComponentContributor(IModelComponent mc) {
         return new ToscaDesignerComponentContributor(this);
     }
-
 
 }
