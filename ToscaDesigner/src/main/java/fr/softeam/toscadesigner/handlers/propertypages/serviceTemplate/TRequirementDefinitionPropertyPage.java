@@ -72,7 +72,7 @@ public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition
         table.addProperty("Name", _element.getElement().getName());
         // Capability
         table.addProperty("Capability", this._element.getCapability() != null ? this._element.getCapability().getElement() : null,
-                Arrays.asList(Metamodel.getMClass("Attribute")), new IMObjectFilter() {
+                Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
                     @Override
                     public boolean accept(MObject element) {
                         return TCapabilityDefinition.canInstantiate(element);
