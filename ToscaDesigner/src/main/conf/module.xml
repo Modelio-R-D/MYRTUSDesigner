@@ -939,6 +939,36 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
+            <Stereotype name="Trigger" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.Trigger.label" uid="d385b57a-f3ae-45f5-90b4-bfc96c3ea0c3" is-abstract="false">
+                <Icon path="res/icon/gui/Trigger24.ICON.png"/>
+                <Image path="res/icon/gui/Trigger48.IMAGE.png"/>
+                <PropertyTable id="TriggerTable" label="%propertytable.TriggerTable.label" uid="79e95ecd-2038-452e-89c3-8fb65ecf1363">
+                    <PropertyDefinition id="description" label="%propertydefinition.TriggerTable.description.label" default-value="" is-editable="true" uid="fac4213e-fedc-4b4a-bb7f-58ded7db4daf">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TriggerTable.description.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="event" label="%propertydefinition.TriggerTable.event.label" default-value="" is-editable="true" uid="f9ac630e-402c-476a-9114-1fcda706a805">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TriggerTable.event.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="schedule" label="%propertydefinition.TriggerTable.schedule.label" default-value="" is-editable="true" uid="55a175de-5780-45b4-9fd8-28f8c398e75c">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TriggerTable.schedule.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="target_filter" label="%propertydefinition.TriggerTable.target_filter.label" default-value="" is-editable="true" uid="95dcbcf5-84f5-40ff-9f03-c137f73d52ab">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TriggerTable.target_filter.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="condition" label="%propertydefinition.TriggerTable.condition.label" default-value="" is-editable="true" uid="b1c6b620-7693-44b5-93a6-42b2442efac0">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TriggerTable.condition.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="action" label="%propertydefinition.TriggerTable.action.label" default-value="" is-editable="true" uid="6efd2a53-9853-45db-88d1-ba94ff7ce87b">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TriggerTable.action.description</Description>
+                    </PropertyDefinition>
+                </PropertyTable>
+            </Stereotype>
         </Profile>
     </Profiles>
     <PropertyTypes>

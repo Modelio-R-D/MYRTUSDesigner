@@ -16,6 +16,7 @@ import fr.softeam.toscadesigner.handlers.propertypages.core.TGroupTypePropertyPa
 import fr.softeam.toscadesigner.handlers.propertypages.core.TPolicyPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TPolicyTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TPropertyDefPropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.core.TriggerPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TCapabilityDefinitionPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TCapabilityDefinitionsTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate.TNodeTypePropertyPage;
@@ -148,6 +149,7 @@ public class ToscaDesignerPropertyPageFactory {
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate.STEREOTYPE_NAME: return new TNodeTemplatePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicyType.STEREOTYPE_NAME: return new TPolicyTypePropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicyType.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicy.STEREOTYPE_NAME: return new TPolicyPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicy.instantiate(obj));
+            case fr.softeam.toscadesigner.api.tosca.standard.class_.Trigger.STEREOTYPE_NAME: return new TriggerPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.Trigger.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement.STEREOTYPE_NAME: return new TRequirementPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition.STEREOTYPE_NAME: return new TRequirementDefinitionPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition.STEREOTYPE_NAME: return new TCapabilityDefinitionPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition.instantiate(obj));

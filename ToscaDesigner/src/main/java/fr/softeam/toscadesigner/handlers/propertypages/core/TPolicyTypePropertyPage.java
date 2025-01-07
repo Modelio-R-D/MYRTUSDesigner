@@ -41,4 +41,11 @@ public class TPolicyTypePropertyPage<T extends TPolicyType> extends ToscaElement
         }
     }
 
+    @objid ("278d87f3-3320-4a1d-83b3-6021e53abe1f")
+    @Override
+    public void update(IModulePropertyTable table) {
+        super.update(table);
+        table.addProperty("Name", _element.getElement().getName());
+    }
+
 }
