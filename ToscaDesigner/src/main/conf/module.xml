@@ -384,7 +384,7 @@
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
-            <Stereotype name="TCapabilityType" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityType.label" uid="42438c96-0721-406a-a8b9-c4a85931cc60" is-abstract="false">
+            <Stereotype name="TCapabilityType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityType.label" uid="42438c96-0721-406a-a8b9-c4a85931cc60" is-abstract="false">
                 <Icon path="res/icon/gui/capabilityType24.ICON.png"/>
                 <Image path="res/icon/gui/capabilityType48.IMAGE.png"/>
             </Stereotype>
@@ -726,8 +726,8 @@
                 <Image path="res/icon/gui/node_type48.png"/>
             </Stereotype>
             <Stereotype name="TOperation" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.TOperation.label" uid="24e1e933-2b93-498c-9e0d-0d899a81eb20" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+                <Icon path="res/icon/gui/TOperation24.ICON.png"/>
+                <Image path="res/icon/gui/TOperation48.IMAGE.png"/>
                 <PropertyTable id="TOperationTable" label="%propertytable.TOperationTable.label" uid="8ccc665f-c26b-4098-a0f2-62cdd99ab6b7">
                     <PropertyDefinition id="name" label="%propertydefinition.TOperationTable.name.label" default-value="" is-editable="true" uid="23652b9d-9d58-4dc9-9d5b-906fcf3594e4">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
@@ -1004,11 +1004,19 @@
                     <HParameter name="name" value="Element"/>
                 </Handler>
             </Command>
+<<<<<<< HEAD
             <Command id="Export" label="%command.Export.label" tooltip="%command.Export.tooltip" image="res/icon/gui/script24.png" modify-model="false">
+=======
+            <Command id="Export" label="%command.Export.label" tooltip="%command.Export.tooltip" image="res/icon/gui/export.png" modify-model="false">
+>>>>>>> refs/remotes/origin/ToscaProfile
                 <Scope metaclass="Standard.Package" stereotype="ToscaDesigner#ToscaModel"/>
+<<<<<<< HEAD
                 <Scope metaclass="Infrastructure.ModelElement" stereotype="ToscaDesigner#TNodeType"/>
                 <Scope metaclass="Infrastructure.ModelElement" stereotype="ToscaDesigner#TTopologyTemplate"/>
                 <Handler class="fr.softeam.toscadesigner.handlers.commands.ExportToscaModelCommand">
+=======
+                <Handler class="fr.softeam.toscadesigner.handlers.commands.ToacaModelExport">
+>>>>>>> refs/remotes/origin/ToscaProfile
                     <HParameter name="name" value=""/>
                 </Handler>
             </Command>

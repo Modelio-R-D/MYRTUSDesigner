@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 28/10/2024 10:11 by Modelio Studio.
+ * This file was generated on 07/01/2025 11:20 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.package_;
 
@@ -45,7 +45,7 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("cc9210a0-d039-42eb-b71a-18484fad938c")
 public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy {
-    @objid ("96a335c9-d7ff-4dbf-a07d-d94f77ed57da")
+    @objid ("b8ecbe5e-a951-43ec-ad2e-975f70135e0a")
     public static final String STEREOTYPE_NAME = "TTopologyTemplate";
 
     /**
@@ -55,7 +55,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("61e4d595-34d7-4c40-8891-c2ae0a025db0")
+    @objid ("95ea8f1a-a862-4444-8157-e9e5f089f9a0")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && (TTopologyTemplate.MdaTypes.STEREOTYPE_ELT!=null) && ((Package) elt).isStereotyped(TTopologyTemplate.MdaTypes.STEREOTYPE_ELT));
     }
@@ -65,7 +65,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
      * 
      * @return a {@link TTopologyTemplate} proxy on the created {@link Package}.
      */
-    @objid ("bdd17d74-4d55-4279-97f1-0acb8665fcc0")
+    @objid ("456b568e-78d3-4efe-81d3-59a45db2ae4f")
     public static TTopologyTemplate create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Package");
         e.getExtension().add(TTopologyTemplate.MdaTypes.STEREOTYPE_ELT);
@@ -79,7 +79,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
      * @param obj a Package
      * @return a {@link TTopologyTemplate} proxy or <i>null</i>.
      */
-    @objid ("b90d3f50-e7b2-4beb-b760-bc1a0a5faab0")
+    @objid ("dee0b143-496d-4008-9bda-6646871546c2")
     public static TTopologyTemplate instantiate(final Package obj) {
         return TTopologyTemplate.canInstantiate(obj) ? new TTopologyTemplate(obj) : null;
     }
@@ -92,7 +92,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
      * @return a {@link TTopologyTemplate} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("1fde24e7-234b-4e8d-8a61-70a613552016")
+    @objid ("5f6fba7d-caa0-4d31-93e6-e7469a418b9b")
     public static TTopologyTemplate safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (TTopologyTemplate.canInstantiate(obj))
         	return new TTopologyTemplate(obj);
@@ -106,7 +106,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
      * null
      * 
      */
-    @objid ("cf614c41-4e73-44e6-b3d3-25b8caffe8f4")
+    @objid ("c46f7cfd-3429-4395-9db3-705ec45ca070")
     public void add(final ImportElement obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -122,7 +122,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
      * null
      * 
      */
-    @objid ("c61a8ab4-3ab3-4707-be21-2469f1051c31")
+    @objid ("35af2e8b-6174-4775-9876-57134d2450a3")
     public void addGroups(final TGroup obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -138,7 +138,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
      * null
      * 
      */
-    @objid ("c8db1594-c4e9-437d-9a31-8836d9d5d89f")
+    @objid ("bcea1e42-87f5-4828-b92d-598f0ff72f97")
     public void addNodeTemplates(final TNodeTemplate obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -154,7 +154,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
      * null
      * 
      */
-    @objid ("967a0c02-6174-43fb-95d7-29456399f2b6")
+    @objid ("52ef7340-47e9-4b6f-8b95-f6120bedd4f1")
     public void addRelationshipTemplates(final TRelationshipTemplate obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -164,7 +164,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
         }
     }
 
-    @objid ("b4d8c357-c653-4b07-86f5-f2aafb558e0f")
+    @objid ("38bfeb9d-4ade-44ad-8380-38f2ac0f7647")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -186,7 +186,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
      * null
      * 
      */
-    @objid ("51c741b3-6431-4cfe-a335-2dec1d594956")
+    @objid ("f5433545-5ecf-42f8-98d8-c1919041497d")
     public List<ImportElement> get() {
         List<ImportElement> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -202,7 +202,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("e2667d13-5b44-4e56-b5f9-3015c6e1845a")
+    @objid ("8beb4890-27c9-4649-b3b7-a694cb6314e1")
     @Override
     public Package getElement() {
         return (Package)super.getElement();
@@ -214,7 +214,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
      * null
      * 
      */
-    @objid ("05d5a774-53fd-4a51-ab13-105e843030f4")
+    @objid ("55a6fecf-251e-4b5c-b138-f0541bfb2595")
     public Feature getGroup() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(TTopologyTemplate.MdaTypes.MDAASSOCDEP)
@@ -232,7 +232,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
      * null
      * 
      */
-    @objid ("a0f6d7a2-a666-46b2-8d05-076afc31e859")
+    @objid ("d66fb631-67db-41dc-a298-a126dffc5e7d")
     public List<TGroup> getGroups() {
         List<TGroup> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -250,7 +250,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
      * null
      * 
      */
-    @objid ("4dd7fffe-8f93-4e82-9925-aab1f465def1")
+    @objid ("5028068f-0b55-45aa-bf16-997de1c74c93")
     public List<TNodeTemplate> getNodeTemplates() {
         List<TNodeTemplate> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -268,7 +268,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
      * null
      * 
      */
-    @objid ("f3bae51b-3387-40ae-8e62-28dd82befdaf")
+    @objid ("7731e089-a3a2-4d74-9167-e5c0a2caebcc")
     public List<TRelationshipTemplate> getRelationshipTemplates() {
         List<TRelationshipTemplate> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -280,7 +280,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("e8e9fd83-250d-4c04-9bd1-17e499a1ad2f")
+    @objid ("e3d72efe-89bc-44d8-b824-0f19035200e0")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -293,7 +293,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
      * null
      * 
      */
-    @objid ("2fea6b9f-52eb-4778-8957-7edc56b4159f")
+    @objid ("b65d6716-f5d4-43c9-b589-c95a6e05a3da")
     public boolean remove(final ImportElement obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -314,7 +314,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
      * null
      * 
      */
-    @objid ("13fe40e0-a851-404f-b36e-6db4501f94f6")
+    @objid ("85bab260-9752-4fd6-b273-1091a5ba1fa6")
     public boolean removeGroups(final TGroup obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -335,7 +335,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
      * null
      * 
      */
-    @objid ("ac71f5e2-b26e-4e29-83bc-0b4d4c26ca38")
+    @objid ("f64251ee-60ff-4f48-abed-06a113d5fee8")
     public boolean removeNodeTemplates(final TNodeTemplate obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -356,7 +356,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
      * null
      * 
      */
-    @objid ("411f27cb-23a1-437e-98b8-bd6e6592ff4f")
+    @objid ("98d7fd19-5bd9-46fa-baa9-48a39f20ee16")
     public boolean removeRelationshipTemplates(final TRelationshipTemplate obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -377,7 +377,7 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
      * null
      * 
      */
-    @objid ("e5b8fe3d-209b-4bce-ba08-56e9e6187594")
+    @objid ("51764bdd-94ac-4a9b-9de5-cad07cf4fe6f")
     public void setGroup(final Feature obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -398,23 +398,23 @@ public class TTopologyTemplate extends TExtensibleElements implements IMdaProxy 
         
     }
 
-    @objid ("78fb7ba1-0b18-45d2-81f0-bb816e3e8388")
+    @objid ("cc598eb6-fe97-4b11-894c-eebcfa93d1ed")
     protected  TTopologyTemplate(final Package elt) {
         super(elt);
     }
 
     @objid ("41bad76e-a154-4529-9cbc-7adac2a3d503")
     public static final class MdaTypes {
-        @objid ("93223cbf-2142-40ba-8892-60b0803ee39d")
+        @objid ("61277ab5-02dd-4215-b03a-4b7d188af87d")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("c5d014f2-dc1c-45fa-a17d-e6494fc461c9")
+        @objid ("2e9bb767-5f58-442b-bdf2-7ff463e6f2c9")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("1cee0afd-e23c-40b3-88a3-84444e11101b")
+        @objid ("4d68a6df-f73c-4bc6-a36b-7e0b972ce296")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("d896918e-40ea-4793-ae1a-c4a0e7f09213")
+        @objid ("f66d7948-1a2b-4fac-8d5e-cada83a84cd4")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

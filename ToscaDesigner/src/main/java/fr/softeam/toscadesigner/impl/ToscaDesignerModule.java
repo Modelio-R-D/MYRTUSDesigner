@@ -7,6 +7,8 @@ import org.modelio.api.module.context.IModuleContext;
 import org.modelio.api.module.lifecycle.IModuleLifeCycleHandler;
 import org.modelio.api.module.mda.IMdaExpert;
 import org.modelio.api.module.parameter.IParameterEditionModel;
+import org.modelio.gproject.ramc.core.model.IModelComponent;
+import org.modelio.gproject.ramc.core.packaging.IModelComponentContributor;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 
 @objid ("76d0c540-ed36-4597-90ed-7c8f8ec4c1c5")
@@ -93,6 +95,12 @@ public class ToscaDesignerModule extends AbstractJavaModule {
         switch (st.getUuid()) {
         	default: return null;
         }
+    }
+
+    @objid ("2f71777c-4aee-4ba6-8ebb-0662e7f9f48e")
+    @Override
+    public IModelComponentContributor getModelComponentContributor(IModelComponent mc) {
+        return new ToscaDesignerComponentContributor(this);
     }
 
 }
