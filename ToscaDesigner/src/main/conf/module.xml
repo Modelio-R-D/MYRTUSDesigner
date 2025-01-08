@@ -1034,19 +1034,11 @@
                     <HParameter name="name" value="Element"/>
                 </Handler>
             </Command>
-<<<<<<< HEAD
-            <Command id="Export" label="%command.Export.label" tooltip="%command.Export.tooltip" image="res/icon/gui/script24.png" modify-model="false">
-=======
             <Command id="Export" label="%command.Export.label" tooltip="%command.Export.tooltip" image="res/icon/gui/export.png" modify-model="false">
->>>>>>> refs/remotes/origin/ToscaProfile
                 <Scope metaclass="Standard.Package" stereotype="ToscaDesigner#ToscaModel"/>
-<<<<<<< HEAD
                 <Scope metaclass="Infrastructure.ModelElement" stereotype="ToscaDesigner#TNodeType"/>
                 <Scope metaclass="Infrastructure.ModelElement" stereotype="ToscaDesigner#TTopologyTemplate"/>
                 <Handler class="fr.softeam.toscadesigner.handlers.commands.ExportToscaModelCommand">
-=======
-                <Handler class="fr.softeam.toscadesigner.handlers.commands.ToacaModelExport">
->>>>>>> refs/remotes/origin/ToscaProfile
                     <HParameter name="name" value=""/>
                 </Handler>
             </Command>
