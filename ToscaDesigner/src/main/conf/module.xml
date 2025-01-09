@@ -1258,6 +1258,22 @@
                     <HParameter name="name" value="Constraints"/>
                 </Handler>
             </Tool>
+            <Tool id="Capability" label="%tool.Capability.label" tooltip="%tool.Capability.tooltip" image="res/icon/gui/TCapability24.png">
+                <Scope-source metaclass="Infrastructure.ModelElement" stereotype=""/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#TCapability"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="Capability"/>
+                </Handler>
+            </Tool>
+            <Tool id="Capabilities_Type" label="%tool.Capabilities_Type.label" tooltip="%tool.Capabilities_Type.tooltip" image="res/icon/gui/capabilitiesType48.ICON.png">
+                <Scope-source metaclass="Infrastructure.ModelElement" stereotype=""/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#CapabilitiesType"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="Capabilities Type"/>
+                </Handler>
+            </Tool>
         </Tools>
         <ContextualMenu>
             <CommandRef refid="Export" group="" group-image=""/>
@@ -1317,6 +1333,8 @@
                     <ToolRef refid="Policies_Type" group="%group.Attributes.label"/>
                     <ToolRef refid="Constraint" group="%group.Attributes.label"/>
                     <ToolRef refid="Constraints" group="%group.Attributes.label"/>
+                    <ToolRef refid="Capability" group="%group.Capabilities.label"/>
+                    <ToolRef refid="Capabilities_Type" group="%group.Capabilities.label"/>
                 </Palette>
                 <Handler class="StandardCustomizer">
                     <HParameter name="stereotype" value="ToscaDesigner#TopologyTemplateDiagram"/>
