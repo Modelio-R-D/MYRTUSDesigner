@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 07/01/2025 15:23 by Modelio Studio.
+ * This file was generated on 09/01/2025 12:14 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -39,13 +39,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("57025e67-7465-4ff9-8e38-c07dfc73dec6")
 public class InputParametersType implements IMdaProxy {
-    @objid ("ccd549ff-e668-463c-b6d2-7d171ee5961d")
+    @objid ("0cb8eb27-f222-44c7-837b-33b0d61bbf84")
     public static final String STEREOTYPE_NAME = "InputParametersType";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
      */
-    @objid ("6a011260-10a2-48b9-8b3a-8588ab43c477")
+    @objid ("c6801589-b37f-49b8-adf7-ffa0485eabbc")
     protected final ModelElement elt;
 
     /**
@@ -55,7 +55,7 @@ public class InputParametersType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("1d18be9d-f9cd-459f-9510-d41fa2491318")
+    @objid ("139b62c0-f2a6-4cad-b812-fe0f965962b4")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (InputParametersType.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(InputParametersType.MdaTypes.STEREOTYPE_ELT));
     }
@@ -65,7 +65,7 @@ public class InputParametersType implements IMdaProxy {
      * 
      * @return a {@link InputParametersType} proxy on the created {@link ModelElement}.
      */
-    @objid ("f2475bbe-c593-44ff-940d-5f53098671f0")
+    @objid ("b29f9c04-9039-45d5-b369-a7bd28d0287b")
     public static InputParametersType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(InputParametersType.MdaTypes.STEREOTYPE_ELT);
@@ -79,7 +79,7 @@ public class InputParametersType implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link InputParametersType} proxy or <i>null</i>.
      */
-    @objid ("7f3c4429-3d97-4c33-8b9e-05f11ee0f5ef")
+    @objid ("8d1aa33e-c9a9-48a3-9b57-756cbabb3d5c")
     public static InputParametersType instantiate(final ModelElement obj) {
         return InputParametersType.canInstantiate(obj) ? new InputParametersType(obj) : null;
     }
@@ -92,7 +92,7 @@ public class InputParametersType implements IMdaProxy {
      * @return a {@link InputParametersType} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("77f72ab7-411b-46c7-a1f4-0250f0cbc4f8")
+    @objid ("fe669c00-4b4d-4707-800d-af22a2ed7589")
     public static InputParametersType safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (InputParametersType.canInstantiate(obj))
         	return new InputParametersType(obj);
@@ -106,7 +106,7 @@ public class InputParametersType implements IMdaProxy {
      * null
      * 
      */
-    @objid ("aa997cdb-c7e8-469c-930c-59ad23e682ab")
+    @objid ("4b595063-76da-4923-bfb4-dbfc4b0bb2b5")
     public void addInputParameter(final TParameter obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -116,7 +116,7 @@ public class InputParametersType implements IMdaProxy {
         }
     }
 
-    @objid ("a2ca9cbc-a9a7-4cf5-897a-74bba95a5d22")
+    @objid ("d38df772-1376-4c7f-b283-679d8f3555e2")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -136,7 +136,7 @@ public class InputParametersType implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("b4f55b16-fab2-4eb7-8c9c-c762fcda4d0d")
+    @objid ("3aa23078-c958-4636-9955-e73c0f130ef0")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -147,7 +147,7 @@ public class InputParametersType implements IMdaProxy {
      * null
      * 
      */
-    @objid ("4b27e7f9-25f9-44bc-a579-fe214244e54f")
+    @objid ("ddbf26db-e745-4ca4-86de-e5984a1a7777")
     public List<TParameter> getInputParameter() {
         List<TParameter> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -159,7 +159,7 @@ public class InputParametersType implements IMdaProxy {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("3b32fcd4-f67d-417c-b6db-7850652b3191")
+    @objid ("15536654-adc9-4d45-a025-23f9c054d3d7")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -172,7 +172,7 @@ public class InputParametersType implements IMdaProxy {
      * null
      * 
      */
-    @objid ("1b1ef496-bd6e-493d-ae0b-8371c0d9d3e9")
+    @objid ("778616ac-5408-48f2-b447-9e9744d97420")
     public boolean removeInputParameter(final TParameter obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -187,23 +187,23 @@ public class InputParametersType implements IMdaProxy {
         
     }
 
-    @objid ("ff82e37f-d195-48ee-a2f5-0fb25b9fd7d9")
+    @objid ("4fa71f10-6862-459a-a303-14cf96a83472")
     protected  InputParametersType(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("b6dcefb6-c4eb-495d-840a-9e71e3a4fa50")
     public static final class MdaTypes {
-        @objid ("3a36489a-7fda-4af7-a52f-cc735624afe2")
+        @objid ("16bfffde-919d-4f87-b6d0-8f8bac1113cd")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("ec3f069b-9ab1-4957-a992-44b48c804936")
+        @objid ("9539f8af-1828-465c-bb89-ceac3b7f41f9")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("0d0a71ee-8315-482c-a352-e24ec4976b69")
+        @objid ("cbf620ab-be59-45e4-9a51-d7d8f4eacc6b")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("45fe7b13-acb9-44b0-95d8-9ffd780b0231")
+        @objid ("5e1b03d5-bbed-4c5b-9169-59dc3b8c9676")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

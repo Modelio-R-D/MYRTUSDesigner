@@ -6,6 +6,7 @@ import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemp
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapability;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
@@ -45,9 +46,14 @@ public class TRequirementPropertyPage<T extends TRequirement> extends ToscaEleme
             }
             break;
         case 4:
-            for (ModelElement dep : TCapability.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+            for (ModelElement dep : TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
                     this._element.setCapability(TCapabilityDefinition.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
+                }
+            }
+            for (ModelElement dep : TCapabilityType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+                if (value.contains(dep.getUuid())) {
+                    this._element.setCapability(TCapabilityType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
                 }
             }
             break;
@@ -79,10 +85,10 @@ public class TRequirementPropertyPage<T extends TRequirement> extends ToscaEleme
         // Capability
         table.addProperty("Capability",
                 this._element.getCapability() != null ? this._element.getCapability().getElement() : null,
-                Arrays.asList(Metamodel.getMClass("Attribute")), new IMObjectFilter() {
+                Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
                     @Override
                     public boolean accept(MObject element) {
-                        return TCapabilityDefinition.canInstantiate(element);
+                        return (TCapabilityDefinition.canInstantiate(element) || TCapabilityType.canInstantiate(element));
                     }
                 });
     }

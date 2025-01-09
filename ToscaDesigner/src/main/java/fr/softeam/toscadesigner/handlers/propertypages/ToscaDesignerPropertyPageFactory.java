@@ -9,8 +9,10 @@ package fr.softeam.toscadesigner.handlers.propertypages;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import fr.softeam.toscadesigner.api.tosca.standard.package_.TGroup;
+import fr.softeam.toscadesigner.handlers.propertypages.core.CapabilitiesTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.MetadataPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.PropertyDefinitionTypePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.core.TCapabilityPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TGroupPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TGroupTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TPolicyPropertyPage;
@@ -153,6 +155,7 @@ public class ToscaDesignerPropertyPageFactory {
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement.STEREOTYPE_NAME: return new TRequirementPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition.STEREOTYPE_NAME: return new TRequirementDefinitionPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition.STEREOTYPE_NAME: return new TCapabilityDefinitionPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition.instantiate(obj));
+            case fr.softeam.toscadesigner.api.tosca.standard.class_.TCapability.STEREOTYPE_NAME: return new TCapabilityPropertyPage<>(fr.softeam.toscadesigner.api.tosca.standard.class_.TCapability.instantiate(obj));
             
             default:
                 break;
@@ -186,7 +189,8 @@ public class ToscaDesignerPropertyPageFactory {
         @Override
         public final Object visitModelElement(ModelElement obj) {
             switch (this.stName) {
-            
+            case fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.CapabilitiesType.STEREOTYPE_NAME: return new CapabilitiesTypePropertyPage<>(fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.CapabilitiesType.instantiate(obj));
+
             default:
                 break;
             }
