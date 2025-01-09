@@ -24,8 +24,8 @@
                 <Image path=""/>
             </Stereotype>
             <Stereotype name="CapabilitiesType" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.CapabilitiesType.label" uid="37787f67-5e3f-4ce9-93fc-cc3101d5cb6f" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+                <Icon path="res/icon/gui/capabilitiesType24.ICON.png"/>
+                <Image path="res/icon/gui/capabilitiesType48.IMAGE.png"/>
             </Stereotype>
             <Stereotype name="CapabilitiesType1" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.CapabilitiesType1.label" uid="1e88dd5b-b484-4f79-a6c6-4e4180c79c4a" is-abstract="false">
                 <Icon path=""/>
@@ -329,10 +329,10 @@
                 </PropertyTable>
             </Stereotype>
             <Stereotype name="TCapability" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TCapability.label" uid="92831533-b614-4124-8961-3cd7ebcad536" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+                <Icon path="res/icon/gui/TCapability24.png"/>
+                <Image path="res/icon/gui/TCapability48.png"/>
             </Stereotype>
-            <Stereotype name="TCapabilityDefinition" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityDefinition.label" uid="92f8cb40-9498-4759-9c75-6b4df72de355" is-abstract="false">
+            <Stereotype name="TCapabilityDefinition" metaclass="Standard.Class" owner-stereotype="mref#'' {54f6e81a-afca-4381-aad4-5cf823fcf192} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TCapabilityDefinition.label" uid="92f8cb40-9498-4759-9c75-6b4df72de355" is-abstract="false">
                 <Icon path="res/icon/gui/capabilityDefinition24.png"/>
                 <Image path="res/icon/gui/capabilityDefinition48.png"/>
                 <PropertyTable id="TCapabilityDefinitionTable" label="%propertytable.TCapabilityDefinitionTable.label" uid="e2b2d181-f6b2-4a51-81dc-df962e137ef2">
@@ -372,7 +372,7 @@
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
-            <Stereotype name="TCapabilityType" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.TCapabilityType.label" uid="42438c96-0721-406a-a8b9-c4a85931cc60" is-abstract="false">
+            <Stereotype name="TCapabilityType" metaclass="Standard.Class" owner-stereotype="mref#'' {54f6e81a-afca-4381-aad4-5cf823fcf192} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TCapabilityType.label" uid="42438c96-0721-406a-a8b9-c4a85931cc60" is-abstract="false">
                 <Icon path="res/icon/gui/capabilityType24.ICON.png"/>
                 <Image path="res/icon/gui/capabilityType48.IMAGE.png"/>
             </Stereotype>
@@ -968,6 +968,10 @@
                         <Description>%propertydefinition.TriggerTable.action.description</Description>
                     </PropertyDefinition>
                 </PropertyTable>
+            </Stereotype>
+            <Stereotype name="CapabilityStereotype" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.CapabilityStereotype.label" uid="54f6e81a-afca-4381-aad4-5cf823fcf192" is-abstract="false">
+                <Icon path=""/>
+                <Image path=""/>
             </Stereotype>
         </Profile>
     </Profiles>

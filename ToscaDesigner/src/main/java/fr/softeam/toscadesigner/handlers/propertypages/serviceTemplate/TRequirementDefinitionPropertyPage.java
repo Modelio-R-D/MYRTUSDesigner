@@ -2,7 +2,7 @@ package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
 import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition;
@@ -30,10 +30,10 @@ public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition
             break;
         
         case 2:
-            for (ModelElement dep : TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+            for (ModelElement dep : TCapabilityType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
                     this._element.setCapability(
-                            TCapabilityDefinition.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
+                            TCapabilityType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
                 }
             }
             break;
@@ -75,7 +75,7 @@ public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition
                 Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
                     @Override
                     public boolean accept(MObject element) {
-                        return TCapabilityDefinition.canInstantiate(element);
+                        return TCapabilityType.canInstantiate(element);
                     }
                 });
         
