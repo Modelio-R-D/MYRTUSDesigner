@@ -26,15 +26,8 @@ public class TPolicyTypePropertyPage<T extends TPolicyType> extends ToscaElement
             this._element.getElement().setName(value);
             ;
             break;
+
         case 2:
-            for (ModelElement el : TPolicyType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
-                if (value.contains(el.getUuid())) {
-                    this._element
-                            .setDerivedFrom(TPolicyType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
-                }
-            }
-            break;
-        case 3:
             this._element.setPolicyLanguage(value);
             break;
         
@@ -46,6 +39,7 @@ public class TPolicyTypePropertyPage<T extends TPolicyType> extends ToscaElement
     public void update(IModulePropertyTable table) {
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
+        table.addProperty("Language", _element.getPolicyLanguage());
     }
 
 }
