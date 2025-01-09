@@ -13,21 +13,19 @@ import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.Capabiliti
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapability;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.Trigger;
 
-
-public class CapabilitiesTypePropertyPage <T extends CapabilitiesType> extends ToscaElementPropertyPage<T>{
+public class CapabilitiesTypePropertyPage<T extends CapabilitiesType> extends ToscaElementPropertyPage<T> {
 
 	public CapabilitiesTypePropertyPage(T elt) {
 		super(elt);
 		// TODO Auto-generated constructor stub
 	}
 
-
-    @Override
-    public void changeProperty(int row, String value) {
-        switch (row) {
-        case 1:
-            this._element.getElement().setName(value);
-            break;
+	@Override
+	public void changeProperty(int row, String value) {
+		switch (row) {
+		case 1:
+			this._element.getElement().setName(value);
+			break;
 		case 2:
 			Class elt2 = (Class) getModelElt(TCapability.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
 			if ((elt2 != null)
@@ -39,25 +37,22 @@ public class CapabilitiesTypePropertyPage <T extends CapabilitiesType> extends T
 					this._element.removeCapability((TCapability) pc);
 				}
 			}
-			break;    
-        }
-    }
+			break;
+		}
+	}
 
-    @Override
-    public void update(IModulePropertyTable table) {
-        super.update(table);
-       table.addProperty("Name", _element.getElement().getName());
-       
-       //Capability
+	@Override
+	public void update(IModulePropertyTable table) {
+		super.update(table);
+		table.addProperty("Name", _element.getElement().getName());
+
+		// Capability
 		List<ModelElement> members_elt = extractModelElements(this._element.getCapability());
-		List<ModelElement> capabilityList = (TCapability.MdaTypes.STEREOTYPE_ELT.getExtendedElement() != null) 
+		List<ModelElement> capabilityList = (TCapability.MdaTypes.STEREOTYPE_ELT.getExtendedElement() != null)
 				? TCapability.MdaTypes.STEREOTYPE_ELT.getExtendedElement()
-						: Collections.emptyList();
-				table.addProperty(
-						"Capability", 
-						getToscaValue(members_elt), 
-						getAddRemove(capabilityList, extractModelElements(this._element.getCapability()))
-						);         
+				: Collections.emptyList();
+		table.addProperty("Capability", getToscaValue(members_elt),
+				getAddRemove(capabilityList, extractModelElements(this._element.getCapability())));
 
-    }
+	}
 }

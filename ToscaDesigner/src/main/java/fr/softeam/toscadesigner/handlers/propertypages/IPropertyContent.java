@@ -34,22 +34,24 @@ import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 /**
  * This interface defines the contract of all property pages
  */
-@objid ("35d19e45-5906-45ec-b5f7-428a42329c72")
+@objid("35d19e45-5906-45ec-b5f7-428a42329c72")
 public interface IPropertyContent {
-    /**
-     * This method handles the changes of the given property, identified by its row index, of a selected element
-     * to a new value.
-     * @param row : the row of the changed property
-     * @param value : the new value of the property
-     */
-    @objid ("ec859bac-8856-4ecd-899a-6b21df6dd192")
-    void changeProperty(int row, String value);
+	/**
+	 * This method handles the changes of the given property, identified by its row
+	 * index, of a selected element to a new value.
+	 * 
+	 * @param row   : the row of the changed property
+	 * @param value : the new value of the property
+	 */
+	@objid("ec859bac-8856-4ecd-899a-6b21df6dd192")
+	void changeProperty(int row, String value);
 
-    /**
-     * This method handles the construction of the property table of a selected element
-     * @param table : the property table to fulfill
-     */
-    @objid ("e428b814-eb93-407d-a165-cd7885464aa1")
-    void update(IModulePropertyTable table);
+	/**
+	 * This method handles the construction of the property table of a selected
+	 * element
+	 * 
+	 * @param table : the property table to fulfill
+	 */
+	@objid("e428b814-eb93-407d-a165-cd7885464aa1")
+	void update(IModulePropertyTable table);
 }
-
