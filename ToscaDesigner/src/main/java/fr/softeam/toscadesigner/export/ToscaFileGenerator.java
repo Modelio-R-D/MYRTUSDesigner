@@ -8,6 +8,8 @@ import org.eclipse.swt.widgets.Display;
 import org.modelio.api.module.context.log.ILogService;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
+import com.github.jknack.handlebars.HandlebarsException;
+
 class ToscaFileGenerator extends AbstractToscaFileGenerator {
 	private static final String[] TOSCA_FILE_EXTENSIONS = { "*.tosca" };
 	private ILogService logger;
@@ -39,7 +41,15 @@ class ToscaFileGenerator extends AbstractToscaFileGenerator {
 				logger.error(ex);
 				MessageDialog.openError(Display.getCurrent().getActiveShell(), getFileType() + " export error",
 						ex.getLocalizedMessage());
-			}
+			} catch (HandlebarsException ex) {
+		        logger.error(ex);
+		        MessageDialog.openError(Display.getCurrent().getActiveShell(), "Handlebars Error",
+		                "An error occurred while rendering the Handlebars template: " + ex.getMessage());
+		    } catch (NullPointerException ex) {
+		        logger.error(ex);
+		        MessageDialog.openError(Display.getCurrent().getActiveShell(), "NullPointerException",
+		                "A NullPointerException occurred. See log for details.");
+		    }
 		}
 	}
 

@@ -70,7 +70,8 @@ public abstract class AbstractToscaFileGenerator {
 						TNodeTemplate node = tRequirement.getNode();
 						propertyStringValue = node != null ? node.getName() : "''";
 					} else if (searchedPropertyName.equals("capability")) {
-						propertyStringValue = tRequirement.getCapability().getElement().getName();
+						fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition capability = tRequirement.getCapability();
+						propertyStringValue = capability != null ? capability.getElement().getName() : "";
 					}
 				} else if (stereotype.getName().equals("TRequirementDefinition")) {
 
@@ -79,7 +80,8 @@ public abstract class AbstractToscaFileGenerator {
 					if (searchedPropertyName.equals("node")) {
 						propertyStringValue = tRequirementDefinition.getNodeType().getName();
 					} else if (searchedPropertyName.equals("capability")) {
-						propertyStringValue = tRequirementDefinition.getCapability().getElement().getName();
+						fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition capability = tRequirementDefinition.getCapability();
+						propertyStringValue = capability.getElement().getName();
 					} else if (searchedPropertyName.equals("relationshipType")) {
 						propertyStringValue = tRequirementDefinition.getRelationshipType().getElement().getName();
 					} else if (searchedPropertyName.equals("lowerBound")) {
