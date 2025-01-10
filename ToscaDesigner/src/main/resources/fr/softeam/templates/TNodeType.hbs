@@ -7,8 +7,8 @@ node_types:
       targetNamespace: "{{getProperty this "targetNamespace"}}"
       abstract: "{{getProperty this "abstract"}}"
       final: "{{getProperty this "final"}}"
-    {{#unless (noStereotypeApplications this "TRequirementDefinitionType")}}requirements:{{/unless}}
-	{{#each ownedElement}}{{#extension}}{{#eq name "TRequirementDefinitionType"}}{{#each ../ownedAttribute}}{{#extension}}{{#eq name "TRequirementDefinition"}}
+    {{#unless (noStereotypeApplications this "RequirementDefinitionType")}}requirements:{{/unless}}
+	{{#each ownedElement}}{{#extension}}{{#eq name "RequirementDefinitionType"}}{{#each ../ownedAttribute}}{{#extension}}{{#eq name "TRequirementDefinition"}}
       - {{../name}}:
           capability: {{getProperty ../this "capability"}}
           relationship: {{getProperty ../this "relationshipType"}}

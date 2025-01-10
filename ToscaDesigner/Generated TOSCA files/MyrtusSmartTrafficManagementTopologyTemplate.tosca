@@ -1,0 +1,47 @@
+tosca_definitions_version: tosca_simple_yaml_1_3
+
+
+
+topology_template:
+    
+  node_templates:  
+      Myrtus_Workstation_1:
+        type: example.eu.myrtus.nodetypes.Myrtus-Workstation
+        
+        
+        
+        
+      MyrtusFaceDetectionService_0:
+        type: example.eu.myrtus.nodetypes.MyrtusFaceDetectionService
+        
+        properties:
+          dockerImage: "thebigpotatoe/face-recognition-docker"
+        
+        
+      MyrtusCameraFeed_0:
+        type: example.eu.myrtus.nodetypes.MyrtusCameraFeed
+        
+        properties:
+          dockerImage: "ci.hesi.energy:5000/myrtus/examples/myrtusface/camera_feed:web"
+        
+        
+      Myrtus_Proxy_0:
+        type: example.eu.myrtus.nodetypes.MyrtusProxy
+        
+        properties:
+          dockerImage: "nginx:alpine"
+          port: "443"
+        
+        
+    
+  relationship_templates:
+    hostedOn:
+      type: hostedOn
+    hostedOn:
+      type: hostedOn
+    hostedOn:
+      type: hostedOn
+    connectsOn:
+      type: hostedOn
+    connectsOn:
+      type: hostedOn

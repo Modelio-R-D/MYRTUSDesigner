@@ -11,6 +11,8 @@ import org.modelio.api.module.context.log.ILogService;
 import org.modelio.metamodel.uml.infrastructure.ModelTree;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
+import com.github.jknack.handlebars.HandlebarsException;
+
 public class CsarFileGenerator extends AbstractToscaFileGenerator {
 
 	private static final String[] CSAR_FILE_EXTENSIONS = { "*.csar" };
@@ -67,7 +69,15 @@ public class CsarFileGenerator extends AbstractToscaFileGenerator {
 			logger.error(e);
 			MessageDialog.openError(Display.getCurrent().getActiveShell(), "CSAR export error",
 					e.getLocalizedMessage());
-		}
+		} catch (HandlebarsException ex) {
+	        logger.error(ex);
+	        MessageDialog.openError(Display.getCurrent().getActiveShell(), "Handlebars Error",
+	                "An error occurred while rendering the Handlebars template: " + ex.getMessage());
+	    } catch (NullPointerException ex) {
+	        logger.error(ex);
+	        MessageDialog.openError(Display.getCurrent().getActiveShell(), "NullPointerException",
+	                ex.getStackTrace().toString());
+	    }
 	}
 
 	private void addToscaMetadata(ZipOutputStream zos) throws IOException {

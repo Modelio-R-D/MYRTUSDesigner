@@ -28,6 +28,8 @@ import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
 
 import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityDefinition;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilityStereotype;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
@@ -70,7 +72,7 @@ public abstract class AbstractToscaFileGenerator {
 						TNodeTemplate node = tRequirement.getNode();
 						propertyStringValue = node != null ? node.getName() : "''";
 					} else if (searchedPropertyName.equals("capability")) {
-						fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition capability = tRequirement.getCapability();
+						CapabilityStereotype capability = tRequirement.getCapability();
 						propertyStringValue = capability != null ? capability.getElement().getName() : "";
 					}
 				} else if (stereotype.getName().equals("TRequirementDefinition")) {
@@ -80,7 +82,7 @@ public abstract class AbstractToscaFileGenerator {
 					if (searchedPropertyName.equals("node")) {
 						propertyStringValue = tRequirementDefinition.getNodeType().getName();
 					} else if (searchedPropertyName.equals("capability")) {
-						fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition capability = tRequirementDefinition.getCapability();
+						TCapabilityType capability = tRequirementDefinition.getCapability();
 						propertyStringValue = capability.getElement().getName();
 					} else if (searchedPropertyName.equals("relationshipType")) {
 						propertyStringValue = tRequirementDefinition.getRelationshipType().getElement().getName();
