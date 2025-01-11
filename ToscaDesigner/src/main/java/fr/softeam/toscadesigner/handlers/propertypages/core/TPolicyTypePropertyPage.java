@@ -26,7 +26,7 @@ public class TPolicyTypePropertyPage<T extends TPolicyType> extends ToscaElement
             this._element.getElement().setName(value);
             ;
             break;
-
+        
         case 2:
             this._element.setPolicyLanguage(value);
             break;

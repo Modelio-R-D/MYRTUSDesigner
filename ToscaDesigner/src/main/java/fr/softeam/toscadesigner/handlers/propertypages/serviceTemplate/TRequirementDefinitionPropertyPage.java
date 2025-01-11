@@ -32,8 +32,8 @@ public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition
         case 2:
             for (ModelElement dep : TCapabilityType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
-                    this._element.setCapability(
-                            TCapabilityType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
+                    this._element
+                            .setCapability(TCapabilityType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
                 }
             }
             break;
@@ -71,7 +71,8 @@ public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
         // Capability
-        table.addProperty("Capability", this._element.getCapability() != null ? this._element.getCapability().getElement() : null,
+        table.addProperty("Capability",
+                this._element.getCapability() != null ? this._element.getCapability().getElement() : null,
                 Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
                     @Override
                     public boolean accept(MObject element) {

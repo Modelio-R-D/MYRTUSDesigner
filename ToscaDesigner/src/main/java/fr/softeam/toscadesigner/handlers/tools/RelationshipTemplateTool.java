@@ -36,16 +36,17 @@ public class RelationshipTemplateTool extends DefaultLinkTool {
     public void actionPerformed(IDiagramHandle diagramHandle, IDiagramGraphic source, IDiagramGraphic target, LinkRouterKind routerKInd, ILinkRoute route) {
         IModelingSession session = ToscaDesignerModule.getInstance().getModuleContext().getModelingSession();
         try (ITransaction transaction = session.createTransaction(" RelationshipTemplate")) {
-            Association newAssoc = session.getModel().createAssociation((Classifier) source.getElement(),(Classifier) target.getElement(), "");
+            Association newAssoc = session.getModel().createAssociation((Classifier) source.getElement(),
+                    (Classifier) target.getElement(), "");
             newAssoc.getExtension().add(TRelationshipTemplate.MdaTypes.STEREOTYPE_ELT);
-            
-            for(AssociationEnd end : newAssoc.getEnd()) {
+        
+            for (AssociationEnd end : newAssoc.getEnd()) {
                 end.getExtension().add(TRelationshipTemplateEnd.MdaTypes.STEREOTYPE_ELT);
             }
-             
-            List<IDiagramGraphic> graphics = diagramHandle.unmask(newAssoc, 0,0);
-            if(graphics.size() > 0 && graphics.get(0) instanceof IDiagramLink) {
-                IDiagramLink link = (IDiagramLink)graphics.get(0);
+        
+            List<IDiagramGraphic> graphics = diagramHandle.unmask(newAssoc, 0, 0);
+            if (graphics.size() > 0 && graphics.get(0) instanceof IDiagramLink) {
+                IDiagramLink link = (IDiagramLink) graphics.get(0);
                 link.setRouterKind(routerKInd);
                 link.setRoute(route);
             }

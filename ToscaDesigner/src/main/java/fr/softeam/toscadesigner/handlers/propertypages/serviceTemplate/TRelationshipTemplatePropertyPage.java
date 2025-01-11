@@ -31,15 +31,17 @@ public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> 
         case 2:
             for (ModelElement elt : TRelationshipType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(elt.getUuid())) {
-                   this._element.setRelationshipType(TRelationshipType.instantiate((org.modelio.metamodel.uml.statik.Class) elt));
+                    this._element.setRelationshipType(
+                            TRelationshipType.instantiate((org.modelio.metamodel.uml.statik.Class) elt));
                 }
             }
             break;
-            
+        
         case 3:
             for (ModelElement elt : RelationshipConstraintsType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(elt.getUuid())) {
-                   this._element.setRelationshipConstraints(RelationshipConstraintsType.instantiate((org.modelio.metamodel.uml.statik.Class) elt));
+                    this._element.setRelationshipConstraints(
+                            RelationshipConstraintsType.instantiate((org.modelio.metamodel.uml.statik.Class) elt));
                 }
             }
             break;
@@ -52,9 +54,9 @@ public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> 
     public void update(IModulePropertyTable table) {
         super.update(table);
         
-        table.addProperty("Name",_element.getElement().getName());
+        table.addProperty("Name", _element.getElement().getName());
         
-        //Type
+        // Type
         table.addProperty("Type",
                 this._element.getRelationshipType() != null ? this._element.getRelationshipType().getElement() : null,
                 Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
@@ -64,9 +66,11 @@ public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> 
                     }
                 });
         
-        //Constraints
+        // Constraints
         table.addProperty("Constraints",
-                this._element.getRelationshipConstraints() != null ? this._element.getRelationshipConstraints().getElement() : null,
+                this._element.getRelationshipConstraints() != null
+                        ? this._element.getRelationshipConstraints().getElement()
+                        : null,
                 Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
                     @Override
                     public boolean accept(MObject element) {

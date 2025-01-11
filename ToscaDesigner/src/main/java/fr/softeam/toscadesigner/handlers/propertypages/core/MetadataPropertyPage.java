@@ -17,7 +17,8 @@ public class MetadataPropertyPage<T extends Metadata> extends ToscaElementProper
     public void changeProperty(int row, String value) {
         switch (row) {
         case 1:
-            this._element.getElement().setName(value);;
+            this._element.getElement().setName(value);
+            ;
             break;
         case 2:
             this._element.getElement().setValue(value);

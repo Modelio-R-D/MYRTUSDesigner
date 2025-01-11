@@ -30,28 +30,28 @@ public class CreateTopologyTemplateTool extends CreateSubModelTool {
     @Override
     public void actionPerformed(IDiagramHandle diagramHandle, IDiagramGraphic parent, Rectangle rect) {
         /*
-                        ClassDiagram diag = (ClassDiagram) parent.getElement();
-                        org.modelio.metamodel.uml.statik.Package packageOwner = (org.modelio.metamodel.uml.statik.Package) diag
-                                .getOrigin();
-                        */
+                 * ClassDiagram diag = (ClassDiagram) parent.getElement();
+                 * org.modelio.metamodel.uml.statik.Package packageOwner =
+                 * (org.modelio.metamodel.uml.statik.Package) diag .getOrigin();
+                 */
         Package packageOwner = (Package) parent.getElement().getCompositionOwner();
         
         IModuleContext moduleContext = ToscaDesignerModule.getInstance().getModuleContext();
         IModelingSession session = moduleContext.getModelingSession();
         
-              try( ITransaction transaction = session.createTransaction("Create Topology Template")){
-                  
-                  TTopologyTemplate subModel = TTopologyTemplate.create(session);
-                  TopologyTemplateDiagram diagram = TopologyTemplateDiagram.create(session);
-              
-                  packageOwner.getOwnedElement().add(subModel.getElement());
-                  subModel.getElement().getProduct().add(diagram.getElement());
-              
-                  subModel.getElement().setName("Topology Template");
-                  diagram.getElement().setName(subModel.getElement().getName() + " diagram");            
-                  this.openDiagram(diagram);
-              
-                  transaction.commit();
+        try (ITransaction transaction = session.createTransaction("Create Topology Template")) {
+        
+            TTopologyTemplate subModel = TTopologyTemplate.create(session);
+            TopologyTemplateDiagram diagram = TopologyTemplateDiagram.create(session);
+        
+            packageOwner.getOwnedElement().add(subModel.getElement());
+            subModel.getElement().getProduct().add(diagram.getElement());
+        
+            subModel.getElement().setName("Topology Template");
+            diagram.getElement().setName(subModel.getElement().getName() + " diagram");
+            this.openDiagram(diagram);
+        
+            transaction.commit();
         }
     }
 

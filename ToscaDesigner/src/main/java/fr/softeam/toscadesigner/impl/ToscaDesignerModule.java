@@ -31,7 +31,7 @@ public class ToscaDesignerModule extends AbstractJavaModule {
         
         ToscaDesignerModule.instance = this;
         
-        this.lifeCycleHandler  = new ToscaDesignerLifeCycleHandler(this);
+        this.lifeCycleHandler = new ToscaDesignerLifeCycleHandler(this);
         this.peerModule = new ToscaDesignerPeerModule(this, moduleContext.getPeerConfiguration());
         init();
     }
@@ -43,7 +43,9 @@ public class ToscaDesignerModule extends AbstractJavaModule {
     }
 
     /**
-     * Return the LifeCycleHandler  attached to the current module. This handler is used to manage the module lifecycle by declaring the desired implementation for the start, select... methods.
+     * Return the LifeCycleHandler attached to the current module. This handler is
+     * used to manage the module lifecycle by declaring the desired implementation
+     * for the start, select... methods.
      */
     @objid ("38c7cf26-e3f9-42c8-9985-80458a13e98c")
     @Override
@@ -52,9 +54,11 @@ public class ToscaDesignerModule extends AbstractJavaModule {
     }
 
     /**
-     * Method automatically called just after the creation of the module. The module is automatically instanciated at the beginning
-     * of the MDA lifecycle and constructor implementation is not accessible to the module developer. The <code>init</code> method
-     * allows the developer to execute the desired initialization.
+     * Method automatically called just after the creation of the module. The module
+     * is automatically instanciated at the beginning of the MDA lifecycle and
+     * constructor implementation is not accessible to the module developer. The
+     * <code>init</code> method allows the developer to execute the desired
+     * initialization.
      */
     @objid ("0e13fa12-0441-4bb9-91ee-3b33f8938251")
     @Override
@@ -70,7 +74,8 @@ public class ToscaDesignerModule extends AbstractJavaModule {
 
     @objid ("20b1ec13-c776-4ad6-8541-5ff15476afbf")
     public static ToscaDesignerModule getInstance() {
-        // Automatically generated method. Please delete this comment before entering specific code.
+        // Automatically generated method. Please delete this comment before entering
+        // specific code.
         return instance;
     }
 
@@ -81,7 +86,7 @@ public class ToscaDesignerModule extends AbstractJavaModule {
         IMdaExpert expert = getGeneratedMdaExpert(st);
         if (expert != null) {
             return expert;
-        }// End generated code
+        } // End generated code
         return null;
     }
 
@@ -93,7 +98,8 @@ public class ToscaDesignerModule extends AbstractJavaModule {
     @objid ("a46b8dae-28ae-4eba-aaed-6b65d095530f")
     private IMdaExpert getGeneratedMdaExpert(final Stereotype st) {
         switch (st.getUuid()) {
-        	default: return null;
+        default:
+            return null;
         }
     }
 

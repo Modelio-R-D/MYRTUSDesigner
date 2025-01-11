@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 09/01/2025 12:14 by Modelio Studio.
+ * This file was generated on 09/01/2025 16:04 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.automatic.standard.staticdiagram;
 
@@ -40,13 +40,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("0fa85812-9761-4c3b-b08a-6477551af622")
 public class ToscaDiagram implements IMdaProxy {
-    @objid ("5b316684-a045-468b-88b8-2749ad0b7c72")
+    @objid ("4447179c-2597-4bf8-93d7-b5d8b214be52")
     public static final String STEREOTYPE_NAME = "ToscaDiagram";
 
     /**
      * The underlying {@link StaticDiagram} represented by this proxy, never null.
      */
-    @objid ("28e663d5-fc0a-43dd-8198-d242f975854e")
+    @objid ("0e5f8874-2357-49a9-b137-2bbbbf2ef2e3")
     protected final StaticDiagram elt;
 
     /**
@@ -56,7 +56,7 @@ public class ToscaDiagram implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("20a9dcc5-1756-49ca-92ab-058da32e7d2c")
+    @objid ("7ba39534-446d-4fc1-9422-27ae61618b9a")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof StaticDiagram) && (ToscaDiagram.MdaTypes.STEREOTYPE_ELT!=null) && ((StaticDiagram) elt).isStereotyped(ToscaDiagram.MdaTypes.STEREOTYPE_ELT));
     }
@@ -66,7 +66,7 @@ public class ToscaDiagram implements IMdaProxy {
      * 
      * @return a {@link ToscaDiagram} proxy on the created {@link StaticDiagram}.
      */
-    @objid ("012e13aa-59b7-41d6-8390-6385795300e2")
+    @objid ("2d597737-7728-4ee8-8213-a7cdcdb6ec05")
     public static ToscaDiagram create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.StaticDiagram");
         e.getExtension().add(ToscaDiagram.MdaTypes.STEREOTYPE_ELT);
@@ -80,7 +80,7 @@ public class ToscaDiagram implements IMdaProxy {
      * @param obj a StaticDiagram
      * @return a {@link ToscaDiagram} proxy or <i>null</i>.
      */
-    @objid ("924cd663-6980-44b5-b5de-347b57b9bc81")
+    @objid ("d29f6da7-8688-4617-a420-32cb01b4300d")
     public static ToscaDiagram instantiate(final StaticDiagram obj) {
         return ToscaDiagram.canInstantiate(obj) ? new ToscaDiagram(obj) : null;
     }
@@ -93,7 +93,7 @@ public class ToscaDiagram implements IMdaProxy {
      * @return a {@link ToscaDiagram} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("f1364a0d-280d-4959-9493-d26d02e3219a")
+    @objid ("bf9e614b-b964-4a32-93d0-73f002e643c0")
     public static ToscaDiagram safeInstantiate(final StaticDiagram obj) throws IllegalArgumentException {
         if (ToscaDiagram.canInstantiate(obj))
         	return new ToscaDiagram(obj);
@@ -101,7 +101,7 @@ public class ToscaDiagram implements IMdaProxy {
         	throw new IllegalArgumentException("ToscaDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("e2587893-2674-4a77-9ad2-d35c3b2f420a")
+    @objid ("2c3f3382-16bd-40ae-b91a-3f676fd5adfb")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -121,35 +121,35 @@ public class ToscaDiagram implements IMdaProxy {
      * Get the underlying {@link StaticDiagram}. 
      * @return the StaticDiagram represented by this proxy, never null.
      */
-    @objid ("7ba5d6b6-3432-4ae8-9f31-a3de082eab71")
+    @objid ("a4daf5fe-beb5-469c-bd4f-9919fc4e733f")
     public StaticDiagram getElement() {
         return this.elt;
     }
 
-    @objid ("2c174b08-9552-410d-847c-2af40e3b5a08")
+    @objid ("7538c948-baab-42b0-a616-eb4cfae56dd9")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
         
     }
 
-    @objid ("001604c7-db0d-431f-a644-8890291b2072")
+    @objid ("4a6ee114-58a3-42ce-b4c9-be45db597fc3")
     protected  ToscaDiagram(final StaticDiagram elt) {
         this.elt = elt;
     }
 
     @objid ("cf3c32f5-d159-4ca0-91fa-0b4137560cc2")
     public static final class MdaTypes {
-        @objid ("679a98f8-b2f2-4ad2-92cf-ac986829fb46")
+        @objid ("6d75388d-9d62-45fe-8ef7-12bc22d3e303")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("735d159e-e301-4c64-823e-6f9465520a28")
+        @objid ("274c03be-d92c-40c6-91ec-b17c3f3e9e7e")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("cbdc080f-24b1-4c49-89b2-cbf22767130e")
+        @objid ("44468c28-bce9-491d-8dd1-241d29f4c806")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("7b2cf6b5-ea06-4fd1-9ba2-666eab244918")
+        @objid ("b4919218-70dd-47d8-98b9-249020b41af6")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

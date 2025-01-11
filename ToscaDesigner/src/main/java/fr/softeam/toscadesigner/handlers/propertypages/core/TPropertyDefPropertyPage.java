@@ -42,9 +42,7 @@ public class TPropertyDefPropertyPage<T extends TPropertyDef> extends ToscaEleme
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
-        table.addProperty("Name",
-                this._element.getName() != null ? this._element.getName().getElement()
-                        : null,
+        table.addProperty("Name", this._element.getName() != null ? this._element.getName().getElement() : null,
                 Arrays.asList(Metamodel.getMClass("Attribute")), new IMObjectFilter() {
                     @Override
                     public boolean accept(MObject element) {

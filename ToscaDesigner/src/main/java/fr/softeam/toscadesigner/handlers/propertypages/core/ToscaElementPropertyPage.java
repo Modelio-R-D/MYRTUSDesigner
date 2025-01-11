@@ -104,7 +104,7 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
         // List of added Elts , remove Elts
         List<String> result = new ArrayList<>();
         result.add("");
-        //result.add(this._removeAll);
+        // result.add(this._removeAll);
         
         // List of already added Elt
         List<ModelElement> addElt = new ArrayList<>();

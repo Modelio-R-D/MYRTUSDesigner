@@ -31,19 +31,24 @@ public class ToscaDesignerComponentContributor extends AbstractModelComponentCon
     @objid ("66541882-990a-4278-95b2-bc0219065505")
     private TagType getTagType(java.lang.Class<? extends MObject> metaclass, String tagTypeName) {
         IMetamodelExtensions metamodel = this.session.getMetamodelExtensions();
-        return metamodel.getTagType(IToscaDesignerPeerModule.MODULE_NAME, tagTypeName,     ToscaDesignerModule.getInstance().getModuleContext().getModelioServices().getMetamodelService().getMetamodel().getMClass(metaclass));
+        return metamodel.getTagType(IToscaDesignerPeerModule.MODULE_NAME, tagTypeName, ToscaDesignerModule.getInstance()
+                .getModuleContext().getModelioServices().getMetamodelService().getMetamodel().getMClass(metaclass));
     }
 
     @objid ("3fc7a120-1f7e-4874-b624-1860dc9aa69d")
     private Stereotype getStereotype(java.lang.Class<? extends MObject> metaclass, String stereotypeName) {
         IMetamodelExtensions metamodel = this.session.getMetamodelExtensions();
-        return metamodel.getStereotype(IToscaDesignerPeerModule.MODULE_NAME, stereotypeName, ToscaDesignerModule.getInstance().getModuleContext().getModelioServices().getMetamodelService().getMetamodel().getMClass(metaclass));
+        return metamodel.getStereotype(IToscaDesignerPeerModule.MODULE_NAME, stereotypeName,
+                ToscaDesignerModule.getInstance().getModuleContext().getModelioServices().getMetamodelService()
+                        .getMetamodel().getMClass(metaclass));
     }
 
     @objid ("c23d7165-5790-46c8-a95a-a7aa5761b55e")
     private NoteType getNoteType(java.lang.Class<? extends MObject> metaclass, String noteTypeName) {
         IMetamodelExtensions metamodel = this.session.getMetamodelExtensions();
-        return metamodel.getNoteType(IToscaDesignerPeerModule.MODULE_NAME, noteTypeName, ToscaDesignerModule.getInstance().getModuleContext().getModelioServices().getMetamodelService().getMetamodel().getMClass(metaclass));
+        return metamodel.getNoteType(IToscaDesignerPeerModule.MODULE_NAME, noteTypeName,
+                ToscaDesignerModule.getInstance().getModuleContext().getModelioServices().getMetamodelService()
+                        .getMetamodel().getMClass(metaclass));
     }
 
     @objid ("84216a74-05a6-43e9-acda-21cd6ebd2ad2")

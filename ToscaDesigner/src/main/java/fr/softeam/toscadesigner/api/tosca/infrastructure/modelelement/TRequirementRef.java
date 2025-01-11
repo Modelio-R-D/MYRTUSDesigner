@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 09/01/2025 12:14 by Modelio Studio.
+ * This file was generated on 09/01/2025 16:04 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -39,19 +39,19 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("f08cdaaa-b9ee-4017-b609-0f69ca484deb")
 public class TRequirementRef implements IMdaProxy {
-    @objid ("6d145353-f71c-463c-a9d3-fb7d20600d8f")
+    @objid ("15949320-6df5-4e23-bc9d-34c22f14ae13")
     public static final String STEREOTYPE_NAME = "TRequirementRef";
 
-    @objid ("fdfeb38c-e34b-436e-9e6e-1ad2ae5d1982")
+    @objid ("e6f84a7f-be99-4c0a-bd12-2a111b6f5043")
     public static final String NAME_PROPERTY = "name";
 
-    @objid ("293a4a44-2860-4525-81bd-8ebf39235cce")
+    @objid ("3f386186-871e-4940-a412-435c172adf18")
     public static final String REF_PROPERTY = "ref";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
      */
-    @objid ("08351d1e-2e34-4066-a6ef-b5415672ce0d")
+    @objid ("88079b8b-baea-45b8-8609-76b685f8be0f")
     protected final ModelElement elt;
 
     /**
@@ -61,7 +61,7 @@ public class TRequirementRef implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("3320de38-6426-41d0-98e9-a26761da4098")
+    @objid ("8e56b492-510b-49d5-aba5-6ea480961763")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (TRequirementRef.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(TRequirementRef.MdaTypes.STEREOTYPE_ELT));
     }
@@ -71,7 +71,7 @@ public class TRequirementRef implements IMdaProxy {
      * 
      * @return a {@link TRequirementRef} proxy on the created {@link ModelElement}.
      */
-    @objid ("02f0daf0-c2be-4dcc-9f42-091799c903ba")
+    @objid ("38751721-c24c-4f74-a278-3f2738ea5061")
     public static TRequirementRef create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(TRequirementRef.MdaTypes.STEREOTYPE_ELT);
@@ -85,7 +85,7 @@ public class TRequirementRef implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link TRequirementRef} proxy or <i>null</i>.
      */
-    @objid ("1566688f-4c88-4668-9d49-4888fd3ed776")
+    @objid ("4a588352-beab-4a8b-9813-c331b74fe153")
     public static TRequirementRef instantiate(final ModelElement obj) {
         return TRequirementRef.canInstantiate(obj) ? new TRequirementRef(obj) : null;
     }
@@ -98,7 +98,7 @@ public class TRequirementRef implements IMdaProxy {
      * @return a {@link TRequirementRef} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("36889323-dbb9-481d-aac1-028887540c8a")
+    @objid ("75cb2c3b-02f3-473a-b4d2-11ae35c332a2")
     public static TRequirementRef safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (TRequirementRef.canInstantiate(obj))
         	return new TRequirementRef(obj);
@@ -106,7 +106,7 @@ public class TRequirementRef implements IMdaProxy {
         	throw new IllegalArgumentException("TRequirementRef: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("8d01a943-1fcf-4994-a59e-45564966ac0a")
+    @objid ("720ebdbf-3155-465c-aae2-8a5dffb19abd")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -126,7 +126,7 @@ public class TRequirementRef implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("d4614221-c01e-4c62-aa5f-7dc58acf44ad")
+    @objid ("997f1c37-7005-4e76-bcab-68b1227e93f9")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -136,7 +136,7 @@ public class TRequirementRef implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d79ced71-35a8-4328-8ade-82c8538f0516")
+    @objid ("3fcd4acc-4748-4b5b-a8a0-c3ba1293d4a5")
     public String getName() {
         String value = this.elt.getProperty(TRequirementRef.MdaTypes.STEREOTYPE_ELT,
                                             TRequirementRef.MdaTypes.NAME_PROPERTY_ELT.getName());
@@ -152,7 +152,7 @@ public class TRequirementRef implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d34a9008-7d48-41cb-b94c-4f5fa4ad983e")
+    @objid ("f4fedc5d-b83d-4f7f-8df2-e900a3213dfe")
     public String getRef() {
         String value = this.elt.getProperty(TRequirementRef.MdaTypes.STEREOTYPE_ELT,
                                             TRequirementRef.MdaTypes.REF_PROPERTY_ELT.getName());
@@ -163,7 +163,7 @@ public class TRequirementRef implements IMdaProxy {
         
     }
 
-    @objid ("6077cce7-6073-4a87-8659-a95311cf8065")
+    @objid ("1e80cf25-9f4b-46d0-9e5a-e3f2013514d4")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -175,7 +175,7 @@ public class TRequirementRef implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("9d63e35f-3180-4a3e-91c1-ddf510ceee24")
+    @objid ("7499f6d3-7340-4d4c-9616-bf6bed860f22")
     public void setName(final String value) {
         this.elt.setProperty(TRequirementRef.MdaTypes.STEREOTYPE_ELT,
                              TRequirementRef.MdaTypes.NAME_PROPERTY_ELT.getName(),
@@ -187,36 +187,36 @@ public class TRequirementRef implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("0f838cef-08a2-442d-ad13-78f7e8b6e322")
+    @objid ("658634ce-84cc-48ba-934c-4e0c46e88ec8")
     public void setRef(final String value) {
         this.elt.setProperty(TRequirementRef.MdaTypes.STEREOTYPE_ELT,
                              TRequirementRef.MdaTypes.REF_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(TRequirementRef.MdaTypes.REF_PROPERTY_ELT, value));
     }
 
-    @objid ("b6a71c7b-a617-4581-9ac3-f287d4486305")
+    @objid ("3789a6de-f516-4c40-aa89-ce009bfca9fe")
     protected  TRequirementRef(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("9f245e37-3cd8-402f-95d1-59ce405f5b45")
     public static final class MdaTypes {
-        @objid ("7d2981d1-876f-487b-915b-454f9fe92245")
+        @objid ("042047e8-5bf1-4bc1-a71c-c5277825d868")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("74c7c3ec-af61-45f8-813e-535f6c9e49a3")
+        @objid ("6123fcea-c5f0-4421-8c24-fe593b33903c")
         public static PropertyDefinition NAME_PROPERTY_ELT;
 
-        @objid ("9ccd0c3e-5515-4b37-b406-b45d545a93a8")
+        @objid ("d901a03a-f515-4791-93d1-aade7b63788f")
         public static PropertyDefinition REF_PROPERTY_ELT;
 
-        @objid ("c0a9e4fc-b78f-495b-ac7e-b7f8cca893fd")
+        @objid ("68cb8c4a-f56e-49aa-9f63-90bb6b0dc7a6")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("44febbdc-a90c-48be-8136-f249a4828e03")
+        @objid ("eb213258-7e61-4ec0-8fe5-6414445e4add")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e4210136-35da-4558-b1c3-4073bdcec702")
+        @objid ("3d24aea2-809b-4373-be10-2299aaa81a14")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

@@ -18,9 +18,8 @@ public class ToscaPropertyPageHandler extends AbstractModulePropertyPage {
     @objid ("89b5f73a-8bd7-4f39-b06a-e0e66d31b574")
     @Override
     public void update(final List<MObject> selectedElements, final IModulePropertyTable table) {
-        if ((selectedElements != null) && (selectedElements.size() > 0)
-                && (selectedElements.get(0) != null)
-                && (selectedElements.get(0) instanceof ModelElement)){
+        if ((selectedElements != null) && (selectedElements.size() > 0) && (selectedElements.get(0) != null)
+                && (selectedElements.get(0) instanceof ModelElement)) {
         
             ModelElement selectedElement = ((ModelElement) selectedElements.get(0));
         
@@ -35,7 +34,8 @@ public class ToscaPropertyPageHandler extends AbstractModulePropertyPage {
     @objid ("5e770529-3f99-4217-bae9-012284fe56df")
     @Override
     public void changeProperty(final List<MObject> selectedElements, final int row, final String value) {
-        if ((selectedElements != null) && (selectedElements.size() > 0) && (selectedElements.get(0) instanceof ModelElement)){
+        if ((selectedElements != null) && (selectedElements.size() > 0)
+                && (selectedElements.get(0) instanceof ModelElement)) {
             ModelElement selectedElement = ((ModelElement) selectedElements.get(0));
         
             IPropertyContent propertyPage = getPropertyPage(selectedElement);

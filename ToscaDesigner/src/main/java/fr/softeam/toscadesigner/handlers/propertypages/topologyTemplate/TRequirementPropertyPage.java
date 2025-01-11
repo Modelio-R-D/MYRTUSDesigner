@@ -34,7 +34,8 @@ public class TRequirementPropertyPage<T extends TRequirement> extends ToscaEleme
         case 2:
             for (ModelElement dep : TRelationshipTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
-                    this._element.setRelationship(TRelationshipTemplate.instantiate((org.modelio.metamodel.uml.statik.Association) dep));
+                    this._element.setRelationship(
+                            TRelationshipTemplate.instantiate((org.modelio.metamodel.uml.statik.Association) dep));
                 }
             }
             break;
@@ -48,12 +49,14 @@ public class TRequirementPropertyPage<T extends TRequirement> extends ToscaEleme
         case 4:
             for (ModelElement dep : TCapabilityDefinition.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
-                    this._element.setCapability(TCapabilityDefinition.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
+                    this._element.setCapability(
+                            TCapabilityDefinition.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
                 }
             }
             for (ModelElement dep : TCapabilityType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
-                    this._element.setCapability(TCapabilityType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
+                    this._element
+                            .setCapability(TCapabilityType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
                 }
             }
             break;
@@ -88,7 +91,8 @@ public class TRequirementPropertyPage<T extends TRequirement> extends ToscaEleme
                 Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
                     @Override
                     public boolean accept(MObject element) {
-                        return (TCapabilityDefinition.canInstantiate(element) || TCapabilityType.canInstantiate(element));
+                        return (TCapabilityDefinition.canInstantiate(element)
+                                || TCapabilityType.canInstantiate(element));
                     }
                 });
     }

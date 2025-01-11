@@ -26,16 +26,16 @@ public class TriggerPropertyPage<T extends Trigger> extends ToscaElementProperty
         
         case 3:
             this._element.setEvent(value);
-            break;    
-            
+            break;
+        
         case 4:
             this._element.setSchedule(value);
             break;
-            
+        
         case 5:
             this._element.setTarget_filter(value);
             break;
-            
+        
         case 6:
             this._element.setCondition(value);
             break;

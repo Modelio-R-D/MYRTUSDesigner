@@ -33,24 +33,25 @@ public class TCapabilityDefinitionPropertyPage<T extends TCapabilityDefinition> 
             break;
         
         case 3:
-            for (ModelElement dep :TCapabilityType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+            for (ModelElement dep : TCapabilityType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
                     this._element.setCapabilityType(
                             TCapabilityType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
                 }
-            }        
+            }
             break;
-            
+        
         case 4:
             this._element.setLowerBound(Integer.valueOf(value));
             break;
-            
+        
         case 5:
             this._element.setUpperBound(Integer.valueOf(value));
             break;
-            
+        
         case 6:
-            this._element.setValid_source_tyoes(value);;
+            this._element.setValid_source_tyoes(value);
+            ;
             break;
         }
     }

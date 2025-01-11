@@ -29,11 +29,11 @@ public abstract class CreateSubModelTool extends DefaultBoxTool {
         StaticDiagram diagram = diagram2.getElement();
         IDiagramService ds = modelioServices.getDiagramService();
         
-        try(  IDiagramHandle handler = ds.getDiagramHandle(diagram);){
+        try (IDiagramHandle handler = ds.getDiagramHandle(diagram);) {
             IDiagramDG dg = handler.getDiagramNode();
         
-            for (IStyleHandle style : ds.listStyles()){
-                if (style.getName().equals(IToscaDesignerPeerModule.TOSCA_STYLE)){
+            for (IStyleHandle style : ds.listStyles()) {
+                if (style.getName().equals(IToscaDesignerPeerModule.TOSCA_STYLE)) {
                     dg.setStyle(style);
                     break;
                 }
@@ -52,11 +52,11 @@ public abstract class CreateSubModelTool extends DefaultBoxTool {
         StaticDiagram diagram = diagram2.getElement();
         IDiagramService ds = modelioServices.getDiagramService();
         
-        try(  IDiagramHandle handler = ds.getDiagramHandle(diagram);){
+        try (IDiagramHandle handler = ds.getDiagramHandle(diagram);) {
             IDiagramDG dg = handler.getDiagramNode();
         
-            for (IStyleHandle style : ds.listStyles()){
-                if (style.getName().equals(IToscaDesignerPeerModule.TOSCA_STYLE)){
+            for (IStyleHandle style : ds.listStyles()) {
+                if (style.getName().equals(IToscaDesignerPeerModule.TOSCA_STYLE)) {
                     dg.setStyle(style);
                     break;
                 }

@@ -69,17 +69,13 @@ public class TGroupPropertyPage<T extends TGroup> extends ToscaElementPropertyPa
                     }
                 });
         
+        List<ModelElement> members_elt = extractModelElements(this._element.getMembers());
+        List<ModelElement> nodeTemplateList = (TNodeTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement() != null)
+                ? TNodeTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement()
+                : Collections.emptyList();
         
-        List <ModelElement> members_elt = extractModelElements(this._element.getMembers());
-        List<ModelElement> nodeTemplateList = (TNodeTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement() != null) 
-            ? TNodeTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement()
-            : Collections.emptyList();
-        
-        table.addProperty(
-            "Members", 
-            getToscaValue(members_elt), 
-            getAddRemove(nodeTemplateList, extractModelElements(this._element.getMembers()))
-        );
+        table.addProperty("Members", getToscaValue(members_elt),
+                getAddRemove(nodeTemplateList, extractModelElements(this._element.getMembers())));
     }
 
 }

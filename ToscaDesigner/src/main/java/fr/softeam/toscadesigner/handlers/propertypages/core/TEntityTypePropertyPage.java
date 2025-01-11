@@ -28,15 +28,14 @@ public abstract class TEntityTypePropertyPage<T extends TEntityType> extends Tos
         case 2:
             this._element.setDescription(value);
             break;
-            
+        
         case 3:
-        for (ModelElement el : TEntityType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
-        if (value.contains(el.getUuid())) {
-        this._element
-        .setDerivedFrom(TEntityType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
-        }
-        }
-        break;
+            for (ModelElement el : TEntityType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+                if (value.contains(el.getUuid())) {
+                    this._element.setDerivedFrom(TEntityType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
+                }
+            }
+            break;
         }
     }
 
@@ -47,13 +46,13 @@ public abstract class TEntityTypePropertyPage<T extends TEntityType> extends Tos
         table.addProperty("Name", _element.getElement().getName());
         table.addProperty("Description", _element.getDescription());
         table.addProperty("Derived From",
-        this._element.getDerivedFrom() != null ? this._element.getDerivedFrom().getElement() : null,
-        Arrays.asList(Metamodel.getMClass("Attribute")), new IMObjectFilter() {
-        @Override
-        public boolean accept(MObject element) {
-        return TEntityType.canInstantiate(element);
-        }
-        });
+                this._element.getDerivedFrom() != null ? this._element.getDerivedFrom().getElement() : null,
+                Arrays.asList(Metamodel.getMClass("Attribute")), new IMObjectFilter() {
+                    @Override
+                    public boolean accept(MObject element) {
+                        return TEntityType.canInstantiate(element);
+                    }
+                });
     }
 
 }

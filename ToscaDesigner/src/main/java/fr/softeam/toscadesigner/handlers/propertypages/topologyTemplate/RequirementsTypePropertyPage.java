@@ -27,13 +27,13 @@ public class RequirementsTypePropertyPage<T extends RequirementsType> extends To
             this._element.getElement().setName(value);
             break;
         case 2:
-        for (ModelElement el : RequirementsType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
-        if (value.contains(el.getUuid())) {
-        this._element
-        .setDerivedFrom(RequirementsType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
-        }
-        }
-        break;
+            for (ModelElement el : RequirementsType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+                if (value.contains(el.getUuid())) {
+                    this._element
+                            .setDerivedFrom(RequirementsType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
+                }
+            }
+            break;
         }
     }
 
@@ -43,13 +43,13 @@ public class RequirementsTypePropertyPage<T extends RequirementsType> extends To
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
         table.addProperty("Derived From",
-        this._element.getDerivedFrom() != null ? this._element.getDerivedFrom().getElement() : null,
-        Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
-        @Override
-        public boolean accept(MObject element) {
-        return RequirementsType.canInstantiate(element);
-        }
-        });
+                this._element.getDerivedFrom() != null ? this._element.getDerivedFrom().getElement() : null,
+                Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+                    @Override
+                    public boolean accept(MObject element) {
+                        return RequirementsType.canInstantiate(element);
+                    }
+                });
     }
 
 }

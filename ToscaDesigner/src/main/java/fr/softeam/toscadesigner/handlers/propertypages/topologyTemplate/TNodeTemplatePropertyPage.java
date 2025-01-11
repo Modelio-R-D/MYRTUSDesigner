@@ -56,8 +56,7 @@ public class TNodeTemplatePropertyPage<T extends TNodeTemplate> extends ToscaEle
         case 6:
             for (ModelElement nodet : TNodeType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(nodet.getUuid())) {
-                    this._element.setNodeType(
-                            TNodeType.instantiate((org.modelio.metamodel.uml.statik.Class) nodet));
+                    this._element.setNodeType(TNodeType.instantiate((org.modelio.metamodel.uml.statik.Class) nodet));
                 }
             }
             break;

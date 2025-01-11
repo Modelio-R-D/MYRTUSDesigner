@@ -47,32 +47,32 @@ public class TServiceTemplatePropertyPage<T extends TServiceTemplate> extends To
                 }
             }
             break;
-            
-              case 3:
-                  Class elt2 = (Class) getModelElt(TNodeType.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
-                  if ((elt2 != null)
-                          && (elt2.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, TNodeType.STEREOTYPE_NAME))) {
-                      Object pc = ToscaDesignerProxyFactory.instantiate(elt2);
-                      if (value.startsWith(this._add)) {
-                          this._element.addNodeTypes((TNodeType) pc);
-                      } else {
-                          this._element.removeNodeTypes((TNodeType) pc);
-                      }
-                  }
-                  break;    
-                  
-              case 4:
-                  Class elt3 = (Class) getModelElt(TRelationshipType.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
-                  if ((elt3 != null)
-                          && (elt3.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, TRelationshipType.STEREOTYPE_NAME))) {
-                      Object pc = ToscaDesignerProxyFactory.instantiate(elt3);
-                      if (value.startsWith(this._add)) {
-                          this._element.addRelationships((TRelationshipType) pc);
-                      } else {
-                          this._element.removeRelationships((TRelationshipType) pc);
-                      }
-                  }
-                  break;    
+        
+        case 3:
+            Class elt2 = (Class) getModelElt(TNodeType.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+            if ((elt2 != null)
+                    && (elt2.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, TNodeType.STEREOTYPE_NAME))) {
+                Object pc = ToscaDesignerProxyFactory.instantiate(elt2);
+                if (value.startsWith(this._add)) {
+                    this._element.addNodeTypes((TNodeType) pc);
+                } else {
+                    this._element.removeNodeTypes((TNodeType) pc);
+                }
+            }
+            break;
+        
+        case 4:
+            Class elt3 = (Class) getModelElt(TRelationshipType.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+            if ((elt3 != null)
+                    && (elt3.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, TRelationshipType.STEREOTYPE_NAME))) {
+                Object pc = ToscaDesignerProxyFactory.instantiate(elt3);
+                if (value.startsWith(this._add)) {
+                    this._element.addRelationships((TRelationshipType) pc);
+                } else {
+                    this._element.removeRelationships((TRelationshipType) pc);
+                }
+            }
+            break;
         case 5:
             ModelElement elt1 = getModelElt(TGroup.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
             if ((elt1 != null) && (elt1.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, TGroup.STEREOTYPE_NAME))) {

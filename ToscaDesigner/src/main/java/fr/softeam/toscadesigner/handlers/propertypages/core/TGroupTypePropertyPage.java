@@ -25,13 +25,12 @@ public class TGroupTypePropertyPage<T extends TGroupType> extends ToscaElementPr
             this._element.getElement().setName(value);
             break;
         case 2:
-        for (ModelElement el : TGroupType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
-        if (value.contains(el.getUuid())) {
-        this._element
-        .setDerivedFrom(TGroupType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
-        }
-        }
-        break;
+            for (ModelElement el : TGroupType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+                if (value.contains(el.getUuid())) {
+                    this._element.setDerivedFrom(TGroupType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
+                }
+            }
+            break;
         }
     }
 
@@ -41,13 +40,13 @@ public class TGroupTypePropertyPage<T extends TGroupType> extends ToscaElementPr
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
         table.addProperty("Derived From",
-        this._element.getDerivedFrom() != null ? this._element.getDerivedFrom().getElement() : null,
-        Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
-        @Override
-        public boolean accept(MObject element) {
-        return TGroupType.canInstantiate(element);
-        }
-        });
+                this._element.getDerivedFrom() != null ? this._element.getDerivedFrom().getElement() : null,
+                Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+                    @Override
+                    public boolean accept(MObject element) {
+                        return TGroupType.canInstantiate(element);
+                    }
+                });
     }
 
 }
