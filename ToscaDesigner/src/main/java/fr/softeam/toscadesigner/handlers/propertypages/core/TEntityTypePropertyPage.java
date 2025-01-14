@@ -47,7 +47,7 @@ public abstract class TEntityTypePropertyPage<T extends TEntityType> extends Tos
         table.addProperty("Description", _element.getDescription());
         table.addProperty("Derived From",
                 this._element.getDerivedFrom() != null ? this._element.getDerivedFrom().getElement() : null,
-                Arrays.asList(Metamodel.getMClass("Attribute")), new IMObjectFilter() {
+                Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
                     @Override
                     public boolean accept(MObject element) {
                         return TEntityType.canInstantiate(element);
