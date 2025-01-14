@@ -20,6 +20,7 @@ public abstract class TEntityTypePropertyPage<T extends TEntityType> extends Tos
     @objid ("5ff8c89a-8557-48ed-82bd-40fdb5f2f6fa")
     @Override
     public void changeProperty(int row, String value) {
+    	super.changeProperty(row, value);
         switch (row) {
         case 1:
             this._element.getElement().setName(value);

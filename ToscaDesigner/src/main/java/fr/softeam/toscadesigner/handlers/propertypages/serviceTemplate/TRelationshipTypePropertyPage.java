@@ -21,6 +21,8 @@ public class TRelationshipTypePropertyPage<T extends TRelationshipType> extends 
     @objid ("ed7b67d1-80c3-44e9-a7a8-1d487c6cda01")
     @Override
     public void changeProperty(int row, String value) {
+    	super.changeProperty(row, value);
+
         switch (row) {
         case 1:
             this._element.getElement().setName(value);
