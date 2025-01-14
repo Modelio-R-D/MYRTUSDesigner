@@ -65,7 +65,7 @@ public class TCapabilityDefinitionPropertyPage<T extends TCapabilityDefinition> 
         
         table.addProperty("Capability type",
                 this._element.getCapabilityType() != null ? this._element.getCapabilityType().getElement() : null,
-                Arrays.asList(Metamodel.getMClass("Attribute")), new IMObjectFilter() {
+                Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
                     @Override
                     public boolean accept(MObject element) {
                         return TCapabilityType.canInstantiate(element);
