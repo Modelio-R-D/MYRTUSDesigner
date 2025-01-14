@@ -50,7 +50,7 @@ public class TCapabilityDefinitionPropertyPage<T extends TCapabilityDefinition> 
             break;
         
         case 6:
-            this._element.setValid_source_tyoes(value);
+            this._element.setValid_source_types(value);
             ;
             break;
         }
@@ -74,7 +74,7 @@ public class TCapabilityDefinitionPropertyPage<T extends TCapabilityDefinition> 
         
         table.addProperty("Lower Bound", _element.getLowerBound());
         table.addProperty("Upper Bound", _element.getUpperBound());
-        table.addProperty("Valid Source Types", _element.getValid_source_tyoes());
+        table.addProperty("Valid Source Types", _element.getValid_source_types());
     }
 
 }

@@ -5,9 +5,11 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.CapabilitiesType;
 import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.InterfacesType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TEntityType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyElementInstanceStates;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TEntityTypePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
@@ -15,7 +17,7 @@ import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("8e6ae627-578f-422f-8de0-77c04824219b")
-public class TNodeTypePropertyPage<T extends TNodeType> extends TEntityTypePropertyPage<T> {
+public class TNodeTypePropertyPage<T extends TNodeType> extends ToscaElementPropertyPage<T> {
     @objid ("b129e2d0-20bf-4b53-9bdf-8b625ba37529")
     public  TNodeTypePropertyPage(T elt) {
         super(elt);
@@ -26,29 +28,57 @@ public class TNodeTypePropertyPage<T extends TNodeType> extends TEntityTypePrope
     @Override
     public void changeProperty(int row, String value) {
         switch (row) {
+        case 1:
+            this._element.getElement().setName(value);
+            break;
+        
+        case 2:
+            this._element.setDescription(value);
+            break;
+        
         case 3:
+            for (ModelElement el : TNodeType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+                if (value.contains(el.getUuid())) {
+                    this._element.setDerivedFrom(TNodeType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
+                    break;
+                }
+                else {
+                    this._element.setDerivedFrom(null);
+                }
+            }
+            break;
+        case 4:
             for (ModelElement dep : InterfacesType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
                     this._element
                             .setInterfaces(InterfacesType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
-                }
-            }
-            break;
-        
-        case 4:
-            for (ModelElement dep : TTopologyElementInstanceStates.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
-                if (value.contains(dep.getUuid())) {
-                    this._element.setInstanceStates(
-                            TTopologyElementInstanceStates.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
+                    break;
+                }else {
+                    this._element.setInterfaces(null);
                 }
             }
             break;
         
         case 5:
+            for (ModelElement dep : TTopologyElementInstanceStates.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+                if (value.contains(dep.getUuid())) {
+                    this._element.setInstanceStates(
+                            TTopologyElementInstanceStates.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
+                    break;
+                }else {
+                    this._element.setInstanceStates(null);
+                }
+            }
+            break;
+        
+        case 6:
             for (ModelElement dep : TCapabilityDefinitionsType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
                     this._element.setCapabilityDefinitions(
                             TCapabilityDefinitionsType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
+                    break;
+                }else {
+                    this._element.setCapabilityDefinitions(null);
                 }
             }
             break;
@@ -60,7 +90,16 @@ public class TNodeTypePropertyPage<T extends TNodeType> extends TEntityTypePrope
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
-        
+        table.addProperty("Name", _element.getElement().getName());
+        table.addProperty("Description", _element.getDescription());
+        table.addProperty("Derived From",
+                this._element.getDerivedFrom() != null ? this._element.getDerivedFrom().getElement() : null,
+                Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+                    @Override
+                    public boolean accept(MObject element) {
+                        return TNodeType.canInstantiate(element);
+                    }
+                });
         // Interfaces Type
         table.addProperty("Interfaces Type",
                 this._element.getInterfaces() != null ? this._element.getInterfaces().getElement() : null,

@@ -20,24 +20,24 @@ public abstract class TEntityTypePropertyPage<T extends TEntityType> extends Tos
     @objid ("5ff8c89a-8557-48ed-82bd-40fdb5f2f6fa")
     @Override
     public void changeProperty(int row, String value) {
-    	super.changeProperty(row, value);
-        switch (row) {
-        case 1:
-            this._element.getElement().setName(value);
-            break;
-        
-        case 2:
-            this._element.setDescription(value);
-            break;
-        
-        case 3:
-            for (ModelElement el : TEntityType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
-                if (value.contains(el.getUuid())) {
-                    this._element.setDerivedFrom(TEntityType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
-                }
-            }
-            break;
-        }
+        super.changeProperty(row, value);
+           switch (row) {
+           case 1:
+               this._element.getElement().setName(value);
+               break;
+           
+           case 2:
+               this._element.setDescription(value);
+               break;
+           
+           case 3:
+               for (ModelElement el : TEntityType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+                   if (value.contains(el.getUuid())) {
+                       this._element.setDerivedFrom(TEntityType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
+                   }
+               }
+               break;
+           }
     }
 
     @objid ("17a6a2d8-d975-400f-acfe-78fc8ef282f3")

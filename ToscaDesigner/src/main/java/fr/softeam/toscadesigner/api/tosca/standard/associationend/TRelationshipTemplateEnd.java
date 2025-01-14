@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 09/01/2025 16:04 by Modelio Studio.
+ * This file was generated on 14/01/2025 15:42 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.associationend;
 
@@ -40,13 +40,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("05e7d440-860b-49b0-a554-4e82d28431d4")
 public class TRelationshipTemplateEnd implements IMdaProxy {
-    @objid ("7393d402-fa32-441b-84e9-5bef9c27c7da")
+    @objid ("9872df5b-fef4-4378-ab61-5db88e7b1766")
     public static final String STEREOTYPE_NAME = "TRelationshipTemplateEnd";
 
     /**
      * The underlying {@link AssociationEnd} represented by this proxy, never null.
      */
-    @objid ("62248de7-5b38-4d73-94fc-ebe31cd9c9d8")
+    @objid ("338517ff-5bdf-4bc5-a6be-7a391aa2d936")
     protected final AssociationEnd elt;
 
     /**
@@ -56,7 +56,7 @@ public class TRelationshipTemplateEnd implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("1b3198e8-cb2d-4cf4-b929-a9334fbfeae4")
+    @objid ("a2f1a912-be9a-40a4-8177-77d235f19dd0")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof AssociationEnd) && (TRelationshipTemplateEnd.MdaTypes.STEREOTYPE_ELT!=null) && ((AssociationEnd) elt).isStereotyped(TRelationshipTemplateEnd.MdaTypes.STEREOTYPE_ELT));
     }
@@ -66,7 +66,7 @@ public class TRelationshipTemplateEnd implements IMdaProxy {
      * 
      * @return a {@link TRelationshipTemplateEnd} proxy on the created {@link AssociationEnd}.
      */
-    @objid ("30108a81-7ea7-4f6c-9295-fcec27f45dee")
+    @objid ("a73e467f-60c0-462a-bc31-930ff32fb1d8")
     public static TRelationshipTemplateEnd create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.AssociationEnd");
         e.getExtension().add(TRelationshipTemplateEnd.MdaTypes.STEREOTYPE_ELT);
@@ -80,7 +80,7 @@ public class TRelationshipTemplateEnd implements IMdaProxy {
      * @param obj a AssociationEnd
      * @return a {@link TRelationshipTemplateEnd} proxy or <i>null</i>.
      */
-    @objid ("39097a2f-9199-4613-86d2-c0cf222cbd00")
+    @objid ("a82b973b-e42a-4ab3-b430-c01dd4da6792")
     public static TRelationshipTemplateEnd instantiate(final AssociationEnd obj) {
         return TRelationshipTemplateEnd.canInstantiate(obj) ? new TRelationshipTemplateEnd(obj) : null;
     }
@@ -93,7 +93,7 @@ public class TRelationshipTemplateEnd implements IMdaProxy {
      * @return a {@link TRelationshipTemplateEnd} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("b2f54457-a8f4-45d2-9388-4e2b5ba0ab6a")
+    @objid ("44e4d01e-d9a2-4780-9aa4-ead35a6943f9")
     public static TRelationshipTemplateEnd safeInstantiate(final AssociationEnd obj) throws IllegalArgumentException {
         if (TRelationshipTemplateEnd.canInstantiate(obj))
         	return new TRelationshipTemplateEnd(obj);
@@ -101,7 +101,7 @@ public class TRelationshipTemplateEnd implements IMdaProxy {
         	throw new IllegalArgumentException("TRelationshipTemplateEnd: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("d04ce29e-339d-4d49-b2e8-9e2a952debe5")
+    @objid ("75cb5216-4bc6-4cfb-90d4-0096434412d2")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -121,35 +121,35 @@ public class TRelationshipTemplateEnd implements IMdaProxy {
      * Get the underlying {@link AssociationEnd}. 
      * @return the AssociationEnd represented by this proxy, never null.
      */
-    @objid ("b87500ef-9f67-45a8-9e55-6b597f1726b0")
+    @objid ("bba0e20a-eb8a-4b77-aa5d-1e66ca56fbd3")
     public AssociationEnd getElement() {
         return this.elt;
     }
 
-    @objid ("ccce6188-4c0e-4cf1-afd1-0eddd432929d")
+    @objid ("30cf136a-fd13-47aa-abe2-48e69cab3a2e")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
         
     }
 
-    @objid ("c92c369b-033a-4499-9af5-acf3f7d0cb7a")
+    @objid ("2034937a-1fb3-4721-b3d1-d38902380ef2")
     protected  TRelationshipTemplateEnd(final AssociationEnd elt) {
         this.elt = elt;
     }
 
     @objid ("60b3c940-e053-420b-a0e4-0fb9c5cefcdf")
     public static final class MdaTypes {
-        @objid ("203983d4-117b-4a5b-b8bc-3b243fd57b51")
+        @objid ("5f2f9b77-80a9-4b4d-ad67-080d6e610f44")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("c35a5dcc-1273-4d6b-a568-69f39578e965")
+        @objid ("8b7d078a-dfff-4e21-b242-0bb3695e9fcc")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("073350ee-26cd-4405-ac1e-7bff82da94a5")
+        @objid ("08ea5558-e771-483b-aebc-55752a78831b")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("f1553841-5671-4866-b872-a301289ce7a2")
+        @objid ("8f909814-5a33-4266-8225-4ca463ff10e1")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

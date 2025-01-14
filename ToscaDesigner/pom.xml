@@ -12,10 +12,6 @@
           <id>modelio</id>
           <url>https://repository.modelio.org</url>
       </repository>
-      <repository>
-          <id>central</id>
-          <url>https://repo1.maven.org/maven2</url>
-      </repository>
   </repositories>
 
   <pluginRepositories>
@@ -39,12 +35,7 @@
             <type>pom</type>
             <scope>provided</scope>
         </dependency>
-    	<dependency>
-            <groupId>com.github.jknack</groupId>
-            <artifactId>handlebars</artifactId>
-            <version>4.3.1</version>
-            <type>jar</type>
-        </dependency>
+
     </dependencies>
 
     <!-- // Build // -->

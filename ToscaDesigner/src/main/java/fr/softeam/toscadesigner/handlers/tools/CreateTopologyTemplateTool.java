@@ -30,10 +30,10 @@ public class CreateTopologyTemplateTool extends CreateSubModelTool {
     @Override
     public void actionPerformed(IDiagramHandle diagramHandle, IDiagramGraphic parent, Rectangle rect) {
         /*
-                 * ClassDiagram diag = (ClassDiagram) parent.getElement();
-                 * org.modelio.metamodel.uml.statik.Package packageOwner =
-                 * (org.modelio.metamodel.uml.statik.Package) diag .getOrigin();
-                 */
+                         * ClassDiagram diag = (ClassDiagram) parent.getElement();
+                         * org.modelio.metamodel.uml.statik.Package packageOwner =
+                         * (org.modelio.metamodel.uml.statik.Package) diag .getOrigin();
+                         */
         Package packageOwner = (Package) parent.getElement().getCompositionOwner();
         
         IModuleContext moduleContext = ToscaDesignerModule.getInstance().getModuleContext();
