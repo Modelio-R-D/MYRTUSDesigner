@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 14/01/2025 15:42 by Modelio Studio.
+ * This file was generated on 14/01/2025 17:57 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -39,13 +39,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("d91a5533-39be-4c24-b1bf-ce7e243afd0f")
 public class ConstraintType1 implements IMdaProxy {
-    @objid ("29b8e695-fe1f-4e77-af08-e287bf6dde62")
+    @objid ("18fd89c5-3b46-4dcb-a4e7-4044e1072327")
     public static final String STEREOTYPE_NAME = "ConstraintType1";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
      */
-    @objid ("f2f5bb35-ddd9-44ea-8c9f-719aafc5734e")
+    @objid ("ee0413b8-e683-47b1-8107-baee9bd5b17d")
     protected final ModelElement elt;
 
     /**
@@ -55,7 +55,7 @@ public class ConstraintType1 implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("db6a5c9e-9bdd-468c-b47b-1441122c8ddd")
+    @objid ("f8a4fc93-ca6d-4d31-a9ff-362090842169")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (ConstraintType1.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(ConstraintType1.MdaTypes.STEREOTYPE_ELT));
     }
@@ -65,7 +65,7 @@ public class ConstraintType1 implements IMdaProxy {
      * 
      * @return a {@link ConstraintType1} proxy on the created {@link ModelElement}.
      */
-    @objid ("79ae7cd4-5f5b-47d9-b2a5-a7d87ba1bc4b")
+    @objid ("f0214136-e7b7-4d1c-8050-b6a5777c8e5a")
     public static ConstraintType1 create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(ConstraintType1.MdaTypes.STEREOTYPE_ELT);
@@ -79,7 +79,7 @@ public class ConstraintType1 implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link ConstraintType1} proxy or <i>null</i>.
      */
-    @objid ("c703baa5-fd63-461c-9753-18399250a4dd")
+    @objid ("4247fd6f-708b-4f22-abda-a2dd6791f1ae")
     public static ConstraintType1 instantiate(final ModelElement obj) {
         return ConstraintType1.canInstantiate(obj) ? new ConstraintType1(obj) : null;
     }
@@ -92,7 +92,7 @@ public class ConstraintType1 implements IMdaProxy {
      * @return a {@link ConstraintType1} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("bdd4cb72-bd1d-4093-80de-2eee7845f538")
+    @objid ("31f42d73-763e-48e7-91f1-05bf57b2ec3d")
     public static ConstraintType1 safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (ConstraintType1.canInstantiate(obj))
         	return new ConstraintType1(obj);
@@ -100,7 +100,7 @@ public class ConstraintType1 implements IMdaProxy {
         	throw new IllegalArgumentException("ConstraintType1: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("bcb1caa4-482b-4b9c-a9ef-9fa19a3adc88")
+    @objid ("811168e2-a526-41ca-a7ca-6c36b17ee3e8")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -120,35 +120,35 @@ public class ConstraintType1 implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("e73d824e-7443-4deb-b20e-fa01f8eb978e")
+    @objid ("98415754-9ac7-4146-8600-942e3505de28")
     public ModelElement getElement() {
         return this.elt;
     }
 
-    @objid ("491da6c1-ec5d-4135-8a18-0a40cd79ec74")
+    @objid ("2bb1adb6-ab6c-44d8-a582-29f4f7017a18")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
         
     }
 
-    @objid ("835624ab-2bbd-4c69-9b07-a29d51d9775a")
+    @objid ("83d932ec-957e-4db9-a489-0f125e99a25b")
     protected  ConstraintType1(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("75ab0f74-745e-46bc-924a-667251c5206f")
     public static final class MdaTypes {
-        @objid ("a158137b-c6e4-4266-8fff-d641f7a1db18")
+        @objid ("a011d194-f36e-4ed6-ab8a-10f752ae13ba")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("c3da9b59-3493-4761-9849-c4ea6d08c060")
+        @objid ("8e9719a1-1707-4429-b3c2-9e240bb11462")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("4e710b1d-a20c-457f-bd18-a94d2850424b")
+        @objid ("adca2a2a-d410-4aae-8b88-b70c8f1f7828")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("a10c9cee-57a6-4d93-a343-dca6fe705b17")
+        @objid ("bfff52e8-66b9-4fda-b771-d6906951b768")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

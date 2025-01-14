@@ -34,16 +34,20 @@ public class TPolicyPropertyPage<T extends TPolicy> extends ToscaElementProperty
         
         case 1:
             this._element.getElement().setName(value);
-            ;
+            
             break;
         case 2:
+            this._element.setDescription(value);
+            
+            break;
+        case 3:
             for (ModelElement el : TPolicyType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(el.getUuid())) {
                     this._element.setType(TPolicyType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
                 }
             }
             break;
-        case 3:
+        case 4:
             Class elt2 = (Class) getModelElt(TNodeTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
             if ((elt2 != null)
                     && (elt2.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, TNodeTemplate.STEREOTYPE_NAME))) {
@@ -55,7 +59,7 @@ public class TPolicyPropertyPage<T extends TPolicy> extends ToscaElementProperty
                 }
             }
             break;
-        case 4:
+        case 5:
             Class elt4 = (Class) getModelElt(Trigger.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
             if ((elt4 != null) && (elt4.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, Trigger.STEREOTYPE_NAME))) {
                 Object pc = ToscaDesignerProxyFactory.instantiate(elt4);
@@ -67,7 +71,7 @@ public class TPolicyPropertyPage<T extends TPolicy> extends ToscaElementProperty
             }
             break;
         
-        case 5:
+        case 6:
             Attribute elt3 = (Attribute) getModelElt(TPropertyDef.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
             if ((elt3 != null)
                     && (elt3.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, TPropertyDef.STEREOTYPE_NAME))) {
@@ -80,7 +84,7 @@ public class TPolicyPropertyPage<T extends TPolicy> extends ToscaElementProperty
             }
             break;
         
-        case 6:
+        case 7:
             this._element.setPolicyRef(value);
             break;
         
@@ -92,6 +96,7 @@ public class TPolicyPropertyPage<T extends TPolicy> extends ToscaElementProperty
     public void update(IModulePropertyTable table) {
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
+        table.addProperty("Description", _element.getDescription());
         table.addProperty("Policy Type", this._element.getType() != null ? this._element.getType().getElement() : null,
                 Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
                     @Override

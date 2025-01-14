@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.00
 
- * This file was generated on 14/01/2025 15:42 by Modelio Studio.
+ * This file was generated on 14/01/2025 17:57 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
@@ -40,16 +40,16 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("f77b9f78-3436-46ae-b7bf-c75488a7a22c")
 public class TPlans implements IMdaProxy {
-    @objid ("674d7ffe-062d-49ed-a64f-a9b2b4ae1e9c")
+    @objid ("665889e1-e506-447e-9f88-8a637bfd5be6")
     public static final String STEREOTYPE_NAME = "TPlans";
 
-    @objid ("ef3c12a4-6e48-457b-bb85-ca67703b3bba")
+    @objid ("ade65fc6-981e-45b6-86b1-64918ea67530")
     public static final String TARGETNAMESPACE_PROPERTY = "targetNamespace";
 
     /**
      * The underlying {@link Class} represented by this proxy, never null.
      */
-    @objid ("39d646ad-6264-4c15-bd3c-fca59886605d")
+    @objid ("226e7235-6c01-468e-bfda-3ed137c9a38e")
     protected final Class elt;
 
     /**
@@ -59,7 +59,7 @@ public class TPlans implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("36a5fd3a-2ae4-412a-a5c2-e2e7363d717f")
+    @objid ("a69dd709-0e79-45dc-9ba8-60cebb13f04e")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (TPlans.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(TPlans.MdaTypes.STEREOTYPE_ELT));
     }
@@ -69,7 +69,7 @@ public class TPlans implements IMdaProxy {
      * 
      * @return a {@link TPlans} proxy on the created {@link Class}.
      */
-    @objid ("8145c1df-8b28-42b5-85bd-6d177ccdaaae")
+    @objid ("71d5cf99-c891-4463-8b24-7b2c2401072f")
     public static TPlans create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(TPlans.MdaTypes.STEREOTYPE_ELT);
@@ -83,7 +83,7 @@ public class TPlans implements IMdaProxy {
      * @param obj a Class
      * @return a {@link TPlans} proxy or <i>null</i>.
      */
-    @objid ("1348686f-c7f1-4659-9625-b0c516989610")
+    @objid ("5062961e-29f4-4f64-a177-844ecb052f1f")
     public static TPlans instantiate(final Class obj) {
         return TPlans.canInstantiate(obj) ? new TPlans(obj) : null;
     }
@@ -96,7 +96,7 @@ public class TPlans implements IMdaProxy {
      * @return a {@link TPlans} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("7a8813d3-27f2-429f-a696-154ad5e7ecac")
+    @objid ("edcee2c9-7866-4a44-be8d-b7a235ed81da")
     public static TPlans safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (TPlans.canInstantiate(obj))
         	return new TPlans(obj);
@@ -110,7 +110,7 @@ public class TPlans implements IMdaProxy {
      * null
      * 
      */
-    @objid ("a0bbb9b2-f67f-43e3-80c8-37ce31b31147")
+    @objid ("1eda1194-f368-440f-9458-388e817b4809")
     public void addPlans(final TPlan obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -120,7 +120,7 @@ public class TPlans implements IMdaProxy {
         }
     }
 
-    @objid ("ac2a78f5-6fd8-4099-a545-7b237e3871a2")
+    @objid ("e46ede2c-c140-43d1-94bd-ac092b3dbcd3")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -140,7 +140,7 @@ public class TPlans implements IMdaProxy {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("70a9330f-9d33-43cd-94b9-7fe549f419a1")
+    @objid ("e4b0c774-2ab7-4111-9148-5ca8654f2bc1")
     public Class getElement() {
         return this.elt;
     }
@@ -151,7 +151,7 @@ public class TPlans implements IMdaProxy {
      * null
      * 
      */
-    @objid ("b85e4f0c-e70e-4c85-9b12-08d65efc6914")
+    @objid ("b4335df7-195c-47c1-8714-291a1f99dd6a")
     public List<TPlan> getPlans() {
         List<TPlan> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -168,7 +168,7 @@ public class TPlans implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("fd4f748e-2ed4-4ad6-a0cf-c260463235d5")
+    @objid ("29b1cb9f-daaf-4e53-a0d5-2d2eb81b721e")
     public String getTargetNamespace() {
         String value = this.elt.getProperty(TPlans.MdaTypes.STEREOTYPE_ELT,
                                             TPlans.MdaTypes.TARGETNAMESPACE_PROPERTY_ELT.getName());
@@ -179,7 +179,7 @@ public class TPlans implements IMdaProxy {
         
     }
 
-    @objid ("12e8eb4c-573c-460c-af51-2cb470c8dcb5")
+    @objid ("ba14f2b3-3e38-4db0-a7af-424f3238e188")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -192,7 +192,7 @@ public class TPlans implements IMdaProxy {
      * null
      * 
      */
-    @objid ("ee3c7d02-b30a-4241-b1bd-a64f387d4503")
+    @objid ("3fd20af7-ad2a-4bd3-85ac-602ac841c4da")
     public boolean removePlans(final TPlan obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -212,33 +212,33 @@ public class TPlans implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("e5043e03-5906-4ee0-bc9c-c9bf5df3ee28")
+    @objid ("4b8c43e7-a3b3-4f53-ae28-9c5422a77bec")
     public void setTargetNamespace(final String value) {
         this.elt.setProperty(TPlans.MdaTypes.STEREOTYPE_ELT,
                              TPlans.MdaTypes.TARGETNAMESPACE_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(TPlans.MdaTypes.TARGETNAMESPACE_PROPERTY_ELT, value));
     }
 
-    @objid ("7bf9728f-5590-43a7-ac03-e3085ddeeb2e")
+    @objid ("6c189ea6-9eb3-45bd-805d-fae81a7c426a")
     protected  TPlans(final Class elt) {
         this.elt = elt;
     }
 
     @objid ("a6428728-0d0c-43bc-9067-357d07955dca")
     public static final class MdaTypes {
-        @objid ("77e5b9a8-e138-4354-89bc-8bd7906d3cf3")
+        @objid ("f41d5b76-1f75-42c3-b3c2-ccb22e892847")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("7436e3b2-f301-494e-9965-a4d3382f3411")
+        @objid ("0ea0dcf9-223b-41f1-9f6b-b9a696c9d2f0")
         public static PropertyDefinition TARGETNAMESPACE_PROPERTY_ELT;
 
-        @objid ("e1c74951-8580-4208-857f-b1c595538dd8")
+        @objid ("048b8c7d-eed5-4c41-b795-973bc6794a53")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("3d51347f-52f7-4e80-aed8-1d691d84a47b")
+        @objid ("57dcb73f-b3c3-4d15-b903-c2d455ca999a")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e5b2c5f8-40e3-447a-be36-46641afa6018")
+        @objid ("2af9c39d-2087-4979-9761-c703b104f415")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
