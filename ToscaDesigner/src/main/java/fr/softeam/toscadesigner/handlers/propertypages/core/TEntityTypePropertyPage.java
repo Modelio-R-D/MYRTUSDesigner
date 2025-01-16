@@ -34,7 +34,10 @@ public abstract class TEntityTypePropertyPage<T extends TEntityType> extends Tos
                for (ModelElement el : TEntityType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                    if (value.contains(el.getUuid())) {
                        this._element.setDerivedFrom(TEntityType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
-                   }
+   					break;
+   				} else {
+   					this._element.setDerivedFrom(null);
+   				}
                }
                break;
            }

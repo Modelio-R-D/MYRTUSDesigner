@@ -37,7 +37,10 @@ public class TCapabilityDefinitionPropertyPage<T extends TCapabilityDefinition> 
                 if (value.contains(dep.getUuid())) {
                     this._element.setCapabilityType(
                             TCapabilityType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
-                }
+					break;
+				} else {
+					this._element.setCapabilityType(null);
+				}
             }
             break;
         

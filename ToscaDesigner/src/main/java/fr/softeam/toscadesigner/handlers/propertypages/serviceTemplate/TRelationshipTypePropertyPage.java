@@ -32,7 +32,10 @@ public class TRelationshipTypePropertyPage<T extends TRelationshipType> extends 
                    if (value.contains(el.getUuid())) {
                        this._element
                                .setDerivedFrom(TRelationshipType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
-                   }
+   					break;
+   				} else {
+   					this._element.setDerivedFrom(null);
+   				}
                }
                break;
            case 0:

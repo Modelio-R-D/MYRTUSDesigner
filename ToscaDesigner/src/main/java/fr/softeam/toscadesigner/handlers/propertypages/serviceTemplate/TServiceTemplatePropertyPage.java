@@ -44,7 +44,10 @@ public class TServiceTemplatePropertyPage<T extends TServiceTemplate> extends To
                 if (value.contains(dep.getUuid())) {
                     this._element.setTopologyTemplate(
                             TTopologyTemplate.instantiate((org.modelio.metamodel.uml.statik.Package) dep));
-                }
+					break;
+				} else {
+					this._element.setTopologyTemplate(null);
+				}
             }
             break;
         

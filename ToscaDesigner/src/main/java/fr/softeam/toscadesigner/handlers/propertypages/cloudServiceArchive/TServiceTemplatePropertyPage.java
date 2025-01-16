@@ -33,14 +33,19 @@ public class TServiceTemplatePropertyPage<T extends TServiceTemplate> extends To
                 if (value.contains(nodet.getUuid())) {
                     this._element.setTopologyTemplate(
                             TTopologyTemplate.instantiate((org.modelio.metamodel.uml.statik.Package) nodet));
-                }
-            }
+					break;
+				} else {
+					this._element.setTopologyTemplate(null);
+				}            }
             break;
         case 3:
             for (ModelElement nodet : TPlans.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(nodet.getUuid())) {
                     this._element.setPlans(TPlans.instantiate((org.modelio.metamodel.uml.statik.Class) nodet));
-                }
+					break;
+				} else {
+					this._element.setPlans(null);
+				}  
             }
             break;
         

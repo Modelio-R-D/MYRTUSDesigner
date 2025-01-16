@@ -34,7 +34,11 @@ public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition
                 if (value.contains(dep.getUuid())) {
                     this._element
                             .setCapability(TCapabilityType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
-                }
+					break;
+				} else {
+					this._element.setCapability(null);
+				}
+
             }
             break;
         
@@ -42,7 +46,11 @@ public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition
             for (ModelElement dep : TNodeType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
                     this._element.setNodeType(TNodeType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
-                }
+					break;
+				} else {
+					this._element.setNodeType(null);
+				}
+
             }
             break;
         
@@ -51,7 +59,11 @@ public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition
                 if (value.contains(dep.getUuid())) {
                     this._element.setRelationshipType(
                             TRelationshipType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
-                }
+					break;
+				} else {
+					this._element.setRelationshipType(null);
+				}
+
             }
             break;
         case 5:
