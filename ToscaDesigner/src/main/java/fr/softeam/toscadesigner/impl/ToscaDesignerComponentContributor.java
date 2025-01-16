@@ -59,10 +59,12 @@ public class ToscaDesignerComponentContributor extends AbstractModelComponentCon
         stereotypes.add(getStereotype(Class.class, ToscaDesignerStereotypes.TRELATIONSHIPTYPE));
         stereotypes.add(getStereotype(Class.class, ToscaDesignerStereotypes.TARTIFACTTYPE));
         stereotypes.add(getStereotype(ModelElement.class, ToscaDesignerStereotypes.TINTERFACE));
-        
+        stereotypes.add(getStereotype(ModelElement.class, ToscaDesignerStereotypes.TOPERATION));
         stereotypes.add(getStereotype(Package.class, ToscaDesignerStereotypes.TGROUP));
         stereotypes.add(getStereotype(Class.class, ToscaDesignerStereotypes.TPOLICY));
+        stereotypes.add(getStereotype(Class.class, ToscaDesignerStereotypes.TPOLICY_TYPE));
         stereotypes.add(getStereotype(Class.class, ToscaDesignerStereotypes.TCAPABILITY_DEFINITION));
+        stereotypes.add(getStereotype(Class.class, ToscaDesignerStereotypes.TCAPABILITY_TYPE));
         stereotypes.add(getStereotype(Class.class, ToscaDesignerStereotypes.CAPABILITY_DEFINITIONS_TYPE));
         
         return stereotypes;
