@@ -2,6 +2,8 @@
 <Module id="ToscaDesigner" class="fr.softeam.toscadesigner.impl.ToscaDesignerModule" binaryversion="5.4.01" version="0.0.00" schema-level="2" uid="942db9f9-6869-472c-b269-9ca7ec36a014" author="Softeam" image="" url="">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
+        <PathEntry path="lib/handlebars-4.3.1.jar"/>
+        <PathEntry path="lib/slf4j-api-1.7.32.jar"/>
     </ClassPath>
     <Profiles>
         <Profile uid="72c19ac1-0189-4db1-a982-dbaa92e1cfd5" id="Automatic">
