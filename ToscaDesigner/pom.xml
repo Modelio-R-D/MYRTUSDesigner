@@ -36,6 +36,12 @@
             <scope>provided</scope>
         </dependency>
 
+    	<dependency>
+            <groupId>com.github.jknack</groupId>
+            <artifactId>handlebars</artifactId>
+            <version>4.3.1</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
 
     <!-- // Build // -->
