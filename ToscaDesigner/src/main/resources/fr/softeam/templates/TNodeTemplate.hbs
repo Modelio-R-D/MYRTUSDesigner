@@ -14,7 +14,7 @@
             node: {{getProperty ../this "node"}}
             relationship: {{relationship}}
             capability: {{getProperty ../this "capability"}}
-            {{#unless (noStereotypeApplications this "TPropertyDef")}}properties:{{/unless}}
+            {{#unless (noStereotypeApplications ../this "TPropertyDef")}}properties:{{/unless}}
 		    {{#each ../ownedAttribute}}{{#extension}}{{#eq name "TPropertyDef"}}
 		      {{../name}}: "{{../value}}"
 		    {{/eq}}{{/extension}}{{/each}}

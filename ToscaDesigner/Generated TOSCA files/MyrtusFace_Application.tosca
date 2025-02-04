@@ -16,14 +16,12 @@ topology_template:
         
         properties:
           dockerImage: "thebigpotatoe/face-recognition-docker"
-        
-        
-      MyrtusCameraFeed_0:
-        type: example.eu.myrtus.nodetypes.MyrtusCameraFeed
-        
-        properties:
-          dockerImage: "ci.hesi.energy:5000/myrtus/examples/myrtusface/camera_feed:web"
-        
+        requirements:
+          - host:
+              node: Myrtus_Workstation_1
+              relationship: 
+              capability: host
+              
         
       Myrtus_Proxy_0:
         type: example.eu.myrtus.nodetypes.MyrtusProxy
@@ -31,17 +29,44 @@ topology_template:
         properties:
           dockerImage: "nginx:alpine"
           port: "443"
+        requirements:
+          - egress1:
+              node: MyrtusCameraFeed_0
+              relationship: 
+              capability: CameraFeed.WebService
+              
+          - egress2:
+              node: MyrtusFaceDetectionService_0
+              relationship: 
+              capability: FaceDetectionService
+              
+          - host:
+              node: Myrtus_Workstation_1
+              relationship: 
+              capability: host
+              
         
+      MyrtusCameraFeed_0:
+        type: example.eu.myrtus.nodetypes.MyrtusCameraFeed
+        
+        properties:
+          dockerImage: "ci.hesi.energy:5000/myrtus/examples/myrtusface/camera_feed:web"
+        requirements:
+          - host:
+              node: Myrtus_Workstation_1
+              relationship: 
+              capability: host
+              
         
     
   relationship_templates:
-    hostedOn:
+    con_HostedOn_2:
       type: hostedOn
-    hostedOn:
+    con_HostedOn_1:
       type: hostedOn
-    hostedOn:
+    con_HostedOn_0:
       type: hostedOn
-    connectsOn:
+    con_ConnectsTo_1:
       type: hostedOn
-    connectsOn:
+    con_ConnectsTo_0:
       type: hostedOn
