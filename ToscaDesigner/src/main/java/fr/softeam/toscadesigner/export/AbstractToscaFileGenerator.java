@@ -27,7 +27,7 @@ import com.github.jknack.handlebars.helper.ConditionalHelpers;
 import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
 
 import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityDefinition;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilityStereotype;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
@@ -107,7 +107,7 @@ public abstract class AbstractToscaFileGenerator {
 					}
 				} else if (stereotype.getName().equals("TCapabilityDefinition")) {
 					TCapabilityDefinition tCapabilityDefinition = TCapabilityDefinition
-							.safeInstantiate((Attribute) context);
+							.safeInstantiate((Class) context);
 					if (searchedPropertyName.equals("capabilityType")) {
 						propertyStringValue = tCapabilityDefinition.getCapabilityType().getElement().getName();
 					}
