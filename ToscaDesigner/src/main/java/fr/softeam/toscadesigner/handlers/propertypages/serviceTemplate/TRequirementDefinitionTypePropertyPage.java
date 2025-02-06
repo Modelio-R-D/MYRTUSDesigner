@@ -30,10 +30,10 @@ public class TRequirementDefinitionTypePropertyPage<T extends TRequirementDefini
                 if (value.contains(el.getUuid())) {
                     this._element.setDerivedFrom(
                             TRequirementDefinitionType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
-					break;
-				} else {
-					this._element.setDerivedFrom(null);
-				}
+        break;
+        } else {
+        this._element.setDerivedFrom(null);
+        }
             }
             break;
         

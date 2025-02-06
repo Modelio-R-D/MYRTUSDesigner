@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: ToscaDesigner v0.0.00
+ * Module: ToscaDesigner v0.0.1
 
- * This file was generated on 14/01/2025 17:57 by Modelio Studio.
+ * This file was generated on 06/02/2025 17:32 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.package_;
 
@@ -40,13 +40,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("3027aaf8-ae1c-4c0f-90c6-99ece3b706ed")
 public class ToscaModel implements IMdaProxy {
-    @objid ("94095d96-24f0-4e8a-9fb5-8a80f42ed07a")
+    @objid ("ae3520d6-52e0-43f0-aaa8-6b03bb6b0007")
     public static final String STEREOTYPE_NAME = "ToscaModel";
 
     /**
      * The underlying {@link Package} represented by this proxy, never null.
      */
-    @objid ("db06edc1-5b26-494c-801b-f5962052acd0")
+    @objid ("47fbffd1-e093-4cef-8c95-9a6a758fafc2")
     protected final Package elt;
 
     /**
@@ -56,7 +56,7 @@ public class ToscaModel implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("2dea94d0-282d-4abd-899e-ce525952dc8c")
+    @objid ("a9565d7e-7807-450a-90cb-23f7e93d2829")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && (ToscaModel.MdaTypes.STEREOTYPE_ELT!=null) && ((Package) elt).isStereotyped(ToscaModel.MdaTypes.STEREOTYPE_ELT));
     }
@@ -66,7 +66,7 @@ public class ToscaModel implements IMdaProxy {
      * 
      * @return a {@link ToscaModel} proxy on the created {@link Package}.
      */
-    @objid ("43f61b1f-40ab-4661-8354-49a40868f68f")
+    @objid ("dabe65af-24a3-4bfd-9883-608fd58836d1")
     public static ToscaModel create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Package");
         e.getExtension().add(ToscaModel.MdaTypes.STEREOTYPE_ELT);
@@ -80,7 +80,7 @@ public class ToscaModel implements IMdaProxy {
      * @param obj a Package
      * @return a {@link ToscaModel} proxy or <i>null</i>.
      */
-    @objid ("b0e94632-447c-4b2d-8dd9-8d72d610cc24")
+    @objid ("b48cfc84-fd5a-4e45-9283-b0110f3d9431")
     public static ToscaModel instantiate(final Package obj) {
         return ToscaModel.canInstantiate(obj) ? new ToscaModel(obj) : null;
     }
@@ -93,7 +93,7 @@ public class ToscaModel implements IMdaProxy {
      * @return a {@link ToscaModel} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("08c5749a-000f-4e1c-808d-01046bb1bbc0")
+    @objid ("7a82b042-f452-42c8-9eea-79b5e25eb4c3")
     public static ToscaModel safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (ToscaModel.canInstantiate(obj))
         	return new ToscaModel(obj);
@@ -101,7 +101,7 @@ public class ToscaModel implements IMdaProxy {
         	throw new IllegalArgumentException("ToscaModel: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("54aa9434-1ff5-447b-9e60-40cf8e53a0a8")
+    @objid ("91e1fc94-eb8c-402a-ba92-c2f79854b982")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -121,35 +121,35 @@ public class ToscaModel implements IMdaProxy {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("7e6c66ad-485a-47fe-83ba-df22211e8c39")
+    @objid ("bc9316a8-d459-494b-8482-4d416d3bdde0")
     public Package getElement() {
         return this.elt;
     }
 
-    @objid ("4786bd8c-80df-4c60-a20c-a822ce7dbbf8")
+    @objid ("065aa246-6e4b-48a6-b3cd-b397e50d8141")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
         
     }
 
-    @objid ("cb7e04e5-6bf0-4fff-8b9e-9fffd9860b7a")
+    @objid ("08370f63-778f-476a-adcb-f49f54c91994")
     protected  ToscaModel(final Package elt) {
         this.elt = elt;
     }
 
     @objid ("41bf62e6-a63c-4b81-9cf3-a936dd332716")
     public static final class MdaTypes {
-        @objid ("d0ba9566-d478-4084-94bc-87b0c0c4ec08")
+        @objid ("f64a608b-3fb2-4dec-8cab-412c26749d73")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("1fdf08ff-db51-40e4-8825-b985f0847f9e")
+        @objid ("af7d0777-fe89-4fd6-b27f-7a6964d0e221")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("d4e62050-1d46-45dd-9095-e8da5efc6166")
+        @objid ("011700fd-5537-4be3-8278-212307bd49e4")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("904f43a6-db62-4e4b-b8e4-341e4aa2cfbd")
+        @objid ("f93ab79a-8294-4750-b5a7-37cb81df31a3")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

@@ -33,10 +33,10 @@ public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> 
                 if (value.contains(elt.getUuid())) {
                     this._element.setRelationshipType(
                             TRelationshipType.instantiate((org.modelio.metamodel.uml.statik.Class) elt));
-					break;
-				} else {
-					this._element.setRelationshipType(null);
-				}
+        break;
+        } else {
+        this._element.setRelationshipType(null);
+        }
             }
             break;
         
@@ -45,10 +45,10 @@ public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> 
                 if (value.contains(elt.getUuid())) {
                     this._element.setRelationshipConstraints(
                             RelationshipConstraintsType.instantiate((org.modelio.metamodel.uml.statik.Class) elt));
-					break;
-				} else {
-					this._element.setRelationshipConstraints(null);
-				}
+        break;
+        } else {
+        this._element.setRelationshipConstraints(null);
+        }
             }
             break;
         

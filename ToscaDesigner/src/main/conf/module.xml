@@ -366,9 +366,9 @@
                         <TypeRef id="mref#'Integer' {01a40888-0000-002d-0000-000000000000} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.TCapabilityDefinitionTable.upperBound.description</Description>
                     </PropertyDefinition>
-                    <PropertyDefinition id="valid_source_tyoes" label="%propertydefinition.TCapabilityDefinitionTable.valid_source_tyoes.label" default-value="" is-editable="true" uid="e012d64d-3433-419e-a7b1-62e1cd38891a">
-                        <TypeRef id="mref#'MultiElement' {1bdf9f87-e9ad-4849-ab22-c25147e8d00c} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TCapabilityDefinitionTable.valid_source_tyoes.description</Description>
+                    <PropertyDefinition id="validSourceType" label="%propertydefinition.TCapabilityDefinitionTable.validSourceType.label" default-value="" is-editable="true" uid="58a9cdcd-b57e-4a9e-bbd1-d353e9f42b56">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TCapabilityDefinitionTable.validSourceType.description</Description>
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
@@ -500,7 +500,7 @@
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
-            <Stereotype name="TDeploymentArtifact" metaclass="Standard.Attribute" owner-stereotype="mref#'' {1aad84ed-4c30-40ec-a4d8-6712bb6bd018} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TDeploymentArtifact.label" uid="7c624564-a87e-4058-ab8b-8f6782b68031" is-abstract="false">
+            <Stereotype name="TDeploymentArtifact" metaclass="Standard.Class" owner-stereotype="mref#'' {1aad84ed-4c30-40ec-a4d8-6712bb6bd018} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TDeploymentArtifact.label" uid="7c624564-a87e-4058-ab8b-8f6782b68031" is-abstract="false">
                 <Icon path="res/icon/gui/deploymentArtifact24.png"/>
                 <Image path="res/icon/gui/deploymentArtifact48.png"/>
                 <PropertyTable id="TDeploymentArtifactTable" label="%propertytable.TDeploymentArtifactTable.label" uid="e1a47f10-7786-44c4-b602-5f8eb918638d">
@@ -789,7 +789,7 @@
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.TPolicyTable.policyRef.description</Description>
                     </PropertyDefinition>
-                    <PropertyDefinition id="description" label="%propertydefinition.TPolicyTable.description.label" default-value="" is-editable="true" uid="deeae8fc-fd5b-4bc5-9648-b895139a448c">
+                    <PropertyDefinition id="description" label="%propertydefinition.TPolicyTable.description.label" default-value="" is-editable="true" uid="0c7da924-89ac-4530-b76e-fbbc0034f15e">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.TPolicyTable.description.description</Description>
                     </PropertyDefinition>
@@ -1050,8 +1050,6 @@
             </Command>
             <Command id="Export" label="%command.Export.label" tooltip="%command.Export.tooltip" image="res/icon/gui/export.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="ToscaDesigner#ToscaModel"/>
-                <Scope metaclass="Infrastructure.ModelElement" stereotype="ToscaDesigner#TNodeType"/>
-                <Scope metaclass="Infrastructure.ModelElement" stereotype="ToscaDesigner#TTopologyTemplate"/>
                 <Handler class="fr.softeam.toscadesigner.handlers.commands.ToacaModelExport">
                     <HParameter name="name" value=""/>
                 </Handler>
@@ -1084,7 +1082,6 @@
                 </Handler>
             </Tool>
             <Tool id="CapabilityDefinition" label="%tool.CapabilityDefinition.label" tooltip="%tool.CapabilityDefinition.tooltip" image="res/icon/gui/capabilityDefinition24.png">
-                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TCapabilityDefinitionsType"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TCapabilityDefinition"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
@@ -1103,7 +1100,7 @@
                 <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TDeploymentArtifacts"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TDeploymentArtifact"/>
-                    <HParameter name="metaclass" value="Standard.Attribute"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
                     <HParameter name="name" value="DeploymentArtifact"/>
                 </Handler>
             </Tool>
@@ -1293,6 +1290,13 @@
                 </Handler>
             </Tool>
         </Tools>
+        <ContextualMenu>
+            <CommandRef refid="Export" group="" group-image=""/>
+            <CommandRef refid="Tosca_Model_Diagram" group="" group-image=""/>
+            <CommandRef refid="Service_Template_Diagram" group="%group.Service_Template.label" group-image=""/>
+            <CommandRef refid="Topology_Template_Diagram" group="%group.Topology_Template.label" group-image=""/>
+            <CommandRef refid="Tosca_Model" group="" group-image=""/>
+        </ContextualMenu>
         <ContextualMenu>
             <CommandRef refid="Export" group="" group-image=""/>
             <CommandRef refid="Tosca_Model_Diagram" group="" group-image=""/>

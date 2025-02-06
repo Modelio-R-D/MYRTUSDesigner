@@ -37,10 +37,10 @@ public class TCapabilityDefinitionPropertyPage<T extends TCapabilityDefinition> 
                 if (value.contains(dep.getUuid())) {
                     this._element.setCapabilityType(
                             TCapabilityType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
-					break;
-				} else {
-					this._element.setCapabilityType(null);
-				}
+        break;
+        } else {
+        this._element.setCapabilityType(null);
+        }
             }
             break;
         
@@ -53,7 +53,7 @@ public class TCapabilityDefinitionPropertyPage<T extends TCapabilityDefinition> 
             break;
         
         case 6:
-            this._element.setValid_source_types(value);
+            this._element.setValidSourceType(value);
             ;
             break;
         }
@@ -77,7 +77,7 @@ public class TCapabilityDefinitionPropertyPage<T extends TCapabilityDefinition> 
         
         table.addProperty("Lower Bound", _element.getLowerBound());
         table.addProperty("Upper Bound", _element.getUpperBound());
-        table.addProperty("Valid Source Types", _element.getValid_source_types());
+        table.addProperty("Valid Source Types", _element.getValidSourceType());
     }
 
 }
