@@ -36,20 +36,20 @@ public class TRequirementPropertyPage<T extends TRequirement> extends ToscaEleme
                 if (value.contains(dep.getUuid())) {
                     this._element.setRelationship(
                             TRelationshipTemplate.instantiate((org.modelio.metamodel.uml.statik.Association) dep));
-					break;
-				} else {
-					this._element.setRelationship(null);
-				}
+        break;
+        } else {
+        this._element.setRelationship(null);
+        }
             }
             break;
         case 3:
             for (ModelElement dep : TNodeTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
                     this._element.setNode(TNodeTemplate.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
-					break;
-				} else {
-					this._element.setNode(null);
-				}
+        break;
+        } else {
+        this._element.setNode(null);
+        }
             }
             break;
         case 4:
@@ -59,21 +59,21 @@ public class TRequirementPropertyPage<T extends TRequirement> extends ToscaEleme
                     this._element.setCapability(
                             TCapabilityDefinition.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
                     conditionMet = true;
-					break;
-				} 
+        break;
+        } 
             }
             if (!conditionMet) {
                 for (ModelElement dep : TCapabilityType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                     if (value.contains(dep.getUuid())) {
                         this._element
                                 .setCapability(TCapabilityType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
-    					break;
-    				} else {
-    					this._element.setCapability(null);
-    				}
+            break;
+        } else {
+            this._element.setCapability(null);
+        }
                 }
             }
-
+        
             break;
         }
     }

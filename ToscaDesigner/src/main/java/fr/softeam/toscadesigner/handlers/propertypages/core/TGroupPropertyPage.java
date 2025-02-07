@@ -37,10 +37,10 @@ public class TGroupPropertyPage<T extends TGroup> extends ToscaElementPropertyPa
             for (ModelElement dep : TGroupType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
                     this._element.setType(TGroupType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
-					break;
-				} else {
-					this._element.setType(null);
-				}            }
+        break;
+        } else {
+        this._element.setType(null);
+        }            }
             break;
         
         case 3:

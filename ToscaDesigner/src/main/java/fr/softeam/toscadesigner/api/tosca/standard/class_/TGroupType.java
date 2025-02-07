@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: ToscaDesigner v0.0.00
+ * Module: ToscaDesigner v0.0.1
 
- * This file was generated on 14/01/2025 17:57 by Modelio Studio.
+ * This file was generated on 06/02/2025 17:32 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
@@ -40,7 +40,7 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("39f193a1-127c-495d-be75-44587d7d007d")
 public class TGroupType extends TEntityType implements IMdaProxy {
-    @objid ("c634c250-a183-4b28-b79c-e28ce11bc682")
+    @objid ("2cb393dd-f30d-4b58-be32-473e2b57dfab")
     public static final String STEREOTYPE_NAME = "TGroupType";
 
     /**
@@ -50,7 +50,7 @@ public class TGroupType extends TEntityType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("09197363-5382-49c6-bb31-1915d065a218")
+    @objid ("4fad2982-040c-45ce-a13d-e436407918ea")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (TGroupType.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(TGroupType.MdaTypes.STEREOTYPE_ELT));
     }
@@ -60,7 +60,7 @@ public class TGroupType extends TEntityType implements IMdaProxy {
      * 
      * @return a {@link TGroupType} proxy on the created {@link Class}.
      */
-    @objid ("cf5bf69a-5009-4eb7-8f65-3d5d8c7c972f")
+    @objid ("20ff346b-aeef-4cec-8514-879de36360fb")
     public static TGroupType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(TGroupType.MdaTypes.STEREOTYPE_ELT);
@@ -74,7 +74,7 @@ public class TGroupType extends TEntityType implements IMdaProxy {
      * @param obj a Class
      * @return a {@link TGroupType} proxy or <i>null</i>.
      */
-    @objid ("f2b00b3a-f2ca-4aff-8185-79f683ed801d")
+    @objid ("bd9ec80d-e971-4f66-b85c-ed4f6dfdc93c")
     public static TGroupType instantiate(final Class obj) {
         return TGroupType.canInstantiate(obj) ? new TGroupType(obj) : null;
     }
@@ -87,7 +87,7 @@ public class TGroupType extends TEntityType implements IMdaProxy {
      * @return a {@link TGroupType} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("89fe7258-deb7-4057-8efe-913dc8b5c233")
+    @objid ("20101b6c-af8e-4a2b-8bfb-98dd661f9de7")
     public static TGroupType safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (TGroupType.canInstantiate(obj))
         	return new TGroupType(obj);
@@ -95,7 +95,7 @@ public class TGroupType extends TEntityType implements IMdaProxy {
         	throw new IllegalArgumentException("TGroupType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("e419ebca-144c-44e4-857f-3f3052906c25")
+    @objid ("5324b6ee-331c-48a4-8c9b-33fa3e73344c")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -115,36 +115,36 @@ public class TGroupType extends TEntityType implements IMdaProxy {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("50f36fa9-1996-48f6-9f1d-dc574f571fa0")
+    @objid ("06a57f79-3828-4bb6-a0d5-cb18bd8a0033")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("91f9ca0a-b6e9-473b-b2f9-537c98cb3255")
+    @objid ("339466dd-d8e5-4739-8216-642b353b4105")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
         
     }
 
-    @objid ("dfda5a96-d86f-4c67-8a7c-8d9f59e3665b")
+    @objid ("97f6df10-df5d-49af-94b2-685a883d6101")
     protected  TGroupType(final Class elt) {
         super(elt);
     }
 
     @objid ("95f59d83-2128-4004-9924-10b684ba49ab")
     public static final class MdaTypes {
-        @objid ("69c4fa75-c29c-460a-964c-897698d12cd1")
+        @objid ("8a49b1de-663f-4506-aed4-7bb826a0f9c1")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("9d081ece-43a6-4a7e-96a3-63df21d60183")
+        @objid ("dc394f06-3b84-4a2b-a8ab-f7210aab016c")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("00ffa2c3-1da0-4798-abaf-2c4ddfb7bbce")
+        @objid ("7dbfaf79-1e83-46d6-b89e-51502179b5f5")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("564e3e37-3110-48a0-8cba-c3c70d470ceb")
+        @objid ("66a904b4-b70f-41ba-956f-647f6cc6f49f")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

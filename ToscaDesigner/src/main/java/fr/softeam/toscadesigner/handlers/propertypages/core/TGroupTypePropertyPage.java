@@ -28,10 +28,10 @@ public class TGroupTypePropertyPage<T extends TGroupType> extends ToscaElementPr
             for (ModelElement el : TGroupType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(el.getUuid())) {
                     this._element.setDerivedFrom(TGroupType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
-					break;
-				} else {
-					this._element.setDerivedFrom(null);
-				}
+        break;
+        } else {
+        this._element.setDerivedFrom(null);
+        }
             }
             break;
         }

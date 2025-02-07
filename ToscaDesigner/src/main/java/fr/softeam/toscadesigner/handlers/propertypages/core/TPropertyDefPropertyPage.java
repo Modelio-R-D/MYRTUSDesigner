@@ -28,10 +28,10 @@ public class TPropertyDefPropertyPage<T extends TPropertyDef> extends ToscaEleme
                 if (value.contains(el.getUuid())) {
                     this._element.setName(
                             PropertyDefinitionType.instantiate((org.modelio.metamodel.uml.statik.Attribute) el));
-					break;
-				} else {
-					this._element.setName(null);
-				}
+        break;
+        } else {
+        this._element.setName(null);
+        }
             }
             break;
         

@@ -86,14 +86,14 @@ public class ToscaDesignerComponentContributor extends AbstractModelComponentCon
     @Override
     public Set<NoteType> getNoteTypes() {
         // TODO Auto-generated method stub
-        return null;
+        return Collections.emptySet();
     }
 
     @objid ("5a2b758b-0512-4363-936f-a8be8caf56de")
     @Override
     public Set<TagType> getTagTypes() {
         // TODO Auto-generated method stub
-        return null;
+        return Collections.emptySet();
     }
 
 }
