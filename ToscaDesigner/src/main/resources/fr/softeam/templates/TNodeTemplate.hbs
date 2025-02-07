@@ -12,7 +12,7 @@
       {{#each ../ownedElement}}{{#extension}}{{#eq name "RequirementsType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TRequirement"}}
         - {{../name}}:
             node: {{getProperty ../this "node"}}
-            relationship: {{relationship}}
+            relationship: {{getProperty ../this "relationship"}}
             capability: {{getProperty ../this "capability"}}
             {{#unless (noStereotypeApplications ../this "TPropertyDef")}}properties:{{/unless}}
 		    {{#each ../ownedAttribute}}{{#extension}}{{#eq name "TPropertyDef"}}

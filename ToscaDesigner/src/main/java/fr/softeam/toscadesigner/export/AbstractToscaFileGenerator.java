@@ -25,6 +25,7 @@ import com.github.jknack.handlebars.Options;
 import com.github.jknack.handlebars.Template;
 import com.github.jknack.handlebars.helper.ConditionalHelpers;
 import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
+import com.modeliosoft.modelio.javadesigner.annotations.mdl.prop;
 
 import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TCapabilityDefinition;
@@ -74,6 +75,9 @@ public abstract class AbstractToscaFileGenerator {
 					} else if (searchedPropertyName.equals("capability")) {
 						CapabilityStereotype capability = tRequirement.getCapability();
 						propertyStringValue = capability != null ? capability.getElement().getName() : "";
+					} else if (searchedPropertyName.equals("relationship")) {
+						TRelationshipTemplate relationship = tRequirement.getRelationship();
+						propertyStringValue = relationship != null ? relationship.getElement().getName() : "";
 					}
 				} else if (stereotype.getName().equals("TRequirementDefinition")) {
 

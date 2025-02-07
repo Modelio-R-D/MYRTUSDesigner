@@ -19,7 +19,7 @@ topology_template:
         requirements:
           - host:
               node: Myrtus_Workstation_1
-              relationship: 
+              relationship: con_HostedOn_0
               capability: host
               
         
@@ -32,17 +32,17 @@ topology_template:
         requirements:
           - egress1:
               node: MyrtusCameraFeed_0
-              relationship: 
+              relationship: con_ConnectsTo_0
               capability: CameraFeed.WebService
               
           - egress2:
               node: MyrtusFaceDetectionService_0
-              relationship: 
+              relationship: con_ConnectsTo_1
               capability: FaceDetectionService
               
           - host:
               node: Myrtus_Workstation_1
-              relationship: 
+              relationship: con_HostedOn_2
               capability: host
               
         
@@ -54,7 +54,7 @@ topology_template:
         requirements:
           - host:
               node: Myrtus_Workstation_1
-              relationship: 
+              relationship: con_HostedOn_1
               capability: host
               
         
@@ -67,6 +67,6 @@ topology_template:
     con_HostedOn_0:
       type: hostedOn
     con_ConnectsTo_1:
-      type: hostedOn
+      type: connectTo
     con_ConnectsTo_0:
-      type: hostedOn
+      type: connectTo
