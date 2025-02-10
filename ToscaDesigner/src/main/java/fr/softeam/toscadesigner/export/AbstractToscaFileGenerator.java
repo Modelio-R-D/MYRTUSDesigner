@@ -76,15 +76,20 @@ public abstract class AbstractToscaFileGenerator {
                 propertyStringValue = context.getProperty(stereotype, searchedPropertyName);
         
                 if (stereotype.getName().equals("TRequirement")) {
-        
+    
+                    
                     TRequirement tRequirement = TRequirement.safeInstantiate((Class) context);
-                    if (searchedPropertyName.equals("node")) {
-                        TNodeTemplate node = tRequirement.getNode();
-                        propertyStringValue = node != null ? node.getName() : "''";
-                    } else if (searchedPropertyName.equals("capability")) {
-                        CapabilityStereotype capability = tRequirement.getCapability();
-                        propertyStringValue = capability != null ? capability.getElement().getName() : "";
-                    }
+					if (searchedPropertyName.equals("node")) {
+						TNodeTemplate node = tRequirement.getNode();
+						propertyStringValue = node != null ? node.getElement().getName() : "''";
+					} else if (searchedPropertyName.equals("capability")) {
+						CapabilityStereotype capability = tRequirement.getCapability();
+						propertyStringValue = capability != null ? capability.getElement().getName() : "";
+					} else if (searchedPropertyName.equals("relationship")) {
+						TRelationshipTemplate relationship = tRequirement.getRelationship();
+						propertyStringValue = relationship != null ? relationship.getElement().getName() : "";
+					}
+				} else if (stereotype.getName().equals("TRequirementDefinition")) {
                 } else if (stereotype.getName().equals("TRequirementDefinition")) {
         
                     TRequirementDefinition tRequirementDefinition = TRequirementDefinition
@@ -210,18 +215,13 @@ public abstract class AbstractToscaFileGenerator {
         return importString.toString();
     }
 
-					TRequirement tRequirement = TRequirement.safeInstantiate((Class) context);
-					if (searchedPropertyName.equals("node")) {
-						TNodeTemplate node = tRequirement.getNode();
-						propertyStringValue = node != null ? node.getElement().getName() : "''";
-					} else if (searchedPropertyName.equals("capability")) {
-						CapabilityStereotype capability = tRequirement.getCapability();
-						propertyStringValue = capability != null ? capability.getElement().getName() : "";
-					} else if (searchedPropertyName.equals("relationship")) {
-						TRelationshipTemplate relationship = tRequirement.getRelationship();
-						propertyStringValue = relationship != null ? relationship.getElement().getName() : "";
-					}
-				} else if (stereotype.getName().equals("TRequirementDefinition")) {
+    protected String renderTemplate(Handlebars handlebars, Object data) throws IOException {
+		Template mainTemplate = handlebars.compile(MAIN_TEMPLATE);
+		try (StringWriter writer = new StringWriter()) {
+			mainTemplate.apply(data, writer);
+			return writer.toString();
+		}
+	}				
 
     @objid ("9e35cf11-975d-4bd5-b47c-906d11ceb954")
     final class Import {
