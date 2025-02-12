@@ -1052,9 +1052,9 @@
                 <Scope metaclass="Standard.Package" stereotype="ToscaDesigner#ToscaModel"/>
                 <Scope metaclass="Infrastructure.ModelElement" stereotype="ToscaDesigner#TNodeType"/>
                 <Scope metaclass="Infrastructure.ModelElement" stereotype="ToscaDesigner#TTopologyTemplate"/>
-                <Handler class="fr.softeam.toscadesigner.handlers.commands.ToacaModelExport">
+                <Handler class="fr.softeam.toscadesigner.handlers.commands.ExportToscaModelCommand">
                     <HParameter name="name" value=""/>
-                </Handler>r>
+                </Handler>
             </Command>
             <Command id="Service_Template_Diagram" label="%command.Service_Template_Diagram.label" tooltip="%command.Service_Template_Diagram.tooltip" image="res/icon/gui/diagram/service_template_diag24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="ToscaDesigner#ToscaModel"/>
@@ -1292,13 +1292,6 @@
                 </Handler>
             </Tool>
         </Tools>
-        <ContextualMenu>
-            <CommandRef refid="Export" group="" group-image=""/>
-            <CommandRef refid="Tosca_Model_Diagram" group="" group-image=""/>
-            <CommandRef refid="Service_Template_Diagram" group="%group.Service_Template.label" group-image=""/>
-            <CommandRef refid="Topology_Template_Diagram" group="%group.Topology_Template.label" group-image=""/>
-            <CommandRef refid="Tosca_Model" group="" group-image=""/>
-        </ContextualMenu>
         <ContextualMenu>
             <CommandRef refid="Export" group="" group-image=""/>
             <CommandRef refid="Tosca_Model_Diagram" group="" group-image=""/>

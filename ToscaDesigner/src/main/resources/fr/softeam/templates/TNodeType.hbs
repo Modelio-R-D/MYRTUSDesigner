@@ -7,15 +7,19 @@ node_types:
       targetNamespace: "{{getProperty this "targetNamespace"}}"
       abstract: "{{getProperty this "abstract"}}"
       final: "{{getProperty this "final"}}"
-    {{#unless (noStereotypeApplications this "RequirementDefinitionsType")}}requirements:{{/unless}}
-	{{#each ownedElement}}{{#extension}}{{#eq name "RequirementDefinitionsType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TRequirementDefinition"}}
+    {{#unless (noStereotypeApplications this "PropertyDefinitionType")}}properties:{{/unless}}
+      {{#each ../ownedAttribute}}{{#extension}}{{#eq name "PropertyDefinitionType"}}
+        {{../name}}: "{{../value}}"
+      {{/eq}}{{/extension}}{{/each}}
+    {{#unless (noStereotypeApplications this "TRequirementDefinitionType")}}requirements:{{/unless}}
+	{{#each ownedElement}}{{#extension}}{{#eq name "TRequirementDefinitionType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TRequirementDefinition"}}
       - {{../name}}:
           capability: {{getProperty ../this "capability"}}
           relationship: {{getProperty ../this "relationshipType"}}
           occurrences: [{{../multiplicityMin}}, {{../multiplicityMax}}]
     {{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
-	{{#unless (noStereotypeApplications this "CapabilityDefinitionsType")}}capabilities:{{/unless}}
-    {{#each ownedElement}}{{#extension}}{{#eq name "CapabilityDefinitionsType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TCapabilityDefinition"}}
+	{{#unless (noStereotypeApplications this "TCapabilityDefinitionsType")}}capabilities:{{/unless}}
+    {{#each ownedElement}}{{#extension}}{{#eq name "TCapabilityDefinitionsType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TCapabilityDefinition"}}
       {{../name}}:
         occurrences: [{{../multiplicityMin}}, {{../multiplicityMax}}]
         type: tosca.capabilities.Endpoint

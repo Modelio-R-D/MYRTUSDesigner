@@ -76,8 +76,6 @@ public abstract class AbstractToscaFileGenerator {
                 propertyStringValue = context.getProperty(stereotype, searchedPropertyName);
         
                 if (stereotype.getName().equals("TRequirement")) {
-    
-                    
                     TRequirement tRequirement = TRequirement.safeInstantiate((Class) context);
 					if (searchedPropertyName.equals("node")) {
 						TNodeTemplate node = tRequirement.getNode();
@@ -90,7 +88,6 @@ public abstract class AbstractToscaFileGenerator {
 						propertyStringValue = relationship != null ? relationship.getElement().getName() : "";
 					}
 				} else if (stereotype.getName().equals("TRequirementDefinition")) {
-                } else if (stereotype.getName().equals("TRequirementDefinition")) {
         
                     TRequirementDefinition tRequirementDefinition = TRequirementDefinition
                             .safeInstantiate((Class) context);

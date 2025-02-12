@@ -6,19 +6,14 @@ imports:
     namespace_prefix: MYRTUS-
 
 node_types:
-  example.eu.myrtus.nodetypes.MyrtusCameraFeed:
+  example.eu.myrtus.nodetypes.MyrtusFaceDetectionService:
     derived_from: example.eu.myrtus.nodetypes.MyrtusSWComponent
     metadata:
       targetNamespace: "example.eu.myrtus.nodetypes"
       abstract: "false"
       final: "false"
     
-    requirements:
-      - faceDetectionService:
-          capability: Endpoint
-          relationship: connectsTo
-          occurrences: [, ]
 	capabilities:
-      CameraFeed.WebService:
+      FaceDetectionService:
         occurrences: [, ]
         type: tosca.capabilities.Endpoint
