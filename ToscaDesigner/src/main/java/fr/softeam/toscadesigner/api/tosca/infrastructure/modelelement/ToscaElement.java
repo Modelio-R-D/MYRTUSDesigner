@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.1
 
- * This file was generated on 06/02/2025 17:32 by Modelio Studio.
+ * This file was generated on 13/02/2025 17:54 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -37,16 +37,15 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-@objid ("6e3495b3-bbc3-40c5-8f0e-899e2d85a0e7")
+@objid ("391f35e9-ca81-4f88-96f1-eceb9c08b9be")
 public class ToscaElement implements IMdaProxy {
-    @objid ("bee4c49c-bd3a-44e9-9150-9bf47408cb30")
+    @objid ("832978ad-1734-4119-b2b0-f2e92b6fc4c9")
     public static final String STEREOTYPE_NAME = "ToscaElement";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
-     * 
      */
-    @objid ("3215043a-7bb9-4929-8979-1af4134d4dab")
+    @objid ("60016555-c81c-4030-98ab-63ff208ce40e")
     protected final ModelElement elt;
 
     /**
@@ -56,16 +55,17 @@ public class ToscaElement implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("e2b7dd79-368a-4983-96a4-2e9f26e5f4e9")
+    @objid ("9073c545-8811-42f6-9282-32da12918693")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (ToscaElement.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(ToscaElement.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link ModelElement} stereotyped << ToscaElement >> then instantiate a {@link ToscaElement} proxy.
+     * 
      * @return a {@link ToscaElement} proxy on the created {@link ModelElement}.
      */
-    @objid ("dad91050-5afa-44bb-80a3-80d182092d62")
+    @objid ("ef8982ed-fde8-44f5-b28a-cc41fabe973d")
     public static ToscaElement create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(ToscaElement.MdaTypes.STEREOTYPE_ELT);
@@ -79,7 +79,7 @@ public class ToscaElement implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link ToscaElement} proxy or <i>null</i>.
      */
-    @objid ("547d0691-7aea-499f-88c2-c0c99eaefa50")
+    @objid ("6c675101-5b32-4377-a519-3194aace7ce6")
     public static ToscaElement instantiate(final ModelElement obj) {
         return ToscaElement.canInstantiate(obj) ? new ToscaElement(obj) : null;
     }
@@ -88,19 +88,19 @@ public class ToscaElement implements IMdaProxy {
      * Tries to instantiate a {@link ToscaElement} proxy from a {@link ModelElement} stereotyped << ToscaElement >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link ModelElement}
      * @return a {@link ToscaElement} proxy.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("c1b62f98-de24-4a01-b2b7-2425bdb86145")
+    @objid ("40969cab-eb7e-4840-972c-8d7e510b1059")
     public static ToscaElement safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (ToscaElement.canInstantiate(obj))
-            return new ToscaElement(obj);
+        	return new ToscaElement(obj);
         else
-            throw new IllegalArgumentException("ToscaElement: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("ToscaElement: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("5d6649a2-8005-424c-b023-c78e71854faa")
+    @objid ("ed044c3e-bc14-404c-b513-fff90ff7b812")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -117,37 +117,38 @@ public class ToscaElement implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link ModelElement}.
+     * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("fb9d033f-93ec-4290-9e6b-ea6c07adb3a7")
+    @objid ("7e1523c3-e2d9-4b42-af80-fb3ba438151e")
     public ModelElement getElement() {
         return this.elt;
     }
 
-    @objid ("582f1d6a-dcde-4cbf-8f0a-0be76000678d")
+    @objid ("928f2224-5308-4463-95b1-21055b3ea79f")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
+        
     }
 
-    @objid ("b2c1798d-8ec3-40ba-b325-fea272744d24")
+    @objid ("379b78ba-9032-42ed-bb5c-6d9fe7ab4ca7")
     protected  ToscaElement(final ModelElement elt) {
         this.elt = elt;
     }
 
-    @objid ("7d00692e-39e1-44e3-aa6e-ac4d70ba7ae2")
+    @objid ("737184ef-854b-4455-ac6a-d815c4391895")
     public static final class MdaTypes {
-        @objid ("bd8d2588-bba5-4cdf-a13c-89f9e1dcbcd9")
+        @objid ("c92ff865-320f-4538-9d86-bd639fe548bc")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("5b76f957-0016-4562-b063-455204c47b0c")
+        @objid ("a59c255a-f07b-43cc-983f-51877285e912")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("941ed93b-f6c7-456b-b436-1abea6a97dd3")
+        @objid ("0eb18413-caa8-4ed7-9c47-4786ea6b9ae8")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("030bcf49-129a-437f-a4e7-6998dba265a0")
+        @objid ("c8632de8-afc9-436b-9805-87baa9e4e0aa")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -164,6 +165,7 @@ public class ToscaElement implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
+            
         }
 
     }

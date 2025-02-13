@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.1
 
- * This file was generated on 06/02/2025 17:32 by Modelio Studio.
+ * This file was generated on 13/02/2025 17:54 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
@@ -38,16 +38,15 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-@objid ("bc9b73b0-ca8c-413a-a1c3-8915df97f85c")
+@objid ("bc897695-03a8-42b1-beb1-8f8a2a0ec1f5")
 public class CapabilityStereotype implements IMdaProxy {
-    @objid ("8eea731a-7e6f-435c-a9df-509003f4ff58")
+    @objid ("27a1ddf5-ffe8-4ccd-bf4b-6d4a36608a49")
     public static final String STEREOTYPE_NAME = "CapabilityStereotype";
 
     /**
      * The underlying {@link Class} represented by this proxy, never null.
-     * 
      */
-    @objid ("7d2b03f4-d7cc-4c35-9852-2d7262cf0ba8")
+    @objid ("9cd4765e-9286-4b0f-9f78-b2644a43fba2")
     protected final Class elt;
 
     /**
@@ -57,16 +56,17 @@ public class CapabilityStereotype implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("101ce7a2-1466-4d10-9c0a-3b6fc04d9a4c")
+    @objid ("228e95b4-0e69-48b1-9e62-725483fd8dbc")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (CapabilityStereotype.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(CapabilityStereotype.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link Class} stereotyped << CapabilityStereotype >> then instantiate a {@link CapabilityStereotype} proxy.
+     * 
      * @return a {@link CapabilityStereotype} proxy on the created {@link Class}.
      */
-    @objid ("4962eb3f-76ae-496e-8c50-36ee505f77ae")
+    @objid ("ebfd16dd-c0a5-41fd-bd97-64d9682811cc")
     public static CapabilityStereotype create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(CapabilityStereotype.MdaTypes.STEREOTYPE_ELT);
@@ -80,7 +80,7 @@ public class CapabilityStereotype implements IMdaProxy {
      * @param obj a Class
      * @return a {@link CapabilityStereotype} proxy or <i>null</i>.
      */
-    @objid ("b77e2b31-95d1-4e74-b6cc-840f7daabcc4")
+    @objid ("10df5261-9ce0-448b-b4fa-aeada46bb0e0")
     public static CapabilityStereotype instantiate(final Class obj) {
         return CapabilityStereotype.canInstantiate(obj) ? new CapabilityStereotype(obj) : null;
     }
@@ -89,19 +89,19 @@ public class CapabilityStereotype implements IMdaProxy {
      * Tries to instantiate a {@link CapabilityStereotype} proxy from a {@link Class} stereotyped << CapabilityStereotype >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link Class}
      * @return a {@link CapabilityStereotype} proxy.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("63ac6ab6-bb6c-46d2-9374-dfa89331097a")
+    @objid ("fcd27836-c336-4a9c-b4fc-df14596db503")
     public static CapabilityStereotype safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (CapabilityStereotype.canInstantiate(obj))
-            return new CapabilityStereotype(obj);
+        	return new CapabilityStereotype(obj);
         else
-            throw new IllegalArgumentException("CapabilityStereotype: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("CapabilityStereotype: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("615139ee-e99e-4597-b1a8-fe35959976ad")
+    @objid ("3e928f0f-7325-413f-924e-5971a470f831")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -118,37 +118,38 @@ public class CapabilityStereotype implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link Class}.
+     * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("6434904a-b6ad-494d-bebf-e0d83dff34fd")
+    @objid ("1986197e-11f3-4479-b51f-09e786643b6e")
     public Class getElement() {
         return this.elt;
     }
 
-    @objid ("ec488bf9-3010-4090-ad47-d98026e1b470")
+    @objid ("724abcc3-ca60-47dc-826e-63c2382cb4c6")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
+        
     }
 
-    @objid ("2406f6e2-1693-43ae-a4f8-cadad3a99047")
+    @objid ("68ba3bc1-a2c2-4bba-8a74-6217b483cdb5")
     protected  CapabilityStereotype(final Class elt) {
         this.elt = elt;
     }
 
-    @objid ("ff27f0dc-20a1-460f-a0c7-6b42c1eb9a6e")
+    @objid ("55a49bc8-116f-4c52-92b4-8d0a55872bf5")
     public static final class MdaTypes {
-        @objid ("e038015e-4bd2-4a81-874c-e49aef022870")
+        @objid ("193d9c88-2a8a-4cae-b768-39cfbf69ea13")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("e998f381-6483-48c4-a151-5242327cedcf")
+        @objid ("6ccd598b-f245-427f-bb86-0d529261a364")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("d3825752-6106-4e05-83f6-558dd0fcc4f9")
+        @objid ("144b135a-7216-47b9-a2be-c26f76f04bb9")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("e2775189-1527-405e-b1ef-3416516322e1")
+        @objid ("bd4533ed-29b1-4e84-afaf-43f561cc1bf1")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -165,6 +166,7 @@ public class CapabilityStereotype implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
+            
         }
 
     }

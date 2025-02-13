@@ -32,6 +32,7 @@ public class TDeploymentArtifactPropertyPage<T extends TDeploymentArtifact> exte
         case 5:
             this._element.setDeploy_path(value);
             break;
+            
         }
     }
 

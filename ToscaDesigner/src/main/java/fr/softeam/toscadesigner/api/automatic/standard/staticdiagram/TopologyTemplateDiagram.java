@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.1
 
- * This file was generated on 06/02/2025 17:32 by Modelio Studio.
+ * This file was generated on 13/02/2025 17:54 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.automatic.standard.staticdiagram;
 
@@ -38,16 +38,15 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-@objid ("5dc8afd0-4671-47d6-85bb-99c58ba3988c")
+@objid ("5690a531-d748-4d21-a33e-03dd25aeea24")
 public class TopologyTemplateDiagram implements IMdaProxy {
-    @objid ("5ab6d464-846c-4ba8-9f75-4479cb4dd4b7")
+    @objid ("62817519-e601-4439-9202-342800c7b304")
     public static final String STEREOTYPE_NAME = "TopologyTemplateDiagram";
 
     /**
      * The underlying {@link StaticDiagram} represented by this proxy, never null.
-     * 
      */
-    @objid ("9e8b5d43-ca27-41a9-a678-a2eadf075151")
+    @objid ("7049c22a-63fd-4972-a4c8-6c540becc6f3")
     protected final StaticDiagram elt;
 
     /**
@@ -57,16 +56,17 @@ public class TopologyTemplateDiagram implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("f0909bfa-199d-4332-9b13-e589e9a3a54e")
+    @objid ("3a0b51d1-c0b6-46af-af99-646c01ca5550")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof StaticDiagram) && (TopologyTemplateDiagram.MdaTypes.STEREOTYPE_ELT!=null) && ((StaticDiagram) elt).isStereotyped(TopologyTemplateDiagram.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link StaticDiagram} stereotyped << TopologyTemplateDiagram >> then instantiate a {@link TopologyTemplateDiagram} proxy.
+     * 
      * @return a {@link TopologyTemplateDiagram} proxy on the created {@link StaticDiagram}.
      */
-    @objid ("6c0c3319-6bc6-44a9-9566-881dfe04d565")
+    @objid ("a16635a6-be63-4c6e-8f20-fc57301c4200")
     public static TopologyTemplateDiagram create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.StaticDiagram");
         e.getExtension().add(TopologyTemplateDiagram.MdaTypes.STEREOTYPE_ELT);
@@ -80,7 +80,7 @@ public class TopologyTemplateDiagram implements IMdaProxy {
      * @param obj a StaticDiagram
      * @return a {@link TopologyTemplateDiagram} proxy or <i>null</i>.
      */
-    @objid ("9b93d52b-6851-49e0-a9e7-d2c920068828")
+    @objid ("65ade469-3c75-462a-bbd5-a274b430d11f")
     public static TopologyTemplateDiagram instantiate(final StaticDiagram obj) {
         return TopologyTemplateDiagram.canInstantiate(obj) ? new TopologyTemplateDiagram(obj) : null;
     }
@@ -89,19 +89,19 @@ public class TopologyTemplateDiagram implements IMdaProxy {
      * Tries to instantiate a {@link TopologyTemplateDiagram} proxy from a {@link StaticDiagram} stereotyped << TopologyTemplateDiagram >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link StaticDiagram}
      * @return a {@link TopologyTemplateDiagram} proxy.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("14500d3c-b98d-4b94-85a6-878bc0069dd5")
+    @objid ("3d8e827a-1a9d-4e77-a2bd-a4f2471258b6")
     public static TopologyTemplateDiagram safeInstantiate(final StaticDiagram obj) throws IllegalArgumentException {
         if (TopologyTemplateDiagram.canInstantiate(obj))
-            return new TopologyTemplateDiagram(obj);
+        	return new TopologyTemplateDiagram(obj);
         else
-            throw new IllegalArgumentException("TopologyTemplateDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
+        	throw new IllegalArgumentException("TopologyTemplateDiagram: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("16eceb3d-253a-4c8f-a9c1-f1c86c25a88c")
+    @objid ("7d369476-6755-4725-a514-032ae4ca9060")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -118,37 +118,38 @@ public class TopologyTemplateDiagram implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link StaticDiagram}.
+     * Get the underlying {@link StaticDiagram}. 
      * @return the StaticDiagram represented by this proxy, never null.
      */
-    @objid ("718b1ecd-8448-4d62-93a5-0778c7fe3d26")
+    @objid ("e743275d-25a9-4d70-9690-18c69f717c17")
     public StaticDiagram getElement() {
         return this.elt;
     }
 
-    @objid ("e1b4ae58-58a1-4156-9310-a357b98ae09b")
+    @objid ("979c33a8-19bb-472a-a3bd-ee4f2667c636")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
+        
     }
 
-    @objid ("5f172643-d636-40bc-ae5a-5981380ef64f")
+    @objid ("5365cc94-a534-421f-8a10-482e46b48a19")
     protected  TopologyTemplateDiagram(final StaticDiagram elt) {
         this.elt = elt;
     }
 
-    @objid ("6206bfca-0c44-4000-871e-5bf04527a702")
+    @objid ("a75a5020-1077-4e84-8bb0-72f5c433615f")
     public static final class MdaTypes {
-        @objid ("800f4002-840a-473f-982d-68b4978b315b")
+        @objid ("1ee371f1-c60d-4987-93a3-d806981a57cc")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("3309329e-43da-4a7a-941a-1ca5af550232")
+        @objid ("e89b5456-6dcf-4c8e-988d-e3a9dbd458c2")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("10f060b5-1a48-4815-8ba7-b85a641a3f9a")
+        @objid ("61423174-5e7e-4c4d-a8c5-99827b90bc7d")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("b44dc0a6-aa7e-48d5-bde1-5e4419cae510")
+        @objid ("c4fa3ae8-0663-4085-9d4e-587ad87e89da")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -165,6 +166,7 @@ public class TopologyTemplateDiagram implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
+            
         }
 
     }
