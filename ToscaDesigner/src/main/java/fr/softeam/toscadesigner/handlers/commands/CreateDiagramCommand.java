@@ -8,9 +8,9 @@ import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.diagrams.AbstractDiagram;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("3f96b675-50dd-40ba-9977-16d6cf5453a6")
+@objid ("d090e250-dce0-4a9d-972a-5cb87dd0fc00")
 public class CreateDiagramCommand extends DiagramCreationStandardHandler {
-    @objid ("4eeca7f2-703f-4167-bce1-a39d8a40b41e")
+    @objid ("222a73c9-342f-4533-824c-82157f46fe67")
     @Override
     public boolean accept(final List<MObject> selectedElements, final IModule module) {
         // Generated call to the super method will check the scope conditions defined in
@@ -24,7 +24,7 @@ public class CreateDiagramCommand extends DiagramCreationStandardHandler {
         return true;
     }
 
-    @objid ("59754ec2-6f67-4186-8ef6-a6ab7d4e44d8")
+    @objid ("065c5fd2-82d6-4807-8908-c6d8e9841da5")
     @Override
     protected void postConfigureElement(final MObject newDiagram, final IModule module) {
         // This method is a hook called once the element is created and configured and

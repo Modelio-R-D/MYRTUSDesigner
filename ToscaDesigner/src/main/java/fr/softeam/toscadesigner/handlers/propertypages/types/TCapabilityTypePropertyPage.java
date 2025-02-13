@@ -5,15 +5,15 @@ import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityType;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
-@objid ("a5e24f42-dfbb-4164-ac65-6e9b6078242c")
+@objid ("fc40a086-4b51-4fac-b383-3dc322b43f67")
 public class TCapabilityTypePropertyPage<T extends TCapabilityType> extends ToscaElementPropertyPage<T> {
-    @objid ("ad5f3d46-c5f3-4bc5-813c-41497a2213da")
+    @objid ("07c26eb1-c448-4c0c-8123-55bb13dc9426")
     public  TCapabilityTypePropertyPage(T elt) {
         super(elt);
         // TODO Auto-generated constructor stub
     }
 
-    @objid ("324a8b00-a497-453e-b178-506094460523")
+    @objid ("b52771c5-a95b-4714-ac16-0aee431a7f35")
     @Override
     public void changeProperty(int row, String value) {
         switch (row) {
@@ -23,7 +23,7 @@ public class TCapabilityTypePropertyPage<T extends TCapabilityType> extends Tosc
         }
     }
 
-    @objid ("4dde6d6a-effd-4413-bd71-9118f2e7c32b")
+    @objid ("1e525070-9a9e-4e5f-bf4e-2800e8090c15")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);

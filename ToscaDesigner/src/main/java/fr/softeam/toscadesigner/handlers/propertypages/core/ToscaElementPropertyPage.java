@@ -10,24 +10,24 @@ import fr.softeam.toscadesigner.handlers.propertypages.IPropertyContent;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 
-@objid ("4a086c41-a7ac-4984-8917-85fb7f0be381")
+@objid ("ef6dc775-f55a-43cc-a411-dd5145d9546b")
 public abstract class ToscaElementPropertyPage<T extends Object> implements IPropertyContent {
-    @objid ("8d49f630-4b14-44d3-8f25-5f1962392847")
+    @objid ("f2408d6e-28e4-41e9-a429-b02f0992aa8b")
     private final String _ownerSeparator = ".";
 
-    @objid ("7069793a-3b14-4b18-8271-6479ed7764b9")
+    @objid ("316d7501-5f47-4c29-9a02-15892aa8f45c")
     protected final String _eltSeparator = "; ";
 
-    @objid ("aab8ae3f-66ab-4b98-81f4-8e664328228a")
+    @objid ("907d654e-ee98-448e-b8dd-59963282abdf")
     protected final String _add = "Add ";
 
-    @objid ("9c0ff953-a9cd-4c32-8253-0464351b8946")
+    @objid ("19fc213c-8d2d-4f9c-b497-f0cd006b48bb")
     protected final String _remove = "Remove ";
 
-    @objid ("ee5a8326-d85b-4e80-8edb-11a80491fbea")
+    @objid ("bb1c73de-caed-471e-b466-f86b73527224")
     protected final String _removeAll = "Remove all";
 
-    @objid ("c843da58-1db9-456c-bf8e-883d19dec1de")
+    @objid ("2b755914-7851-4b12-bf0c-82725ef9f44b")
     protected T _element;
 
     /**
@@ -36,7 +36,7 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
      * @param row : the row of the changed property
      * @param value : the new value of the property
      */
-    @objid ("2a58af51-10e8-434c-b3f6-bc451232cf4f")
+    @objid ("72314037-8122-4b02-8aee-b28469838f14")
     @Override
     public void changeProperty(int row, String value) {
         
@@ -47,13 +47,13 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
      * element
      * @param table : the property table to fulfill
      */
-    @objid ("482fd9a4-83bb-4a19-89e1-0d047001b738")
+    @objid ("54227650-a7c0-47ee-adf3-24ee2e755443")
     @Override
     public void update(IModulePropertyTable table) {
         
     }
 
-    @objid ("a146a6fd-e6aa-484b-b160-ef91b41e55d4")
+    @objid ("d92fe027-688f-4ca9-a1fc-f6318e34dc38")
     public  ToscaElementPropertyPage(T elt) {
         this._element = elt;
     }
@@ -63,12 +63,12 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
      * @param elt : the model Element
      * @return the computed name
      */
-    @objid ("4bd8c04b-5b68-4d6c-89f3-d9f6c8038ef0")
+    @objid ("11d471f4-2112-4d05-9728-39bdea4cc663")
     protected String getToscaName(ModelElement elt) {
         return elt.getCompositionOwner().getName() + this._ownerSeparator + elt.getName();
     }
 
-    @objid ("ea941bed-7539-4d26-966b-0dee42eee8b2")
+    @objid ("9b6983a8-f9e6-47cf-9024-a9bcfe81a86a")
     protected String[] getToscaNames(List<? extends ModelElement> elts) {
         List<String> result = new ArrayList<>();
         result.add(" ");
@@ -78,7 +78,7 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
         return result.toArray(new String[result.size()]);
     }
 
-    @objid ("4078347a-bb71-4509-8453-e420b92c5513")
+    @objid ("f687be00-1013-4a75-90ba-53a326547aa8")
     protected ModelElement getModelElt(List<? extends ModelElement> elts, String camelName) {
         String name = camelName.replaceFirst(this._add, "").replaceFirst(this._remove, "");
         
@@ -90,7 +90,7 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
         return null;
     }
 
-    @objid ("ee1ca449-9570-4775-96af-f19ff9714f02")
+    @objid ("7eb0eb0a-c5d0-468d-8493-7a14b0aa8427")
     protected ModelElement getElt(List<ModelElement> elts, String name) {
         for (ModelElement elt : elts) {
             if (getToscaName(elt).equals(name))
@@ -99,7 +99,7 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
         return null;
     }
 
-    @objid ("708e0f82-6948-469c-a787-a22d28d9a83d")
+    @objid ("2e87a984-cf8c-4ff1-a876-548f1c7ae6c5")
     protected String[] getAddRemove(List<ModelElement> allElt, List<? extends ModelElement> added) {
         // List of added Elts , remove Elts
         List<String> result = new ArrayList<>();
@@ -123,7 +123,7 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
         return result.toArray(new String[result.size()]);
     }
 
-    @objid ("66738b7f-e046-460a-bc15-6316275e812c")
+    @objid ("ac7eb6c0-cb5e-4daf-b518-1c8946b4d8e8")
     protected String getToscaValue(List<? extends ModelElement> elts) {
         String result = "";
         Iterator<? extends ModelElement> it = elts.iterator();
@@ -138,7 +138,7 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
         return result;
     }
 
-    @objid ("998eb399-4c0c-41ab-bd55-42ebce68f1c5")
+    @objid ("18768d2d-a3f7-4f9c-8ce4-758b26c49d07")
     protected ModelElement getToscalElt(List<? extends ModelElement> elts, String toscaName) {
         String name = toscaName.replaceFirst(this._add, "").replaceFirst(this._remove, "");
         
@@ -150,14 +150,14 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
         return null;
     }
 
-    @objid ("27dccb79-6b31-4e64-9418-dc22d0059848")
+    @objid ("b044148f-9657-49ce-a031-7e8c2ad2b00e")
     protected String getNotNull(String value) {
         if (value == null)
             return "";
         return value;
     }
 
-    @objid ("68cd6e12-17c0-4eff-8f49-fad71962e7cc")
+    @objid ("f6b10951-3518-48be-8d3a-5ad31f9f1ae2")
     public static <T extends IMdaProxy> List<ModelElement> extractModelElements(List<T> members) {
         List<ModelElement> members_elt = new ArrayList<>();
         for (int i = 0; i < members.size(); i++) {

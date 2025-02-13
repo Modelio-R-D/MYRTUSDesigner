@@ -10,15 +10,15 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("76375cca-ef3c-403b-9da3-a87a7dbf0475")
+@objid ("5de69f13-68dc-4489-bca1-b2e732a50ca9")
 public class TRelationshipTypePropertyPage<T extends TRelationshipType> extends TEntityTypePropertyPage<T> {
-    @objid ("234abe0c-77ea-465c-8e37-38119f58c05a")
+    @objid ("d8b700e8-5092-4f3b-a08e-a84d393dc18e")
     public  TRelationshipTypePropertyPage(T elt) {
         super(elt);
         // TODO Auto-generated constructor stub
     }
 
-    @objid ("ed7b67d1-80c3-44e9-a7a8-1d487c6cda01")
+    @objid ("86c38ef5-9af9-42c3-afb5-392191c97b25")
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
@@ -57,34 +57,34 @@ public class TRelationshipTypePropertyPage<T extends TRelationshipType> extends 
            }
     }
 
-    @objid ("45cf89b2-2ce0-4472-a1ff-c81b56a5013c")
+    @objid ("83888144-0dc4-4620-8f1a-bde83d9522b2")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
         /*
-                                 * //Instance states table.addProperty("Instance States",
-                                 * this._element.getInstanceStates() != null ?
-                                 * this._element.getInstanceStates().getElement() : null,
-                                 * Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
-                                 * 
-                                 * @Override public boolean accept(MObject element) { return
-                                 * TTopologyElementInstanceStates.canInstantiate(element); } }); //Source
-                                 * Interfaces table.addProperty("Source Interfaces",
-                                 * this._element.getSourceInterfaces() != null ?
-                                 * this._element.getSourceInterfaces().getElement() : null,
-                                 * Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
-                                 * 
-                                 * @Override public boolean accept(MObject element) { return
-                                 * SourceInterfacesType.canInstantiate(element); } });
-                                 * 
-                                 * //Target Interfaces table.addProperty("Target Interfaces",
-                                 * this._element.getTargetInterfaces() != null ?
-                                 * this._element.getTargetInterfaces().getElement() : null,
-                                 * Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
-                                 * 
-                                 * @Override public boolean accept(MObject element) { return
-                                 * TargetInterfacesType.canInstantiate(element); } });
-                                 */
+                                         * //Instance states table.addProperty("Instance States",
+                                         * this._element.getInstanceStates() != null ?
+                                         * this._element.getInstanceStates().getElement() : null,
+                                         * Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+                                         * 
+                                         * @Override public boolean accept(MObject element) { return
+                                         * TTopologyElementInstanceStates.canInstantiate(element); } }); //Source
+                                         * Interfaces table.addProperty("Source Interfaces",
+                                         * this._element.getSourceInterfaces() != null ?
+                                         * this._element.getSourceInterfaces().getElement() : null,
+                                         * Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+                                         * 
+                                         * @Override public boolean accept(MObject element) { return
+                                         * SourceInterfacesType.canInstantiate(element); } });
+                                         * 
+                                         * //Target Interfaces table.addProperty("Target Interfaces",
+                                         * this._element.getTargetInterfaces() != null ?
+                                         * this._element.getTargetInterfaces().getElement() : null,
+                                         * Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+                                         * 
+                                         * @Override public boolean accept(MObject element) { return
+                                         * TargetInterfacesType.canInstantiate(element); } });
+                                         */
         table.addProperty("Name", _element.getElement().getName());
         table.addProperty("Derived From",
                 this._element.getDerivedFrom() != null ? this._element.getDerivedFrom().getElement() : null,

@@ -16,16 +16,16 @@ import org.modelio.api.module.context.IModuleContext;
 import org.modelio.api.module.context.log.ILogService;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("2d92cb62-7c2c-4018-a6c4-9827e6fce96d")
+@objid ("8a84facc-79c8-4a3e-9ae0-2a5310c69779")
 public class ExportToscaModelCommand extends DefaultModuleCommandHandler {
-    @objid ("a70d26bf-fbd4-4a6f-b63c-1111d4cae85e")
+    @objid ("7b47b7a1-f829-4217-8dde-3feeff75281f")
     private ILogService logger;
 
-    @objid ("e1e45886-a5ca-425e-a51b-dae8b2632629")
+    @objid ("670e5efc-bdb5-499b-9735-52c1dcdd2556")
     private final ToscaObjectTypeChecker[] checkers = { new ToscaModelChecker(), new NodeTypeChecker(),
-    			new TopologyTemplateChecker() };
+        			new TopologyTemplateChecker() };
 
-    @objid ("0344fafe-de20-40fe-b77b-225c67cfd682")
+    @objid ("d43647a9-2319-464f-b59a-8242372555dd")
     @Override
     public void actionPerformed(List<MObject> selectedObjects, IModule module) {
         IModuleContext moduleContext = module.getModuleContext();

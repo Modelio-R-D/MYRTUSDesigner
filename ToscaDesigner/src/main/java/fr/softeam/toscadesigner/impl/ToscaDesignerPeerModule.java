@@ -1,45 +1,46 @@
 package fr.softeam.toscadesigner.impl;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.module.IPeerModule;
 import org.modelio.api.module.context.configuration.IModuleAPIConfiguration;
 import org.modelio.vbasic.version.Version;
 
-@objid ("45eae62e-3ca2-4147-9843-7b75b7385a28")
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+@objid ("483febc5-912f-4855-87ab-978908d6e762")
 public class ToscaDesignerPeerModule implements IPeerModule {
-    @objid ("bf494723-b984-4e79-8900-554994e525d1")
+    @objid ("523199a1-6406-4802-b3c1-4844597e8b3e")
     private IModuleAPIConfiguration peerConfiguration;
 
-    @objid ("44fa402b-3a30-4cac-819f-ea72f30a5a29")
+    @objid ("cd208989-cd06-44fe-a4d5-6525cec196f3")
     private ToscaDesignerModule module = null;
 
-    @objid ("b124a821-5687-4b82-996e-370fc7729547")
+    @objid ("66bbce75-6ed9-4b6c-9942-5d563d773b94")
     public  ToscaDesignerPeerModule(final ToscaDesignerModule module, final IModuleAPIConfiguration peerConfiguration) {
         this.module = module;
         this.peerConfiguration = peerConfiguration;
     }
 
-    @objid ("19af3b88-c744-4496-a320-ed4d82c56baf")
+    @objid ("0d69d19f-dc8e-4651-aa8a-edab3ad5cc3e")
     public IModuleAPIConfiguration getConfiguration() {
         return this.peerConfiguration;
     }
 
-    @objid ("3eb8c31d-f243-4773-a48d-2a85a7666475")
+    @objid ("31d25c75-ec7c-4667-bc2d-57c1f83f62f1")
     public String getDescription() {
         return this.module.getDescription();
     }
 
-    @objid ("fa7e2794-6683-4a48-9ff0-8f5f2d7d7b0a")
+    @objid ("aec01f1b-9749-4c2f-ae39-ea4afdd8f7c8")
     public String getName() {
         return this.module.getName();
     }
 
-    @objid ("97387ee1-f3a4-432d-bf1d-6f7664be8d89")
+    @objid ("8a27d4ef-ff55-42cd-9929-1c163e695ef9")
     public Version getVersion() {
         return this.module.getVersion();
     }
 
-    @objid ("9cfeab48-5bcd-4c80-abfd-b551f7d6a39d")
+    @objid ("5c2b8879-737f-432d-8551-83e6dfe2b29b")
     void init() {
         
     }

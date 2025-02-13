@@ -15,24 +15,24 @@ import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.diagrams.ClassDiagram;
 import org.modelio.metamodel.uml.statik.Package;
 
-@objid ("88dc7db6-1d21-456a-917b-f05ae1de5d8b")
+@objid ("c8bf3d8d-3063-40dc-8a03-bd7fad710efd")
 public class CreateServiceTemplateTool extends CreateSubModelTool {
-    @objid ("a9e027ec-712d-417a-96ed-ac53a0ca7efd")
+    @objid ("59072171-0616-42f5-8008-fc60d445d264")
     @Override
     public boolean acceptElement(IDiagramHandle arg0, IDiagramGraphic arg1) {
         // TODO Auto-generated method stub
         return super.acceptElement(arg1);
     }
 
-    @objid ("f96f95bd-9028-4d8b-89f1-d7985526e4db")
+    @objid ("995b668f-42e8-445e-910a-c0a979d0131f")
     @Override
     public void actionPerformed(IDiagramHandle diagramHandle, IDiagramGraphic parent, Rectangle rect) {
         /*
-                                 * System.out.print(parent); ClassDiagram diag = (ClassDiagram)
-                                 * parent.getElement().getCompositionOwner();
-                                 * org.modelio.metamodel.uml.statik.Package packageOwner =
-                                 * (org.modelio.metamodel.uml.statik.Package) diag .getOrigin();
-                                 */
+                                         * System.out.print(parent); ClassDiagram diag = (ClassDiagram)
+                                         * parent.getElement().getCompositionOwner();
+                                         * org.modelio.metamodel.uml.statik.Package packageOwner =
+                                         * (org.modelio.metamodel.uml.statik.Package) diag .getOrigin();
+                                         */
         Package packageOwner = (Package) parent.getElement().getCompositionOwner();
         
         IModuleContext moduleContext = ToscaDesignerModule.getInstance().getModuleContext();

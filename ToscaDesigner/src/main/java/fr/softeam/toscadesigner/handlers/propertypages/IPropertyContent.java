@@ -34,7 +34,7 @@ import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 /**
  * This interface defines the contract of all property pages
  */
-@objid ("35d19e45-5906-45ec-b5f7-428a42329c72")
+@objid ("f25b3273-075f-4c94-baaa-50934af8e7eb")
 public interface IPropertyContent {
     /**
      * This method handles the changes of the given property, identified by its row
@@ -42,7 +42,7 @@ public interface IPropertyContent {
      * @param row : the row of the changed property
      * @param value : the new value of the property
      */
-    @objid ("ec859bac-8856-4ecd-899a-6b21df6dd192")
+    @objid ("b5050450-a43e-4679-839c-3af03a393b4b")
     void changeProperty(int row, String value);
 
     /**
@@ -50,7 +50,7 @@ public interface IPropertyContent {
      * element
      * @param table : the property table to fulfill
      */
-    @objid ("e428b814-eb93-407d-a165-cd7885464aa1")
+    @objid ("ee4e41b7-0ffb-466e-8c19-e09c89d7149d")
     void update(IModulePropertyTable table);
 }
 

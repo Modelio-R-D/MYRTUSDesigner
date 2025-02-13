@@ -6,9 +6,9 @@ import org.modelio.api.module.IModule;
 import org.modelio.api.module.command.standard.ElementCreationStandardHandler;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("749e5c6f-d3dd-4eea-a4e2-1d0eceb3e48a")
+@objid ("85615c3f-a488-467a-b953-180bac2f5547")
 public class CreateToscaModelCommand extends ElementCreationStandardHandler {
-    @objid ("7f47fbf0-d558-4939-920d-0f5b8b0f0fb1")
+    @objid ("7355904f-4f80-495e-be55-804710798f19")
     @Override
     public boolean accept(final List<MObject> selectedElements, final IModule module) {
         // Generated call to the super method will check the scope conditions defined in
@@ -22,7 +22,7 @@ public class CreateToscaModelCommand extends ElementCreationStandardHandler {
         return true;
     }
 
-    @objid ("daf71868-77d6-408b-9813-2eed53854fe7")
+    @objid ("13afde63-7d9c-468d-b67f-8c7e227e76ef")
     @Override
     protected void postConfigureElement(final MObject newElement, final IModule module) {
         // This method is a hook called once the element is created and configured and

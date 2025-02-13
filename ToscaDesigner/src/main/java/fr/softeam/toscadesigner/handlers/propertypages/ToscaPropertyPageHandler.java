@@ -8,14 +8,14 @@ import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("5635dc32-d607-44ef-bf38-78a08ccba98b")
+@objid ("605b30e3-8090-4ad4-af23-0f35cc28c69f")
 public class ToscaPropertyPageHandler extends AbstractModulePropertyPage {
-    @objid ("f74ce1e1-4019-4519-b1cc-99ce2aa23c8f")
+    @objid ("b05cb9e6-0f59-442c-8827-5b968d1677b0")
     public  ToscaPropertyPageHandler(final IModule module, final String name, final String label, final String bitmap) {
         super(module, name, label, bitmap);
     }
 
-    @objid ("89b5f73a-8bd7-4f39-b06a-e0e66d31b574")
+    @objid ("fe3bb8ab-07c1-4f16-be18-525bd8803ac5")
     @Override
     public void update(final List<MObject> selectedElements, final IModulePropertyTable table) {
         if ((selectedElements != null) && (selectedElements.size() > 0) && (selectedElements.get(0) != null)
@@ -31,7 +31,7 @@ public class ToscaPropertyPageHandler extends AbstractModulePropertyPage {
         }
     }
 
-    @objid ("5e770529-3f99-4217-bae9-012284fe56df")
+    @objid ("0dea3732-72a4-4d81-9157-dc02fc6c2066")
     @Override
     public void changeProperty(final List<MObject> selectedElements, final int row, final String value) {
         if ((selectedElements != null) && (selectedElements.size() > 0)
@@ -46,7 +46,7 @@ public class ToscaPropertyPageHandler extends AbstractModulePropertyPage {
         }
     }
 
-    @objid ("4a688c5f-1d34-4778-aa11-ca313898aab3")
+    @objid ("18f839de-f6ed-41ce-b4f1-9385a5b32dd5")
     private IPropertyContent getPropertyPage(ModelElement elt) {
         Object result = ToscaDesignerPropertyPageFactory.instantiatePropertyPage(elt);
         if (result instanceof IPropertyContent) {

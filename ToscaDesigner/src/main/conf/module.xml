@@ -2,16 +2,6 @@
 <Module id="ToscaDesigner" class="fr.softeam.toscadesigner.impl.ToscaDesignerModule" binaryversion="5.4.01" version="0.0.1" schema-level="2" uid="942db9f9-6869-472c-b269-9ca7ec36a014" author="Softeam" image="" url="">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
-        <PathEntry path="lib/commons-text-1.11.0.jar"/>
-        <PathEntry path="lib/nashorn-core-15.4.jar"/>
-        <PathEntry path="lib/asm-7.3.1.jar"/>
-        <PathEntry path="lib/asm-commons-7.3.1.jar"/>
-        <PathEntry path="lib/asm-analysis-7.3.1.jar"/>
-        <PathEntry path="lib/asm-tree-7.3.1.jar"/>
-        <PathEntry path="lib/asm-util-7.3.1.jar"/>
-        <PathEntry path="lib/antlr4-runtime-4.5.1-1.jar"/>
-        <PathEntry path="lib/commons-lang3-3.1.jar"/>
-        <PathEntry path="lib/rhino-1.7R4.jar"/>
         <PathEntry path="lib/handlebars-4.3.1.jar"/>
         <PathEntry path="lib/slf4j-api-1.7.32.jar"/>
     </ClassPath>
@@ -504,21 +494,37 @@
                 <Icon path="res/icon/gui/deploymentArtifact24.png"/>
                 <Image path="res/icon/gui/deploymentArtifact48.png"/>
                 <PropertyTable id="TDeploymentArtifactTable" label="%propertytable.TDeploymentArtifactTable.label" uid="e1a47f10-7786-44c4-b602-5f8eb918638d">
-                    <PropertyDefinition id="artifactType" label="%propertydefinition.TDeploymentArtifactTable.artifactType.label" default-value="" is-editable="true" uid="11b2ec8c-7e88-4012-b051-c5ff3843b3d7">
+                    <PropertyDefinition id="type" label="%propertydefinition.TDeploymentArtifactTable.type.label" default-value="" is-editable="true" uid="11b2ec8c-7e88-4012-b051-c5ff3843b3d7">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TDeploymentArtifactTable.artifactType.description</Description>
+                        <Description>%propertydefinition.TDeploymentArtifactTable.type.description</Description>
                     </PropertyDefinition>
-                    <PropertyDefinition id="artifactref" label="%propertydefinition.TDeploymentArtifactTable.artifactref.label" default-value="" is-editable="true" uid="7acf9bc4-9dc3-4663-8355-4368413f2578">
+                    <PropertyDefinition id="file" label="%propertydefinition.TDeploymentArtifactTable.file.label" default-value="" is-editable="true" uid="7acf9bc4-9dc3-4663-8355-4368413f2578">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TDeploymentArtifactTable.artifactref.description</Description>
+                        <Description>%propertydefinition.TDeploymentArtifactTable.file.description</Description>
                     </PropertyDefinition>
-                    <PropertyDefinition id="File" label="%propertydefinition.TDeploymentArtifactTable.File.label" default-value="" is-editable="true" uid="198ef816-98ff-465e-af75-32bdb5f9da13">
+                    <PropertyDefinition id="repository" label="%propertydefinition.TDeploymentArtifactTable.repository.label" default-value="" is-editable="true" uid="198ef816-98ff-465e-af75-32bdb5f9da13">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TDeploymentArtifactTable.File.description</Description>
+                        <Description>%propertydefinition.TDeploymentArtifactTable.repository.description</Description>
                     </PropertyDefinition>
-                    <PropertyDefinition id="Deploy_path" label="%propertydefinition.TDeploymentArtifactTable.Deploy_path.label" default-value="" is-editable="true" uid="be5a4c69-add9-4d4c-99cb-05a0a69359ba">
+                    <PropertyDefinition id="description" label="%propertydefinition.TDeploymentArtifactTable.description.label" default-value="" is-editable="true" uid="2fd370da-daeb-4519-9f06-967d3e3cb882">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TDeploymentArtifactTable.Deploy_path.description</Description>
+                        <Description>%propertydefinition.TDeploymentArtifactTable.description.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="deploy_path" label="%propertydefinition.TDeploymentArtifactTable.deploy_path.label" default-value="" is-editable="true" uid="c8fa55fe-6ff5-4ec5-9d1f-f32385091030">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TDeploymentArtifactTable.deploy_path.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="artifact_version" label="%propertydefinition.TDeploymentArtifactTable.artifact_version.label" default-value="" is-editable="true" uid="1774043f-fb09-4265-bbe1-c43047c05ff7">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TDeploymentArtifactTable.artifact_version.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="checksum" label="%propertydefinition.TDeploymentArtifactTable.checksum.label" default-value="" is-editable="true" uid="b7dc26ea-f4bf-4f9f-b847-cc89ba624530">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TDeploymentArtifactTable.checksum.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="checksum_algortihm" label="%propertydefinition.TDeploymentArtifactTable.checksum_algortihm.label" default-value="" is-editable="true" uid="a0b664be-6ddd-4e45-8208-113c85c48101">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TDeploymentArtifactTable.checksum_algortihm.description</Description>
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
@@ -1050,8 +1056,8 @@
             </Command>
             <Command id="Export" label="%command.Export.label" tooltip="%command.Export.tooltip" image="res/icon/gui/export.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="ToscaDesigner#ToscaModel"/>
-                <Scope metaclass="Infrastructure.ModelElement" stereotype="ToscaDesigner#TNodeType"/>
-                <Scope metaclass="Infrastructure.ModelElement" stereotype="ToscaDesigner#TTopologyTemplate"/>
+                <Scope metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeType"/>
+                <Scope metaclass="Standard.Package" stereotype="ToscaDesigner#TTopologyTemplate"/>
                 <Handler class="fr.softeam.toscadesigner.handlers.commands.ExportToscaModelCommand">
                     <HParameter name="name" value=""/>
                 </Handler>
@@ -1126,6 +1132,7 @@
             <Tool id="Metadata" label="%tool.Metadata.label" tooltip="%tool.Metadata.tooltip" image="res/icon/gui/metadata24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="ToscaDesigner#TTopologyTemplate"/>
                 <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeTemplate"/>
+                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeType"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#Metadata"/>
                     <HParameter name="metaclass" value="Standard.Attribute"/>

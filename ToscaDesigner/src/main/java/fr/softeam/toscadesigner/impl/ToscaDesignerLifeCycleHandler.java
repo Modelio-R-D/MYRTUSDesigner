@@ -3,8 +3,7 @@ package fr.softeam.toscadesigner.impl;
 import java.io.File;
 import java.nio.file.Path;
 import java.util.Map;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
+
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.modelio.api.modelio.mc.IModelComponentDescriptor;
 import org.modelio.api.modelio.mc.IModelComponentService;
@@ -12,20 +11,24 @@ import org.modelio.api.module.lifecycle.DefaultModuleLifeCycleHandler;
 import org.modelio.api.module.lifecycle.ModuleException;
 import org.modelio.vbasic.version.Version;
 
-@objid ("e70ed160-3df8-403b-9c56-82de62675ef2")
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
+
+@objid ("365c000d-ee50-4570-a858-4916436eefa8")
 public class ToscaDesignerLifeCycleHandler extends DefaultModuleLifeCycleHandler {
-    @objid ("a6ee46a0-bcf4-461c-8968-3903ff1758d4")
+    @objid ("b939d73f-d878-40c1-825b-ae7f77d28f04")
     private String _ramcVersion = "0.0.01";
 
-    @objid ("67665be9-59e9-42b5-a1c4-5d8b75b54098")
+    @objid ("4425dd59-664e-4147-82d4-0a71e1d42ff3")
     private String _toscaLibrary = "ToscaLibrary";
 
-    @objid ("5afa298a-5b22-44ed-b1a3-6e31e05e9a81")
+    @objid ("76af05c6-475e-42b7-b1bc-d7b9921a5dc1")
     public  ToscaDesignerLifeCycleHandler(final ToscaDesignerModule module) {
         super(module);
     }
 
-    @objid ("482bfb70-aa2a-4acf-b75a-f825fe27144b")
+    @objid ("4d7e0ff3-c99c-429d-93e2-47bac9ef947c")
     @Override
     public boolean start() throws ModuleException {
         try {
@@ -40,7 +43,7 @@ public class ToscaDesignerLifeCycleHandler extends DefaultModuleLifeCycleHandler
         return super.start();
     }
 
-    @objid ("1a3ea6b7-823c-4a04-b866-54b6875eb715")
+    @objid ("3a18097b-3c02-435f-80a6-36347f71725f")
     @Override
     public void stop() throws ModuleException {
         super.stop();
@@ -49,30 +52,30 @@ public class ToscaDesignerLifeCycleHandler extends DefaultModuleLifeCycleHandler
     /**
      * @return
      */
-    @objid ("3c043f01-ab0d-47c6-baea-c7fc364651b9")
+    @objid ("3031965b-1588-4f7d-b0c7-089ceb883f9d")
     public static boolean install(final String modelioPath, final String mdaPath) throws ModuleException {
         return DefaultModuleLifeCycleHandler.install(modelioPath, mdaPath);
     }
 
-    @objid ("442becbc-5092-4706-b1a8-b58241e702cc")
+    @objid ("da65896b-7b30-4d3c-9ad5-f44df0e4ae11")
     @Override
     public boolean select() throws ModuleException {
         return super.select();
     }
 
-    @objid ("56b555fa-19d5-4048-aa47-25d35dd6e3b2")
+    @objid ("381ad9d0-ae66-4108-a844-926dcb3daf05")
     @Override
     public void upgrade(final Version oldVersion, final Map<String, String> oldParameters) throws ModuleException {
         super.upgrade(oldVersion, oldParameters);
     }
 
-    @objid ("7c082c67-b93b-49d4-9e2f-3247dcb001d1")
+    @objid ("91521d00-965a-456c-8016-69eb3c0245e8")
     @Override
     public void unselect() throws ModuleException {
         super.unselect();
     }
 
-    @objid ("a6f07fd9-62a2-4664-a2ba-a50a4dba8b44")
+    @objid ("579b391d-2d31-4ba5-b5f4-ed5984e7df7d")
     private void installRamc() {
         Path mdaplugsPath = this.module.getModuleContext().getConfiguration().getModuleResourcesPath();
         

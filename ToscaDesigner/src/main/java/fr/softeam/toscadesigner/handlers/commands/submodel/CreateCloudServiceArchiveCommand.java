@@ -12,9 +12,9 @@ import org.modelio.metamodel.uml.infrastructure.Profile;
 import org.modelio.metamodel.uml.statik.Package;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("cb111baa-cad6-4863-be35-cc7f94bab92a")
+@objid ("ac81ee47-8dae-420e-9d31-58f76304cf7e")
 public class CreateCloudServiceArchiveCommand extends CreateSubModelCommand {
-    @objid ("de2be737-ee19-4387-ab04-13e6dd21b937")
+    @objid ("f0e350b0-614d-490e-a2af-24ad6afbb4dc")
     @Override
     public void actionPerformed(final List<MObject> selectedElements, final IModule module) {
         org.modelio.metamodel.uml.statik.Package packageOwner = (org.modelio.metamodel.uml.statik.Package) selectedElements.get(0);
@@ -38,7 +38,7 @@ public class CreateCloudServiceArchiveCommand extends CreateSubModelCommand {
         }
     }
 
-    @objid ("40d64938-d033-40ee-9f7e-454c58b3a4a1")
+    @objid ("449378a0-a13d-430a-8a8e-9fb31aed3298")
     @Override
     public boolean accept(final List<MObject> selectedElements, final IModule module) {
         if ((selectedElements != null) && (selectedElements.size() == 1)){

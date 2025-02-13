@@ -1,15 +1,16 @@
 package fr.softeam.toscadesigner.export;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.module.context.log.ILogService;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("3355ecad-1c29-4bf5-a867-77eaa7921422")
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+@objid ("72a0ec44-4986-4d12-9ef3-9986a8c88162")
 public interface ToscaObjectTypeChecker {
-    @objid ("a072dc24-a50f-4bff-b3d3-50288159b87d")
+    @objid ("dd3b6d47-bafd-47e2-930c-16cda7ca2dda")
     boolean isTypeOf(MObject object);
 
-    @objid ("5dbeb04f-6ef9-4198-a89d-f89b91813858")
+    @objid ("94fb15e7-f607-4abc-b91b-2b7408d99f59")
     AbstractToscaFileGenerator createGenerator(ILogService logger);
 }
 

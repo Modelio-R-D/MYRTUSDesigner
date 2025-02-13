@@ -23,15 +23,15 @@ import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("a7f33f74-8435-4a95-a221-94a56c5f4cfd")
+@objid ("a4a7341d-8b2f-4f32-992d-bf6f5f20b620")
 public class TServiceTemplatePropertyPage<T extends TServiceTemplate> extends ToscaElementPropertyPage<T> {
-    @objid ("6b40406a-9893-459b-872a-046f069c5b49")
+    @objid ("8736ed70-ef55-40e6-a3d8-dc09e36df100")
     public  TServiceTemplatePropertyPage(T elt) {
         super(elt);
         // TODO Auto-generated constructor stub
     }
 
-    @objid ("004035a6-3c47-440d-8d27-c3032b9db0fc")
+    @objid ("a8d1ee90-2b24-46f3-947c-bc26c82512e2")
     @Override
     public void changeProperty(int row, String value) {
         switch (row) {
@@ -44,10 +44,10 @@ public class TServiceTemplatePropertyPage<T extends TServiceTemplate> extends To
                 if (value.contains(dep.getUuid())) {
                     this._element.setTopologyTemplate(
                             TTopologyTemplate.instantiate((org.modelio.metamodel.uml.statik.Package) dep));
-					break;
-				} else {
-					this._element.setTopologyTemplate(null);
-				}
+        break;
+        } else {
+        this._element.setTopologyTemplate(null);
+        }
             }
             break;
         
@@ -90,7 +90,7 @@ public class TServiceTemplatePropertyPage<T extends TServiceTemplate> extends To
         }
     }
 
-    @objid ("42d61cbc-7b7b-42bc-8d36-c08a126e4d21")
+    @objid ("92067599-7071-495b-819f-27cdc2bc6282")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);

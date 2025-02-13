@@ -84,7 +84,7 @@ topology_template:
           - host:
               node: Myrtus_Workstation_1
               relationship: con_HostedOn_1
-              capability: 
+              capability: host
               
         
     

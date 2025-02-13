@@ -11,9 +11,9 @@ import org.modelio.api.modelio.diagram.style.IStyleHandle;
 import org.modelio.api.module.command.standard.DiagramCreationStandardHandler;
 import org.modelio.metamodel.diagrams.AbstractDiagram;
 
-@objid ("de66fbde-14be-4fdc-be62-d7862a937394")
+@objid ("9d7d5cf7-a1b4-44da-ad66-f3ef94ca0a7f")
 public class CreateSubModelCommand extends DiagramCreationStandardHandler {
-    @objid ("dbed9686-35e8-445b-9fca-043612dfefaa")
+    @objid ("99e09f62-56ba-4098-b3e2-57461e8b605e")
     protected void openDiagram(AbstractDiagram diagram) {
         IModelioServices modelioServices = ToscaDesignerModule.getInstance().getModuleContext().getModelioServices();
         IDiagramService ds = modelioServices.getDiagramService();

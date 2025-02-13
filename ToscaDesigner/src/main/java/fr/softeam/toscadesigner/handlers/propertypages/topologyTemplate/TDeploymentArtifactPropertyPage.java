@@ -5,15 +5,15 @@ import fr.softeam.toscadesigner.api.tosca.standard.attribute.TDeploymentArtifact
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
-@objid ("586300a8-905d-411f-90a8-29db09707a2b")
+@objid ("c33850f8-9651-4f11-b39e-345401a503d1")
 public class TDeploymentArtifactPropertyPage<T extends TDeploymentArtifact> extends ToscaElementPropertyPage<T> {
-    @objid ("7d813bd4-5248-44ee-a2e4-dc38d92317b1")
+    @objid ("5b445923-1758-43eb-8dcd-4902c243c936")
     public  TDeploymentArtifactPropertyPage(T elt) {
         super(elt);
         // TODO Auto-generated constructor stub
     }
 
-    @objid ("d28e8264-4c7d-40ad-b53b-9fb2b6c10b4b")
+    @objid ("482f23d1-3c80-4981-b3e5-1f20d7a0bf97")
     @Override
     public void changeProperty(int row, String value) {
         switch (row) {
@@ -32,10 +32,11 @@ public class TDeploymentArtifactPropertyPage<T extends TDeploymentArtifact> exte
         case 5:
             this._element.setDeploy_path(value);
             break;
+            
         }
     }
 
-    @objid ("3e30eee6-a99f-49d5-81c4-77df1925bc28")
+    @objid ("ed370899-8380-4cf2-bfc3-8bab80f1bbca")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);

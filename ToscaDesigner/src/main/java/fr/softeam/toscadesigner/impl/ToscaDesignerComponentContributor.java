@@ -3,9 +3,7 @@ package fr.softeam.toscadesigner.impl;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
-import fr.softeam.toscadesigner.api.ToscaDesignerStereotypes;
+
 import org.modelio.api.modelio.mc.AbstractModelComponentContributor;
 import org.modelio.api.modelio.model.IMetamodelExtensions;
 import org.modelio.api.modelio.model.IModelingSession;
@@ -18,24 +16,29 @@ import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.metamodel.uml.statik.Package;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("fd5a3fbb-8b37-47ee-94bc-8089b2e25505")
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
+import fr.softeam.toscadesigner.api.ToscaDesignerStereotypes;
+
+@objid ("07f2d991-e0ea-40fa-bc40-885b76eb1dac")
 public class ToscaDesignerComponentContributor extends AbstractModelComponentContributor {
-    @objid ("51023e26-aebc-438e-bb61-2e581567000c")
+    @objid ("0b5255cd-9324-4f13-9cba-464cb041ca15")
     private IModelingSession session = ToscaDesignerModule.getInstance().getModuleContext().getModelingSession();
 
-    @objid ("be7cd68f-c576-493e-8964-ac019d3b1584")
+    @objid ("e937ff61-03ed-4274-bfe1-6158a2d24fb2")
     public  ToscaDesignerComponentContributor(IModule module) {
         super(module);
     }
 
-    @objid ("66541882-990a-4278-95b2-bc0219065505")
+    @objid ("94fb7ece-8d2b-4010-b25f-0055876a3a06")
     private TagType getTagType(java.lang.Class<? extends MObject> metaclass, String tagTypeName) {
         IMetamodelExtensions metamodel = this.session.getMetamodelExtensions();
         return metamodel.getTagType(IToscaDesignerPeerModule.MODULE_NAME, tagTypeName, ToscaDesignerModule.getInstance()
                 .getModuleContext().getModelioServices().getMetamodelService().getMetamodel().getMClass(metaclass));
     }
 
-    @objid ("3fc7a120-1f7e-4874-b624-1860dc9aa69d")
+    @objid ("a8a87fd1-aa52-43aa-8871-fdb2f32516ee")
     private Stereotype getStereotype(java.lang.Class<? extends MObject> metaclass, String stereotypeName) {
         IMetamodelExtensions metamodel = this.session.getMetamodelExtensions();
         return metamodel.getStereotype(IToscaDesignerPeerModule.MODULE_NAME, stereotypeName,
@@ -43,7 +46,7 @@ public class ToscaDesignerComponentContributor extends AbstractModelComponentCon
                         .getMetamodel().getMClass(metaclass));
     }
 
-    @objid ("c23d7165-5790-46c8-a95a-a7aa5761b55e")
+    @objid ("d6f21bd8-a8f6-40df-b266-38393fe33d2a")
     private NoteType getNoteType(java.lang.Class<? extends MObject> metaclass, String noteTypeName) {
         IMetamodelExtensions metamodel = this.session.getMetamodelExtensions();
         return metamodel.getNoteType(IToscaDesignerPeerModule.MODULE_NAME, noteTypeName,
@@ -51,7 +54,7 @@ public class ToscaDesignerComponentContributor extends AbstractModelComponentCon
                         .getMetamodel().getMClass(metaclass));
     }
 
-    @objid ("84216a74-05a6-43e9-acda-21cd6ebd2ad2")
+    @objid ("a7011630-cf07-4dfb-8558-39d776a5fa9a")
     @Override
     public Set<Stereotype> getDependencyStereotypes() {
         Set<Stereotype> stereotypes = new HashSet<>();
@@ -70,26 +73,26 @@ public class ToscaDesignerComponentContributor extends AbstractModelComponentCon
         return stereotypes;
     }
 
-    @objid ("d5a56d23-f7d8-47dc-ac26-bb7c53e413f6")
+    @objid ("db6572fe-3ed8-4b17-af59-9bd6e6f3d881")
     @Override
     public Set<MObject> getElements() {
         return Collections.emptySet();
     }
 
-    @objid ("6e599c26-c29d-4f74-8967-3ca62218732b")
+    @objid ("cc9f0c0b-8117-4bd5-b3f1-1d2657b5edea")
     @Override
     public Set<ExportedFileEntry> getFiles() {
         return Collections.emptySet();
     }
 
-    @objid ("d96e28a4-fddb-44d5-a9da-59ef300604c9")
+    @objid ("061c25af-a99d-4925-ba65-348e2fa5aa84")
     @Override
     public Set<NoteType> getNoteTypes() {
         // TODO Auto-generated method stub
         return Collections.emptySet();
     }
 
-    @objid ("5a2b758b-0512-4363-936f-a8be8caf56de")
+    @objid ("0520ef61-88e2-4d60-a161-4e2c6bd4aae1")
     @Override
     public Set<TagType> getTagTypes() {
         // TODO Auto-generated method stub

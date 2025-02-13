@@ -10,9 +10,9 @@ import org.modelio.api.module.IModule;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("acdf9546-c20b-4952-96f8-6f1f71847f75")
+@objid ("655bb233-752c-4077-a575-77dcb91910a0")
 public class CreateServiceTemplateDigramCommand extends CreateSubModelCommand {
-    @objid ("d751cb02-6396-42de-8783-5d9efed17443")
+    @objid ("b733d91b-9d9e-4cb9-88ae-1ccba7ddcb03")
     @Override
     public void actionPerformed(final List<MObject> selectedElements, final IModule module) {
         org.modelio.metamodel.uml.statik.Package packageOwner = (org.modelio.metamodel.uml.statik.Package) selectedElements.get(0);

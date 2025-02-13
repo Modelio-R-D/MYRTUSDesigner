@@ -13,15 +13,15 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("c757eb57-dab6-4fc3-8fd8-6f094926a62c")
+@objid ("af53e6c8-17f0-414d-8253-f083796c9a36")
 public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition> extends ToscaElementPropertyPage<T> {
-    @objid ("bad7c543-2275-4aee-900e-1c4e6306da6f")
+    @objid ("65de60bc-e2c1-4680-b2ce-73267128939d")
     public  TRequirementDefinitionPropertyPage(T elt) {
         super(elt);
         // TODO Auto-generated constructor stub
     }
 
-    @objid ("a8259c89-4113-4860-873d-5c3b6326d46f")
+    @objid ("9fb19480-215a-4160-9d7d-cc716c2c02e2")
     @Override
     public void changeProperty(int row, String value) {
         switch (row) {
@@ -34,11 +34,11 @@ public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition
                 if (value.contains(dep.getUuid())) {
                     this._element
                             .setCapability(TCapabilityType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
-					break;
-				} else {
-					this._element.setCapability(null);
-				}
-
+        break;
+        } else {
+        this._element.setCapability(null);
+        }
+        
             }
             break;
         
@@ -46,11 +46,11 @@ public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition
             for (ModelElement dep : TNodeType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
                     this._element.setNodeType(TNodeType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
-					break;
-				} else {
-					this._element.setNodeType(null);
-				}
-
+        break;
+        } else {
+        this._element.setNodeType(null);
+        }
+        
             }
             break;
         
@@ -59,11 +59,11 @@ public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition
                 if (value.contains(dep.getUuid())) {
                     this._element.setRelationshipType(
                             TRelationshipType.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
-					break;
-				} else {
-					this._element.setRelationshipType(null);
-				}
-
+        break;
+        } else {
+        this._element.setRelationshipType(null);
+        }
+        
             }
             break;
         case 5:
@@ -77,7 +77,7 @@ public class TRequirementDefinitionPropertyPage<T extends TRequirementDefinition
         }
     }
 
-    @objid ("600d81b9-9625-4ce5-9cd8-1b4e5ed141cd")
+    @objid ("fc5eb528-5bfa-41d7-8e81-2cbc64d35373")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);

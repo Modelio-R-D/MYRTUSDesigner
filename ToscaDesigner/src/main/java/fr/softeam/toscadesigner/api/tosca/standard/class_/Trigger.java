@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.1
 
- * This file was generated on 06/02/2025 17:32 by Modelio Studio.
+ * This file was generated on 13/02/2025 17:54 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
@@ -38,33 +38,33 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-@objid ("5d293e70-954f-416c-b0b2-e10319101a32")
+@objid ("7e938ac4-dea7-4f30-88e4-e568c4057302")
 public class Trigger implements IMdaProxy {
-    @objid ("4de20d99-8cdc-41c9-9b4b-b65b715b77a3")
+    @objid ("512b5a68-9802-42de-9217-7bd097673116")
     public static final String STEREOTYPE_NAME = "Trigger";
 
-    @objid ("2841a09b-181c-4fbd-80de-c6be02d1345d")
+    @objid ("bfe7f7a5-4621-4aff-aa7d-af0191d15d16")
     public static final String ACTION_PROPERTY = "action";
 
-    @objid ("5c20f744-8faf-42c7-af7b-1a05eeb36d62")
+    @objid ("5a565509-312b-4593-a182-b1e9465aef4d")
     public static final String CONDITION_PROPERTY = "condition";
 
-    @objid ("bc581d05-32af-4c7e-81b8-1f8c26ac6268")
+    @objid ("c23e5131-bae8-4423-bb0e-47c14b6cb40c")
     public static final String DESCRIPTION_PROPERTY = "description";
 
-    @objid ("ddcbc541-cd9d-4150-91e8-03352c86decd")
+    @objid ("365a5cb9-5380-4c43-8ec4-b6eecab0d930")
     public static final String EVENT_PROPERTY = "event";
 
-    @objid ("0a837ccc-b0ff-4d9b-bb0f-99beacb0cd76")
+    @objid ("362f6442-6a8a-43b6-8639-27264ba12926")
     public static final String SCHEDULE_PROPERTY = "schedule";
 
-    @objid ("2904b1c5-9307-4178-b3f8-64dd83c8ecb9")
+    @objid ("4781b147-c7cb-4a30-8781-778ecb351b7e")
     public static final String TARGET_FILTER_PROPERTY = "target_filter";
 
     /**
      * The underlying {@link Class} represented by this proxy, never null.
      */
-    @objid ("db6146a4-2360-4476-ac58-5fa67c9dae0c")
+    @objid ("8b243eb3-6640-4cfd-a0e5-fc221e056688")
     protected final Class elt;
 
     /**
@@ -74,7 +74,7 @@ public class Trigger implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("2dd1391f-8981-41e3-8517-55fb0ecab7d1")
+    @objid ("ac35088e-9ca1-48c2-89f7-8a1a17369a3d")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (Trigger.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(Trigger.MdaTypes.STEREOTYPE_ELT));
     }
@@ -84,7 +84,7 @@ public class Trigger implements IMdaProxy {
      * 
      * @return a {@link Trigger} proxy on the created {@link Class}.
      */
-    @objid ("04ee8feb-31ea-4739-a172-1855f85668f7")
+    @objid ("b607c45e-c50d-40bd-8a01-2d0c700fb4b6")
     public static Trigger create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(Trigger.MdaTypes.STEREOTYPE_ELT);
@@ -98,7 +98,7 @@ public class Trigger implements IMdaProxy {
      * @param obj a Class
      * @return a {@link Trigger} proxy or <i>null</i>.
      */
-    @objid ("6e909294-8367-41ad-8b4f-f70aeb5e9cf4")
+    @objid ("0d4c86d0-e8d4-4ae0-a4b8-1fa8b257fc8c")
     public static Trigger instantiate(final Class obj) {
         return Trigger.canInstantiate(obj) ? new Trigger(obj) : null;
     }
@@ -111,7 +111,7 @@ public class Trigger implements IMdaProxy {
      * @return a {@link Trigger} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("f2831d17-db05-4924-ba73-ec365a4b8068")
+    @objid ("fe1d6580-e89e-4bb0-a7a2-60d62cec933d")
     public static Trigger safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (Trigger.canInstantiate(obj))
         	return new Trigger(obj);
@@ -119,7 +119,7 @@ public class Trigger implements IMdaProxy {
         	throw new IllegalArgumentException("Trigger: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("105787a5-34f3-42e0-8141-3765b44535b4")
+    @objid ("bf32f9b5-1c3f-4e4a-88ad-411b5175961b")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -140,7 +140,7 @@ public class Trigger implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("43b4862a-2fa1-4ce5-8ec9-0ae8223ca2cd")
+    @objid ("b96c1ddd-cdd9-449b-ba22-197a82f0becf")
     public String getAction() {
         String value = this.elt.getProperty(Trigger.MdaTypes.STEREOTYPE_ELT,
                                             Trigger.MdaTypes.ACTION_PROPERTY_ELT.getName());
@@ -156,7 +156,7 @@ public class Trigger implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d5f8d972-9e95-4f61-8ce4-1a809998de23")
+    @objid ("b00a3876-a096-443e-900b-a879c3269f8c")
     public String getCondition() {
         String value = this.elt.getProperty(Trigger.MdaTypes.STEREOTYPE_ELT,
                                             Trigger.MdaTypes.CONDITION_PROPERTY_ELT.getName());
@@ -172,7 +172,7 @@ public class Trigger implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("db30a288-f30f-4197-80b3-bcfd7193c562")
+    @objid ("e88a49b4-edc1-4a5e-9a61-f7dc27c5db7c")
     public String getDescription() {
         String value = this.elt.getProperty(Trigger.MdaTypes.STEREOTYPE_ELT,
                                             Trigger.MdaTypes.DESCRIPTION_PROPERTY_ELT.getName());
@@ -187,7 +187,7 @@ public class Trigger implements IMdaProxy {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("ea315aca-c851-42e2-97da-de1606b59a19")
+    @objid ("73e46bd9-01b2-4016-9bf4-f77629392d8c")
     public Class getElement() {
         return this.elt;
     }
@@ -197,7 +197,7 @@ public class Trigger implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("95f8aca1-82c6-4a0c-b0cf-d53b233f1196")
+    @objid ("23133569-f264-4175-8d28-55e0a68b6d79")
     public String getEvent() {
         String value = this.elt.getProperty(Trigger.MdaTypes.STEREOTYPE_ELT,
                                             Trigger.MdaTypes.EVENT_PROPERTY_ELT.getName());
@@ -213,7 +213,7 @@ public class Trigger implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("607c9d56-c0be-4002-a67f-989850fcbe87")
+    @objid ("421cc668-fe2f-45fd-aca0-17b9a8b9e552")
     public String getSchedule() {
         String value = this.elt.getProperty(Trigger.MdaTypes.STEREOTYPE_ELT,
                                             Trigger.MdaTypes.SCHEDULE_PROPERTY_ELT.getName());
@@ -229,7 +229,7 @@ public class Trigger implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("cf9455b2-2547-4324-9fcb-522276f29a60")
+    @objid ("ae8b6259-88c7-44c2-99bc-2211eaa23323")
     public String getTarget_filter() {
         String value = this.elt.getProperty(Trigger.MdaTypes.STEREOTYPE_ELT,
                                             Trigger.MdaTypes.TARGET_FILTER_PROPERTY_ELT.getName());
@@ -240,7 +240,7 @@ public class Trigger implements IMdaProxy {
         
     }
 
-    @objid ("d19d7ffe-eddc-48c4-bf9b-5ff372f2bfa6")
+    @objid ("b9262480-e003-4ee3-a570-a672cd0b4bac")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -252,7 +252,7 @@ public class Trigger implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("45ed51e1-11db-4530-82e3-a22aef8d469c")
+    @objid ("a470d2b2-3315-4677-ab03-d51403ed3879")
     public void setAction(final String value) {
         this.elt.setProperty(Trigger.MdaTypes.STEREOTYPE_ELT,
                              Trigger.MdaTypes.ACTION_PROPERTY_ELT.getName(),
@@ -264,7 +264,7 @@ public class Trigger implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("4f5bc131-1757-40da-83f6-83a5f3c3712b")
+    @objid ("a3883cb9-4cb1-48f3-8b49-09bb8359406b")
     public void setCondition(final String value) {
         this.elt.setProperty(Trigger.MdaTypes.STEREOTYPE_ELT,
                              Trigger.MdaTypes.CONDITION_PROPERTY_ELT.getName(),
@@ -276,7 +276,7 @@ public class Trigger implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("991fdac9-9223-4ef8-9ac3-8225d0c6b4de")
+    @objid ("426e9244-0336-4491-8226-9d60f3bc12e0")
     public void setDescription(final String value) {
         this.elt.setProperty(Trigger.MdaTypes.STEREOTYPE_ELT,
                              Trigger.MdaTypes.DESCRIPTION_PROPERTY_ELT.getName(),
@@ -288,7 +288,7 @@ public class Trigger implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("7f1e350b-5b86-4ab5-a846-da2dd48ebafe")
+    @objid ("2aaecba7-0902-441e-90e7-35c3c4125ccc")
     public void setEvent(final String value) {
         this.elt.setProperty(Trigger.MdaTypes.STEREOTYPE_ELT,
                              Trigger.MdaTypes.EVENT_PROPERTY_ELT.getName(),
@@ -300,7 +300,7 @@ public class Trigger implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("5979b8f2-ff92-4f0c-865b-a0f49d200020")
+    @objid ("5d7dee70-0cbc-438a-bc4a-ddfa097671fd")
     public void setSchedule(final String value) {
         this.elt.setProperty(Trigger.MdaTypes.STEREOTYPE_ELT,
                              Trigger.MdaTypes.SCHEDULE_PROPERTY_ELT.getName(),
@@ -312,48 +312,48 @@ public class Trigger implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("e1277977-ee44-4349-a45d-8d3c419139c8")
+    @objid ("b36b3f6f-f99a-4806-a9f8-99054857610f")
     public void setTarget_filter(final String value) {
         this.elt.setProperty(Trigger.MdaTypes.STEREOTYPE_ELT,
                              Trigger.MdaTypes.TARGET_FILTER_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(Trigger.MdaTypes.TARGET_FILTER_PROPERTY_ELT, value));
     }
 
-    @objid ("b4600497-bffb-4e9a-80d2-27b4758e6e84")
+    @objid ("c458f333-1f92-4379-a451-155e2620ca63")
     protected  Trigger(final Class elt) {
         this.elt = elt;
     }
 
-    @objid ("999eea81-6688-46bf-935c-6c833abc30d9")
+    @objid ("efc4d027-9be6-4834-8af1-fd2bea507d82")
     public static final class MdaTypes {
-        @objid ("e7d2fe8b-036f-4b53-bb5d-1707ac250d1d")
+        @objid ("8011b5a6-1633-4cfa-ad07-9c88d70ce1f9")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("088d5e11-e7ec-4357-a321-54f494ea2510")
+        @objid ("8d90aaac-0c81-4007-81f9-51aefd1cd9ca")
         public static PropertyDefinition DESCRIPTION_PROPERTY_ELT;
 
-        @objid ("fac7015e-26b7-4fba-b21a-9e89dc2a2959")
+        @objid ("00928d84-36dc-4950-ba1c-c52b68d789a6")
         public static PropertyDefinition EVENT_PROPERTY_ELT;
 
-        @objid ("0af96b3a-7226-45bb-88da-cbb7a25e5aaa")
+        @objid ("144a13a9-07ad-418e-875f-bf73a8cc1336")
         public static PropertyDefinition SCHEDULE_PROPERTY_ELT;
 
-        @objid ("a061f320-4ebe-4f5d-a12b-e0b6da052fac")
+        @objid ("475c68d1-faa1-4381-883a-63ab681bce04")
         public static PropertyDefinition TARGET_FILTER_PROPERTY_ELT;
 
-        @objid ("8eae7168-bfec-4022-8e05-24edf468b97e")
+        @objid ("c886a3cf-70e8-4af3-922d-87a40d83a7ff")
         public static PropertyDefinition CONDITION_PROPERTY_ELT;
 
-        @objid ("3c256484-2ab0-4925-86f3-b6b48357b64e")
+        @objid ("2b2d548a-8a37-487f-b194-d77e941ded55")
         public static PropertyDefinition ACTION_PROPERTY_ELT;
 
-        @objid ("531747c3-d2ee-4dca-bffb-f5ccb795c97c")
+        @objid ("cbbca5ee-51a5-45b9-b273-92dc913c2a1d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("3dc8ff10-3f60-4a0b-9dfe-8cb01bee3eb4")
+        @objid ("7fbf6fc7-497e-41e3-ba0e-1a8f1ee724bd")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("986f076a-9d58-4e9e-9963-df1eabe07cf7")
+        @objid ("1d985f8c-2935-409c-942d-2b0e26e4798d")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
