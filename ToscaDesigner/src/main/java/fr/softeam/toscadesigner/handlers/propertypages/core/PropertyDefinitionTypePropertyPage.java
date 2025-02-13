@@ -4,15 +4,15 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
-@objid ("1c6a520c-04ce-41e5-9556-bd2f87af180b")
+@objid ("a3b5d0b2-7de4-4957-810a-595d7066797d")
 public class PropertyDefinitionTypePropertyPage<T extends PropertyDefinitionType> extends ToscaElementPropertyPage<T> {
-    @objid ("ecf69318-498d-4bf5-a988-bb8408e2e536")
+    @objid ("be84f2f9-7fef-457a-8f41-91e7a13e122a")
     public  PropertyDefinitionTypePropertyPage(T elt) {
         super(elt);
         // TODO Auto-generated constructor stub
     }
 
-    @objid ("e87aabc0-60a1-421d-835f-21075c4fffd1")
+    @objid ("03c02773-f87c-4fe6-b5ce-d2b9fc76028b")
     @Override
     public void changeProperty(int row, String value) {
         switch (row) {
@@ -26,7 +26,7 @@ public class PropertyDefinitionTypePropertyPage<T extends PropertyDefinitionType
         }
     }
 
-    @objid ("00c9eca6-a630-4847-8087-be1533c9c9eb")
+    @objid ("302c4f9a-2f86-4efd-bf5f-9b0c90ef2f0a")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
@@ -35,17 +35,17 @@ public class PropertyDefinitionTypePropertyPage<T extends PropertyDefinitionType
         table.addProperty("Type", _element.getElement().getValue());
     }
 
-    @objid ("90c3a132-16c6-44c3-ae50-3e281c0450d7")
+    @objid ("915258a4-5b23-4051-bc26-e761c29f2c6f")
     enum PrimitiveType {
-        @objid ("08936dad-7000-4dc8-ab16-4fa6729bb43b")
+        @objid ("77454dff-3ad4-4093-87ce-f70b78654b34")
         IntType,
-        @objid ("d55c4fcd-797a-439a-90ce-974df702743f")
+        @objid ("6443c68e-9de1-4584-b551-a0fd09f2aa25")
         StringType,
-        @objid ("ac478852-3be6-46b4-94f3-9b3b9966499e")
+        @objid ("2f91d615-9fc1-4abd-a71a-a54825f4dabe")
         BooleanType,
-        @objid ("5c991fdf-d3a0-4017-ad51-6b33ede83067")
+        @objid ("012dedda-c9f4-4986-9e79-f35c041e322e")
         FloatType,
-        @objid ("dd011c2d-7afc-44a8-83c7-6bf5c6ea783b")
+        @objid ("9feb232d-e11f-46e0-9726-d5ce37f4174e")
         DoubleType;
 
     }

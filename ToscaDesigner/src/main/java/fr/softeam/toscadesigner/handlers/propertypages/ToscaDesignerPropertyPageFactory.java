@@ -56,9 +56,9 @@ import org.modelio.metamodel.visitors.IDefaultInfrastructureVisitor;
 import org.modelio.metamodel.visitors.IDefaultModelVisitor;
 import org.modelio.metamodel.visitors.IInfrastructureVisitor;
 
-@objid ("548a9154-c8a7-486f-9adb-ba13d312251a")
+@objid ("ea73d233-1e53-40f0-bdca-70d3b6668b02")
 public class ToscaDesignerPropertyPageFactory {
-    @objid ("9c7aba2f-0c37-4d81-908a-ddfd5a54e213")
+    @objid ("0a1e4821-1cae-4e25-bce1-946d9094be54")
     private static final PropertyPageVisitor propertyVisitor = new PropertyPageVisitor();
 
     /**
@@ -69,7 +69,7 @@ public class ToscaDesignerPropertyPageFactory {
      * @param e A model element
      * @return the right proxy or <i>null</i>.
      */
-    @objid ("a7b13f96-174e-4ada-9834-a5025598c7b1")
+    @objid ("48a9c8ae-edbb-4a97-9d7b-e3f4af761cae")
     public static final Object instantiatePropertyPage(final ModelElement e) {
         for (Stereotype s : e.getExtension()) {
             ModuleComponent module = s.getModule();
@@ -88,18 +88,18 @@ public class ToscaDesignerPropertyPageFactory {
      * @param stName A stereotype name.
      * @return the right proxy or <i>null</i>.
      */
-    @objid ("d65c2717-560a-4a73-9ad9-64f1521ed689")
+    @objid ("2460de5e-18de-46e6-9f5b-28ab12b772fc")
     public static final Object instantiatePropertyPage(final Element e, final String stName) {
         propertyVisitor.setStereotype(stName);
         return e.accept(propertyVisitor);
     }
 
-    @objid ("62f17733-06eb-4810-b5b8-aa31b05ef70b")
+    @objid ("ed8ccd4c-3561-483a-a4bf-b120aeff9d4f")
     private static class PropertyPageVisitor implements IDefaultModelVisitor, IDefaultInfrastructureVisitor {
-        @objid ("794396c0-0aba-4b46-aca4-5183eda7382b")
+        @objid ("86d26d25-e6f3-4894-80fa-dee36d18ecb0")
         private String stName;
 
-        @objid ("c4638ee7-f533-4a19-9eec-97e6670a47f3")
+        @objid ("abe7f2a9-74c8-40be-9236-c082b8153d67")
         @Override
         public final Object visitGeneralClass(GeneralClass obj) {
             switch (this.stName) {
@@ -109,7 +109,7 @@ public class ToscaDesignerPropertyPageFactory {
             return IDefaultModelVisitor.super.visitGeneralClass(obj);
         }
 
-        @objid ("517d3ff0-f51b-43ac-9f03-3b2e322e41e1")
+        @objid ("d15450f1-b618-4080-bb9d-cb4a203ec9d1")
         @Override
         public final Object visitDependency(Dependency obj) {
             switch (this.stName) {
@@ -119,7 +119,7 @@ public class ToscaDesignerPropertyPageFactory {
             return IDefaultInfrastructureVisitor.super.visitDependency(obj);
         }
 
-        @objid ("42bd818f-e7bd-46ba-828e-9cbd52ee494c")
+        @objid ("dc04dbd4-1acf-45fd-aa17-f8bfd27ff835")
         @Override
         public final Object visitComponent(Component obj) {
             switch (this.stName) {
@@ -129,7 +129,7 @@ public class ToscaDesignerPropertyPageFactory {
             return IDefaultModelVisitor.super.visitComponent(obj);
         }
 
-        @objid ("26f97305-05b3-4847-8e3e-46e578e58136")
+        @objid ("adcdf055-876d-41b4-b264-c19cfc61370a")
         @Override
         public final Object visitInstance(Instance obj) {
             switch (this.stName) {
@@ -139,7 +139,7 @@ public class ToscaDesignerPropertyPageFactory {
             return IDefaultModelVisitor.super.visitInstance(obj);
         }
 
-        @objid ("52e9ca66-17cb-4560-b97f-e42e0c828f46")
+        @objid ("a0574278-4bfe-4e5a-90da-0f4d0457f7cc")
         @Override
         public final Object visitClass(Class obj) {
             switch (this.stName) {
@@ -195,7 +195,7 @@ public class ToscaDesignerPropertyPageFactory {
             return IDefaultModelVisitor.super.visitClass(obj);
         }
 
-        @objid ("158dcd2e-88fb-4446-9789-ca1183691f56")
+        @objid ("98cd0453-9c1c-405f-9194-9dabdc222a99")
         @Override
         public final Object visitAssociationEnd(AssociationEnd obj) {
             switch (this.stName) {
@@ -210,7 +210,7 @@ public class ToscaDesignerPropertyPageFactory {
             return IDefaultModelVisitor.super.visitAssociationEnd(obj);
         }
 
-        @objid ("378ea0c8-e23f-46da-a392-c4924f2c9623")
+        @objid ("e7e2f584-f58c-4657-a1f8-5ee45d7ad1fc")
         @Override
         public final Object visitEnumeration(Enumeration obj) {
             switch (this.stName) {
@@ -220,7 +220,7 @@ public class ToscaDesignerPropertyPageFactory {
             return IDefaultModelVisitor.super.visitEnumeration(obj);
         }
 
-        @objid ("68120a39-d9c4-4406-b1a0-b59374b4f080")
+        @objid ("5d224d1c-c759-4482-a454-48b43a6ffc91")
         @Override
         public final Object visitModelElement(ModelElement obj) {
             switch (this.stName) {
@@ -239,7 +239,7 @@ public class ToscaDesignerPropertyPageFactory {
             return IDefaultInfrastructureVisitor.super.visitModelElement(obj);
         }
 
-        @objid ("af5d7075-49d6-4626-ba9a-7ca51195897c")
+        @objid ("26cb88eb-51af-4841-af80-7a37ca41f395")
         @Override
         public final Object visitArtifact(Artifact obj) {
             switch (this.stName) {
@@ -249,7 +249,7 @@ public class ToscaDesignerPropertyPageFactory {
             return IDefaultModelVisitor.super.visitArtifact(obj);
         }
 
-        @objid ("aa097662-3eb9-42d6-8c6f-5f9b101127d2")
+        @objid ("c1a85541-ae98-4039-98d7-600eaaa39c69")
         @Override
         public final Object visitAttribute(Attribute obj) {
             switch (this.stName) {
@@ -272,7 +272,7 @@ public class ToscaDesignerPropertyPageFactory {
             return IDefaultModelVisitor.super.visitAttribute(obj);
         }
 
-        @objid ("5e3d2e2b-6937-4f7b-a8aa-568b55145b9c")
+        @objid ("880151f4-5fc5-4c44-8a2d-ecc6a6bdcd4b")
         @Override
         public final Object visitAttributeLink(AttributeLink obj) {
             switch (this.stName) {
@@ -282,7 +282,7 @@ public class ToscaDesignerPropertyPageFactory {
             return IDefaultModelVisitor.super.visitAttributeLink(obj);
         }
 
-        @objid ("1fc5ad67-2f6f-49e6-9f6d-f2292363c0bd")
+        @objid ("3a442ac7-c1f6-4e9e-bc54-3c3a5e0b61db")
         @Override
         public final Object visitClassDiagram(ClassDiagram obj) {
             switch (this.stName) {
@@ -293,7 +293,7 @@ public class ToscaDesignerPropertyPageFactory {
             return IDefaultModelVisitor.super.visitClassDiagram(obj);
         }
 
-        @objid ("a0ef2e20-22f8-4597-8f16-d2e6c2e4950c")
+        @objid ("0d0d5a0a-5808-4fbe-9107-4b5b747de0a1")
         @Override
         public final Object visitPackage(Package obj) {
             switch (this.stName) {
@@ -312,7 +312,7 @@ public class ToscaDesignerPropertyPageFactory {
             return IDefaultModelVisitor.super.visitPackage(obj);
         }
 
-        @objid ("a323a489-3415-4e43-af17-952d7d9f0e42")
+        @objid ("8e84e650-afed-471d-bf82-514f1b918e85")
         @Override
         public final Object visitConnector(Connector obj) {
             switch (this.stName) {
@@ -322,7 +322,7 @@ public class ToscaDesignerPropertyPageFactory {
             return IDefaultModelVisitor.super.visitConnector(obj);
         }
 
-        @objid ("b70b44d5-c66d-499f-8edf-fdae822296e9")
+        @objid ("b8c8dd16-80c4-4765-b3db-e41ae1d877ef")
         @Override
         public final Object visitDataType(DataType obj) {
             switch (this.stName) {
@@ -332,7 +332,7 @@ public class ToscaDesignerPropertyPageFactory {
             return IDefaultModelVisitor.super.visitDataType(obj);
         }
 
-        @objid ("4544c5af-e05f-4216-9211-d3b79e56589b")
+        @objid ("8b657b94-f7fb-41ec-8c86-0a1b7ada0258")
         @Override
         public final Object visitPort(Port obj) {
             switch (this.stName) {
@@ -342,13 +342,13 @@ public class ToscaDesignerPropertyPageFactory {
             return IDefaultModelVisitor.super.visitPort(obj);
         }
 
-        @objid ("a52b68a9-cafc-40a2-9f0f-4b3769d91f74")
+        @objid ("f55f8123-6631-4db9-bd21-9fb6b46c79f7")
         @Override
         public IInfrastructureVisitor getInfrastructureVisitor() {
             return this;
         }
 
-        @objid ("0aac5039-d4c3-40e2-b452-021763eb05d1")
+        @objid ("1f1f773c-6849-4498-a1b9-86cd6537d931")
         public final void setStereotype(final String stName) {
             this.stName = stName;
         }

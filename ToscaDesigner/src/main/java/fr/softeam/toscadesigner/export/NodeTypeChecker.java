@@ -7,9 +7,9 @@ import org.modelio.api.module.context.log.ILogService;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("c425a235-6412-4fb2-928a-a17a5d0760e1")
+@objid ("e0ed7350-ca3f-44e6-8dfe-d293953559ef")
 public class NodeTypeChecker implements ToscaObjectTypeChecker {
-    @objid ("c6c72e70-0564-4426-a3f8-621492b641d1")
+    @objid ("3c6e1d4d-b40d-4939-b205-44407fa4260d")
     @Override
     public boolean isTypeOf(MObject object) {
         if(!(object instanceof ModelElement)) {
@@ -19,7 +19,7 @@ public class NodeTypeChecker implements ToscaObjectTypeChecker {
         return element.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, TNodeType.STEREOTYPE_NAME);
     }
 
-    @objid ("939e69a5-f927-4f1b-94db-72d98f42697e")
+    @objid ("787ab462-9dfb-4ea0-9ee4-f05a66187b0c")
     @Override
     public AbstractToscaFileGenerator createGenerator(ILogService logger) {
         return new ToscaFileGenerator(logger);

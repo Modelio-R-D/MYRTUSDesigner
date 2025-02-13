@@ -11,9 +11,9 @@ import org.modelio.api.module.IModule;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("548ea3b4-adac-4bc1-83d1-e86585b18dc9")
+@objid ("13e27e1c-182e-493d-92fd-20f10e4c25c1")
 public class CreateTopologyTemplateDiagramCommand extends CreateSubModelCommand {
-    @objid ("d4dcc033-8364-468a-b9f2-fb8d2722d1f6")
+    @objid ("642a3036-14b0-49d2-8b76-9089e2b2c9ca")
     @Override
     public void actionPerformed(final List<MObject> selectedElements, final IModule module) {
         org.modelio.metamodel.uml.statik.Package packageOwner = (org.modelio.metamodel.uml.statik.Package) selectedElements.get(0);

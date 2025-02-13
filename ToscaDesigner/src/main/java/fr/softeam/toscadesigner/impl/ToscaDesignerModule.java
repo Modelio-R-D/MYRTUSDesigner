@@ -11,21 +11,21 @@ import org.modelio.gproject.ramc.core.model.IModelComponent;
 import org.modelio.gproject.ramc.core.packaging.IModelComponentContributor;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 
-@objid ("76d0c540-ed36-4597-90ed-7c8f8ec4c1c5")
+@objid ("f74fe6e0-48ad-4b16-9b56-5d97e8be9707")
 public class ToscaDesignerModule extends AbstractJavaModule {
-    @objid ("b3e03ba1-58e4-433b-91ff-d9eed70a9321")
+    @objid ("559a534f-a51e-4774-9c8b-048f214a3ec8")
     private static final String MODULE_IMAGE = "/res/icon/module.png";
 
-    @objid ("4d4cb946-fff0-47ee-b769-d5f6ca8b03b9")
+    @objid ("394abf63-fb00-4a8d-af19-d4feb8beb4a9")
     private ToscaDesignerPeerModule peerModule = null;
 
-    @objid ("7857e3be-57db-43d1-b9c1-ffe4d557f87f")
+    @objid ("1fcf7be8-4727-4133-88ea-4f79377a1e4d")
     private ToscaDesignerLifeCycleHandler lifeCycleHandler = null;
 
-    @objid ("6665e3a9-1b85-47f3-9465-84b50ef8b69e")
+    @objid ("44aaffb0-c843-4e14-a1f7-957dc0d06675")
     private static ToscaDesignerModule instance;
 
-    @objid ("19461964-2849-462e-bf2d-20791e2a6929")
+    @objid ("2dcf4e29-1c02-4f12-8c85-c5b1fec36df3")
     public  ToscaDesignerModule(final IModuleContext moduleContext) {
         super(moduleContext);
         
@@ -36,7 +36,7 @@ public class ToscaDesignerModule extends AbstractJavaModule {
         init();
     }
 
-    @objid ("5dfbd4a2-782f-43bc-bc16-19bd9631c95e")
+    @objid ("53e797d9-cfad-4d2d-aaba-367a04dca423")
     @Override
     public IPeerModule getPeerModule() {
         return this.peerModule;
@@ -47,7 +47,7 @@ public class ToscaDesignerModule extends AbstractJavaModule {
      * used to manage the module lifecycle by declaring the desired implementation
      * for the start, select... methods.
      */
-    @objid ("38c7cf26-e3f9-42c8-9985-80458a13e98c")
+    @objid ("22bfe6b0-4809-4e4e-b225-ed850cd5b818")
     @Override
     public IModuleLifeCycleHandler getLifeCycleHandler() {
         return this.lifeCycleHandler;
@@ -60,26 +60,26 @@ public class ToscaDesignerModule extends AbstractJavaModule {
      * <code>init</code> method allows the developer to execute the desired
      * initialization.
      */
-    @objid ("0e13fa12-0441-4bb9-91ee-3b33f8938251")
+    @objid ("c92a2978-a3b9-4a8c-925b-21a6f42299b9")
     @Override
     public IParameterEditionModel getParametersEditionModel() {
         return super.getParametersEditionModel();
     }
 
-    @objid ("65a211ef-2783-475b-af22-7cab6db49d25")
+    @objid ("50f01248-0b2c-4df0-b9b0-5313b21a0ae9")
     @Override
     public String getModuleImagePath() {
         return ToscaDesignerModule.MODULE_IMAGE;
     }
 
-    @objid ("20b1ec13-c776-4ad6-8541-5ff15476afbf")
+    @objid ("26f0eb41-d105-4c41-a30d-8a578687d728")
     public static ToscaDesignerModule getInstance() {
         // Automatically generated method. Please delete this comment before entering
         // specific code.
         return instance;
     }
 
-    @objid ("71801523-eeb6-48a5-83d0-a9f7e16e435a")
+    @objid ("2ef5b75f-ce7a-4699-a4d0-5ed3c8bc4800")
     @Override
     public IMdaExpert getMdaExpert(final Stereotype st) {
         // Generated code, please do not remove it
@@ -95,14 +95,14 @@ public class ToscaDesignerModule extends AbstractJavaModule {
      * @param st a stereotype owned by the current module.
      * @return a MDA expert belonging to the MDA API or <code>null</code>.
      */
-    @objid ("a46b8dae-28ae-4eba-aaed-6b65d095530f")
+    @objid ("f7d4d813-d18b-4e5f-b257-25fdf86ad84e")
     private IMdaExpert getGeneratedMdaExpert(final Stereotype st) {
         switch (st.getUuid()) {
-        	default: return null;
+            default: return null;
         }
     }
 
-    @objid ("2f71777c-4aee-4ba6-8ebb-0662e7f9f48e")
+    @objid ("ea1a50e7-3853-4792-8bb2-9c97a024dfa6")
     @Override
     public IModelComponentContributor getModelComponentContributor(IModelComponent mc) {
         return new ToscaDesignerComponentContributor(this);

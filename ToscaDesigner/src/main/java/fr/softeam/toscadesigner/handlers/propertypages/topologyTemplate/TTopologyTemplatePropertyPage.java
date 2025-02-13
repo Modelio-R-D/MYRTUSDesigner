@@ -15,15 +15,15 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.statik.Association;
 import org.modelio.metamodel.uml.statik.Class;
 
-@objid ("a7f33f74-8435-4a95-a221-94a56c5f4cfd")
+@objid ("30999161-0952-4789-9b87-97951cfefbd9")
 public class TTopologyTemplatePropertyPage<T extends TTopologyTemplate> extends ToscaElementPropertyPage<T> {
-    @objid ("6b40406a-9893-459b-872a-046f069c5b49")
+    @objid ("bee17b8e-6370-40d3-ad9f-0679244210b6")
     public  TTopologyTemplatePropertyPage(T elt) {
         super(elt);
         // TODO Auto-generated constructor stub
     }
 
-    @objid ("004035a6-3c47-440d-8d27-c3032b9db0fc")
+    @objid ("51cb11db-2e78-4664-9d63-fbbd878c1433")
     @Override
     public void changeProperty(int row, String value) {
         switch (row) {
@@ -72,7 +72,7 @@ public class TTopologyTemplatePropertyPage<T extends TTopologyTemplate> extends 
         }
     }
 
-    @objid ("42d61cbc-7b7b-42bc-8d36-c08a126e4d21")
+    @objid ("398a0096-e4af-4e29-8d94-b02e98ecf16a")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);

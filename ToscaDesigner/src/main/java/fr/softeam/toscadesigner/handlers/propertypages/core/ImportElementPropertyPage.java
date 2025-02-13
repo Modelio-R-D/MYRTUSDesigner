@@ -4,15 +4,15 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.ImportElement;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
-@objid ("94f8b8ec-54e8-454c-9e1f-32ca5a0dea62")
+@objid ("2b0ab9ab-3232-4c91-a37c-607fdd1dc98e")
 public class ImportElementPropertyPage<T extends ImportElement> extends ToscaElementPropertyPage<T> {
-    @objid ("eef08305-8700-4461-a3b0-c470c3bf1c5e")
+    @objid ("b257f4e3-b3f6-4cc9-81f1-32389eceb267")
     public  ImportElementPropertyPage(T elt) {
         super(elt);
         // TODO Auto-generated constructor stub
     }
 
-    @objid ("3d9f2e19-eae9-42f6-bd1e-d796ed37a418")
+    @objid ("3873e117-b78c-4c70-9749-d6e409f3ad6b")
     @Override
     public void changeProperty(int row, String value) {
         switch (row) {
@@ -30,7 +30,7 @@ public class ImportElementPropertyPage<T extends ImportElement> extends ToscaEle
         }
     }
 
-    @objid ("77a5a715-3493-4ac3-9144-97ca6520ddf7")
+    @objid ("fbd131f9-e3a1-4ac4-9c50-0bebb15bb171")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);

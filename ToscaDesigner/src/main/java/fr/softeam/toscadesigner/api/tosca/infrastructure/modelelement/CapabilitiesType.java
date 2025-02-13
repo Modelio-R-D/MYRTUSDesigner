@@ -38,18 +38,19 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-@objid ("c2d1e9ff-ba3b-4a89-bcbd-43f1cef7424c")
+@objid ("30358260-334f-4ced-908f-99df10fdfda9")
 public class CapabilitiesType implements IMdaProxy {
-    @objid ("84564e2e-f543-41da-b993-9957928857a7")
+    @objid ("63a1367c-4259-4e3e-8547-7fb90a79c77a")
     public static final String STEREOTYPE_NAME = "CapabilitiesType";
 
-    @objid ("efa15fad-698a-4a10-9309-cc0d7e7d6b7b")
+    @objid ("2eebd4a2-5483-435f-b2c0-94d67820cb57")
     public static final String NAME_PROPERTY = "name";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
+     * 
      */
-    @objid ("52e2b4ef-b6fe-45fb-a6df-e29ee16f7984")
+    @objid ("9bf72d73-b6d3-4ebb-9b1e-8199834b7bd2")
     protected final ModelElement elt;
 
     /**
@@ -59,17 +60,16 @@ public class CapabilitiesType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("96f31cf1-930b-4fdd-8780-9881bf1b7ed8")
+    @objid ("c3522d96-ed79-4a93-a870-d7ab8289f55d")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (CapabilitiesType.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(CapabilitiesType.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link ModelElement} stereotyped << CapabilitiesType >> then instantiate a {@link CapabilitiesType} proxy.
-     * 
      * @return a {@link CapabilitiesType} proxy on the created {@link ModelElement}.
      */
-    @objid ("886ad882-2084-4c43-abcd-32471f4e6c04")
+    @objid ("8409cc80-3c22-443b-8322-c1dc661ada71")
     public static CapabilitiesType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(CapabilitiesType.MdaTypes.STEREOTYPE_ELT);
@@ -83,7 +83,7 @@ public class CapabilitiesType implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link CapabilitiesType} proxy or <i>null</i>.
      */
-    @objid ("d4fe9869-7cc3-406a-b793-067154af038a")
+    @objid ("c417dc1f-7d15-4b4e-a043-1e4fe5dc4504")
     public static CapabilitiesType instantiate(final ModelElement obj) {
         return CapabilitiesType.canInstantiate(obj) ? new CapabilitiesType(obj) : null;
     }
@@ -92,25 +92,24 @@ public class CapabilitiesType implements IMdaProxy {
      * Tries to instantiate a {@link CapabilitiesType} proxy from a {@link ModelElement} stereotyped << CapabilitiesType >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link ModelElement}
      * @return a {@link CapabilitiesType} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("55cb007b-851b-457e-9b4e-fcae0659c6d6")
+    @objid ("62daa225-e2fb-4f05-9c17-c08963bc4f96")
     public static CapabilitiesType safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (CapabilitiesType.canInstantiate(obj))
-        	return new CapabilitiesType(obj);
+            return new CapabilitiesType(obj);
         else
-        	throw new IllegalArgumentException("CapabilitiesType: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("CapabilitiesType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value of the 'capability' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("ba23e1db-c3bc-40f9-ba88-6f4d76099171")
+    @objid ("71d6ca59-68e0-46f3-a9a8-46fac79615b7")
     public void addCapability(final TCapability obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -120,7 +119,7 @@ public class CapabilitiesType implements IMdaProxy {
         }
     }
 
-    @objid ("2bcea6b9-48ff-4769-a445-281d89c3e0ab")
+    @objid ("31dbb535-02df-4c6d-b88e-6f8bc3f21578")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -140,9 +139,8 @@ public class CapabilitiesType implements IMdaProxy {
      * Get the values of the 'capability' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("541025b0-b6cc-4a2e-9cdc-adebcca21237")
+    @objid ("082be8a5-bc82-40f6-b329-8c2b31d28287")
     public List<TCapability> getCapability() {
         List<TCapability> results = new ArrayList<>();
         for (Dependency d : this.elt.getImpactedDependency()) {
@@ -156,10 +154,10 @@ public class CapabilitiesType implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link ModelElement}. 
+     * Get the underlying {@link ModelElement}.
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("d28741ae-defd-4b78-a8b8-65b08296841b")
+    @objid ("9213366c-1a33-4f42-b918-117e4be354fc")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -169,7 +167,7 @@ public class CapabilitiesType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("42dab33f-d5f6-4e11-b298-df130245ea02")
+    @objid ("802730cc-b5bf-41af-b55d-61ea6d1add98")
     public String getName() {
         String value = this.elt.getProperty(CapabilitiesType.MdaTypes.STEREOTYPE_ELT,
                                             CapabilitiesType.MdaTypes.NAME_PROPERTY_ELT.getName());
@@ -177,23 +175,20 @@ public class CapabilitiesType implements IMdaProxy {
           value = CapabilitiesType.MdaTypes.NAME_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(CapabilitiesType.MdaTypes.NAME_PROPERTY_ELT, value, this.elt);
-        
     }
 
-    @objid ("503093f9-f93f-4a34-8616-037053e70516")
+    @objid ("dd44b2eb-da3c-448d-bf8f-170dc3053e26")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-        
     }
 
     /**
      * Remove a value from 'capability' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("f3018905-91a0-4391-a1a7-094b7b120ef9")
+    @objid ("a76b6700-8cc3-44df-96af-8078f43853aa")
     public boolean removeCapability(final TCapability obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getImpactedDependency())) {
@@ -205,7 +200,6 @@ public class CapabilitiesType implements IMdaProxy {
           }
         }
         return false;
-        
     }
 
     /**
@@ -213,33 +207,33 @@ public class CapabilitiesType implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("72f929e4-9e8e-4166-8240-1abe6c7febf5")
+    @objid ("b6d9a74d-03f4-4426-aaeb-d15390fedf65")
     public void setName(final String value) {
         this.elt.setProperty(CapabilitiesType.MdaTypes.STEREOTYPE_ELT,
                              CapabilitiesType.MdaTypes.NAME_PROPERTY_ELT.getName(),
                              PropertyConverter.convertToString(CapabilitiesType.MdaTypes.NAME_PROPERTY_ELT, value));
     }
 
-    @objid ("a52a89be-473e-4800-94f6-dc1169bf3fe0")
+    @objid ("6b3bf045-a1fd-4ea4-af5c-0999e83c1603")
     protected  CapabilitiesType(final ModelElement elt) {
         this.elt = elt;
     }
 
-    @objid ("9741e5ac-0bac-4a50-b0bb-8202f006753f")
+    @objid ("313c4975-163b-406b-8f71-6d48505e36dd")
     public static final class MdaTypes {
-        @objid ("dbd52514-36db-44a3-a2ba-72632aa0f02e")
+        @objid ("d0b1492c-9857-452e-938f-12625495c11d")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("188bd6cc-5117-41b4-bbe7-998f61d93219")
+        @objid ("38080d5a-aa53-414f-bab8-82a024c69a8f")
         public static PropertyDefinition NAME_PROPERTY_ELT;
 
-        @objid ("8e0c0a17-8cf4-4bd4-b088-c35a0e8e3b07")
+        @objid ("ecebaf33-f4ac-4bb1-885b-6ab8bb66f21c")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("5e26b1e6-b69a-44b5-90c1-1510fedb468d")
+        @objid ("4af27900-05fc-4e24-9325-cd6d3427c166")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("402e9c60-add2-46aa-bba9-8f1903599e4d")
+        @objid ("b7c8982e-d172-4e1d-ab9c-d34d2e4c4d73")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -260,7 +254,6 @@ public class CapabilitiesType implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
-            
         }
 
     }

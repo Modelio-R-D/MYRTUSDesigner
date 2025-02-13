@@ -37,9 +37,9 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-@objid ("596a22eb-f1eb-46a8-a690-c875d7a1d5fc")
+@objid ("922f93b1-8461-480d-92a8-4789605f2023")
 public class ImplementationArtifactType extends TImplementationArtifact implements IMdaProxy {
-    @objid ("436bdfc0-7568-4e8f-941b-c4aece226404")
+    @objid ("722cbb38-a279-4bf1-9e8b-c32d3773e2a7")
     public static final String STEREOTYPE_NAME = "ImplementationArtifactType";
 
     /**
@@ -49,17 +49,16 @@ public class ImplementationArtifactType extends TImplementationArtifact implemen
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("e249e7b3-fb8b-4b63-bba6-a9216041ad51")
+    @objid ("fbbf8e85-3b00-414f-a2ab-8d501f730859")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (ImplementationArtifactType.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(ImplementationArtifactType.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link ModelElement} stereotyped << ImplementationArtifactType >> then instantiate a {@link ImplementationArtifactType} proxy.
-     * 
      * @return a {@link ImplementationArtifactType} proxy on the created {@link ModelElement}.
      */
-    @objid ("4884a10a-f8ad-429a-b4a2-ee6104d9803e")
+    @objid ("ba3646ea-6a24-44f1-8161-a6a264d0258d")
     public static ImplementationArtifactType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(ImplementationArtifactType.MdaTypes.STEREOTYPE_ELT);
@@ -73,7 +72,7 @@ public class ImplementationArtifactType extends TImplementationArtifact implemen
      * @param obj a ModelElement
      * @return a {@link ImplementationArtifactType} proxy or <i>null</i>.
      */
-    @objid ("d9c92d57-04ea-4c39-83df-09162df7e626")
+    @objid ("204e8b8a-ec9a-4e15-b82b-f2ba83453eb2")
     public static ImplementationArtifactType instantiate(final ModelElement obj) {
         return ImplementationArtifactType.canInstantiate(obj) ? new ImplementationArtifactType(obj) : null;
     }
@@ -82,19 +81,19 @@ public class ImplementationArtifactType extends TImplementationArtifact implemen
      * Tries to instantiate a {@link ImplementationArtifactType} proxy from a {@link ModelElement} stereotyped << ImplementationArtifactType >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link ModelElement}
      * @return a {@link ImplementationArtifactType} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("8657d374-ba8c-412d-8c89-6328683d97e7")
+    @objid ("52d1c24f-fc99-45fb-81c0-1d78f458ff94")
     public static ImplementationArtifactType safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (ImplementationArtifactType.canInstantiate(obj))
-        	return new ImplementationArtifactType(obj);
+            return new ImplementationArtifactType(obj);
         else
-        	throw new IllegalArgumentException("ImplementationArtifactType: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("ImplementationArtifactType: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("a5b0ebdb-6f94-4cff-a8f3-8c082994366a")
+    @objid ("a30a3788-39f1-43c4-8958-26dd83b2c232")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -111,39 +110,38 @@ public class ImplementationArtifactType extends TImplementationArtifact implemen
     }
 
     /**
-     * Get the underlying {@link ModelElement}. 
+     * Get the underlying {@link ModelElement}.
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("bd31a24f-b25d-4fb4-9f48-b5fdc551e798")
+    @objid ("2bc4d438-e09b-4927-8b49-f750a9dbe2fb")
     @Override
     public ModelElement getElement() {
         return (ModelElement)super.getElement();
     }
 
-    @objid ("10581781-1219-4971-a495-5af5dae7a25f")
+    @objid ("71c7efe4-3554-4078-a193-536f50cbde00")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-        
     }
 
-    @objid ("a121e78f-c555-474a-8316-3ac901f54ab2")
+    @objid ("cf0788f5-29e1-4d99-b368-038e75713aac")
     protected  ImplementationArtifactType(final ModelElement elt) {
         super(elt);
     }
 
-    @objid ("80467fe9-33ba-4210-81d0-f2de43e497a7")
+    @objid ("720bd0f1-72d2-4bb4-96e5-12b6e81920f0")
     public static final class MdaTypes {
-        @objid ("9c1c1998-30cf-4ae6-835d-d648614cf6a2")
+        @objid ("b4c48436-6626-4d1b-b01a-c6af0ca7f487")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("c85f1430-242f-4d4a-9b2a-71e330c2d1d9")
+        @objid ("c814e01b-b697-451d-8609-62d0fc9ecaf1")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("f4c154fa-9d6a-4c9c-9f67-ae97f9c0458a")
+        @objid ("741c841e-b85c-472a-854e-df0c649cdfa3")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("b6a87078-8ca5-426e-96f3-d49c94c890a0")
+        @objid ("af3ee7e8-2448-40a6-a460-7421f8ccdbb9")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -160,7 +158,6 @@ public class ImplementationArtifactType extends TImplementationArtifact implemen
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
-            
         }
 
     }

@@ -9,32 +9,32 @@ import org.eclipse.swt.widgets.Display;
 import org.modelio.api.module.context.log.ILogService;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("34a188dd-a4fd-4b07-ab9a-aeda3b967942")
+@objid ("25521c06-6c79-4148-89ee-f4e056e7d0da")
 class ToscaFileGenerator extends AbstractToscaFileGenerator {
-    @objid ("48045226-6c10-4d8d-b4ab-1bc5f7e0c1bf")
+    @objid ("52396f91-0550-447c-a930-a966c6c568a5")
     private static final String[] TOSCA_FILE_EXTENSIONS = { "*.tosca" };
 
-    @objid ("579fba4a-cff8-4001-9c1d-6853cb3d9c51")
+    @objid ("52dec718-f921-4623-885b-784ba0662f1e")
     private ILogService logger;
 
-    @objid ("638eb07c-5695-466c-a724-282b4b9437f1")
+    @objid ("169bcf1b-ca40-4c0d-952e-fc61c78c6d93")
     public  ToscaFileGenerator(ILogService logger) {
         this.logger = logger;
     }
 
-    @objid ("018eb7f4-75dd-454b-a3d0-504cc4be82e3")
+    @objid ("5bc507c3-edf4-4540-9ae6-940802ed1bbe")
     @Override
     protected String getFileType() {
         return "TOSCA file";
     }
 
-    @objid ("497dc83d-0f5a-4854-b84f-ba6864ba8dfc")
+    @objid ("860129ad-8e0a-487c-9e3f-e4204a995ea8")
     @Override
     protected String[] getFileExtensions() {
         return TOSCA_FILE_EXTENSIONS;
     }
 
-    @objid ("e067ea76-2788-40b0-bb1e-ac1edec52cba")
+    @objid ("296eeef8-dd7f-44c5-9628-c7bea5ff7cf2")
     @Override
     public void generateContent(MObject object) throws IOException {
         String filePath = saveToFile(getFileExtensions(), getFileType());

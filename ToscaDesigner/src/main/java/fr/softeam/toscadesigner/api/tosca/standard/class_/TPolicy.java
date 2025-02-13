@@ -39,21 +39,22 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-@objid ("c6151804-ffa2-41b1-a19f-75a3542d7e94")
+@objid ("80f30752-706c-477f-885d-63aaec441f1f")
 public class TPolicy implements IMdaProxy {
-    @objid ("ec4872f1-6bf4-4544-95c7-89c0c8865995")
+    @objid ("48c29faa-97d9-4af3-b432-139c28113536")
     public static final String STEREOTYPE_NAME = "TPolicy";
 
-    @objid ("504e5e07-661a-4421-9022-3ff93252eecc")
+    @objid ("d3d528c9-f242-4eea-98f4-db1d2fae07a2")
     public static final String DESCRIPTION_PROPERTY = "description";
 
-    @objid ("7f6f0884-59b3-4c62-a67f-a32643fd0723")
+    @objid ("4fb28369-e5fc-4649-9cdf-3c03a7a6918a")
     public static final String POLICYREF_PROPERTY = "policyRef";
 
     /**
      * The underlying {@link Class} represented by this proxy, never null.
+     * 
      */
-    @objid ("38c82902-8dc8-46ad-9827-a4637d1358cf")
+    @objid ("b941b08e-9410-497c-b368-40783bfc4e73")
     protected final Class elt;
 
     /**
@@ -63,17 +64,16 @@ public class TPolicy implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("012d74af-5388-4199-a683-92c89ee29af3")
+    @objid ("af681626-350c-4f09-ad81-f246c0e38d4b")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (TPolicy.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(TPolicy.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link Class} stereotyped << TPolicy >> then instantiate a {@link TPolicy} proxy.
-     * 
      * @return a {@link TPolicy} proxy on the created {@link Class}.
      */
-    @objid ("2db698bc-f8e2-4415-8f71-d385807f8990")
+    @objid ("47a37fa3-4a3c-42a9-8596-0798b202a42c")
     public static TPolicy create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(TPolicy.MdaTypes.STEREOTYPE_ELT);
@@ -87,7 +87,7 @@ public class TPolicy implements IMdaProxy {
      * @param obj a Class
      * @return a {@link TPolicy} proxy or <i>null</i>.
      */
-    @objid ("3684322c-90d9-4e6b-ac77-3d00dabdc91e")
+    @objid ("666dd6b2-c051-45cd-b06f-bfabbd393713")
     public static TPolicy instantiate(final Class obj) {
         return TPolicy.canInstantiate(obj) ? new TPolicy(obj) : null;
     }
@@ -96,25 +96,24 @@ public class TPolicy implements IMdaProxy {
      * Tries to instantiate a {@link TPolicy} proxy from a {@link Class} stereotyped << TPolicy >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link Class}
      * @return a {@link TPolicy} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("843b8fdc-13af-444e-8870-3a0130d59bb8")
+    @objid ("fd740a07-631a-4d03-b7f2-58c223be82ec")
     public static TPolicy safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (TPolicy.canInstantiate(obj))
-        	return new TPolicy(obj);
+            return new TPolicy(obj);
         else
-        	throw new IllegalArgumentException("TPolicy: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("TPolicy: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
     /**
      * Add a value to the 'properties' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("df509dc7-853c-478b-8418-6f891290fff5")
+    @objid ("d9cbd75b-233f-4ec8-8356-6180ab6f6184")
     public void addProperties(final TPropertyDef obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -128,9 +127,8 @@ public class TPolicy implements IMdaProxy {
      * Add a value to the 'targets' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("e81a3992-756e-4f04-a5f5-a475edcaf1a3")
+    @objid ("bdde335c-e8d7-43df-87c8-b96e0d8cd161")
     public void addTargets(final TNodeTemplate obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -144,9 +142,8 @@ public class TPolicy implements IMdaProxy {
      * Add a value to the 'triggers' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("8c0be6a6-968f-48bd-841f-75762ea33161")
+    @objid ("7746c18b-c7bd-45e2-8bf8-4e22b93dde57")
     public void addTriggers(final Trigger obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -156,7 +153,7 @@ public class TPolicy implements IMdaProxy {
         }
     }
 
-    @objid ("0c161f90-614f-4b50-945e-59ea7f6482ff")
+    @objid ("f0f0f5b4-5d11-4459-94fe-790ced785a14")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -177,7 +174,7 @@ public class TPolicy implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("c6a8491d-dae7-4d68-8b1f-5733d83c1c2a")
+    @objid ("fec3f97b-5dde-47bf-9218-22ffc3d0b367")
     public String getDescription() {
         String value = this.elt.getProperty(TPolicy.MdaTypes.STEREOTYPE_ELT,
                                             TPolicy.MdaTypes.DESCRIPTION_PROPERTY_ELT.getName());
@@ -185,14 +182,13 @@ public class TPolicy implements IMdaProxy {
           value = TPolicy.MdaTypes.DESCRIPTION_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(TPolicy.MdaTypes.DESCRIPTION_PROPERTY_ELT, value, this.elt);
-        
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("f085622f-ad8d-40ae-8a9b-22f463b6534f")
+    @objid ("89bc3ddd-0f27-424e-82d7-c12c6f1ad467")
     public Class getElement() {
         return this.elt;
     }
@@ -202,7 +198,7 @@ public class TPolicy implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("76dcdd6d-f8e0-4a80-82e5-35fd59ab39d7")
+    @objid ("b2240f03-ac4a-40c7-bf5b-96e0f085e37c")
     public String getPolicyRef() {
         String value = this.elt.getProperty(TPolicy.MdaTypes.STEREOTYPE_ELT,
                                             TPolicy.MdaTypes.POLICYREF_PROPERTY_ELT.getName());
@@ -210,16 +206,14 @@ public class TPolicy implements IMdaProxy {
           value = TPolicy.MdaTypes.POLICYREF_PROPERTY_ELT.getDefaultValue();
         }
         return (String) PropertyConverter.convertToObject(TPolicy.MdaTypes.POLICYREF_PROPERTY_ELT, value, this.elt);
-        
     }
 
     /**
      * Get the values of the 'properties' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("571c842c-f092-4ad3-838a-1f338db510ec")
+    @objid ("c19ae83e-1672-4001-b8ba-55bbeffbca1f")
     public List<TPropertyDef> getProperties() {
         List<TPropertyDef> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -235,9 +229,8 @@ public class TPolicy implements IMdaProxy {
      * Get the values of the 'targets' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("f249fdb8-aca5-4494-b9f3-9e8fa7c74b8f")
+    @objid ("5b490bd7-44e8-41c2-b13f-851ffbc427a6")
     public List<TNodeTemplate> getTargets() {
         List<TNodeTemplate> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -253,9 +246,8 @@ public class TPolicy implements IMdaProxy {
      * Get the values of the 'triggers' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("7ddc48fa-c520-410d-be9d-36dbb34fd793")
+    @objid ("51a80c75-43ff-4be8-a350-ee02ce1d0c3a")
     public List<Trigger> getTriggers() {
         List<Trigger> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -271,9 +263,8 @@ public class TPolicy implements IMdaProxy {
      * Get the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("0d95b1b5-0fdb-459a-ba22-8acac821b6c4")
+    @objid ("c43aba3a-7a22-4ab5-8648-e648a41b41cc")
     public TPolicyType getType() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(TPolicy.MdaTypes.MDAASSOCDEP)
@@ -285,20 +276,18 @@ public class TPolicy implements IMdaProxy {
         return null;
     }
 
-    @objid ("8c673a68-786b-4916-9d13-14174f3b88da")
+    @objid ("31ea3d1b-c4e4-4631-b78c-4eccf4563a56")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-        
     }
 
     /**
      * Remove a value from the 'properties' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("e1817539-6c39-4503-b535-5fee1fc71220")
+    @objid ("9fbbcd77-53fc-4088-ae5a-6bc42b6dadfb")
     public boolean removeProperties(final TPropertyDef obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -310,16 +299,14 @@ public class TPolicy implements IMdaProxy {
           }
         }
         return false;
-        
     }
 
     /**
      * Remove a value from the 'targets' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("e357ea80-81c8-48f0-9eb2-39e9567a37e7")
+    @objid ("1017ce58-6b7c-452c-a4a3-d6b4c520d9a3")
     public boolean removeTargets(final TNodeTemplate obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -331,16 +318,14 @@ public class TPolicy implements IMdaProxy {
           }
         }
         return false;
-        
     }
 
     /**
      * Remove a value from the 'triggers' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("c0489eb2-ed00-44bb-af18-fdba0de8bd68")
+    @objid ("025ee2f4-00f8-44e3-8e46-6d6862f6958c")
     public boolean removeTriggers(final Trigger obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -352,7 +337,6 @@ public class TPolicy implements IMdaProxy {
           }
         }
         return false;
-        
     }
 
     /**
@@ -360,7 +344,7 @@ public class TPolicy implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ab0c68f2-94a1-4717-a07b-62f4e2537cc2")
+    @objid ("d05dc736-2afb-4652-8052-06de7e4077d3")
     public void setDescription(final String value) {
         this.elt.setProperty(TPolicy.MdaTypes.STEREOTYPE_ELT,
                              TPolicy.MdaTypes.DESCRIPTION_PROPERTY_ELT.getName(),
@@ -372,7 +356,7 @@ public class TPolicy implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d10877af-8485-489d-bd5f-74e6a6867438")
+    @objid ("94de37c4-e649-4d65-9986-656d78830362")
     public void setPolicyRef(final String value) {
         this.elt.setProperty(TPolicy.MdaTypes.STEREOTYPE_ELT,
                              TPolicy.MdaTypes.POLICYREF_PROPERTY_ELT.getName(),
@@ -383,9 +367,8 @@ public class TPolicy implements IMdaProxy {
      * Set the value of the 'type' role.<p>
      * Role description:
      * null
-     * 
      */
-    @objid ("8499d114-cad0-4073-a3f1-19dd01db4a8f")
+    @objid ("fc15a4b9-bb59-4c6c-9c5d-be745c437923")
     public void setType(final TPolicyType obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -403,32 +386,31 @@ public class TPolicy implements IMdaProxy {
           }
           dep.setDependsOn(obj.getElement());
         }
-        
     }
 
-    @objid ("735597c8-b391-4a6d-ac84-bb9793ff4187")
+    @objid ("7147b4a8-5de1-4660-b994-4a23a57055b2")
     protected  TPolicy(final Class elt) {
         this.elt = elt;
     }
 
-    @objid ("9cdabba3-5ee3-4167-9304-34532fa22246")
+    @objid ("e62586fe-4278-4937-b2f9-49e56d58a549")
     public static final class MdaTypes {
-        @objid ("c03df1e9-6b22-469e-904a-39ca4d94d1cb")
+        @objid ("e201783d-5918-478a-be4d-bbcd726f65eb")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("9ade6f9a-803d-45d3-9984-e1cdbb06216c")
+        @objid ("a0bf2610-7f22-49fb-9ed5-034b02365033")
         public static PropertyDefinition POLICYREF_PROPERTY_ELT;
 
-        @objid ("18a6c2d5-5f59-4ddf-b322-274804edfe31")
+        @objid ("885eaa85-cd00-42a1-8776-06d0731bf133")
         public static PropertyDefinition DESCRIPTION_PROPERTY_ELT;
 
-        @objid ("1d2e3144-a2a3-49e1-bf7b-f75c328088f5")
+        @objid ("7401ad22-d9c9-4ac1-9d41-a31da5ac9fe3")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("b1220c0d-37f5-4c8d-b5a6-cac29481b4dc")
+        @objid ("18eed196-ff4e-4f75-92a3-808533b9c1d0")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("04c7c83e-7bf7-463c-bd40-c32c93824f90")
+        @objid ("43214952-81f2-45f0-96b8-cffb0476f67d")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -453,7 +435,6 @@ public class TPolicy implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
-            
         }
 
     }

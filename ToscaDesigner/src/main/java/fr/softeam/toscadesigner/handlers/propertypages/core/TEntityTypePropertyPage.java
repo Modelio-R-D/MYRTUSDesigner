@@ -9,15 +9,15 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("2838ec68-e4d6-477b-9ba1-a3596be3ed41")
+@objid ("e39a656e-a40d-4be9-bbdd-cbb81c28ec10")
 public abstract class TEntityTypePropertyPage<T extends TEntityType> extends ToscaElementPropertyPage<T> {
-    @objid ("2000cd5e-4ed6-4455-a13d-9069a6cb5c6a")
+    @objid ("b25e9f6b-cbd1-4411-9932-a662b03d950f")
     public  TEntityTypePropertyPage(T elt) {
         super(elt);
         // TODO Auto-generated constructor stub
     }
 
-    @objid ("5ff8c89a-8557-48ed-82bd-40fdb5f2f6fa")
+    @objid ("e476f4fa-b219-4e57-a736-6d5d56b9f242")
     @Override
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
@@ -43,7 +43,7 @@ public abstract class TEntityTypePropertyPage<T extends TEntityType> extends Tos
            }
     }
 
-    @objid ("17a6a2d8-d975-400f-acfe-78fc8ef282f3")
+    @objid ("ad7d906d-f5c6-48b9-aa72-2c5502bc473f")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);

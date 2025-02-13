@@ -37,15 +37,16 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-@objid ("1aff9e2f-f5e7-46c0-9932-565fb0c34d51")
+@objid ("65ab1556-16d4-4840-b684-9e625873f807")
 public class TImplementationArtifacts implements IMdaProxy {
-    @objid ("3f8d9a7e-af77-4d01-ad55-1b1c765640f1")
+    @objid ("50f95291-cfe0-45cd-80e5-545399fe1b04")
     public static final String STEREOTYPE_NAME = "TImplementationArtifacts";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
+     * 
      */
-    @objid ("fee8d320-27cb-43df-a27e-837a06c8f596")
+    @objid ("d804bae1-7cd1-4e7a-a779-851feb0ebba7")
     protected final ModelElement elt;
 
     /**
@@ -55,17 +56,16 @@ public class TImplementationArtifacts implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("32d09f32-7e0f-4a64-85a7-96f3f1ad3abd")
+    @objid ("f45cfad6-9230-4aaf-9e54-ba4df170d13f")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (TImplementationArtifacts.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(TImplementationArtifacts.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link ModelElement} stereotyped << TImplementationArtifacts >> then instantiate a {@link TImplementationArtifacts} proxy.
-     * 
      * @return a {@link TImplementationArtifacts} proxy on the created {@link ModelElement}.
      */
-    @objid ("d6a7eb31-a4f8-43fd-828a-4a2197144b6a")
+    @objid ("4b661964-98ef-47d4-b8b3-9eeaf4c2624e")
     public static TImplementationArtifacts create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(TImplementationArtifacts.MdaTypes.STEREOTYPE_ELT);
@@ -79,7 +79,7 @@ public class TImplementationArtifacts implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link TImplementationArtifacts} proxy or <i>null</i>.
      */
-    @objid ("d18339bf-f736-469f-ab7c-4462b794f943")
+    @objid ("1831f3b3-2742-4a62-a39d-2491fa605f69")
     public static TImplementationArtifacts instantiate(final ModelElement obj) {
         return TImplementationArtifacts.canInstantiate(obj) ? new TImplementationArtifacts(obj) : null;
     }
@@ -88,19 +88,19 @@ public class TImplementationArtifacts implements IMdaProxy {
      * Tries to instantiate a {@link TImplementationArtifacts} proxy from a {@link ModelElement} stereotyped << TImplementationArtifacts >> checking its metaclass and its stereotype. 
      * <p>
      * The method throws an {@link IllegalArgumentException} if the instantiation cannot be carried out.
+     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      * @param obj a {@link ModelElement}
      * @return a {@link TImplementationArtifacts} proxy.
-     * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("4059d573-b642-4a60-8148-198bec3399cc")
+    @objid ("65b5bab9-b8ad-40fb-bdef-84d3ff8c14db")
     public static TImplementationArtifacts safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (TImplementationArtifacts.canInstantiate(obj))
-        	return new TImplementationArtifacts(obj);
+            return new TImplementationArtifacts(obj);
         else
-        	throw new IllegalArgumentException("TImplementationArtifacts: Cannot instantiate "+obj+": wrong element type or stereotype");
+            throw new IllegalArgumentException("TImplementationArtifacts: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("09f1391a-3c23-49a8-95ab-92f62998f69d")
+    @objid ("65bc32da-09fb-4b05-a178-bbc494b1cc9f")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -117,38 +117,37 @@ public class TImplementationArtifacts implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link ModelElement}. 
+     * Get the underlying {@link ModelElement}.
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("824be54b-d505-47cb-8bab-79138c476c0d")
+    @objid ("19836285-956d-4a21-9898-f4a7fca7e2f0")
     public ModelElement getElement() {
         return this.elt;
     }
 
-    @objid ("f74caf33-0f08-4715-a401-870b1a1cfa34")
+    @objid ("be77f28d-6e2c-45dc-aa49-b500e9fc076a")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
-        
     }
 
-    @objid ("7104de07-674a-47ff-8386-660817a32031")
+    @objid ("f7dd4ca2-888a-4a97-aeff-a7f045fa472c")
     protected  TImplementationArtifacts(final ModelElement elt) {
         this.elt = elt;
     }
 
-    @objid ("74170f4e-4335-4473-8b5f-8661445b5efc")
+    @objid ("471dcf78-eeac-46c6-bb02-00f732d4903f")
     public static final class MdaTypes {
-        @objid ("cb6cffe8-da73-4c25-be1a-60e582678b08")
+        @objid ("08271942-6b14-4b76-83cf-2dc9d5ec5c8b")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("3ed0ae69-0b2c-4826-9c51-3916710fa70e")
+        @objid ("8115bfa2-d0d4-4bc1-927b-55989500622d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("9de26cff-03a8-478b-910f-305aa0aac169")
+        @objid ("1a048d0d-ce19-492b-841c-87f4ad014b5c")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("3746b369-16c9-4829-90c4-9c8ab61dd57e")
+        @objid ("95f6b22a-34d5-4769-9829-3aebff5c5914")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -165,7 +164,6 @@ public class TImplementationArtifacts implements IMdaProxy {
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
             
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
-            
         }
 
     }

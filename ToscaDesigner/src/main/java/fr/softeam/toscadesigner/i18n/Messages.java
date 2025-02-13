@@ -5,17 +5,17 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
-@objid ("3e579112-9583-4598-b88e-5beb64540fcb")
+@objid ("e2890b80-cdf8-4ac5-a0a4-03779d942d96")
 public class Messages {
-    @objid ("f3431cc0-dd94-40e3-9827-babb1f5cc544")
+    @objid ("5d8ff171-09c7-46f4-9efd-572968ca8619")
     private static ResourceBundle RESOURCE_BUNDLE = ResourceBundle.getBundle ("fr.softeam.toscadesigner.i18n.messages");
 
-    @objid ("5ca3df72-14b9-4824-8208-ce4106d7b9b0")
+    @objid ("a6c3a219-1f15-43d1-b9e8-fb7c55d5333e")
     private  Messages() {
         
     }
 
-    @objid ("f14a43e4-36a6-4c3c-bbfa-8920499d05ba")
+    @objid ("bd9cca81-9342-440a-8369-243a874896b4")
     public static String getString(final String key) {
         try {
             return RESOURCE_BUNDLE.getString (key);
@@ -24,7 +24,7 @@ public class Messages {
         }
     }
 
-    @objid ("290f6cf4-411a-4712-ae3e-7f41c9605c62")
+    @objid ("2763e3c9-b55e-41ca-93d0-cbe5b32b841c")
     public static String getString(final String key, final String... params) {
         try {
             return MessageFormat.format (RESOURCE_BUNDLE.getString (key),(Object[]) params);

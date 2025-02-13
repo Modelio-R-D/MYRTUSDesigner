@@ -17,15 +17,15 @@ import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("70b0137e-f426-4173-8bf4-39b754ebb8cc")
+@objid ("9ba049d3-ee8c-4422-8d36-2464c310e0f6")
 public class TGroupPropertyPage<T extends TGroup> extends ToscaElementPropertyPage<T> {
-    @objid ("5430e77a-00d6-4172-b2f1-95179e75ecff")
+    @objid ("e85baca2-0be5-43c6-b58e-c312d69a0cbc")
     public  TGroupPropertyPage(T elt) {
         super(elt);
         // TODO Auto-generated constructor stub
     }
 
-    @objid ("2dfbbee9-dff6-4801-b242-f9ce8f436cc2")
+    @objid ("12f17f2a-9545-4b7d-870d-fdc358b3131e")
     @Override
     public void changeProperty(int row, String value) {
         switch (row) {
@@ -58,7 +58,7 @@ public class TGroupPropertyPage<T extends TGroup> extends ToscaElementPropertyPa
         }
     }
 
-    @objid ("f48d6f31-d6fb-4804-b5cd-1d61d2469c51")
+    @objid ("e621c642-2ca4-484e-a8ff-25974c47477c")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);

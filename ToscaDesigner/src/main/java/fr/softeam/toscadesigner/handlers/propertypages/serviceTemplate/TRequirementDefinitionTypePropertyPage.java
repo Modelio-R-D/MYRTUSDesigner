@@ -10,15 +10,15 @@ import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
-@objid ("c757eb57-dab6-4fc3-8fd8-6f094926a62c")
+@objid ("559da940-3e06-4be7-8179-e4239dfa9b71")
 public class TRequirementDefinitionTypePropertyPage<T extends TRequirementDefinitionType> extends ToscaElementPropertyPage<T> {
-    @objid ("bad7c543-2275-4aee-900e-1c4e6306da6f")
+    @objid ("a0b8cdf3-4fbb-4165-9424-f22d701766f9")
     public  TRequirementDefinitionTypePropertyPage(T elt) {
         super(elt);
         // TODO Auto-generated constructor stub
     }
 
-    @objid ("a8259c89-4113-4860-873d-5c3b6326d46f")
+    @objid ("96513ff6-9d80-47ba-bd65-f6afb3b267d8")
     @Override
     public void changeProperty(int row, String value) {
         switch (row) {
@@ -40,7 +40,7 @@ public class TRequirementDefinitionTypePropertyPage<T extends TRequirementDefini
         }
     }
 
-    @objid ("600d81b9-9625-4ce5-9cd8-1b4e5ed141cd")
+    @objid ("c55e3f0c-e3e9-4213-bcf2-5de8d2691a5d")
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);

@@ -2,39 +2,39 @@ package fr.softeam.toscadesigner.api;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
-@objid ("c6e7f0e7-7cf0-435d-805e-7dc036c88c3a")
+@objid ("e5b6c80e-23d0-4716-ada1-0c8bb41939fb")
 public interface ToscaDesignerStereotypes {
-    @objid ("4a5f9810-710a-453e-85e3-2fb2fae3107b")
+    @objid ("796a67c6-deb5-4221-83e2-33e9050e3b8f")
     public static final String TNODETYPE = "TNodeType";
 
-    @objid ("29cdc9c8-62e2-47f3-a842-05bfcf66ceb4")
+    @objid ("5685892b-e57c-43b7-accc-a0417f6c4505")
     public static final String TRELATIONSHIPTYPE = "TRelationshipType";
 
-    @objid ("124b385d-b194-42b0-91c6-6f143ee255f2")
+    @objid ("ce3b7ccc-418c-4f70-a15a-ec3c0c4a4931")
     public static final String TARTIFACTTYPE = "TartifactType";
 
-    @objid ("ed147d17-d4bc-408e-8e66-fc901d163304")
+    @objid ("d88b8a37-82cd-4c25-b85d-b419d04b53c9")
     public static final String TINTERFACE = "TInterface";
 
-    @objid ("bd79defd-ed98-4672-83c5-ea7fe7c02dca")
+    @objid ("067a0872-c735-4cb5-af3f-1633fd300ab9")
     public static final String TGROUP = "TGroup";
 
-    @objid ("79f54f59-6d78-4fb2-ba04-c1730ccb1df4")
+    @objid ("22831a04-0a5b-4065-9147-7153196b2758")
     public static final String TPOLICY = "TPolicy";
 
-    @objid ("8334f7b2-12df-4f61-a845-70848d78e7f1")
+    @objid ("b0c00bfd-80b4-4b49-b4f2-7afa98be18d7")
     public static final String TPOLICY_TYPE = "TPolicyType";
 
-    @objid ("06ef7d01-24bb-44cd-8a53-7fe09d7a0b17")
+    @objid ("c1852bdc-f8c2-462f-bc6d-0366bae72268")
     public static final String TCAPABILITY_DEFINITION = "TCapabilityDefinition";
 
-    @objid ("00bcce85-5b07-444e-9e4a-1f2f898464e2")
+    @objid ("70a80f0a-e3e0-46db-a4ed-a217a61247a9")
     public static final String CAPABILITY_DEFINITIONS_TYPE = "CapabilityDefinitionsType";
 
-    @objid ("7b43b6c7-1303-4708-96e1-c751254b9515")
+    @objid ("1b6471d1-8409-4785-8fa1-1e17b1aefd3e")
     public static final String TCAPABILITY_TYPE = "TCapabilityType";
 
-    @objid ("bbfea042-2dc9-43d1-b16a-a5aef188725a")
+    @objid ("b05f2af3-3c33-40e3-ab2f-2b9198d43074")
     public static final String TOPERATION = "TOperation";
 }
 
