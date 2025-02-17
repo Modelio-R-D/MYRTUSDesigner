@@ -1,7 +1,8 @@
 package fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.standard.attribute.TDeploymentArtifact;
+
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifact;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
@@ -21,16 +22,31 @@ public class TDeploymentArtifactPropertyPage<T extends TDeploymentArtifact> exte
             this._element.getElement().setName(value);
             break;
         case 2:
-            this._element.setArtifactType(value);
+            this._element.setType(value);
             break;
         case 3:
-            this._element.setArtifactref(value);
-            break;
-        case 4:
             this._element.setFile(value);
             break;
+        case 4:
+            this._element.setRepository(value);
+            break;
         case 5:
+            this._element.setDescription(value);
+            break;
+        case 6:
             this._element.setDeploy_path(value);
+            break;
+        case 7:
+            this._element.setArtifact_version(value);
+            break;
+        case 8:
+            this._element.setChecksum(value);
+            break;
+        case 9:
+            this._element.setChecksum_algortihm(value);
+            break;
+        case 10:
+            this._element.setMetadata(value);
             break;
             
         }
@@ -41,10 +57,15 @@ public class TDeploymentArtifactPropertyPage<T extends TDeploymentArtifact> exte
     public void update(IModulePropertyTable table) {
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
-        table.addProperty("Artifact Type", _element.getArtifactType());
-        table.addProperty("Artifact Ref", _element.getArtifactref());
+        table.addProperty("Artifact Type", _element.getType());
         table.addProperty("File", _element.getFile());
+        table.addProperty("Repository", _element.getRepository());
+        table.addProperty("Description", _element.getDescription());
         table.addProperty("Deploy path", _element.getDeploy_path());
+        table.addProperty("Artifact Version", _element.getArtifact_version());
+        table.addProperty("Checksum", _element.getChecksum());
+        table.addProperty("Checksum algorithm", _element.getChecksum_algortihm());
+        table.addProperty("Properties", _element.getMetadata());
     }
 
 }
