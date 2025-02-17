@@ -2,7 +2,7 @@ package fr.softeam.toscadesigner.export;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
-import fr.softeam.toscadesigner.api.tosca.standard.package_.TTopologyTemplate;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate;
 import org.modelio.api.module.context.log.ILogService;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.smkernel.mapi.MObject;

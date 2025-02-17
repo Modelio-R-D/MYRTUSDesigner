@@ -12,9 +12,9 @@ import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyElementInstanceStates;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.package_.TGroup;
 import fr.softeam.toscadesigner.api.tosca.standard.package_.TServiceTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.package_.TTopologyTemplate;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
@@ -43,7 +43,7 @@ public class TServiceTemplatePropertyPage<T extends TServiceTemplate> extends To
             for (ModelElement dep : TTopologyTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
                     this._element.setTopologyTemplate(
-                            TTopologyTemplate.instantiate((org.modelio.metamodel.uml.statik.Package) dep));
+                            TTopologyTemplate.instantiate((org.modelio.metamodel.uml.statik.Class) dep));
         break;
         } else {
         this._element.setTopologyTemplate(null);
