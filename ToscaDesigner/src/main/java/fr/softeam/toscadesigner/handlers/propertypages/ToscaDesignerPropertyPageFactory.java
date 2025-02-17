@@ -188,7 +188,9 @@ public class ToscaDesignerPropertyPageFactory {
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TCapability.STEREOTYPE_NAME:
                 return new TCapabilityPropertyPage<>(
                         fr.softeam.toscadesigner.api.tosca.standard.class_.TCapability.instantiate(obj));
-            
+            case fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifact.STEREOTYPE_NAME:
+                return new TDeploymentArtifactPropertyPage<>(
+                        fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifact.instantiate(obj));
             default:
                 break;
             }
@@ -256,9 +258,6 @@ public class ToscaDesignerPropertyPageFactory {
             case fr.softeam.toscadesigner.api.tosca.standard.attribute.Metadata.STEREOTYPE_NAME:
                 return new MetadataPropertyPage<>(
                         fr.softeam.toscadesigner.api.tosca.standard.attribute.Metadata.instantiate(obj));
-            case fr.softeam.toscadesigner.api.tosca.standard.attribute.TDeploymentArtifact.STEREOTYPE_NAME:
-                return new TDeploymentArtifactPropertyPage<>(
-                        fr.softeam.toscadesigner.api.tosca.standard.attribute.TDeploymentArtifact.instantiate(obj));
             case fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef.STEREOTYPE_NAME:
                 return new TPropertyDefPropertyPage<>(
                         fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef.instantiate(obj));
