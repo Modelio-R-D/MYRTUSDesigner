@@ -3,8 +3,10 @@ package fr.softeam.toscadesigner.export;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.eclipse.swt.SWT;
@@ -33,6 +35,7 @@ import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition;
+import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
 
 @objid ("e7453252-f578-4da1-815c-d2ce0e765130")
 public abstract class AbstractToscaFileGenerator {
