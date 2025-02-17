@@ -941,7 +941,7 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="TTopologyTemplate" metaclass="Standard.Package" owner-stereotype="mref#'' {1aad84ed-4c30-40ec-a4d8-6712bb6bd018} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TTopologyTemplate.label" uid="a52f433c-cf19-4033-99c2-81b4af708744" is-abstract="false">
+            <Stereotype name="TTopologyTemplate" metaclass="Standard.Class" owner-stereotype="mref#'' {1aad84ed-4c30-40ec-a4d8-6712bb6bd018} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TTopologyTemplate.label" uid="a52f433c-cf19-4033-99c2-81b4af708744" is-abstract="false">
                 <Icon path="res/icon/gui/topology_template24.png"/>
                 <Image path="res/icon/gui/topology_template48.png"/>
             </Stereotype>
@@ -1057,7 +1057,7 @@
             <Command id="Export" label="%command.Export.label" tooltip="%command.Export.tooltip" image="res/icon/gui/export.png" modify-model="false">
                 <Scope metaclass="Standard.Package" stereotype="ToscaDesigner#ToscaModel"/>
                 <Scope metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeType"/>
-                <Scope metaclass="Standard.Package" stereotype="ToscaDesigner#TTopologyTemplate"/>
+                <Scope metaclass="Standard.Class" stereotype="ToscaDesigner#TTopologyTemplate"/>
                 <Handler class="fr.softeam.toscadesigner.handlers.commands.ExportToscaModelCommand">
                     <HParameter name="name" value=""/>
                 </Handler>
@@ -1122,7 +1122,7 @@
             </Tool>
             <Tool id="Import" label="%tool.Import.label" tooltip="%tool.Import.tooltip" image="res/icon/gui/import24.ICON.png">
                 <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeType"/>
-                <Scope-source metaclass="Standard.Package" stereotype="ToscaDesigner#TTopologyTemplate"/>
+                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TTopologyTemplate"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#ImportElement"/>
                     <HParameter name="metaclass" value="Standard.Attribute"/>
@@ -1130,7 +1130,7 @@
                 </Handler>
             </Tool>
             <Tool id="Metadata" label="%tool.Metadata.label" tooltip="%tool.Metadata.tooltip" image="res/icon/gui/metadata24.png">
-                <Scope-source metaclass="Standard.Package" stereotype="ToscaDesigner#TTopologyTemplate"/>
+                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TTopologyTemplate"/>
                 <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeTemplate"/>
                 <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeType"/>
                 <Handler class="Box">
@@ -1140,7 +1140,7 @@
                 </Handler>
             </Tool>
             <Tool id="NodeTemplate" label="%tool.NodeTemplate.label" tooltip="%tool.NodeTemplate.tooltip" image="res/icon/gui/node_template24.png">
-                <Scope-source metaclass="Standard.Package" stereotype=""/>
+                <Scope-source metaclass="Infrastructure.ModelElement" stereotype=""/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TNodeTemplate"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
@@ -1260,9 +1260,9 @@
             </Tool>
             <Tool id="TopologyTemplate" label="%tool.TopologyTemplate.label" tooltip="%tool.TopologyTemplate.tooltip" image="res/icon/gui/topology_template24.png">
                 <Scope-source metaclass="Standard.Package" stereotype="ToscaDesigner#TServiceTemplate"/>
-                <Handler class="fr.softeam.toscadesigner.handlers.tools.CreateTopologyTemplateTool">
+                <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TTopologyTemplate"/>
-                    <HParameter name="metaclass" value="Standard.Package"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
                     <HParameter name="name" value="TopologyTemplate"/>
                 </Handler>
             </Tool>

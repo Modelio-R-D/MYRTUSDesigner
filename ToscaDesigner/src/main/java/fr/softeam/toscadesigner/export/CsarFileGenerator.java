@@ -4,15 +4,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
-
+import com.github.jknack.handlebars.HandlebarsException;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.widgets.Display;
 import org.modelio.api.module.context.log.ILogService;
 import org.modelio.metamodel.uml.infrastructure.ModelTree;
 import org.modelio.vcore.smkernel.mapi.MObject;
-
-import com.github.jknack.handlebars.HandlebarsException;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("a5b394f4-d77e-46cc-b636-a67931ee5fe8")
 public class CsarFileGenerator extends AbstractToscaFileGenerator {

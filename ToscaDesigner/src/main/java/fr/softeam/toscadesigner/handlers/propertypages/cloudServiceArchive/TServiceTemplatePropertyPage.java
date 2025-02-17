@@ -3,8 +3,8 @@ package fr.softeam.toscadesigner.handlers.propertypages.cloudServiceArchive;
 import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TPlans;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.package_.TServiceTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.package_.TTopologyTemplate;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
@@ -32,7 +32,7 @@ public class TServiceTemplatePropertyPage<T extends TServiceTemplate> extends To
             for (ModelElement nodet : TTopologyTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(nodet.getUuid())) {
                     this._element.setTopologyTemplate(
-                            TTopologyTemplate.instantiate((org.modelio.metamodel.uml.statik.Package) nodet));
+                            TTopologyTemplate.instantiate((org.modelio.metamodel.uml.statik.Class) nodet));
         break;
         } else {
         this._element.setTopologyTemplate(null);

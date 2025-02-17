@@ -3,7 +3,7 @@ package fr.softeam.toscadesigner.handlers.commands.submodel;
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.TopologyTemplateDiagram;
-import fr.softeam.toscadesigner.api.tosca.standard.package_.TTopologyTemplate;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.package_.ToscaModel;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.ITransaction;
