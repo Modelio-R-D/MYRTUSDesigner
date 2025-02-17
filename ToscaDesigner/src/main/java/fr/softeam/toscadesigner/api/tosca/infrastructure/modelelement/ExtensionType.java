@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.1
 
- * This file was generated on 13/02/2025 17:54 by Modelio Studio.
+ * This file was generated on 17/02/2025 15:39 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -39,13 +39,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("7b10164e-17a7-4612-8e00-f52954ff315f")
 public class ExtensionType implements IMdaProxy {
-    @objid ("e14c8ea1-ab89-4f82-98b2-c6eb89841c21")
+    @objid ("f6d8bfca-8155-4350-a2ae-4b395f348521")
     public static final String STEREOTYPE_NAME = "ExtensionType";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
      */
-    @objid ("4c937ebe-88de-4d76-8c0b-1b28dcbdbc20")
+    @objid ("ad842523-5d01-4193-8f4b-e7ba85b3f70b")
     protected final ModelElement elt;
 
     /**
@@ -55,7 +55,7 @@ public class ExtensionType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("8dbb73f8-59b3-4276-99dc-f7d7e7d05bfa")
+    @objid ("dd5e609b-85c9-40f9-b9cd-6f527cdd5c80")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (ExtensionType.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(ExtensionType.MdaTypes.STEREOTYPE_ELT));
     }
@@ -65,7 +65,7 @@ public class ExtensionType implements IMdaProxy {
      * 
      * @return a {@link ExtensionType} proxy on the created {@link ModelElement}.
      */
-    @objid ("fc571902-4a56-4d32-b62b-f9db07925a4f")
+    @objid ("bac31412-7748-4251-8c7a-e6fc57f2233e")
     public static ExtensionType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(ExtensionType.MdaTypes.STEREOTYPE_ELT);
@@ -79,7 +79,7 @@ public class ExtensionType implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link ExtensionType} proxy or <i>null</i>.
      */
-    @objid ("da833948-184d-4425-ab25-9c4a19e55746")
+    @objid ("004e5beb-1ddb-4139-a057-e650c777d2c0")
     public static ExtensionType instantiate(final ModelElement obj) {
         return ExtensionType.canInstantiate(obj) ? new ExtensionType(obj) : null;
     }
@@ -92,7 +92,7 @@ public class ExtensionType implements IMdaProxy {
      * @return a {@link ExtensionType} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("413e7e80-22a7-4b22-86fa-a86f8f417523")
+    @objid ("039e151d-4231-428f-9502-5a49b2b52c03")
     public static ExtensionType safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (ExtensionType.canInstantiate(obj))
         	return new ExtensionType(obj);
@@ -106,7 +106,7 @@ public class ExtensionType implements IMdaProxy {
      * null
      * 
      */
-    @objid ("6a3e2bca-eb9f-4511-8f08-5c5f9b937fb1")
+    @objid ("8904116b-c23e-4741-8366-f174d850a9d6")
     public void addExtension(final TExtension obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -116,7 +116,7 @@ public class ExtensionType implements IMdaProxy {
         }
     }
 
-    @objid ("8cfe40a3-3993-48f3-87c5-47ae6037512b")
+    @objid ("4cec0c2c-27a3-4276-8702-d79fb35dd6fe")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -136,7 +136,7 @@ public class ExtensionType implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("01d5fae7-efc7-46d2-a26d-951f62b7cd12")
+    @objid ("f365aa5a-3b5c-4bf7-9b3d-460da0727ea8")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -147,7 +147,7 @@ public class ExtensionType implements IMdaProxy {
      * null
      * 
      */
-    @objid ("33922fb2-eafa-4dd6-9b23-4f80eef36029")
+    @objid ("fe0953c3-9c52-4f20-bd38-ecc047cd5191")
     public List<TExtension> getExtension() {
         List<TExtension> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -159,7 +159,7 @@ public class ExtensionType implements IMdaProxy {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("981d83ec-e95c-4716-8c02-36460db98d72")
+    @objid ("880e3bce-bff6-420d-bf89-9f9b12967c60")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -172,7 +172,7 @@ public class ExtensionType implements IMdaProxy {
      * null
      * 
      */
-    @objid ("dd86c2ca-ac14-4024-b8a0-beecdc87a78a")
+    @objid ("0438b740-8509-4df1-9deb-f300afe16f57")
     public boolean removeExtension(final TExtension obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -187,23 +187,23 @@ public class ExtensionType implements IMdaProxy {
         
     }
 
-    @objid ("bb2225a7-7165-4d1b-a272-9e847dd8d25f")
+    @objid ("376c5b9a-b047-412c-88cf-fad568e111f6")
     protected  ExtensionType(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("03f8a8b8-77d2-4ec8-a3fc-fb149f2998ab")
     public static final class MdaTypes {
-        @objid ("6028b090-8f79-4d2d-bf68-71e13b8b84e2")
+        @objid ("93c05ab9-cb2c-491e-a2e4-296483e02798")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("89cbf2c3-bf6b-403c-b414-f39a13e53734")
+        @objid ("8798103b-b04d-4bf6-966f-9ae5c73d90e1")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("0cc52fc1-ac6d-4284-ae89-9235e8880a99")
+        @objid ("4af78761-e3dc-4159-af91-cf179fafb9a4")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("25e2356e-bd76-45f9-905f-19a25f640502")
+        @objid ("e0c5cbee-96f1-4a45-a5b1-bb4adfb4f097")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

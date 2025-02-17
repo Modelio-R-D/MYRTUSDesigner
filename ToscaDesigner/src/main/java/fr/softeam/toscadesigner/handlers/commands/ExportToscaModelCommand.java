@@ -23,7 +23,7 @@ public class ExportToscaModelCommand extends DefaultModuleCommandHandler {
 
     @objid ("670e5efc-bdb5-499b-9735-52c1dcdd2556")
     private final ToscaObjectTypeChecker[] checkers = { new ToscaModelChecker(), new NodeTypeChecker(),
-        			new TopologyTemplateChecker() };
+            			new TopologyTemplateChecker() };
 
     @objid ("d43647a9-2319-464f-b59a-8242372555dd")
     @Override
