@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.1
 
- * This file was generated on 17/02/2025 18:02 by Modelio Studio.
+ * This file was generated on 18/02/2025 10:30 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -40,13 +40,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("7f34e1ea-0e8a-4654-ab1c-eba9c35ff4b8")
 public class PoliciesType1 implements IMdaProxy {
-    @objid ("1dab10c8-8750-4153-af1b-12db2fdc5f95")
+    @objid ("128e6449-d3ce-4349-8884-e612789eae88")
     public static final String STEREOTYPE_NAME = "PoliciesType1";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
      */
-    @objid ("f55d39ce-ab34-4712-8101-8dc646f74a39")
+    @objid ("81c6d312-f9ae-43f2-80d6-da80c79d6032")
     protected final ModelElement elt;
 
     /**
@@ -56,7 +56,7 @@ public class PoliciesType1 implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("1c61063a-3cbb-4a7c-b4ed-8745bcec40c1")
+    @objid ("dad28090-fba5-40d3-88ae-579a56640d16")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (PoliciesType1.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(PoliciesType1.MdaTypes.STEREOTYPE_ELT));
     }
@@ -66,7 +66,7 @@ public class PoliciesType1 implements IMdaProxy {
      * 
      * @return a {@link PoliciesType1} proxy on the created {@link ModelElement}.
      */
-    @objid ("6a6765cc-4538-413f-9890-983631c97a6c")
+    @objid ("f425faeb-f782-40e9-9709-9dd901bf950a")
     public static PoliciesType1 create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(PoliciesType1.MdaTypes.STEREOTYPE_ELT);
@@ -80,7 +80,7 @@ public class PoliciesType1 implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link PoliciesType1} proxy or <i>null</i>.
      */
-    @objid ("7eec9ae4-e65e-486c-a16e-ccc22e6f27e5")
+    @objid ("7c49435e-c0d8-4d4e-a750-b3f293a3ba24")
     public static PoliciesType1 instantiate(final ModelElement obj) {
         return PoliciesType1.canInstantiate(obj) ? new PoliciesType1(obj) : null;
     }
@@ -93,7 +93,7 @@ public class PoliciesType1 implements IMdaProxy {
      * @return a {@link PoliciesType1} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("ceaec5d2-6f1e-4bf9-8411-02b498864b70")
+    @objid ("c0afbfe4-fabe-4caa-a951-94ce40201037")
     public static PoliciesType1 safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (PoliciesType1.canInstantiate(obj))
         	return new PoliciesType1(obj);
@@ -107,7 +107,7 @@ public class PoliciesType1 implements IMdaProxy {
      * null
      * 
      */
-    @objid ("3510b8ba-80fc-4d42-a9b4-7ffa55f47f43")
+    @objid ("7bca36af-891f-4c97-b49d-64e65a89a3cd")
     public void addPolicy(final TPolicy obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -117,7 +117,7 @@ public class PoliciesType1 implements IMdaProxy {
         }
     }
 
-    @objid ("abf97d6b-5f85-4f12-ad4b-6706c0b12764")
+    @objid ("d8c7403b-1bf2-4b3d-a080-70dd8debe37d")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -137,7 +137,7 @@ public class PoliciesType1 implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("599d9629-3741-47f1-a68f-09bf07a4378d")
+    @objid ("8420bc6d-f763-454b-8bec-74cd6011ab14")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -148,7 +148,7 @@ public class PoliciesType1 implements IMdaProxy {
      * null
      * 
      */
-    @objid ("af35d789-7a15-41a0-918d-ec9aeb2505c1")
+    @objid ("9e158b3d-3443-43c1-a57d-e6f8380ff797")
     public List<TPolicy> getPolicy() {
         List<TPolicy> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -160,7 +160,7 @@ public class PoliciesType1 implements IMdaProxy {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("a956b8a7-ce96-4c04-9b45-bb062577cf88")
+    @objid ("143151d0-0a12-416d-9175-27fa2d745f2a")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -173,7 +173,7 @@ public class PoliciesType1 implements IMdaProxy {
      * null
      * 
      */
-    @objid ("e1884266-fd86-4d33-8e77-f72bfe67beed")
+    @objid ("14bdd258-4e21-4bc3-8237-f0d658c2443f")
     public boolean removePolicy(final TPolicy obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -188,23 +188,23 @@ public class PoliciesType1 implements IMdaProxy {
         
     }
 
-    @objid ("d7b9805f-204a-41b4-8fd0-ddee885c74db")
+    @objid ("bca8b807-855e-48cf-b733-1b9fdfb205b2")
     protected  PoliciesType1(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("a9a07197-29fa-476a-ac12-00d9d198f271")
     public static final class MdaTypes {
-        @objid ("80295450-37a1-4450-bd48-f430ddb7de44")
+        @objid ("8897480d-8bbf-4695-8d07-e8883f14723f")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("34c03275-6729-4789-8abc-50297399e505")
+        @objid ("9480836f-9b0f-44e0-b69e-79a1c93a71dc")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("42884524-c753-44b4-bf64-94721a6b1f75")
+        @objid ("e507728b-11a5-4fd4-8106-4208b44fb6f9")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("7e74f977-e5e7-4cb1-8dde-bf136773f9a5")
+        @objid ("4d75ea28-0d2d-4d8a-a9db-252f78d4dea8")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

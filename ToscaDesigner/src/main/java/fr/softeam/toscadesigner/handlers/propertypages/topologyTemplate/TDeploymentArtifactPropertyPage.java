@@ -1,9 +1,18 @@
 package fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TArtifactType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifact;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
+
+import java.util.Arrays;
+
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.Metamodel;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.vcore.session.api.model.IMObjectFilter;
+import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("c33850f8-9651-4f11-b39e-345401a503d1")
 public class TDeploymentArtifactPropertyPage<T extends TDeploymentArtifact> extends ToscaElementPropertyPage<T> {
@@ -21,8 +30,16 @@ public class TDeploymentArtifactPropertyPage<T extends TDeploymentArtifact> exte
             this._element.getElement().setName(value);
             break;
         case 2:
-            this._element.setType(value);
-            break;
+            for (ModelElement elt : TArtifactType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+                if (value.contains(elt.getUuid())) {
+                    this._element.setType(
+                            TArtifactType.instantiate((org.modelio.metamodel.uml.statik.Class) elt));
+                    break;
+                } else {
+                    this._element.setType(null);
+                }
+            }
+            break;                        
         case 3:
             this._element.setFile(value);
             break;
@@ -56,7 +73,14 @@ public class TDeploymentArtifactPropertyPage<T extends TDeploymentArtifact> exte
     public void update(IModulePropertyTable table) {
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
-        table.addProperty("Artifact Type", _element.getType());
+        table.addProperty("Artifact Type",
+                this._element.getType() != null ? this._element.getType().getElement() : null,
+                Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+                    @Override
+                    public boolean accept(MObject element) {
+                        return TArtifactType.canInstantiate(element);
+                    }
+                });
         table.addProperty("File", _element.getFile());
         table.addProperty("Repository", _element.getRepository());
         table.addProperty("Description", _element.getDescription());
