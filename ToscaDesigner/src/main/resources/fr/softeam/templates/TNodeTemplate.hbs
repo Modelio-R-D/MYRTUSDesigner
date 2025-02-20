@@ -26,9 +26,9 @@
 {{/unless}}{{#unless (noStereotypeApplications this "TDeploymentArtifacts")}}
   artifacts:
 {{#each ../ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifacts"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifact"}}
-      {{../name}}:
-        type: {{getProperty ../this "type"}}
-        deploy_path: {{getProperty ../this "deploy_path"}}
-        file: {{getProperty ../this "file"}}
+    {{../name}}:
+      type: {{getProperty ../this "type"}}
+      deploy_path: {{getProperty ../this "deploy_path"}}
+      file: {{getProperty ../this "file"}}
 {{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
 {{/unless}}
