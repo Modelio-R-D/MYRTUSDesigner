@@ -31,7 +31,7 @@ public class ToscaDesignerLifeCycleHandler extends DefaultModuleLifeCycleHandler
         try {
             ToscaDesignerProxyFactory
                     .initialize(ToscaDesignerModule.getInstance().getModuleContext().getModelingSession());
-        } catch (com.modeliosoft.modelio.api.module.mda.MdaProxyException e) {
+        } catch (MdaProxyException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }

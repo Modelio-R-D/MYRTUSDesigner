@@ -29,7 +29,7 @@
     <dependencies>
         <!-- api modelio -->
         <dependency>
-            <groupId>com.modeliosoft.modelio</groupId>
+            <groupId>org.modelio</groupId>
             <artifactId>MDAKit</artifactId>
             <version>[5.4.1,5.4.2)</version>
             <type>pom</type>

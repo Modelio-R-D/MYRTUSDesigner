@@ -8,24 +8,12 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.FileDialog;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.infrastructure.ModelTree;
-import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import org.modelio.metamodel.uml.statik.Association;
-import org.modelio.metamodel.uml.statik.Class;
-import org.modelio.vcore.smkernel.mapi.MObject;
-
 import com.github.jknack.handlebars.Handlebars;
 import com.github.jknack.handlebars.Options;
 import com.github.jknack.handlebars.Template;
 import com.github.jknack.handlebars.helper.ConditionalHelpers;
 import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.CapabilityStereotype;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition;
@@ -36,6 +24,15 @@ import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition;
 import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.FileDialog;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.infrastructure.ModelTree;
+import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.statik.Association;
+import org.modelio.metamodel.uml.statik.Class;
+import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("e7453252-f578-4da1-815c-d2ce0e765130")
 public abstract class AbstractToscaFileGenerator {
@@ -173,19 +170,19 @@ public abstract class AbstractToscaFileGenerator {
         //                }
             } else if (new TopologyTemplateChecker().isTypeOf(context)) {
                 // 3. Check for non-tosca types in node templates
-				List<TNodeTemplate> nodeTemplates = context.getCompositionChildren().stream().filter(object -> {
-					Stereotype tNodeTemplateStereotype = ToscaDesignerModule.getInstance().getModuleContext()
-							.getModelingSession().getMetamodelExtensions()
-							.getStereotype("TNodeTemplate", object.getMClass());
-					return tNodeTemplateStereotype != null
-							&& ((ModelElement) object).isStereotyped(tNodeTemplateStereotype);
-				}).map(Class.class::cast).map(c -> TNodeTemplate.safeInstantiate(c)).collect(Collectors.toList());
-				for (TNodeTemplate nodeTemplate : nodeTemplates) {
-
-					String targetNamespace = ((Class) context).getOwner().getName();
-					imports.add(new Import(nodeTemplate.getElement().getName() + ".tosca", targetNamespace , "MYRTUS-"));
-
-				}
+        List<TNodeTemplate> nodeTemplates = context.getCompositionChildren().stream().filter(object -> {
+        Stereotype tNodeTemplateStereotype = ToscaDesignerModule.getInstance().getModuleContext()
+        .getModelingSession().getMetamodelExtensions()
+        .getStereotype("TNodeTemplate", object.getMClass());
+        return tNodeTemplateStereotype != null
+        && ((ModelElement) object).isStereotyped(tNodeTemplateStereotype);
+        }).map(Class.class::cast).map(c -> TNodeTemplate.safeInstantiate(c)).collect(Collectors.toList());
+        for (TNodeTemplate nodeTemplate : nodeTemplates) {
+        
+        String targetNamespace = ((Class) context).getOwner().getName();
+        imports.add(new Import(nodeTemplate.getElement().getName() + ".tosca", targetNamespace , "MYRTUS-"));
+        
+        }
         
             }
         
