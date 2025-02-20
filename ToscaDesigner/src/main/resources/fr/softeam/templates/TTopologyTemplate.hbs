@@ -4,18 +4,21 @@
 {{/eq}}{{/extension}}{{/each}}
 {{imports this}}
 topology_template:
-  {{#unless (noStereotypeApplications this "InputParameterType")}}inputs:{{/unless}}  
+{{#unless (noStereotypeApplications this "InputParameterType")}}
+  inputs:
   {{#ownedElement}}{{#extension}}{{#eq name "InputParameterType"}}{{#ownedAttribute}}{{#extension}}{{#eq name "TParameter"}}
     {{> (lookup this.name) ../this}}
   {{/eq}}{{/extension}}{{/ownedAttribute}}{{/eq}}{{/extension}}{{/ownedElement}}
-  {{#unless (noStereotypeApplications this "TNodeTemplate")}}node_templates:{{/unless}}  
-  {{#ownedElement}}{{#extension}}{{#eq name "TNodeTemplate"}}
-  {{> (lookup this.name) ../this}}
-  {{/eq}}{{/extension}}{{/ownedElement}}
-  {{#unless (noStereotypeApplications this "TGroup")}}groups:{{/unless}}  
-  {{#ownedElement}}{{#extension}}{{#eq name "TGroup"}}
+{{/unless}}{{#unless (noStereotypeApplications this "TNodeTemplate")}}
+  node_templates:
+{{#ownedElement}}{{#extension}}{{#eq name "TNodeTemplate"}}
     {{> (lookup this.name) ../this}}
-  {{/eq}}{{/extension}}{{/ownedElement}}
+{{/eq}}{{/extension}}{{/ownedElement}}{{/unless}}{{#unless (noStereotypeApplications this "TGroup")}}
+  groups:  
+    {{#ownedElement}}{{#extension}}{{#eq name "TGroup"}}
+    {{> (lookup this.name) ../this}}
+    {{/eq}}{{/extension}}{{/ownedElement}}
+{{/unless}}
   relationship_templates:
 {{#ownedElement}}{{#targetingEnd}}{{#association}}{{#extension}}{{#eq name "TRelationshipTemplate"}}
     {{../name}}:

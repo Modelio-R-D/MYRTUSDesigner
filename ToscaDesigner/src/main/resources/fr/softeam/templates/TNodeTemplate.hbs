@@ -1,28 +1,34 @@
-    {{name}}:
-      type: {{getProperty this "nodeType"}}
-      {{#unless (noStereotypeApplications this "Metadata")}}metadata:{{/unless}}
-      {{#each ../ownedAttribute}}{{#extension}}{{#eq name "Metadata"}}
-        {{../name}}: "{{../value}}"
-      {{/eq}}{{/extension}}{{/each}}
-      {{#unless (noStereotypeApplications this "TPropertyDef")}}properties:{{/unless}}
-      {{#each ../ownedAttribute}}{{#extension}}{{#eq name "TPropertyDef"}}
-        {{../name}}: "{{../value}}"
-      {{/eq}}{{/extension}}{{/each}}
-      {{#unless (noStereotypeApplications this "RequirementsType")}}requirements:{{/unless}}
-      {{#each ../ownedElement}}{{#extension}}{{#eq name "RequirementsType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TRequirement"}}
-        - {{../name}}:
-            node: {{getProperty ../this "node"}}
-            relationship: {{getProperty ../this "relationship"}}
-            capability: {{getProperty ../this "capability"}}
-            {{#unless (noStereotypeApplications ../this "TPropertyDef")}}properties:{{/unless}}
-		    {{#each ../ownedAttribute}}{{#extension}}{{#eq name "TPropertyDef"}}
-		      {{../name}}: "{{../value}}"
-		    {{/eq}}{{/extension}}{{/each}}
-       	{{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
-      {{#unless (noStereotypeApplications this "TDeploymentArtifacts")}}artifacts:{{/unless}}
-      {{#each ../ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifacts"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifact"}}
-        {{../name}}:
-          type: {{getProperty ../this "artifactType"}}
-          deploy_path: {{getProperty ../this "Deploy_path"}}
-          file: {{getProperty ../this "File"}}
-        {{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
+{{name}}:
+  type: {{getProperty this "nodeType"}}
+{{#unless (noStereotypeApplications this "Metadata")}}
+  metadata:
+{{#each ../ownedAttribute}}{{#extension}}{{#eq name "Metadata"}}
+    {{../name}}: "{{../value}}"
+{{/eq}}{{/extension}}{{/each}}{{/unless}}{{#unless (noStereotypeApplications this "TPropertyDef")}}
+  properties:
+{{#each ../ownedAttribute}}{{#extension}}{{#eq name "TPropertyDef"}}
+    {{../name}}: "{{../value}}"
+{{/eq}}{{/extension}}{{/each}}
+{{/unless}}{{#unless (noStereotypeApplications this "RequirementsType")}}
+  requirements:
+    {{#each ../ownedElement}}{{#extension}}{{#eq name "RequirementsType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TRequirement"}}
+    - {{../name}}:
+        node: {{getProperty ../this "node"}}
+        relationship: {{getProperty ../this "relationship"}}
+        capability: {{getProperty ../this "capability"}}
+        {{#unless (noStereotypeApplications ../this "TPropertyDef")}}
+        properties:
+          {{#each ../ownedAttribute}}{{#extension}}{{#eq name "TPropertyDef"}}
+          {{../name}}: "{{../value}}"
+          {{~/eq}}{{/extension}}{{/each}}
+        {{/unless}}
+    {{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
+{{/unless}}{{#unless (noStereotypeApplications this "TDeploymentArtifacts")}}
+  artifacts:
+{{#each ../ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifacts"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifact"}}
+      {{../name}}:
+        type: {{getProperty ../this "type"}}
+        deploy_path: {{getProperty ../this "deploy_path"}}
+        file: {{getProperty ../this "file"}}
+{{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
+{{/unless}}
