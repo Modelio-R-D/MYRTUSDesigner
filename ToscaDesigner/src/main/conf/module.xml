@@ -1093,7 +1093,7 @@
                 </Handler>
             </Tool>
             <Tool id="CapabilityDefinitions" label="%tool.CapabilityDefinitions.label" tooltip="%tool.CapabilityDefinitions.tooltip" image="res/icon/gui/capabilityDefinitions24.png">
-                <Scope-source metaclass="Infrastructure.ModelElement" stereotype=""/>
+                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TCapabilityDefinitionsType"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TCapabilityDefinitionsType"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
