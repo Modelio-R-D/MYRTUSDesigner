@@ -17,8 +17,8 @@ node_types:
       - faceDetectionService:
           capability: Endpoint
           relationship: connectsTo
-          occurrences: [, ]
+          occurrences: [1, 1]
 	capabilities:
       CameraFeed.WebService:
-        occurrences: [, ]
+        occurrences: [0, -1]
         type: tosca.capabilities.Endpoint

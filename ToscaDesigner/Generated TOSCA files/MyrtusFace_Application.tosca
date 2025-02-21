@@ -1,101 +1,13 @@
 tosca_definitions_version: tosca_simple_yaml_1_3
 
 
-imports:
-  - file: MyrtusFaceDetectionService_0.tosca
-    namespace_uri: example.eu.myrtus.nodetypes
-    namespace_prefix: MYRTUS-
-  - file: Myrtus_Proxy_0.tosca
-    namespace_uri: example.eu.myrtus.nodetypes
-    namespace_prefix: MYRTUS-
-  - file: MyrtusCameraFeed_0.tosca
-    namespace_uri: example.eu.myrtus.nodetypes
-    namespace_prefix: MYRTUS-
-  - file: Myrtus_Workstation_1.tosca
-    namespace_uri: example.eu.myrtus.nodetypes
-    namespace_prefix: MYRTUS-
+node_types:
+  Service Template.NodeType:
 
-topology_template:
+    metadata:
+      targetNamespace: ""
+      abstract: ""
+      final: ""
     
-  node_templates:  
-      Myrtus_Workstation_1:
-        type: example.eu.myrtus.nodetypes.Myrtus-Workstation
-        metadata:
-          displayName: "Myrtus-Workstation"
-        
-        
-        
-      MyrtusFaceDetectionService_0:
-        type: example.eu.myrtus.nodetypes.MyrtusFaceDetectionService
-        metadata:
-          displayName: "FaceDetection"
-        properties:
-          dockerImage: "thebigpotatoe/face-recognition-docker"
-        requirements:
-          - host:
-              node: Myrtus_Workstation_1
-              relationship: con_HostedOn_0
-              capability: host
-              
-        
-      Myrtus_Proxy_0:
-        type: example.eu.myrtus.nodetypes.MyrtusProxy
-        metadata:
-          displayName: "Proxy"
-        properties:
-          dockerImage: "nginx:alpine"
-          port: "443"
-        requirements:
-          - egress1:
-              node: MyrtusCameraFeed_0
-              relationship: con_ConnectsTo_0
-              capability: CameraFeed.WebService
-              
-          - egress2:
-              node: MyrtusFaceDetectionService_0
-              relationship: con_ConnectsTo_1
-              capability: FaceDetectionService
-              
-          - host:
-              node: Myrtus_Workstation_1
-              relationship: con_HostedOn_2
-              capability: host
-              
-        artifacts:
-          fullchain.pem:
-            type: 
-            deploy_path: 
-            file: 
-          key:
-            type: 
-            deploy_path: 
-            file: 
-          nginx.conf:
-            type: 
-            deploy_path: 
-            file: 
-      MyrtusCameraFeed_0:
-        type: example.eu.myrtus.nodetypes.MyrtusCameraFeed
-        metadata:
-          displayName: "CameraFeed"
-        properties:
-          dockerImage: "ci.hesi.energy:5000/myrtus/examples/myrtusface/camera_feed:web"
-        requirements:
-          - host:
-              node: Myrtus_Workstation_1
-              relationship: con_HostedOn_1
-              capability: host
-              
-        
     
-  relationship_templates:
-    con_HostedOn_2:
-      type: hostedOn
-    con_HostedOn_1:
-      type: hostedOn
-    con_HostedOn_0:
-      type: hostedOn
-    con_ConnectsTo_1:
-      type: connectsTo
-    con_ConnectsTo_0:
-      type: connectsTo
+	
