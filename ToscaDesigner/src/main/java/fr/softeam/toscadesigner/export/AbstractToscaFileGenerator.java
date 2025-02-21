@@ -125,6 +125,10 @@ public abstract class AbstractToscaFileGenerator {
 							.safeInstantiate((Class) context);
 					if (searchedPropertyName.equals("capabilityType")) {
 						propertyStringValue = tCapabilityDefinition.getCapabilityType().getElement().getName();
+					} else if (searchedPropertyName.equals("lowerBound")) {
+						propertyStringValue = tCapabilityDefinition.getLowerBound().toString();
+					} else if (searchedPropertyName.equals("upperBound")) {
+						propertyStringValue = tCapabilityDefinition.getUpperBound().toString();
 					}
 				} else if (stereotype.getName().equals("TDeploymentArtifact")) {
 					TDeploymentArtifact tDeploymentArtifact = TDeploymentArtifact.safeInstantiate((Class) context);
@@ -164,10 +168,13 @@ public abstract class AbstractToscaFileGenerator {
 
 				// 1. Check for non-tosca derived type
 
-				String derivedFromValue = tNodeType.getDerivedFrom().getName();
-				String targetNamespace = tNodeType.getTargetNamespace();
-				if (derivedFromValue != null && !derivedFromValue.startsWith("tosca")) {
-					imports.add(new Import(derivedFromValue + ".tosca", targetNamespace, "MYRTUS-"));
+				if (tNodeType.getDerivedFrom() != null) {
+
+					String derivedFromValue = tNodeType.getDerivedFrom().getName();
+					String targetNamespace = tNodeType.getTargetNamespace();
+					if (derivedFromValue != null && !derivedFromValue.startsWith("tosca")) {
+						imports.add(new Import(derivedFromValue + ".tosca", targetNamespace, "MYRTUS-"));
+					}
 				}
 
 				// 2. Check for non-tosca valid source types in capabilities
