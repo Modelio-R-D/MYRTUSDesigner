@@ -101,18 +101,16 @@ public abstract class AbstractToscaFileGenerator {
 						propertyStringValue = capability.getElement().getName();
 					} else if (searchedPropertyName.equals("relationshipType")) {
 						propertyStringValue = tRequirementDefinition.getRelationshipType().getElement().getName();
-					} else if (searchedPropertyName.equals("lowerBound")) {
-						propertyStringValue = tRequirementDefinition.getLowerBound();
 					} else if (searchedPropertyName.equals("upperBound")) {
 						propertyStringValue = tRequirementDefinition.getUpperBound();
+						propertyStringValue = propertyStringValue.equals("-1") ? "UNBOUNDED" : propertyStringValue;
 					}
 				} else if (stereotype.getName().equals("TRelationshipTemplate")) {
 					if (searchedPropertyName.equals("type")) {
 						TRelationshipTemplate tRelationshipTemplate = TRelationshipTemplate
 								.safeInstantiate((Association) context);
 						TRelationshipType relationshipType = tRelationshipTemplate.getRelationshipType();
-						Class element = relationshipType.getElement();
-						propertyStringValue = element.getName();
+						propertyStringValue = relationshipType.getElement().getName();
 					}
 				} else if (stereotype.getName().equals("TNodeTemplate")) {
 					TNodeTemplate tNodeTemplate = TNodeTemplate.safeInstantiate((Class) context);
@@ -125,10 +123,9 @@ public abstract class AbstractToscaFileGenerator {
 							.safeInstantiate((Class) context);
 					if (searchedPropertyName.equals("capabilityType")) {
 						propertyStringValue = tCapabilityDefinition.getCapabilityType().getElement().getName();
-					} else if (searchedPropertyName.equals("lowerBound")) {
-						propertyStringValue = tCapabilityDefinition.getLowerBound().toString();
 					} else if (searchedPropertyName.equals("upperBound")) {
 						propertyStringValue = tCapabilityDefinition.getUpperBound().toString();
+						propertyStringValue = propertyStringValue.equals("-1") ? "UNBOUNDED" : propertyStringValue;
 					}
 				} else if (stereotype.getName().equals("TDeploymentArtifact")) {
 					TDeploymentArtifact tDeploymentArtifact = TDeploymentArtifact.safeInstantiate((Class) context);

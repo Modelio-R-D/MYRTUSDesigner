@@ -12,12 +12,13 @@ node_types:
       targetNamespace: "example.eu.myrtus.nodetypes"
       abstract: "false"
       final: "false"
+    
     requirements:
       - egress:
           capability: tosca.capabilities.Endpoint
-          relationship: connectsTo
-          occurrences: [, ]
+          relationship: tosca.relationships.connectsTo
+          occurrences: [ 0, UNBOUNDED ]
 	capabilities:
       MyrtusProxy.WebService:
-        occurrences: [, ]
+        occurrences: [ 0, UNBOUNDED ]
         type: tosca.capabilities.Endpoint

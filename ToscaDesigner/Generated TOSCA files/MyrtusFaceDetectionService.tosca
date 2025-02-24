@@ -13,7 +13,8 @@ node_types:
       abstract: "false"
       final: "false"
     
+    
 	capabilities:
       FaceDetectionService:
-        occurrences: [, ]
+        occurrences: [ 0, UNBOUNDED ]
         type: tosca.capabilities.Endpoint
