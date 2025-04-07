@@ -4,9 +4,9 @@
 {{/eq}}{{/extension}}{{/each}}
 {{imports this}}
 topology_template:
-{{#unless (noStereotypeApplications this "InputParameterType")}}
+{{#unless (noStereotypeApplications this "InputParametersType")}}
   inputs:
-  {{#ownedElement}}{{#extension}}{{#eq name "InputParameterType"}}{{#ownedAttribute}}{{#extension}}{{#eq name "TParameter"}}
+  {{#ownedElement}}{{#extension}}{{#eq name "InputParametersType"}}{{#ownedAttribute}}{{#extension}}{{#eq name "TParameter"}}
     {{> (lookup this.name) ../this}}
   {{/eq}}{{/extension}}{{/ownedAttribute}}{{/eq}}{{/extension}}{{/ownedElement}}
 {{/unless}}{{#unless (noStereotypeApplications this "TNodeTemplate")}}
