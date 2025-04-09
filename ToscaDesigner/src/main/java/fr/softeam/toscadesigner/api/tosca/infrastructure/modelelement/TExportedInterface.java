@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: ToscaDesigner v0.0.1
+ * Module: ToscaDesigner v0.1.0
 
- * This file was generated on 18/02/2025 10:30 by Modelio Studio.
+ * This file was generated on 08/04/2025 14:37 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -10,21 +10,27 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
-
+import com.modeliosoft.modelio.api.module.MManualAssociationRole;
+import com.modeliosoft.modelio.api.module.MManualAttribute;
+import com.modeliosoft.modelio.api.module.MManualClass;
+import com.modeliosoft.modelio.api.module.MManualImport;
+import com.modeliosoft.modelio.api.module.MManualOperation;
+import com.modeliosoft.modelio.api.module.mda.IMdaProxy;
+import com.modeliosoft.modelio.api.module.mda.MdaProxyException;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.ModelingSessionRegistry;
+import org.modelio.api.modelio.model.PropertyConverter;
+import org.modelio.metamodel.mmextensions.infrastructure.ExtensionNotFoundException;
 import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyTableDefinition;
 import org.modelio.vcore.smkernel.mapi.MObject;
 import org.modelio.vcore.smkernel.mapi.MRef;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
-import fr.softeam.toscadesigner.impl.IMdaProxy;
-import fr.softeam.toscadesigner.impl.MdaProxyException;
 
 /**
  * Proxy class to handle a {@link ModelElement} with << TExportedInterface >> stereotype.
@@ -33,13 +39,13 @@ import fr.softeam.toscadesigner.impl.MdaProxyException;
  */
 @objid ("a8b89d93-ad92-49b7-9861-2a63203bdc6b")
 public class TExportedInterface implements IMdaProxy {
-    @objid ("0cd9f2c2-040b-42c4-80c5-f60599aec79f")
+    @objid ("aaec57b6-ce86-49dd-a0af-9c4fe2654bb8")
     public static final String STEREOTYPE_NAME = "TExportedInterface";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
      */
-    @objid ("af9d4a45-2a96-448b-808f-03ac0a3b81bf")
+    @objid ("59c3c0ee-ee01-4c22-b0b5-6d7a5f0356c4")
     protected final ModelElement elt;
 
     /**
@@ -49,7 +55,7 @@ public class TExportedInterface implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("b6055482-a02b-4e77-886d-9c89ad08c9fe")
+    @objid ("e3a4aafd-3542-4414-b045-aa681d500df7")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (TExportedInterface.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(TExportedInterface.MdaTypes.STEREOTYPE_ELT));
     }
@@ -59,7 +65,7 @@ public class TExportedInterface implements IMdaProxy {
      * 
      * @return a {@link TExportedInterface} proxy on the created {@link ModelElement}.
      */
-    @objid ("3d89618d-78da-4b11-a6f0-9adb7093a57d")
+    @objid ("3c1969ce-f1eb-4b1d-a6ed-dbcef26b2524")
     public static TExportedInterface create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(TExportedInterface.MdaTypes.STEREOTYPE_ELT);
@@ -73,7 +79,7 @@ public class TExportedInterface implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link TExportedInterface} proxy or <i>null</i>.
      */
-    @objid ("86be6f2d-5d1c-4908-9052-847e62399a64")
+    @objid ("9eb6e754-a03e-44e4-8ffd-2a3c00f86146")
     public static TExportedInterface instantiate(final ModelElement obj) {
         return TExportedInterface.canInstantiate(obj) ? new TExportedInterface(obj) : null;
     }
@@ -86,7 +92,7 @@ public class TExportedInterface implements IMdaProxy {
      * @return a {@link TExportedInterface} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("af52a822-ba08-4822-8544-38bcd436e023")
+    @objid ("ae18fb0f-076f-417d-a5e8-ed154e265631")
     public static TExportedInterface safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (TExportedInterface.canInstantiate(obj))
         	return new TExportedInterface(obj);
@@ -100,7 +106,7 @@ public class TExportedInterface implements IMdaProxy {
      * null
      * 
      */
-    @objid ("c8c133dd-66a3-4993-845e-448b94eaacab")
+    @objid ("a2a7420c-def4-411d-a16e-bf16e3c13df2")
     public void addOperation(final TExportedOperation obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -110,7 +116,7 @@ public class TExportedInterface implements IMdaProxy {
         }
     }
 
-    @objid ("f784f5fc-cea9-4f35-a4fb-d75ece729aaa")
+    @objid ("a83ac3ec-dce7-437f-91df-f6d0220a22f6")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -130,7 +136,7 @@ public class TExportedInterface implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("761d3fbd-9143-4ec0-880f-78fbb240cfdd")
+    @objid ("cbf6ea3d-b3eb-4ba6-8a3f-800819064dee")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -141,7 +147,7 @@ public class TExportedInterface implements IMdaProxy {
      * null
      * 
      */
-    @objid ("ab6a7fed-3dca-4b12-9e75-94e7d89b1e44")
+    @objid ("fed21be6-4ff2-48bf-96d4-2a1214a23dfb")
     public List<TExportedOperation> getOperation() {
         List<TExportedOperation> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -153,7 +159,7 @@ public class TExportedInterface implements IMdaProxy {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("424bd2f3-547c-44a1-97a3-e5d81912f562")
+    @objid ("b4036c49-f296-455c-9c4d-de757c5d63dc")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -166,7 +172,7 @@ public class TExportedInterface implements IMdaProxy {
      * null
      * 
      */
-    @objid ("2fbcda7c-834d-422b-ba14-0a77344e5132")
+    @objid ("c46beae1-11ae-40ae-83e8-b063f4f18355")
     public boolean removeOperation(final TExportedOperation obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -181,23 +187,23 @@ public class TExportedInterface implements IMdaProxy {
         
     }
 
-    @objid ("f961b944-06ac-41de-b24f-a6f6a27a85f9")
+    @objid ("4c96005f-225f-42fc-9c5c-0d0232e92bca")
     protected  TExportedInterface(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("f18e7e43-a97f-4028-a6da-9e5860b3a3ba")
     public static final class MdaTypes {
-        @objid ("06545e57-6602-446f-9957-d44563b372a1")
+        @objid ("be7f596d-438b-46ad-ac15-5d1ffb3b2a94")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("36627843-2193-4caf-97b2-336d687ce2f3")
+        @objid ("7a361e11-4007-4bae-a2dd-f5a47c1b7b56")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("1bdd5c66-f5ef-49b1-b586-b1a236f9be35")
+        @objid ("14719159-4c0c-4887-9ff9-a241770e6fda")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("f2d66baf-b36d-480f-88b9-5f25f0264188")
+        @objid ("860624f6-2b2e-41bf-a737-e49dd2ec3785")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

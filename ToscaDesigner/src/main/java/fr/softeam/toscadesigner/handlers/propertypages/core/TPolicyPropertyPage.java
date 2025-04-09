@@ -126,7 +126,7 @@ public class TPolicyPropertyPage<T extends TPolicy> extends ToscaElementProperty
         
         // Properties
         members_elt = extractModelElements(this._element.getProperties());
-        List<ModelElement> propertiesList = (Trigger.MdaTypes.STEREOTYPE_ELT.getExtendedElement() != null)
+        List<ModelElement> propertiesList = (TPropertyDef.MdaTypes.STEREOTYPE_ELT.getExtendedElement() != null)
                 ? TPropertyDef.MdaTypes.STEREOTYPE_ELT.getExtendedElement()
                 : Collections.emptyList();
         table.addProperty("Properties", getToscaValue(members_elt),

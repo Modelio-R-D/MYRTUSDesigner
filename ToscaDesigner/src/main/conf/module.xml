@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Module id="ToscaDesigner" class="fr.softeam.toscadesigner.impl.ToscaDesignerModule" binaryversion="5.4.01" version="0.0.1" schema-level="2" uid="942db9f9-6869-472c-b269-9ca7ec36a014" author="Softeam" image="" url="">
+<Module id="ToscaDesigner" class="fr.softeam.toscadesigner.impl.ToscaDesignerModule" binaryversion="5.4.01" version="0.1.0" schema-level="2" uid="942db9f9-6869-472c-b269-9ca7ec36a014" author="Softeam" image="" url="">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
         <PathEntry path="lib/handlebars-4.3.1.jar"/>
@@ -701,13 +701,9 @@
                 <Icon path="res/icon/gui/TInterface24.png"/>
                 <Image path="res/icon/gui/TInterface48.IMAGE.png"/>
                 <PropertyTable id="TInterfaceTable" label="%propertytable.TInterfaceTable.label" uid="204ebc96-ec6b-46d3-9f88-bcec349cadc7">
-                    <PropertyDefinition id="name" label="%propertydefinition.TInterfaceTable.name.label" default-value="" is-editable="true" uid="abc12b37-e245-4073-9a9f-ebeeb2f4426d">
+                    <PropertyDefinition id="notifications" label="%propertydefinition.TInterfaceTable.notifications.label" default-value="" is-editable="true" uid="1c86cfbe-dda6-4b27-b5aa-59b0433d0603">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TInterfaceTable.name.description</Description>
-                    </PropertyDefinition>
-                    <PropertyDefinition id="PropertyTypeDefinition2" label="%propertydefinition.TInterfaceTable.PropertyTypeDefinition2.label" default-value="" is-editable="true" uid="d060b91b-e90c-48fb-8017-56a04caf352b">
-                        <TypeRef id="mref#'Acceptance' {01ec152c-0000-3152-0000-000000000000} Infrastructure.EnumeratedPropertyType"/>
-                        <Description>%propertydefinition.TInterfaceTable.PropertyTypeDefinition2.description</Description>
+                        <Description>%propertydefinition.TInterfaceTable.notifications.description</Description>
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
@@ -1086,6 +1082,7 @@
                 </Handler>
             </Tool>
             <Tool id="CapabilityDefinition" label="%tool.CapabilityDefinition.label" tooltip="%tool.CapabilityDefinition.tooltip" image="res/icon/gui/capabilityDefinition24.png">
+                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TCapabilityDefinitionsType"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TCapabilityDefinition"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
@@ -1093,7 +1090,7 @@
                 </Handler>
             </Tool>
             <Tool id="CapabilityDefinitions" label="%tool.CapabilityDefinitions.label" tooltip="%tool.CapabilityDefinitions.tooltip" image="res/icon/gui/capabilityDefinitions24.png">
-                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TCapabilityDefinitionsType"/>
+                <Scope-source metaclass="Infrastructure.ModelElement" stereotype=""/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TCapabilityDefinitionsType"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
@@ -1294,6 +1291,14 @@
                     <HParameter name="name" value="Capabilities Type"/>
                 </Handler>
             </Tool>
+            <Tool id="Interface" label="%tool.Interface.label" tooltip="%tool.Interface.tooltip" image="res/icon/gui/TInterface48.ICON.png">
+                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeTemplate"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#TInterface"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="Interface"/>
+                </Handler>
+            </Tool>
         </Tools>
         <ContextualMenu>
             <CommandRef refid="Export" group="" group-image=""/>
@@ -1353,6 +1358,7 @@
                     <ToolRef refid="Policies_Type" group="%group.Attributes.label"/>
                     <ToolRef refid="Constraint" group="%group.Attributes.label"/>
                     <ToolRef refid="Constraints" group="%group.Attributes.label"/>
+                    <ToolRef refid="Interface" group="%group.Attributes.label"/>
                     <ToolRef refid="Capability" group="%group.Capabilities.label"/>
                     <ToolRef refid="Capabilities_Type" group="%group.Capabilities.label"/>
                 </Palette>

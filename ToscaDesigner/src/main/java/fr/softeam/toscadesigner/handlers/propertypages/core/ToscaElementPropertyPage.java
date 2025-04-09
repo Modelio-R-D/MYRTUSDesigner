@@ -7,9 +7,9 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.handlers.propertypages.IPropertyContent;
 import fr.softeam.toscadesigner.impl.IMdaProxy;
-
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.statik.Attribute;
 
 @objid ("ef6dc775-f55a-43cc-a411-dd5145d9546b")
 public abstract class ToscaElementPropertyPage<T extends Object> implements IPropertyContent {
@@ -166,5 +166,14 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
         }
         return members_elt;
     }
+    
+    public static <T> List<Attribute> extractAttributes(List<T> members) {
+        List<Attribute> members_elt = new ArrayList<>();
+        for (int i = 0; i < members.size(); i++) {
+            members_elt.add((Attribute) ( members.get(i)));
+        }
+        return members_elt;
+    }
+
 
 }

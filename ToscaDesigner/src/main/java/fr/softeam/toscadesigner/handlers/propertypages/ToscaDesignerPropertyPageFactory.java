@@ -15,6 +15,7 @@ import fr.softeam.toscadesigner.handlers.propertypages.core.PropertyDefinitionTy
 import fr.softeam.toscadesigner.handlers.propertypages.core.TCapabilityPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TGroupPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TGroupTypePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.core.TInterfacePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TPolicyPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TPolicyTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TPropertyDefPropertyPage;
@@ -194,6 +195,9 @@ public class ToscaDesignerPropertyPageFactory {
             case fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate.STEREOTYPE_NAME:
                 return new TTopologyTemplatePropertyPage<>(
                         fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate.instantiate(obj));
+            case fr.softeam.toscadesigner.api.tosca.standard.class_.TInterface.STEREOTYPE_NAME:
+                return new TInterfacePropertyPage<>(
+                        fr.softeam.toscadesigner.api.tosca.standard.class_.TInterface.instantiate(obj));
             default:
                 break;
             }
