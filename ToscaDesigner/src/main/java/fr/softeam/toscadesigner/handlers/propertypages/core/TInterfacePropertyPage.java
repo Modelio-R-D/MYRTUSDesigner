@@ -9,7 +9,6 @@ import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TOperation
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TInterface;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.Trigger;
-
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.statik.Attribute;
@@ -36,7 +35,7 @@ public class TInterfacePropertyPage<T extends TInterface> extends ToscaElementPr
             break;
         
         case 3:
-        	ModelElement elt1 =  getModelElt(TOperation.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+            ModelElement elt1 =  getModelElt(TOperation.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
             if ((elt1 != null)
                     && (elt1.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, TOperation.STEREOTYPE_NAME))) {
                 Object pc = ToscaDesignerProxyFactory.instantiate(elt1);
@@ -85,8 +84,6 @@ public class TInterfacePropertyPage<T extends TInterface> extends ToscaElementPr
                 : Collections.emptyList();
         table.addProperty("Inputs", getToscaValue(members_elt2),
                 getAddRemove(inputsList, extractAttributes(this._element.getInputs())));
-        
-
     }
 
 }

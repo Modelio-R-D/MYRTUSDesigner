@@ -737,13 +737,21 @@
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.TOperationTable.name.description</Description>
                     </PropertyDefinition>
-                    <PropertyDefinition id="inputParameters" label="%propertydefinition.TOperationTable.inputParameters.label" default-value="" is-editable="true" uid="7e07cefa-0db7-4a6c-99f5-099c223834eb">
-                        <TypeRef id="mref#'MultiElement' {1bdf9f87-e9ad-4849-ab22-c25147e8d00c} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TOperationTable.inputParameters.description</Description>
+                    <PropertyDefinition id="description" label="%propertydefinition.TOperationTable.description.label" default-value="" is-editable="true" uid="7e07cefa-0db7-4a6c-99f5-099c223834eb">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TOperationTable.description.description</Description>
                     </PropertyDefinition>
-                    <PropertyDefinition id="outputParameters" label="%propertydefinition.TOperationTable.outputParameters.label" default-value="" is-editable="true" uid="d3330a11-ae5b-464f-862b-e587feba80ac">
-                        <TypeRef id="mref#'MultiElement' {1bdf9f87-e9ad-4849-ab22-c25147e8d00c} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TOperationTable.outputParameters.description</Description>
+                    <PropertyDefinition id="implementation" label="%propertydefinition.TOperationTable.implementation.label" default-value="" is-editable="true" uid="d3330a11-ae5b-464f-862b-e587feba80ac">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TOperationTable.implementation.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="inputs" label="%propertydefinition.TOperationTable.inputs.label" default-value="" is-editable="true" uid="30a6aef6-f577-4f54-a2eb-9df4e6bc46dd">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TOperationTable.inputs.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="outputs" label="%propertydefinition.TOperationTable.outputs.label" default-value="" is-editable="true" uid="d75d43de-20d1-4375-8764-f8048532f746">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TOperationTable.outputs.description</Description>
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>

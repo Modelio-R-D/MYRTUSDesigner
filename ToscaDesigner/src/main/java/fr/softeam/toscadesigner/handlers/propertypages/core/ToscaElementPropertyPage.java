@@ -166,7 +166,8 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
         }
         return members_elt;
     }
-    
+
+    @objid ("7abe5676-a085-4685-be19-0288c928a683")
     public static <T> List<Attribute> extractAttributes(List<T> members) {
         List<Attribute> members_elt = new ArrayList<>();
         for (int i = 0; i < members.size(); i++) {
@@ -174,6 +175,5 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
         }
         return members_elt;
     }
-
 
 }

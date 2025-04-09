@@ -16,6 +16,7 @@ import fr.softeam.toscadesigner.handlers.propertypages.core.TCapabilityPropertyP
 import fr.softeam.toscadesigner.handlers.propertypages.core.TGroupPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TGroupTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TInterfacePropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.core.TOperationPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TPolicyPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TPolicyTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TPropertyDefPropertyPage;
@@ -241,6 +242,9 @@ public class ToscaDesignerPropertyPageFactory {
                 return new TArtifactTemplatePropertyPage<>(
                         fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TArtifactTemplate
                                 .instantiate(obj));
+            case fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TOperation.STEREOTYPE_NAME:
+                return new TOperationPropertyPage<>(
+                        fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TOperation.instantiate(obj));
             
             default:
                 break;
