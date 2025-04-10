@@ -77,7 +77,7 @@ public class TServiceTemplatePropertyPage<T extends TServiceTemplate> extends To
             }
             break;
         case 5:
-            ModelElement elt1 = getModelElt(Tgroup.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+            Class elt1 = ( Class) getModelElt(Tgroup.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
             if ((elt1 != null) && (elt1.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, Tgroup.STEREOTYPE_NAME))) {
                 Object pc = ToscaDesignerProxyFactory.instantiate(elt1);
                 if (value.startsWith(this._add)) {

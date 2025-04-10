@@ -756,8 +756,8 @@
                 </PropertyTable>
             </Stereotype>
             <Stereotype name="TParameter" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.TParameter.label" uid="88f765a0-a1fe-42d8-9b52-f45ff541469f" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+                <Icon path="res/icon/gui/PropertyDefinitionType48.ICON.png"/>
+                <Image path="res/icon/gui/PropertyDefinitionType48.png"/>
                 <PropertyTable id="TParameterTable" label="%propertytable.TParameterTable.label" uid="89a85a1d-2631-4b47-b94b-dfe632ffc5be">
                     <PropertyDefinition id="name" label="%propertydefinition.TParameterTable.name.label" default-value="" is-editable="true" uid="ae68e1f0-3464-42e1-a2d5-d8d14a7aa4fe">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
@@ -770,6 +770,26 @@
                     <PropertyDefinition id="type" label="%propertydefinition.TParameterTable.type.label" default-value="" is-editable="true" uid="a6d4ef82-d89c-4b98-ad06-c9abb7992402">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.TParameterTable.type.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="description" label="%propertydefinition.TParameterTable.description.label" default-value="" is-editable="true" uid="73c42be6-f152-4cd9-96e7-811cbdc19855">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TParameterTable.description.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="value" label="%propertydefinition.TParameterTable.value.label" default-value="" is-editable="true" uid="b90789da-89e2-4e67-95f5-afaeae60527f">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TParameterTable.value.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="default" label="%propertydefinition.TParameterTable.default.label" default-value="" is-editable="true" uid="77d5b3fc-e752-44d0-a52c-3d3b6fa2755a">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TParameterTable.default.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="status" label="%propertydefinition.TParameterTable.status.label" default-value="" is-editable="true" uid="af62ecb0-8deb-4e68-bb5f-c38a90d1ddc6">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TParameterTable.status.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="constraints" label="%propertydefinition.TParameterTable.constraints.label" default-value="" is-editable="true" uid="5e5812ea-e124-41ef-8d85-dc46d49636a9">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TParameterTable.constraints.description</Description>
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
