@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.1.0
 
- * This file was generated on 10/04/2025 14:48 by Modelio Studio.
+ * This file was generated on 10/04/2025 17:09 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -39,13 +39,13 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("e55befbe-b291-41ef-ab59-eb27755c59ba")
 public class OutputParametersType implements IMdaProxy {
-    @objid ("2b4a21aa-f2ae-4c17-a1db-74d0f3fa426d")
+    @objid ("91d23db2-6081-4f55-acff-dd5a3a0d7e41")
     public static final String STEREOTYPE_NAME = "OutputParametersType";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
      */
-    @objid ("9c8ea069-4143-444b-b26e-2a1137a958a1")
+    @objid ("b4894fd9-3e24-47e1-b459-ab6d74770e14")
     protected final ModelElement elt;
 
     /**
@@ -55,7 +55,7 @@ public class OutputParametersType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("1ddcecb6-a6d0-4288-b33d-25dc7e28fc1d")
+    @objid ("539489c5-6693-46ab-9f97-945b91ca2db8")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (OutputParametersType.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(OutputParametersType.MdaTypes.STEREOTYPE_ELT));
     }
@@ -65,7 +65,7 @@ public class OutputParametersType implements IMdaProxy {
      * 
      * @return a {@link OutputParametersType} proxy on the created {@link ModelElement}.
      */
-    @objid ("61a4982a-f417-4661-a546-082557a33c66")
+    @objid ("58a9e5dc-f139-43c3-ae7e-150a5f7354d1")
     public static OutputParametersType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(OutputParametersType.MdaTypes.STEREOTYPE_ELT);
@@ -79,7 +79,7 @@ public class OutputParametersType implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link OutputParametersType} proxy or <i>null</i>.
      */
-    @objid ("6e033ea5-2c23-4423-a449-4f2ccb84f43d")
+    @objid ("fff71f1a-8bd9-401c-a0dc-e0b42be63646")
     public static OutputParametersType instantiate(final ModelElement obj) {
         return OutputParametersType.canInstantiate(obj) ? new OutputParametersType(obj) : null;
     }
@@ -92,7 +92,7 @@ public class OutputParametersType implements IMdaProxy {
      * @return a {@link OutputParametersType} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("402b089a-4532-4459-8539-2a18d2fd199e")
+    @objid ("a0149c23-db20-4085-9aac-b9c2a9e6d44c")
     public static OutputParametersType safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (OutputParametersType.canInstantiate(obj))
         	return new OutputParametersType(obj);
@@ -106,7 +106,7 @@ public class OutputParametersType implements IMdaProxy {
      * null
      * 
      */
-    @objid ("e6119d56-205b-42df-b2a6-a15f018ad8c2")
+    @objid ("7d44d944-35ea-49a7-87e4-f720a26a8233")
     public void addOutputParameter(final TParameter obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -116,7 +116,7 @@ public class OutputParametersType implements IMdaProxy {
         }
     }
 
-    @objid ("62b4dbbd-feed-4efe-bf8b-9634931e6acc")
+    @objid ("4fbbc8f6-6384-4cc9-a330-f1d5d40f5791")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -136,7 +136,7 @@ public class OutputParametersType implements IMdaProxy {
      * Get the underlying {@link ModelElement}. 
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("0492bf50-688c-435f-b9c7-0e5c449aa9d2")
+    @objid ("e4112985-0992-4770-8b87-cbc3248dcf05")
     public ModelElement getElement() {
         return this.elt;
     }
@@ -147,7 +147,7 @@ public class OutputParametersType implements IMdaProxy {
      * null
      * 
      */
-    @objid ("169a64d9-ed0b-401b-a0b5-5422d5e82063")
+    @objid ("bf959c1d-35e0-4e36-a151-06e2150bf413")
     public List<TParameter> getOutputParameter() {
         List<TParameter> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -159,7 +159,7 @@ public class OutputParametersType implements IMdaProxy {
         return Collections.unmodifiableList(results);
     }
 
-    @objid ("e05f50c8-c797-4b79-8de8-dc72398da7ce")
+    @objid ("e72d9a44-b28d-43e0-b3ce-7d0aad42b345")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -172,7 +172,7 @@ public class OutputParametersType implements IMdaProxy {
      * null
      * 
      */
-    @objid ("8d90f77a-e163-4f1f-a64d-cd9f492ee800")
+    @objid ("3ae0c9f0-c313-4d18-b49c-794dd1033dcf")
     public boolean removeOutputParameter(final TParameter obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -187,23 +187,23 @@ public class OutputParametersType implements IMdaProxy {
         
     }
 
-    @objid ("e24e5ec8-3a1d-44ba-b516-b29ac68b6e50")
+    @objid ("7b7669ff-e52a-44f5-8266-9a2206dc0a51")
     protected  OutputParametersType(final ModelElement elt) {
         this.elt = elt;
     }
 
     @objid ("8912c5ce-d35b-4ad5-bbf0-86b81edd2d4f")
     public static final class MdaTypes {
-        @objid ("177cc233-1d3d-40e4-b4bb-757ff089e22c")
+        @objid ("58f461eb-e1c3-4d98-9c9c-bf11b36efe68")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("9cb583e8-1737-4c14-aaff-8e1f244bb467")
+        @objid ("69d6ad70-ebf1-4f11-9cd5-7ed575f5e7e5")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("f57f159c-f6d1-4d95-bc22-6fb8d3ca5de2")
+        @objid ("149e69f0-3ecc-4c51-90c4-2555822b4cd9")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("c5e6f487-996c-4c66-896d-948d8e5f00e9")
+        @objid ("e83c78e8-4664-45dd-9239-9a396167d802")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;

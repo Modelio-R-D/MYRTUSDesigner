@@ -1,14 +1,23 @@
 package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
+import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.Tgroup;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
@@ -53,8 +62,15 @@ public class TCapabilityDefinitionPropertyPage<T extends TCapabilityDefinition> 
             break;
         
         case 6:
-            this._element.setValidSourceType(value);
-            ;
+            Class elt1 = ( Class) getModelElt(TNodeType.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+            if ((elt1 != null) && (elt1.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, TNodeType.STEREOTYPE_NAME))) {
+                Object pc = ToscaDesignerProxyFactory.instantiate(elt1);
+                if (value.startsWith(this._add)) {
+                    this._element.addValidSourceType((TNodeType) pc);
+                } else {
+                    this._element.removeValidSourceType((TNodeType) pc);
+                }
+            }
             break;
         }
     }
@@ -77,7 +93,15 @@ public class TCapabilityDefinitionPropertyPage<T extends TCapabilityDefinition> 
         
         table.addProperty("Lower Bound", _element.getLowerBound());
         table.addProperty("Upper Bound", _element.getUpperBound());
-        table.addProperty("Valid Source Types", _element.getValidSourceType());
+        
+        //Valid Source Types
+        List<ModelElement> members_elt = extractModelElements(this._element.getValidSourceType());
+        List<ModelElement> groupList = (TNodeType.MdaTypes.STEREOTYPE_ELT.getExtendedElement() != null)
+                ? TNodeType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()
+                : Collections.emptyList();
+        
+        table.addProperty("Valid Source Types", getToscaValue(members_elt),
+                getAddRemove(groupList, extractModelElements(this._element.getValidSourceType())));
     }
 
 }

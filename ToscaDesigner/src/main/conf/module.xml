@@ -356,10 +356,6 @@
                         <TypeRef id="mref#'Integer' {01a40888-0000-002d-0000-000000000000} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.TCapabilityDefinitionTable.upperBound.description</Description>
                     </PropertyDefinition>
-                    <PropertyDefinition id="validSourceType" label="%propertydefinition.TCapabilityDefinitionTable.validSourceType.label" default-value="" is-editable="true" uid="58a9cdcd-b57e-4a9e-bbd1-d353e9f42b56">
-                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TCapabilityDefinitionTable.validSourceType.description</Description>
-                    </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
             <Stereotype name="TCapabilityDefinitionsType" metaclass="Standard.Class" owner-stereotype="mref#'' {fecd81a5-da41-4a07-a507-6bfaf5bbadd2} Infrastructure.Stereotype" is-hidden="false" label="%stereotype.TCapabilityDefinitionsType.label" uid="ac0418b1-a726-46e6-ac59-310f0055050f" is-abstract="false">
