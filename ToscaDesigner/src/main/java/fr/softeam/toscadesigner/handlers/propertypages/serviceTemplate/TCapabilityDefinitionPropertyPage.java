@@ -3,9 +3,7 @@ package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition;

@@ -23,6 +23,12 @@ public class PropertyDefinitionTypePropertyPage<T extends PropertyDefinitionType
         case 2:
             this._element.getElement().setValue(value);
             break;
+        case 3:
+            this._element.setDescription(value);
+            break;
+        case 4:
+            this._element.setRequired(Boolean.valueOf(value));
+            break;
         }
     }
 
@@ -33,6 +39,8 @@ public class PropertyDefinitionTypePropertyPage<T extends PropertyDefinitionType
         table.addProperty("Name", _element.getElement().getName());
         
         table.addProperty("Type", _element.getElement().getValue());
+        table.addProperty("Description", _element.getDescription());
+        table.addProperty("Required", _element.getRequired());
     }
 
     @objid ("915258a4-5b23-4051-bc26-e761c29f2c6f")
