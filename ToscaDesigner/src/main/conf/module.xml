@@ -663,7 +663,7 @@
                 <Icon path=""/>
                 <Image path=""/>
             </Stereotype>
-            <Stereotype name="TGroup" metaclass="Standard.Package" owner-stereotype="" is-hidden="false" label="%stereotype.Tgroup.label" uid="572d5cb4-54c7-45d0-a9c8-3dc3677f9ef3" is-abstract="false">
+            <Stereotype name="Tgroup" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.Tgroup.label" uid="572d5cb4-54c7-45d0-a9c8-3dc3677f9ef3" is-abstract="false">
                 <Icon path="res/icon/gui/Tgroup48.ICON.png"/>
                 <Image path="res/icon/gui/Tgroup48.png"/>
             </Stereotype>

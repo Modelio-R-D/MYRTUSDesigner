@@ -9,7 +9,7 @@ import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TGroupType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.package_.TGroup;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.Tgroup;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
@@ -18,7 +18,7 @@ import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("9ba049d3-ee8c-4422-8d36-2464c310e0f6")
-public class TGroupPropertyPage<T extends TGroup> extends ToscaElementPropertyPage<T> {
+public class TGroupPropertyPage<T extends Tgroup> extends ToscaElementPropertyPage<T> {
     @objid ("e85baca2-0be5-43c6-b58e-c312d69a0cbc")
     public  TGroupPropertyPage(T elt) {
         super(elt);
