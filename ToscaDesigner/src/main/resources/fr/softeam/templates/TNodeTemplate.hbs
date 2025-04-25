@@ -9,21 +9,14 @@
 {{#each ../ownedAttribute}}{{#extension}}{{#eq name "TPropertyDef"}}
     {{../name}}: "{{../value}}"
 {{/eq}}{{/extension}}{{/each}}
-{{/unless}}{{#unless (noStereotypeApplications this "RequirementsType")}}
+{{/unless}}
+{{#unless (noStereotypeApplications this "RequirementsType")}}
   requirements:
     {{#each ../ownedElement}}{{#extension}}{{#eq name "RequirementsType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TRequirement"}}
-    - {{../name}}:
-        node: {{getProperty ../this "node"}}
-        relationship: {{getProperty ../this "relationship"}}
-        capability: {{getProperty ../this "capability"}}
-        {{#unless (noStereotypeApplications ../this "TPropertyDef")}}
-        properties:
-          {{#each ../ownedAttribute}}{{#extension}}{{#eq name "TPropertyDef"}}
-          {{../name}}: "{{../value}}"
-          {{~/eq}}{{/extension}}{{/each}}
-        {{/unless}}
+    {{> (lookup this.name) ../this}}
     {{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
-{{/unless}}{{#unless (noStereotypeApplications this "TDeploymentArtifacts")}}
+{{/unless}}
+{{#unless (noStereotypeApplications this "TDeploymentArtifacts")}}
   artifacts:
 {{#each ../ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifacts"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifact"}}
     {{../name}}:
