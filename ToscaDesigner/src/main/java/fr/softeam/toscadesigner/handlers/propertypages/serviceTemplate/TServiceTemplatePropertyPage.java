@@ -13,7 +13,7 @@ import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyElementInstanceStates;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.package_.TGroup;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.Tgroup;
 import fr.softeam.toscadesigner.api.tosca.standard.package_.TServiceTemplate;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
@@ -77,13 +77,13 @@ public class TServiceTemplatePropertyPage<T extends TServiceTemplate> extends To
             }
             break;
         case 5:
-            ModelElement elt1 = getModelElt(TGroup.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
-            if ((elt1 != null) && (elt1.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, TGroup.STEREOTYPE_NAME))) {
+            Class elt1 = ( Class) getModelElt(Tgroup.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+            if ((elt1 != null) && (elt1.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, Tgroup.STEREOTYPE_NAME))) {
                 Object pc = ToscaDesignerProxyFactory.instantiate(elt1);
                 if (value.startsWith(this._add)) {
-                    this._element.addGroups((TGroup) pc);
+                    this._element.addGroups((Tgroup) pc);
                 } else {
-                    this._element.removeGroups((TGroup) pc);
+                    this._element.removeGroups((Tgroup) pc);
                 }
             }
             break;
@@ -126,8 +126,8 @@ public class TServiceTemplatePropertyPage<T extends TServiceTemplate> extends To
         
         // GROUPS
         members_elt = extractModelElements(this._element.getGroups());
-        List<ModelElement> groupList = (TGroup.MdaTypes.STEREOTYPE_ELT.getExtendedElement() != null)
-                ? TGroup.MdaTypes.STEREOTYPE_ELT.getExtendedElement()
+        List<ModelElement> groupList = (Tgroup.MdaTypes.STEREOTYPE_ELT.getExtendedElement() != null)
+                ? Tgroup.MdaTypes.STEREOTYPE_ELT.getExtendedElement()
                 : Collections.emptyList();
         
         table.addProperty("Groups", getToscaValue(members_elt),

@@ -5,10 +5,11 @@ import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
+import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TParameter;
 import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.package_.TGroup;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.Tgroup;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
@@ -32,13 +33,13 @@ public class TTopologyTemplatePropertyPage<T extends TTopologyTemplate> extends 
             break;
         
         case 2:
-            ModelElement elt1 = getModelElt(TGroup.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
-            if ((elt1 != null) && (elt1.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, TGroup.STEREOTYPE_NAME))) {
+            Class elt1 = (Class) getModelElt(Tgroup.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+            if ((elt1 != null) && (elt1.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, Tgroup.STEREOTYPE_NAME))) {
                 Object pc = ToscaDesignerProxyFactory.instantiate(elt1);
                 if (value.startsWith(this._add)) {
-                    this._element.addGroups((TGroup) pc);
+                    this._element.addGroups((Tgroup) pc);
                 } else {
-                    this._element.removeGroups((TGroup) pc);
+                    this._element.removeGroups((Tgroup) pc);
                 }
             }
             break;
@@ -69,6 +70,32 @@ public class TTopologyTemplatePropertyPage<T extends TTopologyTemplate> extends 
                 }
             }
             break;
+            
+        case 5:
+            ModelElement elt4 = getModelElt(TParameter.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+            if ((elt4 != null)
+                    && (elt4.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, TParameter.STEREOTYPE_NAME))) {
+                Object pc = ToscaDesignerProxyFactory.instantiate(elt4);
+                if (value.startsWith(this._add)) {
+                    this._element.addInputs((TParameter) pc);
+                } else {
+                    this._element.removeInputs((TParameter) pc);
+                }
+            }
+            break;
+            
+        case 6:
+            ModelElement elt5 = getModelElt(TParameter.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
+            if ((elt5 != null)
+                    && (elt5.isStereotyped(IToscaDesignerPeerModule.MODULE_NAME, TNodeTemplate.STEREOTYPE_NAME))) {
+                Object pc = ToscaDesignerProxyFactory.instantiate(elt5);
+                if (value.startsWith(this._add)) {
+                    this._element.addOutputs((TParameter) pc);
+                } else {
+                    this._element.removeOutputs((TParameter) pc);
+                }
+            }
+            break;
         }
     }
 
@@ -80,8 +107,8 @@ public class TTopologyTemplatePropertyPage<T extends TTopologyTemplate> extends 
         
         // groups
         List<ModelElement> members_elt = extractModelElements(this._element.getGroups());
-        List<ModelElement> groupList = (TGroup.MdaTypes.STEREOTYPE_ELT.getExtendedElement() != null)
-                ? TGroup.MdaTypes.STEREOTYPE_ELT.getExtendedElement()
+        List<ModelElement> groupList = (Tgroup.MdaTypes.STEREOTYPE_ELT.getExtendedElement() != null)
+                ? Tgroup.MdaTypes.STEREOTYPE_ELT.getExtendedElement()
                 : Collections.emptyList();
         
         table.addProperty("Groups", getToscaValue(members_elt),
@@ -104,6 +131,24 @@ public class TTopologyTemplatePropertyPage<T extends TTopologyTemplate> extends 
         
         table.addProperty("Relationship templates", getToscaValue(members_elt),
                 getAddRemove(relationshipTemplates, extractModelElements(this._element.getRelationshipTemplates())));
+        
+        //inputs
+        members_elt = extractModelElements(this._element.getInputs());
+        List<ModelElement> inputs = (TParameter.MdaTypes.STEREOTYPE_ELT
+                .getExtendedElement() != null) ? TParameter.MdaTypes.STEREOTYPE_ELT.getExtendedElement()
+                        : Collections.emptyList();
+        
+        table.addProperty("Inputs", getToscaValue(members_elt),
+                getAddRemove(inputs, extractModelElements(this._element.getInputs())));
+        
+        //outputs
+        members_elt = extractModelElements(this._element.getOutputs());
+        List<ModelElement> outputs = (TParameter.MdaTypes.STEREOTYPE_ELT
+                .getExtendedElement() != null) ? TParameter.MdaTypes.STEREOTYPE_ELT.getExtendedElement()
+                        : Collections.emptyList();
+        
+        table.addProperty("Outputs", getToscaValue(members_elt),
+                getAddRemove(outputs, extractModelElements(this._element.getOutputs())));
     }
 
 }

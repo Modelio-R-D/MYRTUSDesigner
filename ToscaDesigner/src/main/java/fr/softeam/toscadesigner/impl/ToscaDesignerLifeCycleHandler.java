@@ -32,8 +32,8 @@ public class ToscaDesignerLifeCycleHandler extends DefaultModuleLifeCycleHandler
             ToscaDesignerProxyFactory
                     .initialize(ToscaDesignerModule.getInstance().getModuleContext().getModelingSession());
         } catch (com.modeliosoft.modelio.api.module.mda.MdaProxyException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+        // TODO Auto-generated catch block
+        e.printStackTrace();
         }
         
         installRamc();
