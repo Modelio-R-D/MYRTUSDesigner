@@ -50,16 +50,33 @@ Ensure the following tools are installed on your system:
 
 1. Launch **Modelio 5.4.1**.
 2. Navigate to `Configuration > Modules catalog`.
-3. Click **Add a module**.
-4. Select the downloaded `.jmdac` file.
-5. Confirm to add it to your module catalog.
+   
+   ![image](https://github.com/user-attachments/assets/35f45577-0dcf-4dd3-8675-70fef4316e9f)
+
+4. Click **Add a module**.
+   
+   ![image](https://github.com/user-attachments/assets/0ce1dcd5-2b4b-4fd8-a162-c890592e7bd7)
+
+6. Select the downloaded `.jmdac` file.
+   ![image](https://github.com/user-attachments/assets/9aff557a-f30d-481e-a621-7d506a2b8d20)
+
+8. Confirm to add it to your module catalog.
 
 ### Step 4: Deploy the Module in a Project
 
 1. Create or open a UML project in Modelio.
-2. Go to `Configuration > Install a module in this project`.
-3. Select **TOSCA Designer** from the available list.
-4. Click **Finish** — the module is now active and ready to use.
+   
+   ![image](https://github.com/user-attachments/assets/171d3ef8-ea76-4d30-afea-d1509e3bca8b)
+
+3. Go to `Configuration > Install a module in this project`.
+   
+   ![image](https://github.com/user-attachments/assets/da1332d5-723c-4409-bddd-fc36537e8516)
+   ![image](https://github.com/user-attachments/assets/497683ce-3818-4a36-831a-0b51acf2f144)
+
+5. Select **TOSCA Designer** from the available list and Deploy in the project.
+   ![image](https://github.com/user-attachments/assets/3d7ab0c5-5053-459c-81e4-de3c0a8c074d)
+
+7. Click **Finish** — the module is now active and ready to use.
 
 ---
 
