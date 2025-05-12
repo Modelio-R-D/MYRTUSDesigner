@@ -9,23 +9,28 @@ node_types:
       targetNamespace: "{{getProperty this "targetNamespace"}}"
       abstract: "{{getProperty this "abstract"}}"
       final: "{{getProperty this "final"}}"
-    {{#unless (noStereotypeApplications this "PropertyDefinitionType")}}properties:{{/unless}}
+{{#unless (noStereotypeApplications this "PropertyDefinitionType")}}
+    properties:
     {{#each ../ownedAttribute}}{{#extension}}{{#eq name "PropertyDefinitionType"}}
       {{../name}}:
       	type: {{../type.name}}
-      	description: 
       	{{#eq ../multiplicityMin "0"}}required: false{{/eq}}
     {{/eq}}{{/extension}}{{/each}}
-    {{#unless (noStereotypeApplications this "TRequirementDefinitionType")}}requirements:{{/unless}}
+{{/unless}}
+{{#unless (noStereotypeApplications this "TRequirementDefinitionType")}}
+    requirements:
 	{{#each ownedElement}}{{#extension}}{{#eq name "TRequirementDefinitionType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TRequirementDefinition"}}
       - {{../name}}:
           capability: tosca.capabilities.{{getProperty ../this "capability"}}
           relationship: tosca.relationships.{{getProperty ../this "relationshipType"}}
           occurrences: [ {{getProperty ../this "lowerBound"}}, {{getProperty ../this "upperBound"}} ]
     {{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
-	{{#unless (noStereotypeApplications this "TCapabilityDefinitionsType")}}capabilities:{{/unless}}
+{{/unless}}
+{{#unless (noStereotypeApplications this "TCapabilityDefinitionsType")}}
+    capabilities:
     {{#each ownedElement}}{{#extension}}{{#eq name "TCapabilityDefinitionsType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TCapabilityDefinition"}}
       {{../name}}:
         occurrences: [ {{getProperty ../this "lowerBound"}}, {{getProperty ../this "upperBound"}} ]
         type: tosca.capabilities.{{getProperty ../this "capabilityType"}}
     {{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
+{{/unless}}

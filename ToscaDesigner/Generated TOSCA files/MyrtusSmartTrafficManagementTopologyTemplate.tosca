@@ -144,3 +144,43 @@ topology_template:
         side_channel_secure_library_1:
           type: .security_countermeasure
   relationship_templates:
+  policies:
+    high_cpu_utilization_on_camera:
+      type: tosca.policies.Placement
+      description: Edge devices SHOULD maintain computational resource (CPU, GPU) utilization below 70% to ensure adequate headroom for handling unexpected traffic spikes or system events.
+      targets: [basic_edge_camera_1,basic_edge_camera_2,advanced_edge_camera_1,advanced_edge_camera_2]
+      triggers:
+        high_cpu_utilization_on_camera_trigger:
+          description: Edge devices SHOULD maintain computational resource (CPU, GPU) utilization below 70% to ensure adequate headroom for handling unexpected traffic spikes or system events.
+          condition: 'for camera in targets: camera.cpu_utilization > edge_high_cpu_threshold'
+          action: 'migrate: object_detection_service target: fog_node_1'
+    high_cpu_utilization_on_fog:
+      type: tosca.policies.Placement
+      description: Fog nodes SHOULD maintain computational resource (CPU, GPU) utilization below 60% to accommodate dynamic workload fluctuations and support real-time traffic data processing.
+      targets: [fog_node_1]
+      triggers:
+        high_cpu_utilization_on_fog_trigger:
+          description: Edge devices SHOULD maintain computational resource (CPU, GPU) utilization below 60% to ensure adequate headroom for handling unexpected traffic spikes or system events.
+          condition: 'for fog_node in targets: fog_node.cpu_utilization > fog_high_cpu_threshold'
+          action: 'migrate: object_detection_service target: cloud_instance_1'
+    edge_low_power_mode:
+      type: tosca.policies.Placement
+      targets: [basic_edge_camera_1,basic_edge_camera_2,advanced_edge_camera_1,advanced_edge_camera_2]
+      triggers:
+        edge_low_power_mode_trigger:
+          condition: 'datetime.datetime.now().time() >= datetime.time(1, 0) and datetime.datetime.now().time() <= datetime.time(5, 0) and average_traffic_density_15min < low_traffic_threshold_15min'
+          action: 'frame_rate: 10 else frame_rate: 30'
+    high_traffic_scaling:
+      type: tosca.policies.Scaling
+      targets: [cloud_instance_1]
+      triggers:
+        high_traffic_scaling_trigger:
+          condition: 'average_traffic_density_15min > high_traffic_threshold_15min'
+          action: 'scale_up: 1 target: cloud_server_1'
+    low_traffic_scaling:
+      type: tosca.policies.Scaling
+      targets: [cloud_instance_1]
+      triggers:
+        low_traffic_scaling_trigger:
+          condition: 'average_traffic_density_15min < low_traffic_threshold_15min'
+          action: 'scale_down: 1 target: cloud_server_1'

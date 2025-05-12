@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Module id="ToscaDesigner" class="fr.softeam.toscadesigner.impl.ToscaDesignerModule" binaryversion="5.4.01" version="0.0.1" schema-level="2" uid="942db9f9-6869-472c-b269-9ca7ec36a014" author="Softeam" image="" url="">
+<Module id="ToscaDesigner" class="fr.softeam.toscadesigner.impl.ToscaDesignerModule" binaryversion="5.4.01" version="0.1.0" schema-level="2" uid="942db9f9-6869-472c-b269-9ca7ec36a014" author="Softeam" image="" url="">
     <ClassPath>
         <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
         <PathEntry path="lib/handlebars-4.3.1.jar"/>
@@ -202,6 +202,16 @@
             <Stereotype name="PropertyDefinitionType" metaclass="Standard.Attribute" owner-stereotype="" is-hidden="false" label="%stereotype.PropertyDefinitionType.label" uid="34943474-c962-4064-b5f1-c6008ebb3c9d" is-abstract="false">
                 <Icon path="res/icon/gui/PropertyDefinitionType24.png"/>
                 <Image path="res/icon/gui/PropertyDefinitionType48.png"/>
+                <PropertyTable id="PropertyDefinitionTypeTable" label="%propertytable.PropertyDefinitionTypeTable.label" uid="10a88662-c943-4c1c-92a8-9212d97d684d">
+                    <PropertyDefinition id="description" label="%propertydefinition.PropertyDefinitionTypeTable.description.label" default-value="" is-editable="true" uid="d7bd8dcf-45a6-4906-95f9-a874b3a36709">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.PropertyDefinitionTypeTable.description.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="required" label="%propertydefinition.PropertyDefinitionTypeTable.required.label" default-value="" is-editable="true" uid="f35e9a83-e034-47a1-95bf-a2e1a1203952">
+                        <TypeRef id="mref#'Boolean' {01a40888-0000-002b-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.PropertyDefinitionTypeTable.required.description</Description>
+                    </PropertyDefinition>
+                </PropertyTable>
             </Stereotype>
             <Stereotype name="PropertyMappingsType" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.PropertyMappingsType.label" uid="3d7421b3-1723-4400-8e4f-48176ac40c34" is-abstract="false">
                 <Icon path=""/>
@@ -355,10 +365,6 @@
                     <PropertyDefinition id="upperBound" label="%propertydefinition.TCapabilityDefinitionTable.upperBound.label" default-value="" is-editable="true" uid="d94c64cf-02f1-4a6b-a229-35c8b8b6303b">
                         <TypeRef id="mref#'Integer' {01a40888-0000-002d-0000-000000000000} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.TCapabilityDefinitionTable.upperBound.description</Description>
-                    </PropertyDefinition>
-                    <PropertyDefinition id="validSourceType" label="%propertydefinition.TCapabilityDefinitionTable.validSourceType.label" default-value="" is-editable="true" uid="58a9cdcd-b57e-4a9e-bbd1-d353e9f42b56">
-                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TCapabilityDefinitionTable.validSourceType.description</Description>
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
@@ -701,13 +707,9 @@
                 <Icon path="res/icon/gui/TInterface24.png"/>
                 <Image path="res/icon/gui/TInterface48.IMAGE.png"/>
                 <PropertyTable id="TInterfaceTable" label="%propertytable.TInterfaceTable.label" uid="204ebc96-ec6b-46d3-9f88-bcec349cadc7">
-                    <PropertyDefinition id="name" label="%propertydefinition.TInterfaceTable.name.label" default-value="" is-editable="true" uid="abc12b37-e245-4073-9a9f-ebeeb2f4426d">
+                    <PropertyDefinition id="notifications" label="%propertydefinition.TInterfaceTable.notifications.label" default-value="" is-editable="true" uid="1c86cfbe-dda6-4b27-b5aa-59b0433d0603">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TInterfaceTable.name.description</Description>
-                    </PropertyDefinition>
-                    <PropertyDefinition id="PropertyTypeDefinition2" label="%propertydefinition.TInterfaceTable.PropertyTypeDefinition2.label" default-value="" is-editable="true" uid="d060b91b-e90c-48fb-8017-56a04caf352b">
-                        <TypeRef id="mref#'Acceptance' {01ec152c-0000-3152-0000-000000000000} Infrastructure.EnumeratedPropertyType"/>
-                        <Description>%propertydefinition.TInterfaceTable.PropertyTypeDefinition2.description</Description>
+                        <Description>%propertydefinition.TInterfaceTable.notifications.description</Description>
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
@@ -741,19 +743,27 @@
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.TOperationTable.name.description</Description>
                     </PropertyDefinition>
-                    <PropertyDefinition id="inputParameters" label="%propertydefinition.TOperationTable.inputParameters.label" default-value="" is-editable="true" uid="7e07cefa-0db7-4a6c-99f5-099c223834eb">
-                        <TypeRef id="mref#'MultiElement' {1bdf9f87-e9ad-4849-ab22-c25147e8d00c} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TOperationTable.inputParameters.description</Description>
+                    <PropertyDefinition id="description" label="%propertydefinition.TOperationTable.description.label" default-value="" is-editable="true" uid="7e07cefa-0db7-4a6c-99f5-099c223834eb">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TOperationTable.description.description</Description>
                     </PropertyDefinition>
-                    <PropertyDefinition id="outputParameters" label="%propertydefinition.TOperationTable.outputParameters.label" default-value="" is-editable="true" uid="d3330a11-ae5b-464f-862b-e587feba80ac">
-                        <TypeRef id="mref#'MultiElement' {1bdf9f87-e9ad-4849-ab22-c25147e8d00c} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TOperationTable.outputParameters.description</Description>
+                    <PropertyDefinition id="implementation" label="%propertydefinition.TOperationTable.implementation.label" default-value="" is-editable="true" uid="d3330a11-ae5b-464f-862b-e587feba80ac">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TOperationTable.implementation.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="inputs" label="%propertydefinition.TOperationTable.inputs.label" default-value="" is-editable="true" uid="30a6aef6-f577-4f54-a2eb-9df4e6bc46dd">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TOperationTable.inputs.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="outputs" label="%propertydefinition.TOperationTable.outputs.label" default-value="" is-editable="true" uid="d75d43de-20d1-4375-8764-f8048532f746">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TOperationTable.outputs.description</Description>
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
             <Stereotype name="TParameter" metaclass="Infrastructure.ModelElement" owner-stereotype="" is-hidden="false" label="%stereotype.TParameter.label" uid="88f765a0-a1fe-42d8-9b52-f45ff541469f" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+                <Icon path="res/icon/gui/PropertyDefinitionType48.ICON.png"/>
+                <Image path="res/icon/gui/PropertyDefinitionType48.png"/>
                 <PropertyTable id="TParameterTable" label="%propertytable.TParameterTable.label" uid="89a85a1d-2631-4b47-b94b-dfe632ffc5be">
                     <PropertyDefinition id="name" label="%propertydefinition.TParameterTable.name.label" default-value="" is-editable="true" uid="ae68e1f0-3464-42e1-a2d5-d8d14a7aa4fe">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
@@ -766,6 +776,26 @@
                     <PropertyDefinition id="type" label="%propertydefinition.TParameterTable.type.label" default-value="" is-editable="true" uid="a6d4ef82-d89c-4b98-ad06-c9abb7992402">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.TParameterTable.type.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="description" label="%propertydefinition.TParameterTable.description.label" default-value="" is-editable="true" uid="73c42be6-f152-4cd9-96e7-811cbdc19855">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TParameterTable.description.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="value" label="%propertydefinition.TParameterTable.value.label" default-value="" is-editable="true" uid="b90789da-89e2-4e67-95f5-afaeae60527f">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TParameterTable.value.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="default" label="%propertydefinition.TParameterTable.default.label" default-value="" is-editable="true" uid="77d5b3fc-e752-44d0-a52c-3d3b6fa2755a">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TParameterTable.default.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="status" label="%propertydefinition.TParameterTable.status.label" default-value="" is-editable="true" uid="af62ecb0-8deb-4e68-bb5f-c38a90d1ddc6">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TParameterTable.status.description</Description>
+                    </PropertyDefinition>
+                    <PropertyDefinition id="constraints" label="%propertydefinition.TParameterTable.constraints.label" default-value="" is-editable="true" uid="5e5812ea-e124-41ef-8d85-dc46d49636a9">
+                        <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
+                        <Description>%propertydefinition.TParameterTable.constraints.description</Description>
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
@@ -1086,6 +1116,7 @@
                 </Handler>
             </Tool>
             <Tool id="CapabilityDefinition" label="%tool.CapabilityDefinition.label" tooltip="%tool.CapabilityDefinition.tooltip" image="res/icon/gui/capabilityDefinition24.png">
+                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TCapabilityDefinitionsType"/>
                 <Handler class="Box">
                     <HParameter name="stereotype" value="ToscaDesigner#TCapabilityDefinition"/>
                     <HParameter name="metaclass" value="Standard.Class"/>
@@ -1294,6 +1325,14 @@
                     <HParameter name="name" value="Capabilities Type"/>
                 </Handler>
             </Tool>
+            <Tool id="Interface" label="%tool.Interface.label" tooltip="%tool.Interface.tooltip" image="res/icon/gui/TInterface48.ICON.png">
+                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TNodeTemplate"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#TInterface"/>
+                    <HParameter name="metaclass" value="Standard.Class"/>
+                    <HParameter name="name" value="Interface"/>
+                </Handler>
+            </Tool>
         </Tools>
         <ContextualMenu>
             <CommandRef refid="Export" group="" group-image=""/>
@@ -1353,6 +1392,7 @@
                     <ToolRef refid="Policies_Type" group="%group.Attributes.label"/>
                     <ToolRef refid="Constraint" group="%group.Attributes.label"/>
                     <ToolRef refid="Constraints" group="%group.Attributes.label"/>
+                    <ToolRef refid="Interface" group="%group.Attributes.label"/>
                     <ToolRef refid="Capability" group="%group.Capabilities.label"/>
                     <ToolRef refid="Capabilities_Type" group="%group.Capabilities.label"/>
                 </Palette>

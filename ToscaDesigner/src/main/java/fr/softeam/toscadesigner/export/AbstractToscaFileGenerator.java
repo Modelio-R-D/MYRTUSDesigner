@@ -33,6 +33,7 @@ import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifact;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicy;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition;
@@ -77,6 +78,8 @@ public abstract class AbstractToscaFileGenerator {
 			for (Stereotype stereotype : context.getExtension()) {
 				String propertyStringValue;
 				propertyStringValue = context.getProperty(stereotype, searchedPropertyName);
+				if (propertyStringValue != null)
+					return propertyStringValue;
 
 				if (stereotype.getName().equals("TRequirement")) {
 					TRequirement tRequirement = TRequirement.safeInstantiate((Class) context);
@@ -109,8 +112,7 @@ public abstract class AbstractToscaFileGenerator {
 					if (searchedPropertyName.equals("type")) {
 						TRelationshipTemplate tRelationshipTemplate = TRelationshipTemplate
 								.safeInstantiate((Association) context);
-						TRelationshipType relationshipType = tRelationshipTemplate.getRelationshipType();
-						propertyStringValue = relationshipType.getElement().getName();
+						propertyStringValue = tRelationshipTemplate.getRelationshipType().getElement().getName();
 					}
 				} else if (stereotype.getName().equals("TNodeTemplate")) {
 					TNodeTemplate tNodeTemplate = TNodeTemplate.safeInstantiate((Class) context);
@@ -135,6 +137,16 @@ public abstract class AbstractToscaFileGenerator {
 						propertyStringValue = tDeploymentArtifact.getType().getElement().getName();
 					} else if (searchedPropertyName.equals("file")) {
 						propertyStringValue = tDeploymentArtifact.getFile();
+					}
+				} else if (stereotype.getName().equals("TPolicy")) {
+					TPolicy tPolicy = TPolicy.safeInstantiate((Class) context);
+					if (searchedPropertyName.equals("policyTargets")) {
+						propertyStringValue = tPolicy.getTargets().stream().map(TNodeTemplate::getElement)
+								.map(element -> element.getName()).collect(Collectors.joining(","));
+					} else if (searchedPropertyName.equals("type")) {
+						propertyStringValue = tPolicy.getType().getElement().getName();
+					} else if (searchedPropertyName.equals("description")) {
+						propertyStringValue = tPolicy.getDescription();
 					}
 				}
 				// if it didn't find the property with this stereotype, look for the parent
