@@ -127,6 +127,7 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
     @objid ("ac7eb6c0-cb5e-4daf-b518-1c8946b4d8e8")
     protected String getToscaValue(List<? extends ModelElement> elts) {
         String result = "";
+        if (elts!=null) {
         Iterator<? extends ModelElement> it = elts.iterator();
         
         if (it.hasNext()) {
@@ -136,8 +137,11 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
         while (it.hasNext()) {
             result += this._eltSeparator + getToscaName(it.next());
         }
+        }
         return result;
     }
+    
+    
 
     @objid ("18768d2d-a3f7-4f9c-8ce4-758b26c49d07")
     protected ModelElement getToscalElt(List<? extends ModelElement> elts, String toscaName) {
@@ -166,7 +170,7 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
         }
         return members_elt;
     }
-
+    
     @objid ("7abe5676-a085-4685-be19-0288c928a683")
     public static <T> List<Attribute> extractAttributes(List<T> members) {
         List<Attribute> members_elt = new ArrayList<>();

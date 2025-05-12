@@ -70,6 +70,7 @@ public class TInterfacePropertyPage<T extends TInterface> extends ToscaElementPr
         table.addProperty("Notifications", _element.getNotifications());
         
         // Operations
+        
         List<ModelElement> members_elt = extractModelElements(this._element.getOperation());
         List<ModelElement> operationsList = (TOperation.MdaTypes.STEREOTYPE_ELT.getExtendedElement() != null)
                 ? TOperation.MdaTypes.STEREOTYPE_ELT.getExtendedElement()
