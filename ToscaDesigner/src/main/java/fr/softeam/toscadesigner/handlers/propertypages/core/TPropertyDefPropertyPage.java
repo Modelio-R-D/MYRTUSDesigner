@@ -4,6 +4,8 @@ import java.util.Arrays;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate;
+
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
@@ -24,20 +26,24 @@ public class TPropertyDefPropertyPage<T extends TPropertyDef> extends ToscaEleme
         switch (row) {
         
         case 1:
-            for (ModelElement el : PropertyDefinitionType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
-                if (value.contains(el.getUuid())) {
-                    this._element.setName(
-                            PropertyDefinitionType.instantiate((org.modelio.metamodel.uml.statik.Attribute) el));
-        break;
-        } else {
-        this._element.setName(null);
-        }
-            }
+            this._element.getElement().setName(value);
             break;
         
         case 2:
+            for (ModelElement el : PropertyDefinitionType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+                if (value.contains(el.getUuid())) {
+                    this._element.setType(
+                            PropertyDefinitionType.instantiate((org.modelio.metamodel.uml.statik.Attribute) el));
+                    break;
+                } else {
+                    this._element.setType(null);
+                }
+            }
+            break;
+        case 3:
             this._element.getElement().setValue(value);
             break;
+        
         }
     }
 
@@ -45,14 +51,17 @@ public class TPropertyDefPropertyPage<T extends TPropertyDef> extends ToscaEleme
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
-        table.addProperty("Name", this._element.getName() != null ? this._element.getName().getElement() : null,
+        table.addProperty("Name", _element.getElement().getName());
+        table.addProperty("Type", this._element.getType() != null ? this._element.getType().getElement(): null,
                 Arrays.asList(Metamodel.getMClass("Attribute")), new IMObjectFilter() {
                     @Override
                     public boolean accept(MObject element) {
                         return PropertyDefinitionType.canInstantiate(element);
                     }
-                });
+                });        
+        
         table.addProperty("Value", _element.getElement().getValue());
+
     }
 
 }

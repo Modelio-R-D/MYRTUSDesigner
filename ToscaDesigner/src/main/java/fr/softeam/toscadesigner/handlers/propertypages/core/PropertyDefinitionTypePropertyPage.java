@@ -44,6 +44,4 @@ public class PropertyDefinitionTypePropertyPage<T extends PropertyDefinitionType
         table.addProperty("Required", _element.getRequired());
     }
 
-  
-
 }
