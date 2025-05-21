@@ -23,72 +23,72 @@ public class TRelationshipTypePropertyPage<T extends TRelationshipType> extends 
     public void changeProperty(int row, String value) {
         super.changeProperty(row, value);
         
-           switch (row) {
-           case 1:
-               this._element.getElement().setName(value);
-           
-           case 2:
-               for (ModelElement el : TRelationshipType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
-                   if (value.contains(el.getUuid())) {
-                       this._element
-                               .setDerivedFrom(TRelationshipType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
-        break;
-        } else {
-        this._element.setDerivedFrom(null);
+        switch (row) {
+        case 1:
+            this._element.getElement().setName(value);
+        
+        case 2:
+            for (ModelElement el : TRelationshipType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
+                if (value.contains(el.getUuid())) {
+                    this._element
+                            .setDerivedFrom(TRelationshipType.instantiate((org.modelio.metamodel.uml.statik.Class) el));
+                    break;
+                } else {
+                    this._element.setDerivedFrom(null);
+                }
+            }
+            break;
+        case 3:
+            this._element.setValidSource(value);
+            break;
+        case 4:
+            this._element.setValidTarget(value);
+            break;
+        
+        case 5:
+            // this._element.setInstanceStates(null);
+            break;
+        case 6:
+            // this._element.setSourceInterfaces(null);;
+            break;
+        case 7:
+            // this._element.setTargetInterfaces(null);
+        
         }
-               }
-               break;
-           case 0:
-               // this._element.setInstanceStates(null);
-               break;
-           case 3:
-               // this._element.setSourceInterfaces(null);;
-               break;
-           case 4:
-               // this._element.setTargetInterfaces(null);
-               break;
-           case 5:
-               this._element.setValidSource(value);
-               break;
-           case 6:
-               this._element.setValidTarget(value);
-               break;
-           
-           }
     }
 
     @objid ("83888144-0dc4-4620-8f1a-bde83d9522b2")
     @Override
     public void update(IModulePropertyTable table) {
-        super.update(table);
+        // super.update(table);
         /*
-                                                         * //Instance states table.addProperty("Instance States",
-                                                         * this._element.getInstanceStates() != null ?
-                                                         * this._element.getInstanceStates().getElement() : null,
-                                                         * Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
-                                                         * 
-                                                         * @Override public boolean accept(MObject element) { return
-                                                         * TTopologyElementInstanceStates.canInstantiate(element); } }); //Source
-                                                         * Interfaces table.addProperty("Source Interfaces",
-                                                         * this._element.getSourceInterfaces() != null ?
-                                                         * this._element.getSourceInterfaces().getElement() : null,
-                                                         * Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
-                                                         * 
-                                                         * @Override public boolean accept(MObject element) { return
-                                                         * SourceInterfacesType.canInstantiate(element); } });
-                                                         * 
-                                                         * //Target Interfaces table.addProperty("Target Interfaces",
-                                                         * this._element.getTargetInterfaces() != null ?
-                                                         * this._element.getTargetInterfaces().getElement() : null,
-                                                         * Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
-                                                         * 
-                                                         * @Override public boolean accept(MObject element) { return
-                                                         * TargetInterfacesType.canInstantiate(element); } });
-                                                         */
+                 * //Instance states table.addProperty("Instance States",
+                 * this._element.getInstanceStates() != null ?
+                 * this._element.getInstanceStates().getElement() : null,
+                 * Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+                 * 
+                 * @Override public boolean accept(MObject element) { return
+                 * TTopologyElementInstanceStates.canInstantiate(element); } }); //Source
+                 * Interfaces table.addProperty("Source Interfaces",
+                 * this._element.getSourceInterfaces() != null ?
+                 * this._element.getSourceInterfaces().getElement() : null,
+                 * Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+                 * 
+                 * @Override public boolean accept(MObject element) { return
+                 * SourceInterfacesType.canInstantiate(element); } });
+                 * 
+                 * //Target Interfaces table.addProperty("Target Interfaces",
+                 * this._element.getTargetInterfaces() != null ?
+                 * this._element.getTargetInterfaces().getElement() : null,
+                 * Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
+                 * 
+                 * @Override public boolean accept(MObject element) { return
+                 * TargetInterfacesType.canInstantiate(element); } });
+                 */
         table.addProperty("Name", _element.getElement().getName());
         table.addProperty("Derived From",
                 this._element.getDerivedFrom() != null ? this._element.getDerivedFrom().getElement() : null,
-                Arrays.asList(Metamodel.getMClass("Association")), new IMObjectFilter() {
+                Arrays.asList(Metamodel.getMClass("Class")), new IMObjectFilter() {
                     @Override
                     public boolean accept(MObject element) {
                         return TRelationshipType.canInstantiate(element);
