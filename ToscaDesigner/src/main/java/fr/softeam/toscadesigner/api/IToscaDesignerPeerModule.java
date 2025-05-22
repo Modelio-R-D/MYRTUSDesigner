@@ -1,7 +1,8 @@
 package fr.softeam.toscadesigner.api;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.module.IPeerModule;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("0b3043c0-695b-42e5-a69a-8298dc63b89c")
 public interface IToscaDesignerPeerModule extends IPeerModule {

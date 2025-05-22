@@ -1,19 +1,18 @@
 package fr.softeam.toscadesigner.handlers.tools;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.ServiceTemplateDiagram;
-import fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.ToscaDiagram;
-import fr.softeam.toscadesigner.api.tosca.standard.package_.TServiceTemplate;
-import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
-import org.modelio.api.modelio.diagram.tools.DefaultBoxTool;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.ITransaction;
 import org.modelio.api.module.context.IModuleContext;
-import org.modelio.metamodel.diagrams.ClassDiagram;
 import org.modelio.metamodel.uml.statik.Package;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.ServiceTemplateDiagram;
+import fr.softeam.toscadesigner.api.tosca.standard.package_.TServiceTemplate;
+import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
 
 @objid ("c8bf3d8d-3063-40dc-8a03-bd7fad710efd")
 public class CreateServiceTemplateTool extends CreateSubModelTool {

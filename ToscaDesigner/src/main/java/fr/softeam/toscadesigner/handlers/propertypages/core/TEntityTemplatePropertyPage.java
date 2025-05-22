@@ -1,8 +1,10 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TEntityTemplate;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TEntityTemplate;
 
 @objid ("c8664bf6-f1ea-40d2-9fd3-65f68ad2bb76")
 public abstract class TEntityTemplatePropertyPage<T extends TEntityTemplate> extends ToscaElementPropertyPage<T> {

@@ -2,7 +2,14 @@ package fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate;
 
 import java.util.Collections;
 import java.util.List;
+
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.statik.Association;
+import org.modelio.metamodel.uml.statik.Class;
+
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
 import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TParameter;
@@ -11,10 +18,6 @@ import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.Tgroup;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.Association;
-import org.modelio.metamodel.uml.statik.Class;
 
 @objid ("30999161-0952-4789-9b87-97951cfefbd9")
 public class TTopologyTemplatePropertyPage<T extends TTopologyTemplate> extends ToscaElementPropertyPage<T> {

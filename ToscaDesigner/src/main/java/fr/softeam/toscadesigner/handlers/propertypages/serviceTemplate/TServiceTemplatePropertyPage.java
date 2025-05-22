@@ -3,25 +3,24 @@ package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
-import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
-import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.InterfacesType;
-import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyElementInstanceStates;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.Tgroup;
-import fr.softeam.toscadesigner.api.tosca.standard.package_.TServiceTemplate;
-import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
+
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
+import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.Tgroup;
+import fr.softeam.toscadesigner.api.tosca.standard.package_.TServiceTemplate;
+import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 
 @objid ("a4a7341d-8b2f-4f32-992d-bf6f5f20b620")
 public class TServiceTemplatePropertyPage<T extends TServiceTemplate> extends ToscaElementPropertyPage<T> {

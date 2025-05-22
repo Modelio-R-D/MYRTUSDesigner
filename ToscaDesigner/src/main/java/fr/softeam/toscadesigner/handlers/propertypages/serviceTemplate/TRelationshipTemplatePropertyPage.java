@@ -1,16 +1,19 @@
 package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
 import java.util.Arrays;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.RelationshipConstraintsType;
-import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
-import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
+
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.RelationshipConstraintsType;
+import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
+import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 
 @objid ("0712b188-0d7d-4435-812d-e7fd1660e66d")
 public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> extends ToscaElementPropertyPage<T> {

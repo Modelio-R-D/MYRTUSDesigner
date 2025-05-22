@@ -1,6 +1,5 @@
 package fr.softeam.toscadesigner.impl;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.module.AbstractJavaModule;
 import org.modelio.api.module.IPeerModule;
 import org.modelio.api.module.context.IModuleContext;
@@ -10,6 +9,8 @@ import org.modelio.api.module.parameter.IParameterEditionModel;
 import org.modelio.gproject.ramc.core.model.IModelComponent;
 import org.modelio.gproject.ramc.core.packaging.IModelComponentContributor;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("f74fe6e0-48ad-4b16-9b56-5d97e8be9707")
 public class ToscaDesignerModule extends AbstractJavaModule {
@@ -98,7 +99,7 @@ public class ToscaDesignerModule extends AbstractJavaModule {
     @objid ("f7d4d813-d18b-4e5f-b257-25fdf86ad84e")
     private IMdaExpert getGeneratedMdaExpert(final Stereotype st) {
         switch (st.getUuid()) {
-            default: return null;
+        	default: return null;
         }
     }
 

@@ -1,9 +1,7 @@
 package fr.softeam.toscadesigner.handlers.commands.submodel;
 
 import java.util.List;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.ToscaDiagram;
-import fr.softeam.toscadesigner.api.tosca.standard.package_.ToscaModel;
+
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.modelio.model.ITransaction;
 import org.modelio.api.module.IModule;
@@ -11,6 +9,11 @@ import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.uml.infrastructure.Profile;
 import org.modelio.metamodel.uml.statik.Package;
 import org.modelio.vcore.smkernel.mapi.MObject;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.ToscaDiagram;
+import fr.softeam.toscadesigner.api.tosca.standard.package_.ToscaModel;
 
 @objid ("ac81ee47-8dae-420e-9d31-58f76304cf7e")
 public class CreateCloudServiceArchiveCommand extends CreateSubModelCommand {

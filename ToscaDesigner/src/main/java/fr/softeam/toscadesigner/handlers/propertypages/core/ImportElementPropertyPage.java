@@ -1,8 +1,10 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.ImportElement;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.ImportElement;
 
 @objid ("2b0ab9ab-3232-4c91-a37c-607fdd1dc98e")
 public class ImportElementPropertyPage<T extends ImportElement> extends ToscaElementPropertyPage<T> {

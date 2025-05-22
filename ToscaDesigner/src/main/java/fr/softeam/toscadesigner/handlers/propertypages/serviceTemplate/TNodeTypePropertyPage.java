@@ -1,20 +1,21 @@
 package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
 import java.util.Arrays;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.CapabilitiesType;
-import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.InterfacesType;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TEntityType;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyElementInstanceStates;
-import fr.softeam.toscadesigner.handlers.propertypages.core.TEntityTypePropertyPage;
-import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
+
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.CapabilitiesType;
+import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.InterfacesType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyElementInstanceStates;
+import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 
 @objid ("1b7c8e78-2f52-4575-9b25-ab31be3a9dca")
 public class TNodeTypePropertyPage<T extends TNodeType> extends ToscaElementPropertyPage<T> {

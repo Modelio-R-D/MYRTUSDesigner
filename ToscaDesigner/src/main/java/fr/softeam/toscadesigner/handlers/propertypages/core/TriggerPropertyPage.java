@@ -1,8 +1,10 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.Trigger;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.tosca.standard.class_.Trigger;
 
 @objid ("df912efc-78f8-4b7b-aeb6-92c70e790d8c")
 public class TriggerPropertyPage<T extends Trigger> extends ToscaElementPropertyPage<T> {

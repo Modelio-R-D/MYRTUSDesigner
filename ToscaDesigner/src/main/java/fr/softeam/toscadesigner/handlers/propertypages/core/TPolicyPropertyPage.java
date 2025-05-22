@@ -3,14 +3,7 @@ package fr.softeam.toscadesigner.handlers.propertypages.core;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
-import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
-import fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicy;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicyType;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.Trigger;
+
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
@@ -18,6 +11,16 @@ import org.modelio.metamodel.uml.statik.Attribute;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
+import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
+import fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicy;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicyType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.Trigger;
 
 @objid ("61987098-438b-4f23-ae60-2911fe62c149")
 public class TPolicyPropertyPage<T extends TPolicy> extends ToscaElementPropertyPage<T> {

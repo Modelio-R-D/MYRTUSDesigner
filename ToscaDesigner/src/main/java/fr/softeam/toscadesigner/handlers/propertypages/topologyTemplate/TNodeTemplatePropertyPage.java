@@ -1,17 +1,20 @@
 package fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate;
 
 import java.util.Arrays;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementsType;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifacts;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
-import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
+
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementsType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifacts;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
+import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 
 @objid ("d7f945d4-ad69-488b-ab02-d36bf143c67f")
 public class TNodeTemplatePropertyPage<T extends TNodeTemplate> extends ToscaElementPropertyPage<T> {

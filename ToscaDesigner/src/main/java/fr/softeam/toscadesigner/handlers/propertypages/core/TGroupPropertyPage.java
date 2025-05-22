@@ -1,21 +1,23 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
-import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TGroupType;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.Tgroup;
+
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
+import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TGroupType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.Tgroup;
 
 @objid ("9ba049d3-ee8c-4422-8d36-2464c310e0f6")
 public class TGroupPropertyPage<T extends Tgroup> extends ToscaElementPropertyPage<T> {

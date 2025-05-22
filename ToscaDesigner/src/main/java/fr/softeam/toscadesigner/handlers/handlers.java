@@ -1,12 +1,13 @@
 package fr.softeam.toscadesigner.handlers;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.widgets.Display;
 import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.diagram.tools.DefaultBoxTool;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("7938abb1-7de8-40d2-b8c7-7fa0d02a6620")
 public class handlers extends DefaultBoxTool {

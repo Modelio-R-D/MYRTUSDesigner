@@ -2,12 +2,7 @@ package fr.softeam.toscadesigner.handlers.commands;
 
 import java.io.IOException;
 import java.util.List;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.export.AbstractToscaFileGenerator;
-import fr.softeam.toscadesigner.export.NodeTypeChecker;
-import fr.softeam.toscadesigner.export.TopologyTemplateChecker;
-import fr.softeam.toscadesigner.export.ToscaModelChecker;
-import fr.softeam.toscadesigner.export.ToscaObjectTypeChecker;
+
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.widgets.Display;
 import org.modelio.api.module.IModule;
@@ -15,6 +10,14 @@ import org.modelio.api.module.command.DefaultModuleCommandHandler;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.api.module.context.log.ILogService;
 import org.modelio.vcore.smkernel.mapi.MObject;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.export.AbstractToscaFileGenerator;
+import fr.softeam.toscadesigner.export.NodeTypeChecker;
+import fr.softeam.toscadesigner.export.TopologyTemplateChecker;
+import fr.softeam.toscadesigner.export.ToscaModelChecker;
+import fr.softeam.toscadesigner.export.ToscaObjectTypeChecker;
 
 @objid ("8a84facc-79c8-4a3e-9ae0-2a5310c69779")
 public class ExportToscaModelCommand extends DefaultModuleCommandHandler {
