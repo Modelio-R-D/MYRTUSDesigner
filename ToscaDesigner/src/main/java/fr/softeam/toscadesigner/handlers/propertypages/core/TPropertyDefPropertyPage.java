@@ -5,7 +5,6 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate;
-
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
@@ -61,7 +60,6 @@ public class TPropertyDefPropertyPage<T extends TPropertyDef> extends ToscaEleme
                 });        
         
         table.addProperty("Value", _element.getElement().getValue());
-
     }
 
 }

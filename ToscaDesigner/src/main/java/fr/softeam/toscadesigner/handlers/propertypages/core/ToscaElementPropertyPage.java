@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.handlers.propertypages.IPropertyContent;
 import fr.softeam.toscadesigner.impl.IMdaProxy;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
@@ -80,8 +79,8 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
     }
 
     @objid ("f687be00-1013-4a75-90ba-53a326547aa8")
-    protected ModelElement getModelElt(List<? extends ModelElement> elts, String camelName) {
-        String name = camelName.replaceFirst(this._add, "").replaceFirst(this._remove, "");
+    protected ModelElement getModelElt(List<? extends ModelElement> elts, String toscaName) {
+        String name = toscaName.replaceFirst(this._add, "").replaceFirst(this._remove, "");
         
         for (ModelElement elt : elts) {
             if (getToscaName(elt).equals(name)) {

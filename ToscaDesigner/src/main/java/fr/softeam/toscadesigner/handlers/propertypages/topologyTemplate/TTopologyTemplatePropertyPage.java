@@ -123,6 +123,7 @@ public class TTopologyTemplatePropertyPage<T extends TTopologyTemplate> extends 
         table.addProperty("Node templates", getToscaValue(members_elt),
                 getAddRemove(nodeTemplateList, extractModelElements(this._element.getNodeTemplates())));
         
+        
         // relationship templates
         members_elt = extractModelElements(this._element.getRelationshipTemplates());
         List<ModelElement> relationshipTemplates = (TRelationshipTemplate.MdaTypes.STEREOTYPE_ELT
