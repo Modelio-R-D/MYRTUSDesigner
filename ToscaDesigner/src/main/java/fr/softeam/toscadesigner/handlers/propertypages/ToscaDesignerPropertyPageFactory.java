@@ -13,6 +13,7 @@ import fr.softeam.toscadesigner.handlers.propertypages.core.CapabilitiesTypeProp
 import fr.softeam.toscadesigner.handlers.propertypages.core.MetadataPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.PropertyDefinitionTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TCapabilityPropertyPage;
+import fr.softeam.toscadesigner.handlers.propertypages.core.TConstraintPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TGroupPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TGroupTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.TInterfacePropertyPage;
@@ -252,6 +253,9 @@ public class ToscaDesignerPropertyPageFactory {
             case fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TParameter.STEREOTYPE_NAME:
                 return new TParameterPropertyPage<>(
                         fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TParameter.instantiate(obj));
+            case fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TConstraint.STEREOTYPE_NAME:
+                return new TConstraintPropertyPage<>(
+                        fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TConstraint.instantiate(obj));
             
             default:
                 break;
