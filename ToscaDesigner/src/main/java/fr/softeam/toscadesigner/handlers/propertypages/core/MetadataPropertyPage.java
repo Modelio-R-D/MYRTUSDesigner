@@ -1,8 +1,10 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.tosca.standard.attribute.Metadata;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.tosca.standard.attribute.Metadata;
 
 @objid ("dfe7d2a5-7977-4f19-adbb-c3d1467b10c9")
 public class MetadataPropertyPage<T extends Metadata> extends ToscaElementPropertyPage<T> {

@@ -2,17 +2,18 @@ package fr.softeam.toscadesigner.handlers.propertypages.core;
 
 import java.util.Collections;
 import java.util.List;
+
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.statik.Attribute;
+
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
 import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TOperation;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TInterface;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.Trigger;
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.Attribute;
-import org.modelio.metamodel.uml.statik.Class;
 
 @objid ("2e2429c8-a9ac-48ae-9435-eeb511f3c793")
 public class TInterfacePropertyPage<T extends TInterface> extends ToscaElementPropertyPage<T> {

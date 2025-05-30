@@ -3,14 +3,17 @@ package fr.softeam.toscadesigner.impl;
 import java.io.File;
 import java.nio.file.Path;
 import java.util.Map;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
+
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.modelio.api.modelio.mc.IModelComponentDescriptor;
 import org.modelio.api.modelio.mc.IModelComponentService;
 import org.modelio.api.module.lifecycle.DefaultModuleLifeCycleHandler;
 import org.modelio.api.module.lifecycle.ModuleException;
 import org.modelio.vbasic.version.Version;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
 
 @objid ("365c000d-ee50-4570-a858-4916436eefa8")
 public class ToscaDesignerLifeCycleHandler extends DefaultModuleLifeCycleHandler {
@@ -31,7 +34,7 @@ public class ToscaDesignerLifeCycleHandler extends DefaultModuleLifeCycleHandler
         try {
             ToscaDesignerProxyFactory
                     .initialize(ToscaDesignerModule.getInstance().getModuleContext().getModelingSession());
-        } catch (com.modeliosoft.modelio.api.module.mda.MdaProxyException e) {
+        } catch (fr.softeam.toscadesigner.impl.MdaProxyException e) {
         // TODO Auto-generated catch block
         e.printStackTrace();
         }

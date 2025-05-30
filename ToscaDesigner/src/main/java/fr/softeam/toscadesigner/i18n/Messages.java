@@ -3,6 +3,7 @@ package fr.softeam.toscadesigner.i18n;
 import java.text.MessageFormat;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
+
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("e2890b80-cdf8-4ac5-a0a4-03779d942d96")

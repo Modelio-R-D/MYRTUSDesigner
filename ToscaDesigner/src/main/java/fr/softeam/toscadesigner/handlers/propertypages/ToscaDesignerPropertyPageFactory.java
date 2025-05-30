@@ -6,9 +6,32 @@
  */
 package fr.softeam.toscadesigner.handlers.propertypages;
 
+import org.modelio.metamodel.diagrams.ClassDiagram;
+import org.modelio.metamodel.mda.ModuleComponent;
+import org.modelio.metamodel.uml.infrastructure.Dependency;
+import org.modelio.metamodel.uml.infrastructure.Element;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.statik.Artifact;
+import org.modelio.metamodel.uml.statik.AssociationEnd;
+import org.modelio.metamodel.uml.statik.Attribute;
+import org.modelio.metamodel.uml.statik.AttributeLink;
+import org.modelio.metamodel.uml.statik.Class;
+import org.modelio.metamodel.uml.statik.Component;
+import org.modelio.metamodel.uml.statik.Connector;
+import org.modelio.metamodel.uml.statik.DataType;
+import org.modelio.metamodel.uml.statik.Enumeration;
+import org.modelio.metamodel.uml.statik.GeneralClass;
+import org.modelio.metamodel.uml.statik.Instance;
+import org.modelio.metamodel.uml.statik.Package;
+import org.modelio.metamodel.uml.statik.Port;
+import org.modelio.metamodel.visitors.IDefaultInfrastructureVisitor;
+import org.modelio.metamodel.visitors.IDefaultModelVisitor;
+import org.modelio.metamodel.visitors.IInfrastructureVisitor;
+
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.Tgroup;
 import fr.softeam.toscadesigner.handlers.propertypages.core.CapabilitiesTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.MetadataPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.PropertyDefinitionTypePropertyPage;
@@ -37,28 +60,6 @@ import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TDeploym
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TNodeTemplatePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TRequirementPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TTopologyTemplatePropertyPage;
-import org.modelio.metamodel.diagrams.ClassDiagram;
-import org.modelio.metamodel.mda.ModuleComponent;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.Element;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import org.modelio.metamodel.uml.statik.Artifact;
-import org.modelio.metamodel.uml.statik.AssociationEnd;
-import org.modelio.metamodel.uml.statik.Attribute;
-import org.modelio.metamodel.uml.statik.AttributeLink;
-import org.modelio.metamodel.uml.statik.Class;
-import org.modelio.metamodel.uml.statik.Component;
-import org.modelio.metamodel.uml.statik.Connector;
-import org.modelio.metamodel.uml.statik.DataType;
-import org.modelio.metamodel.uml.statik.Enumeration;
-import org.modelio.metamodel.uml.statik.GeneralClass;
-import org.modelio.metamodel.uml.statik.Instance;
-import org.modelio.metamodel.uml.statik.Package;
-import org.modelio.metamodel.uml.statik.Port;
-import org.modelio.metamodel.visitors.IDefaultInfrastructureVisitor;
-import org.modelio.metamodel.visitors.IDefaultModelVisitor;
-import org.modelio.metamodel.visitors.IInfrastructureVisitor;
 
 @objid ("ea73d233-1e53-40f0-bdca-70d3b6668b02")
 public class ToscaDesignerPropertyPageFactory {

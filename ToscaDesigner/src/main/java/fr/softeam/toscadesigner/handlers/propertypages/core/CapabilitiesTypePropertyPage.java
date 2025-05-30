@@ -2,15 +2,17 @@ package fr.softeam.toscadesigner.handlers.propertypages.core;
 
 import java.util.Collections;
 import java.util.List;
+
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.statik.Class;
+
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
 import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.CapabilitiesType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapability;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.Trigger;
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.Class;
 
 @objid ("d6a5a8d2-a242-46eb-a46a-6bb7ab1cc01a")
 public class CapabilitiesTypePropertyPage<T extends CapabilitiesType> extends ToscaElementPropertyPage<T> {

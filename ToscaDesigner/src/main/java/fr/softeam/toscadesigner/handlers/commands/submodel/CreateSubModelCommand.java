@@ -1,8 +1,5 @@
 package fr.softeam.toscadesigner.handlers.commands.submodel;
 
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
-import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
 import org.modelio.api.modelio.IModelioServices;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
 import org.modelio.api.modelio.diagram.IDiagramService;
@@ -10,6 +7,11 @@ import org.modelio.api.modelio.diagram.dg.IDiagramDG;
 import org.modelio.api.modelio.diagram.style.IStyleHandle;
 import org.modelio.api.module.command.standard.DiagramCreationStandardHandler;
 import org.modelio.metamodel.diagrams.AbstractDiagram;
+
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
+import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
 
 @objid ("9d7d5cf7-a1b4-44da-ad66-f3ef94ca0a7f")
 public class CreateSubModelCommand extends DiagramCreationStandardHandler {
