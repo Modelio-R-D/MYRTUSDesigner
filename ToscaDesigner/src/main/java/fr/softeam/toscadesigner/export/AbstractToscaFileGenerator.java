@@ -120,7 +120,8 @@ public abstract class AbstractToscaFileGenerator {
 					if (searchedPropertyName.equals("type")) {
 						TRelationshipTemplate tRelationshipTemplate = TRelationshipTemplate
 								.safeInstantiate((Association) context);
-						propertyStringValue = getQualifiedName(tRelationshipTemplate.getRelationshipType().getElement());
+						propertyStringValue = getQualifiedName(
+								tRelationshipTemplate.getRelationshipType().getElement());
 					}
 				} else if (stereotype.getName().equals("TNodeType")) {
 					TNodeType tNodeType = TNodeType.safeInstantiate((Class) context);
@@ -175,34 +176,26 @@ public abstract class AbstractToscaFileGenerator {
 			}
 			throw new RuntimeException("Stereotype property " + searchedPropertyName + " not found in " + context);
 		});
-//		handlebars.registerHelper("noStereotypeApplications",
-//				(ModelTree context, Options options) -> Stream
-//						.concat(context.getOwnedElement().stream(),
-//								context instanceof Class ? ((Class) context).getOwnedAttribute().stream()
-//										: Stream.empty())
-//						.noneMatch(element -> element.getExtension().stream()
-//								.anyMatch(stereotype -> stereotype.getName().equals(options.params[0]))));
+
 		handlebars.registerHelper("noStereotypeApplications", (context, options) -> {
-            // Ensure the context is a ModelTree
-            if (!(context instanceof ModelTree)) {
-                // Log an error or throw an exception if the context is not the expected type
+			// Ensure the context is a ModelTree
+			if (!(context instanceof ModelTree)) {
+				return true; // Default to true if context is not valid
+			}
 
-                return true; // Default to true if context is not valid
-            }
+			// Get the stereotype name from options.params[0]
+			// Need to handle potential ClassCastException if options.params[0] is not a
+			// String
+			String stereotypeName = null;
+			if (options.params.length > 0 && options.params[0] instanceof String) {
+				stereotypeName = (String) options.params[0];
+			} else {
+				return true; // Default to true if parameter is missing/invalid
+			}
 
-            // Get the stereotype name from options.params[0]
-            // Need to handle potential ClassCastException if options.params[0] is not a String
-            String stereotypeName = null;
-            if (options.params.length > 0 && options.params[0] instanceof String) {
-                stereotypeName = (String) options.params[0];
-            } else {
-
-                return true; // Default to true if parameter is missing/invalid
-            }
-
-            // Call our core logic
-            return noneHasStereotypeInSubtree((ModelTree) context, stereotypeName);
-        });
+			// Call our core logic
+			return noneHasStereotypeInSubtree((ModelTree) context, stereotypeName);
+		});
 		handlebars.registerHelper("imports", (ModelElement context, Options options) -> {
 
 			Set<Import> imports = new HashSet<>();
@@ -216,9 +209,10 @@ public abstract class AbstractToscaFileGenerator {
 
 				if (tNodeType.getDerivedFrom() != null) {
 
-					String derivedFromValue = tNodeType.getDerivedFrom().getName();
+					String derivedFromValue = tNodeType.getDerivedFrom().getElement().getName();
 					String targetNamespace = tNodeType.getTargetNamespace();
-					if (derivedFromValue != null && !derivedFromValue.startsWith("tosca")) {
+					if (derivedFromValue != null
+							&& !getQualifiedName(tNodeType.getDerivedFrom().getElement()).startsWith("tosca")) {
 						imports.add(new Import(derivedFromValue + ".tosca", targetNamespace, "MYRTUS-"));
 					}
 				}
@@ -246,7 +240,11 @@ public abstract class AbstractToscaFileGenerator {
 				for (TNodeTemplate nodeTemplate : nodeTemplates) {
 
 					String targetNamespace = ((Class) context).getOwner().getName();
-					imports.add(new Import(nodeTemplate.getElement().getName() + ".tosca", targetNamespace, "MYRTUS-"));
+					if (!getQualifiedName(nodeTemplate.getNodeType().getElement()).startsWith("tosca")) {
+						imports.add(new Import(nodeTemplate.getNodeType().getElement().getName() + ".tosca",
+								targetNamespace, "MYRTUS-"));
+
+					}
 
 				}
 
@@ -260,36 +258,42 @@ public abstract class AbstractToscaFileGenerator {
 		handlebars.registerHelpers(ConditionalHelpers.class);
 		return handlebars;
 	}
-	
-    private static Stream<ModelElement> flattenSubtree(ModelTree element) {
-        return (element == null) ? Stream.empty() : Stream.concat(
-            Stream.of(element),
-            Stream.concat(
-                element.getOwnedElement().stream().filter(Objects::nonNull),
-                (element instanceof Class) ? Stream.concat(((Class) element).getOwnedAttribute().stream().filter(Objects::nonNull),  ((Class) element).getTargetingEnd().stream().filter(Objects::nonNull))
-                		: Stream.empty()
-            ).flatMap(child -> (child instanceof ModelTree) ? flattenSubtree((ModelTree) child) : Stream.of(child))
-        );
-    }
 
-    /**
-     * Checks if NONE of the elements in the entire subtree rooted at 'context'
-     * (including 'context' itself) have a stereotype with the specified name.
-     *
-     * @param context The root ModelTree element to start the search from.
-     * @param stereotypeName The name of the stereotype to check for.
-     * @return true if no element in the subtree has the stereotype, false otherwise.
-     */
-    public static boolean noneHasStereotypeInSubtree(ModelTree context, String stereotypeName) {
-        // Handle null or invalid inputs gracefully
-        if (context == null || stereotypeName == null || stereotypeName.isEmpty()) {
-            return true;
-        }
+	private static Stream<ModelElement> flattenSubtree(ModelTree element) {
+		return (element == null) ? Stream.empty()
+				: Stream.concat(Stream.of(element), Stream
+						.concat(element.getOwnedElement().stream().filter(Objects::nonNull), (element instanceof Class)
+								? Stream.concat(((Class) element).getOwnedAttribute().stream().filter(Objects::nonNull),
+										((Class) element).getTargetingEnd().stream().filter(Objects::nonNull))
+								: Stream.empty())
+						.flatMap(child -> (child instanceof ModelTree) ? flattenSubtree((ModelTree) child)
+								: Stream.of(child)));
+	}
 
-        return flattenSubtree(context) // Get all elements in the subtree
-                .noneMatch(element -> element.getExtension().stream() // For each element
-                        .anyMatch(stereotype -> stereotype != null && stereotype.getName().equals(stereotypeName))); // Check if it has the stereotype
-    }
+	/**
+	 * Checks if NONE of the elements in the entire subtree rooted at 'context'
+	 * (including 'context' itself) have a stereotype with the specified name.
+	 *
+	 * @param context        The root ModelTree element to start the search from.
+	 * @param stereotypeName The name of the stereotype to check for.
+	 * @return true if no element in the subtree has the stereotype, false
+	 *         otherwise.
+	 */
+	public static boolean noneHasStereotypeInSubtree(ModelTree context, String stereotypeName) {
+		// Handle null or invalid inputs gracefully
+		if (context == null || stereotypeName == null || stereotypeName.isEmpty()) {
+			return true;
+		}
+
+		return flattenSubtree(context) // Get all elements in the subtree
+				.noneMatch(element -> element.getExtension().stream() // For each element
+						.anyMatch(stereotype -> stereotype != null && stereotype.getName().equals(stereotypeName))); // Check
+																														// if
+																														// it
+																														// has
+																														// the
+																														// stereotype
+	}
 
 	@objid("4e0fc0cf-420e-4626-b34d-fd6df12a1e01")
 	private String generateImportString(Set<Import> imports) {
@@ -302,6 +306,10 @@ public abstract class AbstractToscaFileGenerator {
 					.append(anImport.getNamespacePrefix()).append("\n");
 		}
 
+		// Prune the last newline character if the string is not empty
+		if (importString.length() > 0 && importString.charAt(importString.length() - 1) == '\n') {
+			importString.setLength(importString.length() - 1);
+		}
 		return importString.toString();
 	}
 
