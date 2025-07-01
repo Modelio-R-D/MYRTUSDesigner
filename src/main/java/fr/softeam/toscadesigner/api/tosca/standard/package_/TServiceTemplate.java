@@ -2,7 +2,7 @@
  * WARNING: GENERATED FILE - DO NOT EDIT
  * Module: ToscaDesigner v0.0.1
 
- * This file was generated on 04/06/2025 20:07 by Modelio Studio.
+ * This file was generated on 04/06/2025 19:56 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.package_;
 
@@ -45,31 +45,31 @@ import org.modelio.vcore.smkernel.mapi.MRef;
  */
 @objid ("3cf989ac-b38a-4bbc-9520-9000cf944f9c")
 public class TServiceTemplate implements IMdaProxy {
-    @objid ("4ee0a005-8cfc-4996-b41b-df33fdb399fd")
+    @objid ("ff2b65e7-6ecb-4469-ba2a-0731a7fa13c0")
     public static final String STEREOTYPE_NAME = "TServiceTemplate";
 
-    @objid ("519cd124-e489-45ce-b029-b440dfe60bba")
+    @objid ("375341c6-a0ac-4581-950c-a52321ee0a34")
     public static final String BOUNDARYDEFINITIONS_PROPERTY = "boundaryDefinitions";
 
-    @objid ("ef7548b3-725d-40a8-89e3-a981d950f70f")
+    @objid ("c1a59d42-1622-498d-9252-fd20df94354e")
     public static final String ID_PROPERTY = "id";
 
-    @objid ("071c51e6-3493-4811-a215-bfa68849f1d5")
+    @objid ("35b1d9af-ae77-444b-8c9b-644d91488cbb")
     public static final String NAME_PROPERTY = "name";
 
-    @objid ("5a00c63c-03b0-4582-b681-493121dfb6f4")
+    @objid ("843e08dd-3ded-428c-a671-299899f4bb06")
     public static final String SUBSTITUTABLENODETYPE_PROPERTY = "substitutableNodeType";
 
-    @objid ("8d3c77e1-7ce2-4a47-b7a4-4e0835d8e797")
+    @objid ("ebbc18ea-b089-428b-afa7-8bd759076ae9")
     public static final String TAGS_PROPERTY = "tags";
 
-    @objid ("09bfa7ef-c706-491c-b701-073500887e66")
+    @objid ("4b42de40-5530-4a52-9029-c9de9a8ec82a")
     public static final String TARGETNAMESPACE_PROPERTY = "targetNamespace";
 
     /**
      * The underlying {@link Package} represented by this proxy, never null.
      */
-    @objid ("1727bae7-e8d0-49fa-bca5-b7e2674b5220")
+    @objid ("e64b2693-3c81-4108-8150-55986726e2dc")
     protected final Package elt;
 
     /**
@@ -79,7 +79,7 @@ public class TServiceTemplate implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("8f0b80dd-8330-4745-b31a-4712363cbedd")
+    @objid ("7b1a08ba-a6ce-498e-a9f1-a73f22f27037")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Package) && (TServiceTemplate.MdaTypes.STEREOTYPE_ELT!=null) && ((Package) elt).isStereotyped(TServiceTemplate.MdaTypes.STEREOTYPE_ELT));
     }
@@ -89,7 +89,7 @@ public class TServiceTemplate implements IMdaProxy {
      * 
      * @return a {@link TServiceTemplate} proxy on the created {@link Package}.
      */
-    @objid ("d58f0510-ae0a-4d71-aa43-c8f1e291da52")
+    @objid ("837b9f44-4366-40c1-8095-2974145a3ebb")
     public static TServiceTemplate create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Package");
         e.getExtension().add(TServiceTemplate.MdaTypes.STEREOTYPE_ELT);
@@ -103,7 +103,7 @@ public class TServiceTemplate implements IMdaProxy {
      * @param obj a Package
      * @return a {@link TServiceTemplate} proxy or <i>null</i>.
      */
-    @objid ("023ae9a8-30bb-493d-9c3d-374e0de065db")
+    @objid ("a2412c5e-5dd5-4b62-a4d0-2d64f652f5fc")
     public static TServiceTemplate instantiate(final Package obj) {
         return TServiceTemplate.canInstantiate(obj) ? new TServiceTemplate(obj) : null;
     }
@@ -116,7 +116,7 @@ public class TServiceTemplate implements IMdaProxy {
      * @return a {@link TServiceTemplate} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("2589f6e2-cc3e-43b5-ba00-bfb64ee2fdfb")
+    @objid ("1a71f472-dbb3-42a9-9486-8f2683e4e5ef")
     public static TServiceTemplate safeInstantiate(final Package obj) throws IllegalArgumentException {
         if (TServiceTemplate.canInstantiate(obj))
         	return new TServiceTemplate(obj);
@@ -130,7 +130,7 @@ public class TServiceTemplate implements IMdaProxy {
      * null
      * 
      */
-    @objid ("a31b635d-fa5f-4a8c-a731-b413e8452609")
+    @objid ("6e65a890-8aed-4d7c-bbf6-9f756ecce864")
     public void addGroups(final TGroup obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -146,7 +146,7 @@ public class TServiceTemplate implements IMdaProxy {
      * null
      * 
      */
-    @objid ("9ce4fd7c-c6aa-44b3-949b-f6c3cd77f4e8")
+    @objid ("f16e7fd9-e812-46be-85bc-b9c33415b31f")
     public void addNodeTypes(final TNodeType obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -162,7 +162,7 @@ public class TServiceTemplate implements IMdaProxy {
      * null
      * 
      */
-    @objid ("65f5e60a-70a2-4b10-a8c0-08ee354587a7")
+    @objid ("954d98d6-f870-44f5-8cfc-32ce0e5b9526")
     public void addRelationships(final TRelationshipType obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -172,7 +172,7 @@ public class TServiceTemplate implements IMdaProxy {
         }
     }
 
-    @objid ("6d119395-b850-4a68-aa16-0c31db7210cd")
+    @objid ("5a47668e-d9b1-4382-af97-ae94e786fadf")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -193,7 +193,7 @@ public class TServiceTemplate implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("f4862c43-ed9b-41eb-9bba-7c86c1aeb6ec")
+    @objid ("4e77f3fb-b977-491f-892c-3552e4c6b64e")
     public String getBoundaryDefinitions() {
         String value = this.elt.getProperty(TServiceTemplate.MdaTypes.STEREOTYPE_ELT,
                                             TServiceTemplate.MdaTypes.BOUNDARYDEFINITIONS_PROPERTY_ELT.getName());
@@ -208,7 +208,7 @@ public class TServiceTemplate implements IMdaProxy {
      * Get the underlying {@link Package}. 
      * @return the Package represented by this proxy, never null.
      */
-    @objid ("3d97483b-6180-4cf8-aaa0-28e047453d00")
+    @objid ("b2395316-f010-4a99-bc8b-9beba326b6b2")
     public Package getElement() {
         return this.elt;
     }
@@ -219,7 +219,7 @@ public class TServiceTemplate implements IMdaProxy {
      * null
      * 
      */
-    @objid ("b9fa9e9a-d57d-4d33-a2ea-b529b25520de")
+    @objid ("59ac9e7e-b547-4754-8c86-8df4d7655313")
     public List<TGroup> getGroups() {
         List<TGroup> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -236,7 +236,7 @@ public class TServiceTemplate implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("810544c8-2678-47d3-a80d-54aa5a85847e")
+    @objid ("d9c1ae01-5c70-4c3a-8e1d-9aa08e3716b8")
     public String getId() {
         String value = this.elt.getProperty(TServiceTemplate.MdaTypes.STEREOTYPE_ELT,
                                             TServiceTemplate.MdaTypes.ID_PROPERTY_ELT.getName());
@@ -252,7 +252,7 @@ public class TServiceTemplate implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("ba16b587-e62e-4bab-9a92-f8aa4cdd46f0")
+    @objid ("a38298e1-abb0-490f-bc4d-28d1802ad2e6")
     public String getName() {
         String value = this.elt.getProperty(TServiceTemplate.MdaTypes.STEREOTYPE_ELT,
                                             TServiceTemplate.MdaTypes.NAME_PROPERTY_ELT.getName());
@@ -269,7 +269,7 @@ public class TServiceTemplate implements IMdaProxy {
      * null
      * 
      */
-    @objid ("cee74144-5ae4-4e06-a0a6-f5c36f9ece34")
+    @objid ("5001437a-55bc-4129-a239-6b0adbe18db1")
     public List<TNodeType> getNodeTypes() {
         List<TNodeType> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -287,7 +287,7 @@ public class TServiceTemplate implements IMdaProxy {
      * null
      * 
      */
-    @objid ("3cd56092-cf4f-4ebf-bab8-aa9c77427c18")
+    @objid ("620ce440-cf80-4214-abbd-a3055b1f0e5e")
     public TPlans getPlans() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(TServiceTemplate.MdaTypes.MDAASSOCDEP)
@@ -305,7 +305,7 @@ public class TServiceTemplate implements IMdaProxy {
      * null
      * 
      */
-    @objid ("9f531cdd-d823-40ad-9068-1bcdf4a0dc89")
+    @objid ("ab1ccec1-214e-4ad7-939e-20f35e6792a0")
     public List<TRelationshipType> getRelationships() {
         List<TRelationshipType> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -322,7 +322,7 @@ public class TServiceTemplate implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("2afef5f1-c10d-4944-bb9e-ca03c3e8ef7f")
+    @objid ("abc6215c-f4d8-40ee-b2aa-f5ed9c92e7f5")
     public String getSubstitutableNodeType() {
         String value = this.elt.getProperty(TServiceTemplate.MdaTypes.STEREOTYPE_ELT,
                                             TServiceTemplate.MdaTypes.SUBSTITUTABLENODETYPE_PROPERTY_ELT.getName());
@@ -338,7 +338,7 @@ public class TServiceTemplate implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("9858458d-129f-4c5d-9885-2cf39c3684be")
+    @objid ("3ba9ca6b-4567-40fc-86db-96e89eda9c51")
     public String getTags() {
         String value = this.elt.getProperty(TServiceTemplate.MdaTypes.STEREOTYPE_ELT,
                                             TServiceTemplate.MdaTypes.TAGS_PROPERTY_ELT.getName());
@@ -354,7 +354,7 @@ public class TServiceTemplate implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("4d712510-7eb8-4a7d-9c78-31de4fa179e4")
+    @objid ("ffbc2cd9-4f7b-42d1-9e29-17dbb7184e76")
     public String getTargetNamespace() {
         String value = this.elt.getProperty(TServiceTemplate.MdaTypes.STEREOTYPE_ELT,
                                             TServiceTemplate.MdaTypes.TARGETNAMESPACE_PROPERTY_ELT.getName());
@@ -371,7 +371,7 @@ public class TServiceTemplate implements IMdaProxy {
      * null
      * 
      */
-    @objid ("1c9f96f4-1445-4806-b582-a663799f5818")
+    @objid ("632f7e1c-3425-439e-9edf-e7d3ea23c402")
     public TTopologyTemplate getTopologyTemplate() {
         for (Dependency d : this.elt.getDependsOnDependency()) {
               if (d.isStereotyped(TServiceTemplate.MdaTypes.MDAASSOCDEP)
@@ -383,7 +383,7 @@ public class TServiceTemplate implements IMdaProxy {
         return null;
     }
 
-    @objid ("2756f066-da1c-45f0-825a-0bcf8844b600")
+    @objid ("3ada3175-5dc2-4b51-89ef-dad74c8293be")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -396,7 +396,7 @@ public class TServiceTemplate implements IMdaProxy {
      * null
      * 
      */
-    @objid ("9c4352ee-0d29-42eb-8605-3dc4e9b53b0d")
+    @objid ("7ced3993-0325-4398-b049-b790fd2abd38")
     public boolean removeGroups(final TGroup obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -417,7 +417,7 @@ public class TServiceTemplate implements IMdaProxy {
      * null
      * 
      */
-    @objid ("8ef209d9-437b-416d-b1eb-be0bdaf58308")
+    @objid ("bdb46fbb-2836-4335-b1cc-59d745bf5c52")
     public boolean removeNodeTypes(final TNodeType obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -438,7 +438,7 @@ public class TServiceTemplate implements IMdaProxy {
      * null
      * 
      */
-    @objid ("e4d55ff2-30ab-4bcd-873d-beeed61485a7")
+    @objid ("d8558374-05f2-4e45-99c5-0e11aabb9e66")
     public boolean removeRelationships(final TRelationshipType obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -458,7 +458,7 @@ public class TServiceTemplate implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("a81a70ba-03cf-4743-9704-a0e89d92e11e")
+    @objid ("f8141e49-86c5-4d75-ab60-261519b6f2e7")
     public void setBoundaryDefinitions(final String value) {
         this.elt.setProperty(TServiceTemplate.MdaTypes.STEREOTYPE_ELT,
                              TServiceTemplate.MdaTypes.BOUNDARYDEFINITIONS_PROPERTY_ELT.getName(),
@@ -470,7 +470,7 @@ public class TServiceTemplate implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("54b5fca8-953f-42f3-8de0-00d44e13f5c2")
+    @objid ("78a36060-78ba-4f11-b27f-446dab0dbafb")
     public void setId(final String value) {
         this.elt.setProperty(TServiceTemplate.MdaTypes.STEREOTYPE_ELT,
                              TServiceTemplate.MdaTypes.ID_PROPERTY_ELT.getName(),
@@ -482,7 +482,7 @@ public class TServiceTemplate implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("3e3b94e9-a6d9-4162-b4c0-e356bbd7030e")
+    @objid ("21c9d2d5-4c9d-4df1-8140-2fe7c9f22d44")
     public void setName(final String value) {
         this.elt.setProperty(TServiceTemplate.MdaTypes.STEREOTYPE_ELT,
                              TServiceTemplate.MdaTypes.NAME_PROPERTY_ELT.getName(),
@@ -495,7 +495,7 @@ public class TServiceTemplate implements IMdaProxy {
      * null
      * 
      */
-    @objid ("94f7f966-f4d5-4221-a8bd-7297dfe4bf33")
+    @objid ("fe52eee4-8a09-4378-8432-5fa9188fce26")
     public void setPlans(final TPlans obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -521,7 +521,7 @@ public class TServiceTemplate implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("dc22989b-15cd-42eb-b9ab-a47ca0dfcff0")
+    @objid ("61294117-d9c7-4caa-b639-361d3b7004a7")
     public void setSubstitutableNodeType(final String value) {
         this.elt.setProperty(TServiceTemplate.MdaTypes.STEREOTYPE_ELT,
                              TServiceTemplate.MdaTypes.SUBSTITUTABLENODETYPE_PROPERTY_ELT.getName(),
@@ -533,7 +533,7 @@ public class TServiceTemplate implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d085c690-e9d0-47c2-a4b1-92014a430de0")
+    @objid ("45f78452-3f59-47cd-a639-c7af2c543634")
     public void setTags(final String value) {
         this.elt.setProperty(TServiceTemplate.MdaTypes.STEREOTYPE_ELT,
                              TServiceTemplate.MdaTypes.TAGS_PROPERTY_ELT.getName(),
@@ -545,7 +545,7 @@ public class TServiceTemplate implements IMdaProxy {
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("9c0c5cb2-1b01-47ef-a223-976653fc380c")
+    @objid ("c74c1d9a-42a6-4f35-8466-63fa421b49be")
     public void setTargetNamespace(final String value) {
         this.elt.setProperty(TServiceTemplate.MdaTypes.STEREOTYPE_ELT,
                              TServiceTemplate.MdaTypes.TARGETNAMESPACE_PROPERTY_ELT.getName(),
@@ -558,7 +558,7 @@ public class TServiceTemplate implements IMdaProxy {
      * null
      * 
      */
-    @objid ("53894a56-25cc-4b36-a50a-f560ade18406")
+    @objid ("241a7232-fa0d-47b7-ab6f-e6ffbbca051e")
     public void setTopologyTemplate(final TTopologyTemplate obj) {
         Dependency dep = null;
         for (Dependency d : this.elt.getDependsOnDependency())
@@ -579,41 +579,41 @@ public class TServiceTemplate implements IMdaProxy {
         
     }
 
-    @objid ("963d1c59-6264-4850-b54c-8a33257cd6e3")
+    @objid ("4fb21aad-3fa6-45ec-ac84-068e2d1b86ac")
     protected  TServiceTemplate(final Package elt) {
         this.elt = elt;
     }
 
     @objid ("0bd3cfdd-886f-4260-b2b3-f119bf9e8d69")
     public static final class MdaTypes {
-        @objid ("14d0c7c9-45f7-4b3c-adcb-e197febd1e0e")
+        @objid ("2ea8a4dd-59e7-43fa-91a5-e30708b3248a")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("94e864e4-b84e-42e6-9f65-a4bde0dde5ab")
+        @objid ("4f6f9d34-3dd4-499f-935b-85008dbcfaa3")
         public static PropertyDefinition NAME_PROPERTY_ELT;
 
-        @objid ("b4fe07c7-b7a1-47e3-bf53-db96fceabd6a")
+        @objid ("d9c5f807-24c4-4d5f-b9e8-c69c34e2587d")
         public static PropertyDefinition ID_PROPERTY_ELT;
 
-        @objid ("41f8640d-e62f-4e62-b660-5213137c8583")
+        @objid ("0d07e02c-362f-494e-a3d6-8d404e24f266")
         public static PropertyDefinition SUBSTITUTABLENODETYPE_PROPERTY_ELT;
 
-        @objid ("3d4f7d96-6e25-493e-9e66-08def8430e91")
+        @objid ("1c31f896-722e-4a53-aa80-9f74fda852ab")
         public static PropertyDefinition TAGS_PROPERTY_ELT;
 
-        @objid ("ca625f5b-1409-4fa9-a035-42fb58259ec2")
+        @objid ("961d8eb3-4f2e-4fa7-9843-950d4f3fac7a")
         public static PropertyDefinition TARGETNAMESPACE_PROPERTY_ELT;
 
-        @objid ("3dcfe5ea-0194-4427-9242-1912af19d996")
+        @objid ("0fcea946-25a9-4db5-b1f0-ef58d1f5e8f2")
         public static PropertyDefinition BOUNDARYDEFINITIONS_PROPERTY_ELT;
 
-        @objid ("bcab5e1b-7828-46bd-a247-5926deabe082")
+        @objid ("fdcb47e2-035a-42e7-b52c-eb329d82c2df")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("6625b587-4b38-466e-ac4a-891eb37f58a5")
+        @objid ("b5296c4e-d373-448b-bbd0-e4e943789a66")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("6949dce0-51b8-40f5-aa2e-fa2ac13f0292")
+        @objid ("30f37578-6ed8-4518-ba98-e35879f53efb")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
