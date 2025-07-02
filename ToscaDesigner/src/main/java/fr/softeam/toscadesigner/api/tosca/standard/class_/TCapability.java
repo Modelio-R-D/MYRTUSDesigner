@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: ToscaDesigner v0.0.00
+ * Module: ToscaDesigner v0.0.1
 
- * This file was generated on 12/06/2024 14:58 by Modelio Studio.
+ * This file was generated on 04/06/2025 19:56 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
@@ -27,18 +27,15 @@ import fr.softeam.toscadesigner.impl.MdaProxyException;
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-@objid ("269f61bb-60fa-4ebd-ad56-9a9ac222f13c")
+@objid ("1d9ba89e-1d29-4a2f-a4cb-8b441c0d9bb1")
 public class TCapability implements IMdaProxy {
-    @objid ("80aa654e-eff5-46a6-8cf2-87f4232bbb50")
+    @objid ("0fb78820-b1ac-4836-9c49-395e09bb5b31")
     public static final String STEREOTYPE_NAME = "TCapability";
-
-    @objid ("e0e61406-f768-4012-a929-c8242130b25c")
-    public static final String NAME_TAGTYPE = "name";
 
     /**
      * The underlying {@link Class} represented by this proxy, never null.
      */
-    @objid ("1ff2b446-b99c-4c41-a1ee-21a237d6e95b")
+    @objid ("917836c1-67ca-4713-995f-e62301d0a3f0")
     protected final Class elt;
 
     /**
@@ -48,7 +45,7 @@ public class TCapability implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("16e90f0e-05d5-4313-8294-04bc2475ee6d")
+    @objid ("e0c58e35-6f02-4ec9-b80e-5d884da6f28b")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (TCapability.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(TCapability.MdaTypes.STEREOTYPE_ELT));
     }
@@ -58,7 +55,7 @@ public class TCapability implements IMdaProxy {
      * 
      * @return a {@link TCapability} proxy on the created {@link Class}.
      */
-    @objid ("6abe41cd-be6c-43ec-a8a4-25fdaf91ba58")
+    @objid ("11fb554c-77e2-4594-95f7-d16c77527df0")
     public static TCapability create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(TCapability.MdaTypes.STEREOTYPE_ELT);
@@ -72,7 +69,7 @@ public class TCapability implements IMdaProxy {
      * @param obj a Class
      * @return a {@link TCapability} proxy or <i>null</i>.
      */
-    @objid ("eded7b89-60e3-4655-b010-41399b89f922")
+    @objid ("14942371-cf8d-4120-b332-f63ce3e0da71")
     public static TCapability instantiate(final Class obj) {
         return TCapability.canInstantiate(obj) ? new TCapability(obj) : null;
     }
@@ -85,7 +82,7 @@ public class TCapability implements IMdaProxy {
      * @return a {@link TCapability} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("1c7d41f1-9af1-4301-94b1-53a6c5e6f5fa")
+    @objid ("931e939c-5773-4779-8c5f-b2b7e99f43ad")
     public static TCapability safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (TCapability.canInstantiate(obj))
         	return new TCapability(obj);
@@ -93,7 +90,7 @@ public class TCapability implements IMdaProxy {
         	throw new IllegalArgumentException("TCapability: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("c3a9b6fb-4991-40ba-891b-9b47a37c8a9b")
+    @objid ("be46b05d-a0fd-4335-8dd6-062ceecef890")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -113,68 +110,41 @@ public class TCapability implements IMdaProxy {
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("e7253319-731f-4e11-aaaa-1faf7f10c3d2")
+    @objid ("482390e0-c7f9-48a6-8aff-4744ba1a3f75")
     public Class getElement() {
         return this.elt;
     }
 
-    /**
-     * Getter for string property 'name'
-     * <p>Property description:
-     * <br/><i>null</i></p>
-     */
-    @objid ("f0daaedd-0c74-4dc0-ae1f-c29541bce081")
-    public String getName() {
-        return this.elt.getTagValue(TCapability.MdaTypes.NAME_TAGTYPE_ELT);
-    }
-
-    @objid ("313659bd-d5d9-4048-8d1d-161da75bf8bd")
+    @objid ("3cecae5a-28ed-4705-8901-1473c9ef9625")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
         
     }
 
-    /**
-     * Setter for string property 'name'
-     * <p>Property description:
-     * <br/><i>null</i></p>
-     */
-    @objid ("a1347009-121b-4c5e-b09e-2b5bd5c81547")
-    public void setName(final String value) {
-        this.elt.putTagValue(TCapability.MdaTypes.NAME_TAGTYPE_ELT, value);
-    }
-
-    @objid ("bd2c559d-0170-4083-a8d1-e64d8e4876c2")
+    @objid ("535a6a93-e149-4914-905f-c80b44415111")
     protected  TCapability(final Class elt) {
         this.elt = elt;
     }
 
-    @objid ("3c779036-bf23-4772-b290-52f0da936260")
+    @objid ("c8c8b18f-70a4-4d82-94c7-f2b1d724328f")
     public static final class MdaTypes {
-        @objid ("13cf6f51-5ddb-430a-99ba-dc4bdb5b2594")
+        @objid ("76c14c66-6917-4bf3-901c-a79a8c3e3b3a")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("7114ec75-cdad-4505-9f00-0ffbae65d01f")
-        public static TagType NAME_TAGTYPE_ELT;
-
-        @objid ("d55c7f43-1c1f-4ec4-95c3-d9bf2c04493a")
+        @objid ("94862c3c-aadc-4be8-9aa5-ee66b8d0e318")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("bb7929d3-fba9-4d97-a806-c6965d5b86f5")
+        @objid ("bdc6ec56-d4b5-4b9f-8ba1-52575419bf18")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("9a58eb00-cbd3-4f6e-9d90-cac841decca4")
+        @objid ("73b536d5-3780-4239-88b5-d18a7215ae2b")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
             mRef = new MRef(Stereotype.MQNAME, "92831533-b614-4124-8961-3cd7ebcad536", "TCapability");
             STEREOTYPE_ELT = (Stereotype) session.findByRef(mRef);
             if (STEREOTYPE_ELT==null) missingRefs.add(mRef);
-            
-            mRef = new MRef(TagType.MQNAME, "224dc1e1-9646-43bf-8a70-4e84323d4dde", "name");
-            NAME_TAGTYPE_ELT = (TagType) session.findByRef(mRef);
-            if (NAME_TAGTYPE_ELT==null) missingRefs.add(mRef);
             
             mRef = new MRef(Stereotype.MQNAME, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e", "MDAAssocDep");
             MDAASSOCDEP = (Stereotype) session.findByRef(mRef);

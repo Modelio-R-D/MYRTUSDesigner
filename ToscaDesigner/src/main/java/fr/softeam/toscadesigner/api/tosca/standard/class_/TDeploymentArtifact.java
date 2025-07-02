@@ -1,24 +1,31 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: ToscaDesigner v0.0.00
+ * Module: ToscaDesigner v0.0.1
 
- * This file was generated on 12/06/2024 14:58 by Modelio Studio.
+ * This file was generated on 04/06/2025 19:56 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import org.modelio.api.modelio.model.IModelingSession;
+import org.modelio.api.modelio.model.ModelingSessionRegistry;
+import org.modelio.api.modelio.model.PropertyConverter;
+import org.modelio.metamodel.uml.infrastructure.Dependency;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
 import org.modelio.metamodel.uml.infrastructure.TagType;
+import org.modelio.metamodel.uml.infrastructure.properties.PropertyDefinition;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.smkernel.mapi.MObject;
 import org.modelio.vcore.smkernel.mapi.MRef;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
+import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
+import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TExtensibleElements;
 import fr.softeam.toscadesigner.impl.IMdaProxy;
 import fr.softeam.toscadesigner.impl.MdaProxyException;
 
@@ -27,25 +34,31 @@ import fr.softeam.toscadesigner.impl.MdaProxyException;
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-@objid ("a66cda53-5915-456f-a3fd-87befb5eab0f")
-public class TDeploymentArtifact implements IMdaProxy {
-    @objid ("56e75d7c-5945-43bd-b434-d5b919ebe072")
+@objid ("2dad5c7c-ae00-4658-809f-dffe95860113")
+public class TDeploymentArtifact extends TExtensibleElements implements IMdaProxy {
+    @objid ("ed6aa549-17d8-40c4-99ef-b263afe265e7")
     public static final String STEREOTYPE_NAME = "TDeploymentArtifact";
 
-    @objid ("539dc8af-1e25-415d-86bc-b5a36c0b8aed")
-    public static final String ARTIFACTREF_TAGTYPE = "artifactRef";
+    @objid ("4740f690-c124-4f90-b665-c56238d7c5e1")
+    public static final String ARTIFACT_VERSION_PROPERTY = "artifact_version";
 
-    @objid ("299aeb94-929a-46a3-b21a-e6f1a3f8b69a")
-    public static final String ARTIFACTTYPE_TAGTYPE = "artifactType";
+    @objid ("1743d4a4-2c23-46c3-8711-c1cb49c6dc34")
+    public static final String CHECKSUM_PROPERTY = "checksum";
 
-    @objid ("87b1533c-0b81-4555-939a-906269161d9b")
-    public static final String NAME_TAGTYPE = "name";
+    @objid ("bda9934b-9d5e-47bf-bc28-b1e71683a64f")
+    public static final String CHECKSUM_ALGORTIHM_PROPERTY = "checksum_algortihm";
 
-    /**
-     * The underlying {@link Class} represented by this proxy, never null.
-     */
-    @objid ("9641275d-00e4-4012-addc-366738e611ce")
-    protected final Class elt;
+    @objid ("bc29f7b8-9b03-473f-a6e8-d81e38277e70")
+    public static final String DEPLOY_PATH_PROPERTY = "deploy_path";
+
+    @objid ("8417d6db-c759-4045-9a57-a381dc186e44")
+    public static final String DESCRIPTION_PROPERTY = "description";
+
+    @objid ("b3b4043b-6202-4aae-a013-800110c7055e")
+    public static final String FILE_PROPERTY = "file";
+
+    @objid ("d96929c0-34e9-4b1c-aa26-02370cc3d483")
+    public static final String REPOSITORY_PROPERTY = "repository";
 
     /**
      * Tells whether a {@link TDeploymentArtifact proxy} can be instantiated from a {@link MObject} checking it is a {@link Class} stereotyped << TDeploymentArtifact >>.
@@ -54,7 +67,7 @@ public class TDeploymentArtifact implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("d40d767a-195a-4080-877d-8138b9f7d461")
+    @objid ("92dfea37-61df-4446-b2e0-e8f97ec61ced")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT));
     }
@@ -64,7 +77,7 @@ public class TDeploymentArtifact implements IMdaProxy {
      * 
      * @return a {@link TDeploymentArtifact} proxy on the created {@link Class}.
      */
-    @objid ("c234b7c9-cfbf-425c-80c9-9fcdb289297c")
+    @objid ("d539461b-88fc-44a8-aa9c-69d9756e84ae")
     public static TDeploymentArtifact create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT);
@@ -78,7 +91,7 @@ public class TDeploymentArtifact implements IMdaProxy {
      * @param obj a Class
      * @return a {@link TDeploymentArtifact} proxy or <i>null</i>.
      */
-    @objid ("7ea2afb4-37a3-4402-9a93-a8aaaaaae5b0")
+    @objid ("af30329c-c6c3-421f-97bc-e6339b60fe8f")
     public static TDeploymentArtifact instantiate(final Class obj) {
         return TDeploymentArtifact.canInstantiate(obj) ? new TDeploymentArtifact(obj) : null;
     }
@@ -91,7 +104,7 @@ public class TDeploymentArtifact implements IMdaProxy {
      * @return a {@link TDeploymentArtifact} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("ad60727f-ab63-46d1-ba2a-dcb66ec7a10b")
+    @objid ("723e447f-0c02-4f7d-b01e-f4ad8e41d6a9")
     public static TDeploymentArtifact safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (TDeploymentArtifact.canInstantiate(obj))
         	return new TDeploymentArtifact(obj);
@@ -99,7 +112,7 @@ public class TDeploymentArtifact implements IMdaProxy {
         	throw new IllegalArgumentException("TDeploymentArtifact: Cannot instantiate "+obj+": wrong element type or stereotype");
     }
 
-    @objid ("38f802f3-c374-4b51-87a9-6ac84ae6642b")
+    @objid ("e7a45472-6eaf-46d8-a986-8f2ae707c89f")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -116,45 +129,146 @@ public class TDeploymentArtifact implements IMdaProxy {
     }
 
     /**
-     * Getter for string property 'artifactRef'
+     * Getter for property 'TDeploymentArtifact.artifact_version'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("156a3fb9-c720-456b-9c2e-f694413c75a7")
-    public String getArtifactRef() {
-        return this.elt.getTagValue(TDeploymentArtifact.MdaTypes.ARTIFACTREF_TAGTYPE_ELT);
+    @objid ("418b8a56-0d4d-4cff-a63c-2bd638ad6370")
+    public String getArtifact_version() {
+        String value = this.elt.getProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
+                                            TDeploymentArtifact.MdaTypes.ARTIFACT_VERSION_PROPERTY_ELT.getName());
+        if (value == null) {
+          value = TDeploymentArtifact.MdaTypes.ARTIFACT_VERSION_PROPERTY_ELT.getDefaultValue();
+        }
+        return (String) PropertyConverter.convertToObject(TDeploymentArtifact.MdaTypes.ARTIFACT_VERSION_PROPERTY_ELT, value, this.elt);
+        
     }
 
     /**
-     * Getter for string property 'artifactType'
+     * Getter for property 'TDeploymentArtifact.checksum'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("42644d3e-eff0-4805-98d4-11210a61b464")
-    public String getArtifactType() {
-        return this.elt.getTagValue(TDeploymentArtifact.MdaTypes.ARTIFACTTYPE_TAGTYPE_ELT);
+    @objid ("fcf027f0-0208-4c71-8eed-f8892e21b746")
+    public String getChecksum() {
+        String value = this.elt.getProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
+                                            TDeploymentArtifact.MdaTypes.CHECKSUM_PROPERTY_ELT.getName());
+        if (value == null) {
+          value = TDeploymentArtifact.MdaTypes.CHECKSUM_PROPERTY_ELT.getDefaultValue();
+        }
+        return (String) PropertyConverter.convertToObject(TDeploymentArtifact.MdaTypes.CHECKSUM_PROPERTY_ELT, value, this.elt);
+        
+    }
+
+    /**
+     * Getter for property 'TDeploymentArtifact.checksum_algortihm'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    @objid ("0b1fa1b3-e2cd-435f-bc61-367a620811ba")
+    public String getChecksum_algortihm() {
+        String value = this.elt.getProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
+                                            TDeploymentArtifact.MdaTypes.CHECKSUM_ALGORTIHM_PROPERTY_ELT.getName());
+        if (value == null) {
+          value = TDeploymentArtifact.MdaTypes.CHECKSUM_ALGORTIHM_PROPERTY_ELT.getDefaultValue();
+        }
+        return (String) PropertyConverter.convertToObject(TDeploymentArtifact.MdaTypes.CHECKSUM_ALGORTIHM_PROPERTY_ELT, value, this.elt);
+        
+    }
+
+    /**
+     * Getter for property 'TDeploymentArtifact.deploy_path'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    @objid ("40a4becc-4465-4329-9c71-e90d6edc9e2d")
+    public String getDeploy_path() {
+        String value = this.elt.getProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
+                                            TDeploymentArtifact.MdaTypes.DEPLOY_PATH_PROPERTY_ELT.getName());
+        if (value == null) {
+          value = TDeploymentArtifact.MdaTypes.DEPLOY_PATH_PROPERTY_ELT.getDefaultValue();
+        }
+        return (String) PropertyConverter.convertToObject(TDeploymentArtifact.MdaTypes.DEPLOY_PATH_PROPERTY_ELT, value, this.elt);
+        
+    }
+
+    /**
+     * Getter for property 'TDeploymentArtifact.description'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    @objid ("95763d97-80ca-45de-8b67-4c3872aed11c")
+    public String getDescription() {
+        String value = this.elt.getProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
+                                            TDeploymentArtifact.MdaTypes.DESCRIPTION_PROPERTY_ELT.getName());
+        if (value == null) {
+          value = TDeploymentArtifact.MdaTypes.DESCRIPTION_PROPERTY_ELT.getDefaultValue();
+        }
+        return (String) PropertyConverter.convertToObject(TDeploymentArtifact.MdaTypes.DESCRIPTION_PROPERTY_ELT, value, this.elt);
+        
     }
 
     /**
      * Get the underlying {@link Class}. 
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("96c7e5a8-280a-4d65-8476-ee02307b6626")
+    @objid ("6293785c-9259-495d-b5cd-5191af776980")
+    @Override
     public Class getElement() {
-        return this.elt;
+        return (Class)super.getElement();
     }
 
     /**
-     * Getter for string property 'name'
+     * Getter for property 'TDeploymentArtifact.file'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("93684896-cdfa-4214-a213-d048e1c27728")
-    public String getName() {
-        return this.elt.getTagValue(TDeploymentArtifact.MdaTypes.NAME_TAGTYPE_ELT);
+    @objid ("66d98549-fae7-4651-b120-fab68f72de26")
+    public String getFile() {
+        String value = this.elt.getProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
+                                            TDeploymentArtifact.MdaTypes.FILE_PROPERTY_ELT.getName());
+        if (value == null) {
+          value = TDeploymentArtifact.MdaTypes.FILE_PROPERTY_ELT.getDefaultValue();
+        }
+        return (String) PropertyConverter.convertToObject(TDeploymentArtifact.MdaTypes.FILE_PROPERTY_ELT, value, this.elt);
+        
     }
 
-    @objid ("c63ddb5a-5886-459c-bbe4-25f69d343f4f")
+    /**
+     * Getter for property 'TDeploymentArtifact.repository'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    @objid ("853e0d98-c84c-4b92-9453-3b9d87033251")
+    public String getRepository() {
+        String value = this.elt.getProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
+                                            TDeploymentArtifact.MdaTypes.REPOSITORY_PROPERTY_ELT.getName());
+        if (value == null) {
+          value = TDeploymentArtifact.MdaTypes.REPOSITORY_PROPERTY_ELT.getDefaultValue();
+        }
+        return (String) PropertyConverter.convertToObject(TDeploymentArtifact.MdaTypes.REPOSITORY_PROPERTY_ELT, value, this.elt);
+        
+    }
+
+    /**
+     * Get the value of the 'type' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    @objid ("2184d579-22a4-4136-9faa-73be673e9f84")
+    public TArtifactType getType() {
+        for (Dependency d : this.elt.getDependsOnDependency()) {
+              if (d.isStereotyped(TDeploymentArtifact.MdaTypes.MDAASSOCDEP)
+                  && Objects.equals(d.getTagValue(TDeploymentArtifact.MdaTypes.MDAASSOCDEP_ROLE), "type")
+                  && TArtifactType.canInstantiate(d.getDependsOn())) {
+                     return (TArtifactType)ToscaDesignerProxyFactory.instantiate(d.getDependsOn(), TArtifactType.MdaTypes.STEREOTYPE_ELT.getName());
+              }
+        }
+        return null;
+    }
+
+    @objid ("a2ac8a6a-5501-4228-93a6-04adae24e3a0")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -162,61 +276,154 @@ public class TDeploymentArtifact implements IMdaProxy {
     }
 
     /**
-     * Setter for string property 'artifactRef'
+     * Setter for property 'TDeploymentArtifact.artifact_version'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("c70afc2e-6fc2-4a7d-a28d-864e43f634be")
-    public void setArtifactRef(final String value) {
-        this.elt.putTagValue(TDeploymentArtifact.MdaTypes.ARTIFACTREF_TAGTYPE_ELT, value);
+    @objid ("d6843386-8794-4629-a548-8a789c927b3e")
+    public void setArtifact_version(final String value) {
+        this.elt.setProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
+                             TDeploymentArtifact.MdaTypes.ARTIFACT_VERSION_PROPERTY_ELT.getName(),
+                             PropertyConverter.convertToString(TDeploymentArtifact.MdaTypes.ARTIFACT_VERSION_PROPERTY_ELT, value));
     }
 
     /**
-     * Setter for string property 'artifactType'
+     * Setter for property 'TDeploymentArtifact.checksum'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("d29756b1-1c16-4e8c-ad61-9dc1b0cd20fa")
-    public void setArtifactType(final String value) {
-        this.elt.putTagValue(TDeploymentArtifact.MdaTypes.ARTIFACTTYPE_TAGTYPE_ELT, value);
+    @objid ("561f8c87-4e88-476d-82ff-d9f21fc02321")
+    public void setChecksum(final String value) {
+        this.elt.setProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
+                             TDeploymentArtifact.MdaTypes.CHECKSUM_PROPERTY_ELT.getName(),
+                             PropertyConverter.convertToString(TDeploymentArtifact.MdaTypes.CHECKSUM_PROPERTY_ELT, value));
     }
 
     /**
-     * Setter for string property 'name'
+     * Setter for property 'TDeploymentArtifact.checksum_algortihm'
      * <p>Property description:
      * <br/><i>null</i></p>
      */
-    @objid ("266e105c-502e-4077-aaf4-fcffc09e492b")
-    public void setName(final String value) {
-        this.elt.putTagValue(TDeploymentArtifact.MdaTypes.NAME_TAGTYPE_ELT, value);
+    @objid ("b484fa9e-baf1-4f47-b81b-0ae40427a743")
+    public void setChecksum_algortihm(final String value) {
+        this.elt.setProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
+                             TDeploymentArtifact.MdaTypes.CHECKSUM_ALGORTIHM_PROPERTY_ELT.getName(),
+                             PropertyConverter.convertToString(TDeploymentArtifact.MdaTypes.CHECKSUM_ALGORTIHM_PROPERTY_ELT, value));
     }
 
-    @objid ("9713be32-b816-4e6b-bab0-5c56fb114fdb")
+    /**
+     * Setter for property 'TDeploymentArtifact.deploy_path'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    @objid ("3a0c02c5-1755-46e9-8890-ab661b32fdcb")
+    public void setDeploy_path(final String value) {
+        this.elt.setProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
+                             TDeploymentArtifact.MdaTypes.DEPLOY_PATH_PROPERTY_ELT.getName(),
+                             PropertyConverter.convertToString(TDeploymentArtifact.MdaTypes.DEPLOY_PATH_PROPERTY_ELT, value));
+    }
+
+    /**
+     * Setter for property 'TDeploymentArtifact.description'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    @objid ("b95dbaf5-369b-4cc2-994d-73f1e39716af")
+    public void setDescription(final String value) {
+        this.elt.setProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
+                             TDeploymentArtifact.MdaTypes.DESCRIPTION_PROPERTY_ELT.getName(),
+                             PropertyConverter.convertToString(TDeploymentArtifact.MdaTypes.DESCRIPTION_PROPERTY_ELT, value));
+    }
+
+    /**
+     * Setter for property 'TDeploymentArtifact.file'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    @objid ("70b659f0-44b2-45ad-82a7-f78dd7d4da69")
+    public void setFile(final String value) {
+        this.elt.setProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
+                             TDeploymentArtifact.MdaTypes.FILE_PROPERTY_ELT.getName(),
+                             PropertyConverter.convertToString(TDeploymentArtifact.MdaTypes.FILE_PROPERTY_ELT, value));
+    }
+
+    /**
+     * Setter for property 'TDeploymentArtifact.repository'
+     * <p>Property description:
+     * <br/><i>null</i></p>
+     */
+    @objid ("bacb4436-d212-4598-b145-37fd2969a5e6")
+    public void setRepository(final String value) {
+        this.elt.setProperty(TDeploymentArtifact.MdaTypes.STEREOTYPE_ELT,
+                             TDeploymentArtifact.MdaTypes.REPOSITORY_PROPERTY_ELT.getName(),
+                             PropertyConverter.convertToString(TDeploymentArtifact.MdaTypes.REPOSITORY_PROPERTY_ELT, value));
+    }
+
+    /**
+     * Set the value of the 'type' role.<p>
+     * Role description:
+     * null
+     * 
+     */
+    @objid ("6707b364-5797-4993-95b5-272f41051257")
+    public void setType(final TArtifactType obj) {
+        Dependency dep = null;
+        for (Dependency d : this.elt.getDependsOnDependency())
+          if (d.isStereotyped(TDeploymentArtifact.MdaTypes.MDAASSOCDEP) && Objects.equals(d.getTagValue(TDeploymentArtifact.MdaTypes.MDAASSOCDEP_ROLE), "type")) {
+             dep = d;
+             break;
+          }
+        if (obj == null) {
+           if(dep != null) dep.delete();
+        } else {
+          if (dep == null) {
+              IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
+              dep = session.getModel().createDependency(this.elt, obj.getElement(), TDeploymentArtifact.MdaTypes.MDAASSOCDEP);
+              dep.setName("type");      dep.putTagValue(TDeploymentArtifact.MdaTypes.MDAASSOCDEP_ROLE, "type");
+          }
+          dep.setDependsOn(obj.getElement());
+        }
+        
+    }
+
+    @objid ("605f9d3e-1d18-42fc-a149-d2f54a73185b")
     protected  TDeploymentArtifact(final Class elt) {
-        this.elt = elt;
+        super(elt);
     }
 
-    @objid ("3ba30de3-e90c-43d3-b77b-38218e1a3cbc")
+    @objid ("3374be29-67f1-4ee0-8269-74249d9589ea")
     public static final class MdaTypes {
-        @objid ("96c811b8-2054-4b47-b736-cec9127635e0")
+        @objid ("37d98ecb-e8c1-4afe-b8cc-e64b77fc10c6")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("fd44b4cf-9723-4076-8b5c-2ded0f6c6e9a")
-        public static TagType ARTIFACTREF_TAGTYPE_ELT;
+        @objid ("d54c7551-a273-49b9-801b-ac6095c3475a")
+        public static PropertyDefinition FILE_PROPERTY_ELT;
 
-        @objid ("dcce0b52-a87f-4445-b14a-8529f011a993")
-        public static TagType ARTIFACTTYPE_TAGTYPE_ELT;
+        @objid ("0db94694-d40b-496e-9fdd-38da32c1933c")
+        public static PropertyDefinition REPOSITORY_PROPERTY_ELT;
 
-        @objid ("e2693a46-e681-496c-97e2-1402be100d97")
-        public static TagType NAME_TAGTYPE_ELT;
+        @objid ("512cf996-dc32-4f84-af90-c7e003f465f7")
+        public static PropertyDefinition DESCRIPTION_PROPERTY_ELT;
 
-        @objid ("03e90397-e494-48c6-b28f-1d26a575974f")
+        @objid ("209f2be5-759c-44ab-9447-dff6c51b57d5")
+        public static PropertyDefinition DEPLOY_PATH_PROPERTY_ELT;
+
+        @objid ("02f965cf-b1d7-43df-aea4-22cf6652eccf")
+        public static PropertyDefinition ARTIFACT_VERSION_PROPERTY_ELT;
+
+        @objid ("d57551e8-c1ef-4250-99d9-813651c0418c")
+        public static PropertyDefinition CHECKSUM_PROPERTY_ELT;
+
+        @objid ("c0dc1550-bc9c-4339-a778-a7b521df3315")
+        public static PropertyDefinition CHECKSUM_ALGORTIHM_PROPERTY_ELT;
+
+        @objid ("6925a582-d72c-4be1-9c08-c164b6bf52d5")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("d72e52a4-55dd-41aa-9ccd-4806cc8c03ab")
+        @objid ("416ed408-91ef-4fa0-9a67-623e4f7c4e66")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("d752d493-16af-4728-a310-a67f9d76dd68")
+        @objid ("d695bf31-c409-4a60-872f-6d26006859b1")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
@@ -224,17 +431,33 @@ public class TDeploymentArtifact implements IMdaProxy {
             STEREOTYPE_ELT = (Stereotype) session.findByRef(mRef);
             if (STEREOTYPE_ELT==null) missingRefs.add(mRef);
             
-            mRef = new MRef(TagType.MQNAME, "00f224d5-08f2-42a7-af61-f6e906e8305b", "artifactRef");
-            ARTIFACTREF_TAGTYPE_ELT = (TagType) session.findByRef(mRef);
-            if (ARTIFACTREF_TAGTYPE_ELT==null) missingRefs.add(mRef);
+            mRef = new MRef(PropertyDefinition.MQNAME, "7acf9bc4-9dc3-4663-8355-4368413f2578", "file");
+            FILE_PROPERTY_ELT = (PropertyDefinition) session.findByRef(mRef);
+            if (FILE_PROPERTY_ELT==null) missingRefs.add(mRef);
             
-            mRef = new MRef(TagType.MQNAME, "22483516-011a-4784-bde3-0f4bcadf9d00", "artifactType");
-            ARTIFACTTYPE_TAGTYPE_ELT = (TagType) session.findByRef(mRef);
-            if (ARTIFACTTYPE_TAGTYPE_ELT==null) missingRefs.add(mRef);
+            mRef = new MRef(PropertyDefinition.MQNAME, "198ef816-98ff-465e-af75-32bdb5f9da13", "repository");
+            REPOSITORY_PROPERTY_ELT = (PropertyDefinition) session.findByRef(mRef);
+            if (REPOSITORY_PROPERTY_ELT==null) missingRefs.add(mRef);
             
-            mRef = new MRef(TagType.MQNAME, "8e15fb0f-c599-408f-b15a-4c8affdd8658", "name");
-            NAME_TAGTYPE_ELT = (TagType) session.findByRef(mRef);
-            if (NAME_TAGTYPE_ELT==null) missingRefs.add(mRef);
+            mRef = new MRef(PropertyDefinition.MQNAME, "2fd370da-daeb-4519-9f06-967d3e3cb882", "description");
+            DESCRIPTION_PROPERTY_ELT = (PropertyDefinition) session.findByRef(mRef);
+            if (DESCRIPTION_PROPERTY_ELT==null) missingRefs.add(mRef);
+            
+            mRef = new MRef(PropertyDefinition.MQNAME, "c8fa55fe-6ff5-4ec5-9d1f-f32385091030", "deploy_path");
+            DEPLOY_PATH_PROPERTY_ELT = (PropertyDefinition) session.findByRef(mRef);
+            if (DEPLOY_PATH_PROPERTY_ELT==null) missingRefs.add(mRef);
+            
+            mRef = new MRef(PropertyDefinition.MQNAME, "1774043f-fb09-4265-bbe1-c43047c05ff7", "artifact_version");
+            ARTIFACT_VERSION_PROPERTY_ELT = (PropertyDefinition) session.findByRef(mRef);
+            if (ARTIFACT_VERSION_PROPERTY_ELT==null) missingRefs.add(mRef);
+            
+            mRef = new MRef(PropertyDefinition.MQNAME, "b7dc26ea-f4bf-4f9f-b847-cc89ba624530", "checksum");
+            CHECKSUM_PROPERTY_ELT = (PropertyDefinition) session.findByRef(mRef);
+            if (CHECKSUM_PROPERTY_ELT==null) missingRefs.add(mRef);
+            
+            mRef = new MRef(PropertyDefinition.MQNAME, "a0b664be-6ddd-4e45-8208-113c85c48101", "checksum_algortihm");
+            CHECKSUM_ALGORTIHM_PROPERTY_ELT = (PropertyDefinition) session.findByRef(mRef);
+            if (CHECKSUM_ALGORTIHM_PROPERTY_ELT==null) missingRefs.add(mRef);
             
             mRef = new MRef(Stereotype.MQNAME, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e", "MDAAssocDep");
             MDAASSOCDEP = (Stereotype) session.findByRef(mRef);
