@@ -82,10 +82,10 @@ Ensure the following tools are installed on your system:
 
 ##  Example Projects
 
-The release includes two example model projects that demonstrate usage:
+The release v0.5 includes an example model projects that demonstrate usage:
 
-- `MYRTUS.Face.Application.zip`
-- `Smart.City.Traffic.Management.zip`
+- `SafeTraffic_TNO_02052025.zip`
+
 
 To import an example project:
 
