@@ -12,6 +12,14 @@ topology_template:
     {{/eq}}{{/extension}}{{/ownedAttribute}}
   {{/eq}}{{/extension}}{{/ownedElement}}
 {{/unless}}
+{{#unless (noStereotypeApplications this "OutputParametersType")}}
+  outputs:
+  {{#ownedElement}}{{#extension}}{{#eq name "OutputParametersType"}}
+    {{#ownedAttribute as |parameter|}}{{#extension as |extension|}}{{#eq extension.name "TParameter"}}
+      {{> TParameter parameter}}
+    {{/eq}}{{/extension}}{{/ownedAttribute}}
+  {{/eq}}{{/extension}}{{/ownedElement}}
+{{/unless}}
 {{#unless (noStereotypeApplications this "TNodeTemplate")}}
   node_templates:
   {{#ownedElement as | nodeTemplate |}}{{#extension as |extension|}}{{#eq extension.name "TNodeTemplate"}}

@@ -1345,6 +1345,24 @@
                     <HParameter name="name" value="Trigger1"/>
                 </Handler>
             </Tool>
+            <Tool id="Input" label="%tool.Input.label" tooltip="%tool.Input.tooltip" image="res/icon/gui/input24.png">
+                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TTopologyTemplate"/>
+                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TServiceTemplate"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#TParameter"/>
+                    <HParameter name="metaclass" value="Standard.Attribute"/>
+                    <HParameter name="name" value="Input"/>
+                </Handler>
+            </Tool>
+            <Tool id="Output" label="%tool.Output.label" tooltip="%tool.Output.tooltip" image="res/icon/gui/output24.png">
+                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TTopologyTemplate"/>
+                <Scope-source metaclass="Standard.Class" stereotype="ToscaDesigner#TServiceTemplate"/>
+                <Handler class="Box">
+                    <HParameter name="stereotype" value="ToscaDesigner#TParameter"/>
+                    <HParameter name="metaclass" value="Standard.Attribute"/>
+                    <HParameter name="name" value="Output"/>
+                </Handler>
+            </Tool>
         </Tools>
         <ContextualMenu>
             <CommandRef refid="Export" group="" group-image=""/>
@@ -1400,6 +1418,8 @@
                     <ToolRef refid="DeploymentArtifact" group="%group.Artifacts.label"/>
                     <ToolRef refid="Requirement_NodeTemplate" group="%group.Requirement.label"/>
                     <ToolRef refid="Requirements_NodeTemplate" group="%group.Requirement.label"/>
+                    <ToolRef refid="Input" group="%group.Parameters.label"/>
+                    <ToolRef refid="Output" group="%group.Parameters.label"/>
                     <ToolRef refid="Metadata" group="%group.Attributes.label"/>
                     <ToolRef refid="Property_(Node_Template)" group="%group.Attributes.label"/>
                     <ToolRef refid="Policy" group="%group.Attributes.label"/>

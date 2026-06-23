@@ -31,26 +31,29 @@ public final class PropertyResolver {
      * @param context The model element to resolve the property from
      * @param propertyName The name of the property to resolve
      * @return The resolved property value, or null if not found
-     * @throws RuntimeException if the property cannot be found in any stereotype
      */
     public static String resolveProperty(ModelElement context, String propertyName) {
         for (Stereotype stereotype : context.getExtension()) {
-            String propertyValue = context.getProperty(stereotype, propertyName);
+            try {
+                String propertyValue = context.getProperty(stereotype, propertyName);
 
-            // Handle special stereotype-specific property resolution
-            propertyValue = resolveStereotypeSpecificProperty(context, propertyName, stereotype, propertyValue);
+                // Handle special stereotype-specific property resolution
+                propertyValue = resolveStereotypeSpecificProperty(context, propertyName, stereotype, propertyValue);
 
-            // If property not found with this stereotype, look for parent stereotypes
-            while (propertyValue == null && stereotype.getParent() != null) {
-                stereotype = stereotype.getParent();
-                propertyValue = context.getProperty(stereotype, propertyName);
-            }
+                // If property not found with this stereotype, look for parent stereotypes
+                while (propertyValue == null && stereotype.getParent() != null) {
+                    stereotype = stereotype.getParent();
+                    propertyValue = context.getProperty(stereotype, propertyName);
+                }
 
-            if (propertyValue != null) {
-                return propertyValue;
+                if (propertyValue != null) {
+                    return propertyValue;
+                }
+            } catch (Exception e) {
+                // Property not defined in this stereotype, continue searching
             }
         }
-        throw new RuntimeException("Stereotype property " + propertyName + " not found in " + context);
+        return null;
     }
 
     /**
@@ -60,22 +63,30 @@ public final class PropertyResolver {
             Stereotype stereotype, String currentValue) {
         String stereotypeName = stereotype.getName();
 
+        String resolved;
         switch (stereotypeName) {
             case "TRequirement":
-                return resolveTRequirementProperty(context, propertyName);
+                resolved = resolveTRequirementProperty(context, propertyName);
+                break;
             case "TRequirementDefinition":
-                return resolveTRequirementDefinitionProperty(context, propertyName);
+                resolved = resolveTRequirementDefinitionProperty(context, propertyName);
+                break;
             case "TRelationshipTemplate":
-                return resolveTRelationshipTemplateProperty(context, propertyName);
+                resolved = resolveTRelationshipTemplateProperty(context, propertyName);
+                break;
             case "TNodeTemplate":
-                return resolveTNodeTemplateProperty(context, propertyName);
+                resolved = resolveTNodeTemplateProperty(context, propertyName);
+                break;
             case "TCapabilityDefinition":
-                return resolveTCapabilityDefinitionProperty(context, propertyName);
+                resolved = resolveTCapabilityDefinitionProperty(context, propertyName);
+                break;
             case "TPolicy":
-                return resolveTPolicyProperty(context, propertyName);
+                resolved = resolveTPolicyProperty(context, propertyName);
+                break;
             default:
                 return currentValue;
         }
+        return resolved != null ? resolved : currentValue;
     }
 
     private static String resolveTRequirementProperty(ModelElement context, String propertyName) {
